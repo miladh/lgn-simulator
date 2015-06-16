@@ -13,7 +13,7 @@ public:
     ImpulseResponse();
     ~ImpulseResponse();
 
-    double edogImpulseResponseFunction(double kx, double ky, double w);
+    double edogImpulseResponseFunctionFT(double kx, double ky, double w);
     double feedforwardTemporalFT(double w);
     double feedbackTemporalFT(double w);
     double secondKindBesselFunction(double x);

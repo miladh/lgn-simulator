@@ -12,21 +12,23 @@ using namespace std;
 class Response
 {
 public:
-    Response(ImpulseResponse impResFunc, Stimuli stim, Integrator* integrator,
-             vec3 grid);
+    Response(ImpulseResponse impResFunc, Stimuli stim,
+             Integrator* integrator, vec3 realGrid, vec3 fourierGrid);
     ~Response();
-    mat response() const;
+    mat realSpace() const;
+    mat fourierSpace() const;
 
 private:
+    void computeFT();
     void compute();
 
     ImpulseResponse m_impResFunc;
     Stimuli m_stim;
     Integrator* m_Integrator;
 
-    vec m_xPoints;
-    vec m_yPoints;
-    mat m_response;
+    vec m_xPoints, m_yPoints;
+    vec m_kxPoints, m_kyPoints;
+    mat m_response, m_responseFT;
 };
 
 #endif // RESPONSE_H

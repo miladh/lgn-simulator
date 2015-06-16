@@ -12,17 +12,17 @@ int main()
 
 
     cout <<"=====Extended-DOG Model====="<<endl;
+    vec realGrid = {-4, 4, 10};
+    vec fourierGrid = {-3, 3, 10};
+    vec domain = {-1, 1, 10};
+
+
     ImpulseResponse G;
     Stimuli S;
-    Trapezoidal* I;
+    Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
+    Response R(G, S, I, realGrid, fourierGrid);
 
-    vec grid = {-1, 1, 10};
-
-    Response R(G, S, I, grid);
-
-    cout << R.response() << endl;
-
-
+    cout << R.fourierSpace() << endl;
 
 
     return 0;

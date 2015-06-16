@@ -9,20 +9,23 @@
 class Stimuli
 {
 public:
-    Stimuli();
+    Stimuli(double C = 10.0, double d =2.5, double w =0.1,
+            double kx = 10., double ky=1.);
     ~Stimuli();
 
-    double patchGrating(double rx, double ry, double t,
-                        double kx = 10., double ky=1., double w=0.1,
-                        double C = 10.0, double d =2.5 );
-
-    double patchGratingFT(double kx, double ky, double w,
-                          double kpgx = 10., double kpgy=1., double wpg =0.1,
-                          double C = 10.0, double d =2.5 );
+    double patchGrating(double rx, double ry, double t);
+    double patchGratingFT(double kx, double ky, double w);
 
     int delta(int x, int y);
     double heaviside(double x);
     double secondKindBesselFunction(double x);
+
+private:
+    double m_C;
+    double m_d;
+    double m_w;
+    double m_kx, m_ky;
+
 };
 
 #endif // STIMULI_H

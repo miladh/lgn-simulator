@@ -11,7 +11,7 @@ ImpulseResponse::~ImpulseResponse()
 
 }
 
-double ImpulseResponse::edogImpulseResponseFunction(double kx, double ky, double w)
+double ImpulseResponse::edogImpulseResponseFunctionFT(double kx, double ky, double w)
 {
 
     double ff = differenceOfGaussianFT(kx,ky) * feedforwardTemporalFT(w);
