@@ -1,0 +1,3 @@
+Extended Difference-of-Gaussians
+===========================
+
