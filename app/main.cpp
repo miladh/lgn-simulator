@@ -4,7 +4,8 @@
 #include <stimuli.h>
 #include <trapezoidal.h>
 #include <response.h>
-
+#include <outputmanager.h>
+#include <unistd.h>
 using namespace std;
 
 int main()
@@ -22,7 +23,18 @@ int main()
     Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
     Response R(G, S, I, realGrid, fourierGrid);
 
-    cout << R.fourierSpace() << endl;
+
+    Config cfg;
+    OutputManager io(&cfg);
+
+
+    for (int i = 0; i < 2; i++){
+        io.writeResponse(i,R);
+    }
+
+
+
+    cout << R.complex() << endl;
 
 
     return 0;

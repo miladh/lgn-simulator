@@ -14,10 +14,12 @@ SOURCES += \
     stimuli.cpp \
     integrator.cpp \
     trapezoidal.cpp \
-    response.cpp
+    response.cpp \
+    outputmanager.cpp
 HEADERS += \
     impulseResponse.h \
     stimuli.h \
     integrator.h \
     trapezoidal.h \
-    response.h
+    response.h \
+    outputmanager.h

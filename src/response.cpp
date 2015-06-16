@@ -9,7 +9,7 @@ Response::Response(ImpulseResponse impResFunc, Stimuli stim, Integrator *integra
     , m_yPoints(linspace(realGrid[0], realGrid[1], realGrid[2]))
     , m_kxPoints(linspace(fourierGrid[0], fourierGrid[1], fourierGrid[2]))
     , m_kyPoints(linspace(fourierGrid[0], fourierGrid[1], fourierGrid[2]))
-    , m_response(zeros(realGrid[2], realGrid[2]))
+    , m_response(ones(realGrid[2], realGrid[2]))
     , m_responseFT(zeros(realGrid[2], realGrid[2]))
 
 {
@@ -41,12 +41,12 @@ void Response::compute()
 
 }
 
-mat Response::realSpace() const
+mat Response::real() const
 {
     return m_response;
 }
 
-mat Response::fourierSpace() const
+mat Response::complex() const
 {
     return m_responseFT;
 }

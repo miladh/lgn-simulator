@@ -15,8 +15,8 @@ public:
     Response(ImpulseResponse impResFunc, Stimuli stim,
              Integrator* integrator, vec3 realGrid, vec3 fourierGrid);
     ~Response();
-    mat realSpace() const;
-    mat fourierSpace() const;
+    mat real() const;
+    mat complex() const;
 
 private:
     void computeFT();
