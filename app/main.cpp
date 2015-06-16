@@ -24,7 +24,13 @@ int main()
     Response R(G, S, I, realGrid, fourierGrid);
 
 
+    //read config file---------------------------------------------------------------
     Config cfg;
+    cfg.readFile("../../eDOG/app/config.cfg");
+    const Setting & root = cfg.getRoot();
+
+
+
     OutputManager io(&cfg);
 
 
