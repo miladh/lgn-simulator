@@ -11,34 +11,41 @@ using namespace std;
 int main()
 {
 
-
     cout <<"=====Extended-DOG Model====="<<endl;
-    vec realGrid = {-4, 4, 10};
-    vec fourierGrid = {-3, 3, 10};
-    vec domain = {-1, 1, 10};
-
-
-    ImpulseResponse G;
-    Stimuli S;
-    Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
-    Response R(G, S, I, realGrid, fourierGrid);
-
 
     //read config file---------------------------------------------------------------
     Config cfg;
     cfg.readFile("../../eDOG/app/config.cfg");
     const Setting & root = cfg.getRoot();
 
+    int nSteps = root["dynamicSettings"]["nSteps"];
 
+    vec realGrid = zeros<vec>(3);
+    vec complexGrid = zeros<vec>(3);
+    vec domain = zeros<vec>(3);
+    const Setting &real = root["gridSettings"]["realGrid"];
+    const Setting &complex = root["gridSettings"]["complexGrid"];
+    const Setting &integrationDomain = root["gridSettings"]["integrationDomain"];
+
+    for(int i =0; i < 3; i++){
+        realGrid[i] = real[i];
+        complexGrid[i] = complex[i];
+        domain[i] = integrationDomain[i];
+    }
+
+    //-------------------------------------------------------------------------------
+
+    ImpulseResponse G;
+    Stimuli S;
+    Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
+    Response R(G, S, I, realGrid, complexGrid);
 
     OutputManager io(&cfg);
 
 
-    for (int i = 0; i < 2; i++){
+    for (int i = 0; i < nSteps; i++){
         io.writeResponse(i,R);
     }
-
-
 
     cout << R.complex() << endl;
 

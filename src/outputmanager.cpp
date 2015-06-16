@@ -25,33 +25,57 @@ void OutputManager::initialize()
     const Setting & root = m_cfg->getRoot();
     int nSteps = root["dynamicSettings"]["nSteps"];
 
-    rowvec realGrid = zeros<rowvec>(3);
-    rowvec complexGrid = zeros<rowvec>(3);
+    vec realGrid = zeros<vec>(3);
+    vec complexGrid = zeros<vec>(3);
+    vec temporalGrid = zeros<vec>(3);
+    vec domain = zeros<vec>(3);
     const Setting &real = root["gridSettings"]["realGrid"];
     const Setting &complex = root["gridSettings"]["complexGrid"];
+    const Setting &temporal = root["gridSettings"]["temporalGrid"];
+    const Setting &integrationDomain = root["gridSettings"]["integrationDomain"];
 
     for(int i =0; i < 3; i++){
         realGrid[i] = real[i];
         complexGrid[i] = complex[i];
+        temporalGrid[i] = temporal[i];
+        domain[i] = integrationDomain[i];
     }
 
 
     Attribute rMin(rootGroup.createAttribute("rMin", PredType::NATIVE_DOUBLE, H5S_SCALAR));
     Attribute rMax(rootGroup.createAttribute("rMax", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute rPoinst(rootGroup.createAttribute("rPoints", PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute rPoints(rootGroup.createAttribute("rPoints", PredType::NATIVE_DOUBLE, H5S_SCALAR));
 
     rMin.write(PredType::NATIVE_DOUBLE, &realGrid[0]);
     rMax.write(PredType::NATIVE_DOUBLE, &realGrid[1]);
-    rPoinst.write(PredType::NATIVE_DOUBLE, &realGrid[2]);
+    rPoints.write(PredType::NATIVE_DOUBLE, &realGrid[2]);
 
 
     Attribute kMin(rootGroup.createAttribute("kMin", PredType::NATIVE_DOUBLE, H5S_SCALAR));
     Attribute kMax(rootGroup.createAttribute("kMax", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute kPoinst(rootGroup.createAttribute("kPoints", PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute kPoints(rootGroup.createAttribute("kPoints", PredType::NATIVE_DOUBLE, H5S_SCALAR));
 
     kMin.write(PredType::NATIVE_DOUBLE, &complexGrid[0]);
     kMax.write(PredType::NATIVE_DOUBLE, &complexGrid[1]);
-    kPoinst.write(PredType::NATIVE_DOUBLE, &complexGrid[2]);
+    kPoints.write(PredType::NATIVE_DOUBLE, &complexGrid[2]);
+
+
+    Attribute tMin(rootGroup.createAttribute("tMin", PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute tMax(rootGroup.createAttribute("tMax", PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute tPoints(rootGroup.createAttribute("tPoints", PredType::NATIVE_DOUBLE, H5S_SCALAR));
+
+    tMin.write(PredType::NATIVE_DOUBLE, &temporalGrid[0]);
+    tMax.write(PredType::NATIVE_DOUBLE, &temporalGrid[1]);
+    tPoints.write(PredType::NATIVE_DOUBLE, &temporalGrid[2]);
+
+
+    Attribute min(rootGroup.createAttribute("min", PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute max(rootGroup.createAttribute("max", PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute points(rootGroup.createAttribute("points", PredType::NATIVE_DOUBLE, H5S_SCALAR));
+
+    min.write(PredType::NATIVE_DOUBLE, &domain[0]);
+    max.write(PredType::NATIVE_DOUBLE, &domain[1]);
+    points.write(PredType::NATIVE_DOUBLE, &domain[2]);
 
 
     m_dataset.reserve(nSteps);
