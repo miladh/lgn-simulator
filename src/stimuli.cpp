@@ -1,13 +1,14 @@
 #include "stimuli.h"
 
 
-Stimuli::Stimuli(double C, double d, double w, double kx, double ky)
-    : m_C(C)
-    , m_d(d)
-    , m_w(w)
-    , m_kx(kx)
-    , m_ky(ky)
+Stimuli::Stimuli(const Config *cfg)
 {
+    const Setting & root = cfg->getRoot();
+    m_C = root["stimuliSettings"]["C"];
+    m_d = root["stimuliSettings"]["d"];
+    m_w = root["stimuliSettings"]["w"];
+    m_kx = root["stimuliSettings"]["kx"];
+    m_ky = root["stimuliSettings"]["ky"];
 
 }
 
@@ -24,7 +25,7 @@ double Stimuli::patchGrating(double rx, double ry, double t)
     return s;
 }
 
-double Stimuli::patchGratingFT(double kx, double ky, double w)
+double Stimuli::patchGratingComplex(double kx, double ky, double w)
 {
     double arg = sqrt((kx - m_kx) * (kx - m_kx)  + (ky - m_ky) * (ky - m_ky));
     double s = secondKindBesselFunction(arg * m_d * 0.5)/* * delta(w, m_w)*/;

@@ -48,4 +48,4 @@ colorbar()
 anim = animation.FuncAnimation(fig, animate, init_func=init,
                                frames=nStates, interval=20, blit=True)
 
-anim.save('basic_animation.mp4',fps=30,  writer="avconv", codec="libx264")
+#anim.save('basic_animation.mp4',fps=30,  writer="avconv", codec="libx264")

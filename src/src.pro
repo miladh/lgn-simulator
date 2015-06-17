@@ -15,11 +15,13 @@ SOURCES += \
     integrator.cpp \
     trapezoidal.cpp \
     response.cpp \
-    outputmanager.cpp
+    outputmanager.cpp \
+    extendeddog.cpp
 HEADERS += \
     impulseResponse.h \
     stimuli.h \
     integrator.h \
     trapezoidal.h \
     response.h \
-    outputmanager.h
+    outputmanager.h \
+    extendeddog.h

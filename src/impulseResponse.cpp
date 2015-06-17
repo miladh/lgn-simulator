@@ -1,17 +1,30 @@
 #include "impulseResponse.h"
 
 
-ImpulseResponse::ImpulseResponse()
+ImpulseResponse::ImpulseResponse(const Config *cfg)
 {
+    const Setting & root = cfg->getRoot();
+    m_dogA = root["dogSettings"]["A"];
+    m_doga = root["dogSettings"]["a"];
+    m_dogB = root["dogSettings"]["B"];
+    m_dogb = root["dogSettings"]["b"];
+
+    m_loopKernelC = root["loopKernelSettings"]["C"];
+    m_loopKernelc = root["loopKernelSettings"]["c"];
+
+    m_feedbackDelay = root["temporalSettings"]["feedbackDelay"];
+    m_tau_rc = root["temporalSettings"]["tau_rc"];
+    m_tau_rg = root["temporalSettings"]["tau_rg"];
 
 }
+
 
 ImpulseResponse::~ImpulseResponse()
 {
 
 }
 
-double ImpulseResponse::edogImpulseResponseFunctionFT(double kx, double ky, double w)
+double ImpulseResponse::edogComplex(double kx, double ky, double w)
 {
 
     double ff = differenceOfGaussianFT(kx,ky) * feedforwardTemporalFT(w);
@@ -21,11 +34,11 @@ double ImpulseResponse::edogImpulseResponseFunctionFT(double kx, double ky, doub
 }
 
 
-double ImpulseResponse::loopKernel(double kx, double ky, double C, double c)
+double ImpulseResponse::loopKernel(double kx, double ky)
 {
 
     double k = sqrt(kx*kx + ky*ky);
-    double f = C * exp(-k*k * c*c * 0.25);
+    double f = m_loopKernelC * exp(-k*k * m_loopKernelc*m_loopKernelc * 0.25);
 
     return f;
 }
@@ -43,29 +56,25 @@ double ImpulseResponse::feedbackTemporalFT(double w)
 
 
 
-double ImpulseResponse::differenceOfGaussianFT(double kx, double ky,
-                                               double A, double a,
-                                               double B, double b)
+double ImpulseResponse::differenceOfGaussianFT(double kx, double ky)
 {
 
 
     double k = sqrt(kx*kx + ky*ky);
-    double center   = A * exp(-k*k * a*a / 4.);
-    double surround = B * exp(-k*k * b*b / 4.);
+    double center   = m_dogA * exp(-k*k * m_doga*m_doga / 4.);
+    double surround = m_dogB * exp(-k*k * m_dogb*m_dogb / 4.);
 
     return center - surround;
 }
 
 
 
-double ImpulseResponse::differenceOfGaussian(double rx, double ry,
-                                             double A, double a,
-                                             double B, double b)
+double ImpulseResponse::differenceOfGaussian(double rx, double ry)
 {
 
     double r = sqrt(rx*rx + ry*ry);
-    double center   = A / (a*a) / PI * exp(-r*r / (a*a));
-    double surround = B / (b*b) / PI * exp(-r*r / (b*b));
+    double center   = m_dogA / (m_doga*m_doga) / PI * exp(-r*r / (m_doga*m_doga));
+    double surround = m_dogB / (m_dogb*m_dogb) / PI * exp(-r*r / (m_dogb*m_dogb));
 
 
     return center - surround;

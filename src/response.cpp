@@ -26,9 +26,9 @@ void Response::computeFT(double w)
 
     for(int i = 0; i < int(m_kxPoints.n_elem); i++){
         for(int j = 0; j < int(m_kyPoints.n_elem); j++){
-            double G = m_impResFunc.edogImpulseResponseFunctionFT(
+            double G = m_impResFunc.edogComplex(
                         m_kxPoints[i], m_kxPoints[j], w);
-            double s = m_stim.patchGratingFT(m_kxPoints[i], m_kxPoints[j], w);
+            double s = m_stim.patchGratingComplex(m_kxPoints[i], m_kxPoints[j], w);
 
             m_responseFT(i,j) = G*s;
         }

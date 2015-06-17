@@ -9,3 +9,6 @@ TEMPLATE = app
 SOURCES += main.cpp
 
 LIBS += -lunittest++ -L../src -ledog
+
+DISTFILES += \
+    configTests.cfg

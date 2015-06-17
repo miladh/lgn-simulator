@@ -37,8 +37,8 @@ int main()
 
     //-------------------------------------------------------------------------------
 
-    ImpulseResponse G;
-    Stimuli S;
+    ImpulseResponse G(&cfg);
+    Stimuli S(&cfg);
     Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
     Response R(G, S, I, realGrid, complexGrid);
 

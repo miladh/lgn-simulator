@@ -1,5 +1,6 @@
 #include "outputmanager.h"
 #include <unistd.h>
+
 OutputManager::OutputManager(const Config *cfg)
     : m_cfg(cfg)
 {
