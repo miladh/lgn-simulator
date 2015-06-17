@@ -13,14 +13,15 @@ class Response
 {
 public:
     Response(ImpulseResponse impResFunc, Stimuli stim,
-             Integrator* integrator, vec3 realGrid, vec3 fourierGrid);
+             Integrator* integrator, vec3 realGrid, vec3 complexGrid);
     ~Response();
     mat real() const;
     mat complex() const;
 
-private:
-    void computeFT();
     void compute();
+    void computeFT(double w);
+
+private:
 
     ImpulseResponse m_impResFunc;
     Stimuli m_stim;

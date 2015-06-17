@@ -3,8 +3,12 @@
 
 #define PI 3.14159265359
 
+#include<iostream>
 #include <math.h>
 
+
+
+using namespace std;
 
 class ImpulseResponse {
 
@@ -28,6 +32,11 @@ public:
 
     double loopKernel(double kx, double ky,
                       double C = 0.5, double c = 0.83);
+
+private:
+    double m_feedbackDelay = 0.1; //[s]
+    double m_tau_rc = 0.42;  //[s]
+    double m_tau_rg = 0.26;  //[s]
 
 };
 

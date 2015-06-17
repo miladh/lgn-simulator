@@ -21,25 +21,29 @@ void OutputManager::initialize()
 
 
     Group rootGroup = m_output->openGroup("/");
-
     const Setting & root = m_cfg->getRoot();
-    int nSteps = root["dynamicSettings"]["nSteps"];
 
     vec realGrid = zeros<vec>(3);
     vec complexGrid = zeros<vec>(3);
-    vec temporalGrid = zeros<vec>(3);
     vec domain = zeros<vec>(3);
+
+    int nSteps = root["dynamicSettings"]["nSteps"];
+    double dt = root["dynamicSettings"]["dt"];
     const Setting &real = root["gridSettings"]["realGrid"];
     const Setting &complex = root["gridSettings"]["complexGrid"];
-    const Setting &temporal = root["gridSettings"]["temporalGrid"];
     const Setting &integrationDomain = root["gridSettings"]["integrationDomain"];
 
     for(int i =0; i < 3; i++){
         realGrid[i] = real[i];
         complexGrid[i] = complex[i];
-        temporalGrid[i] = temporal[i];
         domain[i] = integrationDomain[i];
     }
+
+    Attribute nSteps_a(rootGroup.createAttribute("nSteps", PredType::NATIVE_INT, H5S_SCALAR));
+    nSteps_a.write(PredType::NATIVE_INT, &nSteps);
+
+    Attribute dt_a(rootGroup.createAttribute("dt", PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    dt_a.write(PredType::NATIVE_DOUBLE, &dt);
 
 
     Attribute rMin(rootGroup.createAttribute("rMin", PredType::NATIVE_DOUBLE, H5S_SCALAR));
@@ -58,15 +62,6 @@ void OutputManager::initialize()
     kMin.write(PredType::NATIVE_DOUBLE, &complexGrid[0]);
     kMax.write(PredType::NATIVE_DOUBLE, &complexGrid[1]);
     kPoints.write(PredType::NATIVE_DOUBLE, &complexGrid[2]);
-
-
-    Attribute tMin(rootGroup.createAttribute("tMin", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute tMax(rootGroup.createAttribute("tMax", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute tPoints(rootGroup.createAttribute("tPoints", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-
-    tMin.write(PredType::NATIVE_DOUBLE, &temporalGrid[0]);
-    tMax.write(PredType::NATIVE_DOUBLE, &temporalGrid[1]);
-    tPoints.write(PredType::NATIVE_DOUBLE, &temporalGrid[2]);
 
 
     Attribute min(rootGroup.createAttribute("min", PredType::NATIVE_DOUBLE, H5S_SCALAR));

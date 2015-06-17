@@ -32,12 +32,12 @@ double ImpulseResponse::loopKernel(double kx, double ky, double C, double c)
 
 double ImpulseResponse::feedforwardTemporalFT(double w)
 {
-    return 1.0;
+    return 1./ (1 + w*w*m_tau_rg);
 }
 
 double ImpulseResponse::feedbackTemporalFT(double w)
 {
-    return 1.0;
+    return 1. / (1 + w*w*m_tau_rc);
 }
 
 

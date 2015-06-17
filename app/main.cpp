@@ -19,10 +19,12 @@ int main()
     const Setting & root = cfg.getRoot();
 
     int nSteps = root["dynamicSettings"]["nSteps"];
+    double dt = root["dynamicSettings"]["dt"];
 
     vec realGrid = zeros<vec>(3);
     vec complexGrid = zeros<vec>(3);
     vec domain = zeros<vec>(3);
+
     const Setting &real = root["gridSettings"]["realGrid"];
     const Setting &complex = root["gridSettings"]["complexGrid"];
     const Setting &integrationDomain = root["gridSettings"]["integrationDomain"];
@@ -42,12 +44,14 @@ int main()
 
     OutputManager io(&cfg);
 
-
+    double t = 0.0;
     for (int i = 0; i < nSteps; i++){
+        R.computeFT(t);
         io.writeResponse(i,R);
+        cout << R.complex() << endl;
+        t+=dt;
     }
 
-    cout << R.complex() << endl;
 
 
     return 0;
