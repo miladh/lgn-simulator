@@ -40,15 +40,16 @@ int main()
     ImpulseResponse G(&cfg);
     Stimuli S(&cfg);
     Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
-    Response R(G, S, I, realGrid, complexGrid);
+    Response R(G, S, I, realGrid, complexGrid, domain);
 
     OutputManager io(&cfg);
 
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
-        R.computeComplex(t);
+        R.compute(t);
         io.writeResponse(i,R);
-        cout << R.complex() << endl;
+//        cout << R.real() << endl;
+        cout <<"timestep: " << t << endl;
         t+=dt;
     }
 

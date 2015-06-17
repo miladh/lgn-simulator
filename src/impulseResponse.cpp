@@ -27,7 +27,7 @@ ImpulseResponse::~ImpulseResponse()
 double ImpulseResponse::edogComplex(double kx, double ky, double w)
 {
 
-    double ff = differenceOfGaussianFT(kx,ky) * feedforwardTemporalFT(w);
+    double ff = differenceOfGaussianComplex(kx,ky) * feedforwardTemporalFT(w);
     double fb = 1.0 - loopKernel(kx,ky)* feedbackTemporalFT(w);
 
     return ff/fb;
@@ -56,7 +56,7 @@ double ImpulseResponse::feedbackTemporalFT(double w)
 
 
 
-double ImpulseResponse::differenceOfGaussianFT(double kx, double ky)
+double ImpulseResponse::differenceOfGaussianComplex(double kx, double ky)
 {
 
 

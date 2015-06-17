@@ -16,7 +16,8 @@ SOURCES += \
     trapezoidal.cpp \
     response.cpp \
     outputmanager.cpp \
-    extendeddog.cpp
+    extendeddog.cpp \
+    lib.cpp
 HEADERS += \
     impulseResponse.h \
     stimuli.h \
@@ -24,4 +25,5 @@ HEADERS += \
     trapezoidal.h \
     response.h \
     outputmanager.h \
-    extendeddog.h
+    extendeddog.h \
+    lib.h

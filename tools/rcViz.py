@@ -18,7 +18,7 @@ dt = states.attrs["dt"]
 Rc = [] 
 for stateId, state in enumerate(states):
     dataset = states.get(state)
-    Rc.append(array(dataset.get("complex")))
+    Rc.append(array(dataset.get("real")))
 
 nStates = len(states)
 print "Number of states: ", nStates

@@ -10,8 +10,8 @@ TEST(dog) {
     CHECK_CLOSE(G.differenceOfGaussian(0.5, 0.1), -0.189791527743, 1e-12);
     CHECK_CLOSE(G.differenceOfGaussian(1.2, 1.9), -0.00025733892027, 1e-12);
 
-    CHECK_CLOSE(G.differenceOfGaussianFT(0.5, 1.1), 0.316423256919, 1e-12);
-    CHECK_CLOSE(G.differenceOfGaussianFT(1.5, 0.1), 0.389361200098, 1e-12);
+    CHECK_CLOSE(G.differenceOfGaussianComplex(0.5, 1.1), 0.316423256919, 1e-12);
+    CHECK_CLOSE(G.differenceOfGaussianComplex(1.5, 0.1), 0.389361200098, 1e-12);
 
 
 }

@@ -27,7 +27,7 @@ public:
 
     double differenceOfGaussian(double rx, double ry);
 
-    double differenceOfGaussianFT(double kx, double ky);
+    double differenceOfGaussianComplex(double kx, double ky);
 
     double loopKernel(double kx, double ky);
 
