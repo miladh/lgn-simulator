@@ -21,17 +21,14 @@ int main()
     int nSteps = root["dynamicSettings"]["nSteps"];
     double dt = root["dynamicSettings"]["dt"];
 
-    vec realGrid = zeros<vec>(3);
-    vec complexGrid = zeros<vec>(3);
+    vec mesh = zeros<vec>(3);
     vec domain = zeros<vec>(3);
 
-    const Setting &real = root["gridSettings"]["realGrid"];
-    const Setting &complex = root["gridSettings"]["complexGrid"];
+    const Setting &grid = root["gridSettings"]["grid"];
     const Setting &integrationDomain = root["gridSettings"]["integrationDomain"];
 
     for(int i =0; i < 3; i++){
-        realGrid[i] = real[i];
-        complexGrid[i] = complex[i];
+        mesh[i] = grid[i];
         domain[i] = integrationDomain[i];
     }
 
@@ -40,16 +37,14 @@ int main()
     ImpulseResponse G(&cfg);
     Stimuli S(&cfg);
     Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
-    Response R(G, S, I, realGrid, complexGrid, domain);
+    Response R(G, S, I, mesh, domain);
 
     OutputManager io(&cfg);
-
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
         R.compute(t);
         io.writeResponse(i,R);
-//        cout << R.real() << endl;
-        cout <<"timestep: " << t << endl;
+        cout <<"timestep: " << i << " of " << nSteps << endl;
         t+=dt;
     }
 

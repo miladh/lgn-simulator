@@ -15,7 +15,7 @@ class Response
 {
 public:
     Response(ImpulseResponse impResFunc, Stimuli stim,
-             Integrator* integrator, vec3 realGrid, vec3 complexGrid, vec3 integrationDomain);
+             Integrator* integrator, vec3 mesh, vec3 integrationDomain);
     ~Response();
     mat real() const;
     mat complex() const;
@@ -29,8 +29,7 @@ private:
     Stimuli m_stim;
     Integrator* m_Integrator;
 
-    vec m_xPoints, m_yPoints;
-    vec m_kxPoints, m_kyPoints;
+    vec m_mesh;
     vec m_domain;
     mat m_response, m_responseComplex;
 };
