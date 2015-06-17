@@ -19,7 +19,7 @@ public:
     mat complex() const;
 
     void compute();
-    void computeFT(double w);
+    void computeComplex(double w);
 
 private:
 

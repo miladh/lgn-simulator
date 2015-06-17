@@ -21,7 +21,7 @@ Response::~Response()
 
 }
 
-void Response::computeFT(double w)
+void Response::computeComplex(double w)
 {
 
     for(int i = 0; i < int(m_kxPoints.n_elem); i++){
