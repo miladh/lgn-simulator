@@ -27,8 +27,8 @@ ImpulseResponse::~ImpulseResponse()
 double ImpulseResponse::edogComplex(double kx, double ky, double w)
 {
 
-    double ff = differenceOfGaussianComplex(kx,ky) * feedforwardTemporalFT(w);
-    double fb = 1.0 - loopKernel(kx,ky)* feedbackTemporalFT(w);
+    double ff = differenceOfGaussianComplex(kx,ky) * feedforwardTemporalComplex(w);
+    double fb = 1.0 - loopKernel(kx,ky)* feedbackTemporalComplex(w);
 
     return ff/fb;
 }
@@ -42,15 +42,36 @@ double ImpulseResponse::loopKernel(double kx, double ky)
 
     return f;
 }
-
-double ImpulseResponse::feedforwardTemporalFT(double w)
+mat ImpulseResponse::real() const
 {
-    return 1./ (1 + w*w*m_tau_rg);
+    return m_real;
 }
 
-double ImpulseResponse::feedbackTemporalFT(double w)
+void ImpulseResponse::setReal(const mat &real)
 {
-    return 1. / (1 + w*w*m_tau_rc);
+    m_real = real;
+
+}
+mat ImpulseResponse::complex() const
+{
+    return m_complex;
+}
+
+void ImpulseResponse::setComplex(const mat &complex)
+{
+    m_complex = complex;
+}
+
+
+
+double ImpulseResponse::feedforwardTemporalComplex(double w)
+{
+    return 1./ (1 + w*w * m_tau_rg*m_tau_rg);
+}
+
+double ImpulseResponse::feedbackTemporalComplex(double w)
+{
+    return cos(w* m_feedbackDelay) / (1 + w*w * m_tau_rc*m_tau_rc);
 }
 
 

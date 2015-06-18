@@ -65,27 +65,53 @@ void OutputManager::initialize()
 }
 
 
-void OutputManager::writeResponse(const int state, const Response &response)
+void OutputManager::writeResponse(const int state, const Response &response,
+                                  const ImpulseResponse &impulseResponse,
+                                  const Stimuli &stimuli)
 {
 
     mat realResponse = response.real();
     mat complexResponse = response.complex();
 
+    mat realImpulseResponse = impulseResponse.real();
+    mat complexImpulseResponse = impulseResponse.complex();
+
+
+    mat realStim = stimuli.real();
+    mat complexStim = stimuli.complex();
+
     stringstream stateIndex;
     stateIndex << "state" << setw(4) << setfill('0')  << state;
-    Group* group = new Group( m_output->createGroup( "/"+stateIndex.str()));
+    string stateName = "/"+stateIndex.str();
+
+    Group* group = new Group( m_output->createGroup(stateName));
+
+    //----------------------------------------------------------------------
+    Group* res = new Group( m_output->createGroup(stateName+"/response"));
+
+    writeDataSet(realResponse, res, "real");
+    writeDataSet(complexResponse, res, "complex");
+
+    //----------------------------------------------------------------------
+    Group* impRes = new Group( m_output->createGroup(stateName+"/impulseResponse"));
+    writeDataSet(realImpulseResponse, impRes, "real");
+    writeDataSet(complexImpulseResponse, impRes, "complex");
 
 
-    hsize_t dim[2] = {realResponse.n_cols, realResponse.n_rows};
+    //----------------------------------------------------------------------
+    Group* stim = new Group( m_output->createGroup(stateName+"/stimuli"));
+    writeDataSet(realStim, stim, "real");
+    writeDataSet(complexStim, stim, "complex");
+
+}
+
+
+void OutputManager::writeDataSet(const mat data, Group* group, string name)
+{
+    hsize_t dim[2] = {data.n_cols, data.n_rows};
     DataSpace space(2, dim);
-    DataSet dataset(group->createDataSet("real", PredType::NATIVE_DOUBLE, space));
-    dataset.write(realResponse.memptr(), PredType::NATIVE_DOUBLE);
-
-    hsize_t dim1[2] = {complexResponse.n_cols, complexResponse.n_rows};
-    DataSpace space1(2, dim1);
-    DataSet dataset1(group->createDataSet("complex", PredType::NATIVE_DOUBLE, space1));
-    dataset1.write(complexResponse.memptr(), PredType::NATIVE_DOUBLE);
-
+    DataSet dataset(group->createDataSet(name, PredType::NATIVE_DOUBLE, space));
+    dataset.write(data.memptr(), PredType::NATIVE_DOUBLE);
 
 }
 

@@ -14,7 +14,7 @@ using namespace std;
 class Response
 {
 public:
-    Response(ImpulseResponse impResFunc, Stimuli stim,
+    Response(ImpulseResponse *impResFunc, Stimuli *stim,
              Integrator* integrator, vec3 mesh, vec3 integrationDomain);
     ~Response();
     mat real() const;
@@ -25,8 +25,8 @@ public:
 
 private:
 
-    ImpulseResponse m_impResFunc;
-    Stimuli m_stim;
+    ImpulseResponse* m_impResFunc;
+    Stimuli* m_stim;
     Integrator* m_Integrator;
 
     vec m_mesh;

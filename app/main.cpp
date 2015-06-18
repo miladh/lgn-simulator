@@ -37,13 +37,13 @@ int main()
     ImpulseResponse G(&cfg);
     Stimuli S(&cfg);
     Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
-    Response R(G, S, I, mesh, domain);
+    Response R(&G, &S, I, mesh, domain);
 
     OutputManager io(&cfg);
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
         R.compute(t);
-        io.writeResponse(i,R);
+        io.writeResponse(i, R, G, S);
         cout <<"timestep: " << i << " of " << nSteps << endl;
         t+=dt;
     }

@@ -7,6 +7,8 @@
 #include <libconfig.h++>
 
 #include "response.h"
+#include "stimuli.h"
+#include"impulseResponse.h"
 
 using namespace arma;
 using namespace std;
@@ -20,7 +22,9 @@ public:
     OutputManager(const Config *cfg);
     ~OutputManager();
 
-    void writeResponse(const int state, const Response &response);
+    void writeResponse(const int state, const Response &response,
+                       const ImpulseResponse &impulseResponse,
+                       const Stimuli &stimuli);
 
 private:
     const Config* m_cfg;
@@ -28,6 +32,8 @@ private:
     H5File *m_output;
     stringstream m_outputFileName;
     vector <DataSet *>m_dataset;
+
+    void writeDataSet(const mat dataset, Group* group, string name);
 
 
     void initialize();

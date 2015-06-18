@@ -15,11 +15,15 @@ states = f.get("/")
 dt = states.attrs["dt"]
 
 
-Rc = [] 
+R = [] 
+S = []
+G = []
 for stateId, state in enumerate(states):
     dataset = states.get(state)
-    Rc.append(array(dataset.get("real")))
-
+    R.append(array(dataset.get("response/real")))
+    S.append(array(dataset.get("stimuli/real")))
+    G.append(array(dataset.get("impulseResponse/real")))
+    
 nStates = len(states)
 print "Number of states: ", nStates
 
@@ -29,23 +33,41 @@ f.close()
 #####################################################################
 
 def init():
-    im.set_data(Rc[1])
-    return [im]
+    S_im.set_data(S[0])
+    G_im.set_data(G[0]) 
+    R_im.set_data(R[0])
+    ttl.set_text("")
+    return [S_im, G_im, R_im], ttl
 
 
 def animate(i):
-    im.set_array(Rc[i])
-    plt.title("t = " + str(i*dt) + " s")
+    S_im.set_array(S[i])
+    G_im.set_array(G[i])    
+    R_im.set_array(R[i])
+    ttl.set_text("t = " + str(i*dt) + " s")
 #    print Rc[i].max(), " - ", Rc[i].min() 
-    return [im]
+    return [S_im, G_im, R_im], ttl
 
 
-fig = plt.figure()
-im=plt.imshow(Rc[1], origin='lower', cmap='jet')
 
-colorbar()
+fig, axarr = plt.subplots(1,3,figsize=(15,8))
+tight_layout()
+S_im=axarr[0].imshow(S[0], origin='lower', cmap='gray')
+colorbar(S_im, ax = axarr[0], orientation='horizontal')
+
+G_im=axarr[1].imshow(G[0], origin='lower', cmap='jet')
+colorbar(G_im, ax = axarr[1], orientation='horizontal')
+
+R_im=axarr[2].imshow(R[0], origin='lower', cmap='jet')
+colorbar(R_im, ax = axarr[2], orientation='horizontal')
+
+ttl = plt.suptitle("")
+axarr[0].set_title("Stimuli")
+axarr[1].set_title("Impulse Response")
+axarr[2].set_title("Response")
+#colorbar()
 
 anim = animation.FuncAnimation(fig, animate, init_func=init,
-                               frames=nStates, interval=20, blit=True)
+                               frames=nStates, interval=20, blit=False)
 
 #anim.save('basic_animation.mp4',fps=30,  writer="avconv", codec="libx264")

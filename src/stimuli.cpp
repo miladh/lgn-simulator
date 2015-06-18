@@ -48,11 +48,6 @@ double Stimuli::secondKindBesselFunction(double x)
 
     return j;
 }
-double Stimuli::w() const
-{
-    return m_w;
-}
-
 
 
 double Stimuli::delta(double x, double y) {
@@ -62,6 +57,32 @@ double Stimuli::delta(double x, double y) {
         return 0;
     }
 }
+
+
+
+double Stimuli::w() const
+{
+    return m_w;
+}
+mat Stimuli::real() const
+{
+    return m_real;
+}
+
+void Stimuli::setReal(const mat &real)
+{
+    m_real = real;
+}
+mat Stimuli::complex() const
+{
+    return m_complex;
+}
+
+void Stimuli::setComplex(const mat &complex)
+{
+    m_complex = complex;
+}
+
 
 
 
