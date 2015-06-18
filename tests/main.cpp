@@ -1,6 +1,7 @@
 #include <unittest++/UnitTest++.h>
 #include <impulseResponse.h>
 #include <stimuli.h>
+#include <lib.h>
 
 TEST(dog) {
 
@@ -44,6 +45,7 @@ TEST(stimuli) {
 
 
 }
+
 
 int main()
 {

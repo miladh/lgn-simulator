@@ -25,6 +25,8 @@ public:
     double heaviside(double x);
     double secondKindBesselFunction(double x);
 
+    double w() const;
+
 private:
     double m_C = 0.0;
     double m_d = 0.0;

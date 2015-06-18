@@ -29,19 +29,19 @@ f.close()
 #####################################################################
 
 def init():
-    im.set_data(Rc[0])
+    im.set_data(Rc[1])
     return [im]
 
 
 def animate(i):
     im.set_array(Rc[i])
-    plt.title("t= " + str(i*dt) + " s")
+    plt.title("t = " + str(i*dt) + " s")
 #    print Rc[i].max(), " - ", Rc[i].min() 
     return [im]
 
 
 fig = plt.figure()
-im=plt.imshow(Rc[0], origin='lower', cmap='jet')
+im=plt.imshow(Rc[1], origin='lower', cmap='jet')
 
 colorbar()
 

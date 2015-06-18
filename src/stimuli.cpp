@@ -28,7 +28,7 @@ double Stimuli::patchGrating(double rx, double ry, double t)
 double Stimuli::patchGratingComplex(double kx, double ky, double w)
 {
     double arg = sqrt((kx - m_kx) * (kx - m_kx)  + (ky - m_ky) * (ky - m_ky));
-    double s = secondKindBesselFunction(arg * m_d * 0.5)/* * delta(w, m_w)*/;
+    double s = secondKindBesselFunction(arg * m_d * 0.5) * delta(w, m_w);
     return s*2*PI*PI*m_d*m_C/arg;
 
 }
@@ -48,6 +48,12 @@ double Stimuli::secondKindBesselFunction(double x)
 
     return j;
 }
+double Stimuli::w() const
+{
+    return m_w;
+}
+
+
 
 double Stimuli::delta(double x, double y) {
     if(x == y){

@@ -39,26 +39,24 @@ void Response::compute(double t)
     m_response = 0*m_response;
     double *w = new double [int(m_domain[2])];
     double *x = new double [int(m_domain[2])];
-    gauleg(m_domain[0], m_domain[1], x,w, m_domain[2]);
-
+    gauleg(m_domain[0], m_domain[1], x, w, m_domain[2]);
 
     for(int i = 0; i < int(m_mesh.n_elem); i++){
         for(int j = 0; j < int(m_mesh.n_elem); j++){
 
             for(int m = 0; m < int(m_domain[2]); m++){
                 for(int n = 0; n < int(m_domain[2]); n++){
-                    for(int o = 0; o < int(m_domain[2]); o++){
 
-                        double G = m_impResFunc.edogComplex(x[m], x[n], x[o]);
-                        double s = m_stim.patchGratingComplex(x[m], x[n], x[o]);
+                    double G = m_impResFunc.edogComplex(x[m], x[n], m_stim.w() );
+                    double s = m_stim.patchGratingComplex(x[m], x[n], m_stim.w() );
 
-                        m_response(i,j) += G * s * w[m] * w[n] * w[o]
-                                * cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - x[o] * t);
-                    }
+                    m_response(i,j) += G * s * w[m] * w[n]
+                            * cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - m_stim.w() * t);
                 }
             }
         }
     }
+
 
 }
 

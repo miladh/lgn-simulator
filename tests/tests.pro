@@ -6,7 +6,8 @@ CONFIG -= qt
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    integratortests.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 
