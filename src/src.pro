@@ -17,7 +17,10 @@ SOURCES += \
     response.cpp \
     outputmanager.cpp \
     extendeddog.cpp \
-    lib.cpp
+    lib.cpp \
+    ganglion/ganglion.cpp \
+    ganglion/gangliondog.cpp \
+    math/dog.cpp
 HEADERS += \
     impulseResponse.h \
     stimuli.h \
@@ -26,4 +29,7 @@ HEADERS += \
     response.h \
     outputmanager.h \
     extendeddog.h \
-    lib.h
+    lib.h \
+    ganglion/ganglion.h \
+    ganglion/gangliondog.h \
+    math/dog.h

@@ -7,23 +7,25 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
+# outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/tools/fb/*.h5"
 outputFile = glob(outputFilePath)[0]
 
-f = h5py.File(outputFile, "r")             
+f = h5py.File(outputFile, "r")
 states = f.get("/")
 
 dt = states.attrs["dt"]
 
 
-R = [] 
+R = []
 S = []
 G = []
 for stateId, state in enumerate(states):
     dataset = states.get(state)
-    R.append(array(dataset.get("response/real")))
+#    R.append(array(dataset.get("response/real")))
+    R.append(array(dataset.get("response/real")).clip(min =0))
     S.append(array(dataset.get("stimuli/real")))
     G.append(array(dataset.get("impulseResponse/real")))
-    
+
 nStates = len(states)
 print "Number of states: ", nStates
 
@@ -34,7 +36,7 @@ f.close()
 
 def init():
     S_im.set_data(S[0])
-    G_im.set_data(G[0]) 
+    G_im.set_data(G[0])
     R_im.set_data(R[0])
     ttl.set_text("")
     return [S_im, G_im, R_im], ttl
@@ -42,10 +44,10 @@ def init():
 
 def animate(i):
     S_im.set_array(S[i])
-    G_im.set_array(G[i])    
+    G_im.set_array(G[i])
     R_im.set_array(R[i])
     ttl.set_text("t = " + str(i*dt) + " s")
-#    print Rc[i].max(), " - ", Rc[i].min() 
+#    print Rc[i].max(), " - ", Rc[i].min()
     return [S_im, G_im, R_im], ttl
 
 
@@ -65,9 +67,9 @@ ttl = plt.suptitle("")
 axarr[0].set_title("Stimuli")
 axarr[1].set_title("Impulse Response")
 axarr[2].set_title("Response")
-#colorbar()
+
 
 anim = animation.FuncAnimation(fig, animate, init_func=init,
                                frames=nStates, interval=20, blit=False)
-
+show()
 #anim.save('basic_animation.mp4',fps=30,  writer="avconv", codec="libx264")
