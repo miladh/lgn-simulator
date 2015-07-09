@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-#include <stimuli.h>
+#include "stimuli/patchgrating.h"
 #include <lib.h>
 
 
@@ -25,7 +25,7 @@ SUITE(integrator){
     TEST(stimuli){
         Config cfg;
         cfg.readFile("../../eDOG/tests/configTests.cfg");
-        Stimuli stim(&cfg);
+        PatchGrating stim(&cfg);
 
         const Setting & root = cfg.getRoot();
         double wpg = root["stimuliSettings"]["w"];
@@ -40,12 +40,12 @@ SUITE(integrator){
         double rx = 0.5;
         double ry = 1.0;
         double t = 3.2;
-        double Ie = stim.patchGrating(rx, ry, t);
+        double Ie = stim.real({rx, ry}, t);
 
         for(int i = 0; i < N; i++){
             for(int j = 0; j < N; j++){
 //                cout << x[i] <<  "    "<< x[j] << endl;
-                double s = stim.patchGratingComplex(x[i], x[j], wpg);
+                double s = stim.complex({x[i], x[j]}, wpg);
                 I+= s * cos(rx*x[i]+ ry*x[j] - wpg * t) * w[i] * w[j];
             }
         }

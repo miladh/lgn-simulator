@@ -1,12 +1,13 @@
 #include <iostream>
 
 #include <impulseResponse.h>
-#include <stimuli.h>
 #include <trapezoidal.h>
 #include <response.h>
 #include <outputmanager.h>
 #include <unistd.h>
+
 #include "ganglion/ganglion.h"
+#include "stimuli/patchgrating.h"
 using namespace std;
 
 int main()
@@ -36,7 +37,7 @@ int main()
     //-------------------------------------------------------------------------------
 
     ImpulseResponse G(&cfg);
-    Stimuli S(&cfg);
+    PatchGrating S(&cfg);
     Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
     Response R(&G, &S, I, mesh, domain);
 

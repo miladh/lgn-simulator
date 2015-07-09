@@ -3,7 +3,7 @@
 
 #include <armadillo>
 #include <impulseResponse.h>
-#include <stimuli.h>
+#include "stimuli/stimuli.h"
 #include <integrator.h>
 
 #include <lib.h>

@@ -9,7 +9,7 @@
 #include <armadillo>
 #include <boost/math/special_functions/bessel.hpp>
 
-
+#include "../math/functions.h"
 
 using namespace std;
 using namespace libconfig;
@@ -21,14 +21,8 @@ public:
     Stimuli(const Config *cfg);
     ~Stimuli();
 
-    double patchGrating(double rx, double ry, double t);
-    double patchGratingComplex(double kx, double ky, double w);
-
-    double delta(double x, double y);
-    double heaviside(double x);
-    double secondKindBesselFunction(double x);
-
-    double w() const;
+    virtual double real(vec2 rVec, double t) = 0;
+    virtual double complex(vec2 k, double w) = 0;
 
     mat real() const;
     void setReal(const mat &real);
@@ -36,14 +30,15 @@ public:
     mat complex() const;
     void setComplex(const mat &complex);
 
-private:
-    double m_C = 0.0;
-    double m_d = 0.0;
-    double m_w = 0.0;
-    double m_kx, m_ky = 0.0;
+    double w() const;
 
+protected:
+    Functions m_math;
     mat m_real = zeros(2,2);
     mat m_complex = zeros(2,2);
+
+    double m_w = 0;
+    vec2 m_k = {0,0};
 
 
 };

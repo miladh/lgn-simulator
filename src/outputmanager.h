@@ -7,8 +7,8 @@
 #include <libconfig.h++>
 
 #include "response.h"
-#include "stimuli.h"
-#include"impulseResponse.h"
+#include "stimuli/stimuli.h"
+#include "impulseResponse.h"
 
 using namespace arma;
 using namespace std;

@@ -1,6 +1,6 @@
 #include <unittest++/UnitTest++.h>
 #include <impulseResponse.h>
-#include <stimuli.h>
+#include "stimuli/patchgrating.h"
 #include "math/dog.h"
 #include <lib.h>
 
@@ -36,20 +36,18 @@ TEST(loopKernel) {
 }
 
 TEST(heaviside) {
-    Config cfg;
-    cfg.readFile("../../eDOG/tests/configTests.cfg");
-    Stimuli S(&cfg);
-    CHECK_EQUAL(S.heaviside(-1.2), 0);
-    CHECK_EQUAL(S.heaviside(2.2), 1.);
+    Functions func;
+    CHECK_EQUAL(func.heaviside(-1.2), 0);
+    CHECK_EQUAL(func.heaviside(2.2), 1.);
 
 }
 
 TEST(stimuli) {
     Config cfg;
     cfg.readFile("../../eDOG/tests/configTests.cfg");
-    Stimuli S(&cfg);
-    CHECK_CLOSE(S.patchGrating(-0.1, 0.1, 0.5), 5.81683089464, 1e-11);
-    CHECK_CLOSE(S.patchGrating(-0.7, 0.9, 2.5), 9.97768728668, 1e-11);
+    PatchGrating S(&cfg);
+    CHECK_CLOSE(S.real({-0.1, 0.1}, 0.5), 5.81683089464, 1e-11);
+    CHECK_CLOSE(S.real({-0.7, 0.9}, 2.5), 9.97768728668, 1e-11);
 
 
 }

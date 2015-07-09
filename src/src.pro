@@ -11,7 +11,6 @@ TARGET = edog
 
 SOURCES += \
     impulseResponse.cpp \
-    stimuli.cpp \
     integrator.cpp \
     trapezoidal.cpp \
     response.cpp \
@@ -20,10 +19,12 @@ SOURCES += \
     lib.cpp \
     ganglion/ganglion.cpp \
     ganglion/gangliondog.cpp \
-    math/dog.cpp
+    math/dog.cpp \
+    stimuli/stimuli.cpp \
+    stimuli/patchgrating.cpp \
+    math/functions.cpp
 HEADERS += \
     impulseResponse.h \
-    stimuli.h \
     integrator.h \
     trapezoidal.h \
     response.h \
@@ -32,4 +33,7 @@ HEADERS += \
     lib.h \
     ganglion/ganglion.h \
     ganglion/gangliondog.h \
-    math/dog.h
+    math/dog.h \
+    stimuli/stimuli.h \
+    stimuli/patchgrating.h \
+    math/functions.h

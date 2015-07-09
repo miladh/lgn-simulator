@@ -24,8 +24,9 @@ void Response::computeComplex(double w)
 
     for(int i = 0; i < int(m_mesh.n_elem); i++){
         for(int j = 0; j < int(m_mesh.n_elem); j++){
+
             double G = m_impResFunc->edogComplex(m_mesh[i], m_mesh[j], w);
-            double s = m_stim->patchGratingComplex(m_mesh[i], m_mesh[j], w);
+            double s = m_stim->complex({m_mesh[i], m_mesh[j]}, w);
 
             m_responseComplex(i,j) = G*s;
         }
@@ -47,12 +48,12 @@ void Response::compute(double t)
     for(int i = 0; i < int(m_mesh.n_elem); i++){
         for(int j = 0; j < int(m_mesh.n_elem); j++){
 
-            stim(i,j) = m_stim->patchGrating(m_mesh[i], m_mesh[j], t);
+            stim(i,j) = m_stim->real({m_mesh[i], m_mesh[j]}, t);
             for(int m = 0; m < int(m_domain[2]); m++){
                 for(int n = 0; n < int(m_domain[2]); n++){
 
-                    double G = m_impResFunc->edogComplex(x[m], x[n], m_stim->w() );
-                    double s = m_stim->patchGratingComplex(x[m], x[n], m_stim->w() );
+                    double G = m_impResFunc->edogComplex(x[m], x[n], m_stim->w());
+                    double s = m_stim->complex({x[m], x[n]}, m_stim->w());
 
                     double value = G * w[m] * w[n] *
                             cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - m_stim->w() * t);
