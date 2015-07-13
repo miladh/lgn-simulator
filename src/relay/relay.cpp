@@ -1,0 +1,98 @@
+#include "relay.h"
+
+Relay::Relay(const Config *cfg, Ganglion *ganglion, Stimuli * stim)
+    : m_ganglion(ganglion)
+    , m_stim(stim)
+{
+    const Setting & root = cfg->getRoot();
+    const Setting &grid = root["gridSettings"]["grid"];
+    const Setting &integrationDomain = root["gridSettings"]["integrationDomain"];
+
+    for(int i =0; i < 3; i++){
+        m_mesh[i] = grid[i];
+        m_domain[i] = integrationDomain[i];
+    }
+
+
+    m_response = zeros(m_mesh[2], m_mesh[2]);
+    m_responseComplex = zeros(m_mesh[2], m_mesh[2]);
+    m_impulseResponse = zeros(m_mesh[2], m_mesh[2]);
+    m_impulseResponseComplex = zeros(m_mesh[2], m_mesh[2]);
+}
+
+Relay::~Relay()
+{
+}
+
+void Relay::computeResponse(double t)
+{
+    mat stim = 0*m_response;
+    m_response = 0*m_response;
+
+    double *w = new double [int(m_domain[2])];
+    double *x = new double [int(m_domain[2])];
+    gauleg(m_domain[0], m_domain[1], x, w, m_domain[2]);
+
+    for(int i = 0; i < int(m_mesh.n_elem); i++){
+        for(int j = 0; j < int(m_mesh.n_elem); j++){
+
+            stim(i,j) = m_stim->real({m_mesh[i], m_mesh[j]}, t);
+            for(int m = 0; m < int(m_domain[2]); m++){
+                for(int n = 0; n < int(m_domain[2]); n++){
+
+                    double G = transferFunctionComplex({x[m], x[n]}, m_stim->w());
+                    double s = m_stim->complex({x[m], x[n]}, m_stim->w());
+
+                    double value = G * w[m] * w[n] *
+                            cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - m_stim->w() * t);
+                    m_impulseResponse(i, j) +=  value;
+                    m_response(i,j) += value * s;
+                }
+            }
+        }
+    }
+
+    m_stim->setReal(stim);
+}
+
+void Relay::computeResponseComplex(double w)
+{
+    for(int i = 0; i < int(m_mesh.n_elem); i++){
+        for(int j = 0; j < int(m_mesh.n_elem); j++){
+
+            double G = transferFunctionComplex({m_mesh[i], m_mesh[j]}, w);
+            double s = m_stim->complex({m_mesh[i], m_mesh[j]}, w);
+
+            m_responseComplex(i,j) = G*s;
+        }
+    }
+}
+
+
+mat Relay::response() const
+{
+    return m_response;
+}
+
+mat Relay::responseComplex() const
+{
+    return m_responseComplex;
+}
+
+mat Relay::impulseRespons() const
+{
+    return m_impulseResponse;
+}
+
+mat Relay::impulseResponsComplex() const
+{
+    return m_impulseResponseComplex;
+}
+
+
+
+
+
+
+
+

@@ -1,19 +1,9 @@
 #include <unittest++/UnitTest++.h>
-#include <impulseResponse.h>
 #include "stimuli/patchgrating.h"
 #include "math/dog.h"
 #include <lib.h>
 
 TEST(dog) {
-
-    Config cfg;
-    cfg.readFile("../../eDOG/tests/configTests.cfg");
-    ImpulseResponse G(&cfg);
-    CHECK_CLOSE(G.differenceOfGaussian(0.5, 0.1), -0.189791527743, 1e-12);
-    CHECK_CLOSE(G.differenceOfGaussian(1.2, 1.9), -0.00025733892027, 1e-12);
-
-    CHECK_CLOSE(G.differenceOfGaussianComplex(0.5, 1.1), 0.316423256919, 1e-12);
-    CHECK_CLOSE(G.differenceOfGaussianComplex(1.5, 0.1), 0.389361200098, 1e-12);
 
 
     DOG dog(1.0, 0.25, 0.85, 0.83);
@@ -26,14 +16,14 @@ TEST(dog) {
 }
 
 
-TEST(loopKernel) {
-    Config cfg;
-    cfg.readFile("../../eDOG/tests/configTests.cfg");
-    ImpulseResponse G(&cfg);
-    CHECK_CLOSE(G.loopKernel(0.1, 5.9), 0.00124325581819, 1e-12);
-    CHECK_CLOSE(G.loopKernel(1.5, 0.1), 0.338789712712, 1e-12);
+//TEST(loopKernel) {
+//    Config cfg;
+//    cfg.readFile("../../eDOG/tests/configTests.cfg");
+//    ImpulseResponse G(&cfg);
+//    CHECK_CLOSE(G.loopKernel(0.1, 5.9), 0.00124325581819, 1e-12);
+//    CHECK_CLOSE(G.loopKernel(1.5, 0.1), 0.338789712712, 1e-12);
 
-}
+//}
 
 TEST(heaviside) {
     Functions func;
@@ -43,6 +33,8 @@ TEST(heaviside) {
 }
 
 TEST(stimuli) {
+// TODO: Need complex stimuli tests!
+
     Config cfg;
     cfg.readFile("../../eDOG/tests/configTests.cfg");
     PatchGrating S(&cfg);

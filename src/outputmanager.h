@@ -6,9 +6,7 @@
 #include <H5Cpp.h>
 #include <libconfig.h++>
 
-#include "response.h"
 #include "stimuli/stimuli.h"
-#include "impulseResponse.h"
 
 using namespace arma;
 using namespace std;
@@ -22,8 +20,7 @@ public:
     OutputManager(const Config *cfg);
     ~OutputManager();
 
-    void writeResponse(const int state, const Response &response,
-                       const ImpulseResponse &impulseResponse,
+    void writeResponse(const int state,
                        const Stimuli &stimuli);
 
 private:

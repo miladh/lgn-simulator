@@ -1,19 +1,19 @@
 #include <iostream>
 
-#include <impulseResponse.h>
 #include <trapezoidal.h>
-#include <response.h>
 #include <outputmanager.h>
 #include <unistd.h>
 
 #include "ganglion/ganglion.h"
 #include "stimuli/patchgrating.h"
+#include "relay/originaledog.h"
+
 using namespace std;
 
 int main()
 {
 
-    cout <<"=====Extended-DOG Model====="<<endl;
+    cout << "=====Extended-DOG Model=====" << endl;
 
     //read config file---------------------------------------------------------------
     Config cfg;
@@ -23,32 +23,25 @@ int main()
     int nSteps = root["dynamicSettings"]["nSteps"];
     double dt = root["dynamicSettings"]["dt"];
 
-    vec mesh = zeros<vec>(3);
-    vec domain = zeros<vec>(3);
 
-    const Setting &grid = root["gridSettings"]["grid"];
-    const Setting &integrationDomain = root["gridSettings"]["integrationDomain"];
+    //----------------------------------------------------------------------------
 
-    for(int i =0; i < 3; i++){
-        mesh[i] = grid[i];
-        domain[i] = integrationDomain[i];
-    }
 
-    //-------------------------------------------------------------------------------
+    DOG dog(1., 1., 0.1, 0.2);
+    GanglionDOG ganglion(&dog);
 
-    ImpulseResponse G(&cfg);
     PatchGrating S(&cfg);
-    Trapezoidal* I = new Trapezoidal((domain(0), domain(1), domain(2)));
-    Response R(&G, &S, I, mesh, domain);
+    OriginalEDOG R(&cfg, &ganglion, &S);
 
     OutputManager io(&cfg);
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
-        R.compute(t);
-        io.writeResponse(i, R, G, S);
+        R.computeResponse(t);
+//        io.writeResponse(i, R, G, S);
         cout <<"timestep: " << i << " of " << nSteps << endl;
         t+=dt;
     }
+
 
 
 

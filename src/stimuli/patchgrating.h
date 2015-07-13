@@ -15,8 +15,8 @@ public:
 
 
 private:
-    double m_C = 0.0;
-    double m_d = 0.0;
+    double m_contrast = 0.0;
+    double m_spotDiameter = 0.0;
 
 };
 

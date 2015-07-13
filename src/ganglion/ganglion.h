@@ -32,10 +32,10 @@ public:
 
 
 protected:
-    double m_spatialImpulseResponseReal;
-    double m_spatialImpulseResponseComplex;
-    double m_temporalImpulseResponseReal;
-    double m_temporalImpulseResponseComplex;
+    double m_spatialImpulseResponseReal = 0;
+    double m_spatialImpulseResponseComplex = 0;
+    double m_temporalImpulseResponseReal = 0;
+    double m_temporalImpulseResponseComplex = 0;
 };
 
 #endif // GANGLION_H
