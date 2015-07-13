@@ -40,7 +40,8 @@ protected:
     Ganglion * m_ganglion;
     Stimuli * m_stim;
 
-    vec3 m_mesh, m_domain;
+    vec m_mesh;
+    vec3 m_domain;
 
 };
 

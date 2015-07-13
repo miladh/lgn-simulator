@@ -1,10 +1,17 @@
 #include "gangliondog.h"
 
-GanglionDOG::GanglionDOG(DOG *dog)
-    : Ganglion()
-    , m_dog(dog)
+GanglionDOG::GanglionDOG(const Config *cfg)
+    : Ganglion(cfg)
 {
 
+    const Setting & root = cfg->getRoot();
+    double A = root["dogSettings"]["A"];
+    double a = root["dogSettings"]["a"];
+    double B = root["dogSettings"]["B"];
+    double b = root["dogSettings"]["b"];
+
+    m_dog = new DOG(A, a, B, b);
+    m_tau_rg = root["temporalSettings"]["tau_rg"];
 }
 
 GanglionDOG::~GanglionDOG()
@@ -12,24 +19,23 @@ GanglionDOG::~GanglionDOG()
 
 }
 
-void GanglionDOG::setSpatialImpulseResponseReal(vec2 r)
+void GanglionDOG::setSpatialImpulseResponse(vec2 r)
 {
-    m_spatialImpulseResponseReal = m_dog->real(r);
+    m_spatialImpulseResponse = m_dog->real(r);
 }
 
 void GanglionDOG::setSpatialImpulseResponseComplex(vec2 k)
 {
-
     m_spatialImpulseResponseComplex = m_dog->complex(k);
 }
 
-void GanglionDOG::setTemporalImpulseResponseReal(double t)
+void GanglionDOG::setTemporalImpulseResponse(double t)
 {
-    m_temporalImpulseResponseReal = 1.;
+    m_temporalImpulseResponse = 1.;
 }
 
 void GanglionDOG::setTemporalImpulseResponseComplex(double w)
 {
-    m_temporalImpulseResponseComplex = 1.0;
+    m_temporalImpulseResponseComplex = 1./ (1 + w*w * m_tau_rg*m_tau_rg);
 }
 

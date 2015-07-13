@@ -5,19 +5,20 @@ Relay::Relay(const Config *cfg, Ganglion *ganglion, Stimuli * stim)
     , m_stim(stim)
 {
     const Setting & root = cfg->getRoot();
-    const Setting &grid = root["gridSettings"]["grid"];
+    const Setting &gridLimits = root["gridSettings"]["grid"];
     const Setting &integrationDomain = root["gridSettings"]["integrationDomain"];
 
-    for(int i =0; i < 3; i++){
-        m_mesh[i] = grid[i];
+    vec3 grid;
+    for(int i = 0; i < 3; i++){
+        grid[i] = gridLimits[i];
         m_domain[i] = integrationDomain[i];
     }
 
-
-    m_response = zeros(m_mesh[2], m_mesh[2]);
-    m_responseComplex = zeros(m_mesh[2], m_mesh[2]);
-    m_impulseResponse = zeros(m_mesh[2], m_mesh[2]);
-    m_impulseResponseComplex = zeros(m_mesh[2], m_mesh[2]);
+    m_mesh = linspace(grid[0], grid[1], grid[2]);
+    m_response = zeros(grid[2], grid[2]);
+    m_responseComplex = zeros(grid[2], grid[2]);
+    m_impulseResponse = zeros(grid[2], grid[2]);
+    m_impulseResponseComplex = zeros(grid[2], grid[2]);
 }
 
 Relay::~Relay()
@@ -40,13 +41,14 @@ void Relay::computeResponse(double t)
             for(int m = 0; m < int(m_domain[2]); m++){
                 for(int n = 0; n < int(m_domain[2]); n++){
 
-                    double G = transferFunctionComplex({x[m], x[n]}, m_stim->w());
+                    double T = transferFunctionComplex({x[m], x[n]}, m_stim->w());
+                    double Gg = m_ganglion->impulseResponseComplex({x[m], x[n]}, m_stim->w());
                     double s = m_stim->complex({x[m], x[n]}, m_stim->w());
 
-                    double value = G * w[m] * w[n] *
+                    double dGr = T * Gg * w[m] * w[n] *
                             cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - m_stim->w() * t);
-                    m_impulseResponse(i, j) +=  value;
-                    m_response(i,j) += value * s;
+                    m_impulseResponse(i, j) +=  dGr;
+                    m_response(i,j) += dGr * s;
                 }
             }
         }

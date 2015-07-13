@@ -22,7 +22,6 @@ private:
 
     double m_feedbackDelay = 0.0; //[s]
     double m_tau_rc = 0.0;  //[s]
-    double m_tau_rg = 0.0;  //[s]
 };
 
 #endif // ORIGINALEDOG_H

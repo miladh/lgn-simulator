@@ -27,9 +27,8 @@ int main()
     //----------------------------------------------------------------------------
 
 
-    DOG dog(1., 1., 0.1, 0.2);
-    GanglionDOG ganglion(&dog);
 
+    GanglionDOG ganglion(&cfg);
     PatchGrating S(&cfg);
     OriginalEDOG R(&cfg, &ganglion, &S);
 
@@ -37,7 +36,7 @@ int main()
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
         R.computeResponse(t);
-//        io.writeResponse(i, R, G, S);
+        io.writeResponse(i, R, S);
         cout <<"timestep: " << i << " of " << nSteps << endl;
         t+=dt;
     }

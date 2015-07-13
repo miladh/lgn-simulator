@@ -7,19 +7,20 @@
 class GanglionDOG : public Ganglion
 {
 public:
-    GanglionDOG(DOG * dog);
+    GanglionDOG(const Config *cfg);
     ~GanglionDOG();
 
     // Ganglion interface
 public:
-    void setSpatialImpulseResponseReal(vec2 r);
+    void setSpatialImpulseResponse(vec2 r);
     void setSpatialImpulseResponseComplex(vec2 k);
-    void setTemporalImpulseResponseReal(double t);
+    void setTemporalImpulseResponse(double t);
     void setTemporalImpulseResponseComplex(double w);
 
 
 private:
     DOG * m_dog;
+    double m_tau_rg = 0.0;  //[s]
 };
 
 #endif // GANGLIONDOG_H

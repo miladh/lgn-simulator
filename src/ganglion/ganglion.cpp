@@ -1,6 +1,6 @@
 #include "ganglion.h"
 
-Ganglion::Ganglion()
+Ganglion::Ganglion(const Config *cfg)
 {
 
 }
@@ -10,20 +10,24 @@ Ganglion::~Ganglion()
 
 }
 
-double Ganglion::impulseResponseReal()
+double Ganglion::impulseResponse(vec2 r, double t)
 {
-    return m_spatialImpulseResponseReal + m_temporalImpulseResponseReal;
+    setSpatialImpulseResponse(r);
+    setTemporalImpulseResponse(t);
+    return m_spatialImpulseResponse + m_temporalImpulseResponse;
 }
 
-double Ganglion::impulseResponseComplex()
+double Ganglion::impulseResponseComplex(vec2 k, double w)
 {
+    setSpatialImpulseResponseComplex(k);
+    setTemporalImpulseResponseComplex(w);
     return m_spatialImpulseResponseComplex + m_temporalImpulseResponseComplex;
 }
 
 
-double Ganglion::spatialImpulseResponseReal() const
+double Ganglion::spatialImpulseResponse() const
 {
-    return m_spatialImpulseResponseReal;
+    return m_spatialImpulseResponse;
 }
 
 double Ganglion::spatialImpulseResponseComplex() const
@@ -31,9 +35,9 @@ double Ganglion::spatialImpulseResponseComplex() const
     return m_spatialImpulseResponseComplex;
 }
 
-double Ganglion::temporalImpulseResponseReal() const
+double Ganglion::temporalImpulseResponse() const
 {
-    return m_temporalImpulseResponseReal;
+    return m_temporalImpulseResponse;
 }
 
 double Ganglion::temporalImpulseResponseComplex() const

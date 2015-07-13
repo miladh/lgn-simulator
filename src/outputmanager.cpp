@@ -65,42 +65,42 @@ void OutputManager::initialize()
 }
 
 
-void OutputManager::writeResponse(const int state,
+void OutputManager::writeResponse(const int state,const Relay &relay,
                                   const Stimuli &stimuli)
 {
 
-//    mat realResponse = response.real();
-//    mat complexResponse = response.complex();
+    mat realResponse = relay.response();
+    mat complexResponse = relay.responseComplex();
 
-//    mat realImpulseResponse = impulseResponse.real();
-//    mat complexImpulseResponse = impulseResponse.complex();
-
-
-//    mat realStim = stimuli.real();
-//    mat complexStim = stimuli.complex();
-
-//    stringstream stateIndex;
-//    stateIndex << "state" << setw(4) << setfill('0')  << state;
-//    string stateName = "/"+stateIndex.str();
-
-//    Group* group = new Group( m_output->createGroup(stateName));
-
-//    //----------------------------------------------------------------------
-//    Group* res = new Group( m_output->createGroup(stateName+"/response"));
-
-//    writeDataSet(realResponse, res, "real");
-//    writeDataSet(complexResponse, res, "complex");
-
-//    //----------------------------------------------------------------------
-//    Group* impRes = new Group( m_output->createGroup(stateName+"/impulseResponse"));
-//    writeDataSet(realImpulseResponse, impRes, "real");
-//    writeDataSet(complexImpulseResponse, impRes, "complex");
+    mat realImpulseResponse = relay.impulseRespons();
+    mat complexImpulseResponse = relay.impulseResponsComplex();
 
 
-//    //----------------------------------------------------------------------
-//    Group* stim = new Group( m_output->createGroup(stateName+"/stimuli"));
-//    writeDataSet(realStim, stim, "real");
-//    writeDataSet(complexStim, stim, "complex");
+    mat realStim = stimuli.real();
+    mat complexStim = stimuli.complex();
+
+    stringstream stateIndex;
+    stateIndex << "state" << setw(4) << setfill('0')  << state;
+    string stateName = "/"+stateIndex.str();
+
+    Group* group = new Group( m_output->createGroup(stateName));
+
+    //----------------------------------------------------------------------
+    Group* res = new Group( m_output->createGroup(stateName+"/response"));
+
+    writeDataSet(realResponse, res, "real");
+    writeDataSet(complexResponse, res, "complex");
+
+    //----------------------------------------------------------------------
+    Group* impRes = new Group( m_output->createGroup(stateName+"/impulseResponse"));
+    writeDataSet(realImpulseResponse, impRes, "real");
+    writeDataSet(complexImpulseResponse, impRes, "complex");
+
+
+    //----------------------------------------------------------------------
+    Group* stim = new Group( m_output->createGroup(stateName+"/stimuli"));
+    writeDataSet(realStim, stim, "real");
+    writeDataSet(complexStim, stim, "complex");
 
 }
 
