@@ -31,7 +31,8 @@ void GanglionDOG::setSpatialImpulseResponseComplex(vec2 k)
 
 void GanglionDOG::setTemporalImpulseResponse(double t)
 {
-    m_temporalImpulseResponse = 1.;
+    m_temporalImpulseResponse = 1./ m_tau_rg * exp(-t/m_tau_rg)
+            * m_math.heaviside(t);
 }
 
 void GanglionDOG::setTemporalImpulseResponseComplex(double w)

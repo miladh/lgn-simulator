@@ -3,6 +3,7 @@
 
 #include <libconfig.h++>
 #include <armadillo>
+#include "../math/functions.h"
 
 
 using namespace std;
@@ -35,6 +36,8 @@ public:
 
 
 protected:
+    Functions m_math;
+
     double m_spatialImpulseResponse = 0;
     double m_spatialImpulseResponseComplex = 0;
     double m_temporalImpulseResponse = 0;

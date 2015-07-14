@@ -29,6 +29,7 @@ void Relay::computeResponse(double t)
 {
     mat stim = 0*m_response;
     m_response = 0*m_response;
+    m_impulseResponse  = 0* m_impulseResponse;
 
     double *w = new double [int(m_domain[2])];
     double *x = new double [int(m_domain[2])];

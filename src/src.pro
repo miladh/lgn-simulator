@@ -21,7 +21,12 @@ SOURCES += \
     stimuli/patchgrating.cpp \
     math/functions.cpp \
     relay/relay.cpp \
-    relay/originaledog.cpp
+    relay/originaledog.cpp \
+    neurons/neuron.cpp \
+    neurons/corticalcell.cpp \
+    temporalKernels/temporalkernel.cpp \
+    spatialKernels/spatialkernel.cpp \
+    neurons/relaycell.cpp
 HEADERS += \
     integrator.h \
     trapezoidal.h \
@@ -34,4 +39,9 @@ HEADERS += \
     stimuli/patchgrating.h \
     math/functions.h \
     relay/relay.h \
-    relay/originaledog.h
+    relay/originaledog.h \
+    neurons/neuron.h \
+    neurons/corticalcell.h \
+    temporalKernels/temporalkernel.h \
+    spatialKernels/spatialkernel.h \
+    neurons/relaycell.h
