@@ -25,7 +25,7 @@ public:
         SpatialKernel *spatialKernel;
     };
 
-    virtual void computeResponse() = 0;
+    virtual void computeResponse(double t) = 0;
     virtual double impulseResponseComplex(vec2 kVec, double w) = 0;
 
     void addGanglionCell(Neuron *neuron,

@@ -11,9 +11,8 @@ public:
 
     // Neuron interface
     void computeResponse(double t);
-
-private:
     double impulseResponseComplex(vec2 kVec, double w);
+
 
 };
 

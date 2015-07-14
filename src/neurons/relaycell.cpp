@@ -31,8 +31,10 @@ void RelayCell::computeResponse(double t)
 
                     double Scomplex = m_stim->complex({x[m], x[n]}, m_stim->w());
                     double Gcomplex = impulseResponseComplex({x[m], x[n]}, m_stim->w());
+
                     double dGr = Gcomplex * w[m] * w[n] *
                             cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - m_stim->w() * t);
+
                     m_impulseResponse(i, j) +=  dGr;
                     m_response(i,j) += dGr * Scomplex;
                 }
