@@ -13,7 +13,8 @@ public:
     void computeResponse(double t);
 
 private:
-    double transferFunctionComplex(vec2 kVec, double w);
+    double impulseResponseComplex(vec2 kVec, double w);
+
 };
 
 #endif // RELAYCELL_H

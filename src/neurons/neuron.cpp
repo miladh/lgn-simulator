@@ -24,20 +24,49 @@ Neuron::~Neuron()
 
 }
 
-void Neuron::addFeedforwardInput(Neuron *neuron,
-                                 TemporalKernel *tKernel,
-                                 SpatialKernel *sKernel)
+void Neuron::addGanglionCell(Neuron *neuron,
+                                TemporalKernel *tKernel,
+                                SpatialKernel *sKernel)
 {
-    m_feedforwardInputs.emplace_back(Input{neuron, tKernel, sKernel});
+    m_ganglionCells.emplace_back(Input{neuron, tKernel, sKernel});
 }
 
-void Neuron::addFeedbackInput(Neuron *neuron,
-                              TemporalKernel *tKernel,
-                              SpatialKernel *sKernel)
+void Neuron::addInterNeuron(Neuron *neuron,
+                               TemporalKernel *tKernel,
+                               SpatialKernel *sKernel)
 {
-    m_feedbackInputs.emplace_back(Input{neuron, tKernel, sKernel});
+    m_interNeurons.emplace_back(Input{neuron, tKernel, sKernel});
 }
 
+void Neuron::addCorticalNeuron(Neuron *neuron,
+                                  TemporalKernel *tKernel,
+                                  SpatialKernel *sKernel)
+{
+    m_corticalNeurons.emplace_back(Input{neuron, tKernel, sKernel});
+}
+
+
+
+vector<Neuron::Input> Neuron::ganglionCells() const
+{
+    return m_ganglionCells;
+}
+
+vector<Neuron::Input> Neuron::relayCells() const
+{
+    return m_corticalNeurons;
+}
+
+
+vector<Neuron::Input> Neuron::interNeurons() const
+{
+    return m_interNeurons;
+}
+
+vector<Neuron::Input> Neuron::corticalNeurons() const
+{
+    return m_corticalNeurons;
+}
 
 
 
@@ -60,6 +89,11 @@ mat Neuron::impulseResponseComplex() const
 {
     return m_impulseResponseComplex;
 }
+
+
+
+
+
 
 
 

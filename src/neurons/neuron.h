@@ -19,12 +19,22 @@ public:
     Neuron(const Config *cfg);
     ~Neuron();
 
-    virtual void computeResponse() = 0;
+    struct Input {
+        Neuron *neuron;
+        TemporalKernel *temporalKernel;
+        SpatialKernel *spatialKernel;
+    };
 
-    void addFeedforwardInput(Neuron *neuron,
+    virtual void computeResponse() = 0;
+    virtual double impulseResponseComplex(vec2 kVec, double w) = 0;
+
+    void addGanglionCell(Neuron *neuron,
+                          TemporalKernel *tKernel,
+                          SpatialKernel *sKernel);
+    void addInterNeuron(Neuron *neuron,
                              TemporalKernel *tKernel,
                              SpatialKernel *sKernel);
-    void addFeedbackInput(Neuron *neuron,
+    void addCorticalNeuron(Neuron *neuron,
                           TemporalKernel *tKernel,
                           SpatialKernel *sKernel);
 
@@ -35,6 +45,11 @@ public:
     mat impulseResponseComplex() const;
 
 
+    vector<Input> ganglionCells() const;
+    vector<Input> relayCells() const;
+    vector<Input> interNeurons() const;
+    vector<Input> corticalNeurons() const;
+
 protected:
     Stimuli *m_stim;
 
@@ -44,14 +59,11 @@ protected:
     vec m_mesh;
     vec3 m_domain;
 
-    struct Input {
-        Neuron *neuron;
-        TemporalKernel *temporalKernel;
-        SpatialKernel *spatialKernel;
-    };
 
-    vector<Input> m_feedforwardInputs;
-    vector<Input> m_feedbackInputs;
+    vector<Input> m_ganglionCells;
+    vector<Input> m_relayCells;
+    vector<Input> m_interNeurons;
+    vector<Input> m_corticalNeurons;
 
 
 
