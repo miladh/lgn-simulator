@@ -6,34 +6,33 @@ from pylab import*
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
+# User commands:
+cellType = "relay"
 outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
 # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/tools/fb/*.h5"
 outputFile = glob(outputFilePath)[0]
 
 f = h5py.File(outputFile, "r")
 states = f.get("/")
-
 dt = states.attrs["dt"]
 
-
 R = []
-S = []
 G = []
+S = []
+
 for stateId, state in enumerate(states):
     dataset = states.get(state)
-#    R.append(array(dataset.get("response/real")))
-    R.append(array(dataset.get("response/real")).clip(min =0))
     S.append(array(dataset.get("stimuli/real")))
-    G.append(array(dataset.get("impulseResponse/real")))
+    R.append(array(dataset.get(cellType+"/response/real")).clip(min =0))
+    G.append(array(dataset.get(cellType+"/impulseResponse/real")))
 
-nStates = len(states)
-print "Number of states: ", nStates
+    nStates = len(states)
+    print "Number of states: ", nStates
 
-f.close()
+
 
 
 #####################################################################
-
 def init():
     S_im.set_data(S[0])
     G_im.set_data(G[0])
@@ -46,10 +45,9 @@ def animate(i):
     S_im.set_array(S[i])
     G_im.set_array(G[i])
     R_im.set_array(R[i])
-    ttl.set_text("t = " + str(i*dt) + " s")
+    ttl.set_text(cellType +"\n" +"t = " + str(i*dt) + " s")
 #    print Rc[i].max(), " - ", Rc[i].min()
     return [S_im, G_im, R_im], ttl
-
 
 
 fig, axarr = plt.subplots(1,3,figsize=(15,8))

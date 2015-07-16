@@ -75,7 +75,7 @@ void OutputManager::writeResponse(const int state,
     Group* group = new Group( m_output->createGroup(stateName));
 
 
-    //----------------------------------------------------------------------
+    // Write stimuli
     Group* stim = new Group( m_output->createGroup(stateName+"/stimuli"));
     mat realStim = stimuli.real();
     mat complexStim = stimuli.complex();
@@ -83,6 +83,8 @@ void OutputManager::writeResponse(const int state,
     writeDataSet(realStim, stim, "real");
     writeDataSet(complexStim, stim, "complex");
 
+
+    // Write neurons
     for(const Neuron *neuron : neurons){
 
         mat realResponse = neuron->response();
@@ -92,18 +94,18 @@ void OutputManager::writeResponse(const int state,
         mat complexImpulseResponse = neuron->impulseResponseComplex();
 
 
-
         string cellGroupName = stateName+"/"+neuron->cellType();
         Group* cellGroup = new Group( m_output->createGroup(cellGroupName));
 
-        //----------------------------------------------------------------------
+        //write response:
         Group* res = new Group( m_output->createGroup(cellGroupName+"/response"));
 
         writeDataSet(realResponse, res, "real");
         writeDataSet(complexResponse, res, "complex");
 
-        //----------------------------------------------------------------------
-        Group* impRes = new Group( m_output->createGroup(cellGroupName+"/impulseResponse"));
+        //write impulse response:
+        Group* impRes =
+                new Group( m_output->createGroup(cellGroupName+"/impulseResponse"));
         writeDataSet(realImpulseResponse, impRes, "real");
         writeDataSet(complexImpulseResponse, impRes, "complex");
 

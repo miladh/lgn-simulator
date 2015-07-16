@@ -75,7 +75,7 @@ int main()
 
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
-//        cortical.computeResponse(t);
+        cortical.computeResponse(t);
         relay.computeResponse(t);
         io.writeResponse(i, neurons, S);
         cout <<"timestep: " << i << " of " << nSteps << endl;
