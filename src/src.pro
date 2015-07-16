@@ -14,34 +14,32 @@ SOURCES += \
     trapezoidal.cpp \
     outputmanager.cpp \
     lib.cpp \
-    ganglion/ganglion.cpp \
-    ganglion/gangliondog.cpp \
-    math/dog.cpp \
     stimuli/stimuli.cpp \
     stimuli/patchgrating.cpp \
     math/functions.cpp \
-    relay/relay.cpp \
-    relay/originaledog.cpp \
     neurons/neuron.cpp \
     neurons/corticalcell.cpp \
     temporalKernels/temporalkernel.cpp \
     spatialKernels/spatialkernel.cpp \
-    neurons/relaycell.cpp
+    neurons/relaycell.cpp \
+    spatialKernels/dog.cpp \
+    temporalKernels/decayingexponential.cpp \
+    spatialKernels/gaussian.cpp \
+    neurons/ganglioncell.cpp
 HEADERS += \
     integrator.h \
     trapezoidal.h \
     outputmanager.h \
     lib.h \
-    ganglion/ganglion.h \
-    ganglion/gangliondog.h \
-    math/dog.h \
     stimuli/stimuli.h \
     stimuli/patchgrating.h \
     math/functions.h \
-    relay/relay.h \
-    relay/originaledog.h \
     neurons/neuron.h \
     neurons/corticalcell.h \
     temporalKernels/temporalkernel.h \
     spatialKernels/spatialkernel.h \
-    neurons/relaycell.h
+    neurons/relaycell.h \
+    spatialKernels/dog.h \
+    temporalKernels/decayingexponential.h \
+    spatialKernels/gaussian.h \
+    neurons/ganglioncell.h

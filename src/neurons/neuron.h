@@ -16,27 +16,39 @@ using namespace std;
 class Neuron
 {
 public:
-    Neuron(const Config *cfg);
+    Neuron(const Config *cfg, Stimuli *stim);
     ~Neuron();
 
     struct Input {
         Neuron *neuron;
-        TemporalKernel *temporalKernel;
         SpatialKernel *spatialKernel;
+        TemporalKernel *temporalKernel;
     };
 
-    virtual void computeResponse(double t) = 0;
-    virtual double impulseResponseComplex(vec2 kVec, double w) = 0;
 
     void addGanglionCell(Neuron *neuron,
-                          TemporalKernel *tKernel,
-                          SpatialKernel *sKernel);
+                         SpatialKernel *sKernel,
+                         TemporalKernel *tKernel);
+
+    void addRelayCell(Neuron *neuron,
+                      SpatialKernel *sKernel,
+                      TemporalKernel *tKernel);
+
     void addInterNeuron(Neuron *neuron,
-                             TemporalKernel *tKernel,
-                             SpatialKernel *sKernel);
+                        SpatialKernel *sKernel,
+                        TemporalKernel *tKernel);
     void addCorticalNeuron(Neuron *neuron,
-                          TemporalKernel *tKernel,
-                          SpatialKernel *sKernel);
+                           SpatialKernel *sKernel,
+                           TemporalKernel *tKernel);
+
+
+
+    // Virtual functions
+    virtual void computeResponse(double t) = 0;
+    virtual void computeResponseComplex(double w) = 0;
+    virtual double impulseResponseComplex(vec2 kVec, double w) = 0;
+
+
 
     // Getter member functions
     mat response() const;

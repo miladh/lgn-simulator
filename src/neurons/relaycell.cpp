@@ -1,7 +1,7 @@
 #include "relaycell.h"
 
-RelayCell::RelayCell(const Config *cfg)
-    : Neuron(cfg)
+RelayCell::RelayCell(const Config *cfg, Stimuli *stim)
+    : Neuron(cfg, stim)
 {
 
 }
@@ -17,6 +17,7 @@ void RelayCell::computeResponse(double t)
     mat stim = 0*m_response;
     m_response = 0*m_response;
     m_impulseResponse  = 0* m_impulseResponse;
+
 
     double *w = new double [int(m_domain[2])];
     double *x = new double [int(m_domain[2])];
@@ -44,6 +45,20 @@ void RelayCell::computeResponse(double t)
     m_stim->setReal(stim);
 }
 
+
+void RelayCell::computeResponseComplex(double w)
+{
+    for(int i = 0; i < int(m_mesh.n_elem); i++){
+        for(int j = 0; j < int(m_mesh.n_elem); j++){
+
+            double Gcomplex = impulseResponseComplex({m_mesh[i], m_mesh[j]}, w);
+            double Scomplex = m_stim->complex({m_mesh[i], m_mesh[j]}, w);
+
+            m_responseComplex(i,j) = Gcomplex*Scomplex;
+        }
+    }
+}
+
 double RelayCell::impulseResponseComplex(vec2 kVec, double w)
 {
 
@@ -51,20 +66,20 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
 
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
-        G += g.spatialKernel->coupling(kVec,w)
-           * g.temporalKernel->coupling(kVec,w)
+        G += g.spatialKernel->complex(kVec)
+           * g.temporalKernel->complex(w)
            * ganglionCell->impulseResponseComplex(kVec,w);
     }
 
     for (const Input i : m_interNeurons){
         Neuron *interneuron = i.neuron;
-        double Kri = i.spatialKernel->coupling(kVec,w)
-                * i.temporalKernel->coupling(kVec,w);
+        double Kri = i.spatialKernel->complex(kVec)
+                * i.temporalKernel->complex(w);
 
         for (const Input g : interneuron->ganglionCells()){
             Neuron *ganglionCell = g.neuron;
-            I += g.spatialKernel->coupling(kVec,w)
-               * g.temporalKernel->coupling(kVec,w)
+            I += g.spatialKernel->complex(kVec)
+               * g.temporalKernel->complex(w)
                * ganglionCell->impulseResponseComplex(kVec,w);
         }
         I*= Kri;
@@ -73,12 +88,12 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
 
     for (const Input c : m_corticalNeurons){
         Neuron *corticalCell = c.neuron;
-        double Krc = c.spatialKernel->coupling(kVec,w)
-                * c.temporalKernel->coupling(kVec,w);
+        double Krc = c.spatialKernel->complex(kVec)
+                * c.temporalKernel->complex(w);
 
         for (const Input r : corticalCell->relayCells()){
-            C += r.spatialKernel->coupling(kVec,w)
-               * r.temporalKernel->coupling(kVec,w);
+            C += r.spatialKernel->complex(kVec)
+               * r.temporalKernel->complex(w);
         }
         C*= Krc;
     }

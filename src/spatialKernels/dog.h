@@ -4,24 +4,26 @@
 #define PI 3.14159265359
 
 #include <armadillo>
-
+#include "spatialkernel.h"
 
 using namespace std;
 using namespace arma;
 
 
-class DOG
+class DOG : public SpatialKernel
 {
 public:
     DOG(double A, double a, double B, double b);
     ~DOG();
 
-
+    // SpatialKernel interface
     double real(vec2 r);
     double complex(vec2 k);
 
+
 private:
     double m_A, m_a, m_B, m_b = 0.0;
+
 
 };
 

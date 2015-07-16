@@ -1,6 +1,6 @@
 #include <unittest++/UnitTest++.h>
 #include "stimuli/patchgrating.h"
-#include "math/dog.h"
+#include "spatialKernels/dog.h"
 #include <lib.h>
 
 TEST(dog) {

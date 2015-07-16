@@ -7,7 +7,7 @@
 #include <libconfig.h++>
 
 #include "stimuli/stimuli.h"
-#include "relay/relay.h"
+#include "neurons/neuron.h"
 
 using namespace arma;
 using namespace std;
@@ -21,8 +21,7 @@ public:
     OutputManager(const Config *cfg);
     ~OutputManager();
 
-    void writeResponse(const int state, const Relay &relay,
-                       const Stimuli &stimuli);
+    void writeResponse(const int state, const Neuron &neuron, const Stimuli &stimuli);
 
 private:
     const Config* m_cfg;

@@ -6,11 +6,12 @@
 class CorticalCell : public Neuron
 {
 public:
-    CorticalCell(const Config *cfg);
+    CorticalCell(const Config *cfg, Stimuli *stim);
     ~CorticalCell();
 
-    // Neuron interface
-    void computeResponse();
+    void computeResponse(double t);
+    void computeResponseComplex(double w);
+    double impulseResponseComplex(vec2 kVec, double w);
 };
 
 #endif // CORTICALCELL_H

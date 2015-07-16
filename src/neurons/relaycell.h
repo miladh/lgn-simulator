@@ -6,14 +6,13 @@
 class RelayCell : public Neuron
 {
 public:
-    RelayCell(const Config * cfg);
+    RelayCell(const Config * cfg, Stimuli *stim);
     ~RelayCell();
 
     // Neuron interface
     void computeResponse(double t);
     double impulseResponseComplex(vec2 kVec, double w);
-
-
+    void computeResponseComplex(double w);
 };
 
 #endif // RELAYCELL_H

@@ -1,6 +1,7 @@
 #include "neuron.h"
 
-Neuron::Neuron(const Config *cfg)
+Neuron::Neuron(const Config *cfg, Stimuli *stim)
+    : m_stim(stim)
 {
     const Setting & root = cfg->getRoot();
     const Setting &gridLimits = root["gridSettings"]["grid"];
@@ -17,6 +18,8 @@ Neuron::Neuron(const Config *cfg)
     m_responseComplex = zeros(grid[2], grid[2]);
     m_impulseResponse = zeros(grid[2], grid[2]);
     m_impulseResponseComplex = zeros(grid[2], grid[2]);
+
+
 }
 
 Neuron::~Neuron()
@@ -25,24 +28,31 @@ Neuron::~Neuron()
 }
 
 void Neuron::addGanglionCell(Neuron *neuron,
-                                TemporalKernel *tKernel,
-                                SpatialKernel *sKernel)
+                             SpatialKernel *sKernel,
+                             TemporalKernel *tKernel)
 {
-    m_ganglionCells.emplace_back(Input{neuron, tKernel, sKernel});
+    m_ganglionCells.emplace_back(Input{neuron, sKernel, tKernel});
+}
+
+void Neuron::addRelayCell(Neuron *neuron,
+                          SpatialKernel *sKernel,
+                          TemporalKernel *tKernel)
+{
+    m_relayCells.emplace_back(Input{neuron, sKernel, tKernel});
 }
 
 void Neuron::addInterNeuron(Neuron *neuron,
-                               TemporalKernel *tKernel,
-                               SpatialKernel *sKernel)
+                            SpatialKernel *sKernel,
+                            TemporalKernel *tKernel)
 {
-    m_interNeurons.emplace_back(Input{neuron, tKernel, sKernel});
+    m_interNeurons.emplace_back(Input{neuron, sKernel, tKernel});
 }
 
 void Neuron::addCorticalNeuron(Neuron *neuron,
-                                  TemporalKernel *tKernel,
-                                  SpatialKernel *sKernel)
+                               SpatialKernel *sKernel,
+                               TemporalKernel *tKernel)
 {
-    m_corticalNeurons.emplace_back(Input{neuron, tKernel, sKernel});
+    m_corticalNeurons.emplace_back(Input{neuron, sKernel, tKernel});
 }
 
 
@@ -69,8 +79,6 @@ vector<Neuron::Input> Neuron::corticalNeurons() const
 }
 
 
-
-
 mat Neuron::response() const
 {
     return m_response;
@@ -80,6 +88,7 @@ mat Neuron::impulseResponse() const
 {
     return m_impulseResponse;
 }
+
 mat Neuron::responseComplex() const
 {
     return m_responseComplex;

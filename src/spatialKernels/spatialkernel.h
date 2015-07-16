@@ -13,7 +13,9 @@ public:
     SpatialKernel();
     ~SpatialKernel();
 
-    virtual double coupling(vec2 k, double w) = 0;
+    virtual double real(vec2 rVec) = 0;
+    virtual double complex(vec2 kVec) = 0;
+
 };
 
 #endif // SPATIALKERNELS_H

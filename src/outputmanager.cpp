@@ -65,15 +65,15 @@ void OutputManager::initialize()
 }
 
 
-void OutputManager::writeResponse(const int state,const Relay &relay,
+void OutputManager::writeResponse(const int state, const Neuron &neuron,
                                   const Stimuli &stimuli)
 {
 
-    mat realResponse = relay.response();
-    mat complexResponse = relay.responseComplex();
+    mat realResponse = neuron.response();
+    mat complexResponse = neuron.responseComplex();
 
-    mat realImpulseResponse = relay.impulseRespons();
-    mat complexImpulseResponse = relay.impulseResponsComplex();
+    mat realImpulseResponse = neuron.impulseResponse();
+    mat complexImpulseResponse = neuron.impulseResponseComplex();
 
 
     mat realStim = stimuli.real();

@@ -1,7 +1,7 @@
 #include "corticalcell.h"
 
-CorticalCell::CorticalCell(const Config * cfg)
-    : Neuron(cfg)
+CorticalCell::CorticalCell(const Config * cfg, Stimuli *stim)
+    : Neuron(cfg, stim)
 {
 
 }
@@ -11,13 +11,19 @@ CorticalCell::~CorticalCell()
 
 }
 
-void CorticalCell::computeResponse()
+void CorticalCell::computeResponse(double t)
 {
 
-    m_response = 0 * m_response;
-    m_impulseResponse = 0 * m_impulseResponse;
 }
 
+void CorticalCell::computeResponseComplex(double w)
+{
 
+}
+
+double CorticalCell::impulseResponseComplex(vec2 kVec, double w)
+{
+
+}
 
 
