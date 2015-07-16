@@ -79,6 +79,11 @@ vector<Neuron::Input> Neuron::corticalNeurons() const
 }
 
 
+string Neuron::cellType() const
+{
+    return m_cellType;
+}
+
 mat Neuron::response() const
 {
     return m_response;

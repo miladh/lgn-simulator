@@ -6,7 +6,7 @@
 class Gaussian : public SpatialKernel
 {
 public:
-    Gaussian();
+    Gaussian(double weight, double spread);
     ~Gaussian();
 
     // SpatialKernel interface

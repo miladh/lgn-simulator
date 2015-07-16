@@ -2,8 +2,9 @@
 
 RelayCell::RelayCell(const Config *cfg, Stimuli *stim)
     : Neuron(cfg, stim)
-{
 
+{
+    m_cellType = "relay";
 }
 
 RelayCell::~RelayCell()
@@ -55,6 +56,7 @@ void RelayCell::computeResponseComplex(double w)
             double Gcomplex = impulseResponseComplex({m_mesh[i], m_mesh[j]}, w);
             double Scomplex = m_stim->complex({m_mesh[i], m_mesh[j]}, w);
 
+            m_impulseResponseComplex(i,j) = Gcomplex;
             m_responseComplex(i,j) = Gcomplex*Scomplex;
         }
     }

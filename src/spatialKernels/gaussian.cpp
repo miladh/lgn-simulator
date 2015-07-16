@@ -1,6 +1,8 @@
 #include "gaussian.h"
 
-Gaussian::Gaussian()
+Gaussian::Gaussian(double weight, double spread)
+    : m_weight(weight)
+    , m_spread(spread)
 {
 
 }

@@ -65,42 +65,51 @@ void OutputManager::initialize()
 }
 
 
-void OutputManager::writeResponse(const int state, const Neuron &neuron,
+void OutputManager::writeResponse(const int state,
+                                  const vector<Neuron*> &neurons,
                                   const Stimuli &stimuli)
 {
-
-    mat realResponse = neuron.response();
-    mat complexResponse = neuron.responseComplex();
-
-    mat realImpulseResponse = neuron.impulseResponse();
-    mat complexImpulseResponse = neuron.impulseResponseComplex();
-
-
-    mat realStim = stimuli.real();
-    mat complexStim = stimuli.complex();
-
     stringstream stateIndex;
     stateIndex << "state" << setw(4) << setfill('0')  << state;
     string stateName = "/"+stateIndex.str();
-
     Group* group = new Group( m_output->createGroup(stateName));
-
-    //----------------------------------------------------------------------
-    Group* res = new Group( m_output->createGroup(stateName+"/response"));
-
-    writeDataSet(realResponse, res, "real");
-    writeDataSet(complexResponse, res, "complex");
-
-    //----------------------------------------------------------------------
-    Group* impRes = new Group( m_output->createGroup(stateName+"/impulseResponse"));
-    writeDataSet(realImpulseResponse, impRes, "real");
-    writeDataSet(complexImpulseResponse, impRes, "complex");
 
 
     //----------------------------------------------------------------------
     Group* stim = new Group( m_output->createGroup(stateName+"/stimuli"));
+    mat realStim = stimuli.real();
+    mat complexStim = stimuli.complex();
+
     writeDataSet(realStim, stim, "real");
     writeDataSet(complexStim, stim, "complex");
+
+    for(const Neuron *neuron : neurons){
+
+        mat realResponse = neuron->response();
+        mat complexResponse = neuron->responseComplex();
+
+        mat realImpulseResponse = neuron->impulseResponse();
+        mat complexImpulseResponse = neuron->impulseResponseComplex();
+
+
+
+        string cellGroupName = stateName+"/"+neuron->cellType();
+        Group* cellGroup = new Group( m_output->createGroup(cellGroupName));
+
+        //----------------------------------------------------------------------
+        Group* res = new Group( m_output->createGroup(cellGroupName+"/response"));
+
+        writeDataSet(realResponse, res, "real");
+        writeDataSet(complexResponse, res, "complex");
+
+        //----------------------------------------------------------------------
+        Group* impRes = new Group( m_output->createGroup(cellGroupName+"/impulseResponse"));
+        writeDataSet(realImpulseResponse, impRes, "real");
+        writeDataSet(complexImpulseResponse, impRes, "complex");
+
+
+
+    }
 
 }
 

@@ -19,7 +19,6 @@ double DecayingExponential::real(double t)
 
 double DecayingExponential::complex(double w)
 {
-
     return cos(w*m_delay)/ (1 + w*w * m_tau*m_tau);
 }
 

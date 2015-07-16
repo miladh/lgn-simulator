@@ -11,8 +11,8 @@ public:
 
     // Neuron interface
     void computeResponse(double t);
-    double impulseResponseComplex(vec2 kVec, double w);
     void computeResponseComplex(double w);
+    double impulseResponseComplex(vec2 kVec, double w);
 };
 
 #endif // RELAYCELL_H

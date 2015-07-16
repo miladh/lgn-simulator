@@ -21,7 +21,9 @@ public:
     OutputManager(const Config *cfg);
     ~OutputManager();
 
-    void writeResponse(const int state, const Neuron &neuron, const Stimuli &stimuli);
+    void writeResponse(const int state,
+                       const vector<Neuron *> &neurons,
+                       const Stimuli &stimuli);
 
 private:
     const Config* m_cfg;

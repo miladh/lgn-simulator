@@ -5,7 +5,7 @@ GanglionCell::GanglionCell(const Config *cfg, Stimuli *stim, SpatialKernel *spat
     , m_spatialKernel(spatialKernel)
     , m_temporalKernel(temporalKernel)
 {
-
+    m_cellType = "ganglion";
 }
 
 GanglionCell::~GanglionCell()
@@ -50,6 +50,7 @@ void GanglionCell::computeResponseComplex(double w)
             double Gcomplex = impulseResponseComplex({m_mesh[i], m_mesh[j]}, w);
             double Scomplex = m_stim->complex({m_mesh[i], m_mesh[j]}, w);
 
+            m_impulseResponseComplex(i,j) = Gcomplex;
             m_responseComplex(i,j) = Gcomplex*Scomplex;
         }
     }

@@ -50,6 +50,7 @@ public:
 
 
 
+
     // Getter member functions
     mat response() const;
     mat impulseResponse() const;
@@ -62,7 +63,10 @@ public:
     vector<Input> interNeurons() const;
     vector<Input> corticalNeurons() const;
 
+    string cellType() const;
+
 protected:
+    string m_cellType;
     Stimuli *m_stim;
 
     mat m_response, m_responseComplex;
