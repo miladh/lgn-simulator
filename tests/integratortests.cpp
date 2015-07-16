@@ -53,8 +53,8 @@ SUITE(integrator){
 
 
         CHECK_CLOSE(I, Ie, 1);
-        cout << setprecision(10) << Ie << '\n';
-        cout << setprecision(10) << I << '\n';
+//        cout << setprecision(10) << Ie << '\n';
+//        cout << setprecision(10) << I << '\n';
 
 
     }

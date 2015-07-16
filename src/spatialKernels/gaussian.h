@@ -14,7 +14,8 @@ public:
     double complex(vec2 kVec);
 
 private:
-    double m_weight, m_spread = 0;
+    double m_weight = 0.0;
+    double m_spread = 0;
 };
 
 #endif // GAUSSIAN_H

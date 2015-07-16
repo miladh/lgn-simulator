@@ -22,7 +22,10 @@ public:
 
 
 private:
-    double m_A, m_a, m_B, m_b = 0.0;
+    double m_A = 0.0;
+    double m_a = 0.0;
+    double m_B = 0.0;
+    double m_b = 0.0;
 
 
 };

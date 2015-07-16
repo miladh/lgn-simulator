@@ -15,7 +15,8 @@ public:
 
 
 private:
-    double m_tau, m_delay = 0.0;
+    double m_tau = 0.0;
+    double m_delay = 0.0;
 };
 
 #endif // DECAYINGEXPONENTIAL_H

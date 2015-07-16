@@ -14,7 +14,7 @@ DecayingExponential::~DecayingExponential()
 
 double DecayingExponential::real(double t)
 {
-    return 1./ m_tau * exp(-(t - m_delay)/m_tau) * m_math.heaviside(t - m_delay);
+    return 1./ m_tau * exp(-(t - m_delay)/m_tau) * Functions::heaviside(t - m_delay);
 }
 
 double DecayingExponential::complex(double w)

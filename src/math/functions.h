@@ -8,9 +8,9 @@ class Functions
 public:
     Functions();
     ~Functions();
-    double heaviside(double x);
-    double secondKindBesselFunction(double x);
-    double delta(double x, double y);
+    static double heaviside(double x);
+    static double secondKindBesselFunction(double x);
+    static double delta(double x, double y);
 };
 
 #endif // FUNCTIONS_H

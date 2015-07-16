@@ -26,9 +26,8 @@ TEST(dog) {
 //}
 
 TEST(heaviside) {
-    Functions func;
-    CHECK_EQUAL(func.heaviside(-1.2), 0);
-    CHECK_EQUAL(func.heaviside(2.2), 1.);
+    CHECK_EQUAL(Functions::heaviside(-1.2), 0);
+    CHECK_EQUAL(Functions::heaviside(2.2), 1.);
 
 }
 

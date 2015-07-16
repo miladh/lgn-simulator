@@ -38,6 +38,7 @@ void RelayCell::computeResponse(double t)
 
                     m_impulseResponse(i, j) +=  dGr;
                     m_response(i,j) += dGr * Scomplex;
+
                 }
             }
         }
@@ -62,7 +63,9 @@ void RelayCell::computeResponseComplex(double w)
 double RelayCell::impulseResponseComplex(vec2 kVec, double w)
 {
 
-    double G, I, C = 0;
+    double G = 0;
+    double I = 0;
+    double C = 0;
 
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
@@ -71,10 +74,13 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
            * ganglionCell->impulseResponseComplex(kVec,w);
     }
 
+
+
     for (const Input i : m_interNeurons){
         Neuron *interneuron = i.neuron;
         double Kri = i.spatialKernel->complex(kVec)
                 * i.temporalKernel->complex(w);
+
 
         for (const Input g : interneuron->ganglionCells()){
             Neuron *ganglionCell = g.neuron;
@@ -97,7 +103,6 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
         }
         C*= Krc;
     }
-
 
     double Gr = (G + I)/(1 - C);
     return Gr;

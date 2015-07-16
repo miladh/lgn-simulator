@@ -14,6 +14,7 @@
 #include "spatialKernels/gaussian.h"
 
 #include "temporalKernels/decayingexponential.h"
+#include "temporalKernels/diracDelta.h"
 
 
 using namespace std;
@@ -44,20 +45,23 @@ int main()
     PatchGrating S(&cfg);
     OutputManager io(&cfg);
 
-    RelayCell relay(&cfg, &S);
-    GanglionCell ganglion(&cfg, &S);
-    CorticalCell cortical(&cfg, &S);
-
+    //Kernels:
     DOG dog(dogA, doga, dogB, dogb);
     Gaussian gauss;
     DecayingExponential Ktg(tau_rg, 0);
     DecayingExponential Ktc(tau_rc, delay);
+    DiracDelta delta(0.0);
 
-    relay.addGanglionCell(&ganglion,&dog, &Ktg);
+
+    //Neurons:
+    RelayCell relay(&cfg, &S);
+    CorticalCell cortical(&cfg, &S);
+    GanglionCell ganglion(&cfg, &S, &dog, &Ktg);
+
+
+
+    relay.addGanglionCell(&ganglion,&dog, &delta);
     relay.addCorticalNeuron(&cortical, &gauss, &Ktc);
-
-
-
 
 
     double t = 0.0;

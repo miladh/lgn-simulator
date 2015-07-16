@@ -33,7 +33,6 @@ public:
     double w() const;
 
 protected:
-    Functions m_math;
     mat m_real = zeros(2,2);
     mat m_complex = zeros(2,2);
 

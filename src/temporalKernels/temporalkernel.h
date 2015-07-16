@@ -16,8 +16,6 @@ public:
     virtual double real(double t) = 0;
     virtual double complex(double w) = 0;
 
-protected:
-    Functions m_math;
 
 };
 
