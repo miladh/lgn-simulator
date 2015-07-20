@@ -45,7 +45,7 @@ def animate(i):
     S_im.set_array(S[i])
     G_im.set_array(G[i])
     R_im.set_array(R[i])
-    ttl.set_text(cellType +"\n" +"t = " + str(i*dt) + " s")
+    ttl.set_text(cellType + "\n" +"t = " + str(i*dt) + " s")
 #    print Rc[i].max(), " - ", Rc[i].min()
     return [S_im, G_im, R_im], ttl
 

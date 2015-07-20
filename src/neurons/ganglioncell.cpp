@@ -15,6 +15,7 @@ GanglionCell::~GanglionCell()
 
 void GanglionCell::computeResponse(double t)
 {
+    mat stim = 0*m_response;
     m_response = 0*m_response;
     m_impulseResponse  = 0* m_impulseResponse;
 
@@ -25,6 +26,8 @@ void GanglionCell::computeResponse(double t)
 
     for(int i = 0; i < int(m_mesh.n_elem); i++){
         for(int j = 0; j < int(m_mesh.n_elem); j++){
+
+            stim(i,j) = m_stim->real({m_mesh[i], m_mesh[j]}, t);
             for(int m = 0; m < int(m_domain[2]); m++){
                 for(int n = 0; n < int(m_domain[2]); n++){
 
@@ -40,6 +43,7 @@ void GanglionCell::computeResponse(double t)
             }
         }
     }
+    m_stim->setReal(stim);
 }
 
 void GanglionCell::computeResponseComplex(double w)

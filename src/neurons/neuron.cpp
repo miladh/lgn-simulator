@@ -64,7 +64,7 @@ vector<Neuron::Input> Neuron::ganglionCells() const
 
 vector<Neuron::Input> Neuron::relayCells() const
 {
-    return m_corticalNeurons;
+    return m_relayCells;
 }
 
 

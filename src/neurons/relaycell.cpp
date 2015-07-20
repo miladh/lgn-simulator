@@ -69,11 +69,14 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
     double I = 0;
     double C = 0;
 
+    double i = 0;
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
+        vec2 e = {-5+2*i,-5+2*i};
         G += g.spatialKernel->complex(kVec)
            * g.temporalKernel->complex(w)
            * ganglionCell->impulseResponseComplex(kVec,w);
+        i+=1;
     }
 
 
@@ -105,6 +108,7 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
         }
         C*= Krc;
     }
+
 
     double Gr = (G + I)/(1 - C);
     return Gr;

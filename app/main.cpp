@@ -56,18 +56,24 @@ int main()
     DiracDelta delta(0.0);
 
 
+    DOG dog1(-1.001*dogA, doga, -dogB, dogb);
+
     //Neurons:
     RelayCell relay(&cfg, &S);
     CorticalCell cortical(&cfg, &S);
     GanglionCell ganglion(&cfg, &S, &dog, &Ktg);
+//    GanglionCell ganglion1(&cfg, &S, &dog1, &Ktg);
 
     vector<Neuron *> neurons;
     neurons.push_back(&relay);
-    neurons.push_back(&cortical);
+//    neurons.push_back(&cortical);
+    neurons.push_back(&ganglion);
+//    neurons.push_back(&ganglion1);
 
 
 
     relay.addGanglionCell(&ganglion,&dog, &delta);
+//    relay.addGanglionCell(&ganglion1,&dog, &delta);
     relay.addCorticalNeuron(&cortical, &gauss, &Ktc);
 
     cortical.addRelayCell(&relay,&dog, &delta);
@@ -75,8 +81,9 @@ int main()
 
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
-        cortical.computeResponse(t);
+//        cortical.computeResponse(t);
         relay.computeResponse(t);
+//        ganglion.computeResponse(t);
         io.writeResponse(i, neurons, S);
         cout <<"timestep: " << i << " of " << nSteps << endl;
         t+=dt;
