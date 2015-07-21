@@ -20,6 +20,7 @@ double PatchGrating::real(vec2 rVec, double t)
             * m_contrast * cos(dot(rVec, m_k) - m_w * t);
 
 
+
     return s;
 
 }

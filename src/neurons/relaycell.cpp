@@ -109,6 +109,11 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
         C*= Krc;
     }
 
+//    cout << "C: " << C << endl;
+//    cout << "G: " << G << endl;
+//    cout << "Gr: " << (G + I)/(1 - C) << endl;
+//    cout << "Gr1: " << (G + I) << endl;
+//    cout << endl;
 
     double Gr = (G + I)/(1 - C);
     return Gr;

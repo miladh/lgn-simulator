@@ -1,9 +1,6 @@
 #ifndef STIMULI_H
 #define STIMULI_H
 
-#define PI 3.14159265359
-
-
 #include <math.h>
 #include <libconfig.h++>
 #include <armadillo>

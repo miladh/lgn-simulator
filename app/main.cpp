@@ -12,6 +12,7 @@
 
 #include "spatialKernels/dog.h"
 #include "spatialKernels/gaussian.h"
+#include "spatialKernels/ellipticgaussian.h"
 
 #include "temporalKernels/decayingexponential.h"
 #include "temporalKernels/diracDelta.h"
@@ -51,6 +52,7 @@ int main()
     //Kernels:
     DOG dog(dogA, doga, dogB, dogb);
     Gaussian gauss(weight, spread);
+    EllipticGaussian ellipticGauss(10, PI, 1., 0.5);
     DecayingExponential Ktg(tau_rg, 0);
     DecayingExponential Ktc(tau_rc, delay);
     DiracDelta delta(0.0);
@@ -66,22 +68,22 @@ int main()
 
     vector<Neuron *> neurons;
     neurons.push_back(&relay);
-//    neurons.push_back(&cortical);
+    neurons.push_back(&cortical);
     neurons.push_back(&ganglion);
 //    neurons.push_back(&ganglion1);
 
 
 
     relay.addGanglionCell(&ganglion,&dog, &delta);
+    relay.addCorticalNeuron(&cortical, & ellipticGauss, &delta);
 //    relay.addGanglionCell(&ganglion1,&dog, &delta);
-    relay.addCorticalNeuron(&cortical, &gauss, &Ktc);
 
-    cortical.addRelayCell(&relay,&dog, &delta);
+    cortical.addRelayCell(&relay, &dog, &delta);
 
 
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
-//        cortical.computeResponse(t);
+        cortical.computeResponse(t);
         relay.computeResponse(t);
 //        ganglion.computeResponse(t);
         io.writeResponse(i, neurons, S);

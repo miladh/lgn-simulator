@@ -2,6 +2,7 @@
 #define SPATIALKERNELS_H
 
 #include <armadillo>
+#include "math/functions.h"
 
 using namespace std;
 using namespace arma;

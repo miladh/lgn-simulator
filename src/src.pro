@@ -26,7 +26,8 @@ SOURCES += \
     temporalKernels/decayingexponential.cpp \
     spatialKernels/gaussian.cpp \
     neurons/ganglioncell.cpp \
-    temporalKernels/diracDelta.cpp
+    temporalKernels/diracDelta.cpp \
+    spatialKernels/ellipticgaussian.cpp
 HEADERS += \
     integrator.h \
     trapezoidal.h \
@@ -44,4 +45,5 @@ HEADERS += \
     temporalKernels/decayingexponential.h \
     spatialKernels/gaussian.h \
     neurons/ganglioncell.h \
-    temporalKernels/diracDelta.h
+    temporalKernels/diracDelta.h \
+    spatialKernels/ellipticgaussian.h
