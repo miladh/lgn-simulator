@@ -26,6 +26,16 @@ public:
     };
 
 
+    // Compute functions
+    void computeResponse(double t);
+    void computeResponseComplex(double w);
+    void computeImpulseResponse(double t);
+    void computeImpulseResponseComplex(double w);
+
+    // Virtual functions
+    virtual double impulseResponseComplex(vec2 kVec, double w) = 0;
+
+    // Add cell functions
     void addGanglionCell(Neuron *neuron,
                          SpatialKernel *sKernel,
                          TemporalKernel *tKernel);
@@ -40,15 +50,6 @@ public:
     void addCorticalNeuron(Neuron *neuron,
                            SpatialKernel *sKernel,
                            TemporalKernel *tKernel);
-
-
-
-    // Virtual functions
-    virtual void computeResponse(double t) = 0;
-    virtual void computeResponseComplex(double w) = 0;
-    virtual double impulseResponseComplex(vec2 kVec, double w) = 0;
-
-
 
 
     // Getter member functions
@@ -80,9 +81,6 @@ protected:
     vector<Input> m_relayCells;
     vector<Input> m_interNeurons;
     vector<Input> m_corticalNeurons;
-
-
-
 
 };
 

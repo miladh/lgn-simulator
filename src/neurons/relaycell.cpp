@@ -13,69 +13,6 @@ RelayCell::~RelayCell()
 }
 
 
-void RelayCell::computeResponse(double t)
-{
-    mat stim = 0*m_response;
-    m_response = 0*m_response;
-    m_impulseResponse  = 0* m_impulseResponse;
-
-
-    double *w = new double [int(m_domain[2])];
-    double *x = new double [int(m_domain[2])];
-    gauleg(m_domain[0], m_domain[1], x, w, m_domain[2]);
-
-    for(int i = 0; i < int(m_mesh.n_elem); i++){
-        for(int j = 0; j < int(m_mesh.n_elem); j++){
-
-            stim(i,j) = m_stim->real({m_mesh[i], m_mesh[j]}, t);
-            for(int m = 0; m < int(m_domain[2]); m++){
-                for(int n = 0; n < int(m_domain[2]); n++){
-
-                    double Scomplex = m_stim->complex({x[m], x[n]}, m_stim->w());
-                    double Gcomplex = impulseResponseComplex({x[m], x[n]}, m_stim->w());
-
-                    double dGr = Gcomplex * w[m] * w[n] *
-                            cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - m_stim->w() * t);
-
-
-
-
-                    ///////////////////////////////////
-                    for(int o = 0; o < int(m_domain[2]); o++){
-                        m_impulseResponse(i, j) +=
-                                impulseResponseComplex({x[m], x[n]},x[o])
-                                * w[m] * w[n] * w[o]
-                                * cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - x[o]* t);
-                    }
-
-
-
-                    /////////////////////////////////
-//                    m_impulseResponse(i, j) +=  dGr;
-                    m_response(i,j) += dGr * Scomplex;
-
-                }
-            }
-        }
-    }
-    m_stim->setReal(stim);
-}
-
-
-void RelayCell::computeResponseComplex(double w)
-{
-    for(int i = 0; i < int(m_mesh.n_elem); i++){
-        for(int j = 0; j < int(m_mesh.n_elem); j++){
-
-            double Gcomplex = impulseResponseComplex({m_mesh[i], m_mesh[j]}, w);
-            double Scomplex = m_stim->complex({m_mesh[i], m_mesh[j]}, w);
-
-            m_impulseResponseComplex(i,j) = Gcomplex;
-            m_responseComplex(i,j) = Gcomplex*Scomplex;
-        }
-    }
-}
-
 double RelayCell::impulseResponseComplex(vec2 kVec, double w)
 {
 
@@ -119,12 +56,6 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
         }
         C*= Krc;
     }
-
-    //    cout << "C: " << C << endl;
-    //    cout << "G: " << G << endl;
-    //    cout << "Gr: " << (G + I)/(1 - C) << endl;
-    //    cout << "Gr1: " << (G + I) << endl;
-    //    cout << endl;
 
     double Gr = (G + I)/(1 - C);
     return Gr;

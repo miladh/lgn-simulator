@@ -9,9 +9,8 @@ public:
     RelayCell(const Config * cfg, Stimuli *stim);
     ~RelayCell();
 
+protected:
     // Neuron interface
-    void computeResponse(double t);
-    void computeResponseComplex(double w);
     double impulseResponseComplex(vec2 kVec, double w);
 };
 

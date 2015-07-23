@@ -9,8 +9,9 @@ public:
     CorticalCell(const Config *cfg, Stimuli *stim);
     ~CorticalCell();
 
-    void computeResponse(double t);
-    void computeResponseComplex(double w);
+protected:
+
+    // Neuron interface
     double impulseResponseComplex(vec2 kVec, double w);
 };
 
