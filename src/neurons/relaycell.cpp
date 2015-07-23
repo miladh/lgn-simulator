@@ -37,7 +37,21 @@ void RelayCell::computeResponse(double t)
                     double dGr = Gcomplex * w[m] * w[n] *
                             cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - m_stim->w() * t);
 
-                    m_impulseResponse(i, j) +=  dGr;
+
+
+
+                    ///////////////////////////////////
+                    for(int o = 0; o < int(m_domain[2]); o++){
+                        m_impulseResponse(i, j) +=
+                                impulseResponseComplex({x[m], x[n]},x[o])
+                                * w[m] * w[n] * w[o]
+                                * cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - x[o]* t);
+                    }
+
+
+
+                    /////////////////////////////////
+//                    m_impulseResponse(i, j) +=  dGr;
                     m_response(i,j) += dGr * Scomplex;
 
                 }
@@ -69,14 +83,11 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
     double I = 0;
     double C = 0;
 
-    double i = 0;
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
-        vec2 e = {-5+2*i,-5+2*i};
         G += g.spatialKernel->complex(kVec)
-           * g.temporalKernel->complex(w)
-           * ganglionCell->impulseResponseComplex(kVec,w);
-        i+=1;
+                * g.temporalKernel->complex(w)
+                * ganglionCell->impulseResponseComplex(kVec,w);
     }
 
 
@@ -90,8 +101,8 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
         for (const Input g : interneuron->ganglionCells()){
             Neuron *ganglionCell = g.neuron;
             I += g.spatialKernel->complex(kVec)
-               * g.temporalKernel->complex(w)
-               * ganglionCell->impulseResponseComplex(kVec,w);
+                    * g.temporalKernel->complex(w)
+                    * ganglionCell->impulseResponseComplex(kVec,w);
         }
         I*= Kri;
     }
@@ -104,16 +115,16 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
 
         for (const Input r : corticalCell->relayCells()){
             C += r.spatialKernel->complex(kVec)
-               * r.temporalKernel->complex(w);
+                    * r.temporalKernel->complex(w);
         }
         C*= Krc;
     }
 
-//    cout << "C: " << C << endl;
-//    cout << "G: " << G << endl;
-//    cout << "Gr: " << (G + I)/(1 - C) << endl;
-//    cout << "Gr1: " << (G + I) << endl;
-//    cout << endl;
+    //    cout << "C: " << C << endl;
+    //    cout << "G: " << G << endl;
+    //    cout << "Gr: " << (G + I)/(1 - C) << endl;
+    //    cout << "Gr1: " << (G + I) << endl;
+    //    cout << endl;
 
     double Gr = (G + I)/(1 - C);
     return Gr;

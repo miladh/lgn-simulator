@@ -16,6 +16,7 @@
 
 #include "temporalKernels/decayingexponential.h"
 #include "temporalKernels/diracDelta.h"
+#include "temporalKernels/dampedoscillator.h"
 
 
 using namespace std;
@@ -52,31 +53,26 @@ int main()
     //Kernels:
     DOG dog(dogA, doga, dogB, dogb);
     Gaussian gauss(weight, spread);
-    EllipticGaussian ellipticGauss(10, PI, 1., 0.5);
+    EllipticGaussian ellipticGauss(weight, PI/4, 1.4, 0.1);
     DecayingExponential Ktg(tau_rg, 0);
     DecayingExponential Ktc(tau_rc, delay);
     DiracDelta delta(0.0);
-
-
-    DOG dog1(-1.001*dogA, doga, -dogB, dogb);
+    DampedOscillator damped(0.0425, 0.38);
 
     //Neurons:
     RelayCell relay(&cfg, &S);
     CorticalCell cortical(&cfg, &S);
-    GanglionCell ganglion(&cfg, &S, &dog, &Ktg);
-//    GanglionCell ganglion1(&cfg, &S, &dog1, &Ktg);
+    GanglionCell ganglion(&cfg, &S, &dog, &delta);
 
     vector<Neuron *> neurons;
     neurons.push_back(&relay);
     neurons.push_back(&cortical);
     neurons.push_back(&ganglion);
-//    neurons.push_back(&ganglion1);
 
 
 
-    relay.addGanglionCell(&ganglion,&dog, &delta);
-    relay.addCorticalNeuron(&cortical, & ellipticGauss, &delta);
-//    relay.addGanglionCell(&ganglion1,&dog, &delta);
+    relay.addGanglionCell(&ganglion,&dog, &damped);
+    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
     cortical.addRelayCell(&relay, &dog, &delta);
 

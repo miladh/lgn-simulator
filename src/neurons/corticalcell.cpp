@@ -36,7 +36,20 @@ void CorticalCell::computeResponse(double t)
                     double dGr = Gcomplex * w[m] * w[n] *
                             cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - m_stim->w() * t);
 
-                    m_impulseResponse(i, j) +=  dGr;
+
+
+                    ///////////////////////////////////
+                    for(int o = 0; o < int(m_domain[2]); o++){
+                        m_impulseResponse(i, j) +=
+                                impulseResponseComplex({x[m], x[n]},x[o])
+                                * w[m] * w[n] * w[o]
+                                * cos(m_mesh[i]*x[m]+ m_mesh[j]*x[n] - x[o]* t);
+                    }
+
+
+
+                    /////////////////////////////////
+//                    m_impulseResponse(i, j) +=  dGr;
                     m_response(i,j) += dGr * Scomplex;
 
                 }

@@ -27,7 +27,8 @@ SOURCES += \
     spatialKernels/gaussian.cpp \
     neurons/ganglioncell.cpp \
     temporalKernels/diracDelta.cpp \
-    spatialKernels/ellipticgaussian.cpp
+    spatialKernels/ellipticgaussian.cpp \
+    temporalKernels/dampedoscillator.cpp
 HEADERS += \
     integrator.h \
     trapezoidal.h \
@@ -46,4 +47,5 @@ HEADERS += \
     spatialKernels/gaussian.h \
     neurons/ganglioncell.h \
     temporalKernels/diracDelta.h \
-    spatialKernels/ellipticgaussian.h
+    spatialKernels/ellipticgaussian.h \
+    temporalKernels/dampedoscillator.h
