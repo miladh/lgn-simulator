@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 # User commands:
-cellType = "cortical"
+cellType = "ganglion"
 outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
 # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/tools/fb/*.h5"
 outputFile = glob(outputFilePath)[0]
@@ -55,7 +55,7 @@ tight_layout()
 S_im=axarr[0].imshow(S[0], origin='lower', cmap='gray')
 colorbar(S_im, ax = axarr[0], orientation='horizontal')
 
-G_im=axarr[1].imshow(G[0], origin='lower', cmap='jet')
+G_im=axarr[1].imshow(G[1], origin='lower', cmap='jet') # NOTE G[1]!!!!!!! NOTE
 colorbar(G_im, ax = axarr[1], orientation='horizontal')
 
 R_im=axarr[2].imshow(R[0], origin='lower', cmap='jet')

@@ -50,10 +50,12 @@ int main()
     PatchGrating S(&cfg);
     OutputManager io(&cfg);
 
-    //Kernels:
+    //Spatial kernels:
     DOG dog(dogA, doga, dogB, dogb);
     Gaussian gauss(weight, spread);
     EllipticGaussian ellipticGauss(weight, PI/4, 1.4, 0.1);
+
+    //Temporal kernels:
     DecayingExponential Ktg(tau_rg, 0);
     DecayingExponential Ktc(tau_rc, delay);
     DiracDelta delta(0.0);
@@ -62,7 +64,7 @@ int main()
     //Neurons:
     RelayCell relay(&cfg, &S);
     CorticalCell cortical(&cfg, &S);
-    GanglionCell ganglion(&cfg, &S, &dog, &delta);
+    GanglionCell ganglion(&cfg, &S, &dog, &damped);
 
     vector<Neuron *> neurons;
     neurons.push_back(&relay);
@@ -80,8 +82,14 @@ int main()
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
         cortical.computeResponse(t);
+        cortical.computeImpulseResponse(t);
+
         relay.computeResponse(t);
-//        ganglion.computeResponse(t);
+        relay.computeImpulseResponse(t);
+
+        ganglion.computeResponse(t);
+        ganglion.computeImpulseResponse(t);
+
         io.writeResponse(i, neurons, S);
         cout <<"timestep: " << i << " of " << nSteps << endl;
         t+=dt;

@@ -5,6 +5,10 @@
 #include "spatialKernels/spatialkernel.h"
 #include "temporalKernels/temporalkernel.h"
 
+#include <armadillo>
+
+using namespace arma;
+
 class GanglionCell : public Neuron
 {
 public:
@@ -12,6 +16,8 @@ public:
                  SpatialKernel *spatialKernel,
                  TemporalKernel *temporalKernel);
     ~GanglionCell();
+
+    void computeImpulseResponse(double t);
 
 private:
     SpatialKernel *m_spatialKernel;

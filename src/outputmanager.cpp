@@ -93,7 +93,6 @@ void OutputManager::writeResponse(const int state,
         mat realImpulseResponse = neuron->impulseResponse();
         mat complexImpulseResponse = neuron->impulseResponseComplex();
 
-
         string cellGroupName = stateName+"/"+neuron->cellType();
         Group* cellGroup = new Group( m_output->createGroup(cellGroupName));
 
