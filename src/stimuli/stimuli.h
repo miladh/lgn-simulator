@@ -33,10 +33,11 @@ public:
     void setSpatial(mat spatial);
 
 protected:
+    int m_nPoints = 0;
+    double m_w = 0;
     mat m_spatial;
     cx_mat m_frequency;
 
-    double m_w = 0;
     vec2 m_k = {0,0};
 
     vec m_spatialMesh;

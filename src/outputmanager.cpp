@@ -24,42 +24,14 @@ void OutputManager::initialize()
     Group rootGroup = m_output->openGroup("/");
     const Setting & root = m_cfg->getRoot();
 
-    vec mesh = zeros<vec>(3);
-    vec domain = zeros<vec>(3);
-
     int nSteps = root["dynamicSettings"]["nSteps"];
     double dt = root["dynamicSettings"]["dt"];
-    const Setting &grid = root["gridSettings"]["grid"];
-    const Setting &integrationDomain = root["gridSettings"]["integrationDomain"];
-
-    for(int i =0; i < 3; i++){
-        mesh[i] = grid[i];
-        domain[i] = integrationDomain[i];
-    }
 
     Attribute nSteps_a(rootGroup.createAttribute("nSteps", PredType::NATIVE_INT, H5S_SCALAR));
     nSteps_a.write(PredType::NATIVE_INT, &nSteps);
 
     Attribute dt_a(rootGroup.createAttribute("dt", PredType::NATIVE_DOUBLE, H5S_SCALAR));
     dt_a.write(PredType::NATIVE_DOUBLE, &dt);
-
-
-    Attribute meshMin_a(rootGroup.createAttribute("meshMin", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute meshMax_a(rootGroup.createAttribute("meshMax", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute meshPoints_a(rootGroup.createAttribute("meshPoints", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-
-    meshMin_a.write(PredType::NATIVE_DOUBLE, &mesh[0]);
-    meshMax_a.write(PredType::NATIVE_DOUBLE, &mesh[1]);
-    meshPoints_a.write(PredType::NATIVE_DOUBLE, &mesh[2]);
-
-    Attribute domainMin_a(rootGroup.createAttribute("domainMin", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute domainMax_a(rootGroup.createAttribute("domainMax", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute domainPoints_a(rootGroup.createAttribute("domainPoints", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-
-    domainMin_a.write(PredType::NATIVE_DOUBLE, &domain[0]);
-    domainMax_a.write(PredType::NATIVE_DOUBLE, &domain[1]);
-    domainPoints_a.write(PredType::NATIVE_DOUBLE, &domain[2]);
-
 
     m_dataset.reserve(nSteps);
 }

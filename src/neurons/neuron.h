@@ -75,11 +75,10 @@ protected:
 
     mat m_response, m_responseComplex;
     mat m_impulseResponse, m_impulseResponseComplex;
-     cx_mat complexResponse ;
+    cx_mat complexResponse ;
 
     vec m_spatialMesh;
     vec m_freqMesh;
-    vec3 m_domain;
 
 
     vector<Input> m_ganglionCells;
@@ -88,6 +87,7 @@ protected:
     vector<Input> m_corticalNeurons;
 
     const std::complex<double> m_i = {0,1};
+    int m_nPoints = 0;
 
 };
 

@@ -42,8 +42,8 @@ int main()
     double tau_rg = root["temporalSettings"]["tau_rg"];
     double tau_rc = root["temporalSettings"]["tau_rc"];
     double delay = root["temporalSettings"]["delay"];
-    double weight = root["loopKernelSettings"]["C"];
-    double spread = root["loopKernelSettings"]["c"];
+    double weight = 1.0;
+    double spread = 0.1;
 
 
     //----------------------------------------------------------------------------
@@ -55,7 +55,7 @@ int main()
     //Spatial kernels:
     DOG dog(dogA, doga, dogB, dogb);
     Gaussian gauss(weight, spread);
-    EllipticGaussian ellipticGauss(weight, PI/4, 1.4, 0.1);
+    EllipticGaussian ellipticGauss(weight, PI/4*3, 1.4, 0.1);
 
     //Temporal kernels:
     DecayingExponential Ktg(tau_rg, 0);
@@ -76,7 +76,7 @@ int main()
 
 
     relay.addGanglionCell(&ganglion,&dog, &Ktg);
-    relay.addCorticalNeuron(&cortical, &gauss, &Ktc);
+    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktg);
 
     cortical.addRelayCell(&relay, &dog, &delta);
 
@@ -91,7 +91,7 @@ int main()
         relay.computeResponse(t);
 //        relay.computeImpulseResponse(t);
 
-        cortical.computeResponse(t);
+//        cortical.computeResponse(t);
 //        cortical.computeImpulseResponse(t);
 
         io.writeResponse(i, neurons, S);
