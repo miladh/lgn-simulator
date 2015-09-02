@@ -38,7 +38,8 @@ void Neuron::computeResponse(double t)
     m_responseFT = Functions::fftShift(m_responseFT);
     fftw_complex* in = reinterpret_cast<fftw_complex*> (m_responseFT.memptr());
     fftw_complex* out = reinterpret_cast<fftw_complex*> (m_responseFT.memptr());
-    fftw_plan plan2 = fftw_plan_dft_2d(m_nPoints,m_nPoints, in,  out, FFTW_BACKWARD,            FFTW_ESTIMATE);
+    fftw_plan plan2 =
+            fftw_plan_dft_2d(m_nPoints,m_nPoints, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
 
     fftw_execute(plan2);
 
@@ -73,6 +74,21 @@ void Neuron::computeResponse(double t)
 }
 
 
+void Neuron::computeImpulseResponse(double t)
+{
+
+    m_impulseResponseFT = Functions::fftShift(m_impulseResponseFT);
+    int size[3] = {m_nPoints, m_nPoints , m_nPoints};
+    fftw_complex* in = reinterpret_cast<fftw_complex*> (m_impulseResponseFT.memptr());
+    fftw_complex* out = reinterpret_cast<fftw_complex*> (m_impulseResponseFT.memptr());
+    fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
+
+    fftw_execute(plan);
+
+    m_impulseResponseFT = Functions::fftShift(m_impulseResponseFT);
+    m_impulseResponse = real(m_impulseResponseFT);
+}
+
 
 void Neuron::computeResponseFT(double w)
 {
@@ -88,17 +104,9 @@ void Neuron::computeImpulseResponseFT(double w)
 
             m_impulseResponseFT(i,j) =
                     impulseResponseFT({m_freqMesh[i], m_freqMesh[j]}, w);
-
         }
     }
 }
-
-void Neuron::computeImpulseResponse(double t)
-{
-}
-
-
-
 
 void Neuron::addGanglionCell(Neuron *neuron,
                              SpatialKernel *sKernel,

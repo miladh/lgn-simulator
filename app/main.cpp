@@ -86,7 +86,7 @@ int main()
         S.computeSpatial(t);
 
         ganglion.computeResponse(t);
-//        ganglion.computeImpulseResponse(t);
+        ganglion.computeImpulseResponse(t);
 
         relay.computeResponse(t);
 //        relay.computeImpulseResponse(t);
