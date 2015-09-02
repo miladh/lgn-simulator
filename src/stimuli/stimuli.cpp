@@ -8,11 +8,17 @@ Stimuli::Stimuli(const Config *cfg)
     m_k[0] = root["stimuliSettings"]["kx"];
     m_k[1] = root["stimuliSettings"]["ky"];
     m_nPoints = root["spatialDomainSettings"]["nPoints"];
-    m_spatialMesh = linspace(-0.5, 0.5, m_nPoints);
-
-
     m_spatial = zeros<mat>(m_nPoints, m_nPoints);
     m_frequency = zeros<cx_mat>(m_nPoints, m_nPoints);
+
+    m_spatialMesh = linspace(-0.5, 0.5, m_nPoints);
+    double dr = m_spatialMesh(1) - m_spatialMesh(0);
+    double N_2 = ceil(m_nPoints/2.);
+    double df = 1./dr/m_nPoints;
+    double fs = 1./dr;
+
+    m_freqMesh = linspace(-N_2*df, (m_nPoints - 1. - N_2)*df, m_nPoints);
+    m_freqMesh*=2*PI;
 
 }
 
@@ -31,9 +37,15 @@ void Stimuli::computeSpatial(double t)
     }
 }
 
-void Stimuli::computeFrequency()
+
+void Stimuli::computeFrequency(double w)
 {
-    m_frequency = fft2(spatial());
+
+    for(int i = 0; i < m_nPoints; i++){
+        for(int j = 0; j < m_nPoints; j++){
+            m_frequency(i,j) = frequency({m_freqMesh[i], m_freqMesh[j]}, w);
+        }
+    }
 }
 
 

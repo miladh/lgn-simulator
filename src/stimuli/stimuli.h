@@ -23,7 +23,7 @@ public:
     virtual double frequency(vec2 k, double w) = 0;
 
     void computeSpatial(double t);
-    void computeFrequency();
+    void computeFrequency(double w);
 
     mat spatial() const;
     cx_mat frequency() const;

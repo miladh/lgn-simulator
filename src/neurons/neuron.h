@@ -5,8 +5,6 @@
 #include <libconfig.h++>
 #include <fftw3.h>
 
-
-#include "../lib.h"
 #include "../stimuli/stimuli.h"
 #include "../temporalKernels/temporalkernel.h"
 #include "../spatialKernels/spatialkernel.h"
@@ -70,11 +68,15 @@ public:
     string cellType() const;
 
 protected:
+    int m_nPoints = 0;
+
     string m_cellType;
     Stimuli *m_stim;
 
-    mat m_response, m_impulseResponse;
-    cx_mat m_responseFT, m_impulseResponseFT;
+    mat m_response;
+    mat m_impulseResponse;
+    cx_mat m_responseFT;
+    cx_mat m_impulseResponseFT;
 
     vec m_spatialMesh;
     vec m_freqMesh;
@@ -86,7 +88,6 @@ protected:
     vector<Input> m_corticalNeurons;
 
     const std::complex<double> m_i = {0,1};
-    int m_nPoints = 0;
 
 };
 
