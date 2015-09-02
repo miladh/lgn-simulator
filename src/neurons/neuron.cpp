@@ -17,12 +17,10 @@ Neuron::Neuron(const Config *cfg, Stimuli *stim)
 //    cout << m_freqMesh << endl;
 
 
-    m_responseComplex = zeros(m_nPoints, m_nPoints);
-    m_impulseResponse = zeros(m_nPoints, m_nPoints);
-    m_impulseResponseComplex = zeros(m_nPoints, m_nPoints);
-
-    complexResponse = zeros<cx_mat>(m_nPoints, m_nPoints);
     m_response = zeros(m_nPoints, m_nPoints);
+    m_responseFT = zeros<cx_mat>(m_nPoints, m_nPoints);
+    m_impulseResponse = zeros(m_nPoints, m_nPoints);
+    m_impulseResponseFT = zeros<cx_mat>(m_nPoints, m_nPoints);
 
 
 }
@@ -37,22 +35,22 @@ void Neuron::computeResponse(double t)
 {
     for(int i = 0; i < m_nPoints; i++){
         for(int j = 0; j < m_nPoints; j++){
-            complexResponse(i,j) = exp(-m_i*m_stim->w() * t)
+            m_responseFT(i,j) = exp(-m_i*m_stim->w() * t)
               *m_stim->frequency({m_freqMesh[i], m_freqMesh[j]}, m_stim->w())
-              *impulseResponseComplex({m_freqMesh[i], m_freqMesh[j]}, m_stim->w());
+              *impulseResponseFT({m_freqMesh[i], m_freqMesh[j]}, m_stim->w());
         }
     }
 
 
-    complexResponse = Functions::fftShift(complexResponse);
-    fftw_complex* in = reinterpret_cast<fftw_complex*> (complexResponse.memptr());
-    fftw_complex* out = reinterpret_cast<fftw_complex*> (complexResponse.memptr());
+    m_responseFT = Functions::fftShift(m_responseFT);
+    fftw_complex* in = reinterpret_cast<fftw_complex*> (m_responseFT.memptr());
+    fftw_complex* out = reinterpret_cast<fftw_complex*> (m_responseFT.memptr());
     fftw_plan plan2 = fftw_plan_dft_2d(m_nPoints,m_nPoints, in,  out, FFTW_BACKWARD,            FFTW_ESTIMATE);
 
     fftw_execute(plan2);
 
-    complexResponse = Functions::fftShift(complexResponse);
-    m_response = real(complexResponse);
+    m_responseFT = Functions::fftShift(m_responseFT);
+    m_response = real(m_responseFT);
 
     /////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////
@@ -83,17 +81,17 @@ void Neuron::computeResponse(double t)
 
 
 
-void Neuron::computeResponseComplex(double w)
+void Neuron::computeResponseFT(double w)
 {
     cout << "computeResponseComplex: Not implemented!" << endl;
     for(int i = 0; i < m_nPoints; i++){
         for(int j = 0; j < m_nPoints; j++){
 
-            double Gcomplex = impulseResponseComplex({m_spatialMesh[i], m_spatialMesh[j]}, w);
+            double Gcomplex = impulseResponseFT({m_spatialMesh[i], m_spatialMesh[j]}, w);
             double Scomplex = m_stim->frequency({m_spatialMesh[i], m_spatialMesh[j]}, w);
 
-            m_impulseResponseComplex(i,j) = Gcomplex;
-            m_responseComplex(i,j) = Gcomplex*Scomplex;
+            m_impulseResponseFT(i,j) = Gcomplex;
+            m_responseFT(i,j) = Gcomplex*Scomplex;
         }
     }
 
@@ -115,7 +113,7 @@ void Neuron::computeImpulseResponse(double t)
 //            }
 }
 
-void Neuron::computeImpulseResponseComplex(double w)
+void Neuron::computeImpulseResponseFT(double w)
 {
     cout << "computeImpulseResponseComplex: Not implemented!" << endl;
 }
@@ -188,14 +186,14 @@ mat Neuron::impulseResponse() const
     return m_impulseResponse;
 }
 
-mat Neuron::responseComplex() const
+cx_mat Neuron::responseFT() const
 {
-    return m_responseComplex;
+    return m_responseFT;
 }
 
-mat Neuron::impulseResponseComplex() const
+cx_mat Neuron::impulseResponseFT() const
 {
-    return m_impulseResponseComplex;
+    return m_impulseResponseFT;
 }
 
 

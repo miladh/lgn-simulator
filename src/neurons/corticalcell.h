@@ -12,7 +12,7 @@ public:
 protected:
 
     // Neuron interface
-    double impulseResponseComplex(vec2 kVec, double w);
+    double impulseResponseFT(vec2 kVec, double w);
 };
 
 #endif // CORTICALCELL_H

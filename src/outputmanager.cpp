@@ -60,10 +60,10 @@ void OutputManager::writeResponse(const int state,
     for(const Neuron *neuron : neurons){
 
         mat realResponse = neuron->response();
-        mat complexResponse = neuron->responseComplex();
+        mat complexResponse = real(neuron->responseFT());
 
         mat realImpulseResponse = neuron->impulseResponse();
-        mat complexImpulseResponse = neuron->impulseResponseComplex();
+        mat complexImpulseResponse = real(neuron->impulseResponseFT());
 
         string cellGroupName = stateName+"/"+neuron->cellType();
         Group* cellGroup = new Group( m_output->createGroup(cellGroupName));

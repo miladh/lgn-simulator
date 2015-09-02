@@ -27,7 +27,7 @@ private:
     double impulseResponse(vec2 rVec, double t);
 
     // Neuron interface
-    double impulseResponseComplex(vec2 kVec, double w);
+    double impulseResponseFT(vec2 kVec, double w);
 };
 
 #endif // GANGLIONCELL_H

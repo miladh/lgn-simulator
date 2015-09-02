@@ -13,7 +13,7 @@ RelayCell::~RelayCell()
 }
 
 
-double RelayCell::impulseResponseComplex(vec2 kVec, double w)
+double RelayCell::impulseResponseFT(vec2 kVec, double w)
 {
 
     double G = 0;
@@ -24,7 +24,7 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
         Neuron *ganglionCell = g.neuron;
         G += g.spatialKernel->complex(kVec)
                 * g.temporalKernel->complex(w)
-                * ganglionCell->impulseResponseComplex(kVec,w);
+                * ganglionCell->impulseResponseFT(kVec,w);
     }
 
 
@@ -39,7 +39,7 @@ double RelayCell::impulseResponseComplex(vec2 kVec, double w)
             Neuron *ganglionCell = g.neuron;
             I += g.spatialKernel->complex(kVec)
                     * g.temporalKernel->complex(w)
-                    * ganglionCell->impulseResponseComplex(kVec,w);
+                    * ganglionCell->impulseResponseFT(kVec,w);
         }
         I*= Kri;
     }

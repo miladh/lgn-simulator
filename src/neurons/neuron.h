@@ -31,12 +31,12 @@ public:
 
     // Compute functions
     void computeResponse(double t);
-    void computeResponseComplex(double w);
+    void computeResponseFT(double w);
     void computeImpulseResponse(double t);
-    void computeImpulseResponseComplex(double w);
+    void computeImpulseResponseFT(double w);
 
     // Virtual functions
-    virtual double impulseResponseComplex(vec2 kVec, double w) = 0;
+    virtual double impulseResponseFT(vec2 kVec, double w) = 0;
 
     // Add cell functions
     void addGanglionCell(Neuron *neuron,
@@ -58,8 +58,8 @@ public:
     // Getter member functions
     mat response() const;
     mat impulseResponse() const;
-    mat responseComplex() const;
-    mat impulseResponseComplex() const;
+    cx_mat responseFT() const;
+    cx_mat impulseResponseFT() const;
 
 
     vector<Input> ganglionCells() const;
@@ -73,9 +73,8 @@ protected:
     string m_cellType;
     Stimuli *m_stim;
 
-    mat m_response, m_responseComplex;
-    mat m_impulseResponse, m_impulseResponseComplex;
-    cx_mat complexResponse ;
+    mat m_response, m_impulseResponse;
+    cx_mat m_responseFT, m_impulseResponseFT;
 
     vec m_spatialMesh;
     vec m_freqMesh;
