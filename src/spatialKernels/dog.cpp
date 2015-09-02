@@ -20,7 +20,6 @@ double DOG::real(vec2 r)
     double center   = m_A / (m_a*m_a) / PI * exp(-r2 / (m_a*m_a));
     double surround = m_B / (m_b*m_b) / PI * exp(-r2 / (m_b*m_b));
 
-
     return center - surround;
 }
 

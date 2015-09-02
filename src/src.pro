@@ -9,6 +9,12 @@ TEMPLATE = lib
 
 TARGET = edog
 
+
+LIBS += -llapack -larmadillo -lconfig++ -lboost_regex -lhdf5 -lhdf5_cpp -lfftw3 -lfftw3_omp -lfftw3_threads
+
+
+#INCLUDEPATH += /usr/include/hdf5/serial
+
 SOURCES += \
     integrator.cpp \
     trapezoidal.cpp \
@@ -28,7 +34,8 @@ SOURCES += \
     neurons/ganglioncell.cpp \
     temporalKernels/diracDelta.cpp \
     spatialKernels/ellipticgaussian.cpp \
-    temporalKernels/dampedoscillator.cpp
+    temporalKernels/dampedoscillator.cpp \
+    stimuli/dogstim.cpp
 HEADERS += \
     integrator.h \
     trapezoidal.h \
@@ -48,4 +55,5 @@ HEADERS += \
     neurons/ganglioncell.h \
     temporalKernels/diracDelta.h \
     spatialKernels/ellipticgaussian.h \
-    temporalKernels/dampedoscillator.h
+    temporalKernels/dampedoscillator.h \
+    stimuli/dogstim.h

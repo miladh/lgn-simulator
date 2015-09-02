@@ -7,7 +7,8 @@ CONFIG -= qt
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    integratortests.cpp
+    integratortests.cpp \
+    fft.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 

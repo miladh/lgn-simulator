@@ -3,11 +3,14 @@
 
 #include <armadillo>
 #include <libconfig.h++>
+#include <fftw3.h>
+
 
 #include "../lib.h"
 #include "../stimuli/stimuli.h"
 #include "../temporalKernels/temporalkernel.h"
 #include "../spatialKernels/spatialkernel.h"
+
 
 using namespace libconfig;
 using namespace arma;
@@ -72,8 +75,10 @@ protected:
 
     mat m_response, m_responseComplex;
     mat m_impulseResponse, m_impulseResponseComplex;
+     cx_mat complexResponse ;
 
-    vec m_mesh;
+    vec m_spatialMesh;
+    vec m_freqMesh;
     vec3 m_domain;
 
 
@@ -81,6 +86,8 @@ protected:
     vector<Input> m_relayCells;
     vector<Input> m_interNeurons;
     vector<Input> m_corticalNeurons;
+
+    const std::complex<double> m_i = {0,1};
 
 };
 

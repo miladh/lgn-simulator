@@ -13,5 +13,4 @@ tests.depends = src
 OTHER_FILES += \
     defaults.pri
 
-LIBS += -llapack -larmadillo -lconfig++ -lboost_regex -lhdf5 -lhdf5_cpp
 

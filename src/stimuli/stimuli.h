@@ -4,6 +4,7 @@
 #include <math.h>
 #include <libconfig.h++>
 #include <armadillo>
+#include <fftw3.h>
 #include <boost/math/special_functions/bessel.hpp>
 
 #include "../math/functions.h"
@@ -18,23 +19,28 @@ public:
     Stimuli(const Config *cfg);
     ~Stimuli();
 
-    virtual double real(vec2 rVec, double t) = 0;
-    virtual double complex(vec2 k, double w) = 0;
+    virtual double spatial(vec2 rVec, double t) = 0;
+    virtual double frequency(vec2 k, double w) = 0;
 
-    mat real() const;
-    void setReal(const mat &real);
+    void computeSpatial(double t);
+    void computeFrequency();
 
-    mat complex() const;
-    void setComplex(const mat &complex);
+    mat spatial() const;
+    cx_mat frequency() const;
 
     double w() const;
 
+    void setSpatial(mat spatial);
+
 protected:
-    mat m_real = zeros(2,2);
-    mat m_complex = zeros(2,2);
+    mat m_spatial;
+    cx_mat m_frequency;
 
     double m_w = 0;
     vec2 m_k = {0,0};
+
+    vec m_spatialMesh;
+    vec m_freqMesh;
 
 
 };

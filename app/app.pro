@@ -10,5 +10,7 @@ SOURCES += main.cpp
 
 LIBS += -L../src -ledog
 
+
+
 DISTFILES += \
     config.cfg

@@ -5,6 +5,7 @@
 #include <unistd.h>
 
 #include "stimuli/patchgrating.h"
+#include "stimuli/dogstim.h"
 
 #include "neurons/relaycell.h"
 #include "neurons/ganglioncell.h"
@@ -48,6 +49,7 @@ int main()
     //----------------------------------------------------------------------------
 
     PatchGrating S(&cfg);
+//    DOGstim S(&cfg);
     OutputManager io(&cfg);
 
     //Spatial kernels:
@@ -59,36 +61,38 @@ int main()
     DecayingExponential Ktg(tau_rg, 0);
     DecayingExponential Ktc(tau_rc, delay);
     DiracDelta delta(0.0);
-    DampedOscillator damped(0.0425, 0.38);
+    DampedOscillator damped(0.425, 0.38);
 
     //Neurons:
+    GanglionCell ganglion(&cfg, &S, &dog, &damped);
     RelayCell relay(&cfg, &S);
     CorticalCell cortical(&cfg, &S);
-    GanglionCell ganglion(&cfg, &S, &dog, &damped);
 
     vector<Neuron *> neurons;
+    neurons.push_back(&ganglion);
     neurons.push_back(&relay);
     neurons.push_back(&cortical);
-    neurons.push_back(&ganglion);
 
 
 
-    relay.addGanglionCell(&ganglion,&dog, &damped);
-    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
+    relay.addGanglionCell(&ganglion,&dog, &Ktg);
+    relay.addCorticalNeuron(&cortical, &gauss, &Ktc);
 
     cortical.addRelayCell(&relay, &dog, &delta);
 
 
     double t = 0.0;
     for (int i = 0; i < nSteps; i++){
-        cortical.computeResponse(t);
-        cortical.computeImpulseResponse(t);
-
-        relay.computeResponse(t);
-        relay.computeImpulseResponse(t);
+        S.computeSpatial(t);
 
         ganglion.computeResponse(t);
-        ganglion.computeImpulseResponse(t);
+//        ganglion.computeImpulseResponse(t);
+
+        relay.computeResponse(t);
+//        relay.computeImpulseResponse(t);
+
+        cortical.computeResponse(t);
+//        cortical.computeImpulseResponse(t);
 
         io.writeResponse(i, neurons, S);
         cout <<"timestep: " << i << " of " << nSteps << endl;

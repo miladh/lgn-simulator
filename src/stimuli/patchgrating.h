@@ -10,8 +10,8 @@ public:
     PatchGrating(const Config *cfg);
     ~PatchGrating();
 
-    double real(vec2 rVec, double t);
-    double complex(vec2 kVec, double w);
+    double spatial(vec2 rVec, double t);
+    double frequency(vec2 kVec, double w);
 
 
 private:

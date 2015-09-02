@@ -77,8 +77,8 @@ void OutputManager::writeResponse(const int state,
 
     // Write stimuli
     Group* stim = new Group( m_output->createGroup(stateName+"/stimuli"));
-    mat realStim = stimuli.real();
-    mat complexStim = stimuli.complex();
+    mat realStim = stimuli.spatial();
+    mat complexStim = real(stimuli.frequency());
 
     writeDataSet(realStim, stim, "real");
     writeDataSet(complexStim, stim, "complex");

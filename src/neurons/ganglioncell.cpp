@@ -17,9 +17,9 @@ void GanglionCell::computeImpulseResponse(double t)
 {
     m_impulseResponse  = 0* m_impulseResponse;
 
-    for(int i = 0; i < int(m_mesh.n_elem); i++){
-        for(int j = 0; j < int(m_mesh.n_elem); j++){
-            m_impulseResponse(i, j) = impulseResponse({m_mesh[i], m_mesh[j]}, t);
+    for(int i = 0; i < int(m_spatialMesh.n_elem); i++){
+        for(int j = 0; j < int(m_spatialMesh.n_elem); j++){
+            m_impulseResponse(i, j) = impulseResponse({m_spatialMesh[i], m_spatialMesh[j]}, t);
         }
     }
 

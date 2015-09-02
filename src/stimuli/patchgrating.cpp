@@ -13,7 +13,7 @@ PatchGrating::~PatchGrating()
 
 }
 
-double PatchGrating::real(vec2 rVec, double t)
+double PatchGrating::spatial(vec2 rVec, double t)
 {
     double r = sqrt(dot(rVec,rVec));
     double s = (1 - Functions::heaviside(r - m_spotDiameter * 0.5))
@@ -25,7 +25,7 @@ double PatchGrating::real(vec2 rVec, double t)
 
 }
 
-double PatchGrating::complex(vec2 kVec, double w)
+double PatchGrating::frequency(vec2 kVec, double w)
 {
     double arg = sqrt(dot(kVec - m_k, kVec - m_k));
     double s = Functions::secondKindBesselFunction(arg * m_spotDiameter * 0.5)
