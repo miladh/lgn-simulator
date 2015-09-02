@@ -29,7 +29,6 @@ Stimuli::~Stimuli()
 
 void Stimuli::computeSpatial(double t)
 {
-
     for(int i = 0; i < m_nPoints; i++){
         for(int j = 0; j < m_nPoints; j++){
             m_spatial(i,j) = spatial({m_spatialMesh[i], m_spatialMesh[j]}, t);
@@ -40,7 +39,6 @@ void Stimuli::computeSpatial(double t)
 
 void Stimuli::computeFrequency(double w)
 {
-
     for(int i = 0; i < m_nPoints; i++){
         for(int j = 0; j < m_nPoints; j++){
             m_frequency(i,j) = frequency({m_freqMesh[i], m_freqMesh[j]}, w);

@@ -91,7 +91,7 @@ int main()
         relay.computeResponse(t);
 //        relay.computeImpulseResponse(t);
 
-//        cortical.computeResponse(t);
+        cortical.computeResponse(t);
 //        cortical.computeImpulseResponse(t);
 
         io.writeResponse(i, neurons, S);

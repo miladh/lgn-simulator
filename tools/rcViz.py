@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 # User commands:
-cellType = "relay"
+cellType = "ganglion"
 outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
 # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/tools/fb/*.h5"
 outputFile = glob(outputFilePath)[0]
@@ -89,7 +89,7 @@ axarr[2].set_title("Response")
 #
 #
 # spikeTimes = []
-# nTrails = 30
+# nTrails = 2
 # center = array([R_.shape[1]/2, R_.shape[2]/2])
 #
 # for k in range(nTrails):
@@ -109,7 +109,7 @@ axarr[2].set_title("Response")
 #     xlabel('t [s]')
 #     ylabel('Trails')
 # tight_layout()
-#show()
+# show()
 
 
 anim = animation.FuncAnimation(fig, animate, init_func=init,

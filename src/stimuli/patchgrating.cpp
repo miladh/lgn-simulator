@@ -27,10 +27,13 @@ double PatchGrating::spatial(vec2 rVec, double t)
 
 double PatchGrating::frequency(vec2 kVec, double w)
 {
-    double arg = sqrt(dot(kVec - m_k, kVec - m_k));
-    double s = Functions::secondKindBesselFunction(arg * m_spotDiameter * 0.5)
-            * Functions::delta(w, m_w) * m_spotDiameter * m_contrast/arg;
+    double arg = sqrt(dot(kVec - m_k, kVec - m_k)) * m_spotDiameter * 0.5;
+    double s = m_contrast * PI * PI * m_spotDiameter * m_spotDiameter * 0.5
+            * Functions::delta(w, m_w);
+    if(arg != 0){
+        s *= 2. * Functions::secondKindBesselFunction(arg)/arg;
+    }
 
-    return s*2*PI*PI;
+    return s;
 
 }

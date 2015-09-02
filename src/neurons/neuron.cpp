@@ -5,8 +5,13 @@ Neuron::Neuron(const Config *cfg, Stimuli *stim)
 {
     const Setting & root = cfg->getRoot();
     m_nPoints = root["spatialDomainSettings"]["nPoints"];
+    m_response = zeros(m_nPoints, m_nPoints);
+    m_responseFT = zeros<cx_mat>(m_nPoints, m_nPoints);
+    m_impulseResponse = zeros(m_nPoints, m_nPoints);
+    m_impulseResponseFT = zeros<cx_mat>(m_nPoints, m_nPoints);
 
     m_spatialMesh = linspace(-0.5, 0.5, m_nPoints);
+
     double dr = m_spatialMesh(1) - m_spatialMesh(0);
     double N_2 = ceil(m_nPoints/2.);
     double df = 1./dr/m_nPoints;
@@ -15,13 +20,6 @@ Neuron::Neuron(const Config *cfg, Stimuli *stim)
     m_freqMesh = linspace(-N_2*df, (m_nPoints - 1. - N_2)*df, m_nPoints);
     m_freqMesh*= 2*PI;
     //    cout << m_freqMesh << endl;
-
-
-    m_response = zeros(m_nPoints, m_nPoints);
-    m_responseFT = zeros<cx_mat>(m_nPoints, m_nPoints);
-    m_impulseResponse = zeros(m_nPoints, m_nPoints);
-    m_impulseResponseFT = zeros<cx_mat>(m_nPoints, m_nPoints);
-
 }
 
 Neuron::~Neuron()
@@ -38,10 +36,10 @@ void Neuron::computeResponse(double t)
     m_responseFT = Functions::fftShift(m_responseFT);
     fftw_complex* in = reinterpret_cast<fftw_complex*> (m_responseFT.memptr());
     fftw_complex* out = reinterpret_cast<fftw_complex*> (m_responseFT.memptr());
-    fftw_plan plan2 =
+    fftw_plan plan =
             fftw_plan_dft_2d(m_nPoints,m_nPoints, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
 
-    fftw_execute(plan2);
+    fftw_execute(plan);
 
     m_responseFT = Functions::fftShift(m_responseFT);
     m_response = real(m_responseFT);
@@ -75,12 +73,25 @@ void Neuron::computeImpulseResponseFT(double w)
 {
     for(int i = 0; i < m_nPoints; i++){
         for(int j = 0; j < m_nPoints; j++){
-
             m_impulseResponseFT(i,j) =
                     impulseResponseFT({m_freqMesh[i], m_freqMesh[j]}, w);
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void Neuron::addGanglionCell(Neuron *neuron,
                              SpatialKernel *sKernel,
