@@ -13,7 +13,7 @@ Neuron::Neuron(const Config *cfg, Stimuli *stim)
     double fs = 1./dr;
 
     m_freqMesh = linspace(-N_2*df, (m_nPoints - 1. - N_2)*df, m_nPoints);
-    m_freqMesh*=2*PI;
+    m_freqMesh*= 2*PI;
     //    cout << m_freqMesh << endl;
 
 
@@ -45,32 +45,6 @@ void Neuron::computeResponse(double t)
 
     m_responseFT = Functions::fftShift(m_responseFT);
     m_response = real(m_responseFT);
-
-    /////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////
-    ///
-    //    double dr = m_spatialMesh(1) - m_spatialMesh(0);
-
-    //    complexResponse.set_real(m_stim->spatial());
-    //    complexResponse.set_imag(m_stim->spatial()*0);
-    //    complexResponse = Functions::fftShift(complexResponse);
-
-    //    fftw_complex* in1 = reinterpret_cast<fftw_complex*> (complexResponse.memptr());
-    //    fftw_complex* out1 = reinterpret_cast<fftw_complex*> (complexResponse.memptr());
-
-    //    fftw_plan plan = fftw_plan_dft_2d(complexResponse.n_cols,complexResponse.n_rows,
-    //                                      in1,  out1, FFTW_FORWARD, FFTW_ESTIMATE);
-
-    //    fftw_execute(plan);
-
-    //    fftw_plan plan1 = fftw_plan_dft_2d(complexResponse.n_cols,complexResponse.n_rows,
-    //                                      in1,  out1, FFTW_BACKWARD, FFTW_ESTIMATE);
-    //    fftw_execute(plan1);
-
-    //    complexResponse*=dr*dr;
-    //    m_stim->setSpatial(Functions::fftShift(real(complexResponse)));
-
 }
 
 
