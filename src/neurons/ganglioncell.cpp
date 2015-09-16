@@ -26,7 +26,6 @@ void GanglionCell::computeImpulseResponse()
             }
         }
     }
-
 }
 
 

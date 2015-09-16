@@ -86,15 +86,15 @@ int main()
 
     S.computeSpatial();
     S.computeFrequency();
+
     ganglion.computeResponse();
     ganglion.computeImpulseResponse();
 
+//    relay.computeResponse();
+//    relay.computeImpulseResponse();
 
-    relay.computeResponse();
-    relay.computeImpulseResponse();
-
-    cortical.computeResponse();
-    cortical.computeImpulseResponse();
+//    cortical.computeResponse();
+//    cortical.computeImpulseResponse();
 
     io.writeResponse(neurons, S);
 
