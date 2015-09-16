@@ -90,8 +90,8 @@ int main()
     ganglion.computeResponse();
     ganglion.computeImpulseResponse();
 
-//    relay.computeResponse();
-//    relay.computeImpulseResponse();
+    relay.computeResponse();
+    relay.computeImpulseResponse();
 
 //    cortical.computeResponse();
 //    cortical.computeImpulseResponse();

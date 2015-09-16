@@ -19,8 +19,6 @@ public:
     static double heaviside(double x);
     static double secondKindBesselFunction(double x);
     static double delta(double x, double y);
-    static cx_mat fftShift(cx_mat m);
-    static mat fftShift(mat m);
     static cx_cube fftShift3d(cx_cube c);
 
 

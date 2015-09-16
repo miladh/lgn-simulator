@@ -4,7 +4,6 @@
 Stimuli::Stimuli(const Config *cfg)
 {
     const Setting & root = cfg->getRoot();
-    m_w = root["stimuliSettings"]["w"];
     m_k[0] = root["stimuliSettings"]["kx"];
     m_k[1] = root["stimuliSettings"]["ky"];
     m_nPoints = root["spatialDomainSettings"]["nPoints"];
@@ -33,6 +32,10 @@ Stimuli::Stimuli(const Config *cfg)
 
     m_temporalFreqs = linspace(-Nt_2*df_t, (m_nSteps - 1. - Nt_2)*df_t, m_nSteps);
     m_temporalFreqs*=2*PI;
+
+//     m_w = root["stimuliSettings"]["w"];
+    m_w = m_temporalFreqs[Nt_2+1];
+    cout <<"m_w: "<< m_w << endl;
 }
 
 Stimuli::~Stimuli()
@@ -66,13 +69,15 @@ void Stimuli::computeFrequency()
             }
         }
     }
+
+//    cout << real(m_frequency) << endl;
 }
 
 
-double Stimuli::w() const
-{
-    return m_w;
-}
+//double Stimuli::w() const
+//{
+//    return m_w;
+//}
 
 void Stimuli::setSpatial(cube spatial)
 {

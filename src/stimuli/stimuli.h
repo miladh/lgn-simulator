@@ -28,7 +28,7 @@ public:
     cube spatial() const;
     cx_cube frequency() const;
 
-    double w() const;
+//    double w() const;
 
     void setSpatial(cube spatial);
 

@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 # User commands:
-cellType = "ganglion"
+cellType = "relay"
 outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
 # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/tools/fb/*.h5"
 outputFile = glob(outputFilePath)[0]
