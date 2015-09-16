@@ -55,7 +55,7 @@ void Neuron::computeResponse()
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-    m_responseFT = Functions::fftShift3d(m_responseFT, 0);
+    m_responseFT = Functions::fftShift3d(m_responseFT);
     m_response = real(m_responseFT);
 }
 
