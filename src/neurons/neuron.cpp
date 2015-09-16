@@ -19,12 +19,12 @@ Neuron::Neuron(const Config *cfg, Stimuli *stim)
     double df = 1./dr/m_nPoints;
     double fs = 1./dr;
 
-    m_freqMesh = linspace(-N_2*df, (m_nPoints - 1. - N_2)*df, m_nPoints);
-    m_freqMesh*= 2*PI;
+    m_spatialFreqs = linspace(-N_2*df, (m_nPoints - 1. - N_2)*df, m_nPoints);
+    m_spatialFreqs*= 2*PI;
 
 
     //Temporal Mesh
-    m_temporalMesh = linspace(0, 10, m_nSteps);
+    m_temporalMesh = linspace(-0.5, 0.5, m_nSteps);
     double dt = m_temporalMesh(1) - m_temporalMesh(0);
     double Nt_2 = ceil(m_nSteps/2.);
     double df_t = 1./dt/m_nSteps;
@@ -42,8 +42,10 @@ Neuron::~Neuron()
 
 void Neuron::computeResponse()
 {
+    computeImpulseResponseFT();
 
     m_responseFT = m_impulseResponseFT % m_stim->frequency();
+
     m_responseFT = Functions::fftShift3d(m_responseFT);
 
     int size[3] = {m_nPoints, m_nPoints , m_nSteps};
@@ -61,15 +63,7 @@ void Neuron::computeResponse()
 
 void Neuron::computeImpulseResponse()
 {
-    for(int k = 0; k < m_nSteps; k++){
-        for(int i = 0; i < m_nPoints; i++){
-            for(int j = 0; j < m_nPoints; j++){
-                m_impulseResponseFT(i,j,k) =
-                        impulseResponseFT({m_freqMesh[i],m_freqMesh[j]},
-                                          m_freqMesh[k]);
-            }
-        }
-    }
+    computeImpulseResponseFT();
 
     m_impulseResponseFT = Functions::fftShift3d(m_impulseResponseFT);
     int size[3] = {m_nPoints, m_nPoints , m_nSteps};
@@ -85,19 +79,15 @@ void Neuron::computeImpulseResponse()
 }
 
 
-//void Neuron::computeResponseFT(double w)
-//{
-//    computeImpulseResponseFT(w);
-//    m_stim->computeFrequency();
-//    m_responseFT = m_impulseResponseFT % m_stim->frequency();
-//}
-
-void Neuron::computeImpulseResponseFT(double w)
+void Neuron::computeImpulseResponseFT()
 {
-    for(int i = 0; i < m_nPoints; i++){
-        for(int j = 0; j < m_nPoints; j++){
-            m_impulseResponseFT(i,j,0) =
-                    impulseResponseFT({m_freqMesh[i], m_freqMesh[j]}, w);
+    for(int k = 0; k < m_nSteps; k++){
+        for(int i = 0; i < m_nPoints; i++){
+            for(int j = 0; j < m_nPoints; j++){
+                m_impulseResponseFT(i,j,k) =
+                        impulseResponseFT({m_spatialFreqs[i],m_spatialFreqs[j]},
+                                          m_temporalFreqs[k]);
+            }
         }
     }
 }

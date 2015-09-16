@@ -34,6 +34,8 @@ Stimuli::Stimuli(const Config *cfg)
     m_temporalFreqs = linspace(-Nt_2*df_t, (m_nSteps - 1. - Nt_2)*df_t, m_nSteps);
     m_temporalFreqs*=2*PI;
 
+//    cout << m_temporalFreqs << endl;
+
 
 }
 
@@ -64,6 +66,7 @@ void Stimuli::computeFrequency()
                 m_frequency(i,j,k) = frequency({m_spatialFreqs[i],
                                               m_spatialFreqs[j]},
                                              m_temporalFreqs[k]);
+
             }
         }
     }

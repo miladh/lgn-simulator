@@ -29,9 +29,7 @@ public:
 
     // Compute functions
     void computeResponse();
-//    void computeResponseFT(double w);
     void computeImpulseResponse();
-    void computeImpulseResponseFT(double w);
 
     // Virtual functions
     virtual double impulseResponseFT(vec2 kVec, double w) = 0;
@@ -67,6 +65,9 @@ public:
 
     string cellType() const;
 
+private:
+        void computeImpulseResponseFT();
+
 protected:
     int m_nPoints = 0;
     int m_nSteps = 0;
@@ -80,7 +81,7 @@ protected:
     cx_cube m_impulseResponseFT;
 
     vec m_spatialMesh;
-    vec m_freqMesh;
+    vec m_spatialFreqs;
 
     vec m_temporalMesh;
     vec m_temporalFreqs;
@@ -92,6 +93,7 @@ protected:
     vector<Input> m_corticalNeurons;
 
     const std::complex<double> m_i = {0,1};
+
 
 };
 
