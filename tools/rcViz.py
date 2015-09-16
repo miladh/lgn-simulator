@@ -1,13 +1,14 @@
 import h5py
 from glob import glob
 from pylab import*
+import colormaps as cmaps
 
 
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 # User commands:
-cellType = "ganglion"
+cellType = "cortical"
 outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
 # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/tools/fb/*.h5"
 outputFile = glob(outputFilePath)[0]
@@ -56,13 +57,13 @@ def animate(i):
 
 fig, axarr = plt.subplots(1, 3, figsize=(15, 8))
 tight_layout()
-S_im = axarr[0].imshow(S[0], origin='lower', cmap='gray', interpolation="None")
+S_im = axarr[0].imshow(S[0], origin='lower', cmap=cmaps.viridis, interpolation="None")
 colorbar(S_im, ax=axarr[0], orientation='horizontal')
 
-G_im = axarr[1].imshow(G[1], origin='lower', cmap='jet')  # NOTE G[1]!!!!!NOTE
+G_im = axarr[1].imshow(G[1], origin='lower', cmap=cmaps.viridis)  # NOTE G[1]!!!!!NOTE
 colorbar(G_im, ax=axarr[1], orientation='horizontal')
 
-R_im = axarr[2].imshow(R[0], origin='lower', cmap='jet', interpolation="None")
+R_im = axarr[2].imshow(R[0], origin='lower', cmap=cmaps.plasma, interpolation="None")
 colorbar(R_im, ax=axarr[2], orientation='horizontal', norm=mpl.colors.Normalize(vmin=-10, vmax=10))
 
 ttl = plt.suptitle("")
