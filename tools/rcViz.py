@@ -8,48 +8,43 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 # User commands:
-cellType = "cortical"
+cellType = "ganglion"
 outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
 # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/tools/fb/*.h5"
 outputFile = glob(outputFilePath)[0]
 
 f = h5py.File(outputFile, "r")
-states = f.get("/")
-dt = states.attrs["dt"]
+datasets = f.get("/")
+dt = datasets.attrs["dt"]
 
 R = []
 G = []
 S = []
 
-for stateId, state in enumerate(states):
-    dataset = states.get(state)
-    S.append(array(dataset.get("stimuli/real")))
-    # R.append(array(dataset.get(cellType+"/response/real")).clip(min=0))
-    R.append(array(dataset.get(cellType+"/response/real")))
-    G.append(array(dataset.get(cellType+"/impulseResponse/real")))
+S = array(datasets.get("stimuli/real"))
+#R = array(datasets.get(cellType+"/response/real")).clip(min=0))
+R = array(datasets.get(cellType+"/response/real"))
+G = array(datasets.get(cellType+"/impulseResponse/real"))
 
-    nStates = len(states)
-    print "Number of states: ", nStates
-    print "MAX ERROR:",  (R[0]- S[0]).max()
-    print S[0].max()
-
+nStates =S.shape[0]
+print "Number of states: ", nStates
 
 #####################################################################
 
 
 def init():
-    S_im.set_data(S[0])
-    G_im.set_data(G[0])
-    R_im.set_data(R[0])
+    S_im.set_data(S[0,:,:])
+    G_im.set_data(G[0,:,:])
+    R_im.set_data(R[0,:,:])
     ttl.set_text("")
     return [S_im, G_im, R_im], ttl
 
 
 
 def animate(i):
-    S_im.set_array(S[i])
-    G_im.set_array(G[i])
-    R_im.set_array(R[i])
+    S_im.set_array(S[i,:,:])
+    G_im.set_array(G[i,:,:])
+    R_im.set_array(R[i,:,:])
     ttl.set_text(cellType + "\n" + "t = " + str(i*dt) + " s")
 #    print Rc[i].max(), " - ", Rc[i].min()
     return [S_im, G_im, R_im], ttl
@@ -57,13 +52,13 @@ def animate(i):
 
 fig, axarr = plt.subplots(1, 3, figsize=(15, 8))
 tight_layout()
-S_im = axarr[0].imshow(S[0], origin='lower', cmap=cmaps.viridis, interpolation="None")
+S_im = axarr[0].imshow(S[0,:,:], origin='lower', cmap=cmaps.viridis, interpolation="None")
 colorbar(S_im, ax=axarr[0], orientation='horizontal')
 
-G_im = axarr[1].imshow(G[1], origin='lower', cmap=cmaps.viridis)  # NOTE G[1]!!!!!NOTE
+G_im = axarr[1].imshow(G[1,:,:], origin='lower', cmap=cmaps.viridis)  # NOTE G[1]!!!!!NOTE
 colorbar(G_im, ax=axarr[1], orientation='horizontal')
 
-R_im = axarr[2].imshow(R[0], origin='lower', cmap=cmaps.plasma, interpolation="None")
+R_im = axarr[2].imshow(R[0,:,:], origin='lower', cmap=cmaps.plasma, interpolation="None")
 colorbar(R_im, ax=axarr[2], orientation='horizontal', norm=mpl.colors.Normalize(vmin=-10, vmax=10))
 
 ttl = plt.suptitle("")

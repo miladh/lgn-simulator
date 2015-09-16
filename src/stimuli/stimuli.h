@@ -22,26 +22,30 @@ public:
     virtual double spatial(vec2 rVec, double t) = 0;
     virtual double frequency(vec2 k, double w) = 0;
 
-    void computeSpatial(double t);
-    void computeFrequency(double w);
+    void computeSpatial();
+    void computeFrequency();
 
-    mat spatial() const;
-    cx_mat frequency() const;
+    cube spatial() const;
+    cx_cube frequency() const;
 
     double w() const;
 
-    void setSpatial(mat spatial);
+    void setSpatial(cube spatial);
 
 protected:
     int m_nPoints = 0;
+    int m_nSteps = 0;
     double m_w = 0;
-    mat m_spatial;
-    cx_mat m_frequency;
+    cube m_spatial;
+    cx_cube m_frequency;
 
     vec2 m_k = {0,0};
 
     vec m_spatialMesh;
-    vec m_freqMesh;
+    vec m_spatialFreqs;
+
+    vec m_temporalMesh;
+    vec m_temporalFreqs;
 
 
 };

@@ -40,6 +40,23 @@ mat Functions::fftShift(mat m)
 
 }
 
+cx_cube Functions::fftShift3d(cx_cube c)
+{
+
+    cx_cube mShifted = c;
+    for(int k = 0; k < int(c.n_slices); k++){
+        for(int i = 0; i < int(c.n_cols); i++){
+            for(int j = 0; j < int(c.n_rows); j++){
+
+                mShifted(i,j,k)  = c(i,j,k) * pow(-1, i+j+k);
+            }
+        }
+    }
+
+    return mShifted;
+
+}
+
 
 double Functions::heaviside(double x)
 {

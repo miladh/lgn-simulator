@@ -21,9 +21,12 @@ public:
     OutputManager(const Config *cfg);
     ~OutputManager();
 
-    void writeResponse(const int state,
-                       const vector<Neuron *> &neurons,
+    void writeResponse(const vector<Neuron *> &neurons,
                        const Stimuli &stimuli);
+
+
+//    void writeResponse(const vector<Neuron *> &neurons,
+//                       const Stimuli &stimuli);
 
 private:
     const Config* m_cfg;
@@ -32,7 +35,7 @@ private:
     stringstream m_outputFileName;
     vector <DataSet *>m_dataset;
 
-    void writeDataSet(const mat dataset, Group* group, string name);
+    void writeDataSet(const cube dataset, Group* group, string name);
 
 
     void initialize();

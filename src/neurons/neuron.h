@@ -28,9 +28,9 @@ public:
 
 
     // Compute functions
-    void computeResponse(double t);
-    void computeResponseFT(double w);
-    void computeImpulseResponse(double t);
+    void computeResponse();
+//    void computeResponseFT(double w);
+    void computeImpulseResponse();
     void computeImpulseResponseFT(double w);
 
     // Virtual functions
@@ -54,10 +54,10 @@ public:
 
 
     // Getter member functions
-    mat response() const;
-    mat impulseResponse() const;
-    cx_mat responseFT() const;
-    cx_mat impulseResponseFT() const;
+    cube response() const;
+    cube impulseResponse() const;
+    cx_cube responseFT() const;
+    cx_cube impulseResponseFT() const;
 
 
     vector<Input> ganglionCells() const;
@@ -69,17 +69,21 @@ public:
 
 protected:
     int m_nPoints = 0;
+    int m_nSteps = 0;
 
     string m_cellType;
     Stimuli *m_stim;
 
-    mat m_response;
-    mat m_impulseResponse;
-    cx_mat m_responseFT;
-    cx_mat m_impulseResponseFT;
+    cube m_response;
+    cube m_impulseResponse;
+    cx_cube m_responseFT;
+    cx_cube m_impulseResponseFT;
 
     vec m_spatialMesh;
     vec m_freqMesh;
+
+    vec m_temporalMesh;
+    vec m_temporalFreqs;
 
 
     vector<Input> m_ganglionCells;

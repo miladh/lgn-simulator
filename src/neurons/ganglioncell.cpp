@@ -15,12 +15,15 @@ GanglionCell::~GanglionCell()
 
 }
 
-void GanglionCell::computeImpulseResponse(double t)
+void GanglionCell::computeImpulseResponse()
 {
-    for(int i = 0; i < int(m_spatialMesh.n_elem); i++){
-        for(int j = 0; j < int(m_spatialMesh.n_elem); j++){
-            m_impulseResponse(i, j) =
-                    impulseResponse({m_spatialMesh[i], m_spatialMesh[j]}, t);
+    for(int k = 0; k < m_nSteps; k++){
+        for(int i = 0; i < m_nPoints; i++){
+            for(int j = 0; j < m_nPoints; j++){
+                m_impulseResponse(i, j, k) =
+                        impulseResponse({m_spatialMesh[i], m_spatialMesh[j]},
+                                        m_temporalMesh[k]);
+            }
         }
     }
 

@@ -17,7 +17,7 @@ public:
                  TemporalKernel *temporalKernel);
     ~GanglionCell();
 
-    void computeImpulseResponse(double t);
+    void computeImpulseResponse();
 
 private:
     SpatialKernel *m_spatialKernel;
