@@ -9,8 +9,8 @@ Stimuli::Stimuli(const Config *cfg)
     m_nPoints = root["spatialDomainSettings"]["nPoints"];
     m_nSteps = root["dynamicSettings"]["nSteps"];
 
-    m_spatial = zeros<cube>(m_nPoints, m_nPoints, m_nSteps);
-    m_frequency = zeros<cx_cube>(m_nPoints, m_nPoints, m_nSteps);
+    m_spatioTemporal = zeros<cube>(m_nPoints, m_nPoints, m_nSteps);
+    m_fourierTransform = zeros<cx_cube>(m_nPoints, m_nPoints, m_nSteps);
 
 
     //Spatial Mesh
@@ -43,12 +43,12 @@ Stimuli::~Stimuli()
 
 }
 
-void Stimuli::computeSpatial()
+void Stimuli::computeSpatiotemporal()
 {
     for(int k = 0; k < m_nSteps; k++){
         for(int i = 0; i < m_nPoints; i++){
             for(int j = 0; j < m_nPoints; j++){
-                m_spatial(i,j,k) = spatial({m_spatialMesh[i], m_spatialMesh[j]},
+                m_spatioTemporal(i,j,k) = valueAtPoint({m_spatialMesh[i], m_spatialMesh[j]},
                                            m_temporalMesh[k]);
             }
         }
@@ -57,41 +57,28 @@ void Stimuli::computeSpatial()
 }
 
 
-void Stimuli::computeFrequency()
+void Stimuli::computeFourierTransform()
 {
     for(int k = 0; k < m_nSteps; k++){
         for(int i = 0; i < m_nPoints; i++){
             for(int j = 0; j < m_nPoints; j++){
-                m_frequency(i,j,k) = frequency({m_spatialFreqs[i],
+                m_fourierTransform(i,j,k) = fourierTransformAtFrequency({m_spatialFreqs[i],
                                               m_spatialFreqs[j]},
                                              m_temporalFreqs[k]);
 
             }
         }
     }
-
-//    cout << real(m_frequency) << endl;
 }
-
-
-//double Stimuli::w() const
-//{
-//    return m_w;
-//}
-
-void Stimuli::setSpatial(cube spatial)
+cube Stimuli::spatioTemporal() const
 {
-    m_spatial = spatial;
+    return m_spatioTemporal;
 }
 
-
-cube Stimuli::spatial() const
+cx_cube Stimuli::fourierTransform() const
 {
-    return m_spatial;
+    return m_fourierTransform;
 }
 
-cx_cube Stimuli::frequency() const
-{
-    return m_frequency;
-}
+
 

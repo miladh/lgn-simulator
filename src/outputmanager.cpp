@@ -44,8 +44,8 @@ void OutputManager::writeResponse(const vector<Neuron*> &neurons,
 
     // Write stimuli
     Group stim = m_output->createGroup("/stimuli");
-    cube realStim = stimuli.spatial();
-    cube complexStim = real(stimuli.frequency());
+    cube realStim = stimuli.spatioTemporal();
+    cube complexStim = real(stimuli.fourierTransform());
 
     //   cout <<realStim.size() << endl;
     writeDataSet(realStim, &stim, "real");

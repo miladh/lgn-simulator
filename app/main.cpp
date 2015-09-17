@@ -84,8 +84,8 @@ int main()
     cortical.addRelayCell(&relay, &dog, &delta);
 
 
-    S.computeSpatial();
-    S.computeFrequency();
+    S.computeSpatiotemporal();
+    S.computeFourierTransform();
 
     ganglion.computeResponse();
     ganglion.computeImpulseResponse();
@@ -97,12 +97,6 @@ int main()
 //    cortical.computeImpulseResponse();
 
     io.writeResponse(neurons, S);
-
-
-
-
-
-
 
     //    cv::Mat image;
     //    image = cv::imread("../../dog.jpg", CV_LOAD_IMAGE_GRAYSCALE);

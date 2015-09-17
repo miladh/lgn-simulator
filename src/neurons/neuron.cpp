@@ -44,7 +44,7 @@ void Neuron::computeResponse()
 {
     computeImpulseResponseFT();
 
-    m_responseFT = m_impulseResponseFT % m_stim->frequency();
+    m_responseFT = /*m_impulseResponseFT % */m_stim->fourierTransform();
     m_responseFT = Functions::fftShift3d(m_responseFT);
 
     int size[3] = {m_nPoints, m_nPoints , m_nSteps};

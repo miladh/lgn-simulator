@@ -19,25 +19,20 @@ public:
     Stimuli(const Config *cfg);
     ~Stimuli();
 
-    virtual double spatial(vec2 rVec, double t) = 0;
-    virtual double frequency(vec2 k, double w) = 0;
+    void computeSpatiotemporal();
+    void computeFourierTransform();
+    void setSpatial(cube valueAtPoint);
 
-    void computeSpatial();
-    void computeFrequency();
-
-    cube spatial() const;
-    cx_cube frequency() const;
-
-//    double w() const;
-
-    void setSpatial(cube spatial);
+    cube spatioTemporal() const;
+    cx_cube fourierTransform() const;
 
 protected:
     int m_nPoints = 0;
     int m_nSteps = 0;
     double m_w = 0;
-    cube m_spatial;
-    cx_cube m_frequency;
+
+    cube m_spatioTemporal;
+    cx_cube m_fourierTransform;
 
     vec2 m_k = {0,0};
 
@@ -46,6 +41,10 @@ protected:
 
     vec m_temporalMesh;
     vec m_temporalFreqs;
+
+private:
+    virtual double valueAtPoint(vec2 rVec, double t) = 0;
+    virtual double fourierTransformAtFrequency(vec2 k, double w) = 0;
 
 
 };

@@ -11,13 +11,13 @@ DOGstim::~DOGstim()
 
 }
 
-double DOGstim::spatial(vec2 rVec, double t)
+double DOGstim::valueAtPoint(vec2 rVec, double t)
 {
     return m_dog.real(rVec);
 
 }
 
-double DOGstim::frequency(vec2 k, double w)
+double DOGstim::fourierTransformAtFrequency(vec2 k, double w)
 {
     m_dog.complex(k);
 }

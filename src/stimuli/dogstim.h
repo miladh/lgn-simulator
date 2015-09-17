@@ -13,12 +13,14 @@ public:
 
     // Stimuli interface
 public:
-    double spatial(vec2 rVec, double t);
-    double frequency(vec2 k, double w);
 
     DOG m_dog = DOG(1.0, 0.25, 0.85, 0.83);
 
 //    DOG m_dog = DOG(1.0, 0.25, 0.0, 0.83);
+
+private:
+    double valueAtPoint(vec2 rVec, double t);
+    double fourierTransformAtFrequency(vec2 k, double w);
 
 };
 

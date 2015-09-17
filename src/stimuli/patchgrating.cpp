@@ -13,7 +13,7 @@ PatchGrating::~PatchGrating()
 
 }
 
-double PatchGrating::spatial(vec2 rVec, double t)
+double PatchGrating::valueAtPoint(vec2 rVec, double t)
 {
     double r = sqrt(dot(rVec,rVec));
     double s = (1 - Functions::heaviside(r - m_spotDiameter * 0.5))
@@ -23,7 +23,7 @@ double PatchGrating::spatial(vec2 rVec, double t)
 
 }
 
-double PatchGrating::frequency(vec2 kVec, double w)
+double PatchGrating::fourierTransformAtFrequency(vec2 kVec, double w)
 {
     double arg = sqrt(dot(kVec - m_k, kVec - m_k)) * m_spotDiameter * 0.5;
     double s = m_contrast * PI * PI * m_spotDiameter * m_spotDiameter * 0.5
