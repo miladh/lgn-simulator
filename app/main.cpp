@@ -69,19 +69,19 @@ int main()
 
     //Neurons:
     GanglionCell ganglion(&cfg, &S, &dog, &damped);
-    RelayCell relay(&cfg, &S);
-    CorticalCell cortical(&cfg, &S);
+//    RelayCell relay(&cfg, &S);
+//    CorticalCell cortical(&cfg, &S);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
-    neurons.push_back(&relay);
-    neurons.push_back(&cortical);
+//    neurons.push_back(&relay);
+//    neurons.push_back(&cortical);
 
 
 
-    relay.addGanglionCell(&ganglion,&dog, &Ktg);
-    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktg);
-    cortical.addRelayCell(&relay, &dog, &delta);
+//    relay.addGanglionCell(&ganglion,&dog, &Ktg);
+//    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktg);
+//    cortical.addRelayCell(&relay, &dog, &delta);
 
 
     S.computeSpatiotemporal();
@@ -90,13 +90,23 @@ int main()
     ganglion.computeResponse();
     ganglion.computeImpulseResponse();
 
-    relay.computeResponse();
-    relay.computeImpulseResponse();
+//    relay.computeResponse();
+//    relay.computeImpulseResponse();
+
+
+
 
 //    cortical.computeResponse();
 //    cortical.computeImpulseResponse();
 
     io.writeResponse(neurons, S);
+
+//    cout << "Correct, stim:  " << endl;
+//    cout << S.spatioTemporal().slice(0) << endl;
+//    cout << "FT:  " << endl;
+//    cout << flipud(ganglion.response().slice(0)) << endl;
+
+
 
     //    cv::Mat image;
     //    image = cv::imread("../../dog.jpg", CV_LOAD_IMAGE_GRAYSCALE);

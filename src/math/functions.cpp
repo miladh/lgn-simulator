@@ -24,7 +24,6 @@ cx_cube Functions::fftShift3d(cx_cube c)
     }
 
     return mShifted;
-
 }
 
 

@@ -19,7 +19,6 @@ SOURCES += \
     integrator.cpp \
     trapezoidal.cpp \
     outputmanager.cpp \
-    lib.cpp \
     stimuli/stimuli.cpp \
     stimuli/patchgrating.cpp \
     math/functions.cpp \
@@ -40,7 +39,6 @@ HEADERS += \
     integrator.h \
     trapezoidal.h \
     outputmanager.h \
-    lib.h \
     stimuli/stimuli.h \
     stimuli/patchgrating.h \
     math/functions.h \

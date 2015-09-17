@@ -35,7 +35,9 @@ Stimuli::Stimuli(const Config *cfg)
 
 //     m_w = root["stimuliSettings"]["w"];
     m_w = m_temporalFreqs[Nt_2+1];
+//    cout << m_temporalFreqs << endl;
     cout <<"m_w: "<< m_w << endl;
+
 }
 
 Stimuli::~Stimuli()
@@ -48,8 +50,9 @@ void Stimuli::computeSpatiotemporal()
     for(int k = 0; k < m_nSteps; k++){
         for(int i = 0; i < m_nPoints; i++){
             for(int j = 0; j < m_nPoints; j++){
-                m_spatioTemporal(i,j,k) = valueAtPoint({m_spatialMesh[i], m_spatialMesh[j]},
-                                           m_temporalMesh[k]);
+                m_spatioTemporal(i,j,k) = valueAtPoint({m_spatialMesh[i],
+                                                        m_spatialMesh[j]},
+                                                       m_temporalMesh[k]);
             }
         }
     }

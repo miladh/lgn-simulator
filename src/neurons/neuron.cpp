@@ -31,7 +31,7 @@ Neuron::Neuron(const Config *cfg, Stimuli *stim)
     double fs_t = 1./dt;
 
     m_temporalFreqs = linspace(-Nt_2*df_t, (m_nSteps - 1. - Nt_2)*df_t, m_nSteps);
-    m_temporalFreqs*=2*PI;
+    m_temporalFreqs*= 2*PI;
 }
 
 Neuron::~Neuron()
@@ -57,6 +57,10 @@ void Neuron::computeResponse()
 
     m_responseFT = Functions::fftShift3d(m_responseFT);
     m_response = real(m_responseFT);
+
+    for(int k = 0; k < int(m_response.n_slices); k++){
+            m_response.slice(k) = flipud(m_response.slice(k));
+    }
 }
 
 
@@ -90,18 +94,6 @@ void Neuron::computeImpulseResponseFT()
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -4,7 +4,6 @@
 
 
 #include "stimuli/patchgrating.h"
-#include <lib.h>
 
 
 using namespace std;
@@ -61,29 +60,6 @@ SUITE(integrator){
 
 
 
-
-    TEST(gaussLegendre) {
-
-        int N = 100;
-        double *w = new double [N];
-        double *x = new double [N];
-        double Iexp = 0;
-        double Icos = 0;
-        gauleg(-10, 10, x, w, N);
-
-
-        for(int i = 0; i < N; i++){
-            for(int j = 0; j < N; j++){
-                for(int k = 0; k < N; k++){
-                    Iexp += w[i] * w[j] * w[k] * expFunction(x[i], x[j], x[k]);
-                    Icos += w[i] * w[j] * w[k] * cosFunction(x[i], x[j], x[k]);
-                }
-            }
-        }
-        CHECK_CLOSE(Iexp, 5.568327996831, 1e-11);
-        CHECK_CLOSE(Icos, 1.0807773225605, 1e-11);
-
-    }
 
 }
 
