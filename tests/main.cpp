@@ -1,4 +1,8 @@
 #include <unittest++/UnitTest++.h>
+#include <unittest++/Test.h>
+#include <unittest++/TestReporterStdout.h>
+#include <unittest++/TestRunner.h>
+
 #include "stimuli/patchgrating.h"
 #include "spatialKernels/dog.h"
 TEST(dog) {
@@ -30,13 +34,13 @@ TEST(heaviside) {
 }
 
 TEST(stimuli) {
-// TODO: Need complex stimuli tests!
+    // TODO: Need complex stimuli tests!
 
-//    Config cfg;
-//    cfg.readFile("../../eDOG/tests/configTests.cfg");
-//    PatchGrating S(&cfg);
-//    CHECK_CLOSE(S.spatial({-0.1, 0.1}, 0.5), 5.81683089464, 1e-11);
-//    CHECK_CLOSE(S.spatial({-0.7, 0.9}, 2.5), 9.97768728668, 1e-11);
+    //    Config cfg;
+    //    cfg.readFile("../../eDOG/tests/configTests.cfg");
+    //    PatchGrating S(&cfg);
+    //    CHECK_CLOSE(S.spatial({-0.1, 0.1}, 0.5), 5.81683089464, 1e-11);
+    //    CHECK_CLOSE(S.spatial({-0.7, 0.9}, 2.5), 9.97768728668, 1e-11);
 
 
 }
@@ -44,5 +48,22 @@ TEST(stimuli) {
 
 int main()
 {
-    return UnitTest::RunAllTests();
+    int result = 0;
+    bool fft_fft = 0;
+    bool dev = 1;
+
+
+    UnitTest::TestReporterStdout reporter;
+    UnitTest::TestRunner runner(reporter);
+
+        if(dev){
+      result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "DEVELOPMENT", UnitTest::True(), 0);
+        }
+
+    if(fft_fft){
+        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "FFT", UnitTest::True(), 0);
+    }
+    return result;
+
+    //    return UnitTest::RunAllTests();
 }

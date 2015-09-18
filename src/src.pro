@@ -10,7 +10,7 @@ TEMPLATE = lib
 TARGET = edog
 
 
-LIBS += -llapack -larmadillo -lconfig++ -lboost_regex -lhdf5 -lhdf5_cpp -lfftw3 -lfftw3_omp -lfftw3_threads
+#LIBS += -llapack -larmadillo -lconfig++ -lboost_regex -lhdf5 -lhdf5_cpp -lfftw3 -lfftw3_omp -lfftw3_threads
 
 
 #INCLUDEPATH += /usr/include/hdf5/serial
