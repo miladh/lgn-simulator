@@ -41,6 +41,8 @@ void Neuron::computeResponse()
 
     m_response = real(m_responseFT);
 
+
+
 }
 
 

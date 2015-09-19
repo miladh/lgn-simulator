@@ -38,13 +38,13 @@ SUITE(FFT_nD){
 
         vec t = integrator.timeVec();
         vec s = integrator.coordinateVec();
-        vec w = integrator.temporalFreqVec();
-        vec k = integrator.spatialFreqVec();
+        vec w = integrator.temporalFreqVec(); // FACTOR 2PI!!!!
+        vec k = integrator.spatialFreqVec(); // FACTOR 2PI!!!!
 
         //signal
         double wd = 1;
-        double kdx = 2;
-        double kdy = 1;
+        double kdx = 1;
+        double kdy = 3;
         for(int l = 0; l < Nt; l++){
             for(int i = 0; i < Ns; i++){
                 for(int j = 0; j < Ns; j++){
@@ -83,6 +83,8 @@ SUITE(FFT_nD){
             }
         }
 
+
+
         //        cout << "Freq temporal:" << endl << w.t() << endl;
         //        cout << "Freq spatial:" << endl << k.t() << endl;
         //        cout << "----------------------------------------------" << endl;
@@ -99,13 +101,13 @@ SUITE(FFT_nD){
      * FFTW_BACKWARD of 3D analytic function
      * */
     TEST(ifft_3d){
-        //        cout <<endl << "ifft 3d" << endl;
-        //        cout << "----------------------" << endl;
+//                cout <<endl << "ifft 3d" << endl;
+//                cout << "----------------------" << endl;
         double pi = acos(-1);
 
         //Temporal Mesh
         int Nt = 8;
-        double maxT = 2.;
+        double maxT = 1.;
         double wd = 1;
         double dt = maxT/Nt;
         double dw = 1./maxT;
@@ -120,13 +122,13 @@ SUITE(FFT_nD){
         //Spatial Mesh x
         int Nx = 8;
         double maxX = 1.;
-        double kdx = 3;
+        double kdx = 1;
         double dx = maxX/Nx;
         double dkx = 1./maxX;
         double kxs = Nx/maxX;
         double Nx_2 = ceil(Nx/2.);
 
-        rowvec x = linspace<rowvec>(0, maxX-dx, Nx);
+        rowvec x = linspace<rowvec>(-maxX/2, maxX/2-dx, Nx);
         rowvec kx1 = linspace<rowvec>(0, Nx_2-1, Nx_2);
         rowvec kx2 = linspace<rowvec>(-Nx_2,-kx1[1], Nx_2);
         rowvec kx = join_rows(kx1,kx2)* 1./maxX;
@@ -141,7 +143,7 @@ SUITE(FFT_nD){
         double kys = Nx/maxY;
         double Ny_2 = ceil(Ny/2.);
 
-        rowvec y = linspace<rowvec>(0, maxY-dy, Ny);
+        rowvec y = linspace<rowvec>(-maxY/2, maxY/2-dy, Ny);
         rowvec ky1 = linspace<rowvec>(0, Ny_2-1, Ny_2);
         rowvec ky2 = linspace<rowvec>(-Ny_2,-ky1[1], Ny_2);
         rowvec ky = join_rows(ky1,ky2)* 1./maxY;
@@ -149,6 +151,7 @@ SUITE(FFT_nD){
         cx_cube fSpatial = zeros<cx_cube>(Nx, Ny, Nt);
         cx_cube fSpatial_fftw = zeros<cx_cube>(Nx, Ny, Nt);
         cx_cube fFreq = zeros<cx_cube>(Nx, Ny, Nt);
+
 
 //        cout << "dt: " << dt << ", dx: " << dx << ", dy: " << dy << endl;
 //        cout << "dw: " << dw << ", dkx: " << dkx  << ", dky: " << dky << endl;
@@ -199,7 +202,7 @@ SUITE(FFT_nD){
         int size[3] = {Nx, Ny, Nt};
         fftw_complex* in = reinterpret_cast<fftw_complex*> (fFreq.memptr());
         fftw_complex* out = reinterpret_cast<fftw_complex*> (fSpatial_fftw.memptr());
-        fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
+        fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
 
         fftw_execute(plan);
         fftw_destroy_plan(plan);
@@ -220,7 +223,6 @@ SUITE(FFT_nD){
                 }
             }
         }
-
 
     }
 
@@ -301,7 +303,7 @@ SUITE(FFT_nD){
         int size[2] = {Nx, Nt};
         fftw_complex* in = reinterpret_cast<fftw_complex*> (fFreq.memptr());
         fftw_complex* out = reinterpret_cast<fftw_complex*> (fSpatial_fftw.memptr());
-        fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
+        fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
 
         fftw_execute(plan);
         fftw_destroy_plan(plan);
