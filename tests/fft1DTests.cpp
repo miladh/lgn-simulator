@@ -14,7 +14,7 @@ using namespace arma;
 
 
 
-SUITE(DEVELOPMENT){
+SUITE(FFT_1D){
 
     /************************************************
      * FFTW_FORWARD of analytic function, multiplied by
@@ -22,7 +22,7 @@ SUITE(DEVELOPMENT){
      * by FFTW_BACKWARD of the product.
      * */
     TEST(fft_multiply_ifft){
-        cout << "fft - multiply - ifft" << endl;
+        cout <<endl << "fft - multiply - ifft" << endl;
         cout << "----------------------" << endl;
         double pi = acos(-1);
 
@@ -105,19 +105,19 @@ SUITE(DEVELOPMENT){
         cout << "----------------------------------------------" << endl;
         cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
         cout << "signal: " << endl << real(fSpatial) << endl;
+
+
+        for(int i = 0; i < N; i++){
+            CHECK_CLOSE(real(fSpatial_fftw(i)), real(fSpatial(i)), 1e-8);
+        }
     }
 
-
-}
-
-
-SUITE(FFT){
 
     /************************************************
      * FFTW_BACKWARD of analytic function
      * */
     TEST(ifft){
-        cout << "ifft" << endl;
+        cout <<endl << "ifft" << endl;
         cout << "----------------------" << endl;
         double pi = acos(-1);
 
@@ -180,6 +180,10 @@ SUITE(FFT){
         cout << "----------------------------------------------" << endl;
         cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
         cout << "signal: " << endl << real(fSpatial) << endl;
+
+        for(int i = 0; i < N; i++){
+            CHECK_CLOSE(real(fSpatial_fftw(i)), real(fSpatial(i)), 1e-8);
+        }
     }
 
 
@@ -188,7 +192,7 @@ SUITE(FFT){
      * by FFTW_BACKWARD.
      * */
     TEST(fft_ifft){
-        cout << "fft - ifft" << endl;
+        cout <<endl<< "fft - ifft" << endl;
         cout << "----------------------" << endl;
         double pi = acos(-1);
 
@@ -256,6 +260,10 @@ SUITE(FFT){
         cout << "----------------------------------------------" << endl;
         cout << "ifft signal: " << endl << real((fSpatial_fftw))*df<< endl;
         cout << "signal: " << endl << real(fSpatial) << endl;
+
+        for(int i = 0; i < N; i++){
+            CHECK_CLOSE(real(fSpatial_fftw(i)), real(fSpatial(i)), 1e-8);
+        }
     }
 
 
