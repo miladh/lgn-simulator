@@ -7,6 +7,7 @@
 #include <fftw3.h>
 
 #include "integratorsettings.h"
+#include "math/functions.h"
 
 using namespace std;
 using namespace arma;

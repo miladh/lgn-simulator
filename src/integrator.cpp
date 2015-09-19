@@ -17,14 +17,14 @@ Integrator::Integrator(IntegratorSettings *settings)
     m_timeVec = linspace(0, m_maxT-m_dt, m_nPointsTemporal);
     vec w1 = linspace(0, Nt_2-1, Nt_2);
     vec w2 = linspace(-Nt_2, -w1[1], Nt_2);
-    m_temporalFreqs = join_cols(w1,w2)* 1./m_maxT;
+    m_temporalFreqs = join_cols(w1,w2)* 1./m_maxT * 2*PI;
 
     //Spatial Grid
     double Ns_2 = ceil(m_nPointsSpatial/2);
     m_coordinateVec = linspace(-0.5, 0.5-m_ds, m_nPointsSpatial);
     vec k1 = linspace(0, Ns_2-1, Ns_2);
     vec k2 = linspace(-Ns_2, -k1[1], Ns_2);
-    m_spatialFreqs = join_cols(k1,k2);
+    m_spatialFreqs = join_cols(k1,k2)*2*PI;
 }
 
 Integrator::~Integrator()
