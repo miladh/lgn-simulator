@@ -15,7 +15,6 @@ outputFile = glob(outputFilePath)[0]
 
 f = h5py.File(outputFile, "r")
 datasets = f.get("/")
-dt = datasets.attrs["dt"]
 
 R = []
 G = []
@@ -45,7 +44,7 @@ def animate(i):
     S_im.set_array(S[i,:,:])
     G_im.set_array(G[i,:,:])
     R_im.set_array(R[i,:,:])
-    ttl.set_text(cellType + "\n" + "t = " + str(i*dt) + " s")
+    ttl.set_text(cellType + "\n" + "t = " + str(i) + " s")
 #    print Rc[i].max(), " - ", Rc[i].min()
     return [S_im, R_im, G_im], ttl
 
@@ -64,7 +63,7 @@ colorbar(G_im, ax=axarr[2], orientation='horizontal')
 
 ttl = plt.suptitle("")
 axarr[0].set_title("Stimuli")
-axarr[1].set_title("Response")
+axarr[1].set_title("Stimuli")
 axarr[2].set_title("Impulse Response")
 
 

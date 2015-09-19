@@ -24,14 +24,12 @@ void OutputManager::initialize()
     Group rootGroup = m_output->openGroup("/");
     const Setting & root = m_cfg->getRoot();
 
-    int nSteps = root["dynamicSettings"]["nSteps"];
-    double dt = root["dynamicSettings"]["dt"];
+    int nSteps = root["integratorSettings"]["nt"];
+    nSteps = pow(2, nSteps);
 
     Attribute nSteps_a(rootGroup.createAttribute("nSteps", PredType::NATIVE_INT, H5S_SCALAR));
     nSteps_a.write(PredType::NATIVE_INT, &nSteps);
 
-    Attribute dt_a(rootGroup.createAttribute("dt", PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    dt_a.write(PredType::NATIVE_DOUBLE, &dt);
 
     m_dataset.reserve(nSteps);
 }

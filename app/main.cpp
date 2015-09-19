@@ -38,8 +38,6 @@ int main()
     cfg.readFile("../../eDOG/app/config.cfg");
     const Setting & root = cfg.getRoot();
 
-    int nSteps = root["dynamicSettings"]["nSteps"];
-    double dt = root["dynamicSettings"]["dt"];
 
     double dogA = root["dogSettings"]["A"];
     double doga = root["dogSettings"]["a"];
