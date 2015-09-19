@@ -2,27 +2,50 @@
 #define INTEGRATOR_H
 
 #include <iostream>
+#include <armadillo>
 #include <math.h>
+#include <fftw3.h>
+
+#include "integratorsettings.h"
+
+using namespace std;
+using namespace arma;
 
 class Integrator
 {
 public:
-    Integrator(double upperLim, double lowerLim, double steps);
+    Integrator(IntegratorSettings *settings);
     ~Integrator();
 
-    virtual void integrate() = 0;
-    virtual double result() const = 0;
+    cx_cube integrate(cx_cube data);
 
-    double upperLim() const;
-    double lowerLim() const;
-    double panels() const;
-    double stepLength() const;
+    vec timeVec() const;
+    vec coordinateVec() const;
+    vec temporalFreqVec() const;
+    vec spatialFreqVec() const;
 
 private:
-    double m_upperLim;
-    double m_lowerLim;
-    double m_panels;
-    double m_stepLength;
+    IntegratorSettings *m_settings;
+
+    int m_nPointsTemporal= 0;
+    int m_nPointsSpatial = 0;
+    double m_maxT = 0;
+
+    double m_dt = 0;
+    double m_dw = 0;
+    double m_temporalSamplingFreq = 0;
+
+    double m_ds = 0;
+    double m_dk = 0;
+    double m_spatialSamplingFreq = 0;
+
+    vec m_timeVec;
+    vec m_coordinateVec;
+    vec m_temporalFreqVec;
+    vec m_spatialFreqVec;
+
+
+
 
 };
 

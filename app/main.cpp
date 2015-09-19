@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include <trapezoidal.h>
 #include <outputmanager.h>
 #include <unistd.h>
 

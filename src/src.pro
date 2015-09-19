@@ -17,7 +17,6 @@ TARGET = edog
 
 SOURCES += \
     integrator.cpp \
-    trapezoidal.cpp \
     outputmanager.cpp \
     stimuli/stimuli.cpp \
     stimuli/patchgrating.cpp \
@@ -34,10 +33,10 @@ SOURCES += \
     temporalKernels/diracDelta.cpp \
     spatialKernels/ellipticgaussian.cpp \
     temporalKernels/dampedoscillator.cpp \
-    stimuli/dogstim.cpp
+    stimuli/dogstim.cpp \
+    integratorsettings.cpp
 HEADERS += \
     integrator.h \
-    trapezoidal.h \
     outputmanager.h \
     stimuli/stimuli.h \
     stimuli/patchgrating.h \
@@ -54,4 +53,5 @@ HEADERS += \
     temporalKernels/diracDelta.h \
     spatialKernels/ellipticgaussian.h \
     temporalKernels/dampedoscillator.h \
-    stimuli/dogstim.h
+    stimuli/dogstim.h \
+    integratorsettings.h

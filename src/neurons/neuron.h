@@ -1,7 +1,7 @@
 #ifndef NEURON_H
 #define NEURON_H
 
-#include <armadillo>
+
 #include <libconfig.h++>
 #include <fftw3.h>
 

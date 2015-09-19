@@ -22,17 +22,17 @@ SUITE(FFT_1D){
      * by FFTW_BACKWARD of the product.
      * */
     TEST(fft_multiply_ifft){
-        cout <<endl << "fft - multiply - ifft" << endl;
-        cout << "----------------------" << endl;
+//        cout <<endl << "fft - multiply - ifft" << endl;
+//        cout << "----------------------" << endl;
         double pi = acos(-1);
 
         //Spatial Mesh
         int N = 16;
-        double maxT = 1.;
+        double maxT = 2.;
 
         // Signals:
         double g1 = 2;
-        double g2 = 4;
+        double g2 = 3;
 
         double dt = maxT/N;
         double df = 1./maxT;
@@ -55,16 +55,16 @@ SUITE(FFT_1D){
         cx_rowvec fSpatial_fftw = zeros<cx_rowvec>(N);
 
 
-        cout << "N_2: " << N_2 << endl;
-        cout << "dt: " << dt << endl;
-        cout << "df: " << df << endl;
-        cout << "sampling freq: " << fs << endl;
-        cout << "signal 1 freq: "   << g1 << endl;
-        cout << "signal 2 freq: "   << g2 << endl;
-        cout << "----------------------------------------------" << endl;
+//        cout << "N_2: " << N_2 << endl;
+//        cout << "dt: " << dt << endl;
+//        cout << "df: " << df << endl;
+//        cout << "sampling freq: " << fs << endl;
+//        cout << "signal 1 freq: "   << g1 << endl;
+//        cout << "signal 2 freq: "   << g2 << endl;
+//        cout << "----------------------------------------------" << endl;
 
-        cout << "Temporal:" << endl << t << endl;
-        cout << "Freq:" << endl << f << endl;
+//        cout << "Temporal:" << endl << t << endl;
+//        cout << "Freq:" << endl << f << endl;
 
 
         // signal1 + signal2
@@ -84,7 +84,7 @@ SUITE(FFT_1D){
         fftw_execute(plan1);
         fftw_destroy_plan(plan1);
 
-        signal1_ft *= dt;
+        signal1_ft *= dt *df;
 
         //adding the fourier signals:
         fFreq = signal1_ft + signal2_ft;
@@ -96,15 +96,13 @@ SUITE(FFT_1D){
         fftw_execute(plan);
         fftw_destroy_plan(plan);
 
-        fSpatial_fftw *=df;
-
-        cout << "----------------------------------------------" << endl;
-        cout << "fourier signal1: " << endl << real(signal1_ft) << endl;
-        cout << "fourier signal2: " << endl << real(signal2_ft) << endl;
-        cout << "fourier signal: " << endl << real(fFreq) << endl;
-        cout << "----------------------------------------------" << endl;
-        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
-        cout << "signal: " << endl << real(fSpatial) << endl;
+//        cout << "----------------------------------------------" << endl;
+//        cout << "fourier signal1: " << endl << real(signal1_ft) << endl;
+//        cout << "fourier signal2: " << endl << real(signal2_ft) << endl;
+//        cout << "fourier signal: " << endl << real(fFreq) << endl;
+//        cout << "----------------------------------------------" << endl;
+//        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
+//        cout << "signal: " << endl << real(fSpatial) << endl;
 
 
         for(int i = 0; i < N; i++){
@@ -117,13 +115,13 @@ SUITE(FFT_1D){
      * FFTW_BACKWARD of analytic function
      * */
     TEST(ifft){
-        cout <<endl << "ifft" << endl;
-        cout << "----------------------" << endl;
+//        cout <<endl << "ifft" << endl;
+//        cout << "----------------------" << endl;
         double pi = acos(-1);
 
         //Spatial Mesh
         int N = 16;
-        double maxT = 1.;
+        double maxT = 2.;
         double g = 2;
 
         double dt = maxT/N;
@@ -134,7 +132,7 @@ SUITE(FFT_1D){
 
         rowvec t = linspace<rowvec>(0, maxT-dt, N);
         rowvec f1 = linspace<rowvec>(0, N_2-1, N_2);
-        rowvec f2 = linspace<rowvec>(-N_2,-f1[1], N_2);
+        rowvec f2 = linspace<rowvec>(-N_2,- f1[1], N_2);
         rowvec f = join_rows(f1,f2)* 1./maxT;
 
         cx_rowvec fSpatial = zeros<cx_rowvec>(N);
@@ -142,15 +140,15 @@ SUITE(FFT_1D){
         cx_rowvec fFreq = zeros<cx_rowvec>(N);
 
 
-        cout << "N_2: " << N_2 << endl;
-        cout << "dt: " << dt << endl;
-        cout << "df: " << df << endl;
-        cout << "sampling freq: " << fs << endl;
-        cout << "signal freq: "   << g << endl;
-        cout << "----------------------------------------------" << endl;
+//        cout << "N_2: " << N_2 << endl;
+//        cout << "dt: " << dt << endl;
+//        cout << "df: " << df << endl;
+//        cout << "sampling freq: " << fs << endl;
+//        cout << "signal freq: "   << g << endl;
+//        cout << "----------------------------------------------" << endl;
 
-        cout << "Temporal:" << endl << t << endl;
-        cout << "Freq:" << endl << f << endl;
+//        cout << "Temporal:" << endl << t << endl;
+//        cout << "Freq:" << endl << f << endl;
 
 
         //signal
@@ -173,13 +171,13 @@ SUITE(FFT_1D){
         fftw_execute(plan);
         fftw_destroy_plan(plan);
 
-        fSpatial_fftw *=df;
+//        fSpatial_fftw *=df;
 
-        cout << "----------------------------------------------" << endl;
-        cout << "fourier signal: " << endl << real(fFreq) << endl;
-        cout << "----------------------------------------------" << endl;
-        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
-        cout << "signal: " << endl << real(fSpatial) << endl;
+//        cout << "----------------------------------------------" << endl;
+//        cout << "fourier signal: " << endl << real(fFreq) << endl;
+//        cout << "----------------------------------------------" << endl;
+//        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
+//        cout << "signal: " << endl << real(fSpatial) << endl;
 
         for(int i = 0; i < N; i++){
             CHECK_CLOSE(real(fSpatial_fftw(i)), real(fSpatial(i)), 1e-8);
@@ -192,14 +190,14 @@ SUITE(FFT_1D){
      * by FFTW_BACKWARD.
      * */
     TEST(fft_ifft){
-        cout <<endl<< "fft - ifft" << endl;
-        cout << "----------------------" << endl;
+//        cout <<endl<< "fft - ifft" << endl;
+//        cout << "----------------------" << endl;
         double pi = acos(-1);
 
 
         //Spatial Mesh
         int N = 16;
-        double maxT = 1.;
+        double maxT = 1.0;
         double g = 2;
 
         double dt = maxT/N;
@@ -219,14 +217,14 @@ SUITE(FFT_1D){
         cx_rowvec fFreq_fftw = zeros<cx_rowvec>(N);
 
 
-        cout << "dt: " << dt << endl;
-        cout << "df: " << df << endl;
-        cout << "sampling freq: " << fs << endl;
-        cout << "signal freq: "   << g << endl;
-        cout << "----------------------------------------------" << endl;
+//        cout << "dt: " << dt << endl;
+//        cout << "df: " << df << endl;
+//        cout << "sampling freq: " << fs << endl;
+//        cout << "signal freq: "   << g << endl;
+//        cout << "----------------------------------------------" << endl;
 
-        cout << "Temporal:" << endl << t << endl;
-        cout << "Freq:" << endl << f.subvec(0,N_2) << endl;
+//        cout << "Temporal:" << endl << t << endl;
+//        cout << "Freq:" << endl << f.subvec(0,N_2) << endl;
 
 
         //signal
@@ -254,12 +252,13 @@ SUITE(FFT_1D){
         fftw_execute(plan);
         fftw_destroy_plan(plan);
 
+        fSpatial_fftw*=df;
 
-        cout << "----------------------------------------------" << endl;
-        cout << "fft signal: " << endl << real((fFreq_fftw)) << endl;
-        cout << "----------------------------------------------" << endl;
-        cout << "ifft signal: " << endl << real((fSpatial_fftw))*df<< endl;
-        cout << "signal: " << endl << real(fSpatial) << endl;
+//        cout << "----------------------------------------------" << endl;
+//        cout << "fft signal: " << endl << real((fFreq_fftw)) << endl;
+//        cout << "----------------------------------------------" << endl;
+//        cout << "ifft signal: " << endl << real((fSpatial_fftw))<< endl;
+//        cout << "signal: " << endl << real(fSpatial) << endl;
 
         for(int i = 0; i < N; i++){
             CHECK_CLOSE(real(fSpatial_fftw(i)), real(fSpatial(i)), 1e-8);

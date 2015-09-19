@@ -9,8 +9,9 @@ int main()
     int result = 0;
 
     bool mathTests = 1;
-    bool stimTests = 0;
-    bool fft_1D = 0;
+    bool stimTests = 1;
+    bool fft_1D = 1;
+    bool fft_nD = 1;
     bool dev = 1;
 
     UnitTest::TestReporterStdout reporter;
@@ -33,6 +34,9 @@ int main()
         result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "FFT_1D", UnitTest::True(), 0);
     }
 
+    if(fft_nD){
+        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "FFT_nD", UnitTest::True(), 0);
+    }
 
     return result;
 
