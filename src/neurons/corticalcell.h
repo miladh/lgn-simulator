@@ -6,7 +6,7 @@
 class CorticalCell : public Neuron
 {
 public:
-    CorticalCell(const Config *cfg, Stimuli *stim);
+    CorticalCell(const Config *cfg, Stimuli *stim, Integrator integrator);
     ~CorticalCell();
 
 protected:

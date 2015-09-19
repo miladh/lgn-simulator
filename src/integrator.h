@@ -24,6 +24,9 @@ public:
     vec temporalFreqVec() const;
     vec spatialFreqVec() const;
 
+    int nPointsTemporal() const;
+    int nPointsSpatial() const;
+
 private:
     IntegratorSettings *m_settings;
 
@@ -41,8 +44,8 @@ private:
 
     vec m_timeVec;
     vec m_coordinateVec;
-    vec m_temporalFreqVec;
-    vec m_spatialFreqVec;
+    vec m_temporalFreqs;
+    vec m_spatialFreqs;
 
 
 

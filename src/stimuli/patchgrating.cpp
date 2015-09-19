@@ -1,7 +1,7 @@
 #include "patchgrating.h"
 
-PatchGrating::PatchGrating(const Config *cfg)
-    : Stimuli(cfg)
+PatchGrating::PatchGrating(const Config *cfg, Integrator integrator)
+    : Stimuli(cfg, integrator)
 {
     const Setting & root = cfg->getRoot();
     m_contrast = root["stimuliSettings"]["C"];

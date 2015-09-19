@@ -8,7 +8,7 @@
 class DOGstim : public Stimuli
 {
 public:
-    DOGstim(const Config *cfg);
+    DOGstim(const Config *cfg, Integrator integrator);
     ~DOGstim();
 
     // Stimuli interface

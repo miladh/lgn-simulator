@@ -6,6 +6,7 @@
 #include <fftw3.h>
 
 #include "../stimuli/stimuli.h"
+#include "integrator.h"
 #include "../temporalKernels/temporalkernel.h"
 #include "../spatialKernels/spatialkernel.h"
 
@@ -17,7 +18,7 @@ using namespace std;
 class Neuron
 {
 public:
-    Neuron(const Config *cfg, Stimuli *stim);
+    Neuron(const Config *cfg, Stimuli *stim, Integrator integrator);
     ~Neuron();
 
     struct Input {
@@ -67,10 +68,9 @@ public:
 
 private:
         void computeImpulseResponseFT();
+        Integrator m_integrator;
 
 protected:
-    int m_nPoints = 0;
-    int m_nSteps = 0;
 
     string m_cellType;
     Stimuli *m_stim;
@@ -80,10 +80,10 @@ protected:
     cx_cube m_responseFT;
     cx_cube m_impulseResponseFT;
 
-    vec m_spatialMesh;
+    vec m_coordinateVec;
     vec m_spatialFreqs;
 
-    vec m_temporalMesh;
+    vec timeVec;
     vec m_temporalFreqs;
 
 

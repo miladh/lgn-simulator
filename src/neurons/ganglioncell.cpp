@@ -1,13 +1,15 @@
 #include "ganglioncell.h"
 
 GanglionCell::GanglionCell(const Config *cfg, Stimuli *stim,
+                           Integrator integrator,
                            SpatialKernel *spatialKernel,
                            TemporalKernel *temporalKernel)
-    : Neuron(cfg, stim)
+    : Neuron(cfg, stim, integrator)
     , m_spatialKernel(spatialKernel)
     , m_temporalKernel(temporalKernel)
 {
     m_cellType = "ganglion";
+
 }
 
 GanglionCell::~GanglionCell()
@@ -17,12 +19,12 @@ GanglionCell::~GanglionCell()
 
 void GanglionCell::computeImpulseResponse()
 {
-    for(int k = 0; k < m_nSteps; k++){
-        for(int i = 0; i < m_nPoints; i++){
-            for(int j = 0; j < m_nPoints; j++){
+    for(int k = 0; k < m_impulseResponse.n_slices; k++){
+        for(int i = 0; i < m_impulseResponse.n_rows; i++){
+            for(int j = 0; j < m_impulseResponse.n_cols; j++){
                 m_impulseResponse(i, j, k) =
-                        impulseResponse({m_spatialMesh[i], m_spatialMesh[j]},
-                                        m_temporalMesh[k]);
+                        impulseResponse({m_coordinateVec[i], m_coordinateVec[j]},
+                                        timeVec[k]);
             }
         }
     }

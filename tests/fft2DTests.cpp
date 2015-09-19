@@ -41,9 +41,6 @@ SUITE(FFT_nD){
         vec w = integrator.temporalFreqVec();
         vec k = integrator.spatialFreqVec();
 
-        cout << "Freq temporal:" << endl << w.t() << endl;
-        cout << "Freq spatial:" << endl << k.t() << endl;
-
         //signal
         double wd = 1;
         double kdx = 2;
@@ -76,13 +73,6 @@ SUITE(FFT_nD){
         // Backward
         fSpatial_fftw = integrator.integrate(fFreq);
 
-//        cout << "----------------------------------------------" << endl;
-//        cout << "fourier signal: " << endl << real(fFreq) << endl;
-//        cout << "----------------------------------------------" << endl;
-//        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
-//        cout << "signal: " << endl << real(fSpatial) << endl;
-
-
         for(int k = 0; k < Nt; k++){
             for(int i = 0; i < Ns; i++){
                 for(int j = 0; j < Ns; j++){
@@ -93,22 +83,16 @@ SUITE(FFT_nD){
             }
         }
 
+        //        cout << "Freq temporal:" << endl << w.t() << endl;
+        //        cout << "Freq spatial:" << endl << k.t() << endl;
+        //        cout << "----------------------------------------------" << endl;
+        //        cout << "fourier signal: " << endl << real(fFreq) << endl;
+        //        cout << "----------------------------------------------" << endl;
+        //        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
+        //        cout << "signal: " << endl << real(fSpatial) << endl;
+
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /************************************************

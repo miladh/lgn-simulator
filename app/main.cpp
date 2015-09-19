@@ -6,6 +6,9 @@
 #include "stimuli/patchgrating.h"
 #include "stimuli/dogstim.h"
 
+#include "integrator.h"
+#include "integratorsettings.h"
+
 #include "neurons/relaycell.h"
 #include "neurons/ganglioncell.h"
 #include "neurons/corticalcell.h"
@@ -48,10 +51,18 @@ int main()
     double weight = 1.0;
     double spread = 0.1;
 
+    int ns = root["integratorSettings"]["ns"];
+    int nt = root["integratorSettings"]["nt"];;
+    double maxT = root["integratorSettings"]["maxT"];
+
 
     //----------------------------------------------------------------------------
 
-    PatchGrating S(&cfg);
+    IntegratorSettings integratorSettings(nt, ns, maxT);
+    Integrator integrator(&integratorSettings);
+
+
+    PatchGrating S(&cfg, integrator);
     //    DOGstim S(&cfg);
     OutputManager io(&cfg);
 
@@ -67,7 +78,7 @@ int main()
     DampedOscillator damped(0.425, 0.38);
 
     //Neurons:
-    GanglionCell ganglion(&cfg, &S, &dog, &damped);
+    GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
 //    RelayCell relay(&cfg, &S);
 //    CorticalCell cortical(&cfg, &S);
 

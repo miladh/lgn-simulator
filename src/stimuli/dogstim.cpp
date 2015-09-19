@@ -1,7 +1,7 @@
 #include "dogstim.h"
 
-DOGstim::DOGstim(const Config *cfg)
-    : Stimuli(cfg)
+DOGstim::DOGstim(const Config *cfg, Integrator integrator)
+    : Stimuli(cfg,integrator)
 {
 
 }

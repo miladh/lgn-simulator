@@ -7,7 +7,7 @@
 class PatchGrating : public Stimuli
 {
 public:
-    PatchGrating(const Config *cfg);
+    PatchGrating(const Config *cfg, Integrator integrator);
     ~PatchGrating();
 
 private:

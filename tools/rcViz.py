@@ -64,6 +64,7 @@ colorbar(G_im, ax=axarr[2], orientation='horizontal')
 
 ttl = plt.suptitle("")
 axarr[0].set_title("Stimuli")
+axarr[1].set_title("Response")
 axarr[2].set_title("Impulse Response")
 
 

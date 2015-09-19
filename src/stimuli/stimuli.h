@@ -7,6 +7,7 @@
 #include <fftw3.h>
 #include <boost/math/special_functions/bessel.hpp>
 
+#include "integrator.h"
 #include "../math/functions.h"
 
 using namespace std;
@@ -16,7 +17,7 @@ using namespace arma;
 class Stimuli
 {
 public:
-    Stimuli(const Config *cfg);
+    Stimuli(const Config *cfg, Integrator integrator);
     ~Stimuli();
 
     void computeSpatiotemporal();
@@ -27,8 +28,6 @@ public:
     cx_cube fourierTransform() const;
 
 protected:
-    int m_nPoints = 0;
-    int m_nSteps = 0;
     double m_w = 0;
 
     cube m_spatioTemporal;
@@ -36,13 +35,14 @@ protected:
 
     vec2 m_k = {0,0};
 
-    vec m_spatialMesh;
+    vec m_coordinateVec;
     vec m_spatialFreqs;
 
-    vec m_temporalMesh;
+    vec timeVec;
     vec m_temporalFreqs;
 
 private:
+    Integrator m_integrator;
     virtual double valueAtPoint(vec2 rVec, double t) = 0;
     virtual double fourierTransformAtFrequency(vec2 k, double w) = 0;
 
