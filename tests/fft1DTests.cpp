@@ -120,8 +120,8 @@ SUITE(FFT_1D){
         double pi = acos(-1);
 
         //Spatial Mesh
-        int N = 16;
-        double maxT = 2.;
+        int N = 8;
+        double maxT = 1.;
         double g = 2;
 
         double dt = maxT/N;
@@ -130,7 +130,7 @@ SUITE(FFT_1D){
 
         double N_2 = ceil(N/2.);
 
-        rowvec t = linspace<rowvec>(0, maxT-dt, N);
+        rowvec t = linspace<rowvec>(-maxT/2, maxT/2-dt, N);
         rowvec f1 = linspace<rowvec>(0, N_2-1, N_2);
         rowvec f2 = linspace<rowvec>(-N_2,- f1[1], N_2);
         rowvec f = join_rows(f1,f2)* 1./maxT;
@@ -171,7 +171,6 @@ SUITE(FFT_1D){
         fftw_execute(plan);
         fftw_destroy_plan(plan);
 
-//        fSpatial_fftw *=df;
 
 //        cout << "----------------------------------------------" << endl;
 //        cout << "fourier signal: " << endl << real(fFreq) << endl;
