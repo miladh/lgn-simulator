@@ -5,7 +5,6 @@
 
 #include "stimuli/patchgrating.h"
 #include "spatialKernels/dog.h"
-#include <lib.h>
 
 
 using namespace std;
