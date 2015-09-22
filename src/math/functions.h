@@ -19,7 +19,12 @@ public:
     static double heaviside(double x);
     static double secondKindBesselFunction(double x);
     static double delta(double x, double y);
-    static cx_cube fftShift3d(cx_cube c);
+    static cx_cube fftShift(cx_cube c);
+
+
+    static vec fftshift(vec x);
+    static mat fftshift(mat x);
+
 
 
 };

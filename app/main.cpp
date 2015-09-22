@@ -77,8 +77,8 @@ int main()
 
     //Neurons:
     GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
-//    RelayCell relay(&cfg, &S);
-//    CorticalCell cortical(&cfg, &S);
+//    RelayCell relay(&cfg, &S, integrator);
+//    CorticalCell cortical(&cfg, &S, integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);

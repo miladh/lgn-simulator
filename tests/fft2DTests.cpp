@@ -153,23 +153,23 @@ SUITE(FFT_nD){
         cx_cube fFreq = zeros<cx_cube>(Nx, Ny, Nt);
 
 
-        cout << "dt: " << dt << ", dx: " << dx << ", dy: " << dy << endl;
-        cout << "dw: " << dw << ", dkx: " << dkx  << ", dky: " << dky << endl;
-        cout << "sampling ws: " << ws  <<
-                ", sampling kxs: " << kxs <<
-                ", sampling kys: " << kys<< endl;
-        cout << "signal wd: "   << wd
-             << ", signal kdx: " << kdx
-             << ", signal kdy: " << kdy << endl;
-        cout << "----------------------------------------------" << endl;
+//        cout << "dt: " << dt << ", dx: " << dx << ", dy: " << dy << endl;
+//        cout << "dw: " << dw << ", dkx: " << dkx  << ", dky: " << dky << endl;
+//        cout << "sampling ws: " << ws  <<
+//                ", sampling kxs: " << kxs <<
+//                ", sampling kys: " << kys<< endl;
+//        cout << "signal wd: "   << wd
+//             << ", signal kdx: " << kdx
+//             << ", signal kdy: " << kdy << endl;
+//        cout << "----------------------------------------------" << endl;
 
-        cout << "Temporal:" << endl << t << endl;
-        cout << "Spatial x:" << endl << x << endl;
-        cout << "Spatial y:" << endl << y << endl;
-        cout << "----------------------------------------------" << endl;
-        cout << "Freq temporal:" << endl << w << endl;
-        cout << "Freq spatial x:" << endl << kx << endl;
-        cout << "Freq spatial y:" << endl << ky << endl;
+//        cout << "Temporal:" << endl << t << endl;
+//        cout << "Spatial x:" << endl << x << endl;
+//        cout << "Spatial y:" << endl << y << endl;
+//        cout << "----------------------------------------------" << endl;
+//        cout << "Freq temporal:" << endl << w << endl;
+//        cout << "Freq spatial x:" << endl << kx << endl;
+//        cout << "Freq spatial y:" << endl << ky << endl;
 
 
         //signal
@@ -269,17 +269,17 @@ SUITE(FFT_nD){
         cx_mat fSpatial_fftw = zeros<cx_mat>(Nt, Nx);
         cx_mat fFreq = zeros<cx_mat>(Nt, Nx);
 
-//        cout << "dt: " << dt << ", dx: " << dx << endl;
-//        cout << "dw: " << dw << ", dk: " << dk  << endl;
-//        cout << "sampling ws: " << ws  << ", sampling ks: " << ks << endl;
-//        cout << "signal wd: "   << wd << ", signal kd: " << kd << endl;
-//        cout << "----------------------------------------------" << endl;
+        cout << "dt: " << dt << ", dx: " << dx << endl;
+        cout << "dw: " << dw << ", dk: " << dk  << endl;
+        cout << "sampling ws: " << ws  << ", sampling ks: " << ks << endl;
+        cout << "signal wd: "   << wd << ", signal kd: " << kd << endl;
+        cout << "----------------------------------------------" << endl;
 
-//        cout << "Temporal:" << endl << t << endl;
-//        cout << "Spatial:" << endl << x << endl;
-//        cout << "----------------------------------------------" << endl;
-//        cout << "Freq temporal:" << endl << w << endl;
-//        cout << "Freq spatial:" << endl << k << endl;
+        cout << "Temporal:" << endl << t << endl;
+        cout << "Spatial:" << endl << x << endl;
+        cout << "----------------------------------------------" << endl;
+        cout << "Freq temporal:" << endl << w << endl;
+        cout << "Freq spatial:" << endl << k << endl;
 
 
         //signal
@@ -312,11 +312,11 @@ SUITE(FFT_nD){
         fftw_destroy_plan(plan);
 
 
-//        cout << "----------------------------------------------" << endl;
-//        cout << "fourier signal: " << endl << real(fFreq) << endl;
-//        cout << "----------------------------------------------" << endl;
-//        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
-//        cout << "signal: " << endl << real(fSpatial) << endl;
+        cout << "----------------------------------------------" << endl;
+        cout << "fourier signal: " << endl << real(fFreq) << endl;
+        cout << "----------------------------------------------" << endl;
+        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
+        cout << "signal: " << endl << real(fSpatial) << endl;
 
 
         for(int i = 0; i < Nt; i++){

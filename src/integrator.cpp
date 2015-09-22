@@ -21,7 +21,7 @@ Integrator::Integrator(IntegratorSettings *settings)
 
     //Spatial Grid
     double Ns_2 = ceil(m_nPointsSpatial/2);
-    m_coordinateVec = linspace(0, 1.0-m_ds, m_nPointsSpatial);
+    m_coordinateVec = linspace(-0.5, 0.5-m_ds, m_nPointsSpatial);
     vec k1 = linspace(0, Ns_2-1, Ns_2);
     vec k2 = linspace(-Ns_2, -k1[1], Ns_2);
     m_spatialFreqs = join_cols(k1,k2) * 2 *PI;

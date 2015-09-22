@@ -10,7 +10,29 @@ Functions::~Functions()
 
 }
 
-cx_cube Functions::fftShift3d(cx_cube c)
+
+vec Functions::fftshift(vec x)
+{
+    vec shifted;
+    for(int i = 0; i < int(shifted.n_rows); i++){
+        shifted(i)  = x(i) * pow(-1, i);
+    }
+    return shifted;
+}
+
+mat Functions::fftshift(mat x)
+{
+    vec shifted;
+    for(int i = 0; i < int(shifted.n_rows); i++){
+        for(int j = 0; j < int(shifted.n_cols); j++){
+
+            shifted(i,j)  = x(i,j) * pow(-1, i+j);
+        }
+    }
+    return shifted;
+}
+
+cx_cube Functions::fftShift(cx_cube c)
 {
 
     cx_cube mShifted = c;
@@ -25,6 +47,7 @@ cx_cube Functions::fftShift3d(cx_cube c)
 
     return mShifted;
 }
+
 
 
 
@@ -52,4 +75,6 @@ double Functions::delta(double x, double y) {
         return 0;
     }
 }
+
+
 
