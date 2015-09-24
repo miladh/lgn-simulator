@@ -34,7 +34,8 @@ SOURCES += \
     spatialKernels/ellipticgaussian.cpp \
     temporalKernels/dampedoscillator.cpp \
     stimuli/dogstim.cpp \
-    integratorsettings.cpp
+    integratorsettings.cpp \
+    math/ffthelper.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -54,4 +55,5 @@ HEADERS += \
     spatialKernels/ellipticgaussian.h \
     temporalKernels/dampedoscillator.h \
     stimuli/dogstim.h \
-    integratorsettings.h
+    integratorsettings.h \
+    math/ffthelper.h

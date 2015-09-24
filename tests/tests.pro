@@ -11,7 +11,8 @@ SOURCES += main.cpp \
     stimulitests.cpp \
     mathTests.cpp \
     fft1DTests.cpp \
-    fft2DTests.cpp
+    fft2DTests.cpp \
+    ffthelpertests.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 

@@ -23,7 +23,7 @@ Stimuli::Stimuli(const Config *cfg, Integrator integrator)
     m_spatialFreqs =integrator.spatialFreqVec();
 
 
-    m_w = m_temporalFreqs[2];
+    m_w = m_temporalFreqs[1];
     cout <<"m_w: "<< m_w << endl;
 
 }

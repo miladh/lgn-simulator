@@ -13,6 +13,7 @@ int main()
     bool fft_1D = 1;
     bool fft_nD = 1;
     bool dev = 1;
+    bool fftHelper = 1;
 
     UnitTest::TestReporterStdout reporter;
     UnitTest::TestRunner runner(reporter);
@@ -37,6 +38,11 @@ int main()
     if(fft_nD){
         result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "FFT_nD", UnitTest::True(), 0);
     }
+
+    if(fftHelper){
+        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "fftHelper", UnitTest::True(), 0);
+    }
+
 
     return result;
 

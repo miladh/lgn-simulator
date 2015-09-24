@@ -1,0 +1,92 @@
+#include "ffthelper.h"
+
+FFTHelper::FFTHelper()
+{
+
+}
+
+FFTHelper::~FFTHelper()
+{
+
+}
+
+
+cx_vec FFTHelper::fftShift(cx_vec x)
+{
+    int n = x.n_rows;
+    int n2 = int((n+1)/2);
+    cx_vec shifted = join_vert(x.rows(n2, n-1), x.rows(0,n2-1));
+
+    return shifted;
+
+}
+
+cx_mat FFTHelper::fftShift(cx_mat x)
+{
+    int n = x.n_rows;
+    int n2 = int((n+1)/2);
+
+    int m = x.n_cols;
+    int m2 = int((m+1)/2);
+
+    cx_mat shifted = join_vert(x.rows(n2, n-1), x.rows(0,n2-1));
+    shifted = join_horiz(shifted.cols(m2, m-1), shifted.cols(0,m2-1));
+
+    return shifted;
+}
+
+cx_cube FFTHelper::fftShift(cx_cube x)
+{
+    cx_cube shifted = x;
+    int n = x.n_rows;
+    int n2 = int((n+1)/2);
+
+    int m = x.n_cols;
+    int m2 = int((m+1)/2);
+
+    int o = x.n_slices;
+    int o2 = int((o+1)/2);
+
+    for(int i = 0; i < int(x.n_slices); i++){
+        shifted.slice(i) = join_vert(x.slice(i).rows(n2, n-1), x.slice(i).rows(0,n2-1));
+        shifted.slice(i) = join_horiz(
+                    shifted.slice(i).cols(m2, m-1),
+                    shifted.slice(i).cols(0,m2-1));
+    }
+    cx_cube tmp = shifted;
+    for(int i = 0; i < o2; i++){
+        shifted.slice(i) = tmp.slice(o2+i);
+        shifted.slice(i+o2) = tmp.slice(i);
+    }
+
+    return shifted;
+}
+
+cx_cube FFTHelper::ifftShift(cx_cube x)
+{
+    cx_cube shifted = x;
+    int n = x.n_rows;
+    int n2 = n-int((n+1)/2);
+
+    int m = x.n_cols;
+    int m2 = m-int((m+1)/2);
+
+    int o = x.n_slices;
+    int o2 = o-int((o+1)/2);
+
+    for(int i = 0; i < int(x.n_slices); i++){
+        shifted.slice(i) = join_vert(x.slice(i).rows(n2, n-1), x.slice(i).rows(0,n2-1));
+        shifted.slice(i) = join_horiz(
+                    shifted.slice(i).cols(m2, m-1),
+                    shifted.slice(i).cols(0,m2-1));
+    }
+    cx_cube tmp = shifted;
+    for(int i = 0; i < o2; i++){
+        shifted.slice(i) = tmp.slice(o2+i);
+        shifted.slice(i+o2) = tmp.slice(i);
+    }
+
+    return shifted;
+}
+
+

@@ -15,7 +15,6 @@ using namespace arma;
 
 SUITE(FFT_nD){
 
-
     /************************************************
      * FFTW_BACKWARD of 3D analytic function
      * */
@@ -23,7 +22,7 @@ SUITE(FFT_nD){
         double pi = acos(-1);
 
         //Mesh
-        int nt = 3;
+        int nt = 4;
         int ns = 3;
         double maxT = 1.;
 
@@ -42,13 +41,13 @@ SUITE(FFT_nD){
         vec k = integrator.spatialFreqVec(); // FACTOR 2PI!!!!
 
         //signal
-        double wd = 1;
+        double wd = 3;
         double kdx = 1;
-        double kdy = 3;
+        double kdy = 2;
         for(int l = 0; l < Nt; l++){
             for(int i = 0; i < Ns; i++){
                 for(int j = 0; j < Ns; j++){
-                    fSpatial(i,j, l) = cos( 2*pi* (kdx * s[i]+ kdy * s[j]
+                    fSpatial(i,j, l) = cos(2*PI*(kdx * s[i]+ kdy * s[j]
                                                    - wd * t[l]) );
                 }
             }
@@ -59,12 +58,12 @@ SUITE(FFT_nD){
             for(int i = 0; i < Ns; i++){
                 for(int j = 0; j < Ns; j++){
                     fFreq(i,j,l) = 0.5*(
-                                 Functions::delta(k[i],kdx)
-                                *Functions::delta(k[j],kdy)
-                                *Functions::delta(w[l],-wd)
-                                +Functions::delta(k[i],-kdx)
-                                *Functions::delta(k[j],-kdy)
-                                *Functions::delta(w[l],wd)
+                                Functions::delta(k[i],kdx*2*PI)
+                                *Functions::delta(k[j],kdy*2*PI)
+                                *Functions::delta(w[l],-wd*2*PI)
+                                +Functions::delta(k[i],-kdx*2*PI)
+                                *Functions::delta(k[j],-kdy*2*PI)
+                                *Functions::delta(w[l],wd*2*PI)
                                 );
                 }
             }
@@ -73,25 +72,30 @@ SUITE(FFT_nD){
         // Backward
         fSpatial_fftw = integrator.integrate(fFreq);
 
-//        for(int k = 0; k < Nt; k++){
-//            for(int i = 0; i < Ns; i++){
-//                for(int j = 0; j < Ns; j++){
-//                    CHECK_CLOSE(real(fSpatial(i,j,k)),
-//                                real(fSpatial_fftw(i,j,k)), 1e-8);
 
-//                }
-//            }
-//        }
+                for(int k = 0; k < Nt; k++){
+                    for(int i = 0; i < Ns; i++){
+                        for(int j = 0; j < Ns; j++){
+                            CHECK_CLOSE(real(fSpatial(i,j,k)),
+                                        real(fSpatial_fftw(i,j,k)), 1e-8);
+
+                        }
+                    }
+                }
 
 
 
-        //        cout << "Freq temporal:" << endl << w.t() << endl;
-        //        cout << "Freq spatial:" << endl << k.t() << endl;
-        //        cout << "----------------------------------------------" << endl;
-        //        cout << "fourier signal: " << endl << real(fFreq) << endl;
-        //        cout << "----------------------------------------------" << endl;
-        //        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
-        //        cout << "signal: " << endl << real(fSpatial) << endl;
+
+//        cout << "Temporal:" << endl << t.t() << endl;
+//        cout << "Spatial:" << endl << s.t() << endl;
+//        cout << "----------------------------------------------" << endl;
+        //                cout << "Freq temporal:" << endl << w.t() << endl;
+        //                cout << "Freq spatial:" << endl << k.t() << endl;
+        //                cout << "----------------------------------------------" << endl;
+        //                cout << "fourier signal: " << endl << real(fFreq) << endl;
+        //                cout << "----------------------------------------------" << endl;
+        //                cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
+        //                cout << "signal: " << endl << real(fSpatial) << endl;
 
 
     }
@@ -101,14 +105,14 @@ SUITE(FFT_nD){
      * FFTW_BACKWARD of 3D analytic function
      * */
     TEST(ifft_3d){
-//                cout <<endl << "ifft 3d" << endl;
-//                cout << "----------------------" << endl;
+        //                cout <<endl << "ifft 3d" << endl;
+        //                cout << "----------------------" << endl;
         double pi = acos(-1);
 
         //Temporal Mesh
-        int Nt = 8;
-        double maxT = 2.;
-        double wd = 1;
+        int Nt = 16;
+        double maxT = 1.;
+        double wd = 3;
         double dt = maxT/Nt;
         double dw = 1./maxT;
         double ws = Nt/maxT;
@@ -120,9 +124,9 @@ SUITE(FFT_nD){
         rowvec w = join_rows(w1,w2)* 1./maxT;
 
         //Spatial Mesh x
-        int Nx = 4;
+        int Nx = 8;
         double maxX = 1.;
-        double kdx = 1;
+        double kdx = 2;
         double dx = maxX/Nx;
         double dkx = 1./maxX;
         double kxs = Nx/maxX;
@@ -135,7 +139,7 @@ SUITE(FFT_nD){
 
 
         //Spatial Mesh y
-        int Ny = 4;
+        int Ny = 8;
         double maxY = 1.;
         double kdy = 1;
         double dy = maxY/Ny;
@@ -153,23 +157,23 @@ SUITE(FFT_nD){
         cx_cube fFreq = zeros<cx_cube>(Nx, Ny, Nt);
 
 
-//        cout << "dt: " << dt << ", dx: " << dx << ", dy: " << dy << endl;
-//        cout << "dw: " << dw << ", dkx: " << dkx  << ", dky: " << dky << endl;
-//        cout << "sampling ws: " << ws  <<
-//                ", sampling kxs: " << kxs <<
-//                ", sampling kys: " << kys<< endl;
-//        cout << "signal wd: "   << wd
-//             << ", signal kdx: " << kdx
-//             << ", signal kdy: " << kdy << endl;
-//        cout << "----------------------------------------------" << endl;
+        //        cout << "dt: " << dt << ", dx: " << dx << ", dy: " << dy << endl;
+        //        cout << "dw: " << dw << ", dkx: " << dkx  << ", dky: " << dky << endl;
+        //        cout << "sampling ws: " << ws  <<
+        //                ", sampling kxs: " << kxs <<
+        //                ", sampling kys: " << kys<< endl;
+        //        cout << "signal wd: "   << wd
+        //             << ", signal kdx: " << kdx
+        //             << ", signal kdy: " << kdy << endl;
+        //        cout << "----------------------------------------------" << endl;
 
-//        cout << "Temporal:" << endl << t << endl;
-//        cout << "Spatial x:" << endl << x << endl;
-//        cout << "Spatial y:" << endl << y << endl;
-//        cout << "----------------------------------------------" << endl;
-//        cout << "Freq temporal:" << endl << w << endl;
-//        cout << "Freq spatial x:" << endl << kx << endl;
-//        cout << "Freq spatial y:" << endl << ky << endl;
+//                cout << "Temporal:" << endl << t << endl;
+//                cout << "Spatial x:" << endl << x << endl;
+//                cout << "Spatial y:" << endl << y << endl;
+        //        cout << "----------------------------------------------" << endl;
+        //        cout << "Freq temporal:" << endl << w << endl;
+        //        cout << "Freq spatial x:" << endl << kx << endl;
+        //        cout << "Freq spatial y:" << endl << ky << endl;
 
 
         //signal
@@ -198,33 +202,54 @@ SUITE(FFT_nD){
             }
         }
 
+
+        //        fFreq = Functions::fftShift(fFreq);
         // Backward
-        int size[3] = {Nx, Ny, Nt};
+        int size[3] = {Nt, Ny, Nx};
         fftw_complex* in = reinterpret_cast<fftw_complex*> (fFreq.memptr());
         fftw_complex* out = reinterpret_cast<fftw_complex*> (fSpatial_fftw.memptr());
         fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
 
         fftw_execute(plan);
         fftw_destroy_plan(plan);
+        //        fSpatial_fftw = FFTHelper::ifftShift(fSpatial_fftw);
 
-//                cout << "----------------------------------------------" << endl;
-//                cout << "fourier signal: " << endl << real(fFreq) << endl;
-//                cout << "----------------------------------------------" << endl;
-//                cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
-//                cout << "signal: " << endl << real(fSpatial) << endl;
+        //                cout << "----------------------------------------------" << endl;
+        //                cout << "fourier signal: " << endl << real(fFreq) << endl;
+        //                cout << "----------------------------------------------" << endl;
+        //                cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
+        //                cout << "signal: " << endl << real(fSpatial) << endl;
 
+        for(int k = 0; k < Nt; k++){
+            for(int i = 0; i < Nx; i++){
+                for(int j = 0; j < Ny; j++){
+                    CHECK_CLOSE(real(fSpatial(i,j,k)),
+                                real(fSpatial_fftw(i,j,k)), 1e-8);
 
-//        for(int k = 0; k < Nt; k++){
-//            for(int i = 0; i < Nx; i++){
-//                for(int j = 0; j < Ny; j++){
-//                    CHECK_CLOSE(real(fSpatial(i,j,k)),
-//                                real(fSpatial_fftw(i,j,k)), 1e-8);
-
-//                }
-//            }
-//        }
+                }
+            }
+        }
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -238,7 +263,7 @@ SUITE(FFT_nD){
 
         //Temporal Mesh
         int Nt = 8;
-        double maxT = 1.0;
+        double maxT = 2.0;
         double wd = 1;
         double dt = maxT/Nt;
         double dw = 1./maxT;
@@ -269,17 +294,17 @@ SUITE(FFT_nD){
         cx_mat fSpatial_fftw = zeros<cx_mat>(Nt, Nx);
         cx_mat fFreq = zeros<cx_mat>(Nt, Nx);
 
-        cout << "dt: " << dt << ", dx: " << dx << endl;
-        cout << "dw: " << dw << ", dk: " << dk  << endl;
-        cout << "sampling ws: " << ws  << ", sampling ks: " << ks << endl;
-        cout << "signal wd: "   << wd << ", signal kd: " << kd << endl;
-        cout << "----------------------------------------------" << endl;
+        //        cout << "dt: " << dt << ", dx: " << dx << endl;
+        //        cout << "dw: " << dw << ", dk: " << dk  << endl;
+        //        cout << "sampling ws: " << ws  << ", sampling ks: " << ks << endl;
+        //        cout << "signal wd: "   << wd << ", signal kd: " << kd << endl;
+        //        cout << "----------------------------------------------" << endl;
 
-        cout << "Temporal:" << endl << t << endl;
-        cout << "Spatial:" << endl << x << endl;
-        cout << "----------------------------------------------" << endl;
-        cout << "Freq temporal:" << endl << w << endl;
-        cout << "Freq spatial:" << endl << k << endl;
+//                cout << "Temporal:" << endl << t << endl;
+//                cout << "Spatial:" << endl << x << endl;
+        //        cout << "----------------------------------------------" << endl;
+        //        cout << "Freq temporal:" << endl << w << endl;
+        //        cout << "Freq spatial:" << endl << k << endl;
 
 
         //signal
@@ -312,11 +337,11 @@ SUITE(FFT_nD){
         fftw_destroy_plan(plan);
 
 
-        cout << "----------------------------------------------" << endl;
-        cout << "fourier signal: " << endl << real(fFreq) << endl;
-        cout << "----------------------------------------------" << endl;
-        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
-        cout << "signal: " << endl << real(fSpatial) << endl;
+        //        cout << "----------------------------------------------" << endl;
+        //        cout << "fourier signal: " << endl << real(fFreq) << endl;
+        //        cout << "----------------------------------------------" << endl;
+        //        cout << "ifft signal: " << endl << real(fSpatial_fftw)<< endl;
+        //        cout << "signal: " << endl << real(fSpatial) << endl;
 
 
         for(int i = 0; i < Nt; i++){
@@ -328,5 +353,7 @@ SUITE(FFT_nD){
     }
 
 }
+
+
 
 

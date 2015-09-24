@@ -8,6 +8,7 @@
 
 #include "integratorsettings.h"
 #include "math/functions.h"
+#include "math/ffthelper.h"
 
 using namespace std;
 using namespace arma;
