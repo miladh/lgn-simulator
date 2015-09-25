@@ -59,21 +59,23 @@ cx_cube FFTHelper::fftShift(cx_cube x)
     int o = x.n_slices;
     int o2 = int((o+1)/2);
 
-
     for(int i = 0; i < int(x.n_slices); i++){
-        shifted.slice(i) = join_vert(x.slice(i).rows(n2, n-1), x.slice(i).rows(0,n2-1));
-        shifted.slice(i) = join_horiz(
-                    shifted.slice(i).cols(m2, m-1),
-                    shifted.slice(i).cols(0,m2-1));
-    }
-    cx_cube tmp = shifted;
-    for(int i = 0; i < o2; i++){
-        shifted.slice(i) = tmp.slice(o2+i);
-        shifted.slice(i+o2) = tmp.slice(i);
+        shifted.slice(i) = join_vert(x.slice(i).rows(n2, n-1),
+                                     x.slice(i).rows(0,n2-1));
+        shifted.slice(i) = join_horiz(shifted.slice(i).cols(m2, m-1),
+                                      shifted.slice(i).cols(0,m2-1));
     }
 
+    cx_cube tmp = shifted;
+    shifted.slices(0, (o-1) - o2) = tmp.slices(o2, o-1);
+    shifted.slices((o-1-o2)+1, (o-1-o2)+1+(o2-1)) = tmp.slices(0, o2-1);
     return shifted;
 }
+
+
+
+
+
 
 cx_cube FFTHelper::ifftShift(cx_cube x)
 {
@@ -86,6 +88,8 @@ cx_cube FFTHelper::ifftShift(cx_cube x)
 
     int o = x.n_slices;
     int o2 = o-int((o+1)/2);
+
+
 
     for(int i = 0; i < int(x.n_slices); i++){
         shifted.slice(i) = join_vert(x.slice(i).rows(n2, n-1), x.slice(i).rows(0,n2-1));
