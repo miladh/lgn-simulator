@@ -11,29 +11,6 @@ using namespace arma;
 
 SUITE(fftHelper){
 
-    TEST(fftshift_2D){
-
-        cx_mat A;
-        A << 0.0  << 1.0  << 2.0  << endr
-          << 3.0  << 4.0  << -4.0 << endr
-          << -3.0 << -2.0 << -1.0 << endr;
-
-        cx_mat centered;
-        centered << -1.0  << -3.0  << -2.0  << endr
-                 << 2.0  << 0.0  << 1.0 << endr
-                 << -4.0 << 3.0 << 4.0 << endr;
-
-        cx_mat B = FFTHelper::fftShift(A);
-
-        for(int i = 0; i < int(A.n_rows); i++){
-            for(int j = 0; j < int(A.n_cols); j++){
-                CHECK_EQUAL(B(i,j), centered(i,j));
-            }
-        }
-
-
-
-    }
 
     TEST(fftshift_3D){
 

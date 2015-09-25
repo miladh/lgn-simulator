@@ -15,216 +15,215 @@ SUITE(fftHelper){
         cx_vec sig, centered, shifted;
 
 
-        sig = { 0.0, 0.184, 0.368, 0.552, 0.736, -0.736, -0.552, -0.368, -0.184 };
-        centered = { -0.736, -0.552, -0.368, -0.184, 0.0, 0.184, 0.368, 0.552, 0.736 };
+        sig = { 0.0, 1.46, 2.92, -2.92, -1.46 };
+        centered = { -2.92, -1.46, 0.0, 1.46, 2.92 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.272, 0.545, 0.817, 1.089, -1.089, -0.817, -0.545, -0.272 };
-        centered = { -1.089, -0.817, -0.545, -0.272, 0.0, 0.272, 0.545, 0.817, 1.089 };
+        sig = { 0.0, 0.121, 0.242, 0.362, 0.483, -0.483, -0.362, -0.242, -0.121 };
+        centered = { -0.483, -0.362, -0.242, -0.121, 0.0, 0.121, 0.242, 0.362, 0.483 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.324, 0.648, 0.972, 1.296, -1.296, -0.972, -0.648, -0.324 };
-        centered = { -1.296, -0.972, -0.648, -0.324, 0.0, 0.324, 0.648, 0.972, 1.296 };
+        sig = { 0.0, 0.483, 0.965, 1.448, -1.448, -0.965, -0.483 };
+        centered = { -1.448, -0.965, -0.483, 0.0, 0.483, 0.965, 1.448 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.427, 0.855, 1.282, 1.709, -1.709, -1.282, -0.855, -0.427 };
-        centered = { -1.709, -1.282, -0.855, -0.427, 0.0, 0.427, 0.855, 1.282, 1.709 };
+        sig = { 0.0, 1.068, 2.137, 3.205, 4.274, -4.274, -3.205, -2.137, -1.068 };
+        centered = { -4.274, -3.205, -2.137, -1.068, 0.0, 1.068, 2.137, 3.205, 4.274 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.197, 0.395, 0.592, -0.592, -0.395, -0.197 };
-        centered = { -0.592, -0.395, -0.197, 0.0, 0.197, 0.395, 0.592 };
+        sig = { 0.0, 0.151, 0.303, 0.454, -0.605, -0.454, -0.303, -0.151 };
+        centered = { -0.605, -0.454, -0.303, -0.151, 0.0, 0.151, 0.303, 0.454 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.361, 0.723, 1.084, -1.445, -1.084, -0.723, -0.361 };
-        centered = { -1.445, -1.084, -0.723, -0.361, 0.0, 0.361, 0.723, 1.084 };
+        sig = { 0.0, 1.949, 3.899, 5.848, 7.797, -7.797, -5.848, -3.899, -1.949 };
+        centered = { -7.797, -5.848, -3.899, -1.949, 0.0, 1.949, 3.899, 5.848, 7.797 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.174, 0.348, 0.522, 0.697, -0.697, -0.522, -0.348, -0.174 };
-        centered = { -0.697, -0.522, -0.348, -0.174, 0.0, 0.174, 0.348, 0.522, 0.697 };
+        sig = { 0.0, 0.239, 0.477, -0.477, -0.239 };
+        centered = { -0.477, -0.239, 0.0, 0.239, 0.477 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.604, 1.208, -1.208, -0.604 };
-        centered = { -1.208, -0.604, 0.0, 0.604, 1.208 };
+        sig = { 0.0, 0.166, 0.332, 0.498, 0.663, -0.663, -0.498, -0.332, -0.166 };
+        centered = { -0.663, -0.498, -0.332, -0.166, 0.0, 0.166, 0.332, 0.498, 0.663 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.195, 0.39, 0.585, -0.585, -0.39, -0.195 };
-        centered = { -0.585, -0.39, -0.195, 0.0, 0.195, 0.39, 0.585 };
+        sig = { 0.0, 0.253, 0.506, -0.506, -0.253 };
+        centered = { -0.506, -0.253, 0.0, 0.253, 0.506 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.289, 0.577, -0.577, -0.289 };
-        centered = { -0.577, -0.289, 0.0, 0.289, 0.577 };
+        sig = { 0.0, 0.164, 0.327, 0.491, -0.654, -0.491, -0.327, -0.164 };
+        centered = { -0.654, -0.491, -0.327, -0.164, 0.0, 0.164, 0.327, 0.491 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 1.124, 2.247, -2.247, -1.124 };
-        centered = { -2.247, -1.124, 0.0, 1.124, 2.247 };
+        sig = { 0.0, 0.243, 0.486, 0.73, -0.973, -0.73, -0.486, -0.243 };
+        centered = { -0.973, -0.73, -0.486, -0.243, 0.0, 0.243, 0.486, 0.73 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.234, 0.468, -0.702, -0.468, -0.234 };
-        centered = { -0.702, -0.468, -0.234, 0.0, 0.234, 0.468 };
+        sig = { 0.0, 0.144, 0.289, 0.433, -0.433, -0.289, -0.144 };
+        centered = { -0.433, -0.289, -0.144, 0.0, 0.144, 0.289, 0.433 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.152, 0.304, 0.456, -0.456, -0.304, -0.152 };
-        centered = { -0.456, -0.304, -0.152, 0.0, 0.152, 0.304, 0.456 };
+        sig = { 0.0, 0.127, 0.254, 0.381, 0.508, -0.508, -0.381, -0.254, -0.127 };
+        centered = { -0.508, -0.381, -0.254, -0.127, 0.0, 0.127, 0.254, 0.381, 0.508 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.699, 1.399, -1.399, -0.699 };
-        centered = { -1.399, -0.699, 0.0, 0.699, 1.399 };
+        sig = { 0.0, 0.135, 0.271, 0.406, -0.541, -0.406, -0.271, -0.135 };
+        centered = { -0.541, -0.406, -0.271, -0.135, 0.0, 0.135, 0.271, 0.406 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.465, 0.929, 1.394, -1.859, -1.394, -0.929, -0.465 };
-        centered = { -1.859, -1.394, -0.929, -0.465, 0.0, 0.465, 0.929, 1.394 };
+        sig = { 0.0, 0.593, 1.186, 1.778, -1.778, -1.186, -0.593 };
+        centered = { -1.778, -1.186, -0.593, 0.0, 0.593, 1.186, 1.778 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.362, 0.723, -0.723, -0.362 };
-        centered = { -0.723, -0.362, 0.0, 0.362, 0.723 };
+        sig = { 0.0, 0.131, 0.261, 0.392, 0.522, -0.522, -0.392, -0.261, -0.131 };
+        centered = { -0.522, -0.392, -0.261, -0.131, 0.0, 0.131, 0.261, 0.392, 0.522 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.244, 0.488, -0.732, -0.488, -0.244 };
-        centered = { -0.732, -0.488, -0.244, 0.0, 0.244, 0.488 };
+        sig = { 0.0, 0.445, 0.89, 1.335, -1.335, -0.89, -0.445 };
+        centered = { -1.335, -0.89, -0.445, 0.0, 0.445, 0.89, 1.335 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.116, 0.232, 0.349, 0.465, -0.465, -0.349, -0.232, -0.116 };
-        centered = { -0.465, -0.349, -0.232, -0.116, 0.0, 0.116, 0.232, 0.349, 0.465 };
+        sig = { 0.0, 0.241, 0.483, 0.724, -0.965, -0.724, -0.483, -0.241 };
+        centered = { -0.965, -0.724, -0.483, -0.241, 0.0, 0.241, 0.483, 0.724 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 5.556, 11.111, 16.667, 22.222, -22.222, -16.667, -11.111, -5.556 };
-        centered = { -22.222, -16.667, -11.111, -5.556, 0.0, 5.556, 11.111, 16.667, 22.222 };
+        sig = { 0.0, 0.146, 0.292, 0.437, -0.437, -0.292, -0.146 };
+        centered = { -0.437, -0.292, -0.146, 0.0, 0.146, 0.292, 0.437 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.192, 0.383, 0.575, -0.767, -0.575, -0.383, -0.192 };
-        centered = { -0.767, -0.575, -0.383, -0.192, 0.0, 0.192, 0.383, 0.575 };
+        sig = { 0.0, 0.226, 0.451, 0.677, -0.677, -0.451, -0.226 };
+        centered = { -0.677, -0.451, -0.226, 0.0, 0.226, 0.451, 0.677 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.458, 0.916, -1.374, -0.916, -0.458 };
-        centered = { -1.374, -0.916, -0.458, 0.0, 0.458, 0.916 };
+        sig = { 0.0, 0.386, 0.772, 1.157, -1.543, -1.157, -0.772, -0.386 };
+        centered = { -1.543, -1.157, -0.772, -0.386, 0.0, 0.386, 0.772, 1.157 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.676, 1.351, -1.351, -0.676 };
-        centered = { -1.351, -0.676, 0.0, 0.676, 1.351 };
+        sig = { 0.0, 0.526, 1.053, -1.053, -0.526 };
+        centered = { -1.053, -0.526, 0.0, 0.526, 1.053 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.195, 0.39, -0.585, -0.39, -0.195 };
-        centered = { -0.585, -0.39, -0.195, 0.0, 0.195, 0.39 };
+        sig = { 0.0, 0.868, 1.736, -2.604, -1.736, -0.868 };
+        centered = { -2.604, -1.736, -0.868, 0.0, 0.868, 1.736 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.182, 0.365, -0.547, -0.365, -0.182 };
-        centered = { -0.547, -0.365, -0.182, 0.0, 0.182, 0.365 };
+        sig = { 0.0, 0.41, 0.82, 1.23, 1.64, -1.64, -1.23, -0.82, -0.41 };
+        centered = { -1.64, -1.23, -0.82, -0.41, 0.0, 0.41, 0.82, 1.23, 1.64 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.252, 0.504, -0.504, -0.252 };
-        centered = { -0.504, -0.252, 0.0, 0.252, 0.504 };
+        sig = { 0.0, 1.244, 2.488, -3.731, -2.488, -1.244 };
+        centered = { -3.731, -2.488, -1.244, 0.0, 1.244, 2.488 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.128, 0.256, 0.384, 0.513, -0.513, -0.384, -0.256, -0.128 };
-        centered = { -0.513, -0.384, -0.256, -0.128, 0.0, 0.128, 0.256, 0.384, 0.513 };
+        sig = { 0.0, 0.533, 1.066, 1.599, -1.599, -1.066, -0.533 };
+        centered = { -1.599, -1.066, -0.533, 0.0, 0.533, 1.066, 1.599 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.163, 0.326, 0.489, -0.489, -0.326, -0.163 };
-        centered = { -0.489, -0.326, -0.163, 0.0, 0.163, 0.326, 0.489 };
+        sig = { 0.0, 0.148, 0.297, 0.445, -0.594, -0.445, -0.297, -0.148 };
+        centered = { -0.594, -0.445, -0.297, -0.148, 0.0, 0.148, 0.297, 0.445 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 6.944, 13.889, -20.833, -13.889, -6.944 };
-        centered = { -20.833, -13.889, -6.944, 0.0, 6.944, 13.889 };
+        sig = { 0.0, 1.157, 2.315, 3.472, 4.63, -4.63, -3.472, -2.315, -1.157 };
+        centered = { -4.63, -3.472, -2.315, -1.157, 0.0, 1.157, 2.315, 3.472, 4.63 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.291, 0.583, -0.874, -0.583, -0.291 };
-        centered = { -0.874, -0.583, -0.291, 0.0, 0.291, 0.583 };
+        sig = { 0.0, 0.269, 0.538, 0.807, -0.807, -0.538, -0.269 };
+        centered = { -0.807, -0.538, -0.269, 0.0, 0.269, 0.538, 0.807 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
 
-        sig = { 0.0, 0.329, 0.658, 0.987, -0.987, -0.658, -0.329 };
-        centered = { -0.987, -0.658, -0.329, 0.0, 0.329, 0.658, 0.987 };
+        sig = { 0.0, 0.185, 0.37, 0.555, -0.74, -0.555, -0.37, -0.185 };
+        centered = { -0.74, -0.555, -0.37, -0.185, 0.0, 0.185, 0.37, 0.555 };
         shifted = FFTHelper::fftShift(sig);
         for(int i = 0; i < int(sig.n_elem); i++){
-            CHECK_CLOSE(real(shifted[i]), real(centered[i]), 1e-3);
+            CHECK_EQUAL(real(shifted[i]), real(centered[i]));
         }
-
 
 
     }
