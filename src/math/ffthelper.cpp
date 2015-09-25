@@ -97,11 +97,11 @@ cx_cube FFTHelper::ifftShift(cx_cube x)
                     shifted.slice(i).cols(m2, m-1),
                     shifted.slice(i).cols(0,m2-1));
     }
+
     cx_cube tmp = shifted;
-    for(int i = 0; i < o2; i++){
-        shifted.slice(i) = tmp.slice(o2+i);
-        shifted.slice(i+o2) = tmp.slice(i);
-    }
+    shifted.slices(0, (o-1) - o2) = tmp.slices(o2, o-1);
+    shifted.slices((o-1-o2)+1, (o-1-o2)+1+(o2-1)) = tmp.slices(0, o2-1);
+
 
     return shifted;
 }

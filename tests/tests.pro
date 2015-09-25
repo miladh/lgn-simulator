@@ -16,7 +16,8 @@ SOURCES += main.cpp \
     fftHelper/fftfreqtests.cpp \
     fftHelper/fftshift1dtests.cpp \
     fftHelper/fftshift2dtests.cpp \
-    fftHelper/fftshift3dtests.cpp
+    fftHelper/fftshift3dtests.cpp \
+    fftHelper/ifftshift3dtests.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 
