@@ -63,7 +63,7 @@ int main()
 
 //    Grating S(&cfg, integrator);
     PatchGrating S(&cfg, integrator);
-    //    DOGstim S(&cfg);
+//        DOGstim S(&cfg);
     OutputManager io(&cfg);
 
     //Spatial kernels:

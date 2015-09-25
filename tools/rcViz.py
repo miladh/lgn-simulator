@@ -68,8 +68,10 @@ axarr[1].set_title("Response")
 axarr[2].set_title("Impulse Response")
 
 print (R[0]-S[0]).max()
+print (R[0]).max() - (S[0]).max()
 print (R[0]).max()
 print (S[0]).max()
+
 
 ###############################################################################
 # R_ = array(R)
