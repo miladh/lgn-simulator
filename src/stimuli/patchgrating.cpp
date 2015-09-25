@@ -15,7 +15,7 @@ PatchGrating::~PatchGrating()
 
 double PatchGrating::valueAtPoint(vec2 rVec, double t)
 {
-    vec dr = rVec-vec{0.5, 0.5};
+    vec dr = rVec;
     double r = sqrt(dot(dr, dr));
     double s = (1 - Functions::heaviside(r - m_spotDiameter * 0.5))
             * m_contrast * cos(dot(m_k, dr) - m_w * t);
@@ -28,7 +28,7 @@ double PatchGrating::fourierTransformAtFrequency(vec2 kVec, double w)
 {
     double arg = sqrt(dot(kVec - m_k, kVec - m_k)) * m_spotDiameter * 0.5;
     double s = m_contrast * PI * PI * m_spotDiameter * m_spotDiameter * 0.5
-            * Functions::delta(w, m_w);
+            * Functions::delta(w, -m_w);
     if(arg != 0){
         s *= 2. * Functions::secondKindBesselFunction(arg)/arg;
     }

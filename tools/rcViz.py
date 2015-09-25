@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 # User commands:
-cellType = "ganglion"
+cellType = "cortical"
 outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
 # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/tools/fb/*.h5"
 outputFile = glob(outputFilePath)[0]
@@ -67,7 +67,7 @@ axarr[0].set_title("Stimuli")
 axarr[1].set_title("Response")
 axarr[2].set_title("Impulse Response")
 
-print (R[10]-S[10]).max()
+print (R[0]-S[0]).max()
 print (R[0]).max()
 print (S[0]).max()
 

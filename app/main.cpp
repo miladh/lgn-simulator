@@ -61,15 +61,15 @@ int main()
     Integrator integrator(&integratorSettings);
 
 
-    Grating S(&cfg, integrator);
-//    PatchGrating S(&cfg, integrator);
+//    Grating S(&cfg, integrator);
+    PatchGrating S(&cfg, integrator);
     //    DOGstim S(&cfg);
     OutputManager io(&cfg);
 
     //Spatial kernels:
     DOG dog(dogA, doga, dogB, dogb);
     Gaussian gauss(weight, spread);
-    EllipticGaussian ellipticGauss(weight, PI/4*3, 1.4, 0.1);
+    EllipticGaussian ellipticGauss(weight, PI/4*3, 0.05, 0.1);
 
     //Temporal kernels:
     DecayingExponential Ktg(tau_rg, 0);
@@ -79,19 +79,19 @@ int main()
 
     //Neurons:
     GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
-//    RelayCell relay(&cfg, &S, integrator);
-//    CorticalCell cortical(&cfg, &S, integrator);
+    RelayCell relay(&cfg, &S, integrator);
+    CorticalCell cortical(&cfg, &S, integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
-//    neurons.push_back(&relay);
-//    neurons.push_back(&cortical);
+    neurons.push_back(&relay);
+    neurons.push_back(&cortical);
 
 
 
-//    relay.addGanglionCell(&ganglion,&dog, &Ktg);
-//    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktg);
-//    cortical.addRelayCell(&relay, &dog, &delta);
+    relay.addGanglionCell(&ganglion,&dog, &Ktg);
+    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktg);
+    cortical.addRelayCell(&relay, &dog, &damped);
 
 
     S.computeSpatiotemporal();
@@ -100,14 +100,14 @@ int main()
     ganglion.computeResponse();
     ganglion.computeImpulseResponse();
 
-//    relay.computeResponse();
-//    relay.computeImpulseResponse();
+    relay.computeResponse();
+    relay.computeImpulseResponse();
 
 
 
 
-//    cortical.computeResponse();
-//    cortical.computeImpulseResponse();
+    cortical.computeResponse();
+    cortical.computeImpulseResponse();
 
     io.writeResponse(neurons, S);
 
