@@ -29,6 +29,9 @@ public:
     int nPointsTemporal() const;
     int nPointsSpatial() const;
 
+    double dt() const;
+    double ds() const;
+
 private:
     IntegratorSettings *m_settings;
 

@@ -12,7 +12,6 @@ SOURCES += main.cpp \
     mathTests.cpp \
     fft1DTests.cpp \
     fft2DTests.cpp \
-    ffthelpertests.cpp \
     fftHelper/fftfreqtests.cpp \
     fftHelper/fftshift1dtests.cpp \
     fftHelper/fftshift2dtests.cpp \

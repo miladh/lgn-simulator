@@ -52,9 +52,9 @@ SUITE(FFT_nD){
         double pi = acos(-1);
 
         //Mesh
-        int nt = 4;
+        int nt = 5;
         int ns = 3;
-        double maxT = 1.;
+        double maxT = 2.;
 
         IntegratorSettings settings(nt,ns,maxT);
         Integrator integrator(&settings);
@@ -92,15 +92,15 @@ SUITE(FFT_nD){
         // Backward
         fSpatial_fftw = integrator.integrate(fFreq);
 
-//        for(int k = 0; k < Nt; k++){
-//            for(int i = 0; i < Ns; i++){
-//                for(int j = 0; j < Ns; j++){
-//                    CHECK_CLOSE(real(fSpatial(i,j,k)),
-//                                real(fSpatial_fftw(i,j,k)), 1e-8);
+        for(int k = 0; k < Nt; k++){
+            for(int i = 0; i < Ns; i++){
+                for(int j = 0; j < Ns; j++){
+                    CHECK_CLOSE(real(fSpatial(i,j,k)),
+                                real(fSpatial_fftw(i,j,k)), 1e-8);
 
-//                }
-//            }
-//        }
+                }
+            }
+        }
 
 
 //        cout << "Temporal:" << endl << t.t() << endl;

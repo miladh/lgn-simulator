@@ -15,9 +15,10 @@ PatchGrating::~PatchGrating()
 
 double PatchGrating::valueAtPoint(vec2 rVec, double t)
 {
-    double r = sqrt(dot(rVec-vec{0.5, 0.5},rVec- vec{0.5, 0.5}));
+    vec dr = rVec-vec{0.5, 0.5};
+    double r = sqrt(dot(dr, dr));
     double s = (1 - Functions::heaviside(r - m_spotDiameter * 0.5))
-            * m_contrast * cos(dot(rVec, m_k) - m_w * t);
+            * m_contrast * cos(dot(m_k, dr) - m_w * t);
 
     return s;
 
