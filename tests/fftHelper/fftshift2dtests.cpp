@@ -14,7 +14,6 @@ SUITE(fftHelper){
         cx_mat sig, centered, shifted;
 
 
-
         sig << 0 << -2 << -5 << endr
            << -1 << -4 << -5 << endr
            << -5 << -1 << 5 << endr
