@@ -14,7 +14,7 @@ Grating::~Grating()
 
 double Grating::valueAtPoint(vec2 rVec, double t)
 {
-    vec dr = rVec-vec{0.5, 0.5};
+    vec dr = rVec;
     double s = m_contrast * cos(dot(m_k, dr) - m_w * t);
 
     return s;

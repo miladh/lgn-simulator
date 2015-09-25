@@ -26,7 +26,7 @@ S = array(datasets.get("stimuli/real"))
 R = array(datasets.get(cellType+"/response/real"))
 G = array(datasets.get(cellType+"/impulseResponse/real"))
 
-nStates =S.shape[0]
+nStates = S.shape[0]
 print "Number of states: ", nStates
 
 #####################################################################
@@ -67,7 +67,7 @@ axarr[0].set_title("Stimuli")
 axarr[1].set_title("Response")
 axarr[2].set_title("Impulse Response")
 
-print (R[3]-S[3]).max()
+print (R[10]-S[10]).max()
 print (R[0]).max()
 print (S[0]).max()
 
