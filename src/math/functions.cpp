@@ -35,5 +35,14 @@ double Functions::delta(double x, double y) {
     }
 }
 
+int Functions::isOdd(int num)
+{
+    if(num % 2){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
 
 

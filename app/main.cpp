@@ -112,7 +112,7 @@ int main()
 //    cout << "Correct, stim:  " << endl;
 //    cout << S.spatioTemporal().slice(0) << endl;
 //    cout << "FT:  " << endl;
-//    cout << flipud(ganglion.response().slice(0)) << endl;
+//    cout << ganglion.response().slice(0) << endl;
 
 
 

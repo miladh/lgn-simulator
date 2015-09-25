@@ -18,6 +18,7 @@ public:
     static double heaviside(double x);
     static double secondKindBesselFunction(double x);
     static double delta(double x, double y);
+    static int isOdd(int num);
 
 };
 

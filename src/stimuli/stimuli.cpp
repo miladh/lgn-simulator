@@ -23,7 +23,7 @@ Stimuli::Stimuli(const Config *cfg, Integrator integrator)
     m_spatialFreqs =integrator.spatialFreqVec();
 
 
-    m_w = m_temporalFreqs[1];
+    m_w = m_temporalFreqs[m_temporalFreqs.n_elem/2];
     cout <<"m_w: "<< m_w << endl;
 
 }
@@ -35,9 +35,9 @@ Stimuli::~Stimuli()
 
 void Stimuli::computeSpatiotemporal()
 {
-    for(int k = 0; k < m_spatioTemporal.n_slices; k++){
-        for(int i = 0; i < m_spatioTemporal.n_rows; i++){
-            for(int j = 0; j < m_spatioTemporal.n_cols; j++){
+    for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
+        for(int i = 0; i < int(m_spatioTemporal.n_rows); i++){
+            for(int j = 0; j < int(m_spatioTemporal.n_cols); j++){
                 m_spatioTemporal(i,j,k) = valueAtPoint({m_coordinateVec[i],
                                                         m_coordinateVec[j]},
                                                        timeVec[k]);
@@ -50,9 +50,9 @@ void Stimuli::computeSpatiotemporal()
 
 void Stimuli::computeFourierTransform()
 {
-    for(int k = 0; k < m_fourierTransform.n_slices; k++){
-        for(int i = 0; i < m_fourierTransform.n_rows; i++){
-            for(int j = 0; j < m_fourierTransform.n_cols; j++){
+    for(int k = 0; k < int(m_fourierTransform.n_slices); k++){
+        for(int i = 0; i < int(m_fourierTransform.n_rows); i++){
+            for(int j = 0; j < int(m_fourierTransform.n_cols); j++){
                 m_fourierTransform(i,j,k) = fourierTransformAtFrequency({m_spatialFreqs[i],
                                               m_spatialFreqs[j]},
                                              m_temporalFreqs[k]);

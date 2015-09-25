@@ -23,7 +23,7 @@ void GanglionCell::computeImpulseResponse()
         for(int i = 0; i < m_impulseResponse.n_rows; i++){
             for(int j = 0; j < m_impulseResponse.n_cols; j++){
                 m_impulseResponse(i, j, k) =
-                        impulseResponse({m_coordinateVec[i], m_coordinateVec[j]},
+                        impulseResponse({m_coordinateVec[i]-0.5, m_coordinateVec[j]-0.5},
                                         timeVec[k]);
             }
         }

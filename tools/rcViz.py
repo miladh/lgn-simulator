@@ -56,7 +56,7 @@ S_im = axarr[0].imshow(S[0,:,:], origin='lower', cmap="gray", interpolation="Non
 colorbar(S_im, ax=axarr[0], orientation='horizontal')
 
 #cmaps.plasma
-R_im = axarr[1].imshow(R[0,:,:], origin='lower', cmap=cmaps.viridis, interpolation="None")
+R_im = axarr[1].imshow(R[0,:,:], origin='lower', cmap="gray", interpolation="None")
 colorbar(R_im, ax=axarr[1], orientation='horizontal', norm=mpl.colors.Normalize(vmin=-10, vmax=10))
 
 G_im = axarr[2].imshow(G[1,:,:], origin='lower', cmap=cmaps.viridis)  # NOTE G[1]!!!!!NOTE

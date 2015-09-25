@@ -10,16 +10,6 @@ using namespace arma;
 
 
 SUITE(fftHelper){
-    TEST(fftshift_1D){
-
-        cx_vec A = {0.,  1.,  2.,  3.,  4., -5., -4., -3., -2., -1.};
-        cx_vec centered = {-5., -4., -3., -2., -1.,  0.,  1.,  2.,  3.,  4.};
-
-        cx_vec B = FFTHelper::fftShift(A);
-        for(int i = 0; i < int(A.n_elem); i++){
-            CHECK_EQUAL(B(i), centered(i));
-        }
-    }
 
     TEST(fftshift_2D){
 
