@@ -4,6 +4,7 @@
 #include <unistd.h>
 
 #include "stimuli/patchgrating.h"
+#include "stimuli/grating.h"
 #include "stimuli/dogstim.h"
 
 #include "integrator.h"
@@ -60,7 +61,8 @@ int main()
     Integrator integrator(&integratorSettings);
 
 
-    PatchGrating S(&cfg, integrator);
+    Grating S(&cfg, integrator);
+//    PatchGrating S(&cfg, integrator);
     //    DOGstim S(&cfg);
     OutputManager io(&cfg);
 

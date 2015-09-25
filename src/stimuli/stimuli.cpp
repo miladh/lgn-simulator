@@ -25,7 +25,9 @@ Stimuli::Stimuli(const Config *cfg, Integrator integrator)
 
     m_w = m_temporalFreqs[m_temporalFreqs.n_elem/2];
     m_w = m_temporalFreqs[0];
+    m_k[0] = m_spatialFreqs[5];
     cout <<"m_w: "<< m_w << endl;
+    cout <<"m_kx: "<< m_k[0] << endl;
 
 }
 

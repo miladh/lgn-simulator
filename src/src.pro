@@ -35,7 +35,8 @@ SOURCES += \
     temporalKernels/dampedoscillator.cpp \
     stimuli/dogstim.cpp \
     integratorsettings.cpp \
-    math/ffthelper.cpp
+    math/ffthelper.cpp \
+    stimuli/grating.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -56,4 +57,5 @@ HEADERS += \
     temporalKernels/dampedoscillator.h \
     stimuli/dogstim.h \
     integratorsettings.h \
-    math/ffthelper.h
+    math/ffthelper.h \
+    stimuli/grating.h
