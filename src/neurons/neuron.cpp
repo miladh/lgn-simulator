@@ -33,9 +33,9 @@ void Neuron::computeResponse()
 {
     computeImpulseResponseFT();
 
-    m_responseFT = /*m_impulseResponseFT % */m_stim->fourierTransform();
+    m_responseFT = /*m_impulseResponseFT %*/ m_stim->fourierTransform();
     m_responseFT = m_integrator.integrate(m_responseFT);
-    m_responseFT = FFTHelper::ifftShift(m_responseFT);
+    m_responseFT = FFTHelper::fftShift(m_responseFT);
 
     m_response = real(m_responseFT);
 }
@@ -46,7 +46,7 @@ void Neuron::computeImpulseResponse()
     computeImpulseResponseFT();
 
     m_impulseResponseFT = m_integrator.integrate(m_impulseResponseFT);
-    m_impulseResponseFT = FFTHelper::ifftShift(m_impulseResponseFT);
+    m_impulseResponseFT = FFTHelper::fftShift(m_impulseResponseFT);
 
     m_impulseResponse = real(m_impulseResponseFT);
 }

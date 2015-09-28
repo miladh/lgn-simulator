@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 # User commands:
-cellType = "cortical"
+cellType = "ganglion"
 outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
 # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/tools/fb/*.h5"
 outputFile = glob(outputFilePath)[0]
@@ -56,7 +56,7 @@ S_im = axarr[0].imshow(S[0,:,:], origin='lower', cmap="gray", interpolation="Non
 colorbar(S_im, ax=axarr[0], orientation='horizontal')
 
 #cmaps.plasma
-R_im = axarr[1].imshow(R[0,:,:], origin='lower', cmap="gray", interpolation="None")
+R_im = axarr[1].imshow(R[0,:,:], origin='lower', cmap=cmaps.viridis, interpolation="None")
 colorbar(R_im, ax=axarr[1], orientation='horizontal', norm=mpl.colors.Normalize(vmin=-10, vmax=10))
 
 G_im = axarr[2].imshow(G[1,:,:], origin='lower', cmap=cmaps.viridis)  # NOTE G[1]!!!!!NOTE
@@ -67,11 +67,10 @@ axarr[0].set_title("Stimuli")
 axarr[1].set_title("Response")
 axarr[2].set_title("Impulse Response")
 
-print (R[0]-S[0]).max()
-print (R[0]).max() - (S[0]).max()
-print (R[0]).max()
-print (S[0]).max()
-
+print (R[0]- S[0]).max()
+print (R[0]).max() - (S[0]).min()
+print (R[0]).max(), (R[0]).min()
+print (S[0]).max(), (S[0]).min()
 
 ###############################################################################
 # R_ = array(R)

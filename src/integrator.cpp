@@ -14,11 +14,11 @@ Integrator::Integrator(IntegratorSettings *settings)
 {
     //Temporal Grid
     m_timeVec = linspace(0, m_maxT-m_dt, m_nPointsTemporal);
-    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt) * 2 *PI;
+    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt) * 2*PI;
 
     //Spatial Grid
     m_coordinateVec = linspace(0.0, 1.0-m_ds, m_nPointsSpatial);
-    m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds) * 2 *PI;
+    m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds) * 2*PI;
 
 }
 
@@ -39,7 +39,7 @@ cx_cube Integrator::integrate(cx_cube data)
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-    return fftData;
+    return fftData/8./PI/PI/PI;
 }
 vec Integrator::timeVec() const
 {

@@ -36,7 +36,7 @@ double fft_gaussian(vec f, double kx, double ky, double w){
                 *Functions::delta(w,wd*2*PI)
                 );
 
-    return g;
+    return g*8*PI*PI*PI;
 }
 
 //////////////////////////////////////////////////////////////////

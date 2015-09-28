@@ -24,11 +24,8 @@ double Grating::fourierTransformAtFrequency(vec2 k, double w)
 {
     double s = Functions::delta(k[0], m_k[0])
             * Functions::delta(k[1], m_k[1])
-            * Functions::delta(w, -m_w)
-            + Functions::delta(k[0], -m_k[0])
-            * Functions::delta(k[1], -m_k[1])
-            * Functions::delta(w, m_w);
+            * Functions::delta(w, -m_w);
 
-    return s*0.5;
+    return 8*PI*PI*PI* m_contrast * s;
 }
 
