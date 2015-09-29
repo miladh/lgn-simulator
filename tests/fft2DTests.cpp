@@ -91,6 +91,7 @@ SUITE(FFT_nD){
 
         // Backward
         fSpatial_fftw = integrator.integrate(fFreq);
+        fSpatial_fftw = FFTHelper::fftShift(fSpatial_fftw);
 
         for(int k = 0; k < Nt; k++){
             for(int i = 0; i < Ns; i++){

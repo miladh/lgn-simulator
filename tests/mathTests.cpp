@@ -5,9 +5,12 @@ SUITE(SPECIALFUNCTIONS){
 
 
     TEST(secondKindBesselFunction) {
-        CHECK_EQUAL(Functions::secondKindBesselFunction(-1.2), 0);
-        CHECK_EQUAL(Functions::secondKindBesselFunction(0.0), 1.);
-        CHECK_EQUAL(Functions::secondKindBesselFunction(2.2), 1.);
+        CHECK_EQUAL(Functions::secondKindBesselFunction(0.0), 0);
+        CHECK_CLOSE(Functions::secondKindBesselFunction(0.1), 0.049937526036241998, 1e-12);
+        CHECK_CLOSE(Functions::secondKindBesselFunction(5.0), -0.32757913759146522, 1e-12);
+        CHECK_CLOSE(Functions::secondKindBesselFunction(7.01558666981562), 0.0, 1e-12);
+        CHECK_CLOSE(Functions::secondKindBesselFunction(-7.01558666981562), 0.0, 1e-12);
+        CHECK_CLOSE(Functions::secondKindBesselFunction(3.83170597020751), 0.0, 1e-12);
     }
 
 

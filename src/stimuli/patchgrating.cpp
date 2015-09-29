@@ -32,6 +32,7 @@ double PatchGrating::fourierTransformAtFrequency(vec2 kVec, double w)
     if(arg != 0){
         s *= 2. * Functions::secondKindBesselFunction(arg)/arg;
     }
+
     return s;
 
 }

@@ -19,7 +19,6 @@ Integrator::Integrator(IntegratorSettings *settings)
     //Spatial Grid
     m_coordinateVec = linspace(0.0, 1.0-m_ds, m_nPointsSpatial);
     m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds) * 2*PI;
-
 }
 
 Integrator::~Integrator()
@@ -41,6 +40,23 @@ cx_cube Integrator::integrate(cx_cube data)
 
     return fftData/8./PI/PI/PI;
 }
+
+cx_mat Integrator::integrate(cx_mat data)
+{
+    cx_mat fftData = 0 * data;
+    int size[2] = {int(data.n_cols), int(data.n_rows)};
+
+    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
+    fftw_complex* out = reinterpret_cast<fftw_complex*> (fftData.memptr());
+    fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
+
+    fftw_execute(plan);
+    fftw_destroy_plan(plan);
+
+    return fftData/4./PI/PI;
+}
+
+
 vec Integrator::timeVec() const
 {
     return m_timeVec;

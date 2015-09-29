@@ -20,6 +20,7 @@ public:
     ~Integrator();
 
     cx_cube integrate(cx_cube data);
+    cx_mat integrate(cx_mat data);
 
     vec timeVec() const;
     vec coordinateVec() const;

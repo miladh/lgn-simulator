@@ -14,7 +14,7 @@ public:
     // Stimuli interface
 public:
 
-    DOG m_dog = DOG(1.0, 0.25, 0.85, 0.83);
+    DOG m_dog = DOG(10.0, 0.5, 0.0, 1.0);
 
 //    DOG m_dog = DOG(1.0, 0.25, 0.0, 0.83);
 

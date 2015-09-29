@@ -22,7 +22,6 @@ double Functions::heaviside(double x)
 double Functions::secondKindBesselFunction(double x)
 {
     double j =  boost::math::cyl_bessel_j(1, x);
-
     return j;
 }
 
