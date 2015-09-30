@@ -2,13 +2,8 @@
 #include <armadillo>
 #include <iostream>
 
-
-<<<<<<< HEAD
-#include "stimuli/patchgrating.h"
-=======
 #include "integrator.h"
 #include "spatialKernels/dog.h"
->>>>>>> fft_3d
 
 
 using namespace std;
