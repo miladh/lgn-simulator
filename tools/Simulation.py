@@ -1,5 +1,3 @@
-import h5py
-from glob import glob
 import numpy as np
 
 class Simulation:
@@ -22,17 +20,19 @@ class Simulation:
                 cellAttr = h5_file.get("/" + str(item)).keys()
                 data = {}
                 for attr in cellAttr:
-                    spatioTemporal = np.array(h5_file.get("/" + str(item)+ "/" +str(attr) + "/real"))
-                    fourierTransform =  np.array(h5_file.get("/" + str(item)+ "/" +str(attr) + "/complex"))
+                    spatioTemporal = np.array(h5_file.get("/" + str(item) + "/"  +str(attr) + "/real"))
+                    fourierTransform =  np.array(h5_file.get("/" + str(item) + "/" + str(attr) + "/complex"))
                     data[attr] = {"spatioTemporal": spatioTemporal, "fourierTransform": fourierTransform}
 
                 setattr(self, item, data)
 
 
 if __name__ == "__main__":
+    import h5py
+    from glob import glob
     outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     sim = Simulation(f)
-    print sim.ganglion.keys()
+    print sim.ganglion["response"]["spatioTemporal"]
     print sim.stimuli.keys()
