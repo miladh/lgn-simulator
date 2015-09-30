@@ -1,25 +1,26 @@
 #include "neuron.h"
 
-Neuron::Neuron(const Config *cfg, Stimuli *stim)
+Neuron::Neuron(const Config *cfg, Stimuli *stim, Integrator integrator)
     : m_stim(stim)
+    , m_integrator(integrator)
 {
     const Setting & root = cfg->getRoot();
-    m_nPoints = root["spatialDomainSettings"]["nPoints"];
-    m_response = zeros(m_nPoints, m_nPoints);
-    m_responseFT = zeros<cx_mat>(m_nPoints, m_nPoints);
-    m_impulseResponse = zeros(m_nPoints, m_nPoints);
-    m_impulseResponseFT = zeros<cx_mat>(m_nPoints, m_nPoints);
+    int nPointsTemporal = integrator.nPointsTemporal();
+    int nPointsSpatial = integrator.nPointsSpatial();
 
-    m_spatialMesh = linspace(-0.5, 0.5, m_nPoints);
+    m_response = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
+    m_impulseResponse = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
+    m_responseFT = zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
+    m_impulseResponseFT=zeros<cx_cube>(nPointsSpatial,nPointsSpatial, nPointsTemporal);
 
-    double dr = m_spatialMesh(1) - m_spatialMesh(0);
-    double N_2 = ceil(m_nPoints/2.);
-    double df = 1./dr/m_nPoints;
-    double fs = 1./dr;
+    //Temporal Mesh
+    timeVec = integrator.timeVec();
+    m_temporalFreqs = integrator.temporalFreqVec();
 
-    m_freqMesh = linspace(-N_2*df, (m_nPoints - 1. - N_2)*df, m_nPoints);
-    m_freqMesh*= 2*PI;
-    //    cout << m_freqMesh << endl;
+    //Spatial Mesh
+    m_coordinateVec = integrator.coordinateVec();
+    m_spatialFreqs =integrator.spatialFreqVec();
+
 }
 
 Neuron::~Neuron()
@@ -28,68 +29,41 @@ Neuron::~Neuron()
 }
 
 
-void Neuron::computeResponse(double t)
+void Neuron::computeResponse()
 {
-    computeResponseFT(m_stim->w());
-    m_responseFT *= exp(-m_i*m_stim->w() * t);
+    computeImpulseResponseFT();
 
-    m_responseFT = Functions::fftShift(m_responseFT);
-    fftw_complex* in = reinterpret_cast<fftw_complex*> (m_responseFT.memptr());
-    fftw_complex* out = reinterpret_cast<fftw_complex*> (m_responseFT.memptr());
-    fftw_plan plan =
-            fftw_plan_dft_2d(m_nPoints,m_nPoints, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
+    m_responseFT = m_impulseResponseFT % m_stim->fourierTransform();
+    m_responseFT = m_integrator.integrate(m_responseFT);
+    m_responseFT = FFTHelper::fftShift(m_responseFT);
 
-    fftw_execute(plan);
-
-    m_responseFT = Functions::fftShift(m_responseFT);
     m_response = real(m_responseFT);
 }
 
 
-void Neuron::computeImpulseResponse(double t)
+void Neuron::computeImpulseResponse()
 {
+    computeImpulseResponseFT();
 
-    m_impulseResponseFT = Functions::fftShift(m_impulseResponseFT);
-    int size[3] = {m_nPoints, m_nPoints , m_nPoints};
-    fftw_complex* in = reinterpret_cast<fftw_complex*> (m_impulseResponseFT.memptr());
-    fftw_complex* out = reinterpret_cast<fftw_complex*> (m_impulseResponseFT.memptr());
-    fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
+    m_impulseResponseFT = m_integrator.integrate(m_impulseResponseFT);
+    m_impulseResponseFT = FFTHelper::fftShift(m_impulseResponseFT);
 
-    fftw_execute(plan);
-
-    m_impulseResponseFT = Functions::fftShift(m_impulseResponseFT);
     m_impulseResponse = real(m_impulseResponseFT);
 }
 
 
-void Neuron::computeResponseFT(double w)
+void Neuron::computeImpulseResponseFT()
 {
-    computeImpulseResponseFT(w);
-    m_stim->computeFrequency(w);
-    m_responseFT = m_impulseResponseFT % m_stim->frequency();
-}
-
-void Neuron::computeImpulseResponseFT(double w)
-{
-    for(int i = 0; i < m_nPoints; i++){
-        for(int j = 0; j < m_nPoints; j++){
-            m_impulseResponseFT(i,j) =
-                    impulseResponseFT({m_freqMesh[i], m_freqMesh[j]}, w);
+    for(int k = 0; k < m_impulseResponseFT.n_slices; k++){
+        for(int i = 0; i < m_impulseResponseFT.n_rows; i++){
+            for(int j = 0; j < m_impulseResponseFT.n_cols; j++){
+                m_impulseResponseFT(i,j,k) =
+                        impulseResponseFT({m_spatialFreqs[i],m_spatialFreqs[j]},
+                                          m_temporalFreqs[k]);
+            }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -149,22 +123,22 @@ string Neuron::cellType() const
     return m_cellType;
 }
 
-mat Neuron::response() const
+cube Neuron::response() const
 {
     return m_response;
 }
 
-mat Neuron::impulseResponse() const
+cube Neuron::impulseResponse() const
 {
     return m_impulseResponse;
 }
 
-cx_mat Neuron::responseFT() const
+cx_cube Neuron::responseFT() const
 {
     return m_responseFT;
 }
 
-cx_mat Neuron::impulseResponseFT() const
+cx_cube Neuron::impulseResponseFT() const
 {
     return m_impulseResponseFT;
 }

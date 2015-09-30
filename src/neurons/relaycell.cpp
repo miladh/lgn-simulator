@@ -1,7 +1,7 @@
 #include "relaycell.h"
 
-RelayCell::RelayCell(const Config *cfg, Stimuli *stim)
-    : Neuron(cfg, stim)
+RelayCell::RelayCell(const Config *cfg, Stimuli *stim, Integrator integrator)
+    : Neuron(cfg, stim, integrator)
 
 {
     m_cellType = "relay";

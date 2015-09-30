@@ -1,11 +1,12 @@
 #ifndef NEURON_H
 #define NEURON_H
 
-#include <armadillo>
+
 #include <libconfig.h++>
 #include <fftw3.h>
 
 #include "../stimuli/stimuli.h"
+#include "integrator.h"
 #include "../temporalKernels/temporalkernel.h"
 #include "../spatialKernels/spatialkernel.h"
 
@@ -17,7 +18,7 @@ using namespace std;
 class Neuron
 {
 public:
-    Neuron(const Config *cfg, Stimuli *stim);
+    Neuron(const Config *cfg, Stimuli *stim, Integrator integrator);
     ~Neuron();
 
     struct Input {
@@ -28,10 +29,8 @@ public:
 
 
     // Compute functions
-    void computeResponse(double t);
-    void computeResponseFT(double w);
-    void computeImpulseResponse(double t);
-    void computeImpulseResponseFT(double w);
+    void computeResponse();
+    void computeImpulseResponse();
 
     // Virtual functions
     virtual double impulseResponseFT(vec2 kVec, double w) = 0;
@@ -54,10 +53,10 @@ public:
 
 
     // Getter member functions
-    mat response() const;
-    mat impulseResponse() const;
-    cx_mat responseFT() const;
-    cx_mat impulseResponseFT() const;
+    cube response() const;
+    cube impulseResponse() const;
+    cx_cube responseFT() const;
+    cx_cube impulseResponseFT() const;
 
 
     vector<Input> ganglionCells() const;
@@ -67,19 +66,25 @@ public:
 
     string cellType() const;
 
+private:
+        void computeImpulseResponseFT();
+        Integrator m_integrator;
+
 protected:
-    int m_nPoints = 0;
 
     string m_cellType;
     Stimuli *m_stim;
 
-    mat m_response;
-    mat m_impulseResponse;
-    cx_mat m_responseFT;
-    cx_mat m_impulseResponseFT;
+    cube m_response;
+    cube m_impulseResponse;
+    cx_cube m_responseFT;
+    cx_cube m_impulseResponseFT;
 
-    vec m_spatialMesh;
-    vec m_freqMesh;
+    vec m_coordinateVec;
+    vec m_spatialFreqs;
+
+    vec timeVec;
+    vec m_temporalFreqs;
 
 
     vector<Input> m_ganglionCells;
@@ -88,6 +93,7 @@ protected:
     vector<Input> m_corticalNeurons;
 
     const std::complex<double> m_i = {0,1};
+
 
 };
 

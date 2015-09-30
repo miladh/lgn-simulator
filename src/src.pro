@@ -10,14 +10,13 @@ TEMPLATE = lib
 TARGET = edog
 
 
-LIBS += -llapack -larmadillo -lconfig++ -lboost_regex -lhdf5 -lhdf5_cpp -lfftw3 -lfftw3_omp -lfftw3_threads
+#LIBS += -llapack -larmadillo -lconfig++ -lboost_regex -lhdf5 -lhdf5_cpp -lfftw3 -lfftw3_omp -lfftw3_threads
 
 
 #INCLUDEPATH += /usr/include/hdf5/serial
 
 SOURCES += \
     integrator.cpp \
-    trapezoidal.cpp \
     outputmanager.cpp \
     stimuli/stimuli.cpp \
     stimuli/patchgrating.cpp \
@@ -34,10 +33,12 @@ SOURCES += \
     temporalKernels/diracDelta.cpp \
     spatialKernels/ellipticgaussian.cpp \
     temporalKernels/dampedoscillator.cpp \
-    stimuli/dogstim.cpp
+    stimuli/dogstim.cpp \
+    integratorsettings.cpp \
+    math/ffthelper.cpp \
+    stimuli/grating.cpp
 HEADERS += \
     integrator.h \
-    trapezoidal.h \
     outputmanager.h \
     stimuli/stimuli.h \
     stimuli/patchgrating.h \
@@ -54,4 +55,7 @@ HEADERS += \
     temporalKernels/diracDelta.h \
     spatialKernels/ellipticgaussian.h \
     temporalKernels/dampedoscillator.h \
-    stimuli/dogstim.h
+    stimuli/dogstim.h \
+    integratorsettings.h \
+    math/ffthelper.h \
+    stimuli/grating.h

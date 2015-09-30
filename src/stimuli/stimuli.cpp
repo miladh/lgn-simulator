@@ -1,24 +1,32 @@
 #include "stimuli.h"
 
 
-Stimuli::Stimuli(const Config *cfg)
+Stimuli::Stimuli(const Config *cfg, Integrator integrator)
+    : m_integrator(integrator)
 {
     const Setting & root = cfg->getRoot();
-    m_w = root["stimuliSettings"]["w"];
     m_k[0] = root["stimuliSettings"]["kx"];
     m_k[1] = root["stimuliSettings"]["ky"];
-    m_nPoints = root["spatialDomainSettings"]["nPoints"];
-    m_spatial = zeros<mat>(m_nPoints, m_nPoints);
-    m_frequency = zeros<cx_mat>(m_nPoints, m_nPoints);
 
-    m_spatialMesh = linspace(-0.5, 0.5, m_nPoints);
-    double dr = m_spatialMesh(1) - m_spatialMesh(0);
-    double N_2 = ceil(m_nPoints/2.);
-    double df = 1./dr/m_nPoints;
-    double fs = 1./dr;
+    int nPointsTemporal = integrator.nPointsTemporal();
+    int nPointsSpatial = integrator.nPointsSpatial();
 
-    m_freqMesh = linspace(-N_2*df, (m_nPoints - 1. - N_2)*df, m_nPoints);
-    m_freqMesh*=2*PI;
+    m_spatioTemporal = zeros<cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
+    m_fourierTransform = zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
+
+    //Temporal Mesh
+    timeVec = integrator.timeVec();
+    m_temporalFreqs = integrator.temporalFreqVec();
+
+    //Spatial Mesh
+    m_coordinateVec = integrator.coordinateVec();
+    m_spatialFreqs =integrator.spatialFreqVec();
+
+    m_w = m_temporalFreqs[m_temporalFreqs.n_elem/2];
+    m_w = m_temporalFreqs[3];
+    m_k[0] = m_spatialFreqs[5];
+    cout <<"m_w: "<< m_w << endl;
+    cout <<"m_kx: "<< m_k[0] << endl;
 
 }
 
@@ -27,44 +35,45 @@ Stimuli::~Stimuli()
 
 }
 
-void Stimuli::computeSpatial(double t)
+void Stimuli::computeSpatiotemporal()
 {
-    for(int i = 0; i < m_nPoints; i++){
-        for(int j = 0; j < m_nPoints; j++){
-            m_spatial(i,j) = spatial({m_spatialMesh[i], m_spatialMesh[j]}, t);
+    for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
+        for(int i = 0; i < int(m_spatioTemporal.n_rows); i++){
+            for(int j = 0; j < int(m_spatioTemporal.n_cols); j++){
+                m_spatioTemporal(i,j,k) = valueAtPoint({m_coordinateVec[i],
+                                                        m_coordinateVec[j]},
+                                                       timeVec[k]);
+            }
+        }
+    }
+
+}
+
+
+void Stimuli::computeFourierTransform()
+{
+
+    for(int k = 0; k < int(m_fourierTransform.n_slices); k++){
+        for(int i = 0; i < int(m_fourierTransform.n_rows); i++){
+            for(int j = 0; j < int(m_fourierTransform.n_cols); j++){
+                m_fourierTransform(i,j,k) =
+                        fourierTransformAtFrequency({m_spatialFreqs[i],
+                                                     m_spatialFreqs[j]},
+                                                    m_temporalFreqs[k]);
+
+            }
         }
     }
 }
-
-
-void Stimuli::computeFrequency(double w)
+cube Stimuli::spatioTemporal() const
 {
-    for(int i = 0; i < m_nPoints; i++){
-        for(int j = 0; j < m_nPoints; j++){
-            m_frequency(i,j) = frequency({m_freqMesh[i], m_freqMesh[j]}, w);
-        }
-    }
+    return m_spatioTemporal;
+}
+
+cx_cube Stimuli::fourierTransform() const
+{
+    return m_fourierTransform;
 }
 
 
-double Stimuli::w() const
-{
-    return m_w;
-}
-
-void Stimuli::setSpatial(mat spatial)
-{
-    m_spatial = spatial;
-}
-
-
-mat Stimuli::spatial() const
-{
-    return m_spatial;
-}
-
-cx_mat Stimuli::frequency() const
-{
-    return m_frequency;
-}
 

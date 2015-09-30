@@ -1,11 +1,14 @@
 #include <iostream>
 
-#include <trapezoidal.h>
 #include <outputmanager.h>
 #include <unistd.h>
 
 #include "stimuli/patchgrating.h"
+#include "stimuli/grating.h"
 #include "stimuli/dogstim.h"
+
+#include "integrator.h"
+#include "integratorsettings.h"
 
 #include "neurons/relaycell.h"
 #include "neurons/ganglioncell.h"
@@ -36,8 +39,6 @@ int main()
     cfg.readFile("../../eDOG/app/config.cfg");
     const Setting & root = cfg.getRoot();
 
-    int nSteps = root["dynamicSettings"]["nSteps"];
-    double dt = root["dynamicSettings"]["dt"];
 
     double dogA = root["dogSettings"]["A"];
     double doga = root["dogSettings"]["a"];
@@ -49,69 +50,78 @@ int main()
     double weight = 1.0;
     double spread = 0.1;
 
+    int ns = root["integratorSettings"]["ns"];
+    int nt = root["integratorSettings"]["nt"];;
+    double maxT = root["integratorSettings"]["maxT"];
+
 
     //----------------------------------------------------------------------------
 
-        PatchGrating S(&cfg);
-    //    DOGstim S(&cfg);
-        OutputManager io(&cfg);
-
-        //Spatial kernels:
-        DOG dog(dogA, doga, dogB, dogb);
-        Gaussian gauss(weight, spread);
-        EllipticGaussian ellipticGauss(weight, PI/4*3, 1.4, 0.1);
-
-        //Temporal kernels:
-        DecayingExponential Ktg(tau_rg, 0);
-        DecayingExponential Ktc(tau_rc, delay);
-        DiracDelta delta(0.0);
-        DampedOscillator damped(0.425, 0.38);
-
-        //Neurons:
-        GanglionCell ganglion(&cfg, &S, &dog, &damped);
-        RelayCell relay(&cfg, &S);
-        CorticalCell cortical(&cfg, &S);
-
-        vector<Neuron *> neurons;
-        neurons.push_back(&ganglion);
-        neurons.push_back(&relay);
-        neurons.push_back(&cortical);
+    IntegratorSettings integratorSettings(nt, ns, maxT);
+    Integrator integrator(&integratorSettings);
 
 
+//    Grating S(&cfg, integrator);
+    PatchGrating S(&cfg, integrator);
+//        DOGstim S(&cfg, integrator);
+    OutputManager io(&cfg);
 
-        relay.addGanglionCell(&ganglion,&dog, &Ktg);
-        relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktg);
+    //Spatial kernels:
+    DOG dog(dogA, doga, dogB, dogb);
+    Gaussian gauss(weight, spread);
+    EllipticGaussian ellipticGauss(weight, PI/4*3, 0.1, 0.1);
 
-        cortical.addRelayCell(&relay, &dog, &delta);
+    //Temporal kernels:
+    DecayingExponential Ktg(tau_rg, 0);
+    DecayingExponential Ktc(tau_rc, delay);
+    DiracDelta delta(0.0);
+    DampedOscillator damped(0.425, 0.38);
 
+    //Neurons:
+    GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
+    RelayCell relay(&cfg, &S, integrator);
+    CorticalCell cortical(&cfg, &S, integrator);
 
-        double t = 0.0;
-        for (int i = 0; i < nSteps; i++){
-            S.computeSpatial(t);
-
-            ganglion.computeResponse(t);
-            ganglion.computeImpulseResponse(t);
-
-            relay.computeResponse(t);
-    //        relay.computeImpulseResponse(t);
-
-            cortical.computeResponse(t);
-    //        cortical.computeImpulseResponse(t);
-
-            io.writeResponse(i, neurons, S);
-            cout <<"timestep: " << i << " of " << nSteps << endl;
-            t+=dt;
-        }
+    vector<Neuron *> neurons;
+    neurons.push_back(&ganglion);
+    neurons.push_back(&relay);
+    neurons.push_back(&cortical);
 
 
 
-//    cv::Mat image;
-//    image = cv::imread("../../dog.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+    relay.addGanglionCell(&ganglion,&dog, &Ktg);
+    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktg);
+    cortical.addRelayCell(&relay, &dog, &delta);
 
-//    cout << double(image.at<uchar>(0,0)) << endl;
-//    cout << *reinterpret_cast<uint*>(image.data) << endl;
-//    mat arma_mat(reinterpret_cast<double*>(image.data), image.rows, image.cols );
-//    cout << arma_mat(0,0) << endl;
+
+    S.computeSpatiotemporal();
+    S.computeFourierTransform();
+
+    ganglion.computeResponse();
+    ganglion.computeImpulseResponse();
+
+    relay.computeResponse();
+    relay.computeImpulseResponse();
+
+    cortical.computeResponse();
+    cortical.computeImpulseResponse();
+
+    io.writeResponse(neurons, S);
+
+//    cout << "Correct, stim:  " << endl;
+//    cout << S.spatioTemporal().slice(0) << endl;
+//    cout << "FT:  " << endl;
+//    cout << ganglion.response().slice(0) << endl;
+
+
+
+    //    cv::Mat image;
+    //    image = cv::imread("../../dog.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+
+    //    cout << double(image.at<uchar>(0,0)) << endl;
+    //    cout << *reinterpret_cast<uint*>(image.data) << endl;
+    //    mat arma_mat(reinterpret_cast<double*>(image.data), image.rows, image.cols );
+    //    cout << arma_mat(0,0) << endl;
 
     return 0;
 }

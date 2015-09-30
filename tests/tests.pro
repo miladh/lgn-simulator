@@ -8,7 +8,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     integratortests.cpp \
-    fft.cpp
+    stimulitests.cpp \
+    mathTests.cpp \
+    fft1DTests.cpp \
+    fft2DTests.cpp \
+    fftHelper/fftfreqtests.cpp \
+    fftHelper/fftshift1dtests.cpp \
+    fftHelper/fftshift2dtests.cpp \
+    fftHelper/fftshift3dtests.cpp \
+    fftHelper/ifftshift3dtests.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 
