@@ -116,7 +116,7 @@ if __name__ == "__main__":
     exp = sim.Simulation(f)
 
     data = [
-    exp.stimuli["spatioTemporal"], exp.stimuli["spatioTemporal"]
+    exp.stimuli["spatioTemporal"], exp.cortical["response"]["spatioTemporal"]
     ]
     animateImshowPlots(data)
     # animate3dPlots(data)
