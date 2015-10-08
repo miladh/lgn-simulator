@@ -62,6 +62,8 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
 
     }
 
+//    cout << Iff <<"     " << Ifb <<endl;
+
 
     for (const Input c : m_corticalNeurons){
         Neuron *corticalCell = c.neuron;

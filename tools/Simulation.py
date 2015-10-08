@@ -48,6 +48,6 @@ if __name__ == "__main__":
     sim = Simulation(f)
     print sim.ganglion["response"]["spatioTemporal"].shape
     print sim.stimuli.keys()
-    plot(sim.singleCellTemporalResponse("cortical", 126 , 64), 'b')
-    plot(sim.singleCellTemporalResponse("relay", 126, 64),'r')
+    plot(sim.singleCellTemporalResponse("interneuron", 32 , 32), 'b')
+    plot(sim.singleCellTemporalResponse("relay", 32, 32),'r')
     show()

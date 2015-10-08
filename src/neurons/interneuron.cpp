@@ -20,7 +20,6 @@ double Interneuron::impulseResponseFT(vec2 kVec, double w)
 
 
     double G = 0;
-    double I = 0;
     double C = 0;
 
     for (const Input g : m_ganglionCells){

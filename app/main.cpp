@@ -48,7 +48,7 @@ int main()
     double tau_rg = root["temporalSettings"]["tau_rg"];
     double tau_rc = root["temporalSettings"]["tau_rc"];
     double delay = root["temporalSettings"]["delay"];
-    double weight = 1.0;
+    double weight = 0.5;
     double spread = 0.1;
 
     int ns = root["integratorSettings"]["ns"];
@@ -70,7 +70,7 @@ int main()
     //Spatial kernels:
     DOG dog(dogA, doga, dogB, dogb);
     Gaussian gauss(weight, spread);
-    EllipticGaussian ellipticGauss(weight, PI/4*3, 0.1, 0.1);
+    EllipticGaussian ellipticGauss(weight, PI/4*3, 0.1, 1.0);
 
     //Temporal kernels:
     DecayingExponential Ktg(tau_rg, 0);
@@ -95,10 +95,10 @@ int main()
     interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
     relay.addGanglionCell(&ganglion,&dog, &Ktg);
-    relay.addInterNeuron(&interneuron,&dog, &Ktg);
+    relay.addInterNeuron(&interneuron,&dog, &damped);
     relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
-    cortical.addRelayCell(&relay, &dog, &Ktc);
+    cortical.addRelayCell(&relay, &dog, &Ktg);
 
 
     //Compute:
@@ -120,13 +120,16 @@ int main()
     io.writeResponse(neurons, S);
 
 
-    //    cv::Mat image;
-    //    image = cv::imread("../../dog.jpg", CV_LOAD_IMAGE_GRAYSCALE);
-
-    //    cout << double(image.at<uchar>(0,0)) << endl;
-    //    cout << *reinterpret_cast<uint*>(image.data) << endl;
-    //    mat arma_mat(reinterpret_cast<double*>(image.data), image.rows, image.cols );
-    //    cout << arma_mat(0,0) << endl;
-
     return 0;
 }
+
+
+
+
+//    cv::Mat image;
+//    image = cv::imread("../../dog.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+
+//    cout << double(image.at<uchar>(0,0)) << endl;
+//    cout << *reinterpret_cast<uint*>(image.data) << endl;
+//    mat arma_mat(reinterpret_cast<double*>(image.data), image.rows, image.cols );
+//    cout << arma_mat(0,0) << endl;
