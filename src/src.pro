@@ -36,7 +36,8 @@ SOURCES += \
     stimuli/dogstim.cpp \
     integratorsettings.cpp \
     math/ffthelper.cpp \
-    stimuli/grating.cpp
+    stimuli/grating.cpp \
+    neurons/interneuron.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -58,4 +59,5 @@ HEADERS += \
     stimuli/dogstim.h \
     integratorsettings.h \
     math/ffthelper.h \
-    stimuli/grating.h
+    stimuli/grating.h \
+    neurons/interneuron.h

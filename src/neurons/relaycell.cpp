@@ -17,7 +17,8 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
 {
 
     double G = 0;
-    double I = 0;
+    double Iff = 0;
+    double Ifb = 0;
     double C = 0;
 
     for (const Input g : m_ganglionCells){
@@ -35,13 +36,30 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
                 * i.temporalKernel->complex(w);
 
 
+        //Feedforward term
         for (const Input g : interneuron->ganglionCells()){
             Neuron *ganglionCell = g.neuron;
-            I += g.spatialKernel->complex(kVec)
+            Iff += g.spatialKernel->complex(kVec)
                     * g.temporalKernel->complex(w)
                     * ganglionCell->impulseResponseFT(kVec,w);
         }
-        I*= Kri;
+        Iff*= Kri;
+
+        //Feedback term
+        for (const Input c : interneuron->corticalNeurons()){
+            Neuron *corticalCell = c.neuron;
+            double Kic = c.spatialKernel->complex(kVec)
+                    * c.temporalKernel->complex(w);
+
+            // NOTE: ONLY ONE RELAY CELL!!!
+            for (const Input r : corticalCell->relayCells()){
+                double Kcr = r.spatialKernel->complex(kVec)
+                        * r.temporalKernel->complex(w);
+                Ifb += Kri*Kic*Kcr;
+            }
+
+        }
+
     }
 
 
@@ -57,7 +75,7 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
         C*= Krc;
     }
 
-    double Gr = (G + I)/(1 - C);
+    double Gr = (G + Iff)/(1 - Ifb - C);
     return Gr;
 }
 

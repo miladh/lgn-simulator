@@ -10,8 +10,9 @@
 #include "integrator.h"
 #include "integratorsettings.h"
 
-#include "neurons/relaycell.h"
 #include "neurons/ganglioncell.h"
+#include "neurons/interneuron.h"
+#include "neurons/relaycell.h"
 #include "neurons/corticalcell.h"
 
 #include "spatialKernels/dog.h"
@@ -79,26 +80,36 @@ int main()
 
     //Neurons:
     GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
+    Interneuron interneuron(&cfg, &S, integrator);
     RelayCell relay(&cfg, &S, integrator);
     CorticalCell cortical(&cfg, &S, integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
+    neurons.push_back(&interneuron);
     neurons.push_back(&relay);
     neurons.push_back(&cortical);
 
 
+    interneuron.addGanglionCell(&ganglion,&dog, &Ktg);
+    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
     relay.addGanglionCell(&ganglion,&dog, &Ktg);
-    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktg);
-    cortical.addRelayCell(&relay, &dog, &delta);
+    relay.addInterNeuron(&interneuron,&dog, &Ktg);
+    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
+
+    cortical.addRelayCell(&relay, &dog, &Ktc);
 
 
+    //Compute:
     S.computeSpatiotemporal();
     S.computeFourierTransform();
 
     ganglion.computeResponse();
     ganglion.computeImpulseResponse();
+
+    interneuron.computeResponse();
+    interneuron.computeImpulseResponse();
 
     relay.computeResponse();
     relay.computeImpulseResponse();
@@ -107,12 +118,6 @@ int main()
     cortical.computeImpulseResponse();
 
     io.writeResponse(neurons, S);
-
-//    cout << "Correct, stim:  " << endl;
-//    cout << S.spatioTemporal().slice(0) << endl;
-//    cout << "FT:  " << endl;
-//    cout << ganglion.response().slice(0) << endl;
-
 
 
     //    cv::Mat image;
