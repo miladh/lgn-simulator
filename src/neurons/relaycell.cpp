@@ -62,7 +62,6 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
 
     }
 
-//    cout << Iff <<"     " << Ifb <<endl;
 
 
     for (const Input c : m_corticalNeurons){
@@ -76,6 +75,7 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
         }
         C*= Krc;
     }
+
 
     double Gr = (G + Iff)/(1 - Ifb - C);
     return Gr;
