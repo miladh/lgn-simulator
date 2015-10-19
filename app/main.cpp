@@ -52,13 +52,14 @@ int main()
     double spread = 0.1;
 
     int ns = root["integratorSettings"]["ns"];
-    int nt = root["integratorSettings"]["nt"];;
-    double maxT = root["integratorSettings"]["maxT"];
+    int nt = root["integratorSettings"]["nt"];
+    double dt = root["integratorSettings"]["dt"];
+    double ds = root["integratorSettings"]["ds"];
 
 
     //----------------------------------------------------------------------------
 
-    IntegratorSettings integratorSettings(nt, ns, maxT);
+    IntegratorSettings integratorSettings(nt, dt, ns, ds);
     Integrator integrator(&integratorSettings);
 
 
@@ -80,25 +81,25 @@ int main()
 
     //Neurons:
     GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
-    Interneuron interneuron(&cfg, &S, integrator);
+//    Interneuron interneuron(&cfg, &S, integrator);
     RelayCell relay(&cfg, &S, integrator);
-    CorticalCell cortical(&cfg, &S, integrator);
+//    CorticalCell cortical(&cfg, &S, integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
-    neurons.push_back(&interneuron);
+//    neurons.push_back(&interneuron);
     neurons.push_back(&relay);
-    neurons.push_back(&cortical);
+//    neurons.push_back(&cortical);
 
 
-    interneuron.addGanglionCell(&ganglion,&dog, &Ktg);
-    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
+//    interneuron.addGanglionCell(&ganglion,&dog, &Ktg);
+//    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
-    relay.addGanglionCell(&ganglion,&dog, &Ktg);
-    relay.addInterNeuron(&interneuron,&dog, &damped);
-    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
+    relay.addGanglionCell(&ganglion,&gauss, &Ktg);
+//    relay.addInterNeuron(&interneuron,&dog, &damped);
+//    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
-    cortical.addRelayCell(&relay, &dog, &Ktg);
+//    cortical.addRelayCell(&relay, &dog, &Ktg);
 
 
     //Compute:
@@ -108,14 +109,14 @@ int main()
     ganglion.computeResponse();
     ganglion.computeImpulseResponse();
 
-    interneuron.computeResponse();
-    interneuron.computeImpulseResponse();
+//    interneuron.computeResponse();
+//    interneuron.computeImpulseResponse();
 
     relay.computeResponse();
     relay.computeImpulseResponse();
 
-    cortical.computeResponse();
-    cortical.computeImpulseResponse();
+//    cortical.computeResponse();
+//    cortical.computeImpulseResponse();
 
     io.writeResponse(neurons, S);
 

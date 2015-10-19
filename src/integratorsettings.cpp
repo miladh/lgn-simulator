@@ -1,9 +1,10 @@
 #include "integratorsettings.h"
 
-IntegratorSettings::IntegratorSettings(int nt, int ns, double maxTime)
+IntegratorSettings::IntegratorSettings(int nt, double dt, int ns, double ds)
     : m_nPointsTemporal(pow(2,nt))
     , m_nPointsSpatial(pow(2,ns))
-    , m_maxTime(maxTime)
+    , m_dt(dt)
+    , m_ds(ds)
 {
 
 }
@@ -22,10 +23,18 @@ int IntegratorSettings::nPointsSpatial() const
     return m_nPointsSpatial;
 }
 
-double IntegratorSettings::maxTime() const
+double IntegratorSettings::temporalResolution() const
 {
-    return m_maxTime;
+    return m_dt;
 }
+
+double IntegratorSettings::spatialResolution() const
+{
+    return m_ds;
+}
+
+
+
 
 
 

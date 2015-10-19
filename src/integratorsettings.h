@@ -10,17 +10,19 @@ using namespace arma;
 class IntegratorSettings
 {
 public:
-    IntegratorSettings(int nt, int ns, double maxTime);
+    IntegratorSettings(int nt, double dt, int ns, double ds);
     ~IntegratorSettings();
 
     int nPointsTemporal() const;
     int nPointsSpatial() const;
-    double maxTime() const;
+    double temporalResolution() const;
+    double spatialResolution() const;
 
 private:
     int m_nPointsTemporal = 0;
     int m_nPointsSpatial = 0;
-    double m_maxTime = 0;
+    double m_dt = 0;
+    double m_ds = 0;
 };
 
 #endif // INTEGRATORSETTINGS_H

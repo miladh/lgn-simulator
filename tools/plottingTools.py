@@ -116,13 +116,15 @@ if __name__ == "__main__":
     exp = sim.Simulation(f)
 
     data = [
-    # exp.stimuli["spatioTemporal"]
-    exp.interneuron["response"]["spatioTemporal"]
+    exp.stimuli["spatioTemporal"]
+    # ,exp.interneuron["response"]["spatioTemporal"]
+    ,exp.ganglion["response"]["spatioTemporal"]
     ,exp.relay["response"]["spatioTemporal"]
-    ,exp.cortical["response"]["spatioTemporal"]
-    ,exp.interneuron["impulseResponse"]["spatioTemporal"]
+    # ,exp.cortical["response"]["spatioTemporal"]
+    # ,exp.interneuron["impulseResponse"]["spatioTemporal"]
+    ,exp.ganglion["impulseResponse"]["spatioTemporal"]
     ,exp.relay["impulseResponse"]["spatioTemporal"]
-    ,exp.cortical["impulseResponse"]["spatioTemporal"]
+    # ,exp.cortical["impulseResponse"]["spatioTemporal"]
     ]
     animateImshowPlots(data)
     # animate3dPlots(data)
