@@ -18,7 +18,8 @@ SOURCES += main.cpp \
     fftIntegrator/integratortest_dog.cpp \
     fftIntegrator/integratortest_gauss.cpp \
     fftIntegrator/integratortest_grating.cpp \
-    fftIntegrator/integratortest_cosine.cpp
+    fftIntegrator/integratortest_cosine.cpp \
+    fftIntegrator/integratortest_patchgrating.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 

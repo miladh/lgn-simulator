@@ -36,6 +36,6 @@ double PatchGrating::fourierTransformAtFrequency(vec2 kVec, double w)
         s *= 2. * Functions::secondKindBesselFunction(arg)/arg;
     }
 
-    return s/*/m_integrator.temporalFreqResolution()*/;
+    return s/m_integrator.temporalFreqResolution();
 
 }
