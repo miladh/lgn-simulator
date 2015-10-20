@@ -23,7 +23,7 @@ SUITE(INTEGRATOR){
     TEST(gaussSpatialCosineTemporal){
         //Mesh
         int ns = 7;
-        int nt = 1;
+        int nt = 4;
         double ds = 0.1;
         double dt = 0.1;
 
@@ -39,7 +39,7 @@ SUITE(INTEGRATOR){
         vec w = integrator.temporalFreqVec();
 
         double a = 2.1;
-        double wd = w[w.n_elem/2+1];
+        double wd = w(w.n_elem/2+2);
 
         cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
         cx_cube G = zeros<cx_cube>(Ns, Ns, Nt);

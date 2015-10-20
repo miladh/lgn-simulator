@@ -14,8 +14,8 @@ SUITE(INTEGRATOR){
 
     TEST(Cosine){
         //Mesh
-        int ns = 2;
-        int nt = 2;
+        int ns = 5;
+        int nt = 5;
         double ds = 0.2;
         double dt = 0.1;
 
@@ -31,9 +31,9 @@ SUITE(INTEGRATOR){
         vec w = integrator.temporalFreqVec();
 
 
-        double wd = w[w.n_elem/2+1];
-        double kx = k[k.n_elem/2+1];
-        double ky = 0.0;
+        double wd = w(w.n_elem/2+2);
+        double kx = k(k.n_elem/2+6);
+        double ky = k(k.n_elem/2+1);
 
 
         cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);

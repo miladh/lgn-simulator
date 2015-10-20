@@ -31,9 +31,9 @@ Integrator::Integrator(IntegratorSettings *settings)
                               m_nPointsSpatial/2-1,
                               m_nPointsSpatial)*m_dk;
 
-    cout << "max x:" << m_coordinateVec(m_nPointsSpatial-1) << endl;
-    cout << "dw :" << m_dw << endl;
-    cout << "dk:" << m_dk << endl;
+//    cout << "max x:" << m_coordinateVec(m_nPointsSpatial-1) << endl;
+//    cout << "dw :" << m_dw << endl;
+//    cout << "dk:" << m_dk << endl;
 }
 
 Integrator::~Integrator()
