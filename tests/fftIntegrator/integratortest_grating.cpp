@@ -53,9 +53,6 @@ SUITE(INTEGRATOR){
 
         // Backward
         G = integrator.integrate(f);
-//        G /= integrator.spatialFreqResolution()
-//                * integrator.spatialFreqResolution()
-//                * integrator.temporalFreqResolution();
         G = FFTHelper::fftShift(G);
 
 
@@ -70,8 +67,6 @@ SUITE(INTEGRATOR){
                 }
             }
         }
-
-
 
     }
 

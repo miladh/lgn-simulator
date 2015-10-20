@@ -67,10 +67,10 @@ SUITE(INTEGRATOR){
             }
         }
 
+        f /= integrator.temporalFreqResolution();
 
         // Backward
         G = integrator.integrate(f);
-        G /= integrator.temporalFreqResolution();
         G = FFTHelper::fftShift(G);
 
         // Test

@@ -63,12 +63,12 @@ SUITE(INTEGRATOR){
         }
 
         f *=  8*PI*PI*PI;
+        f /= integrator.spatialFreqResolution()
+                * integrator.spatialFreqResolution()
+                * integrator.temporalFreqResolution();
 
         // Backward
         G = integrator.integrate(f);
-        G /= integrator.spatialFreqResolution()
-                * integrator.spatialFreqResolution()
-                * integrator.temporalFreqResolution();
         G = FFTHelper::fftShift(G);
 
         // Test

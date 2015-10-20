@@ -69,8 +69,8 @@ int main()
     double wd = w(w.n_elem/2+2);
     double kx = k(k.n_elem/2+3);
     double ky = k(k.n_elem/2);
-    Grating S(integrator, {kx, ky}, wd, contrast);
-//    PatchGrating S(integrator, {kx, ky}, wd, contrast, spotDiameter);
+//    Grating S(integrator, {kx, ky}, wd, contrast);
+    PatchGrating S(integrator, {kx, ky}, wd, contrast, spotDiameter);
     OutputManager io(&cfg);
 
     //Spatial kernels:
@@ -129,13 +129,3 @@ int main()
     return 0;
 }
 
-
-
-
-//    cv::Mat image;
-//    image = cv::imread("../../dog.jpg", CV_LOAD_IMAGE_GRAYSCALE);
-
-//    cout << double(image.at<uchar>(0,0)) << endl;
-//    cout << *reinterpret_cast<uint*>(image.data) << endl;
-//    mat arma_mat(reinterpret_cast<double*>(image.data), image.rows, image.cols );
-//    cout << arma_mat(0,0) << endl;
