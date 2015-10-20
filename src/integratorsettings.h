@@ -20,8 +20,8 @@ public:
 
 private:
     int m_nPointsTemporal = 0;
-    int m_nPointsSpatial = 0;
     double m_dt = 0;
+    int m_nPointsSpatial = 0;
     double m_ds = 0;
 };
 

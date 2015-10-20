@@ -11,8 +11,8 @@ public:
     ~EllipticGaussian();
 
     // SpatialKernel interface
-    double real(vec2 rVec);
-    double complex(vec2 kVec);
+    double spatial(vec2 rVec);
+    double fourierTransform(vec2 kVec);
 
 private:
     double m_weight = 0.0;

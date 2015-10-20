@@ -23,7 +23,7 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
 
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
-        G += g.spatialKernel->complex(kVec)
+        G += g.spatialKernel->fourierTransform(kVec)
                 * g.temporalKernel->complex(w)
                 * ganglionCell->impulseResponseFT(kVec,w);
     }
@@ -32,14 +32,14 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
 
     for (const Input i : m_interNeurons){
         Neuron *interneuron = i.neuron;
-        double Kri = i.spatialKernel->complex(kVec)
+        double Kri = i.spatialKernel->fourierTransform(kVec)
                 * i.temporalKernel->complex(w);
 
 
         //Feedforward term
         for (const Input g : interneuron->ganglionCells()){
             Neuron *ganglionCell = g.neuron;
-            Iff += g.spatialKernel->complex(kVec)
+            Iff += g.spatialKernel->fourierTransform(kVec)
                     * g.temporalKernel->complex(w)
                     * ganglionCell->impulseResponseFT(kVec,w);
         }
@@ -48,12 +48,12 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
         //Feedback term
         for (const Input c : interneuron->corticalNeurons()){
             Neuron *corticalCell = c.neuron;
-            double Kic = c.spatialKernel->complex(kVec)
+            double Kic = c.spatialKernel->fourierTransform(kVec)
                     * c.temporalKernel->complex(w);
 
             // NOTE: ONLY ONE RELAY CELL!!!
             for (const Input r : corticalCell->relayCells()){
-                double Kcr = r.spatialKernel->complex(kVec)
+                double Kcr = r.spatialKernel->fourierTransform(kVec)
                         * r.temporalKernel->complex(w);
                 Ifb += Kri*Kic*Kcr;
             }
@@ -66,11 +66,11 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
 
     for (const Input c : m_corticalNeurons){
         Neuron *corticalCell = c.neuron;
-        double Krc = c.spatialKernel->complex(kVec)
+        double Krc = c.spatialKernel->fourierTransform(kVec)
                 * c.temporalKernel->complex(w);
 
         for (const Input r : corticalCell->relayCells()){
-            C += r.spatialKernel->complex(kVec)
+            C += r.spatialKernel->fourierTransform(kVec)
                     * r.temporalKernel->complex(w);
         }
         C*= Krc;

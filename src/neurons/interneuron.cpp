@@ -24,18 +24,18 @@ double Interneuron::impulseResponseFT(vec2 kVec, double w)
 
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
-        G += g.spatialKernel->complex(kVec)
+        G += g.spatialKernel->fourierTransform(kVec)
                 * g.temporalKernel->complex(w)
                 * ganglionCell->impulseResponseFT(kVec,w);
     }
 
     for (const Input c : m_corticalNeurons){
         Neuron *corticalCell = c.neuron;
-        double Krc = c.spatialKernel->complex(kVec)
+        double Krc = c.spatialKernel->fourierTransform(kVec)
                 * c.temporalKernel->complex(w);
 
         for (const Input r : corticalCell->relayCells()){
-            C += r.spatialKernel->complex(kVec)
+            C += r.spatialKernel->fourierTransform(kVec)
                     * r.temporalKernel->complex(w);
         }
         C*= Krc;

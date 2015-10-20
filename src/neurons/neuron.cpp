@@ -33,7 +33,7 @@ void Neuron::computeResponse()
 {
     computeImpulseResponseFT();
 
-    m_responseFT = m_impulseResponseFT % m_stim->fourierTransform();
+    m_responseFT = /*m_impulseResponseFT % */m_stim->fourierTransform();
     m_responseFT = m_integrator.integrate(m_responseFT);
     m_responseFT = FFTHelper::fftShift(m_responseFT);
 

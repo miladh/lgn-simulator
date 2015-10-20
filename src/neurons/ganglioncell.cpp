@@ -23,7 +23,7 @@ void GanglionCell::computeImpulseResponse()
         for(int i = 0; i < m_impulseResponse.n_rows; i++){
             for(int j = 0; j < m_impulseResponse.n_cols; j++){
                 m_impulseResponse(i, j, k) =
-                        impulseResponse({m_coordinateVec[i]-0.5, m_coordinateVec[j]-0.5},
+                        impulseResponse({m_coordinateVec[i], m_coordinateVec[j]},
                                         timeVec[k]);
             }
         }
@@ -33,11 +33,11 @@ void GanglionCell::computeImpulseResponse()
 
 double GanglionCell::impulseResponse(vec2 rVec, double t)
 {
-    return m_spatialKernel->real(rVec) * m_temporalKernel->real(t);
+    return m_spatialKernel->spatial(rVec) * m_temporalKernel->real(t);
 }
 
 double GanglionCell::impulseResponseFT(vec2 kVec, double w)
 {
-    return m_spatialKernel->complex(kVec) * m_temporalKernel->complex(w);
+    return m_spatialKernel->fourierTransform(kVec) * m_temporalKernel->complex(w);
 }
 

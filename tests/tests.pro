@@ -7,7 +7,6 @@ CONFIG -= qt
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    integratortests.cpp \
     stimulitests.cpp \
     mathTests.cpp \
     fft1DTests.cpp \
@@ -16,7 +15,9 @@ SOURCES += main.cpp \
     fftHelper/fftshift1dtests.cpp \
     fftHelper/fftshift2dtests.cpp \
     fftHelper/fftshift3dtests.cpp \
-    fftHelper/ifftshift3dtests.cpp
+    fftHelper/ifftshift3dtests.cpp \
+    fftIntegrator/integratortest_dog.cpp \
+    fftIntegrator/integratortest_gauss.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 

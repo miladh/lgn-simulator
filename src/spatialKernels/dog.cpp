@@ -13,7 +13,7 @@ DOG::~DOG()
 {
 }
 
-double DOG::real(vec2 r)
+double DOG::spatial(vec2 r)
 {
 
     double r2 = dot(r,r);
@@ -24,7 +24,7 @@ double DOG::real(vec2 r)
     return center - surround;
 }
 
-double DOG::complex(vec2 k)
+double DOG::fourierTransform(vec2 k)
 {
     double k2 = dot(k,k);
     double center   = m_A * exp(-k2 * m_a*m_a / 4.);

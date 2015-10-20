@@ -70,32 +70,32 @@ int main()
 
     //Spatial kernels:
     DOG dog(dogA, doga, dogB, dogb);
-    Gaussian gauss(weight, spread);
-    EllipticGaussian ellipticGauss(weight, PI/4*3, 0.1, 1.0);
+//    Gaussian gauss(weight, spread);
+//    EllipticGaussian ellipticGauss(weight, PI/4*3, 0.1, 1.0);
 
     //Temporal kernels:
     DecayingExponential Ktg(tau_rg, 0);
-    DecayingExponential Ktc(tau_rc, delay);
-    DiracDelta delta(0.0);
-    DampedOscillator damped(0.425, 0.38);
+//    DecayingExponential Ktc(tau_rc, delay);
+//    DiracDelta delta(0.0);
+//    DampedOscillator damped(0.425, 0.38);
 
     //Neurons:
-    GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
+    GanglionCell ganglion(&cfg, &S, integrator, &dog, &Ktg);
 //    Interneuron interneuron(&cfg, &S, integrator);
-    RelayCell relay(&cfg, &S, integrator);
+//    RelayCell relay(&cfg, &S, integrator);
 //    CorticalCell cortical(&cfg, &S, integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
 //    neurons.push_back(&interneuron);
-    neurons.push_back(&relay);
+//    neurons.push_back(&relay);
 //    neurons.push_back(&cortical);
 
 
 //    interneuron.addGanglionCell(&ganglion,&dog, &Ktg);
 //    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
-    relay.addGanglionCell(&ganglion,&gauss, &Ktg);
+//    relay.addGanglionCell(&ganglion,&gauss, &Ktg);
 //    relay.addInterNeuron(&interneuron,&dog, &damped);
 //    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
@@ -112,8 +112,8 @@ int main()
 //    interneuron.computeResponse();
 //    interneuron.computeImpulseResponse();
 
-    relay.computeResponse();
-    relay.computeImpulseResponse();
+//    relay.computeResponse();
+//    relay.computeImpulseResponse();
 
 //    cortical.computeResponse();
 //    cortical.computeImpulseResponse();

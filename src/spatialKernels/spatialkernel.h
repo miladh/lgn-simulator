@@ -14,8 +14,8 @@ public:
     SpatialKernel();
     ~SpatialKernel();
 
-    virtual double real(vec2 rVec) = 0;
-    virtual double complex(vec2 kVec) = 0;
+    virtual double spatial(vec2 rVec) = 0;
+    virtual double fourierTransform(vec2 kVec) = 0;
 
 };
 

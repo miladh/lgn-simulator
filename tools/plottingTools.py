@@ -119,12 +119,13 @@ if __name__ == "__main__":
     exp.stimuli["spatioTemporal"]
     # ,exp.interneuron["response"]["spatioTemporal"]
     ,exp.ganglion["response"]["spatioTemporal"]
-    ,exp.relay["response"]["spatioTemporal"]
+    # ,exp.relay["response"]["spatioTemporal"]
     # ,exp.cortical["response"]["spatioTemporal"]
     # ,exp.interneuron["impulseResponse"]["spatioTemporal"]
     ,exp.ganglion["impulseResponse"]["spatioTemporal"]
-    ,exp.relay["impulseResponse"]["spatioTemporal"]
+    # ,exp.relay["impulseResponse"]["spatioTemporal"]
     # ,exp.cortical["impulseResponse"]["spatioTemporal"]
     ]
+    print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
     animateImshowPlots(data)
     # animate3dPlots(data)
