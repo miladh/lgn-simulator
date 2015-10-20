@@ -12,10 +12,10 @@ public:
     ~PatchGrating();
 
 private:
-    double m_contrast = 0.0;
-    double m_spotDiameter = 0.0;
     vec2 m_k = {0,0};
     double m_w = 0;
+    double m_contrast = 0.0;
+    double m_spotDiameter = 0.0;
 
 
     double valueAtPoint(vec2 rVec, double t);

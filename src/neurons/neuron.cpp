@@ -33,7 +33,7 @@ void Neuron::computeResponse()
 {
     computeImpulseResponseFT();
 
-    m_responseFT = m_impulseResponseFT % m_stim->fourierTransform();
+    m_responseFT = /*m_impulseResponseFT %*/ m_stim->fourierTransform();
     m_responseFT = m_integrator.integrate(m_responseFT);
     m_responseFT = FFTHelper::fftShift(m_responseFT);
 
@@ -54,9 +54,9 @@ void Neuron::computeImpulseResponse()
 
 void Neuron::computeImpulseResponseFT()
 {
-    for(int k = 0; k < m_impulseResponseFT.n_slices; k++){
-        for(int i = 0; i < m_impulseResponseFT.n_rows; i++){
-            for(int j = 0; j < m_impulseResponseFT.n_cols; j++){
+    for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
+        for(int i = 0; i < int(m_impulseResponseFT.n_rows); i++){
+            for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){
                 m_impulseResponseFT(i,j,k) =
                         impulseResponseFT({m_spatialFreqs[i],m_spatialFreqs[j]},
                                           m_temporalFreqs[k]);

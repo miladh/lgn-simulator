@@ -19,9 +19,9 @@ GanglionCell::~GanglionCell()
 
 void GanglionCell::computeImpulseResponse()
 {
-    for(int k = 0; k < m_impulseResponse.n_slices; k++){
-        for(int i = 0; i < m_impulseResponse.n_rows; i++){
-            for(int j = 0; j < m_impulseResponse.n_cols; j++){
+    for(int k = 0; k < int(m_impulseResponse.n_slices); k++){
+        for(int i = 0; i < int(m_impulseResponse.n_rows); i++){
+            for(int j = 0; j < int(m_impulseResponse.n_cols); j++){
                 m_impulseResponse(i, j, k) =
                         impulseResponse({m_coordinateVec[i], m_coordinateVec[j]},
                                         timeVec[k]);

@@ -35,8 +35,8 @@ protected:
     vec timeVec;
     vec m_temporalFreqs;
 
-private:
     Integrator m_integrator;
+private:
     virtual double valueAtPoint(vec2 rVec, double t) = 0;
     virtual double fourierTransformAtFrequency(vec2 k, double w) = 0;
 

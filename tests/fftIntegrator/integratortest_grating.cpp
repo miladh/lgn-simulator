@@ -30,10 +30,10 @@ SUITE(INTEGRATOR){
         vec t = integrator.timeVec();
         vec w = integrator.temporalFreqVec();
 
-        double C = 1.0;
+        double C = 2.3;
         double wd = w(w.n_elem/2+2);
         double kx = k(k.n_elem/2+3);
-        double ky = k(k.n_elem/2+1);
+        double ky = k(k.n_elem/2+5);
         Grating S(integrator, {kx, ky}, wd, C);
 
         cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
@@ -47,16 +47,15 @@ SUITE(INTEGRATOR){
 
 
         //fourier signal
-        //Spatiotemporal signal
         S.computeFourierTransform();
         f = S.fourierTransform();
 
 
         // Backward
         G = integrator.integrate(f);
-        G /= integrator.spatialFreqResolution()
-                * integrator.spatialFreqResolution()
-                * integrator.temporalFreqResolution();
+//        G /= integrator.spatialFreqResolution()
+//                * integrator.spatialFreqResolution()
+//                * integrator.temporalFreqResolution();
         G = FFTHelper::fftShift(G);
 
 

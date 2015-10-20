@@ -64,32 +64,35 @@ int main()
     IntegratorSettings integratorSettings(nt, dt, ns, ds);
     Integrator integrator(&integratorSettings);
 
-
-//    Grating S(integrator, {0,0}, 0.0, contrast);
-    PatchGrating S(integrator, {0,0}, 0.0, contrast, spotDiameter);
-//        DOGstim S(integrator, {0,0}, 0.0, contrast);
+    vec k = integrator.spatialFreqVec();
+    vec w = integrator.temporalFreqVec();
+    double wd = w(w.n_elem/2+2);
+    double kx = k(k.n_elem/2+3);
+    double ky = k(k.n_elem/2);
+    Grating S(integrator, {kx, ky}, wd, contrast);
+//    PatchGrating S(integrator, {kx, ky}, wd, contrast, spotDiameter);
     OutputManager io(&cfg);
 
     //Spatial kernels:
     DOG dog(dogA, doga, dogB, dogb);
-    Gaussian gauss(weight, spread);
+//    Gaussian gauss(weight, spread);
 //    EllipticGaussian ellipticGauss(weight, PI/4*3, 0.1, 1.0);
 
     //Temporal kernels:
     DecayingExponential Ktg(tau_rg, 1);
 //    DecayingExponential Ktc(tau_rc, delay);
 //    DiracDelta delta(0.0);
-    DampedOscillator damped(2.425, 1.38);
+//    DampedOscillator damped(2.425, 1.38);
 
     //Neurons:
-    GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
-    RelayCell relay(&cfg, &S, integrator);
+    GanglionCell ganglion(&cfg, &S, integrator, &dog, &Ktg);
+//    RelayCell relay(&cfg, &S, integrator);
 //    Interneuron interneuron(&cfg, &S, integrator);
 //    CorticalCell cortical(&cfg, &S, integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
-    neurons.push_back(&relay);
+//    neurons.push_back(&relay);
 //    neurons.push_back(&interneuron);
 //    neurons.push_back(&cortical);
 
@@ -97,7 +100,7 @@ int main()
 //    interneuron.addGanglionCell(&ganglion,&dog, &Ktg);
 //    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
-    relay.addGanglionCell(&ganglion,&gauss, &Ktg);
+//    relay.addGanglionCell(&ganglion,&gauss, &Ktg);
 //    relay.addInterNeuron(&interneuron,&dog, &damped);
 //    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
@@ -114,8 +117,8 @@ int main()
 //    interneuron.computeResponse();
 //    interneuron.computeImpulseResponse();
 
-    relay.computeResponse();
-    relay.computeImpulseResponse();
+//    relay.computeResponse();
+//    relay.computeImpulseResponse();
 
 //    cortical.computeResponse();
 //    cortical.computeImpulseResponse();
