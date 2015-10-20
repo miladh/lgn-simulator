@@ -10,8 +10,8 @@ public:
     ~DecayingExponential();
 
     // TemporalKernel interface
-    double real(double t);
-    double complex(double w);
+    double temporal(double t);
+    double fourierTransform(double w);
 
 
 private:

@@ -18,7 +18,7 @@ double CorticalCell::impulseResponseFT(vec2 kVec, double w)
     for (const Input r : m_relayCells){
         Neuron *relayCell = r.neuron;
         R += r.spatialKernel->fourierTransform(kVec)
-                * r.temporalKernel->complex(w)
+                * r.temporalKernel->fourierTransform(w)
                 * relayCell->impulseResponseFT(kVec,w);
     }
 

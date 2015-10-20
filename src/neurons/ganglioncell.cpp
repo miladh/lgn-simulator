@@ -33,11 +33,11 @@ void GanglionCell::computeImpulseResponse()
 
 double GanglionCell::impulseResponse(vec2 rVec, double t)
 {
-    return m_spatialKernel->spatial(rVec) * m_temporalKernel->real(t);
+    return m_spatialKernel->spatial(rVec) * m_temporalKernel->temporal(t);
 }
 
 double GanglionCell::impulseResponseFT(vec2 kVec, double w)
 {
-    return m_spatialKernel->fourierTransform(kVec) * m_temporalKernel->complex(w);
+    return m_spatialKernel->fourierTransform(kVec) * m_temporalKernel->fourierTransform(w);
 }
 

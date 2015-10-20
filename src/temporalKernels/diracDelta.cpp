@@ -11,13 +11,13 @@ DiracDelta::~DiracDelta()
 
 }
 
-double DiracDelta::real(double t)
+double DiracDelta::temporal(double t)
 {
 
     return Functions::delta(t,m_t);
 }
 
-double DiracDelta::complex(double w)
+double DiracDelta::fourierTransform(double w)
 {
     return cos(w * m_t);
 }

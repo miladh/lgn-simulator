@@ -12,13 +12,13 @@ DecayingExponential::~DecayingExponential()
 
 }
 
-double DecayingExponential::real(double t)
+double DecayingExponential::temporal(double t)
 {
 
     return 1./ m_tau * exp(-(t - m_delay)/m_tau) * Functions::heaviside(t - m_delay);
 }
 
-double DecayingExponential::complex(double w)
+double DecayingExponential::fourierTransform(double w)
 {
     return cos(w*m_delay)/ (1 + w*w * m_tau*m_tau);
 }

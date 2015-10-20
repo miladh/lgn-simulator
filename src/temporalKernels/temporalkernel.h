@@ -13,8 +13,8 @@ public:
     TemporalKernel();
     ~TemporalKernel();
 
-    virtual double real(double t) = 0;
-    virtual double complex(double w) = 0;
+    virtual double temporal(double t) = 0;
+    virtual double fourierTransform(double w) = 0;
 
 
 };
