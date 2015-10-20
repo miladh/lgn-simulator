@@ -33,6 +33,9 @@ public:
     double dt() const;
     double ds() const;
 
+    double temporalFreqResolution() const;
+    double spatialFreqResolution() const;
+
 private:
     IntegratorSettings *m_settings;
 

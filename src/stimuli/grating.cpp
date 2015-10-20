@@ -1,10 +1,11 @@
 #include "grating.h"
 
-Grating::Grating(const Config *cfg, Integrator integrator)
-    : Stimuli(cfg, integrator)
+Grating::Grating(Integrator integrator, vec2 kd, double wd, double contrast)
+    : Stimuli(integrator)
+    , m_k(kd)
+    , m_w(wd)
+    , m_contrast(contrast)
 {
-    const Setting & root = cfg->getRoot();
-    m_contrast = root["stimuliSettings"]["C"];
 }
 
 Grating::~Grating()
@@ -14,9 +15,8 @@ Grating::~Grating()
 
 double Grating::valueAtPoint(vec2 rVec, double t)
 {
-    vec dr = rVec;
-    double s = m_contrast * cos(dot(m_k, dr) - m_w * t);
 
+    double s = m_contrast * cos(dot(m_k, rVec) - m_w * t);
     return s;
 }
 

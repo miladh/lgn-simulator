@@ -1,11 +1,14 @@
 #include "patchgrating.h"
 
-PatchGrating::PatchGrating(const Config *cfg, Integrator integrator)
-    : Stimuli(cfg, integrator)
+PatchGrating::PatchGrating(Integrator integrator, vec2 kd,
+                           double wd, double contrast,
+                           double spotDiameter)
+    : Stimuli(integrator)
+    , m_k(kd)
+    , m_w(wd)
+    , m_contrast(contrast)
+    , m_spotDiameter(spotDiameter)
 {
-    const Setting & root = cfg->getRoot();
-    m_contrast = root["stimuliSettings"]["C"];
-    m_spotDiameter = root["stimuliSettings"]["d"];
 }
 
 PatchGrating::~PatchGrating()
@@ -15,7 +18,7 @@ PatchGrating::~PatchGrating()
 
 double PatchGrating::valueAtPoint(vec2 rVec, double t)
 {
-    vec dr = rVec /*- vec{0.5, 0.5}*/;
+    vec dr = rVec;
     double r = sqrt(dot(dr, dr));
     double s = m_contrast * (1 - Functions::heaviside(r - m_spotDiameter * 0.5))
              * cos(dot(m_k, dr) - m_w * t);

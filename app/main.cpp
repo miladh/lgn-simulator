@@ -5,7 +5,6 @@
 
 #include "stimuli/patchgrating.h"
 #include "stimuli/grating.h"
-#include "stimuli/dogstim.h"
 
 #include "integrator.h"
 #include "integratorsettings.h"
@@ -49,12 +48,15 @@ int main()
     double tau_rc = root["temporalSettings"]["tau_rc"];
     double delay = root["temporalSettings"]["delay"];
     double weight = 0.5;
-    double spread = 0.1;
+    double spread = 1.1;
 
     int ns = root["integratorSettings"]["ns"];
     int nt = root["integratorSettings"]["nt"];
     double dt = root["integratorSettings"]["dt"];
     double ds = root["integratorSettings"]["ds"];
+
+    double contrast = root["stimuliSettings"]["C"];
+    double spotDiameter = root["stimuliSettings"]["d"];
 
 
     //----------------------------------------------------------------------------
@@ -63,39 +65,39 @@ int main()
     Integrator integrator(&integratorSettings);
 
 
-//    Grating S(&cfg, integrator);
-    PatchGrating S(&cfg, integrator);
-//        DOGstim S(&cfg, integrator);
+//    Grating S(integrator, {0,0}, 0.0, contrast);
+    PatchGrating S(integrator, {0,0}, 0.0, contrast, spotDiameter);
+//        DOGstim S(integrator, {0,0}, 0.0, contrast);
     OutputManager io(&cfg);
 
     //Spatial kernels:
     DOG dog(dogA, doga, dogB, dogb);
-//    Gaussian gauss(weight, spread);
+    Gaussian gauss(weight, spread);
 //    EllipticGaussian ellipticGauss(weight, PI/4*3, 0.1, 1.0);
 
     //Temporal kernels:
-    DecayingExponential Ktg(tau_rg, 0);
+    DecayingExponential Ktg(tau_rg, 1);
 //    DecayingExponential Ktc(tau_rc, delay);
 //    DiracDelta delta(0.0);
-//    DampedOscillator damped(0.425, 0.38);
+    DampedOscillator damped(2.425, 1.38);
 
     //Neurons:
-    GanglionCell ganglion(&cfg, &S, integrator, &dog, &Ktg);
+    GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
+    RelayCell relay(&cfg, &S, integrator);
 //    Interneuron interneuron(&cfg, &S, integrator);
-//    RelayCell relay(&cfg, &S, integrator);
 //    CorticalCell cortical(&cfg, &S, integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
+    neurons.push_back(&relay);
 //    neurons.push_back(&interneuron);
-//    neurons.push_back(&relay);
 //    neurons.push_back(&cortical);
 
 
 //    interneuron.addGanglionCell(&ganglion,&dog, &Ktg);
 //    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
-//    relay.addGanglionCell(&ganglion,&gauss, &Ktg);
+    relay.addGanglionCell(&ganglion,&gauss, &Ktg);
 //    relay.addInterNeuron(&interneuron,&dog, &damped);
 //    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
 
@@ -112,8 +114,8 @@ int main()
 //    interneuron.computeResponse();
 //    interneuron.computeImpulseResponse();
 
-//    relay.computeResponse();
-//    relay.computeImpulseResponse();
+    relay.computeResponse();
+    relay.computeImpulseResponse();
 
 //    cortical.computeResponse();
 //    cortical.computeImpulseResponse();

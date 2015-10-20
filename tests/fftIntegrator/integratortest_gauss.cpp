@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "integrator.h"
+#include "math/functions.h"
 
 using namespace std;
 using namespace arma;
@@ -18,7 +19,75 @@ double gaussFT(double a, vec k){
 
 SUITE(INTEGRATOR){
 
-    TEST(gaussfft){
+
+    TEST(gaussSpatialCosineTemporal){
+        //Mesh
+        int ns = 7;
+        int nt = 1;
+        double ds = 0.1;
+        double dt = 0.1;
+
+        int Ns = pow(2,ns);
+        int Nt = pow(2,nt);
+
+        IntegratorSettings settings(nt, dt, ns, ds);
+        Integrator integrator(&settings);
+
+        vec s = integrator.coordinateVec();
+        vec k = integrator.spatialFreqVec();
+        vec t = integrator.timeVec();
+        vec w = integrator.temporalFreqVec();
+
+        double a = 2.1;
+        double wd = w[w.n_elem/2+1];
+
+        cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
+        cx_cube G = zeros<cx_cube>(Ns, Ns, Nt);
+        cx_cube f = zeros<cx_cube>(Ns, Ns, Nt);
+
+
+        //Spatiotemporal signal
+        for(int l = 0; l < Nt; l++){
+            for(int i = 0; i < Ns; i++){
+                for(int j = 0; j < Ns; j++){
+                    g(i,j,l) = gauss(a, {s[i], s[j]})
+                            * cos(wd * t[l]);
+                }
+            }
+        }
+
+
+        //fourier signal
+        for(int l = 0; l < Nt; l++){
+            for(int i = 0; i < Ns; i++){
+                for(int j = 0; j < Ns; j++){
+                    f(i,j,l) = gaussFT(a, {k[i], k[j]})
+                            * Functions::delta(wd, w[l])*2*PI;
+                }
+            }
+        }
+
+
+        // Backward
+        G = integrator.integrate(f);
+        G /= integrator.temporalFreqResolution();
+        G = FFTHelper::fftShift(G);
+
+        // Test
+        for(int l = 0; l < Nt; l++){
+            for(int i = 0; i < Ns; i++){
+                for(int j = 0; j < Ns; j++){
+                    CHECK_CLOSE(real(g(i,j,l)),
+                                real(G(i,j,l)), 1e-9);
+
+                }
+            }
+        }
+    }
+
+
+
+    TEST(gaussSpatial){
         //Mesh
         int ns = 7;
         double ds = 0.1;
@@ -35,6 +104,8 @@ SUITE(INTEGRATOR){
         vec s = integrator.coordinateVec();
         vec k = integrator.spatialFreqVec();
 
+
+        //signal
         for(int i = 0; i < Ns; i++){
             for(int j = 0; j < Ns; j++){
                 g(i,j) = gauss(a, {s[i], s[j]});
@@ -53,6 +124,8 @@ SUITE(INTEGRATOR){
         G = integrator.integrate(f);
         G = FFTHelper::fftShift(G);
 
+
+        //Test
         for(int i = 0; i < Ns; i++){
             for(int j = 0; j < Ns; j++){
                 CHECK_CLOSE(real(g(i,j)),

@@ -125,6 +125,16 @@ double Integrator::ds() const
 {
     return m_ds;
 }
+double Integrator::temporalFreqResolution() const
+{
+    return m_dw;
+}
+double Integrator::spatialFreqResolution() const
+{
+    return m_dk;
+}
+
+
 
 
 

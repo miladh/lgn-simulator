@@ -14,10 +14,12 @@ SUITE(INTEGRATOR){
 
     TEST(dogfft){
         //Mesh
-        int ns = 8;
+        int ns = 9;
         double ds = 0.1;
         double A = 1.0;
         double a = 2.1;
+        double B = 1.0;
+        double b = 3.1;
 
         IntegratorSettings settings(0, 0, ns, ds);
         Integrator integrator(&settings);
@@ -30,14 +32,13 @@ SUITE(INTEGRATOR){
         vec s = integrator.coordinateVec();
         vec k = integrator.spatialFreqVec();
 
-        DOG dog(A, a, 0, 0.1);
+        DOG dog(A, a, B, b);
 
         for(int i = 0; i < Ns; i++){
             for(int j = 0; j < Ns; j++){
                 g(i,j) = dog.spatial({s[i], s[j]});
             }
         }
-
 
         //fourier signal
         for(int i = 0; i < Ns; i++){

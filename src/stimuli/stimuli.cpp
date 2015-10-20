@@ -1,13 +1,9 @@
 #include "stimuli.h"
 
 
-Stimuli::Stimuli(const Config *cfg, Integrator integrator)
+Stimuli::Stimuli(Integrator integrator)
     : m_integrator(integrator)
 {
-    const Setting & root = cfg->getRoot();
-    m_k[0] = root["stimuliSettings"]["kx"];
-    m_k[1] = root["stimuliSettings"]["ky"];
-
     int nPointsTemporal = integrator.nPointsTemporal();
     int nPointsSpatial = integrator.nPointsSpatial();
 
@@ -21,12 +17,6 @@ Stimuli::Stimuli(const Config *cfg, Integrator integrator)
     //Spatial Mesh
     m_coordinateVec = integrator.coordinateVec();
     m_spatialFreqs =integrator.spatialFreqVec();
-
-    m_w = m_temporalFreqs[m_temporalFreqs.n_elem/2+1];
-//    m_w = m_temporalFreqs[0];
-    m_k[0] = m_spatialFreqs[m_spatialFreqs.n_elem/2+2];
-    cout <<"m_w: "<< m_w << endl;
-    cout <<"m_kx: "<< m_k[0] << endl;
 
 }
 
