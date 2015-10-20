@@ -15,7 +15,7 @@ DampedOscillator::~DampedOscillator()
 
 double DampedOscillator::temporal(double t)
 {
-    if(t>= 0 && t<=m_phaseDuration){
+    if(/*t>= 0 && */t<=m_phaseDuration){
         return sin(PI/m_phaseDuration * t);
     }else if(t > m_phaseDuration && t <= 2*m_phaseDuration){
         return m_weight * sin(PI/m_phaseDuration * t);

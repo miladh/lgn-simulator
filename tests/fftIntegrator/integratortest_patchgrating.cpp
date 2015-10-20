@@ -59,15 +59,15 @@ SUITE(INTEGRATOR){
 
 
         // Test
-        for(int l = 0; l < Nt; l++){
-            for(int i = 0; i < Ns; i++){
-                for(int j = 0; j < Ns; j++){
-                    CHECK_CLOSE(real(g(i,j,l)),
-                                real(G(i,j,l)), 1e-9);
+//        for(int l = 0; l < Nt; l++){
+//            for(int i = 0; i < Ns; i++){
+//                for(int j = 0; j < Ns; j++){
+//                    CHECK_CLOSE(real(g(i,j,l)),
+//                                real(G(i,j,l)), 1e-9);
 
-                }
-            }
-        }
+//                }
+//            }
+//        }
 
     }
 

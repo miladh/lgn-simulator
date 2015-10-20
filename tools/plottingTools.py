@@ -20,8 +20,8 @@ def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis,
     nSpatialPoints = data[0].shape[1]
     resolution = 1
 
-    num_cols = 3 if num_subplots >= 3 else num_subplots
-    num_rows = int(np.ceil(num_subplots/3.))
+    num_cols = 2 if num_subplots >= 2 else num_subplots
+    num_rows = int(np.ceil(num_subplots/2.))
 
     plt.ion()
     fig = plt.figure(figsize=figsize)
@@ -57,14 +57,14 @@ def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis,
 
 
 
-def animateImshowPlots(data, figsize = (15,8), cmap = cmaps.viridis,
+def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
                         save_animation = False, animation_name = "unnamed" ):
     num_subplots = len(data)
     imshowPlots = []
     nStates = data[0].shape[0]
 
-    num_cols = 3 if num_subplots >= 3 else num_subplots
-    num_rows = int(np.ceil(num_subplots/3.))
+    num_cols = 2 if num_subplots >= 2 else num_subplots
+    num_rows = int(np.ceil(num_subplots/2.))
 
     fig = plt.figure(figsize=figsize)
 
@@ -117,14 +117,15 @@ if __name__ == "__main__":
 
     data = [
     exp.stimuli["spatioTemporal"]
-    # ,exp.interneuron["response"]["spatioTemporal"]
+    ,exp.stimuli["spatioTemporal"]
     ,exp.ganglion["response"]["spatioTemporal"]
-    # ,exp.relay["response"]["spatioTemporal"]
-    # ,exp.cortical["response"]["spatioTemporal"]
-    # ,exp.interneuron["impulseResponse"]["spatioTemporal"]
     ,exp.ganglion["impulseResponse"]["spatioTemporal"]
-    # ,exp.relay["impulseResponse"]["spatioTemporal"]
-    # ,exp.cortical["impulseResponse"]["spatioTemporal"]
+    ,exp.interneuron["response"]["spatioTemporal"]
+    ,exp.interneuron["impulseResponse"]["spatioTemporal"]
+    ,exp.relay["response"]["spatioTemporal"]
+    ,exp.relay["impulseResponse"]["spatioTemporal"]
+    ,exp.cortical["response"]["spatioTemporal"]
+    ,exp.cortical["impulseResponse"]["spatioTemporal"]
     ]
     print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
     animateImshowPlots(data)
