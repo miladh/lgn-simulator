@@ -1,10 +1,10 @@
 #include "ganglioncell.h"
 
-GanglionCell::GanglionCell(const Config *cfg, Stimuli *stim,
+GanglionCell::GanglionCell(Stimuli *stim,
                            Integrator integrator,
                            SpatialKernel *spatialKernel,
                            TemporalKernel *temporalKernel)
-    : Neuron(cfg, stim, integrator)
+    : Neuron(stim, integrator)
     , m_spatialKernel(spatialKernel)
     , m_temporalKernel(temporalKernel)
 {

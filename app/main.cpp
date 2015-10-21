@@ -82,10 +82,10 @@ int main()
     DampedOscillator damped(10, 1.38);
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&cfg, &S, integrator, &dog, &damped);
-    RelayCell relay(&cfg, &S, integrator);
-    Interneuron interneuron(&cfg, &S, integrator);
-    CorticalCell cortical(&cfg, &S, integrator);
+    GanglionCell ganglion(&S, integrator, &dog, &damped);
+    RelayCell relay(&S, integrator);
+    Interneuron interneuron(&S, integrator);
+    CorticalCell cortical(&S, integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);

@@ -2,8 +2,8 @@
 
 
 
-Interneuron::Interneuron(const Config *cfg, Stimuli *stim, Integrator integrator)
-    : Neuron(cfg, stim, integrator)
+Interneuron::Interneuron( Stimuli *stim, Integrator integrator)
+    : Neuron(stim, integrator)
 {
     m_cellType = "interneuron";
 }

@@ -1,10 +1,9 @@
 #include "neuron.h"
 
-Neuron::Neuron(const Config *cfg, Stimuli *stim, Integrator integrator)
+Neuron::Neuron(Stimuli *stim, Integrator integrator)
     : m_stim(stim)
     , m_integrator(integrator)
 {
-    const Setting & root = cfg->getRoot();
     int nPointsTemporal = integrator.nPointsTemporal();
     int nPointsSpatial = integrator.nPointsSpatial();
 

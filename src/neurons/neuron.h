@@ -2,23 +2,19 @@
 #define NEURON_H
 
 
-#include <libconfig.h++>
-#include <fftw3.h>
-
 #include "../stimuli/stimuli.h"
 #include "integrator.h"
 #include "../temporalKernels/temporalkernel.h"
 #include "../spatialKernels/spatialkernel.h"
 
 
-using namespace libconfig;
 using namespace arma;
 using namespace std;
 
 class Neuron
 {
 public:
-    Neuron(const Config *cfg, Stimuli *stim, Integrator integrator);
+    Neuron(Stimuli *stim, Integrator integrator);
     ~Neuron();
 
     struct Input {
@@ -91,10 +87,6 @@ protected:
     vector<Input> m_relayCells;
     vector<Input> m_interNeurons;
     vector<Input> m_corticalNeurons;
-
-    const std::complex<double> m_i = {0,1};
-
-
 };
 
 #endif // NEURON_H

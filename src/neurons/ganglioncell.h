@@ -12,7 +12,7 @@ using namespace arma;
 class GanglionCell : public Neuron
 {
 public:
-    GanglionCell(const Config *cfg, Stimuli *stim, Integrator integrator,
+    GanglionCell(Stimuli *stim, Integrator integrator,
                  SpatialKernel *spatialKernel,
                  TemporalKernel *temporalKernel);
     ~GanglionCell();
