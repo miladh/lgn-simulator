@@ -7,7 +7,6 @@
 #include "stimuli/grating.h"
 
 #include "integrator.h"
-#include "integratorsettings.h"
 
 #include "neurons/ganglioncell.h"
 #include "neurons/interneuron.h"
@@ -56,8 +55,7 @@ int main()
 
 
     //----------------------------------------------------------------------------
-    IntegratorSettings integratorSettings(nt, dt, ns, ds);
-    Integrator integrator(&integratorSettings);
+    Integrator integrator(nt, dt, ns, ds);
     OutputManager io(&cfg);
 
 

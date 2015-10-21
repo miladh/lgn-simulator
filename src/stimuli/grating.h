@@ -21,4 +21,6 @@ private:
 
 };
 
+Grating *createGratingStimulus(Integrator integrator, const Config *cfg);
+
 #endif // GRATING_H

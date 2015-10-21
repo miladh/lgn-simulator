@@ -22,8 +22,7 @@ SUITE(INTEGRATOR){
         int Ns = pow(2,ns);
         int Nt = pow(2,nt);
 
-        IntegratorSettings settings(nt, dt, ns, ds);
-        Integrator integrator(&settings);
+        Integrator integrator(nt, dt, ns, ds);
 
         vec s = integrator.coordinateVec();
         vec k = integrator.spatialFreqVec();

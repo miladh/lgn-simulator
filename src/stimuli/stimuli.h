@@ -3,14 +3,13 @@
 
 #include <math.h>
 #include <armadillo>
-#include <fftw3.h>
-#include <boost/math/special_functions/bessel.hpp>
+#include <libconfig.h++>
 
 #include "integrator.h"
-#include "../math/functions.h"
 
 using namespace std;
 using namespace arma;
+using namespace libconfig;
 
 class Stimuli
 {
@@ -39,7 +38,6 @@ protected:
 private:
     virtual double valueAtPoint(vec2 rVec, double t) = 0;
     virtual double fourierTransformAtFrequency(vec2 k, double w) = 0;
-
 
 };
 

@@ -4,19 +4,20 @@
 #include <iostream>
 #include <armadillo>
 #include <math.h>
+#include <libconfig.h++>
 #include <fftw3.h>
 
-#include "integratorsettings.h"
 #include "math/functions.h"
 #include "math/ffthelper.h"
 
 using namespace std;
 using namespace arma;
+using namespace libconfig;
 
 class Integrator
 {
 public:
-    Integrator(IntegratorSettings *settings);
+    Integrator(int nt, double dt, int ns, double ds);
     ~Integrator();
 
     cx_cube integrate(cx_cube data);
@@ -37,8 +38,6 @@ public:
     double spatialFreqResolution() const;
 
 private:
-    IntegratorSettings *m_settings;
-
     int m_nPointsTemporal= 0;
     int m_nPointsSpatial = 0;
     double m_maxT = 0;
@@ -56,9 +55,8 @@ private:
     vec m_temporalFreqs;
     vec m_spatialFreqs;
 
-
-
-
 };
+
+Integrator *createIntegrator(const Config* cfg);
 
 #endif // INTEGRATOR_H

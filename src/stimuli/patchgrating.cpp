@@ -39,3 +39,18 @@ double PatchGrating::fourierTransformAtFrequency(vec2 kVec, double w)
     return s/m_integrator.temporalFreqResolution();
 
 }
+
+PatchGrating *createPatchGratingStimulus(Integrator integrator, const Config *cfg)
+{
+    const Setting & root = cfg->getRoot();
+    double contrast = root["stimuliSettings"]["C"];
+    double spotDiameter = root["stimuliSettings"]["d"];
+
+    vec k = integrator.spatialFreqVec();
+    vec w = integrator.temporalFreqVec();
+    double wd = w(w.n_elem/2+2);
+    double kx = k(k.n_elem/2+6);
+    double ky = k(k.n_elem/2);
+
+    return new PatchGrating(integrator, {kx, ky}, wd, contrast, spotDiameter);
+}

@@ -33,11 +33,9 @@ SOURCES += \
     temporalKernels/diracDelta.cpp \
     spatialKernels/ellipticgaussian.cpp \
     temporalKernels/dampedoscillator.cpp \
-    integratorsettings.cpp \
     math/ffthelper.cpp \
     stimuli/grating.cpp \
-    neurons/interneuron.cpp \
-    stimuli/stimulisettings.cpp
+    neurons/interneuron.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -56,8 +54,6 @@ HEADERS += \
     temporalKernels/diracDelta.h \
     spatialKernels/ellipticgaussian.h \
     temporalKernels/dampedoscillator.h \
-    integratorsettings.h \
     math/ffthelper.h \
     stimuli/grating.h \
-    neurons/interneuron.h \
-    stimuli/stimulisettings.h
+    neurons/interneuron.h

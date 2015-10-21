@@ -30,8 +30,7 @@ SUITE(INTEGRATOR){
         int Ns = pow(2,ns);
         int Nt = pow(2,nt);
 
-        IntegratorSettings settings(nt, dt, ns, ds);
-        Integrator integrator(&settings);
+        Integrator integrator(nt, dt, ns, ds);
 
         vec s = integrator.coordinateVec();
         vec k = integrator.spatialFreqVec();
@@ -93,8 +92,7 @@ SUITE(INTEGRATOR){
         double ds = 0.1;
         double a = 2.1;
 
-        IntegratorSettings settings(0, 0, ns, ds);
-        Integrator integrator(&settings);
+        Integrator integrator(0, 0, ns, ds);
 
         int Ns = pow(2,ns);
         cx_mat g = zeros<cx_mat>(Ns, Ns);

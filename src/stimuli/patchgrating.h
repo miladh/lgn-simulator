@@ -21,8 +21,8 @@ private:
     double valueAtPoint(vec2 rVec, double t);
     double fourierTransformAtFrequency(vec2 kVec, double w);
 
-
-
 };
+
+PatchGrating *createPatchGratingStimulus(const Config* cfg);
 
 #endif // PATCHGRATING_H

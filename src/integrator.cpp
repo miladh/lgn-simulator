@@ -1,11 +1,10 @@
 #include "integrator.h"
 
-Integrator::Integrator(IntegratorSettings *settings)
-    : m_settings(settings)
-    , m_nPointsTemporal(settings->nPointsTemporal())
-    , m_nPointsSpatial(settings->nPointsSpatial())
-    , m_dt(settings->temporalResolution())
-    , m_ds(settings->spatialResolution())
+Integrator::Integrator(int nt, double dt, int ns, double ds)
+    : m_nPointsTemporal(pow(2,nt))
+    , m_dt(dt)
+    , m_nPointsSpatial(pow(2,ns))
+    , m_ds(ds)
     , m_dw(2.* PI/m_nPointsTemporal/m_dt)
     , m_dk(2.* PI/m_nPointsSpatial/m_ds)
     //    , m_temporalSamplingFreq(m_nPointsTemporal/m_maxT)
@@ -136,15 +135,14 @@ double Integrator::spatialFreqResolution() const
 
 
 
+Integrator *createIntegrator(const Config *cfg)
+{
+    const Setting & root = cfg->getRoot();
+    int ns = root["integratorSettings"]["ns"];
+    int nt = root["integratorSettings"]["nt"];
+    double dt = root["integratorSettings"]["dt"];
+    double ds = root["integratorSettings"]["ds"];
 
+    return new Integrator(nt, dt, ns, ds);
 
-
-
-
-
-
-
-
-
-
-
+}

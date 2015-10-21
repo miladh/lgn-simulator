@@ -21,8 +21,7 @@ SUITE(INTEGRATOR){
         double B = 1.0;
         double b = 3.1;
 
-        IntegratorSettings settings(0, 0, ns, ds);
-        Integrator integrator(&settings);
+        Integrator integrator(0, 0, ns, ds);
 
         int Ns = pow(2,ns);
         cx_mat g = zeros<cx_mat>(Ns, Ns);

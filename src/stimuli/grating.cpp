@@ -32,3 +32,17 @@ double Grating::fourierTransformAtFrequency(vec2 k, double w)
     return 8*PI*PI*PI* m_contrast * s;
 }
 
+
+Grating *createGratingStimulus(Integrator integrator, const Config *cfg)
+{
+    const Setting & root = cfg->getRoot();
+    double contrast = root["stimuliSettings"]["C"];
+
+    vec k = integrator.spatialFreqVec();
+    vec w = integrator.temporalFreqVec();
+    double wd = w(w.n_elem/2+2);
+    double kx = k(k.n_elem/2+6);
+    double ky = k(k.n_elem/2);
+
+    return new Grating(integrator, {kx, ky}, wd, contrast);
+}
