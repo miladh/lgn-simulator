@@ -24,3 +24,13 @@ double Gaussian::fourierTransform(vec2 kVec)
     return m_weight * exp(-k*k * m_spread*m_spread * 0.25);
 }
 
+
+
+Gaussian createGaussianSpatialKernel(const Config *cfg)
+{
+    const Setting & root = cfg->getRoot();
+    double tau = root["spatialKernelSettings"]["weight"];
+    double delay = root["spatialKernelSettings"]["spread"];
+
+    return Gaussian(tau, delay);
+}

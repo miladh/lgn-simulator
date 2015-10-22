@@ -24,3 +24,13 @@ double DecayingExponential::fourierTransform(double w)
     return cos(w*m_delay)/ (1 + w*w * m_tau*m_tau);
 }
 
+
+DecayingExponential createDecayingExponentialTemporalKernel(const Config *cfg)
+{
+    const Setting & root = cfg->getRoot();
+    double tau = root["temporalKernelSettings"]["tau"];
+    double delay = root["temporalKernelSettings"]["delay"];
+
+    return DecayingExponential(tau, delay);
+
+}

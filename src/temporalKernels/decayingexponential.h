@@ -19,4 +19,6 @@ private:
     double m_delay = 0.0;
 };
 
+DecayingExponential createDecayingExponentialTemporalKernel(const Config *cfg);
+
 #endif // DECAYINGEXPONENTIAL_H

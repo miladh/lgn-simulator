@@ -23,4 +23,7 @@ private:
     double m_sinTheta = 0.0;
 };
 
+EllipticGaussian createEllipticGaussianSpatialKernel(const Config *cfg);
+
+
 #endif // ELLIPTICGAUSSIAN_H

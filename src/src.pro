@@ -30,7 +30,6 @@ SOURCES += \
     temporalKernels/decayingexponential.cpp \
     spatialKernels/gaussian.cpp \
     neurons/ganglioncell.cpp \
-    temporalKernels/diracDelta.cpp \
     spatialKernels/ellipticgaussian.cpp \
     temporalKernels/dampedoscillator.cpp \
     math/ffthelper.cpp \
@@ -51,7 +50,6 @@ HEADERS += \
     temporalKernels/decayingexponential.h \
     spatialKernels/gaussian.h \
     neurons/ganglioncell.h \
-    temporalKernels/diracDelta.h \
     spatialKernels/ellipticgaussian.h \
     temporalKernels/dampedoscillator.h \
     math/ffthelper.h \

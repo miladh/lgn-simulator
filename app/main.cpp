@@ -18,7 +18,6 @@
 #include "spatialKernels/ellipticgaussian.h"
 
 #include "temporalKernels/decayingexponential.h"
-#include "temporalKernels/diracDelta.h"
 #include "temporalKernels/dampedoscillator.h"
 
 
@@ -29,22 +28,9 @@ int main()
 
     cout << "=====Extended-DOG Model=====" << endl;
 
-    //read config file---------------------------------------------------------------
+    //read config file-------------------------------------------------------
     Config cfg;
     cfg.readFile("../../eDOG/app/config.cfg");
-    const Setting & root = cfg.getRoot();
-
-
-    double dogA = root["dogSettings"]["A"];
-    double doga = root["dogSettings"]["a"];
-    double dogB = root["dogSettings"]["B"];
-    double dogb = root["dogSettings"]["b"];
-    double tau_rg = root["temporalSettings"]["tau_rg"];
-    double tau_rc = root["temporalSettings"]["tau_rc"];
-    double delay = root["temporalSettings"]["delay"];
-    double weight = 0.5;
-    double spread = 1.1;
-
 
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);
@@ -55,16 +41,14 @@ int main()
 
 
     //Spatial kernels:----------------------------------------------------------
-    DOG dog(dogA, doga, dogB, dogb);
-    Gaussian gauss(weight, spread);
-    EllipticGaussian ellipticGauss(weight, PI/4*3, 0.1, 1.0);
+    DOG dog = createDOGSpatialKernel(&cfg);
+    Gaussian gauss = createGaussianSpatialKernel(&cfg);
+    EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
 
 
     //Temporal kernels:-------------------------------------------------------
-    DecayingExponential Ktg(tau_rg, 0);
-    DecayingExponential Ktc(tau_rc, delay);
-    DiracDelta delta(0.0);
-    DampedOscillator damped(10, 1.38);
+    DecayingExponential Kt = createDecayingExponentialTemporalKernel(&cfg);
+    DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
 
 
     //Neurons:-----------------------------------------------------------------
@@ -86,12 +70,12 @@ int main()
     //connect neurons----------------------------------------------------------
     relay.addGanglionCell(&ganglion,&gauss, &damped);
     relay.addInterNeuron(&interneuron,&dog, &damped);
-    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
+    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
 
-    interneuron.addGanglionCell(&ganglion,&dog, &Ktg);
-    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Ktc);
+    interneuron.addGanglionCell(&ganglion,&dog, &Kt);
+    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
 
-    cortical.addRelayCell(&relay, &dog, &Ktg);
+    cortical.addRelayCell(&relay, &dog, &Kt);
 
 
 

@@ -33,3 +33,14 @@ double DampedOscillator::fourierTransform(double w)
                      - m_weight * cos(2* m_phaseDuration * w));
 }
 
+
+
+DampedOscillator createDampedOscillatorTemporalKernel(const Config *cfg)
+{
+    const Setting & root = cfg->getRoot();
+    double phaseDuration = root["temporalKernelSettings"]["phaseDuration"];
+    double weight = root["temporalKernelSettings"]["weight"];
+
+    return DampedOscillator(phaseDuration, weight);
+
+}

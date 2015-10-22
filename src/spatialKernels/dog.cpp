@@ -34,3 +34,15 @@ double DOG::fourierTransform(vec2 k)
     return center - surround;
 }
 
+
+
+DOG createDOGSpatialKernel(const Config *cfg)
+{
+    const Setting & root = cfg->getRoot();
+    double A = root["spatialKernelSettings"]["A"];
+    double a = root["spatialKernelSettings"]["a"];
+    double B = root["spatialKernelSettings"]["B"];
+    double b = root["spatialKernelSettings"]["b"];
+
+    return DOG(A, a, B, b);
+}

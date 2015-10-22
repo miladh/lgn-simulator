@@ -20,4 +20,6 @@ private:
     double m_weight;
 };
 
+DampedOscillator createDampedOscillatorTemporalKernel(const Config *cfg);
+
 #endif // DAMPEDOSCILLATOR_H

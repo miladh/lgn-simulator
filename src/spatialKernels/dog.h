@@ -30,4 +30,6 @@ private:
 
 };
 
+DOG createDOGSpatialKernel(const Config *cfg);
+
 #endif // DOG_H

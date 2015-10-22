@@ -35,3 +35,17 @@ double EllipticGaussian::fourierTransform(vec2 kVec)
     return m_weight * exp(-exp1*exp1 - exp2*exp2);
 }
 
+
+
+EllipticGaussian createEllipticGaussianSpatialKernel(const Config *cfg)
+{
+    const Setting & root = cfg->getRoot();
+    double weight = root["spatialKernelSettings"]["weight_elliptic"];
+    double angle = root["spatialKernelSettings"]["angle"];
+    double widthLong = root["spatialKernelSettings"]["widthLong"];
+    double widthNarrow = root["spatialKernelSettings"]["widthNarrow"];
+
+    angle *=PI/180.;
+
+    return EllipticGaussian(weight, angle, widthLong, widthNarrow);
+}

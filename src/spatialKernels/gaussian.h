@@ -18,4 +18,6 @@ private:
     double m_spread = 0;
 };
 
+Gaussian createGaussianSpatialKernel(const Config *cfg);
+
 #endif // GAUSSIAN_H
