@@ -8,7 +8,7 @@ class PatchGrating : public Stimulus
 {
 public:
     PatchGrating(Integrator *integrator, vec2 kd,
-                 double wd, double contrast, double spotDiameter);
+                 double wd, double contrast, double spotDiameterRatio);
     ~PatchGrating();
 
 private:

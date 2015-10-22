@@ -11,7 +11,7 @@ Stimulus::Stimulus(Integrator *integrator)
     m_fourierTransform = zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
-    timeVec = integrator->timeVec();
+    m_timeVec = integrator->timeVec();
     m_temporalFreqs = integrator->temporalFreqVec();
 
     //Spatial Mesh
@@ -32,7 +32,7 @@ void Stimulus::computeSpatiotemporal()
             for(int j = 0; j < int(m_spatioTemporal.n_cols); j++){
                 m_spatioTemporal(i,j,k) = valueAtPoint({m_coordinateVec[i],
                                                         m_coordinateVec[j]},
-                                                       timeVec[k]);
+                                                       m_timeVec[k]);
             }
         }
     }

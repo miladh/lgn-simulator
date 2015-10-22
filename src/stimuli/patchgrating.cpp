@@ -2,12 +2,12 @@
 
 PatchGrating::PatchGrating(Integrator *integrator, vec2 kd,
                            double wd, double contrast,
-                           double spotDiameter)
+                           double spotDiameterRatio)
     : Stimulus(integrator)
     , m_k(kd)
     , m_w(wd)
     , m_contrast(contrast)
-    , m_spotDiameter(spotDiameter)
+    , m_spotDiameter(spotDiameterRatio * m_coordinateVec.max() * 2)
 {
 }
 
