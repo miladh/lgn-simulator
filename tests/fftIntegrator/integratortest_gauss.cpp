@@ -5,6 +5,8 @@
 #include "integrator.h"
 #include "math/functions.h"
 
+#include "stimuli/oscillatinggaussian.h"
+
 using namespace std;
 using namespace arma;
 
@@ -18,6 +20,72 @@ double gaussFT(double a, vec k){
 }
 
 SUITE(INTEGRATOR){
+
+
+    TEST(gaussSpatialCosineTemporal_1){
+        //Mesh
+        int ns = 7;
+        int nt = 4;
+        double ds = 0.1;
+        double dt = 0.1;
+
+        int Ns = pow(2,ns);
+        int Nt = pow(2,nt);
+
+        Integrator integrator(nt, dt, ns, ds);
+
+        vec s = integrator.coordinateVec();
+        vec k = integrator.spatialFreqVec();
+        vec t = integrator.timeVec();
+        vec w = integrator.temporalFreqVec();
+
+        double a = 2.1;
+        double wd = w(w.n_elem/2+2);
+        double kx = k(k.n_elem/2+3);
+        double ky = k(k.n_elem/2+5);
+        OscillatingGaussian S(&integrator, a, wd);
+
+        cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
+        cx_cube G = zeros<cx_cube>(Ns, Ns, Nt);
+        cx_cube f = zeros<cx_cube>(Ns, Ns, Nt);
+
+
+        //Spatiotemporal signal
+        S.computeSpatiotemporal();
+        g.set_real(S.spatioTemporal());
+
+
+        //fourier signal
+        S.computeFourierTransform();
+        f = S.fourierTransform();
+
+        // Backward
+        G = integrator.integrate(f);
+        G = FFTHelper::fftShift(G);
+
+        // Test
+        for(int l = 0; l < Nt; l++){
+            for(int i = 0; i < Ns; i++){
+                for(int j = 0; j < Ns; j++){
+                    CHECK_CLOSE(real(g(i,j,l)),
+                                real(G(i,j,l)), 1e-9);
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     TEST(gaussSpatialCosineTemporal){

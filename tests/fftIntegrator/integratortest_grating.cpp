@@ -9,7 +9,6 @@ using namespace std;
 using namespace arma;
 
 
-
 SUITE(INTEGRATOR){
     TEST(gratingStimuli){
         //Mesh

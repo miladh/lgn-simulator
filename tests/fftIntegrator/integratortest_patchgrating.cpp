@@ -9,18 +9,16 @@ using namespace std;
 using namespace arma;
 
 
-
 SUITE(INTEGRATOR){
     TEST(patchGratingStimuli){
         //Mesh
-        int ns = 8;
-        int nt = 5;
+        int ns = 7;
+        int nt = 2;
         double ds = 0.1;
-        double dt = 0.1;
+        double dt = 0.01;
 
         int Ns = pow(2,ns);
         int Nt = pow(2,nt);
-
 
         Integrator integrator(nt, dt, ns, ds);
 
@@ -30,9 +28,9 @@ SUITE(INTEGRATOR){
         vec w = integrator.temporalFreqVec();
 
         double C = 1.0;
-        double d = s.max();
+        double d = 0.8;
         double wd = w(w.n_elem/2);
-        double kx = k(k.n_elem/2);
+        double kx = k(k.n_elem/2+4);
         double ky = k(k.n_elem/2);
         PatchGrating S(&integrator, {kx, ky}, wd, C, d);
 
@@ -56,13 +54,12 @@ SUITE(INTEGRATOR){
         G = FFTHelper::fftShift(G);
 
 
-
         // Test
 //        for(int l = 0; l < Nt; l++){
 //            for(int i = 0; i < Ns; i++){
 //                for(int j = 0; j < Ns; j++){
 //                    CHECK_CLOSE(real(g(i,j,l)),
-//                                real(G(i,j,l)), 1e-9);
+//                                real(G(i,j,l)), 1e-3);
 
 //                }
 //            }

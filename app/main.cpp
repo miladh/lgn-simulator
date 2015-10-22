@@ -3,8 +3,9 @@
 #include <outputmanager.h>
 #include <unistd.h>
 
-#include "stimuli/patchgrating.h"<l
+#include "stimuli/patchgrating.h"
 #include "stimuli/grating.h"
+#include "stimuli/oscillatinggaussian.h"
 
 #include "integrator.h"
 
@@ -37,7 +38,9 @@ int main()
 
     //Stim---------------------------------------------------------------------
 //    Grating S = createGratingStimulus(&integrator,&cfg);
-    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
+//    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
+    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
+
 
 
     //Spatial kernels:----------------------------------------------------------
@@ -65,8 +68,6 @@ int main()
 
 
 
-
-
     //connect neurons----------------------------------------------------------
     relay.addGanglionCell(&ganglion,&gauss, &damped);
     relay.addInterNeuron(&interneuron,&dog, &damped);
@@ -76,9 +77,6 @@ int main()
     interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
 
     cortical.addRelayCell(&relay, &dog, &Kt);
-
-
-
 
 
 

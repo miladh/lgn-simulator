@@ -11,14 +11,14 @@ def plotResponse(data, figsize = (15,8)):
     plt.show()
 
 
-def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis,
+def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis, resolution = 0,
                         save_animation = False, animation_name = "unnamed" ):
 
     num_subplots = len(data)
     imshowPlots = []
     nStates = data[0].shape[0]
     nSpatialPoints = data[0].shape[1]
-    resolution = 1
+    resolution = 2**resolution
 
     num_cols = 2 if num_subplots >= 2 else num_subplots
     num_rows = int(np.ceil(num_subplots/2.))
@@ -120,13 +120,13 @@ if __name__ == "__main__":
     ,exp.stimuli["spatioTemporal"]
     ,exp.ganglion["response"]["spatioTemporal"]
     ,exp.ganglion["impulseResponse"]["spatioTemporal"]
-    ,exp.interneuron["response"]["spatioTemporal"]
-    ,exp.interneuron["impulseResponse"]["spatioTemporal"]
-    ,exp.relay["response"]["spatioTemporal"]
-    ,exp.relay["impulseResponse"]["spatioTemporal"]
-    ,exp.cortical["response"]["spatioTemporal"]
-    ,exp.cortical["impulseResponse"]["spatioTemporal"]
+    # ,exp.interneuron["response"]["spatioTemporal"]
+    # ,exp.interneuron["impulseResponse"]["spatioTemporal"]
+    # ,exp.relay["response"]["spatioTemporal"]
+    # ,exp.relay["impulseResponse"]["spatioTemporal"]
+    # ,exp.cortical["response"]["spatioTemporal"]
+    # ,exp.cortical["impulseResponse"]["spatioTemporal"]
     ]
     print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
     animateImshowPlots(data)
-    # animate3dPlots(data)
+    # animate3dPlots(data, resolution = 3)

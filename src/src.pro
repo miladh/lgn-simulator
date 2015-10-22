@@ -34,7 +34,8 @@ SOURCES += \
     temporalKernels/dampedoscillator.cpp \
     math/ffthelper.cpp \
     stimuli/grating.cpp \
-    neurons/interneuron.cpp
+    neurons/interneuron.cpp \
+    stimuli/oscillatinggaussian.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -54,4 +55,5 @@ HEADERS += \
     temporalKernels/dampedoscillator.h \
     math/ffthelper.h \
     stimuli/grating.h \
-    neurons/interneuron.h
+    neurons/interneuron.h \
+    stimuli/oscillatinggaussian.h
