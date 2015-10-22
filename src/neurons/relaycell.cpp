@@ -13,7 +13,7 @@ RelayCell::~RelayCell()
 }
 
 
-double RelayCell::impulseResponseFT(vec2 kVec, double w)
+double RelayCell::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w)
 {
 
     double G = 0;
@@ -25,7 +25,7 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
         Neuron *ganglionCell = g.neuron;
         G += g.spatialKernel->fourierTransform(kVec)
                 * g.temporalKernel->fourierTransform(w)
-                * ganglionCell->impulseResponseFT(kVec,w);
+                * ganglionCell->impulseResponseFourierTransformAtFrequency(kVec,w);
     }
 
 
@@ -41,7 +41,7 @@ double RelayCell::impulseResponseFT(vec2 kVec, double w)
             Neuron *ganglionCell = g.neuron;
             Iff += g.spatialKernel->fourierTransform(kVec)
                     * g.temporalKernel->fourierTransform(w)
-                    * ganglionCell->impulseResponseFT(kVec,w);
+                    * ganglionCell->impulseResponseFourierTransformAtFrequency(kVec,w);
         }
         Iff*= Kri;
 

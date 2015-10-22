@@ -15,7 +15,7 @@ Interneuron::~Interneuron()
 
 
 
-double Interneuron::impulseResponseFT(vec2 kVec, double w)
+double Interneuron::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w)
 {
 
 
@@ -26,7 +26,7 @@ double Interneuron::impulseResponseFT(vec2 kVec, double w)
         Neuron *ganglionCell = g.neuron;
         G += g.spatialKernel->fourierTransform(kVec)
                 * g.temporalKernel->fourierTransform(w)
-                * ganglionCell->impulseResponseFT(kVec,w);
+                * ganglionCell->impulseResponseFourierTransformAtFrequency(kVec,w);
     }
 
     for (const Input c : m_corticalNeurons){

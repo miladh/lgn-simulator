@@ -12,8 +12,8 @@ public:
     ~Interneuron();
 
     // Neuron interface
-public:
-    virtual double impulseResponseFT(vec2 kVec, double w);
+private:
+    virtual double impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
 };
 
 #endif // INTERNEURONS_H

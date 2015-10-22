@@ -45,14 +45,9 @@ int main()
     double weight = 0.5;
     double spread = 1.1;
 
-    double contrast = root["stimuliSettings"]["C"];
-    double spotDiameter = root["stimuliSettings"]["d"];
 
-
-    //----------------------------------------------------------------------------
+    //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);
-    OutputManager io(&cfg);
-
 
     //Stim---------------------------------------------------------------------
 //    Grating S = createGratingStimulus(&integrator,&cfg);
@@ -70,6 +65,7 @@ int main()
     DecayingExponential Ktc(tau_rc, delay);
     DiracDelta delta(0.0);
     DampedOscillator damped(10, 1.38);
+
 
     //Neurons:-----------------------------------------------------------------
     GanglionCell ganglion(&integrator, &dog, &damped);
@@ -122,7 +118,8 @@ int main()
 
 
 
-    //write:-------------------------------------------------------------------
+    //Output manager:----------------------------------------------------------
+    OutputManager io(&cfg);
     io.writeResponse(neurons, S);
 
 

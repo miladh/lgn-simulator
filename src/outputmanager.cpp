@@ -58,7 +58,7 @@ void OutputManager::writeResponse(const vector<Neuron*> &neurons,
         cube complexResponse = real(neuron->responseFT());
 
         cube realImpulseResponse = neuron->impulseResponse();
-        cube complexImpulseResponse = real(neuron->impulseResponseFT());
+        cube complexImpulseResponse = real(neuron->impulseResponseFourierTransformAtFrequency());
 
         string cellGroupName = neuron->cellType();
         Group cellGroup = m_output->createGroup(cellGroupName);

@@ -28,8 +28,10 @@ public:
     void computeResponse(Stimulus *stimulus);
     void computeImpulseResponse();
 
+
     // Virtual functions
-    virtual double impulseResponseFT(vec2 kVec, double w) = 0;
+    virtual double impulseResponseFourierTransformAtFrequency(vec2 kVec, double w) = 0;
+
 
     // Add cell functions
     void addGanglionCell(Neuron *neuron,
@@ -52,7 +54,7 @@ public:
     cube response() const;
     cube impulseResponse() const;
     cx_cube responseFT() const;
-    cx_cube impulseResponseFT() const;
+    cx_cube impulseResponseFourierTransformAtFrequency() const;
 
 
     vector<Input> ganglionCells() const;
@@ -63,8 +65,8 @@ public:
     string cellType() const;
 
 private:
-        void computeImpulseResponseFT();
-        Integrator* m_integrator;
+    void computeImpulseResponseFourierTransform();
+    Integrator* m_integrator;
 
 protected:
 

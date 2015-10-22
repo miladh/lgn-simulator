@@ -9,10 +9,9 @@ public:
     CorticalCell(Integrator *integrator);
     ~CorticalCell();
 
-protected:
-
+private:
     // Neuron interface
-    double impulseResponseFT(vec2 kVec, double w);
+    double impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
 };
 
 #endif // CORTICALCELL_H

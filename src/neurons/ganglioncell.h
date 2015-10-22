@@ -24,10 +24,10 @@ private:
     TemporalKernel *m_temporalKernel;
 
 
-    double impulseResponse(vec2 rVec, double t);
+    double impulseResponseValueAtPoint(vec2 rVec, double t);
 
     // Neuron interface
-    double impulseResponseFT(vec2 kVec, double w);
+    double impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
 };
 
 #endif // GANGLIONCELL_H

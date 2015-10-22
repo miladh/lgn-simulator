@@ -9,9 +9,9 @@ public:
     RelayCell(Integrator *integrator);
     ~RelayCell();
 
-protected:
+private:
     // Neuron interface
-    double impulseResponseFT(vec2 kVec, double w);
+    double impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
 };
 
 #endif // RELAYCELL_H

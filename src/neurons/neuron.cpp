@@ -29,7 +29,7 @@ Neuron::~Neuron()
 
 void Neuron::computeResponse(Stimulus *stimulus)
 {
-    computeImpulseResponseFT();
+    computeImpulseResponseFourierTransform();
 
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
     m_responseFT = m_integrator->integrate(m_responseFT);
@@ -41,7 +41,7 @@ void Neuron::computeResponse(Stimulus *stimulus)
 
 void Neuron::computeImpulseResponse()
 {
-    computeImpulseResponseFT();
+    computeImpulseResponseFourierTransform();
 
     m_impulseResponseFT = m_integrator->integrate(m_impulseResponseFT);
     m_impulseResponseFT = FFTHelper::fftShift(m_impulseResponseFT);
@@ -50,14 +50,14 @@ void Neuron::computeImpulseResponse()
 }
 
 
-void Neuron::computeImpulseResponseFT()
+void Neuron::computeImpulseResponseFourierTransform()
 {
     for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
         for(int i = 0; i < int(m_impulseResponseFT.n_rows); i++){
             for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){
                 m_impulseResponseFT(i,j,k) =
-                        impulseResponseFT({m_spatialFreqs[i],m_spatialFreqs[j]},
-                                          m_temporalFreqs[k]);
+                        impulseResponseFourierTransformAtFrequency(
+                {m_spatialFreqs[i], m_spatialFreqs[j]},m_temporalFreqs[k]);
             }
         }
     }
@@ -136,7 +136,7 @@ cx_cube Neuron::responseFT() const
     return m_responseFT;
 }
 
-cx_cube Neuron::impulseResponseFT() const
+cx_cube Neuron::impulseResponseFourierTransformAtFrequency() const
 {
     return m_impulseResponseFT;
 }
