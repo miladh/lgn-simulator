@@ -1,8 +1,7 @@
 #include "neuron.h"
 
-Neuron::Neuron(Stimulus *stim, Integrator integrator)
-    : m_stim(stim)
-    , m_integrator(integrator)
+Neuron::Neuron(Integrator integrator)
+    : m_integrator(integrator)
 {
     int nPointsTemporal = integrator.nPointsTemporal();
     int nPointsSpatial = integrator.nPointsSpatial();
@@ -28,11 +27,11 @@ Neuron::~Neuron()
 }
 
 
-void Neuron::computeResponse()
+void Neuron::computeResponse(Stimulus *stimulus)
 {
     computeImpulseResponseFT();
 
-    m_responseFT = m_impulseResponseFT % m_stim->fourierTransform();
+    m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
     m_responseFT = m_integrator.integrate(m_responseFT);
     m_responseFT = FFTHelper::fftShift(m_responseFT);
 

@@ -4,7 +4,7 @@ GanglionCell::GanglionCell(Stimulus *stim,
                            Integrator integrator,
                            SpatialKernel *spatialKernel,
                            TemporalKernel *temporalKernel)
-    : Neuron(stim, integrator)
+    : Neuron(integrator)
     , m_spatialKernel(spatialKernel)
     , m_temporalKernel(temporalKernel)
 {

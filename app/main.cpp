@@ -116,16 +116,16 @@ int main()
     S.computeSpatiotemporal();
     S.computeFourierTransform();
 
-    ganglion.computeResponse();
+    ganglion.computeResponse(&S);
     ganglion.computeImpulseResponse();
 
-    relay.computeResponse();
+    relay.computeResponse(&S);
     relay.computeImpulseResponse();
 
-    interneuron.computeResponse();
+    interneuron.computeResponse(&S);
     interneuron.computeImpulseResponse();
 
-    cortical.computeResponse();
+    cortical.computeResponse(&S);
     cortical.computeImpulseResponse();
 
 

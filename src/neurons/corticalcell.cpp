@@ -1,7 +1,7 @@
 #include "corticalcell.h"
 
 CorticalCell::CorticalCell(Stimulus *stim, Integrator integrator)
-    : Neuron(stim, integrator)
+    : Neuron(integrator)
 {
         m_cellType = "cortical";
 
