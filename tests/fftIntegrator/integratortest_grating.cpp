@@ -32,7 +32,7 @@ SUITE(INTEGRATOR){
         double wd = w(w.n_elem/2+2);
         double kx = k(k.n_elem/2+3);
         double ky = k(k.n_elem/2+5);
-        Grating S(integrator, {kx, ky}, wd, C);
+        Grating S(&integrator, {kx, ky}, wd, C);
 
         cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
         cx_cube G = zeros<cx_cube>(Ns, Ns, Nt);

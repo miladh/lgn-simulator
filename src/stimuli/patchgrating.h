@@ -7,7 +7,7 @@
 class PatchGrating : public Stimulus
 {
 public:
-    PatchGrating(Integrator integrator, vec2 kd,
+    PatchGrating(Integrator *integrator, vec2 kd,
                  double wd, double contrast, double spotDiameter);
     ~PatchGrating();
 
@@ -23,6 +23,6 @@ private:
 
 };
 
-PatchGrating *createPatchGratingStimulus(const Config* cfg);
+PatchGrating createPatchGratingStimulus(Integrator *integrator, const Config* cfg);
 
 #endif // PATCHGRATING_H

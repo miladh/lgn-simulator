@@ -7,7 +7,7 @@
 class Grating : public Stimulus
 {
 public:
-    Grating(Integrator integrator, vec2 kd, double wd, double contrast);
+    Grating(Integrator *integrator, vec2 kd, double wd, double contrast);
     ~Grating();
 
     // Stimuli interface
@@ -21,6 +21,6 @@ private:
 
 };
 
-Grating *createGratingStimulus(Integrator integrator, const Config *cfg);
+Grating createGratingStimulus(Integrator *integrator, const Config *cfg);
 
 #endif // GRATING_H

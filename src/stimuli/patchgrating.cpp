@@ -1,6 +1,6 @@
 #include "patchgrating.h"
 
-PatchGrating::PatchGrating(Integrator integrator, vec2 kd,
+PatchGrating::PatchGrating(Integrator *integrator, vec2 kd,
                            double wd, double contrast,
                            double spotDiameter)
     : Stimulus(integrator)
@@ -36,21 +36,21 @@ double PatchGrating::fourierTransformAtFrequency(vec2 kVec, double w)
         s *= 2. * Functions::secondKindBesselFunction(arg)/arg;
     }
 
-    return s/m_integrator.temporalFreqResolution();
+    return s/m_integrator->temporalFreqResolution();
 
 }
 
-PatchGrating *createPatchGratingStimulus(Integrator integrator, const Config *cfg)
+PatchGrating createPatchGratingStimulus(Integrator *integrator, const Config *cfg)
 {
     const Setting & root = cfg->getRoot();
     double contrast = root["stimuliSettings"]["C"];
     double spotDiameter = root["stimuliSettings"]["d"];
 
-    vec k = integrator.spatialFreqVec();
-    vec w = integrator.temporalFreqVec();
+    vec k = integrator->spatialFreqVec();
+    vec w = integrator->temporalFreqVec();
     double wd = w(w.n_elem/2+2);
     double kx = k(k.n_elem/2+6);
     double ky = k(k.n_elem/2);
 
-    return new PatchGrating(integrator, {kx, ky}, wd, contrast, spotDiameter);
+    return PatchGrating(integrator, {kx, ky}, wd, contrast, spotDiameter);
 }

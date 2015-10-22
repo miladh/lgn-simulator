@@ -14,7 +14,7 @@ using namespace libconfig;
 class Stimulus
 {
 public:
-    Stimulus(Integrator integrator);
+    Stimulus(Integrator *integrator);
     ~Stimulus();
 
     void computeSpatiotemporal();
@@ -34,7 +34,8 @@ protected:
     vec timeVec;
     vec m_temporalFreqs;
 
-    Integrator m_integrator;
+    Integrator *m_integrator;
+
 private:
     virtual double valueAtPoint(vec2 rVec, double t) = 0;
     virtual double fourierTransformAtFrequency(vec2 k, double w) = 0;

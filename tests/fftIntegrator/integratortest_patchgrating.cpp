@@ -34,7 +34,7 @@ SUITE(INTEGRATOR){
         double wd = w(w.n_elem/2);
         double kx = k(k.n_elem/2);
         double ky = k(k.n_elem/2);
-        PatchGrating S(integrator, {kx, ky}, wd, C, d);
+        PatchGrating S(&integrator, {kx, ky}, wd, C, d);
 
         cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
         cx_cube G = zeros<cx_cube>(Ns, Ns, Nt);

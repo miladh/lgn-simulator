@@ -1,22 +1,22 @@
 #include "stimuli.h"
 
 
-Stimulus::Stimulus(Integrator integrator)
+Stimulus::Stimulus(Integrator *integrator)
     : m_integrator(integrator)
 {
-    int nPointsTemporal = integrator.nPointsTemporal();
-    int nPointsSpatial = integrator.nPointsSpatial();
+    int nPointsTemporal = integrator->nPointsTemporal();
+    int nPointsSpatial = integrator->nPointsSpatial();
 
     m_spatioTemporal = zeros<cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
     m_fourierTransform = zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
-    timeVec = integrator.timeVec();
-    m_temporalFreqs = integrator.temporalFreqVec();
+    timeVec = integrator->timeVec();
+    m_temporalFreqs = integrator->temporalFreqVec();
 
     //Spatial Mesh
-    m_coordinateVec = integrator.coordinateVec();
-    m_spatialFreqs =integrator.spatialFreqVec();
+    m_coordinateVec = integrator->coordinateVec();
+    m_spatialFreqs = integrator->spatialFreqVec();
 
 }
 
@@ -54,7 +54,10 @@ void Stimulus::computeFourierTransform()
             }
         }
     }
+
 }
+
+
 cube Stimulus::spatioTemporal() const
 {
     return m_spatioTemporal;

@@ -45,11 +45,6 @@ int main()
     double weight = 0.5;
     double spread = 1.1;
 
-    int ns = root["integratorSettings"]["ns"];
-    int nt = root["integratorSettings"]["nt"];
-    double dt = root["integratorSettings"]["dt"];
-    double ds = root["integratorSettings"]["ds"];
-
     double contrast = root["stimuliSettings"]["C"];
     double spotDiameter = root["stimuliSettings"]["d"];
 
@@ -60,13 +55,8 @@ int main()
 
 
     //Stim---------------------------------------------------------------------
-    vec k = integrator.spatialFreqVec();
-    vec w = integrator.temporalFreqVec();
-    double wd = w(w.n_elem/2+2);
-    double kx = k(k.n_elem/2+6);
-    double ky = k(k.n_elem/2);
-//        Grating S(integrator, {kx, ky}, wd, contrast);
-    PatchGrating S(integrator, {kx, ky}, wd, contrast, spotDiameter);
+//    Grating S = createGratingStimulus(&integrator,&cfg);
+    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
 
 
     //Spatial kernels:----------------------------------------------------------
