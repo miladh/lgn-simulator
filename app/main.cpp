@@ -3,7 +3,7 @@
 #include <outputmanager.h>
 #include <unistd.h>
 
-#include "stimuli/patchgrating.h"
+#include "stimuli/patchgrating.h"<l
 #include "stimuli/grating.h"
 
 #include "integrator.h"

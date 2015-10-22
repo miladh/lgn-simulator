@@ -6,7 +6,7 @@
 class CorticalCell : public Neuron
 {
 public:
-    CorticalCell(Stimuli *stim, Integrator integrator);
+    CorticalCell(Stimulus *stim, Integrator integrator);
     ~CorticalCell();
 
 protected:

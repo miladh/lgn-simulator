@@ -6,7 +6,7 @@
 class RelayCell : public Neuron
 {
 public:
-    RelayCell(Stimuli *stim, Integrator integrator);
+    RelayCell(Stimulus *stim, Integrator integrator);
     ~RelayCell();
 
 protected:

@@ -4,7 +4,7 @@
 #include "stimuli.h"
 
 
-class PatchGrating : public Stimuli
+class PatchGrating : public Stimulus
 {
 public:
     PatchGrating(Integrator integrator, vec2 kd,

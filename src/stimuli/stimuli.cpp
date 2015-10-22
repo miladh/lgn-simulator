@@ -1,7 +1,7 @@
 #include "stimuli.h"
 
 
-Stimuli::Stimuli(Integrator integrator)
+Stimulus::Stimulus(Integrator integrator)
     : m_integrator(integrator)
 {
     int nPointsTemporal = integrator.nPointsTemporal();
@@ -20,12 +20,12 @@ Stimuli::Stimuli(Integrator integrator)
 
 }
 
-Stimuli::~Stimuli()
+Stimulus::~Stimulus()
 {
 
 }
 
-void Stimuli::computeSpatiotemporal()
+void Stimulus::computeSpatiotemporal()
 {
     for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
         for(int i = 0; i < int(m_spatioTemporal.n_rows); i++){
@@ -40,7 +40,7 @@ void Stimuli::computeSpatiotemporal()
 }
 
 
-void Stimuli::computeFourierTransform()
+void Stimulus::computeFourierTransform()
 {
 
     for(int k = 0; k < int(m_fourierTransform.n_slices); k++){
@@ -55,12 +55,12 @@ void Stimuli::computeFourierTransform()
         }
     }
 }
-cube Stimuli::spatioTemporal() const
+cube Stimulus::spatioTemporal() const
 {
     return m_spatioTemporal;
 }
 
-cx_cube Stimuli::fourierTransform() const
+cx_cube Stimulus::fourierTransform() const
 {
     return m_fourierTransform;
 }

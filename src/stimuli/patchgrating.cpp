@@ -3,7 +3,7 @@
 PatchGrating::PatchGrating(Integrator integrator, vec2 kd,
                            double wd, double contrast,
                            double spotDiameter)
-    : Stimuli(integrator)
+    : Stimulus(integrator)
     , m_k(kd)
     , m_w(wd)
     , m_contrast(contrast)

@@ -1,6 +1,6 @@
 #include "relaycell.h"
 
-RelayCell::RelayCell(Stimuli *stim, Integrator integrator)
+RelayCell::RelayCell(Stimulus *stim, Integrator integrator)
     : Neuron(stim, integrator)
 
 {

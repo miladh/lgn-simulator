@@ -14,7 +14,7 @@ using namespace std;
 class Neuron
 {
 public:
-    Neuron(Stimuli *stim, Integrator integrator);
+    Neuron(Stimulus *stim, Integrator integrator);
     ~Neuron();
 
     struct Input {
@@ -69,7 +69,7 @@ private:
 protected:
 
     string m_cellType;
-    Stimuli *m_stim;
+    Stimulus *m_stim;
 
     cube m_response;
     cube m_impulseResponse;

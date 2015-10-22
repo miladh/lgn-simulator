@@ -1,7 +1,7 @@
 #include "grating.h"
 
 Grating::Grating(Integrator integrator, vec2 kd, double wd, double contrast)
-    : Stimuli(integrator)
+    : Stimulus(integrator)
     , m_k(kd)
     , m_w(wd)
     , m_contrast(contrast)

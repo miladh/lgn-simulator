@@ -36,7 +36,7 @@ void OutputManager::initialize()
 
 
 void OutputManager::writeResponse(const vector<Neuron*> &neurons,
-                                  const Stimuli &stimuli){
+                                  const Stimulus &stimuli){
 
 
 

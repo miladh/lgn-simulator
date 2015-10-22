@@ -8,7 +8,7 @@
 class Interneuron : public Neuron
 {
 public:
-    Interneuron(Stimuli *stim, Integrator integrator);
+    Interneuron(Stimulus *stim, Integrator integrator);
     ~Interneuron();
 
     // Neuron interface

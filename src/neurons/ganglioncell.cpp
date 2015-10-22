@@ -1,6 +1,6 @@
 #include "ganglioncell.h"
 
-GanglionCell::GanglionCell(Stimuli *stim,
+GanglionCell::GanglionCell(Stimulus *stim,
                            Integrator integrator,
                            SpatialKernel *spatialKernel,
                            TemporalKernel *temporalKernel)

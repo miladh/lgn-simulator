@@ -4,7 +4,7 @@
 #include "stimuli.h"
 
 
-class Grating : public Stimuli
+class Grating : public Stimulus
 {
 public:
     Grating(Integrator integrator, vec2 kd, double wd, double contrast);

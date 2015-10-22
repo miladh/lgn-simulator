@@ -1,6 +1,6 @@
 #include "neuron.h"
 
-Neuron::Neuron(Stimuli *stim, Integrator integrator)
+Neuron::Neuron(Stimulus *stim, Integrator integrator)
     : m_stim(stim)
     , m_integrator(integrator)
 {

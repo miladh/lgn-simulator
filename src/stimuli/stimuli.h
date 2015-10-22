@@ -11,11 +11,11 @@ using namespace std;
 using namespace arma;
 using namespace libconfig;
 
-class Stimuli
+class Stimulus
 {
 public:
-    Stimuli(Integrator integrator);
-    ~Stimuli();
+    Stimulus(Integrator integrator);
+    ~Stimulus();
 
     void computeSpatiotemporal();
     void computeFourierTransform();

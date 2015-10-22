@@ -22,7 +22,7 @@ public:
     ~OutputManager();
 
     void writeResponse(const vector<Neuron *> &neurons,
-                       const Stimuli &stimuli);
+                       const Stimulus &stimuli);
 
 
 //    void writeResponse(const vector<Neuron *> &neurons,
