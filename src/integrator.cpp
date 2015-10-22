@@ -135,7 +135,7 @@ double Integrator::spatialFreqResolution() const
 
 
 
-Integrator *createIntegrator(const Config *cfg)
+Integrator createIntegrator(const Config *cfg)
 {
     const Setting & root = cfg->getRoot();
     int ns = root["integratorSettings"]["ns"];
@@ -143,6 +143,6 @@ Integrator *createIntegrator(const Config *cfg)
     double dt = root["integratorSettings"]["dt"];
     double ds = root["integratorSettings"]["ds"];
 
-    return new Integrator(nt, dt, ns, ds);
+    return Integrator(nt, dt, ns, ds);
 
 }

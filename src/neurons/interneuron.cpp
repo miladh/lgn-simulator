@@ -2,7 +2,7 @@
 
 
 
-Interneuron::Interneuron( Stimulus *stim, Integrator integrator)
+Interneuron::Interneuron(Integrator *integrator)
     : Neuron(integrator)
 {
     m_cellType = "interneuron";

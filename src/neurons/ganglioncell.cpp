@@ -1,7 +1,6 @@
 #include "ganglioncell.h"
 
-GanglionCell::GanglionCell(Stimulus *stim,
-                           Integrator integrator,
+GanglionCell::GanglionCell(Integrator *integrator,
                            SpatialKernel *spatialKernel,
                            TemporalKernel *temporalKernel)
     : Neuron(integrator)

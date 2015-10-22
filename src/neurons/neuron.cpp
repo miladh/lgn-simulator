@@ -1,10 +1,10 @@
 #include "neuron.h"
 
-Neuron::Neuron(Integrator integrator)
+Neuron::Neuron(Integrator *integrator)
     : m_integrator(integrator)
 {
-    int nPointsTemporal = integrator.nPointsTemporal();
-    int nPointsSpatial = integrator.nPointsSpatial();
+    int nPointsTemporal = integrator->nPointsTemporal();
+    int nPointsSpatial = integrator->nPointsSpatial();
 
     m_response = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
     m_impulseResponse = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
@@ -12,12 +12,12 @@ Neuron::Neuron(Integrator integrator)
     m_impulseResponseFT=zeros<cx_cube>(nPointsSpatial,nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
-    timeVec = integrator.timeVec();
-    m_temporalFreqs = integrator.temporalFreqVec();
+    timeVec = integrator->timeVec();
+    m_temporalFreqs = integrator->temporalFreqVec();
 
     //Spatial Mesh
-    m_coordinateVec = integrator.coordinateVec();
-    m_spatialFreqs =integrator.spatialFreqVec();
+    m_coordinateVec = integrator->coordinateVec();
+    m_spatialFreqs =integrator->spatialFreqVec();
 
 }
 
@@ -32,7 +32,7 @@ void Neuron::computeResponse(Stimulus *stimulus)
     computeImpulseResponseFT();
 
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
-    m_responseFT = m_integrator.integrate(m_responseFT);
+    m_responseFT = m_integrator->integrate(m_responseFT);
     m_responseFT = FFTHelper::fftShift(m_responseFT);
 
     m_response = real(m_responseFT);
@@ -43,7 +43,7 @@ void Neuron::computeImpulseResponse()
 {
     computeImpulseResponseFT();
 
-    m_impulseResponseFT = m_integrator.integrate(m_impulseResponseFT);
+    m_impulseResponseFT = m_integrator->integrate(m_impulseResponseFT);
     m_impulseResponseFT = FFTHelper::fftShift(m_impulseResponseFT);
 
     m_impulseResponse = real(m_impulseResponseFT);

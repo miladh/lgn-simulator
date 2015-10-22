@@ -57,6 +57,6 @@ private:
 
 };
 
-Integrator *createIntegrator(const Config* cfg);
+Integrator createIntegrator(const Config* cfg);
 
 #endif // INTEGRATOR_H

@@ -55,7 +55,7 @@ int main()
 
 
     //----------------------------------------------------------------------------
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator = createIntegrator(&cfg);
     OutputManager io(&cfg);
 
 
@@ -65,7 +65,7 @@ int main()
     double wd = w(w.n_elem/2+2);
     double kx = k(k.n_elem/2+6);
     double ky = k(k.n_elem/2);
-    //    Grating S(integrator, {kx, ky}, wd, contrast);
+//        Grating S(integrator, {kx, ky}, wd, contrast);
     PatchGrating S(integrator, {kx, ky}, wd, contrast, spotDiameter);
 
 
@@ -82,10 +82,10 @@ int main()
     DampedOscillator damped(10, 1.38);
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&S, integrator, &dog, &damped);
-    RelayCell relay(&S, integrator);
-    Interneuron interneuron(&S, integrator);
-    CorticalCell cortical(&S, integrator);
+    GanglionCell ganglion(&integrator, &dog, &damped);
+    RelayCell relay(&integrator);
+    Interneuron interneuron(&integrator);
+    CorticalCell cortical(&integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
