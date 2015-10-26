@@ -1,7 +1,8 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-#define PI 3.14159265359
+#define PI 3.141592653589793
+
 
 
 #include <boost/math/special_functions/bessel.hpp>
