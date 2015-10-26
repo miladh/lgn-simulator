@@ -19,9 +19,13 @@ SOURCES += main.cpp \
     fftIntegrator/integratortest_gauss.cpp \
     fftIntegrator/integratortest_grating.cpp \
     fftIntegrator/integratortest_cosine.cpp \
-    fftIntegrator/integratortest_patchgrating.cpp
+    fftIntegrator/integratortest_patchgrating.cpp \
+    fftIntegrator/integratortest_dampedsinusoid.cpp \
+    fftIntegrator/integratortest_constant.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 
 DISTFILES += \
     configTests.cfg
+
+HEADERS +=

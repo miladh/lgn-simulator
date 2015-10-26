@@ -12,8 +12,8 @@ Integrator::Integrator(int nt, double dt, int ns, double ds)
 {
     //Temporal Grid
 //    m_timeVec = linspace(0, m_nPointsTemporal-1 , m_nPointsTemporal)*m_dt;
-    m_timeVec = linspace(0,
-                               m_nPointsTemporal-1,
+    m_timeVec = linspace(-m_nPointsTemporal/2,
+                               m_nPointsTemporal/2-1,
                                m_nPointsTemporal)*m_dt;
 
     //    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt)*2*PI;

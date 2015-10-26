@@ -39,10 +39,10 @@ SUITE(INTEGRATOR){
         vec t = integrator.timeVec();
         vec w = integrator.temporalFreqVec();
 
+
         double a = 2.1;
-        double wd = w(w.n_elem/2+2);
-        double kx = k(k.n_elem/2+3);
-        double ky = k(k.n_elem/2+5);
+        double wd = w(w.n_elem/2+1);
+
         OscillatingGaussian S(&integrator, a, wd);
 
         cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
@@ -77,17 +77,6 @@ SUITE(INTEGRATOR){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     TEST(gaussSpatialCosineTemporal){
         //Mesh
         int ns = 7;
@@ -106,7 +95,7 @@ SUITE(INTEGRATOR){
         vec w = integrator.temporalFreqVec();
 
         double a = 2.1;
-        double wd = w(w.n_elem/2+2);
+        double wd = w(w.n_elem/2+3);
 
         cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
         cx_cube G = zeros<cx_cube>(Ns, Ns, Nt);

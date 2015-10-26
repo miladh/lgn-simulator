@@ -38,8 +38,8 @@ int main()
 
     //Stim---------------------------------------------------------------------
 //    Grating S = createGratingStimulus(&integrator,&cfg);
-//    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
-    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
+    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
+//    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
 
 
 
