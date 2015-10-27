@@ -58,7 +58,7 @@ def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis, resolution = 0,
 
 
 def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
-                        save_animation = False, animation_name = "unnamed" ):
+                        save_animation = False, colorbar = False, animation_name = "unnamed" ):
     num_subplots = len(data)
     imshowPlots = []
     nStates = data[0].shape[0]
@@ -71,7 +71,7 @@ def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
 
     def init():
         for i in range(num_subplots):
-            imshowPlots[i].set_data(data[i][0,:,:])
+            imshowPlots[i].set_data(data[i][1,:,:])
         ttl.set_text("")
         return imshowPlots, ttl
 
@@ -87,9 +87,10 @@ def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
     for i in range(num_subplots):
         iplot[2] += 1
         ax = fig.add_subplot(iplot[0], iplot[1], iplot[2])
-        imshowPlots.append(ax.imshow(data[i][0,:,:], origin='lower', cmap=cmap,
+        imshowPlots.append(ax.imshow(data[i][1,:,:], origin='lower', cmap=cmap,
         interpolation="None"))
-        plt.colorbar(imshowPlots[-1], ax=ax, orientation='vertical')
+        if(colorbar):
+            plt.colorbar(imshowPlots[-1], ax=ax, orientation='vertical')
     plt.tight_layout()
     plt.subplots_adjust(top=0.95)
 
@@ -128,5 +129,5 @@ if __name__ == "__main__":
     ,exp.cortical["impulseResponse"]["spatioTemporal"]
     ]
     print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
-    animateImshowPlots(data)
+    animateImshowPlots(data, save_animation = False)
     # animate3dPlots(data, resolution = 3)
