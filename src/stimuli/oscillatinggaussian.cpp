@@ -37,7 +37,7 @@ OscillatingGaussian createOscillatingGaussianStimulus(Integrator *integrator,
     double exponent = root["stimuliSettings"]["exponent"];
 
     vec w = integrator->temporalFreqVec();
-    double wd = w(w.n_elem/2+2);
+    double wd = w(1);
 
     return OscillatingGaussian(integrator, exponent, wd);
 }

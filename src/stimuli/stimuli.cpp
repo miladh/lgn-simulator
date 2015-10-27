@@ -18,6 +18,7 @@ Stimulus::Stimulus(Integrator *integrator)
     m_coordinateVec = integrator->coordinateVec();
     m_spatialFreqs = integrator->spatialFreqVec();
 
+
 }
 
 Stimulus::~Stimulus()

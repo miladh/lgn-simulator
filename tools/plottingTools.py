@@ -118,15 +118,15 @@ if __name__ == "__main__":
     data = [
     exp.stimuli["spatioTemporal"]
     ,exp.stimuli["spatioTemporal"]
-    ,exp.ganglion["response"]["spatioTemporal"]
-    ,exp.ganglion["impulseResponse"]["spatioTemporal"]
-    ,exp.interneuron["response"]["spatioTemporal"]
-    ,exp.interneuron["impulseResponse"]["spatioTemporal"]
-    ,exp.relay["response"]["spatioTemporal"]
-    ,exp.relay["impulseResponse"]["spatioTemporal"]
-    ,exp.cortical["response"]["spatioTemporal"]
-    ,exp.cortical["impulseResponse"]["spatioTemporal"]
+    # ,exp.ganglion["response"]["spatioTemporal"]
+    # ,exp.ganglion["impulseResponse"]["spatioTemporal"]
+    # ,exp.interneuron["response"]["spatioTemporal"]
+    # ,exp.interneuron["impulseResponse"]["spatioTemporal"]
+    # ,exp.relay["response"]["spatioTemporal"]
+    # ,exp.relay["impulseResponse"]["spatioTemporal"]
+    # ,exp.cortical["response"]["spatioTemporal"]
+    # ,exp.cortical["impulseResponse"]["spatioTemporal"]
     ]
-    print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
+    # print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
     animateImshowPlots(data)
     # animate3dPlots(data, resolution = 3)

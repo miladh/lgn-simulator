@@ -40,9 +40,9 @@ Grating createGratingStimulus(Integrator *integrator, const Config *cfg)
 
     vec k = integrator->spatialFreqVec();
     vec w = integrator->temporalFreqVec();
-    double wd = w(w.n_elem/2+2);
-    double kx = k(k.n_elem/2+6);
-    double ky = k(k.n_elem/2);
+    double wd = w(1);
+    double kx = k(5);
+    double ky = k(0);
 
     return Grating(integrator, {kx, ky}, wd, contrast);
 }

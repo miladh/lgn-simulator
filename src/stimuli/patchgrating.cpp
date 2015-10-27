@@ -55,9 +55,10 @@ PatchGrating createPatchGratingStimulus(Integrator *integrator, const Config *cf
 
     vec k = integrator->spatialFreqVec();
     vec w = integrator->temporalFreqVec();
-    double wd = w(w.n_elem/2+1);
-    double kx = k(k.n_elem/2+6);
-    double ky = k(k.n_elem/2+5);
+    double wd = w(1);
+    double kx = k(5);
+    double ky = k(0);
+
 
     return PatchGrating(integrator, {kx, ky}, wd, contrast, spotDiameter);
 }
