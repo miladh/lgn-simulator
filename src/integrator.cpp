@@ -11,28 +11,20 @@ Integrator::Integrator(int nt, double dt, int ns, double ds)
     //    , m_spatialSamplingFreq(m_nPointsSpatial)
 {
     //Temporal Grid
-//    m_timeVec = linspace(0, m_nPointsTemporal-1 , m_nPointsTemporal)*m_dt;
+    //    m_timeVec = linspace(0, m_nPointsTemporal-1 , m_nPointsTemporal)*m_dt;
     m_timeVec = linspace(-m_nPointsTemporal/2,
-                               m_nPointsTemporal/2-1,
-                               m_nPointsTemporal)*m_dt;
+                         m_nPointsTemporal/2-1,
+                         m_nPointsTemporal)*m_dt;
+    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt)*2*PI;
 
-    //    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt)*2*PI;
-    m_temporalFreqs = linspace(-m_nPointsTemporal/2,
-                               m_nPointsTemporal/2-1,
-                               m_nPointsTemporal)*m_dw;
 
     //Spatial Grid
     m_coordinateVec = linspace(-m_nPointsSpatial/2,
                                m_nPointsSpatial/2-1,
                                m_nPointsSpatial)*m_ds;
-    //    m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds)*2*PI;
-    m_spatialFreqs = linspace(-m_nPointsSpatial/2,
-                              m_nPointsSpatial/2-1,
-                              m_nPointsSpatial)*m_dk;
+    m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds)*2*PI;
 
-//    cout << "max x:" << m_coordinateVec(m_nPointsSpatial-1) << endl;
-//    cout << "dw :" << m_dw << endl;
-//    cout << "dk:" << m_dk << endl;
+
 }
 
 Integrator::~Integrator()
@@ -52,15 +44,6 @@ cx_cube Integrator::integrate(cx_cube data)
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-    for(int k=0; k < int(data.n_slices); k++){
-        for(int i=0; i < int(data.n_rows); i++){
-            for(int j=0; j < int(data.n_cols); j++){
-                fftData.slice(k)(i,j) *= pow(-1,i+j-k);
-            }
-        }
-    }
-
-
     fftData *= m_dw * m_dk * m_dk /8./PI/PI/PI;
     return fftData;
 }
@@ -77,12 +60,6 @@ cx_mat Integrator::integrate(cx_mat data)
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-
-    for(int i=0; i < int(data.n_rows); i++){
-        for(int j=0; j < int(data.n_cols); j++){
-            fftData(i,j) *= pow(-1,i+j);
-        }
-    }
 
     fftData *= m_dk * m_dk /4./PI/PI;
     return fftData;

@@ -61,7 +61,7 @@ SUITE(INTEGRATOR){
 
         // Backward
         G = integrator.integrate(f);
-        G = FFTHelper::fftShift(G);
+        G = FFTHelper::ifftShift(G);
 
         // Test
         for(int l = 0; l < Nt; l++){
@@ -124,7 +124,7 @@ SUITE(INTEGRATOR){
 
         // Backward
         G = integrator.integrate(f);
-        G = FFTHelper::fftShift(G);
+        G = FFTHelper::ifftShift(G);
 
         // Test
         for(int l = 0; l < Nt; l++){
@@ -183,7 +183,7 @@ SUITE(INTEGRATOR){
 
         // Backward
         G = integrator.integrate(f);
-        G = FFTHelper::fftShift(G);
+        G = FFTHelper::ifftShift(G);
 
         // Test
         for(int l = 0; l < Nt; l++){
@@ -242,7 +242,7 @@ SUITE(INTEGRATOR){
 
         // Backward
         G = integrator.integrate(f);
-        G = FFTHelper::fftShift(G);
+        G = FFTHelper::ifftShift(G);
 
         // Test
         for(int l = 0; l < Nt; l++){
@@ -301,7 +301,7 @@ SUITE(INTEGRATOR){
 
         // Backward
         G = integrator.integrate(f);
-        G = FFTHelper::fftShift(G);
+        G = FFTHelper::ifftShift(G);
 
         // Test
         for(int l = 0; l < Nt; l++){
