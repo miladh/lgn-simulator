@@ -44,11 +44,9 @@ private:
 
     double m_dt = 0;
     double m_dw = 0;
-    double m_temporalSamplingFreq = 0;
 
     double m_ds = 0;
     double m_dk = 0;
-    double m_spatialSamplingFreq = 0;
 
     vec m_timeVec;
     vec m_coordinateVec;

@@ -11,6 +11,8 @@ using namespace arma;
 
 SUITE(INTEGRATOR){
 
+
+
     TEST(grating_0){
     int ns = 2;
     int nt = 2;

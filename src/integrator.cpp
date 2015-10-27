@@ -2,10 +2,10 @@
 
 Integrator::Integrator(int nt, double dt, int ns, double ds)
     : m_nPointsTemporal(pow(2,nt))
-    , m_dt(dt)
     , m_nPointsSpatial(pow(2,ns))
-    , m_ds(ds)
+    , m_dt(dt)
     , m_dw(2.* PI/m_nPointsTemporal/m_dt)
+    , m_ds(ds)
     , m_dk(2.* PI/m_nPointsSpatial/m_ds)
 {
     //Temporal Grid

@@ -12,9 +12,9 @@ using namespace arma;
 SUITE(INTEGRATOR){
     TEST(patchGratingStimuli){
         //Mesh
-        int ns = 7;
+        int ns = 8;
         int nt = 2;
-        double ds = 10.;
+        double ds = 0.1;
         double dt = 0.1;
 
         int Ns = pow(2,ns);
@@ -29,9 +29,9 @@ SUITE(INTEGRATOR){
 
         double C = 1;
         double d = 0.5;
-        double wd = w(w.n_elem/2);
-        double kx = k(k.n_elem/2);
-        double ky = k(k.n_elem/2);
+        double wd = w(1);
+        double kx = k(10);
+        double ky = k(0);
         PatchGrating S(&integrator, {kx, ky}, wd, C, d);
 
         cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
@@ -63,6 +63,10 @@ SUITE(INTEGRATOR){
 //        }
 
 
+
+//        for(int i = 0; i < G.n_slices; i++){
+//            cout << norm(real(G.slice(i))-real(g.slice(i)) , 2) << endl;
+//        }
 
     }
 
