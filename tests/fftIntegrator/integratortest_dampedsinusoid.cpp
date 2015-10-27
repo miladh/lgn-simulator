@@ -79,7 +79,6 @@ SUITE(INTEGRATOR){
 
         // Backward
         G = integrator.integrate(f);
-        G = FFTHelper::fftShift(G);
 
         // Test
 //        for(int l = 0; l < Nt; l++){

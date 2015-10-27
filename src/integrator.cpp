@@ -7,20 +7,14 @@ Integrator::Integrator(int nt, double dt, int ns, double ds)
     , m_ds(ds)
     , m_dw(2.* PI/m_nPointsTemporal/m_dt)
     , m_dk(2.* PI/m_nPointsSpatial/m_ds)
-    //    , m_temporalSamplingFreq(m_nPointsTemporal/m_maxT)
-    //    , m_spatialSamplingFreq(m_nPointsSpatial)
 {
     //Temporal Grid
-    //    m_timeVec = linspace(0, m_nPointsTemporal-1 , m_nPointsTemporal)*m_dt;
-    m_timeVec = linspace(-m_nPointsTemporal/2,
-                         m_nPointsTemporal/2-1,
-                         m_nPointsTemporal)*m_dt;
+    m_timeVec = linspace(0, m_nPointsTemporal-1 , m_nPointsTemporal)*m_dt;
     m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt)*2*PI;
 
 
     //Spatial Grid
-    m_coordinateVec = linspace(-m_nPointsSpatial/2,
-                               m_nPointsSpatial/2-1,
+    m_coordinateVec = linspace(-m_nPointsSpatial/2, m_nPointsSpatial/2-1,
                                m_nPointsSpatial)*m_ds;
     m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds)*2*PI;
 
@@ -45,6 +39,13 @@ cx_cube Integrator::integrate(cx_cube data)
     fftw_destroy_plan(plan);
 
     fftData *= m_dw * m_dk * m_dk /8./PI/PI/PI;
+
+
+    //fftShift
+    for(int i = 0; i < int(fftData.n_slices); i++){
+        fftData.slice(i) = FFTHelper::fftShift(fftData.slice(i));
+    }
+
     return fftData;
 }
 
@@ -60,8 +61,11 @@ cx_mat Integrator::integrate(cx_mat data)
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-
     fftData *= m_dk * m_dk /4./PI/PI;
+
+    //fftShift
+    fftData = FFTHelper::fftShift(fftData);
+
     return fftData;
 }
 
