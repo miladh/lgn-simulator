@@ -76,7 +76,7 @@ int main()
     interneuron.addGanglionCell(&ganglion,&dog, &Kt);
     interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
 
-    cortical.addRelayCell(&relay, &dog, &Kt);
+    cortical.addRelayCell(&relay, &dog, &damped);
 
 
 
