@@ -13,9 +13,8 @@ int main()
     bool stimTests = 1;
     bool fftHelperTests = 1;
     bool integratorTests = 1;
+    bool systemTests = 1;
 
-    bool fft_1D = 1;
-    bool fft_nD = 1;
     bool dev = 1;
 
 
@@ -47,13 +46,8 @@ int main()
     }
 
 
-
-    if(fft_1D){
-        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "FFT_1D", UnitTest::True(), 0);
-    }
-
-    if(fft_nD){
-        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "FFT_nD", UnitTest::True(), 0);
+    if(systemTests){
+        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "SYSTEM", UnitTest::True(), 0);
     }
 
 

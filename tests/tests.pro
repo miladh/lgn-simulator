@@ -9,7 +9,6 @@ TEMPLATE = app
 SOURCES += main.cpp \
     stimulitests.cpp \
     mathTests.cpp \
-    fft1DTests.cpp \
     fftHelper/fftfreqtests.cpp \
     fftHelper/fftshift1dtests.cpp \
     fftHelper/fftshift2dtests.cpp \
@@ -21,7 +20,8 @@ SOURCES += main.cpp \
     fftIntegrator/integratortest_cosine.cpp \
     fftIntegrator/integratortest_patchgrating.cpp \
     fftIntegrator/integratortest_constant.cpp \
-    fftIntegrator/integratortest_exponential.cpp
+    fftIntegrator/integratortest_exponential.cpp \
+    systemtests.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 

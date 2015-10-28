@@ -20,6 +20,7 @@
 
 #include "temporalKernels/decayingexponential.h"
 #include "temporalKernels/dampedoscillator.h"
+#include "temporalKernels/temporallyconstant.h"
 
 
 using namespace std;
@@ -52,10 +53,11 @@ int main()
     //Temporal kernels:-------------------------------------------------------
     DecayingExponential Kt = createDecayingExponentialTemporalKernel(&cfg);
     DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
+    TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
 
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &damped);
+    GanglionCell ganglion(&integrator, &dog, &tempConst);
     RelayCell relay(&integrator);
     Interneuron interneuron(&integrator);
     CorticalCell cortical(&integrator);
