@@ -71,7 +71,7 @@ def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
 
     def init():
         for i in range(num_subplots):
-            imshowPlots[i].set_data(data[i][0,:,:])
+            imshowPlots[i].set_data(data[i][1,:,:])
         ttl.set_text("")
         return imshowPlots, ttl
 
@@ -87,7 +87,7 @@ def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
     for i in range(num_subplots):
         iplot[2] += 1
         ax = fig.add_subplot(iplot[0], iplot[1], iplot[2])
-        imshowPlots.append(ax.imshow(data[i][0,:,:], origin='lower', cmap=cmap,
+        imshowPlots.append(ax.imshow(data[i][1,:,:], origin='lower', cmap=cmap,
         interpolation="None"))
         if(colorbar):
             plt.colorbar(imshowPlots[-1], ax=ax, orientation='vertical')

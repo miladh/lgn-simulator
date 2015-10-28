@@ -57,7 +57,7 @@ int main()
 
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &tempConst);
+    GanglionCell ganglion(&integrator, &dog, &damped);
     RelayCell relay(&integrator);
     Interneuron interneuron(&integrator);
     CorticalCell cortical(&integrator);
