@@ -29,26 +29,24 @@ Neuron::~Neuron()
 
 void Neuron::computeResponse(Stimulus *stimulus)
 {
-    computeImpulseResponseFourierTransform();
+    computeImpulseResponse();
 
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
-    m_responseFT = m_integrator->integrate(m_responseFT);
+    m_response = real(m_integrator->integrate(m_responseFT));
 
-    m_response = real(m_responseFT);
 }
 
 
 void Neuron::computeImpulseResponse()
 {
     computeImpulseResponseFourierTransform();
-
-    m_impulseResponseFT = m_integrator->integrate(m_impulseResponseFT);
-    m_impulseResponse = real(m_impulseResponseFT);
+    m_impulseResponse = real(m_integrator->integrate(m_impulseResponseFT));
 }
 
 
 void Neuron::computeImpulseResponseFourierTransform()
 {
+
     for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
         for(int i = 0; i < int(m_impulseResponseFT.n_rows); i++){
             for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){

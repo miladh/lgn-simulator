@@ -87,16 +87,9 @@ int main()
     S.computeFourierTransform();
 
     ganglion.computeResponse(&S);
-    ganglion.computeImpulseResponse();
-
     relay.computeResponse(&S);
-    relay.computeImpulseResponse();
-
     interneuron.computeResponse(&S);
-    interneuron.computeImpulseResponse();
-
     cortical.computeResponse(&S);
-    cortical.computeImpulseResponse();
 
 
 

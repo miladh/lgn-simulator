@@ -65,11 +65,9 @@ public:
     string cellType() const;
 
 private:
-    void computeImpulseResponseFourierTransform();
     Integrator* m_integrator;
 
 protected:
-
     string m_cellType;
 
     cube m_response;
@@ -88,6 +86,8 @@ protected:
     vector<Input> m_relayCells;
     vector<Input> m_interNeurons;
     vector<Input> m_corticalNeurons;
+
+    void computeImpulseResponseFourierTransform();
 };
 
 #endif // NEURON_H
