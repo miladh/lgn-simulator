@@ -20,7 +20,7 @@ void NaturalScene::computeSpatiotemporal()
 {
 
     for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
-        m_spatioTemporal.slice(k) = real(m_scene);
+        m_spatioTemporal.slice(k) = real(m_scene)/**cos(m_integrator->temporalFreqVec()[1])*/;
     }
 
 }
@@ -28,6 +28,7 @@ void NaturalScene::computeSpatiotemporal()
 void NaturalScene::computeFourierTransform()
 {
     int size[2] = {int(m_scene.n_cols), int(m_scene.n_rows)};
+    m_scene = FFTHelper::fftShift(m_scene);
 
     fftw_complex* in = reinterpret_cast<fftw_complex*> (m_scene.memptr());
     fftw_complex* out = reinterpret_cast<fftw_complex*> (m_sceneFourierTransform.memptr());
@@ -67,8 +68,11 @@ NaturalScene createNaturalSceneStimulus(Integrator *integrator, const Config *cf
         cout << "Cannot open image!" << endl;
     }
 
+//    cv::imshow("image", cvMat);
+//    cv::waitKey(0);
+
     cvMat.convertTo(cvMat, CV_64F);
     mat scene(reinterpret_cast<double*>(cvMat.data), cvMat.rows, cvMat.cols);
 
-    return NaturalScene(integrator, fliplr(scene));
+    return NaturalScene(integrator, scene);
 }

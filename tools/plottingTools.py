@@ -87,7 +87,7 @@ def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
     for i in range(num_subplots):
         iplot[2] += 1
         ax = fig.add_subplot(iplot[0], iplot[1], iplot[2])
-        imshowPlots.append(ax.imshow(data[i][1,:,:], origin='lower', cmap=cmap,
+        imshowPlots.append(ax.imshow(data[i][1,:,:], cmap=cmap,
         interpolation="None"))
         if(colorbar):
             plt.colorbar(imshowPlots[-1], ax=ax, orientation='vertical')
@@ -129,5 +129,5 @@ if __name__ == "__main__":
     ,exp.cortical["impulseResponse"]["spatioTemporal"]
     ]
     print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
-    animateImshowPlots(data, save_animation = False)
+    animateImshowPlots(data, colorbar = True, save_animation = False)
     # animate3dPlots(data, resolution = 3)

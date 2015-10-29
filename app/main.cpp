@@ -59,7 +59,7 @@ int main()
 
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &damped);
+    GanglionCell ganglion(&integrator, &dog, &tempConst);
     RelayCell relay(&integrator);
     Interneuron interneuron(&integrator);
     CorticalCell cortical(&integrator);
@@ -74,10 +74,10 @@ int main()
 
     //connect neurons----------------------------------------------------------
     relay.addGanglionCell(&ganglion,&gauss, &damped);
-    relay.addInterNeuron(&interneuron,&dog, &damped);
+    relay.addInterNeuron(&interneuron,&gauss, &damped);
     relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
 
-    interneuron.addGanglionCell(&ganglion,&dog, &Kt);
+    interneuron.addGanglionCell(&ganglion,&gauss, &Kt);
     interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
 
     cortical.addRelayCell(&relay, &dog, &damped);
