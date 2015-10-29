@@ -38,8 +38,8 @@ SUITE(SYSTEM){
         //Stimulus
         double C = -2.3;
         double wd = w(0);
-        double kx = k(0);
-        double ky = k(0);
+        double kx = k(3);
+        double ky = k(2);
         Grating S(&integrator, {kx, ky}, wd, C);
         S.computeFourierTransform();
 

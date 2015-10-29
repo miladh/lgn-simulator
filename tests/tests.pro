@@ -24,7 +24,8 @@ SOURCES += main.cpp \
     systemTests/systemtest_gr.cpp \
     systemTests/systemtest_g.cpp \
     systemTests/kernelsettings.cpp \
-    systemTests/systemtest_grc.cpp
+    systemTests/systemtest_grc.cpp \
+    systemTests/systemtest_gric.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 

@@ -31,14 +31,16 @@ double Interneuron::impulseResponseFourierTransformAtFrequency(vec2 kVec, double
 
     for (const Input c : m_corticalNeurons){
         Neuron *corticalCell = c.neuron;
-        double Krc = c.spatialKernel->fourierTransform(kVec)
+        double Kic = c.spatialKernel->fourierTransform(kVec)
                 * c.temporalKernel->fourierTransform(w);
 
         for (const Input r : corticalCell->relayCells()){
+            Neuron *relayCell = r.neuron;
             C += r.spatialKernel->fourierTransform(kVec)
-                    * r.temporalKernel->fourierTransform(w);
+                    * r.temporalKernel->fourierTransform(w)
+                    * relayCell->impulseResponseFourierTransformAtFrequency(kVec,w);
         }
-        C*= Krc;
+        C*= Kic;
     }
 
     double Gr = (G + C);
