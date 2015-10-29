@@ -5,36 +5,24 @@
 
 #include "stimuli/grating.h"
 #include "integrator.h"
-#include "spatialKernels/dog.h"
-#include "temporalKernels/temporallyconstant.h"
-#include "temporalKernels/decayingexponential.h"
 
-
+#include "../tests/systemTests/kernelsettings.h"
 
 SUITE(SYSTEM){
 
 
-    TEST(responseDecayingDOG){
+    TEST(ganglion){
         int ns = 5;
-        int nt = 5;
+        int nt = 4;
         double ds = 0.1;
-        double dt = 0.1;
+        double dt = 0.2;
+
 
         int Ns = pow(2,ns);
         int Nt = pow(2,nt);
 
-        double A = 1.0;
-        double a = 2.1;
-        double B = 0.5;
-        double b = 0.8;
-
-        double tau = 1.0;
-        double delay = 0.0;
-
-        double C = -2.3;
-
-        cube R = zeros<cube>(Ns, Ns, Nt);
-        cube Rex = zeros<cube>(Ns, Ns, Nt);
+        cube Rg = zeros<cube>(Ns, Ns, Nt);
+        cube Rg_ex = zeros<cube>(Ns, Ns, Nt);
 
         //Integrator
         Integrator integrator(nt, dt, ns, ds);
@@ -43,13 +31,8 @@ SUITE(SYSTEM){
         vec t = integrator.timeVec();
         vec w = integrator.temporalFreqVec();
 
-
-        //Cell
-        DOG dog(A, a, B, b);
-        DecayingExponential Kt(tau, delay);
-        GanglionCell ganglion(&integrator, &dog, &Kt);
-
         //Stimulus
+        double C = -2.3;
         double wd = w(2);
         double kx = k(1);
         double ky = k(1);
@@ -57,106 +40,52 @@ SUITE(SYSTEM){
         S.computeFourierTransform();
 
 
-        //Compute analytic:
-        double W = dog.fourierTransform({kx, ky}) * Kt.fourierTransform(wd);
-        for(int l = 0; l < Nt; l++){
-            for(int i = 0; i < Ns; i++){
-                for(int j = 0; j < Ns; j++){
-                    Rex(i,j,l) = C * W * cos(kx*s[i] + ky*s[j] - wd * t[l]);
+        //Kernels
+        vector<SpatialKernel*> spatialKernels = KernelSettings::spatialKernelVector();
+        vector<TemporalKernel*> temporalKernels = KernelSettings::temporalKernelVector();
 
+        for(SpatialKernel* Ks : spatialKernels){
+            for(TemporalKernel* Kt : temporalKernels){
+                //Cell
+                GanglionCell ganglion(&integrator, Ks, Kt);
+
+                //Compute analytic:
+                double W = Ks->fourierTransform({kx, ky}) * Kt->fourierTransform(wd);
+                for(int l = 0; l < Nt; l++){
+                    for(int i = 0; i < Ns; i++){
+                        for(int j = 0; j < Ns; j++){
+                            Rg_ex(i,j,l) = C * W * cos(kx*s[i] + ky*s[j] - wd * t[l]);
+
+                        }
+                    }
                 }
-            }
-        }
+
+                //Compute numerical
+                ganglion.computeResponse(&S);
+                Rg = ganglion.response();
 
 
-        //Compute numerical
-        ganglion.computeResponse(&S);
-        R = ganglion.response();
+                // Test
+                for(int l = 0; l < Nt; l++){
+                    for(int i = 0; i < Ns; i++){
+                        for(int j = 0; j < Ns; j++){
+                            CHECK_CLOSE(Rg_ex(i,j,l), Rg(i,j,l), 1e-12);
 
-
-        // Test
-        for(int l = 0; l < Nt; l++){
-            for(int i = 0; i < Ns; i++){
-                for(int j = 0; j < Ns; j++){
-                    CHECK_CLOSE(Rex(i,j,l), R(i,j,l), 1e-12);
-
+                        }
+                    }
                 }
-            }
-        }
+
+            }//End of Kt loop
+        }//End of Ks loop
+
+
 
     }
 
-
-
-    TEST(responseDOG){
-        int ns = 5;
-        int nt = 5;
-        double ds = 0.1;
-        double dt = 0.1;
-
-        int Ns = pow(2,ns);
-        int Nt = pow(2,nt);
-
-        double A = 1.0;
-        double a = 2.1;
-        double B = 0.5;
-        double b = 0.8;
-        double tc = 1.0;
-
-        double C = -2.3;
-
-        cube R = zeros<cube>(Ns, Ns, Nt);
-        cube Rex = zeros<cube>(Ns, Ns, Nt);
-
-        //Integrator
-        Integrator integrator(nt, dt, ns, ds);
-        vec s = integrator.coordinateVec();
-        vec k = integrator.spatialFreqVec();
-        vec t = integrator.timeVec();
-        vec w = integrator.temporalFreqVec();
-
-
-        //Cell
-        DOG dog(A, a, B, b);
-        TemporallyConstant Kt(tc);
-        GanglionCell ganglion(&integrator, &dog, &Kt);
-
-        //Stimulus
-        double wd = w(0);
-        double kx = k(1);
-        double ky = k(1);
-        Grating S(&integrator, {kx, ky}, wd, C);
-        S.computeFourierTransform();
-
-
-        //Compute analytic:
-        double W = dog.fourierTransform({kx, ky}) * Kt.fourierTransform(wd);
-        for(int l = 0; l < Nt; l++){
-            for(int i = 0; i < Ns; i++){
-                for(int j = 0; j < Ns; j++){
-                    Rex(i,j,l) = C * W * cos(kx*s[i] + ky*s[j] - wd * t[l]);
-
-                }
-            }
-        }
-
-
-        //Compute numerical
-        ganglion.computeResponse(&S);
-        R = ganglion.response();
-
-
-        // Test
-        for(int l = 0; l < Nt; l++){
-            for(int i = 0; i < Ns; i++){
-                for(int j = 0; j < Ns; j++){
-                    CHECK_CLOSE(Rex(i,j,l), R(i,j,l), 1e-12);
-
-                }
-            }
-        }
-
-    }
 
 }
+
+
+
+
 

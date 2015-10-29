@@ -22,11 +22,13 @@ SOURCES += main.cpp \
     fftIntegrator/integratortest_constant.cpp \
     fftIntegrator/integratortest_exponential.cpp \
     systemTests/systemtest_gr.cpp \
-    systemTests/systemtest_g.cpp
+    systemTests/systemtest_g.cpp \
+    systemTests/kernelsettings.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 
 DISTFILES += \
     configTests.cfg
 
-HEADERS +=
+HEADERS += \
+    systemTests/kernelsettings.h
