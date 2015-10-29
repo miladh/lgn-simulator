@@ -23,7 +23,8 @@ SOURCES += main.cpp \
     fftIntegrator/integratortest_exponential.cpp \
     systemTests/systemtest_gr.cpp \
     systemTests/systemtest_g.cpp \
-    systemTests/kernelsettings.cpp
+    systemTests/kernelsettings.cpp \
+    systemTests/systemtest_grc.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 

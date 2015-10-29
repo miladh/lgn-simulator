@@ -76,8 +76,13 @@ double RelayCell::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w
         C*= Krc;
     }
 
+    if((1 - Ifb - C) == 0){
+        throw overflow_error("Divide by zero exception in relay feedback contribution");
+        cout << "Ifb: " << Ifb << " C: " << C << endl;
+    }
 
     double Gr = (G + Iff)/(1 - Ifb - C);
+
     return Gr;
 }
 

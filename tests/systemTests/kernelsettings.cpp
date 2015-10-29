@@ -31,7 +31,7 @@ vector<SpatialKernel *> KernelSettings::spatialKernelVector()
     double spread = 1.1;
 
     //Elliptic gauss
-    double weightElliptic = 1.0;
+    double weightElliptic = 2.0;
     double angle = 45.0;
     double widthLong = 0.1;
     double widthNarrow = 1.0;
