@@ -34,7 +34,7 @@ SUITE(SYSTEM){
 
         //Stimulus
         double C = -2.3;
-        double wd = w(2);
+        double wd = w(0);
         double kx = k(1);
         double ky = k(4);
         Grating S(&integrator, {kx, ky}, wd, C);

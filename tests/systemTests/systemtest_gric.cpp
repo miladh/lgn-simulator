@@ -52,6 +52,10 @@ SUITE(SYSTEM){
         vector<TemporalKernel*> temporalKernels = KernelSettings::temporalKernelVector();
 
 
+        //removing some kernels to reduce computation time
+        temporalKernels.erase (temporalKernels.begin()+1, temporalKernels.begin()+3);
+
+
         //--------Loop recpField of ganglion--------
         for(SpatialKernel* Fs : spatialKernels){
             for(TemporalKernel* Ft : temporalKernels){

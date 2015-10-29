@@ -18,8 +18,6 @@ int main()
     bool dev = 1;
 
 
-
-
     UnitTest::TestReporterStdout reporter;
     UnitTest::TestRunner runner(reporter);
 
