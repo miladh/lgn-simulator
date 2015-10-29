@@ -36,7 +36,8 @@ SOURCES += \
     stimuli/grating.cpp \
     neurons/interneuron.cpp \
     stimuli/oscillatinggaussian.cpp \
-    temporalKernels/temporallyconstant.cpp
+    temporalKernels/temporallyconstant.cpp \
+    stimuli/naturalscene.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -58,4 +59,5 @@ HEADERS += \
     stimuli/grating.h \
     neurons/interneuron.h \
     stimuli/oscillatinggaussian.h \
-    temporalKernels/temporallyconstant.h
+    temporalKernels/temporallyconstant.h \
+    stimuli/naturalscene.h
