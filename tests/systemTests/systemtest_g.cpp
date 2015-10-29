@@ -1,6 +1,8 @@
 #include <unittest++/UnitTest++.h>
 
 #include "neurons/ganglioncell.h"
+#include "neurons/relaycell.h"
+
 #include "stimuli/grating.h"
 #include "integrator.h"
 #include "spatialKernels/dog.h"
@@ -10,6 +12,7 @@
 
 
 SUITE(SYSTEM){
+
 
     TEST(responseDecayingDOG){
         int ns = 5;
@@ -55,11 +58,11 @@ SUITE(SYSTEM){
 
 
         //Compute analytic:
-        double G = dog.fourierTransform({kx, ky}) * Kt.fourierTransform(wd);
+        double W = dog.fourierTransform({kx, ky}) * Kt.fourierTransform(wd);
         for(int l = 0; l < Nt; l++){
             for(int i = 0; i < Ns; i++){
                 for(int j = 0; j < Ns; j++){
-                    Rex(i,j,l) = C * G * cos(kx*s[i] + ky*s[j] - wd * t[l]);
+                    Rex(i,j,l) = C * W * cos(kx*s[i] + ky*s[j] - wd * t[l]);
 
                 }
             }
@@ -127,11 +130,11 @@ SUITE(SYSTEM){
 
 
         //Compute analytic:
-        double G = dog.fourierTransform({kx, ky}) * Kt.fourierTransform(wd);
+        double W = dog.fourierTransform({kx, ky}) * Kt.fourierTransform(wd);
         for(int l = 0; l < Nt; l++){
             for(int i = 0; i < Ns; i++){
                 for(int j = 0; j < Ns; j++){
-                    Rex(i,j,l) = C * G * cos(kx*s[i] + ky*s[j] - wd * t[l]);
+                    Rex(i,j,l) = C * W * cos(kx*s[i] + ky*s[j] - wd * t[l]);
 
                 }
             }

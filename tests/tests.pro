@@ -21,7 +21,8 @@ SOURCES += main.cpp \
     fftIntegrator/integratortest_patchgrating.cpp \
     fftIntegrator/integratortest_constant.cpp \
     fftIntegrator/integratortest_exponential.cpp \
-    systemtests.cpp
+    systemTests/systemtest_gr.cpp \
+    systemTests/systemtest_g.cpp
 
 LIBS += -lunittest++ -L../src -ledog
 

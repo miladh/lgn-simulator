@@ -58,7 +58,7 @@ def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis, resolution = 0,
 
 
 def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
-                        save_animation = False, colorbar = True, animation_name = "unnamed" ):
+                        save_animation = False, colorbar = False, animation_name = "unnamed" ):
     num_subplots = len(data)
     imshowPlots = []
     nStates = data[0].shape[0]
