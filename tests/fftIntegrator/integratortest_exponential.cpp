@@ -71,7 +71,7 @@ SUITE(INTEGRATOR){
                 * integrator.spatialFreqResolution();
 
         // Backward
-        G = integrator.integrate(f);
+        G = integrator.backwardFFT(f);
 //
 
         // Test

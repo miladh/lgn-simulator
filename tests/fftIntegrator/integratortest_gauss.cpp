@@ -60,7 +60,7 @@ SUITE(INTEGRATOR){
         f = S.fourierTransform();
 
         // Backward
-        G = integrator.integrate(f);
+        G = integrator.backwardFFT(f);
 
 
         // Test
@@ -123,7 +123,7 @@ SUITE(INTEGRATOR){
         f /= integrator.temporalFreqResolution();
 
         // Backward
-        G = integrator.integrate(f);
+        G = integrator.backwardFFT(f);
 
 
         // Test
@@ -182,7 +182,7 @@ SUITE(INTEGRATOR){
         f /= integrator.temporalFreqResolution();
 
         // Backward
-        G = integrator.integrate(f);
+        G = integrator.backwardFFT(f);
 
 
         // Test
@@ -241,7 +241,7 @@ SUITE(INTEGRATOR){
         f /= integrator.temporalFreqResolution();
 
         // Backward
-        G = integrator.integrate(f);
+        G = integrator.backwardFFT(f);
 
 
         // Test
@@ -300,7 +300,7 @@ SUITE(INTEGRATOR){
         f /= integrator.temporalFreqResolution();
 
         // Backward
-        G = integrator.integrate(f);
+        G = integrator.backwardFFT(f);
 
 
         // Test

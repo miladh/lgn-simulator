@@ -49,7 +49,7 @@ SUITE(INTEGRATOR){
         f = S.fourierTransform();
 
         // Backward
-        G = integrator.integrate(f);
+        G = integrator.backwardFFT(f);
 
         // Test
 //        for(int l = 0; l < Nt; l++){

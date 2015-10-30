@@ -61,7 +61,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124,7 +124,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -187,7 +187,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -250,7 +250,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -313,7 +313,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -376,7 +376,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -439,7 +439,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -502,7 +502,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -565,7 +565,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -628,7 +628,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -691,7 +691,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -754,7 +754,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -817,7 +817,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -880,7 +880,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -943,7 +943,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1006,7 +1006,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1069,7 +1069,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1132,7 +1132,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1195,7 +1195,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1258,7 +1258,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1321,7 +1321,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1384,7 +1384,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1447,7 +1447,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1510,7 +1510,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1573,7 +1573,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1636,7 +1636,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1699,7 +1699,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1762,7 +1762,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1825,7 +1825,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1888,7 +1888,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1951,7 +1951,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2014,7 +2014,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2077,7 +2077,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2140,7 +2140,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2203,7 +2203,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2266,7 +2266,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2329,7 +2329,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2392,7 +2392,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2455,7 +2455,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2518,7 +2518,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2581,7 +2581,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2644,7 +2644,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2707,7 +2707,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2770,7 +2770,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2833,7 +2833,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2896,7 +2896,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2959,7 +2959,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3022,7 +3022,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3085,7 +3085,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3148,7 +3148,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3211,7 +3211,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3274,7 +3274,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3337,7 +3337,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3400,7 +3400,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3463,7 +3463,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3526,7 +3526,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3589,7 +3589,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3652,7 +3652,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3715,7 +3715,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3778,7 +3778,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3841,7 +3841,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3904,7 +3904,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3967,7 +3967,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4030,7 +4030,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4093,7 +4093,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4156,7 +4156,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4219,7 +4219,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4282,7 +4282,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4345,7 +4345,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4408,7 +4408,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4471,7 +4471,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4534,7 +4534,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4597,7 +4597,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4660,7 +4660,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4723,7 +4723,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4786,7 +4786,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4849,7 +4849,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4912,7 +4912,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4975,7 +4975,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5038,7 +5038,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5101,7 +5101,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5164,7 +5164,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5227,7 +5227,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5290,7 +5290,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5353,7 +5353,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5416,7 +5416,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5479,7 +5479,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5542,7 +5542,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5605,7 +5605,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5668,7 +5668,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5731,7 +5731,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5794,7 +5794,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5857,7 +5857,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5920,7 +5920,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5983,7 +5983,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6046,7 +6046,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6109,7 +6109,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6172,7 +6172,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6235,7 +6235,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6298,7 +6298,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6361,7 +6361,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6424,7 +6424,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6487,7 +6487,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6550,7 +6550,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6613,7 +6613,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6676,7 +6676,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6739,7 +6739,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6802,7 +6802,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6865,7 +6865,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6928,7 +6928,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6991,7 +6991,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7054,7 +7054,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7117,7 +7117,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7180,7 +7180,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7243,7 +7243,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7306,7 +7306,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7369,7 +7369,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7432,7 +7432,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7495,7 +7495,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7558,7 +7558,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7621,7 +7621,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7684,7 +7684,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7747,7 +7747,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7810,7 +7810,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7873,7 +7873,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7936,7 +7936,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7999,7 +7999,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8062,7 +8062,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8125,7 +8125,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8188,7 +8188,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8251,7 +8251,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8314,7 +8314,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8377,7 +8377,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8440,7 +8440,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8503,7 +8503,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8566,7 +8566,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8629,7 +8629,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8692,7 +8692,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8755,7 +8755,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8818,7 +8818,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8881,7 +8881,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8944,7 +8944,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9007,7 +9007,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9070,7 +9070,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9133,7 +9133,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9196,7 +9196,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9259,7 +9259,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9322,7 +9322,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9385,7 +9385,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9448,7 +9448,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9511,7 +9511,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9574,7 +9574,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9637,7 +9637,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9700,7 +9700,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9763,7 +9763,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9826,7 +9826,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9889,7 +9889,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9952,7 +9952,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10015,7 +10015,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10078,7 +10078,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10141,7 +10141,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10204,7 +10204,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10267,7 +10267,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10330,7 +10330,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10393,7 +10393,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10456,7 +10456,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10519,7 +10519,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10582,7 +10582,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10645,7 +10645,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10708,7 +10708,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10771,7 +10771,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10834,7 +10834,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10897,7 +10897,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10960,7 +10960,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11023,7 +11023,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11086,7 +11086,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11149,7 +11149,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11212,7 +11212,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11275,7 +11275,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11338,7 +11338,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11401,7 +11401,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11464,7 +11464,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11527,7 +11527,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11590,7 +11590,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11653,7 +11653,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11716,7 +11716,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11779,7 +11779,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11842,7 +11842,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11905,7 +11905,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11968,7 +11968,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12031,7 +12031,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12094,7 +12094,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12157,7 +12157,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12220,7 +12220,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12283,7 +12283,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12346,7 +12346,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12409,7 +12409,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12472,7 +12472,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12535,7 +12535,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12598,7 +12598,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12661,7 +12661,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12724,7 +12724,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12787,7 +12787,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12850,7 +12850,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12913,7 +12913,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12976,7 +12976,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13039,7 +13039,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13102,7 +13102,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13165,7 +13165,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13228,7 +13228,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13291,7 +13291,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13354,7 +13354,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13417,7 +13417,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13480,7 +13480,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13543,7 +13543,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13606,7 +13606,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13669,7 +13669,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13732,7 +13732,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13795,7 +13795,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13858,7 +13858,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13921,7 +13921,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13984,7 +13984,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14047,7 +14047,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14110,7 +14110,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14173,7 +14173,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14236,7 +14236,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14299,7 +14299,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14362,7 +14362,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14425,7 +14425,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14488,7 +14488,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14551,7 +14551,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14614,7 +14614,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14677,7 +14677,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14740,7 +14740,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14803,7 +14803,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14866,7 +14866,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14929,7 +14929,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14992,7 +14992,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15055,7 +15055,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15118,7 +15118,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15181,7 +15181,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15244,7 +15244,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15307,7 +15307,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15370,7 +15370,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15433,7 +15433,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15496,7 +15496,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15559,7 +15559,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15622,7 +15622,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15685,7 +15685,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15748,7 +15748,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15811,7 +15811,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15874,7 +15874,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15937,7 +15937,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16000,7 +16000,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16063,7 +16063,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16126,7 +16126,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16189,7 +16189,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16252,7 +16252,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16315,7 +16315,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16378,7 +16378,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16441,7 +16441,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16504,7 +16504,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16567,7 +16567,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16630,7 +16630,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16693,7 +16693,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16756,7 +16756,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16819,7 +16819,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16882,7 +16882,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16945,7 +16945,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17008,7 +17008,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17071,7 +17071,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17134,7 +17134,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17197,7 +17197,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17260,7 +17260,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17323,7 +17323,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17386,7 +17386,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17449,7 +17449,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17512,7 +17512,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17575,7 +17575,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17638,7 +17638,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17701,7 +17701,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17764,7 +17764,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17827,7 +17827,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17890,7 +17890,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17953,7 +17953,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18016,7 +18016,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18079,7 +18079,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18142,7 +18142,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18205,7 +18205,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18268,7 +18268,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18331,7 +18331,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18394,7 +18394,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18457,7 +18457,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18520,7 +18520,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18583,7 +18583,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18646,7 +18646,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18709,7 +18709,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18772,7 +18772,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18835,7 +18835,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18898,7 +18898,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18961,7 +18961,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19024,7 +19024,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19087,7 +19087,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19150,7 +19150,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19213,7 +19213,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19276,7 +19276,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19339,7 +19339,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19402,7 +19402,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19465,7 +19465,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19528,7 +19528,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19591,7 +19591,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19654,7 +19654,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19717,7 +19717,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19780,7 +19780,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19843,7 +19843,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19906,7 +19906,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19969,7 +19969,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20032,7 +20032,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20095,7 +20095,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20158,7 +20158,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20221,7 +20221,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20284,7 +20284,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20347,7 +20347,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20410,7 +20410,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20473,7 +20473,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20536,7 +20536,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20599,7 +20599,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20662,7 +20662,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20725,7 +20725,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20788,7 +20788,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20851,7 +20851,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20914,7 +20914,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20977,7 +20977,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21040,7 +21040,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21103,7 +21103,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21166,7 +21166,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21229,7 +21229,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21292,7 +21292,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21355,7 +21355,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21418,7 +21418,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21481,7 +21481,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21544,7 +21544,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21607,7 +21607,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21670,7 +21670,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21733,7 +21733,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21796,7 +21796,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21859,7 +21859,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21922,7 +21922,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21985,7 +21985,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22048,7 +22048,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22111,7 +22111,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22174,7 +22174,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22237,7 +22237,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22300,7 +22300,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22363,7 +22363,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22426,7 +22426,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22489,7 +22489,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22552,7 +22552,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22615,7 +22615,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22678,7 +22678,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22741,7 +22741,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22804,7 +22804,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22867,7 +22867,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22930,7 +22930,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22993,7 +22993,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23056,7 +23056,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23119,7 +23119,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23182,7 +23182,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23245,7 +23245,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23308,7 +23308,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23371,7 +23371,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23434,7 +23434,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23497,7 +23497,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23560,7 +23560,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23623,7 +23623,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23686,7 +23686,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23749,7 +23749,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23812,7 +23812,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23875,7 +23875,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23938,7 +23938,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24001,7 +24001,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24064,7 +24064,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24127,7 +24127,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24190,7 +24190,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24253,7 +24253,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24316,7 +24316,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24379,7 +24379,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24442,7 +24442,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24505,7 +24505,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24568,7 +24568,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24631,7 +24631,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24694,7 +24694,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24757,7 +24757,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24820,7 +24820,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24883,7 +24883,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24946,7 +24946,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25009,7 +25009,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25072,7 +25072,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25135,7 +25135,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25198,7 +25198,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25261,7 +25261,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25324,7 +25324,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25387,7 +25387,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25450,7 +25450,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25513,7 +25513,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25576,7 +25576,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25639,7 +25639,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25702,7 +25702,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25765,7 +25765,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25828,7 +25828,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25891,7 +25891,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25954,7 +25954,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26017,7 +26017,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26080,7 +26080,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26143,7 +26143,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26206,7 +26206,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26269,7 +26269,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26332,7 +26332,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26395,7 +26395,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26458,7 +26458,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26521,7 +26521,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26584,7 +26584,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26647,7 +26647,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26710,7 +26710,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26773,7 +26773,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26836,7 +26836,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26899,7 +26899,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26962,7 +26962,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27025,7 +27025,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27088,7 +27088,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27151,7 +27151,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27214,7 +27214,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27277,7 +27277,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27340,7 +27340,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27403,7 +27403,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27466,7 +27466,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27529,7 +27529,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27592,7 +27592,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27655,7 +27655,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27718,7 +27718,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27781,7 +27781,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27844,7 +27844,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27907,7 +27907,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27970,7 +27970,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28033,7 +28033,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28096,7 +28096,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28159,7 +28159,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28222,7 +28222,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28285,7 +28285,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28348,7 +28348,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28411,7 +28411,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28474,7 +28474,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28537,7 +28537,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28600,7 +28600,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28663,7 +28663,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28726,7 +28726,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28789,7 +28789,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28852,7 +28852,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28915,7 +28915,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28978,7 +28978,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29041,7 +29041,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29104,7 +29104,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29167,7 +29167,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29230,7 +29230,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29293,7 +29293,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29356,7 +29356,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29419,7 +29419,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29482,7 +29482,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29545,7 +29545,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29608,7 +29608,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29671,7 +29671,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29734,7 +29734,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29797,7 +29797,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29860,7 +29860,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29923,7 +29923,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29986,7 +29986,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30049,7 +30049,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30112,7 +30112,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30175,7 +30175,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30238,7 +30238,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30301,7 +30301,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30364,7 +30364,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30427,7 +30427,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30490,7 +30490,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30553,7 +30553,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30616,7 +30616,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30679,7 +30679,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30742,7 +30742,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30805,7 +30805,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30868,7 +30868,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30931,7 +30931,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30994,7 +30994,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31057,7 +31057,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31120,7 +31120,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31183,7 +31183,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31246,7 +31246,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31309,7 +31309,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31372,7 +31372,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31435,7 +31435,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31498,7 +31498,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31561,7 +31561,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31624,7 +31624,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31687,7 +31687,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31750,7 +31750,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31813,7 +31813,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31876,7 +31876,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31939,7 +31939,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32002,7 +32002,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32065,7 +32065,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32128,7 +32128,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32191,7 +32191,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32254,7 +32254,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32317,7 +32317,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32380,7 +32380,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32443,7 +32443,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32506,7 +32506,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32569,7 +32569,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32632,7 +32632,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32695,7 +32695,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32758,7 +32758,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32821,7 +32821,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32884,7 +32884,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32947,7 +32947,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33010,7 +33010,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33073,7 +33073,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33136,7 +33136,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33199,7 +33199,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33262,7 +33262,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33325,7 +33325,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33388,7 +33388,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33451,7 +33451,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33514,7 +33514,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33577,7 +33577,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33640,7 +33640,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33703,7 +33703,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33766,7 +33766,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33829,7 +33829,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33892,7 +33892,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33955,7 +33955,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34018,7 +34018,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34081,7 +34081,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34144,7 +34144,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34207,7 +34207,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34270,7 +34270,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34333,7 +34333,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34396,7 +34396,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34459,7 +34459,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34522,7 +34522,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34585,7 +34585,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34648,7 +34648,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34711,7 +34711,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34774,7 +34774,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34837,7 +34837,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34900,7 +34900,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34963,7 +34963,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35026,7 +35026,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35089,7 +35089,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35152,7 +35152,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35215,7 +35215,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35278,7 +35278,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35341,7 +35341,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35404,7 +35404,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35467,7 +35467,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35530,7 +35530,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35593,7 +35593,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35656,7 +35656,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35719,7 +35719,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35782,7 +35782,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35845,7 +35845,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35908,7 +35908,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35971,7 +35971,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36034,7 +36034,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36097,7 +36097,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36160,7 +36160,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36223,7 +36223,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36286,7 +36286,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36349,7 +36349,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36412,7 +36412,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36475,7 +36475,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36538,7 +36538,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36601,7 +36601,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36664,7 +36664,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36727,7 +36727,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36790,7 +36790,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36853,7 +36853,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36916,7 +36916,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36979,7 +36979,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37042,7 +37042,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37105,7 +37105,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37168,7 +37168,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37231,7 +37231,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37294,7 +37294,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37357,7 +37357,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37420,7 +37420,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37483,7 +37483,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37546,7 +37546,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37609,7 +37609,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37672,7 +37672,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37735,7 +37735,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37798,7 +37798,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37861,7 +37861,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37924,7 +37924,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37987,7 +37987,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38050,7 +38050,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38113,7 +38113,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38176,7 +38176,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38239,7 +38239,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38302,7 +38302,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38365,7 +38365,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38428,7 +38428,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38491,7 +38491,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38554,7 +38554,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38617,7 +38617,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38680,7 +38680,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38743,7 +38743,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38806,7 +38806,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38869,7 +38869,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38932,7 +38932,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38995,7 +38995,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39058,7 +39058,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39121,7 +39121,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39184,7 +39184,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39247,7 +39247,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39310,7 +39310,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39373,7 +39373,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39436,7 +39436,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39499,7 +39499,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39562,7 +39562,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39625,7 +39625,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39688,7 +39688,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39751,7 +39751,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39814,7 +39814,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39877,7 +39877,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39940,7 +39940,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40003,7 +40003,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40066,7 +40066,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40129,7 +40129,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40192,7 +40192,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40255,7 +40255,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40318,7 +40318,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40381,7 +40381,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40444,7 +40444,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40507,7 +40507,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40570,7 +40570,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40633,7 +40633,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40696,7 +40696,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40759,7 +40759,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40822,7 +40822,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40885,7 +40885,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40948,7 +40948,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41011,7 +41011,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41074,7 +41074,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41137,7 +41137,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41200,7 +41200,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41263,7 +41263,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41326,7 +41326,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41389,7 +41389,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41452,7 +41452,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41515,7 +41515,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41578,7 +41578,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41641,7 +41641,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41704,7 +41704,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41767,7 +41767,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41830,7 +41830,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41893,7 +41893,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41956,7 +41956,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42019,7 +42019,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42082,7 +42082,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42145,7 +42145,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42208,7 +42208,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42271,7 +42271,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42334,7 +42334,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42397,7 +42397,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42460,7 +42460,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42523,7 +42523,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42586,7 +42586,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42649,7 +42649,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42712,7 +42712,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42775,7 +42775,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42838,7 +42838,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42901,7 +42901,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42964,7 +42964,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43027,7 +43027,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43090,7 +43090,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43153,7 +43153,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43216,7 +43216,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43279,7 +43279,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43342,7 +43342,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43405,7 +43405,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43468,7 +43468,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43531,7 +43531,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43594,7 +43594,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43657,7 +43657,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43720,7 +43720,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43783,7 +43783,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43846,7 +43846,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43909,7 +43909,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43972,7 +43972,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44035,7 +44035,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44098,7 +44098,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44161,7 +44161,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44224,7 +44224,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44287,7 +44287,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44350,7 +44350,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44413,7 +44413,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44476,7 +44476,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44539,7 +44539,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44602,7 +44602,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44665,7 +44665,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44728,7 +44728,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44791,7 +44791,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44854,7 +44854,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44917,7 +44917,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44980,7 +44980,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45043,7 +45043,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45106,7 +45106,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45169,7 +45169,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45232,7 +45232,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45295,7 +45295,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45358,7 +45358,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45421,7 +45421,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45484,7 +45484,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45547,7 +45547,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45610,7 +45610,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45673,7 +45673,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45736,7 +45736,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45799,7 +45799,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45862,7 +45862,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45925,7 +45925,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45988,7 +45988,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46051,7 +46051,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46114,7 +46114,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46177,7 +46177,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46240,7 +46240,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46303,7 +46303,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46366,7 +46366,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46429,7 +46429,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46492,7 +46492,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46555,7 +46555,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46618,7 +46618,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46681,7 +46681,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46744,7 +46744,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46807,7 +46807,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46870,7 +46870,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46933,7 +46933,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46996,7 +46996,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47059,7 +47059,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47122,7 +47122,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47185,7 +47185,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47248,7 +47248,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47311,7 +47311,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47374,7 +47374,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47437,7 +47437,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47500,7 +47500,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47563,7 +47563,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47626,7 +47626,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47689,7 +47689,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47752,7 +47752,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47815,7 +47815,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47878,7 +47878,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47941,7 +47941,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48004,7 +48004,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48067,7 +48067,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48130,7 +48130,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48193,7 +48193,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48256,7 +48256,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48319,7 +48319,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48382,7 +48382,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48445,7 +48445,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48508,7 +48508,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48571,7 +48571,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48634,7 +48634,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48697,7 +48697,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48760,7 +48760,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48823,7 +48823,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48886,7 +48886,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48949,7 +48949,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49012,7 +49012,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49075,7 +49075,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49138,7 +49138,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49201,7 +49201,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49264,7 +49264,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49327,7 +49327,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49390,7 +49390,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49453,7 +49453,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49516,7 +49516,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49579,7 +49579,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49642,7 +49642,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49705,7 +49705,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49768,7 +49768,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49831,7 +49831,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49894,7 +49894,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49957,7 +49957,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50020,7 +50020,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50083,7 +50083,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50146,7 +50146,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50209,7 +50209,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50272,7 +50272,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50335,7 +50335,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50398,7 +50398,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50461,7 +50461,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50524,7 +50524,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50587,7 +50587,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50650,7 +50650,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50713,7 +50713,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50776,7 +50776,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50839,7 +50839,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50902,7 +50902,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50965,7 +50965,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51028,7 +51028,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51091,7 +51091,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51154,7 +51154,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51217,7 +51217,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51280,7 +51280,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51343,7 +51343,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51406,7 +51406,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51469,7 +51469,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51532,7 +51532,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51595,7 +51595,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51658,7 +51658,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51721,7 +51721,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51784,7 +51784,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51847,7 +51847,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51910,7 +51910,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51973,7 +51973,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52036,7 +52036,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52099,7 +52099,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52162,7 +52162,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52225,7 +52225,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52288,7 +52288,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52351,7 +52351,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52414,7 +52414,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52477,7 +52477,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52540,7 +52540,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52603,7 +52603,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52666,7 +52666,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52729,7 +52729,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52792,7 +52792,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52855,7 +52855,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52918,7 +52918,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52981,7 +52981,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53044,7 +53044,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53107,7 +53107,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53170,7 +53170,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53233,7 +53233,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53296,7 +53296,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53359,7 +53359,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53422,7 +53422,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53485,7 +53485,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53548,7 +53548,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53611,7 +53611,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53674,7 +53674,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53737,7 +53737,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53800,7 +53800,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53863,7 +53863,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53926,7 +53926,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53989,7 +53989,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54052,7 +54052,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54115,7 +54115,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54178,7 +54178,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54241,7 +54241,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54304,7 +54304,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54367,7 +54367,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54430,7 +54430,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54493,7 +54493,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54556,7 +54556,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54619,7 +54619,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54682,7 +54682,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54745,7 +54745,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54808,7 +54808,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54871,7 +54871,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54934,7 +54934,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54997,7 +54997,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55060,7 +55060,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55123,7 +55123,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55186,7 +55186,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55249,7 +55249,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55312,7 +55312,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55375,7 +55375,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55438,7 +55438,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55501,7 +55501,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55564,7 +55564,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55627,7 +55627,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55690,7 +55690,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55753,7 +55753,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55816,7 +55816,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55879,7 +55879,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55942,7 +55942,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56005,7 +56005,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56068,7 +56068,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56131,7 +56131,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56194,7 +56194,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56257,7 +56257,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56320,7 +56320,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56383,7 +56383,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56446,7 +56446,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56509,7 +56509,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56572,7 +56572,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56635,7 +56635,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56698,7 +56698,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56761,7 +56761,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56824,7 +56824,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56887,7 +56887,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56950,7 +56950,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57013,7 +57013,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57076,7 +57076,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57139,7 +57139,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57202,7 +57202,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57265,7 +57265,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57328,7 +57328,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57391,7 +57391,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57454,7 +57454,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57517,7 +57517,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57580,7 +57580,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57643,7 +57643,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57706,7 +57706,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57769,7 +57769,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57832,7 +57832,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57895,7 +57895,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57958,7 +57958,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58021,7 +58021,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58084,7 +58084,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58147,7 +58147,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58210,7 +58210,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58273,7 +58273,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58336,7 +58336,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58399,7 +58399,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58462,7 +58462,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58525,7 +58525,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58588,7 +58588,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58651,7 +58651,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58714,7 +58714,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58777,7 +58777,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58840,7 +58840,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58903,7 +58903,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58966,7 +58966,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59029,7 +59029,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59092,7 +59092,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59155,7 +59155,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59218,7 +59218,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59281,7 +59281,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59344,7 +59344,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59407,7 +59407,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59470,7 +59470,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59533,7 +59533,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59596,7 +59596,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59659,7 +59659,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59722,7 +59722,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59785,7 +59785,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59848,7 +59848,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59911,7 +59911,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59974,7 +59974,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60037,7 +60037,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60100,7 +60100,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60163,7 +60163,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60226,7 +60226,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60289,7 +60289,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60352,7 +60352,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60415,7 +60415,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60478,7 +60478,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60541,7 +60541,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60604,7 +60604,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60667,7 +60667,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60730,7 +60730,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60793,7 +60793,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60856,7 +60856,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60919,7 +60919,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60982,7 +60982,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61045,7 +61045,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61108,7 +61108,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61171,7 +61171,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61234,7 +61234,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61297,7 +61297,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61360,7 +61360,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61423,7 +61423,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61486,7 +61486,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61549,7 +61549,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61612,7 +61612,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61675,7 +61675,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61738,7 +61738,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61801,7 +61801,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61864,7 +61864,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61927,7 +61927,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61990,7 +61990,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62053,7 +62053,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62116,7 +62116,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62179,7 +62179,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62242,7 +62242,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62305,7 +62305,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62368,7 +62368,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62431,7 +62431,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62494,7 +62494,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62557,7 +62557,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62620,7 +62620,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62683,7 +62683,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62746,7 +62746,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62809,7 +62809,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62872,7 +62872,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62935,7 +62935,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62998,7 +62998,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63061,7 +63061,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63124,7 +63124,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63187,7 +63187,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63250,7 +63250,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63313,7 +63313,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63376,7 +63376,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63439,7 +63439,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63502,7 +63502,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63565,7 +63565,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63628,7 +63628,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63691,7 +63691,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63754,7 +63754,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63817,7 +63817,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63880,7 +63880,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63943,7 +63943,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64006,7 +64006,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64069,7 +64069,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64132,7 +64132,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64195,7 +64195,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64258,7 +64258,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64321,7 +64321,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64384,7 +64384,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64447,7 +64447,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64510,7 +64510,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64573,7 +64573,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64636,7 +64636,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64699,7 +64699,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64762,7 +64762,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64825,7 +64825,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64888,7 +64888,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64951,7 +64951,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65014,7 +65014,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65077,7 +65077,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65140,7 +65140,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65203,7 +65203,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65266,7 +65266,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65329,7 +65329,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65392,7 +65392,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65455,7 +65455,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65518,7 +65518,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65581,7 +65581,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65644,7 +65644,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65707,7 +65707,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65770,7 +65770,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65833,7 +65833,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65896,7 +65896,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65959,7 +65959,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66022,7 +66022,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66085,7 +66085,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66148,7 +66148,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66211,7 +66211,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66274,7 +66274,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66337,7 +66337,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66400,7 +66400,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66463,7 +66463,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66526,7 +66526,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66589,7 +66589,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66652,7 +66652,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66715,7 +66715,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66778,7 +66778,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66841,7 +66841,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66904,7 +66904,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66967,7 +66967,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67030,7 +67030,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67093,7 +67093,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67156,7 +67156,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67219,7 +67219,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67282,7 +67282,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67345,7 +67345,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67408,7 +67408,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67471,7 +67471,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67534,7 +67534,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67597,7 +67597,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67660,7 +67660,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67723,7 +67723,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67786,7 +67786,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67849,7 +67849,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67912,7 +67912,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67975,7 +67975,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68038,7 +68038,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68101,7 +68101,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68164,7 +68164,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68227,7 +68227,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68290,7 +68290,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68353,7 +68353,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68416,7 +68416,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68479,7 +68479,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68542,7 +68542,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68605,7 +68605,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68668,7 +68668,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68731,7 +68731,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68794,7 +68794,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68857,7 +68857,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68920,7 +68920,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68983,7 +68983,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69046,7 +69046,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69109,7 +69109,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69172,7 +69172,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69235,7 +69235,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69298,7 +69298,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69361,7 +69361,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69424,7 +69424,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69487,7 +69487,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69550,7 +69550,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69613,7 +69613,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69676,7 +69676,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69739,7 +69739,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69802,7 +69802,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69865,7 +69865,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69928,7 +69928,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69991,7 +69991,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70054,7 +70054,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70117,7 +70117,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70180,7 +70180,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70243,7 +70243,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70306,7 +70306,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70369,7 +70369,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70432,7 +70432,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70495,7 +70495,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70558,7 +70558,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70621,7 +70621,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70684,7 +70684,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70747,7 +70747,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70810,7 +70810,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70873,7 +70873,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70936,7 +70936,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70999,7 +70999,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71062,7 +71062,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71125,7 +71125,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71188,7 +71188,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71251,7 +71251,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71314,7 +71314,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71377,7 +71377,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71440,7 +71440,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71503,7 +71503,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71566,7 +71566,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71629,7 +71629,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71692,7 +71692,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71755,7 +71755,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71818,7 +71818,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71881,7 +71881,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71944,7 +71944,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72007,7 +72007,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72070,7 +72070,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72133,7 +72133,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72196,7 +72196,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72259,7 +72259,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72322,7 +72322,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72385,7 +72385,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72448,7 +72448,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72511,7 +72511,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72574,7 +72574,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72637,7 +72637,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72700,7 +72700,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72763,7 +72763,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72826,7 +72826,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72889,7 +72889,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72952,7 +72952,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73015,7 +73015,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73078,7 +73078,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73141,7 +73141,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73204,7 +73204,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73267,7 +73267,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73330,7 +73330,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73393,7 +73393,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73456,7 +73456,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73519,7 +73519,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73582,7 +73582,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73645,7 +73645,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73708,7 +73708,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73771,7 +73771,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73834,7 +73834,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73897,7 +73897,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73960,7 +73960,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74023,7 +74023,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74086,7 +74086,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74149,7 +74149,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74212,7 +74212,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74275,7 +74275,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74338,7 +74338,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74401,7 +74401,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74464,7 +74464,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74527,7 +74527,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74590,7 +74590,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74653,7 +74653,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74716,7 +74716,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74779,7 +74779,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74842,7 +74842,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74905,7 +74905,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74968,7 +74968,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75031,7 +75031,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75094,7 +75094,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75157,7 +75157,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75220,7 +75220,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75283,7 +75283,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75346,7 +75346,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75409,7 +75409,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75472,7 +75472,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75535,7 +75535,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75598,7 +75598,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75661,7 +75661,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75724,7 +75724,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75787,7 +75787,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75850,7 +75850,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75913,7 +75913,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75976,7 +75976,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76039,7 +76039,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76102,7 +76102,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76165,7 +76165,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76228,7 +76228,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76291,7 +76291,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76354,7 +76354,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76417,7 +76417,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76480,7 +76480,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76543,7 +76543,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76606,7 +76606,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76669,7 +76669,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76732,7 +76732,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76795,7 +76795,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76858,7 +76858,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76921,7 +76921,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76984,7 +76984,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77047,7 +77047,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77110,7 +77110,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77173,7 +77173,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77236,7 +77236,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77299,7 +77299,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77362,7 +77362,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77425,7 +77425,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77488,7 +77488,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77551,7 +77551,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77614,7 +77614,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77677,7 +77677,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77740,7 +77740,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77803,7 +77803,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77866,7 +77866,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77929,7 +77929,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77992,7 +77992,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78055,7 +78055,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78118,7 +78118,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78181,7 +78181,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78244,7 +78244,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78307,7 +78307,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78370,7 +78370,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78433,7 +78433,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78496,7 +78496,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78559,7 +78559,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78622,7 +78622,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78685,7 +78685,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78748,7 +78748,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78811,7 +78811,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78874,7 +78874,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78937,7 +78937,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79000,7 +79000,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79063,7 +79063,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79126,7 +79126,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79189,7 +79189,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79252,7 +79252,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79315,7 +79315,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79378,7 +79378,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79441,7 +79441,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79504,7 +79504,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79567,7 +79567,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79630,7 +79630,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79693,7 +79693,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79756,7 +79756,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79819,7 +79819,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79882,7 +79882,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79945,7 +79945,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80008,7 +80008,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80071,7 +80071,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80134,7 +80134,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80197,7 +80197,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80260,7 +80260,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80323,7 +80323,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80386,7 +80386,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80449,7 +80449,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80512,7 +80512,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80575,7 +80575,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80638,7 +80638,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80701,7 +80701,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80764,7 +80764,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80827,7 +80827,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80890,7 +80890,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80953,7 +80953,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81016,7 +81016,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81079,7 +81079,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81142,7 +81142,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81205,7 +81205,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81268,7 +81268,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81331,7 +81331,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81394,7 +81394,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81457,7 +81457,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81520,7 +81520,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81583,7 +81583,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81646,7 +81646,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81709,7 +81709,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81772,7 +81772,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81835,7 +81835,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81898,7 +81898,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81961,7 +81961,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82024,7 +82024,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82087,7 +82087,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82150,7 +82150,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82213,7 +82213,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82276,7 +82276,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82339,7 +82339,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82402,7 +82402,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82465,7 +82465,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82528,7 +82528,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82591,7 +82591,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82654,7 +82654,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82717,7 +82717,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82780,7 +82780,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82843,7 +82843,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82906,7 +82906,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82969,7 +82969,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83032,7 +83032,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83095,7 +83095,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83158,7 +83158,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83221,7 +83221,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83284,7 +83284,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83347,7 +83347,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83410,7 +83410,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83473,7 +83473,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83536,7 +83536,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83599,7 +83599,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83662,7 +83662,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83725,7 +83725,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83788,7 +83788,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83851,7 +83851,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83914,7 +83914,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83977,7 +83977,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84040,7 +84040,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84103,7 +84103,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84166,7 +84166,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84229,7 +84229,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84292,7 +84292,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84355,7 +84355,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84418,7 +84418,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84481,7 +84481,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84544,7 +84544,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84607,7 +84607,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84670,7 +84670,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84733,7 +84733,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84796,7 +84796,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84859,7 +84859,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84922,7 +84922,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84985,7 +84985,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85048,7 +85048,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85111,7 +85111,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85174,7 +85174,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85237,7 +85237,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85300,7 +85300,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85363,7 +85363,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85426,7 +85426,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85489,7 +85489,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85552,7 +85552,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85615,7 +85615,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85678,7 +85678,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85741,7 +85741,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85804,7 +85804,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85867,7 +85867,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85930,7 +85930,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85993,7 +85993,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86056,7 +86056,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86119,7 +86119,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86182,7 +86182,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86245,7 +86245,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86308,7 +86308,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86371,7 +86371,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86434,7 +86434,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86497,7 +86497,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86560,7 +86560,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86623,7 +86623,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86686,7 +86686,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86749,7 +86749,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86812,7 +86812,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86875,7 +86875,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86938,7 +86938,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87001,7 +87001,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87064,7 +87064,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87127,7 +87127,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87190,7 +87190,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87253,7 +87253,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87316,7 +87316,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87379,7 +87379,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87442,7 +87442,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87505,7 +87505,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87568,7 +87568,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87631,7 +87631,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87694,7 +87694,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87757,7 +87757,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87820,7 +87820,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87883,7 +87883,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87946,7 +87946,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88009,7 +88009,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88072,7 +88072,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88135,7 +88135,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88198,7 +88198,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88261,7 +88261,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88324,7 +88324,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88387,7 +88387,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88450,7 +88450,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88513,7 +88513,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88576,7 +88576,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88639,7 +88639,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88702,7 +88702,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88765,7 +88765,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88828,7 +88828,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88891,7 +88891,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88954,7 +88954,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89017,7 +89017,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89080,7 +89080,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89143,7 +89143,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89206,7 +89206,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89269,7 +89269,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89332,7 +89332,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89395,7 +89395,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89458,7 +89458,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89521,7 +89521,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89584,7 +89584,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89647,7 +89647,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89710,7 +89710,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89773,7 +89773,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89836,7 +89836,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89899,7 +89899,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89962,7 +89962,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90025,7 +90025,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90088,7 +90088,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90151,7 +90151,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90214,7 +90214,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90277,7 +90277,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90340,7 +90340,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90403,7 +90403,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90466,7 +90466,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90529,7 +90529,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90592,7 +90592,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90655,7 +90655,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90718,7 +90718,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90781,7 +90781,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90844,7 +90844,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90907,7 +90907,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90970,7 +90970,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91033,7 +91033,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91096,7 +91096,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91159,7 +91159,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91222,7 +91222,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91285,7 +91285,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91348,7 +91348,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91411,7 +91411,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91474,7 +91474,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91537,7 +91537,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91600,7 +91600,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91663,7 +91663,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91726,7 +91726,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91789,7 +91789,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91852,7 +91852,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91915,7 +91915,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91978,7 +91978,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92041,7 +92041,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92104,7 +92104,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92167,7 +92167,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92230,7 +92230,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92293,7 +92293,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92356,7 +92356,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92419,7 +92419,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92482,7 +92482,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92545,7 +92545,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92608,7 +92608,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92671,7 +92671,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92734,7 +92734,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92797,7 +92797,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92860,7 +92860,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92923,7 +92923,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92986,7 +92986,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93049,7 +93049,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93112,7 +93112,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93175,7 +93175,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93238,7 +93238,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93301,7 +93301,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93364,7 +93364,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93427,7 +93427,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93490,7 +93490,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93553,7 +93553,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93616,7 +93616,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93679,7 +93679,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93742,7 +93742,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93805,7 +93805,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93868,7 +93868,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93931,7 +93931,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93994,7 +93994,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94057,7 +94057,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94120,7 +94120,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94183,7 +94183,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94246,7 +94246,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94309,7 +94309,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94372,7 +94372,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94435,7 +94435,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94498,7 +94498,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94561,7 +94561,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94624,7 +94624,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94687,7 +94687,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94750,7 +94750,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94813,7 +94813,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94876,7 +94876,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94939,7 +94939,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95002,7 +95002,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95065,7 +95065,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95128,7 +95128,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95191,7 +95191,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95254,7 +95254,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95317,7 +95317,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95380,7 +95380,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95443,7 +95443,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95506,7 +95506,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95569,7 +95569,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95632,7 +95632,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95695,7 +95695,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95758,7 +95758,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95821,7 +95821,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95884,7 +95884,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95947,7 +95947,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96010,7 +96010,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96073,7 +96073,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96136,7 +96136,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96199,7 +96199,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96262,7 +96262,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96325,7 +96325,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96388,7 +96388,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96451,7 +96451,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96514,7 +96514,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96577,7 +96577,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96640,7 +96640,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96703,7 +96703,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96766,7 +96766,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96829,7 +96829,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96892,7 +96892,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96955,7 +96955,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97018,7 +97018,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97081,7 +97081,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97144,7 +97144,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97207,7 +97207,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97270,7 +97270,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97333,7 +97333,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97396,7 +97396,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97459,7 +97459,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97522,7 +97522,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97585,7 +97585,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97648,7 +97648,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97711,7 +97711,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97774,7 +97774,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97837,7 +97837,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97900,7 +97900,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97963,7 +97963,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98026,7 +98026,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98089,7 +98089,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98152,7 +98152,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98215,7 +98215,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98278,7 +98278,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98341,7 +98341,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98404,7 +98404,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98467,7 +98467,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98530,7 +98530,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98593,7 +98593,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98656,7 +98656,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98719,7 +98719,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98782,7 +98782,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98845,7 +98845,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98908,7 +98908,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98971,7 +98971,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99034,7 +99034,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99097,7 +99097,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99160,7 +99160,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99223,7 +99223,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99286,7 +99286,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99349,7 +99349,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99412,7 +99412,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99475,7 +99475,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99538,7 +99538,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99601,7 +99601,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99664,7 +99664,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99727,7 +99727,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99790,7 +99790,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99853,7 +99853,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99916,7 +99916,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99979,7 +99979,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100042,7 +100042,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100105,7 +100105,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100168,7 +100168,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100231,7 +100231,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100294,7 +100294,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100357,7 +100357,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100420,7 +100420,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100483,7 +100483,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100546,7 +100546,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100609,7 +100609,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100672,7 +100672,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100735,7 +100735,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100798,7 +100798,7 @@ SUITE(INTEGRATOR){
     * integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test

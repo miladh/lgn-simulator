@@ -20,8 +20,8 @@ public:
     Integrator(int nt, double dt, int ns, double ds);
     ~Integrator();
 
-    cx_cube integrate(cx_cube data);
-    cx_mat integrate(cx_mat data);
+    cx_cube backwardFFT(cx_cube data);
+    cx_mat backwardFFT(cx_mat data);
 
     vec timeVec() const;
     vec coordinateVec() const;

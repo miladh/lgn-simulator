@@ -25,7 +25,7 @@ Integrator::~Integrator()
 
 }
 
-cx_cube Integrator::integrate(cx_cube data)
+cx_cube Integrator::backwardFFT(cx_cube data)
 {
     cx_cube fftData = 0 * data;
     int size[3] = {int(data.n_slices), int(data.n_cols), int(data.n_rows)};
@@ -48,7 +48,7 @@ cx_cube Integrator::integrate(cx_cube data)
     return fftData;
 }
 
-cx_mat Integrator::integrate(cx_mat data)
+cx_mat Integrator::backwardFFT(cx_mat data)
 {
     cx_mat fftData = 0 * data;
     int size[2] = {int(data.n_cols), int(data.n_rows)};

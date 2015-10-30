@@ -47,7 +47,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94,7 +94,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141,7 +141,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -188,7 +188,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -235,7 +235,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -282,7 +282,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -329,7 +329,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -376,7 +376,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -423,7 +423,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -470,7 +470,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -517,7 +517,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -564,7 +564,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -611,7 +611,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -658,7 +658,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -705,7 +705,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -752,7 +752,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -799,7 +799,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -846,7 +846,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -893,7 +893,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -940,7 +940,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -987,7 +987,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1034,7 +1034,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1081,7 +1081,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1128,7 +1128,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1175,7 +1175,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1222,7 +1222,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1269,7 +1269,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1316,7 +1316,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1363,7 +1363,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1410,7 +1410,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1457,7 +1457,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1504,7 +1504,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1551,7 +1551,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1598,7 +1598,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1645,7 +1645,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1692,7 +1692,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1739,7 +1739,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1786,7 +1786,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1833,7 +1833,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1880,7 +1880,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1927,7 +1927,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -1974,7 +1974,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2021,7 +2021,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2068,7 +2068,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2115,7 +2115,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2162,7 +2162,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2209,7 +2209,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2256,7 +2256,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2303,7 +2303,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2350,7 +2350,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2397,7 +2397,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2444,7 +2444,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2491,7 +2491,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2538,7 +2538,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2585,7 +2585,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2632,7 +2632,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2679,7 +2679,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2726,7 +2726,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2773,7 +2773,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2820,7 +2820,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2867,7 +2867,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2914,7 +2914,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -2961,7 +2961,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3008,7 +3008,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3055,7 +3055,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3102,7 +3102,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3149,7 +3149,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3196,7 +3196,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3243,7 +3243,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3290,7 +3290,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3337,7 +3337,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3384,7 +3384,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3431,7 +3431,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3478,7 +3478,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3525,7 +3525,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3572,7 +3572,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3619,7 +3619,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3666,7 +3666,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3713,7 +3713,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3760,7 +3760,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3807,7 +3807,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3854,7 +3854,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3901,7 +3901,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3948,7 +3948,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -3995,7 +3995,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4042,7 +4042,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4089,7 +4089,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4136,7 +4136,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4183,7 +4183,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4230,7 +4230,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4277,7 +4277,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4324,7 +4324,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4371,7 +4371,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4418,7 +4418,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4465,7 +4465,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4512,7 +4512,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4559,7 +4559,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4606,7 +4606,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4653,7 +4653,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4700,7 +4700,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4747,7 +4747,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4794,7 +4794,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4841,7 +4841,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4888,7 +4888,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4935,7 +4935,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -4982,7 +4982,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5029,7 +5029,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5076,7 +5076,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5123,7 +5123,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5170,7 +5170,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5217,7 +5217,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5264,7 +5264,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5311,7 +5311,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5358,7 +5358,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5405,7 +5405,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5452,7 +5452,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5499,7 +5499,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5546,7 +5546,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5593,7 +5593,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5640,7 +5640,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5687,7 +5687,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5734,7 +5734,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5781,7 +5781,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5828,7 +5828,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5875,7 +5875,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5922,7 +5922,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -5969,7 +5969,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6016,7 +6016,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6063,7 +6063,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6110,7 +6110,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6157,7 +6157,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6204,7 +6204,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6251,7 +6251,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6298,7 +6298,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6345,7 +6345,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6392,7 +6392,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6439,7 +6439,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6486,7 +6486,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6533,7 +6533,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6580,7 +6580,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6627,7 +6627,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6674,7 +6674,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6721,7 +6721,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6768,7 +6768,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6815,7 +6815,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6862,7 +6862,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6909,7 +6909,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -6956,7 +6956,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7003,7 +7003,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7050,7 +7050,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7097,7 +7097,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7144,7 +7144,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7191,7 +7191,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7238,7 +7238,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7285,7 +7285,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7332,7 +7332,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7379,7 +7379,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7426,7 +7426,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7473,7 +7473,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7520,7 +7520,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7567,7 +7567,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7614,7 +7614,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7661,7 +7661,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7708,7 +7708,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7755,7 +7755,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7802,7 +7802,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7849,7 +7849,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7896,7 +7896,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7943,7 +7943,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -7990,7 +7990,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8037,7 +8037,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8084,7 +8084,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8131,7 +8131,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8178,7 +8178,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8225,7 +8225,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8272,7 +8272,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8319,7 +8319,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8366,7 +8366,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8413,7 +8413,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8460,7 +8460,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8507,7 +8507,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8554,7 +8554,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8601,7 +8601,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8648,7 +8648,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8695,7 +8695,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8742,7 +8742,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8789,7 +8789,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8836,7 +8836,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8883,7 +8883,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8930,7 +8930,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -8977,7 +8977,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9024,7 +9024,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9071,7 +9071,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9118,7 +9118,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9165,7 +9165,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9212,7 +9212,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9259,7 +9259,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9306,7 +9306,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9353,7 +9353,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9400,7 +9400,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9447,7 +9447,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9494,7 +9494,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9541,7 +9541,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9588,7 +9588,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9635,7 +9635,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9682,7 +9682,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9729,7 +9729,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9776,7 +9776,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9823,7 +9823,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9870,7 +9870,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9917,7 +9917,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -9964,7 +9964,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10011,7 +10011,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10058,7 +10058,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10105,7 +10105,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10152,7 +10152,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10199,7 +10199,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10246,7 +10246,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10293,7 +10293,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10340,7 +10340,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10387,7 +10387,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10434,7 +10434,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10481,7 +10481,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10528,7 +10528,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10575,7 +10575,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10622,7 +10622,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10669,7 +10669,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10716,7 +10716,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10763,7 +10763,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10810,7 +10810,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10857,7 +10857,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10904,7 +10904,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10951,7 +10951,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -10998,7 +10998,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11045,7 +11045,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11092,7 +11092,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11139,7 +11139,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11186,7 +11186,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11233,7 +11233,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11280,7 +11280,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11327,7 +11327,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11374,7 +11374,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11421,7 +11421,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11468,7 +11468,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11515,7 +11515,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11562,7 +11562,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11609,7 +11609,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11656,7 +11656,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11703,7 +11703,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11750,7 +11750,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11797,7 +11797,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11844,7 +11844,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11891,7 +11891,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11938,7 +11938,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -11985,7 +11985,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12032,7 +12032,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12079,7 +12079,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12126,7 +12126,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12173,7 +12173,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12220,7 +12220,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12267,7 +12267,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12314,7 +12314,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12361,7 +12361,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12408,7 +12408,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12455,7 +12455,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12502,7 +12502,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12549,7 +12549,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12596,7 +12596,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12643,7 +12643,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12690,7 +12690,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12737,7 +12737,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12784,7 +12784,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12831,7 +12831,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12878,7 +12878,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12925,7 +12925,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -12972,7 +12972,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13019,7 +13019,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13066,7 +13066,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13113,7 +13113,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13160,7 +13160,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13207,7 +13207,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13254,7 +13254,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13301,7 +13301,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13348,7 +13348,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13395,7 +13395,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13442,7 +13442,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13489,7 +13489,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13536,7 +13536,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13583,7 +13583,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13630,7 +13630,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13677,7 +13677,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13724,7 +13724,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13771,7 +13771,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13818,7 +13818,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13865,7 +13865,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13912,7 +13912,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -13959,7 +13959,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14006,7 +14006,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14053,7 +14053,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14100,7 +14100,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14147,7 +14147,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14194,7 +14194,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14241,7 +14241,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14288,7 +14288,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14335,7 +14335,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14382,7 +14382,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14429,7 +14429,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14476,7 +14476,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14523,7 +14523,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14570,7 +14570,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14617,7 +14617,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14664,7 +14664,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14711,7 +14711,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14758,7 +14758,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14805,7 +14805,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14852,7 +14852,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14899,7 +14899,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14946,7 +14946,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -14993,7 +14993,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15040,7 +15040,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15087,7 +15087,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15134,7 +15134,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15181,7 +15181,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15228,7 +15228,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15275,7 +15275,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15322,7 +15322,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15369,7 +15369,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15416,7 +15416,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15463,7 +15463,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15510,7 +15510,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15557,7 +15557,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15604,7 +15604,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15651,7 +15651,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15698,7 +15698,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15745,7 +15745,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15792,7 +15792,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15839,7 +15839,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15886,7 +15886,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15933,7 +15933,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -15980,7 +15980,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16027,7 +16027,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16074,7 +16074,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16121,7 +16121,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16168,7 +16168,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16215,7 +16215,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16262,7 +16262,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16309,7 +16309,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16356,7 +16356,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16403,7 +16403,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16450,7 +16450,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16497,7 +16497,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16544,7 +16544,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16591,7 +16591,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16638,7 +16638,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16685,7 +16685,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16732,7 +16732,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16779,7 +16779,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16826,7 +16826,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16873,7 +16873,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16920,7 +16920,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -16967,7 +16967,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17014,7 +17014,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17061,7 +17061,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17108,7 +17108,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17155,7 +17155,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17202,7 +17202,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17249,7 +17249,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17296,7 +17296,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17343,7 +17343,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17390,7 +17390,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17437,7 +17437,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17484,7 +17484,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17531,7 +17531,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17578,7 +17578,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17625,7 +17625,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17672,7 +17672,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17719,7 +17719,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17766,7 +17766,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17813,7 +17813,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17860,7 +17860,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17907,7 +17907,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -17954,7 +17954,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18001,7 +18001,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18048,7 +18048,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18095,7 +18095,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18142,7 +18142,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18189,7 +18189,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18236,7 +18236,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18283,7 +18283,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18330,7 +18330,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18377,7 +18377,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18424,7 +18424,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18471,7 +18471,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18518,7 +18518,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18565,7 +18565,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18612,7 +18612,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18659,7 +18659,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18706,7 +18706,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18753,7 +18753,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18800,7 +18800,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18847,7 +18847,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18894,7 +18894,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18941,7 +18941,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -18988,7 +18988,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19035,7 +19035,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19082,7 +19082,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19129,7 +19129,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19176,7 +19176,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19223,7 +19223,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19270,7 +19270,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19317,7 +19317,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19364,7 +19364,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19411,7 +19411,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19458,7 +19458,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19505,7 +19505,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19552,7 +19552,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19599,7 +19599,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19646,7 +19646,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19693,7 +19693,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19740,7 +19740,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19787,7 +19787,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19834,7 +19834,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19881,7 +19881,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19928,7 +19928,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -19975,7 +19975,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20022,7 +20022,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20069,7 +20069,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20116,7 +20116,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20163,7 +20163,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20210,7 +20210,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20257,7 +20257,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20304,7 +20304,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20351,7 +20351,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20398,7 +20398,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20445,7 +20445,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20492,7 +20492,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20539,7 +20539,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20586,7 +20586,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20633,7 +20633,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20680,7 +20680,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20727,7 +20727,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20774,7 +20774,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20821,7 +20821,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20868,7 +20868,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20915,7 +20915,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -20962,7 +20962,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21009,7 +21009,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21056,7 +21056,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21103,7 +21103,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21150,7 +21150,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21197,7 +21197,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21244,7 +21244,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21291,7 +21291,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21338,7 +21338,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21385,7 +21385,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21432,7 +21432,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21479,7 +21479,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21526,7 +21526,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21573,7 +21573,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21620,7 +21620,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21667,7 +21667,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21714,7 +21714,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21761,7 +21761,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21808,7 +21808,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21855,7 +21855,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21902,7 +21902,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21949,7 +21949,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -21996,7 +21996,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22043,7 +22043,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22090,7 +22090,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22137,7 +22137,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22184,7 +22184,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22231,7 +22231,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22278,7 +22278,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22325,7 +22325,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22372,7 +22372,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22419,7 +22419,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22466,7 +22466,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22513,7 +22513,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22560,7 +22560,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22607,7 +22607,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22654,7 +22654,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22701,7 +22701,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22748,7 +22748,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22795,7 +22795,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22842,7 +22842,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22889,7 +22889,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22936,7 +22936,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -22983,7 +22983,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23030,7 +23030,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23077,7 +23077,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23124,7 +23124,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23171,7 +23171,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23218,7 +23218,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23265,7 +23265,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23312,7 +23312,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23359,7 +23359,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23406,7 +23406,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23453,7 +23453,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23500,7 +23500,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23547,7 +23547,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23594,7 +23594,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23641,7 +23641,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23688,7 +23688,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23735,7 +23735,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23782,7 +23782,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23829,7 +23829,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23876,7 +23876,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23923,7 +23923,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -23970,7 +23970,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24017,7 +24017,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24064,7 +24064,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24111,7 +24111,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24158,7 +24158,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24205,7 +24205,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24252,7 +24252,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24299,7 +24299,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24346,7 +24346,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24393,7 +24393,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24440,7 +24440,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24487,7 +24487,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24534,7 +24534,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24581,7 +24581,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24628,7 +24628,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24675,7 +24675,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24722,7 +24722,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24769,7 +24769,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24816,7 +24816,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24863,7 +24863,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24910,7 +24910,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -24957,7 +24957,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25004,7 +25004,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25051,7 +25051,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25098,7 +25098,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25145,7 +25145,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25192,7 +25192,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25239,7 +25239,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25286,7 +25286,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25333,7 +25333,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25380,7 +25380,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25427,7 +25427,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25474,7 +25474,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25521,7 +25521,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25568,7 +25568,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25615,7 +25615,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25662,7 +25662,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25709,7 +25709,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25756,7 +25756,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25803,7 +25803,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25850,7 +25850,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25897,7 +25897,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25944,7 +25944,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -25991,7 +25991,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26038,7 +26038,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26085,7 +26085,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26132,7 +26132,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26179,7 +26179,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26226,7 +26226,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26273,7 +26273,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26320,7 +26320,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26367,7 +26367,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26414,7 +26414,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26461,7 +26461,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26508,7 +26508,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26555,7 +26555,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26602,7 +26602,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26649,7 +26649,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26696,7 +26696,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26743,7 +26743,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26790,7 +26790,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26837,7 +26837,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26884,7 +26884,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26931,7 +26931,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -26978,7 +26978,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27025,7 +27025,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27072,7 +27072,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27119,7 +27119,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27166,7 +27166,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27213,7 +27213,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27260,7 +27260,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27307,7 +27307,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27354,7 +27354,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27401,7 +27401,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27448,7 +27448,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27495,7 +27495,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27542,7 +27542,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27589,7 +27589,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27636,7 +27636,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27683,7 +27683,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27730,7 +27730,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27777,7 +27777,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27824,7 +27824,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27871,7 +27871,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27918,7 +27918,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -27965,7 +27965,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28012,7 +28012,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28059,7 +28059,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28106,7 +28106,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28153,7 +28153,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28200,7 +28200,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28247,7 +28247,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28294,7 +28294,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28341,7 +28341,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28388,7 +28388,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28435,7 +28435,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28482,7 +28482,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28529,7 +28529,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28576,7 +28576,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28623,7 +28623,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28670,7 +28670,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28717,7 +28717,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28764,7 +28764,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28811,7 +28811,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28858,7 +28858,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28905,7 +28905,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28952,7 +28952,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -28999,7 +28999,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29046,7 +29046,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29093,7 +29093,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29140,7 +29140,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29187,7 +29187,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29234,7 +29234,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29281,7 +29281,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29328,7 +29328,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29375,7 +29375,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29422,7 +29422,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29469,7 +29469,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29516,7 +29516,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29563,7 +29563,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29610,7 +29610,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29657,7 +29657,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29704,7 +29704,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29751,7 +29751,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29798,7 +29798,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29845,7 +29845,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29892,7 +29892,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29939,7 +29939,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -29986,7 +29986,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30033,7 +30033,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30080,7 +30080,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30127,7 +30127,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30174,7 +30174,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30221,7 +30221,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30268,7 +30268,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30315,7 +30315,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30362,7 +30362,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30409,7 +30409,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30456,7 +30456,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30503,7 +30503,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30550,7 +30550,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30597,7 +30597,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30644,7 +30644,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30691,7 +30691,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30738,7 +30738,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30785,7 +30785,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30832,7 +30832,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30879,7 +30879,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30926,7 +30926,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -30973,7 +30973,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31020,7 +31020,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31067,7 +31067,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31114,7 +31114,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31161,7 +31161,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31208,7 +31208,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31255,7 +31255,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31302,7 +31302,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31349,7 +31349,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31396,7 +31396,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31443,7 +31443,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31490,7 +31490,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31537,7 +31537,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31584,7 +31584,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31631,7 +31631,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31678,7 +31678,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31725,7 +31725,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31772,7 +31772,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31819,7 +31819,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31866,7 +31866,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31913,7 +31913,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -31960,7 +31960,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32007,7 +32007,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32054,7 +32054,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32101,7 +32101,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32148,7 +32148,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32195,7 +32195,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32242,7 +32242,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32289,7 +32289,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32336,7 +32336,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32383,7 +32383,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32430,7 +32430,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32477,7 +32477,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32524,7 +32524,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32571,7 +32571,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32618,7 +32618,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32665,7 +32665,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32712,7 +32712,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32759,7 +32759,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32806,7 +32806,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32853,7 +32853,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32900,7 +32900,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32947,7 +32947,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -32994,7 +32994,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33041,7 +33041,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33088,7 +33088,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33135,7 +33135,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33182,7 +33182,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33229,7 +33229,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33276,7 +33276,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33323,7 +33323,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33370,7 +33370,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33417,7 +33417,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33464,7 +33464,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33511,7 +33511,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33558,7 +33558,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33605,7 +33605,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33652,7 +33652,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33699,7 +33699,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33746,7 +33746,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33793,7 +33793,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33840,7 +33840,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33887,7 +33887,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33934,7 +33934,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -33981,7 +33981,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34028,7 +34028,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34075,7 +34075,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34122,7 +34122,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34169,7 +34169,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34216,7 +34216,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34263,7 +34263,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34310,7 +34310,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34357,7 +34357,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34404,7 +34404,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34451,7 +34451,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34498,7 +34498,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34545,7 +34545,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34592,7 +34592,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34639,7 +34639,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34686,7 +34686,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34733,7 +34733,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34780,7 +34780,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34827,7 +34827,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34874,7 +34874,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34921,7 +34921,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -34968,7 +34968,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35015,7 +35015,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35062,7 +35062,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35109,7 +35109,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35156,7 +35156,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35203,7 +35203,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35250,7 +35250,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35297,7 +35297,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35344,7 +35344,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35391,7 +35391,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35438,7 +35438,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35485,7 +35485,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35532,7 +35532,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35579,7 +35579,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35626,7 +35626,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35673,7 +35673,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35720,7 +35720,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35767,7 +35767,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35814,7 +35814,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35861,7 +35861,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35908,7 +35908,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -35955,7 +35955,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36002,7 +36002,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36049,7 +36049,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36096,7 +36096,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36143,7 +36143,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36190,7 +36190,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36237,7 +36237,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36284,7 +36284,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36331,7 +36331,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36378,7 +36378,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36425,7 +36425,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36472,7 +36472,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36519,7 +36519,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36566,7 +36566,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36613,7 +36613,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36660,7 +36660,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36707,7 +36707,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36754,7 +36754,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36801,7 +36801,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36848,7 +36848,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36895,7 +36895,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36942,7 +36942,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -36989,7 +36989,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37036,7 +37036,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37083,7 +37083,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37130,7 +37130,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37177,7 +37177,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37224,7 +37224,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37271,7 +37271,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37318,7 +37318,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37365,7 +37365,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37412,7 +37412,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37459,7 +37459,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37506,7 +37506,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37553,7 +37553,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37600,7 +37600,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37647,7 +37647,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37694,7 +37694,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37741,7 +37741,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37788,7 +37788,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37835,7 +37835,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37882,7 +37882,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37929,7 +37929,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -37976,7 +37976,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38023,7 +38023,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38070,7 +38070,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38117,7 +38117,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38164,7 +38164,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38211,7 +38211,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38258,7 +38258,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38305,7 +38305,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38352,7 +38352,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38399,7 +38399,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38446,7 +38446,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38493,7 +38493,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38540,7 +38540,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38587,7 +38587,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38634,7 +38634,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38681,7 +38681,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38728,7 +38728,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38775,7 +38775,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38822,7 +38822,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38869,7 +38869,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38916,7 +38916,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -38963,7 +38963,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39010,7 +39010,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39057,7 +39057,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39104,7 +39104,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39151,7 +39151,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39198,7 +39198,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39245,7 +39245,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39292,7 +39292,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39339,7 +39339,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39386,7 +39386,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39433,7 +39433,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39480,7 +39480,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39527,7 +39527,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39574,7 +39574,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39621,7 +39621,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39668,7 +39668,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39715,7 +39715,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39762,7 +39762,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39809,7 +39809,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39856,7 +39856,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39903,7 +39903,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39950,7 +39950,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -39997,7 +39997,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40044,7 +40044,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40091,7 +40091,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40138,7 +40138,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40185,7 +40185,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40232,7 +40232,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40279,7 +40279,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40326,7 +40326,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40373,7 +40373,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40420,7 +40420,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40467,7 +40467,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40514,7 +40514,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40561,7 +40561,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40608,7 +40608,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40655,7 +40655,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40702,7 +40702,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40749,7 +40749,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40796,7 +40796,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40843,7 +40843,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40890,7 +40890,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40937,7 +40937,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -40984,7 +40984,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41031,7 +41031,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41078,7 +41078,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41125,7 +41125,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41172,7 +41172,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41219,7 +41219,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41266,7 +41266,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41313,7 +41313,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41360,7 +41360,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41407,7 +41407,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41454,7 +41454,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41501,7 +41501,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41548,7 +41548,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41595,7 +41595,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41642,7 +41642,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41689,7 +41689,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41736,7 +41736,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41783,7 +41783,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41830,7 +41830,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41877,7 +41877,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41924,7 +41924,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -41971,7 +41971,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42018,7 +42018,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42065,7 +42065,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42112,7 +42112,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42159,7 +42159,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42206,7 +42206,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42253,7 +42253,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42300,7 +42300,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42347,7 +42347,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42394,7 +42394,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42441,7 +42441,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42488,7 +42488,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42535,7 +42535,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42582,7 +42582,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42629,7 +42629,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42676,7 +42676,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42723,7 +42723,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42770,7 +42770,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42817,7 +42817,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42864,7 +42864,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42911,7 +42911,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -42958,7 +42958,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43005,7 +43005,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43052,7 +43052,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43099,7 +43099,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43146,7 +43146,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43193,7 +43193,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43240,7 +43240,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43287,7 +43287,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43334,7 +43334,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43381,7 +43381,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43428,7 +43428,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43475,7 +43475,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43522,7 +43522,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43569,7 +43569,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43616,7 +43616,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43663,7 +43663,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43710,7 +43710,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43757,7 +43757,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43804,7 +43804,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43851,7 +43851,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43898,7 +43898,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43945,7 +43945,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -43992,7 +43992,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44039,7 +44039,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44086,7 +44086,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44133,7 +44133,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44180,7 +44180,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44227,7 +44227,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44274,7 +44274,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44321,7 +44321,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44368,7 +44368,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44415,7 +44415,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44462,7 +44462,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44509,7 +44509,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44556,7 +44556,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44603,7 +44603,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44650,7 +44650,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44697,7 +44697,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44744,7 +44744,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44791,7 +44791,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44838,7 +44838,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44885,7 +44885,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44932,7 +44932,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -44979,7 +44979,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45026,7 +45026,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45073,7 +45073,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45120,7 +45120,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45167,7 +45167,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45214,7 +45214,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45261,7 +45261,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45308,7 +45308,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45355,7 +45355,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45402,7 +45402,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45449,7 +45449,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45496,7 +45496,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45543,7 +45543,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45590,7 +45590,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45637,7 +45637,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45684,7 +45684,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45731,7 +45731,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45778,7 +45778,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45825,7 +45825,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45872,7 +45872,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45919,7 +45919,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -45966,7 +45966,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46013,7 +46013,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46060,7 +46060,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46107,7 +46107,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46154,7 +46154,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46201,7 +46201,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46248,7 +46248,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46295,7 +46295,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46342,7 +46342,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46389,7 +46389,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46436,7 +46436,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46483,7 +46483,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46530,7 +46530,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46577,7 +46577,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46624,7 +46624,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46671,7 +46671,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46718,7 +46718,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46765,7 +46765,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46812,7 +46812,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46859,7 +46859,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46906,7 +46906,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -46953,7 +46953,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47000,7 +47000,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47047,7 +47047,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47094,7 +47094,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47141,7 +47141,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47188,7 +47188,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47235,7 +47235,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47282,7 +47282,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47329,7 +47329,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47376,7 +47376,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47423,7 +47423,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47470,7 +47470,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47517,7 +47517,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47564,7 +47564,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47611,7 +47611,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47658,7 +47658,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47705,7 +47705,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47752,7 +47752,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47799,7 +47799,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47846,7 +47846,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47893,7 +47893,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47940,7 +47940,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -47987,7 +47987,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48034,7 +48034,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48081,7 +48081,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48128,7 +48128,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48175,7 +48175,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48222,7 +48222,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48269,7 +48269,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48316,7 +48316,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48363,7 +48363,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48410,7 +48410,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48457,7 +48457,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48504,7 +48504,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48551,7 +48551,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48598,7 +48598,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48645,7 +48645,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48692,7 +48692,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48739,7 +48739,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48786,7 +48786,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48833,7 +48833,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48880,7 +48880,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48927,7 +48927,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -48974,7 +48974,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49021,7 +49021,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49068,7 +49068,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49115,7 +49115,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49162,7 +49162,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49209,7 +49209,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49256,7 +49256,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49303,7 +49303,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49350,7 +49350,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49397,7 +49397,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49444,7 +49444,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49491,7 +49491,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49538,7 +49538,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49585,7 +49585,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49632,7 +49632,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49679,7 +49679,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49726,7 +49726,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49773,7 +49773,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49820,7 +49820,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49867,7 +49867,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49914,7 +49914,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -49961,7 +49961,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50008,7 +50008,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50055,7 +50055,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50102,7 +50102,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50149,7 +50149,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50196,7 +50196,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50243,7 +50243,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50290,7 +50290,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50337,7 +50337,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50384,7 +50384,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50431,7 +50431,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50478,7 +50478,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50525,7 +50525,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50572,7 +50572,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50619,7 +50619,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50666,7 +50666,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50713,7 +50713,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50760,7 +50760,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50807,7 +50807,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50854,7 +50854,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50901,7 +50901,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50948,7 +50948,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -50995,7 +50995,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51042,7 +51042,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51089,7 +51089,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51136,7 +51136,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51183,7 +51183,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51230,7 +51230,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51277,7 +51277,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51324,7 +51324,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51371,7 +51371,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51418,7 +51418,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51465,7 +51465,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51512,7 +51512,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51559,7 +51559,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51606,7 +51606,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51653,7 +51653,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51700,7 +51700,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51747,7 +51747,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51794,7 +51794,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51841,7 +51841,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51888,7 +51888,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51935,7 +51935,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -51982,7 +51982,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52029,7 +52029,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52076,7 +52076,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52123,7 +52123,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52170,7 +52170,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52217,7 +52217,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52264,7 +52264,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52311,7 +52311,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52358,7 +52358,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52405,7 +52405,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52452,7 +52452,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52499,7 +52499,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52546,7 +52546,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52593,7 +52593,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52640,7 +52640,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52687,7 +52687,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52734,7 +52734,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52781,7 +52781,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52828,7 +52828,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52875,7 +52875,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52922,7 +52922,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -52969,7 +52969,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53016,7 +53016,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53063,7 +53063,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53110,7 +53110,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53157,7 +53157,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53204,7 +53204,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53251,7 +53251,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53298,7 +53298,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53345,7 +53345,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53392,7 +53392,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53439,7 +53439,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53486,7 +53486,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53533,7 +53533,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53580,7 +53580,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53627,7 +53627,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53674,7 +53674,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53721,7 +53721,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53768,7 +53768,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53815,7 +53815,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53862,7 +53862,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53909,7 +53909,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -53956,7 +53956,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54003,7 +54003,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54050,7 +54050,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54097,7 +54097,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54144,7 +54144,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54191,7 +54191,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54238,7 +54238,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54285,7 +54285,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54332,7 +54332,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54379,7 +54379,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54426,7 +54426,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54473,7 +54473,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54520,7 +54520,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54567,7 +54567,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54614,7 +54614,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54661,7 +54661,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54708,7 +54708,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54755,7 +54755,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54802,7 +54802,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54849,7 +54849,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54896,7 +54896,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54943,7 +54943,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -54990,7 +54990,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55037,7 +55037,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55084,7 +55084,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55131,7 +55131,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55178,7 +55178,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55225,7 +55225,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55272,7 +55272,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55319,7 +55319,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55366,7 +55366,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55413,7 +55413,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55460,7 +55460,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55507,7 +55507,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55554,7 +55554,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55601,7 +55601,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55648,7 +55648,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55695,7 +55695,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55742,7 +55742,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55789,7 +55789,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55836,7 +55836,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55883,7 +55883,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55930,7 +55930,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -55977,7 +55977,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56024,7 +56024,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56071,7 +56071,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56118,7 +56118,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56165,7 +56165,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56212,7 +56212,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56259,7 +56259,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56306,7 +56306,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56353,7 +56353,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56400,7 +56400,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56447,7 +56447,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56494,7 +56494,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56541,7 +56541,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56588,7 +56588,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56635,7 +56635,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56682,7 +56682,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56729,7 +56729,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56776,7 +56776,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56823,7 +56823,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56870,7 +56870,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56917,7 +56917,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -56964,7 +56964,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57011,7 +57011,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57058,7 +57058,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57105,7 +57105,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57152,7 +57152,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57199,7 +57199,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57246,7 +57246,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57293,7 +57293,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57340,7 +57340,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57387,7 +57387,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57434,7 +57434,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57481,7 +57481,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57528,7 +57528,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57575,7 +57575,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57622,7 +57622,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57669,7 +57669,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57716,7 +57716,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57763,7 +57763,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57810,7 +57810,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57857,7 +57857,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57904,7 +57904,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57951,7 +57951,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -57998,7 +57998,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58045,7 +58045,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58092,7 +58092,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58139,7 +58139,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58186,7 +58186,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58233,7 +58233,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58280,7 +58280,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58327,7 +58327,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58374,7 +58374,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58421,7 +58421,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58468,7 +58468,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58515,7 +58515,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58562,7 +58562,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58609,7 +58609,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58656,7 +58656,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58703,7 +58703,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58750,7 +58750,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58797,7 +58797,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58844,7 +58844,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58891,7 +58891,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58938,7 +58938,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -58985,7 +58985,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59032,7 +59032,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59079,7 +59079,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59126,7 +59126,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59173,7 +59173,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59220,7 +59220,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59267,7 +59267,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59314,7 +59314,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59361,7 +59361,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59408,7 +59408,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59455,7 +59455,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59502,7 +59502,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59549,7 +59549,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59596,7 +59596,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59643,7 +59643,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59690,7 +59690,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59737,7 +59737,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59784,7 +59784,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59831,7 +59831,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59878,7 +59878,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59925,7 +59925,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -59972,7 +59972,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60019,7 +60019,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60066,7 +60066,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60113,7 +60113,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60160,7 +60160,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60207,7 +60207,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60254,7 +60254,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60301,7 +60301,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60348,7 +60348,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60395,7 +60395,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60442,7 +60442,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60489,7 +60489,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60536,7 +60536,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60583,7 +60583,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60630,7 +60630,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60677,7 +60677,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60724,7 +60724,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60771,7 +60771,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60818,7 +60818,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60865,7 +60865,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60912,7 +60912,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -60959,7 +60959,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61006,7 +61006,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61053,7 +61053,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61100,7 +61100,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61147,7 +61147,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61194,7 +61194,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61241,7 +61241,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61288,7 +61288,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61335,7 +61335,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61382,7 +61382,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61429,7 +61429,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61476,7 +61476,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61523,7 +61523,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61570,7 +61570,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61617,7 +61617,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61664,7 +61664,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61711,7 +61711,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61758,7 +61758,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61805,7 +61805,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61852,7 +61852,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61899,7 +61899,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61946,7 +61946,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -61993,7 +61993,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62040,7 +62040,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62087,7 +62087,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62134,7 +62134,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62181,7 +62181,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62228,7 +62228,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62275,7 +62275,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62322,7 +62322,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62369,7 +62369,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62416,7 +62416,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62463,7 +62463,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62510,7 +62510,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62557,7 +62557,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62604,7 +62604,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62651,7 +62651,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62698,7 +62698,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62745,7 +62745,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62792,7 +62792,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62839,7 +62839,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62886,7 +62886,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62933,7 +62933,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -62980,7 +62980,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63027,7 +63027,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63074,7 +63074,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63121,7 +63121,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63168,7 +63168,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63215,7 +63215,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63262,7 +63262,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63309,7 +63309,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63356,7 +63356,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63403,7 +63403,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63450,7 +63450,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63497,7 +63497,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63544,7 +63544,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63591,7 +63591,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63638,7 +63638,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63685,7 +63685,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63732,7 +63732,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63779,7 +63779,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63826,7 +63826,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63873,7 +63873,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63920,7 +63920,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -63967,7 +63967,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64014,7 +64014,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64061,7 +64061,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64108,7 +64108,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64155,7 +64155,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64202,7 +64202,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64249,7 +64249,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64296,7 +64296,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64343,7 +64343,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64390,7 +64390,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64437,7 +64437,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64484,7 +64484,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64531,7 +64531,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64578,7 +64578,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64625,7 +64625,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64672,7 +64672,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64719,7 +64719,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64766,7 +64766,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64813,7 +64813,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64860,7 +64860,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64907,7 +64907,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -64954,7 +64954,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65001,7 +65001,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65048,7 +65048,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65095,7 +65095,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65142,7 +65142,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65189,7 +65189,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65236,7 +65236,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65283,7 +65283,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65330,7 +65330,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65377,7 +65377,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65424,7 +65424,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65471,7 +65471,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65518,7 +65518,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65565,7 +65565,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65612,7 +65612,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65659,7 +65659,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65706,7 +65706,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65753,7 +65753,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65800,7 +65800,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65847,7 +65847,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65894,7 +65894,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65941,7 +65941,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -65988,7 +65988,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66035,7 +66035,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66082,7 +66082,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66129,7 +66129,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66176,7 +66176,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66223,7 +66223,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66270,7 +66270,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66317,7 +66317,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66364,7 +66364,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66411,7 +66411,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66458,7 +66458,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66505,7 +66505,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66552,7 +66552,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66599,7 +66599,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66646,7 +66646,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66693,7 +66693,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66740,7 +66740,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66787,7 +66787,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66834,7 +66834,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66881,7 +66881,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66928,7 +66928,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -66975,7 +66975,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67022,7 +67022,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67069,7 +67069,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67116,7 +67116,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67163,7 +67163,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67210,7 +67210,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67257,7 +67257,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67304,7 +67304,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67351,7 +67351,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67398,7 +67398,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67445,7 +67445,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67492,7 +67492,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67539,7 +67539,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67586,7 +67586,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67633,7 +67633,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67680,7 +67680,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67727,7 +67727,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67774,7 +67774,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67821,7 +67821,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67868,7 +67868,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67915,7 +67915,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -67962,7 +67962,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68009,7 +68009,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68056,7 +68056,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68103,7 +68103,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68150,7 +68150,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68197,7 +68197,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68244,7 +68244,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68291,7 +68291,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68338,7 +68338,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68385,7 +68385,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68432,7 +68432,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68479,7 +68479,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68526,7 +68526,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68573,7 +68573,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68620,7 +68620,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68667,7 +68667,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68714,7 +68714,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68761,7 +68761,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68808,7 +68808,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68855,7 +68855,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68902,7 +68902,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68949,7 +68949,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -68996,7 +68996,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69043,7 +69043,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69090,7 +69090,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69137,7 +69137,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69184,7 +69184,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69231,7 +69231,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69278,7 +69278,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69325,7 +69325,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69372,7 +69372,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69419,7 +69419,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69466,7 +69466,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69513,7 +69513,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69560,7 +69560,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69607,7 +69607,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69654,7 +69654,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69701,7 +69701,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69748,7 +69748,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69795,7 +69795,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69842,7 +69842,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69889,7 +69889,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69936,7 +69936,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -69983,7 +69983,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70030,7 +70030,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70077,7 +70077,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70124,7 +70124,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70171,7 +70171,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70218,7 +70218,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70265,7 +70265,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70312,7 +70312,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70359,7 +70359,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70406,7 +70406,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70453,7 +70453,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70500,7 +70500,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70547,7 +70547,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70594,7 +70594,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70641,7 +70641,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70688,7 +70688,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70735,7 +70735,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70782,7 +70782,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70829,7 +70829,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70876,7 +70876,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70923,7 +70923,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -70970,7 +70970,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71017,7 +71017,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71064,7 +71064,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71111,7 +71111,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71158,7 +71158,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71205,7 +71205,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71252,7 +71252,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71299,7 +71299,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71346,7 +71346,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71393,7 +71393,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71440,7 +71440,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71487,7 +71487,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71534,7 +71534,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71581,7 +71581,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71628,7 +71628,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71675,7 +71675,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71722,7 +71722,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71769,7 +71769,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71816,7 +71816,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71863,7 +71863,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71910,7 +71910,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -71957,7 +71957,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72004,7 +72004,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72051,7 +72051,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72098,7 +72098,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72145,7 +72145,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72192,7 +72192,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72239,7 +72239,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72286,7 +72286,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72333,7 +72333,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72380,7 +72380,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72427,7 +72427,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72474,7 +72474,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72521,7 +72521,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72568,7 +72568,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72615,7 +72615,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72662,7 +72662,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72709,7 +72709,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72756,7 +72756,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72803,7 +72803,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72850,7 +72850,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72897,7 +72897,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72944,7 +72944,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -72991,7 +72991,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73038,7 +73038,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73085,7 +73085,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73132,7 +73132,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73179,7 +73179,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73226,7 +73226,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73273,7 +73273,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73320,7 +73320,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73367,7 +73367,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73414,7 +73414,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73461,7 +73461,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73508,7 +73508,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73555,7 +73555,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73602,7 +73602,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73649,7 +73649,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73696,7 +73696,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73743,7 +73743,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73790,7 +73790,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73837,7 +73837,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73884,7 +73884,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73931,7 +73931,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -73978,7 +73978,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74025,7 +74025,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74072,7 +74072,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74119,7 +74119,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74166,7 +74166,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74213,7 +74213,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74260,7 +74260,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74307,7 +74307,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74354,7 +74354,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74401,7 +74401,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74448,7 +74448,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74495,7 +74495,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74542,7 +74542,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74589,7 +74589,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74636,7 +74636,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74683,7 +74683,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74730,7 +74730,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74777,7 +74777,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74824,7 +74824,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74871,7 +74871,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74918,7 +74918,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -74965,7 +74965,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75012,7 +75012,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75059,7 +75059,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75106,7 +75106,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75153,7 +75153,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75200,7 +75200,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75247,7 +75247,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75294,7 +75294,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75341,7 +75341,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75388,7 +75388,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75435,7 +75435,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75482,7 +75482,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75529,7 +75529,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75576,7 +75576,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75623,7 +75623,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75670,7 +75670,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75717,7 +75717,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75764,7 +75764,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75811,7 +75811,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75858,7 +75858,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75905,7 +75905,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75952,7 +75952,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -75999,7 +75999,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76046,7 +76046,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76093,7 +76093,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76140,7 +76140,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76187,7 +76187,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76234,7 +76234,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76281,7 +76281,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76328,7 +76328,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76375,7 +76375,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76422,7 +76422,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76469,7 +76469,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76516,7 +76516,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76563,7 +76563,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76610,7 +76610,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76657,7 +76657,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76704,7 +76704,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76751,7 +76751,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76798,7 +76798,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76845,7 +76845,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76892,7 +76892,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76939,7 +76939,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -76986,7 +76986,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77033,7 +77033,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77080,7 +77080,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77127,7 +77127,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77174,7 +77174,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77221,7 +77221,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77268,7 +77268,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77315,7 +77315,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77362,7 +77362,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77409,7 +77409,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77456,7 +77456,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77503,7 +77503,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77550,7 +77550,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77597,7 +77597,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77644,7 +77644,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77691,7 +77691,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77738,7 +77738,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77785,7 +77785,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77832,7 +77832,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77879,7 +77879,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77926,7 +77926,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -77973,7 +77973,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78020,7 +78020,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78067,7 +78067,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78114,7 +78114,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78161,7 +78161,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78208,7 +78208,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78255,7 +78255,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78302,7 +78302,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78349,7 +78349,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78396,7 +78396,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78443,7 +78443,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78490,7 +78490,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78537,7 +78537,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78584,7 +78584,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78631,7 +78631,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78678,7 +78678,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78725,7 +78725,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78772,7 +78772,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78819,7 +78819,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78866,7 +78866,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78913,7 +78913,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -78960,7 +78960,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79007,7 +79007,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79054,7 +79054,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79101,7 +79101,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79148,7 +79148,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79195,7 +79195,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79242,7 +79242,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79289,7 +79289,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79336,7 +79336,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79383,7 +79383,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79430,7 +79430,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79477,7 +79477,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79524,7 +79524,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79571,7 +79571,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79618,7 +79618,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79665,7 +79665,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79712,7 +79712,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79759,7 +79759,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79806,7 +79806,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79853,7 +79853,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79900,7 +79900,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79947,7 +79947,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -79994,7 +79994,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80041,7 +80041,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80088,7 +80088,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80135,7 +80135,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80182,7 +80182,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80229,7 +80229,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80276,7 +80276,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80323,7 +80323,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80370,7 +80370,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80417,7 +80417,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80464,7 +80464,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80511,7 +80511,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80558,7 +80558,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80605,7 +80605,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80652,7 +80652,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80699,7 +80699,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80746,7 +80746,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80793,7 +80793,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80840,7 +80840,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80887,7 +80887,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80934,7 +80934,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -80981,7 +80981,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81028,7 +81028,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81075,7 +81075,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81122,7 +81122,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81169,7 +81169,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81216,7 +81216,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81263,7 +81263,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81310,7 +81310,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81357,7 +81357,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81404,7 +81404,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81451,7 +81451,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81498,7 +81498,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81545,7 +81545,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81592,7 +81592,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81639,7 +81639,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81686,7 +81686,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81733,7 +81733,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81780,7 +81780,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81827,7 +81827,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81874,7 +81874,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81921,7 +81921,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -81968,7 +81968,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82015,7 +82015,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82062,7 +82062,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82109,7 +82109,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82156,7 +82156,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82203,7 +82203,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82250,7 +82250,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82297,7 +82297,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82344,7 +82344,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82391,7 +82391,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82438,7 +82438,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82485,7 +82485,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82532,7 +82532,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82579,7 +82579,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82626,7 +82626,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82673,7 +82673,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82720,7 +82720,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82767,7 +82767,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82814,7 +82814,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82861,7 +82861,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82908,7 +82908,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -82955,7 +82955,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83002,7 +83002,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83049,7 +83049,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83096,7 +83096,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83143,7 +83143,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83190,7 +83190,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83237,7 +83237,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83284,7 +83284,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83331,7 +83331,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83378,7 +83378,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83425,7 +83425,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83472,7 +83472,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83519,7 +83519,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83566,7 +83566,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83613,7 +83613,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83660,7 +83660,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83707,7 +83707,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83754,7 +83754,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83801,7 +83801,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83848,7 +83848,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83895,7 +83895,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83942,7 +83942,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -83989,7 +83989,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84036,7 +84036,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84083,7 +84083,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84130,7 +84130,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84177,7 +84177,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84224,7 +84224,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84271,7 +84271,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84318,7 +84318,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84365,7 +84365,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84412,7 +84412,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84459,7 +84459,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84506,7 +84506,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84553,7 +84553,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84600,7 +84600,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84647,7 +84647,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84694,7 +84694,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84741,7 +84741,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84788,7 +84788,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84835,7 +84835,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84882,7 +84882,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84929,7 +84929,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -84976,7 +84976,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85023,7 +85023,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85070,7 +85070,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85117,7 +85117,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85164,7 +85164,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85211,7 +85211,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85258,7 +85258,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85305,7 +85305,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85352,7 +85352,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85399,7 +85399,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85446,7 +85446,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85493,7 +85493,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85540,7 +85540,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85587,7 +85587,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85634,7 +85634,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85681,7 +85681,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85728,7 +85728,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85775,7 +85775,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85822,7 +85822,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85869,7 +85869,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85916,7 +85916,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -85963,7 +85963,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86010,7 +86010,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86057,7 +86057,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86104,7 +86104,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86151,7 +86151,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86198,7 +86198,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86245,7 +86245,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86292,7 +86292,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86339,7 +86339,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86386,7 +86386,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86433,7 +86433,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86480,7 +86480,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86527,7 +86527,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86574,7 +86574,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86621,7 +86621,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86668,7 +86668,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86715,7 +86715,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86762,7 +86762,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86809,7 +86809,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86856,7 +86856,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86903,7 +86903,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86950,7 +86950,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -86997,7 +86997,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87044,7 +87044,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87091,7 +87091,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87138,7 +87138,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87185,7 +87185,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87232,7 +87232,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87279,7 +87279,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87326,7 +87326,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87373,7 +87373,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87420,7 +87420,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87467,7 +87467,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87514,7 +87514,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87561,7 +87561,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87608,7 +87608,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87655,7 +87655,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87702,7 +87702,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87749,7 +87749,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87796,7 +87796,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87843,7 +87843,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87890,7 +87890,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87937,7 +87937,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -87984,7 +87984,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88031,7 +88031,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88078,7 +88078,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88125,7 +88125,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88172,7 +88172,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88219,7 +88219,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88266,7 +88266,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88313,7 +88313,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88360,7 +88360,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88407,7 +88407,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88454,7 +88454,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88501,7 +88501,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88548,7 +88548,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88595,7 +88595,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88642,7 +88642,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88689,7 +88689,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88736,7 +88736,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88783,7 +88783,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88830,7 +88830,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88877,7 +88877,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88924,7 +88924,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -88971,7 +88971,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89018,7 +89018,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89065,7 +89065,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89112,7 +89112,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89159,7 +89159,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89206,7 +89206,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89253,7 +89253,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89300,7 +89300,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89347,7 +89347,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89394,7 +89394,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89441,7 +89441,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89488,7 +89488,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89535,7 +89535,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89582,7 +89582,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89629,7 +89629,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89676,7 +89676,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89723,7 +89723,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89770,7 +89770,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89817,7 +89817,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89864,7 +89864,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89911,7 +89911,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -89958,7 +89958,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90005,7 +90005,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90052,7 +90052,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90099,7 +90099,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90146,7 +90146,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90193,7 +90193,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90240,7 +90240,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90287,7 +90287,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90334,7 +90334,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90381,7 +90381,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90428,7 +90428,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90475,7 +90475,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90522,7 +90522,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90569,7 +90569,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90616,7 +90616,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90663,7 +90663,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90710,7 +90710,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90757,7 +90757,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90804,7 +90804,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90851,7 +90851,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90898,7 +90898,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90945,7 +90945,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -90992,7 +90992,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91039,7 +91039,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91086,7 +91086,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91133,7 +91133,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91180,7 +91180,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91227,7 +91227,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91274,7 +91274,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91321,7 +91321,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91368,7 +91368,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91415,7 +91415,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91462,7 +91462,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91509,7 +91509,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91556,7 +91556,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91603,7 +91603,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91650,7 +91650,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91697,7 +91697,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91744,7 +91744,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91791,7 +91791,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91838,7 +91838,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91885,7 +91885,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91932,7 +91932,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -91979,7 +91979,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92026,7 +92026,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92073,7 +92073,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92120,7 +92120,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92167,7 +92167,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92214,7 +92214,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92261,7 +92261,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92308,7 +92308,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92355,7 +92355,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92402,7 +92402,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92449,7 +92449,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92496,7 +92496,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92543,7 +92543,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92590,7 +92590,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92637,7 +92637,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92684,7 +92684,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92731,7 +92731,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92778,7 +92778,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92825,7 +92825,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92872,7 +92872,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92919,7 +92919,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -92966,7 +92966,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93013,7 +93013,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93060,7 +93060,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93107,7 +93107,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93154,7 +93154,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93201,7 +93201,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93248,7 +93248,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93295,7 +93295,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93342,7 +93342,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93389,7 +93389,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93436,7 +93436,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93483,7 +93483,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93530,7 +93530,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93577,7 +93577,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93624,7 +93624,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93671,7 +93671,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93718,7 +93718,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93765,7 +93765,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93812,7 +93812,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93859,7 +93859,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93906,7 +93906,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -93953,7 +93953,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94000,7 +94000,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94047,7 +94047,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94094,7 +94094,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94141,7 +94141,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94188,7 +94188,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94235,7 +94235,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94282,7 +94282,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94329,7 +94329,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94376,7 +94376,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94423,7 +94423,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94470,7 +94470,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94517,7 +94517,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94564,7 +94564,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94611,7 +94611,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94658,7 +94658,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94705,7 +94705,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94752,7 +94752,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94799,7 +94799,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94846,7 +94846,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94893,7 +94893,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94940,7 +94940,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -94987,7 +94987,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95034,7 +95034,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95081,7 +95081,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95128,7 +95128,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95175,7 +95175,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95222,7 +95222,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95269,7 +95269,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95316,7 +95316,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95363,7 +95363,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95410,7 +95410,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95457,7 +95457,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95504,7 +95504,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95551,7 +95551,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95598,7 +95598,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95645,7 +95645,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95692,7 +95692,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95739,7 +95739,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95786,7 +95786,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95833,7 +95833,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95880,7 +95880,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95927,7 +95927,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -95974,7 +95974,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96021,7 +96021,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96068,7 +96068,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96115,7 +96115,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96162,7 +96162,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96209,7 +96209,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96256,7 +96256,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96303,7 +96303,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96350,7 +96350,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96397,7 +96397,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96444,7 +96444,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96491,7 +96491,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96538,7 +96538,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96585,7 +96585,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96632,7 +96632,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96679,7 +96679,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96726,7 +96726,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96773,7 +96773,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96820,7 +96820,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96867,7 +96867,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96914,7 +96914,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -96961,7 +96961,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97008,7 +97008,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97055,7 +97055,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97102,7 +97102,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97149,7 +97149,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97196,7 +97196,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97243,7 +97243,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97290,7 +97290,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97337,7 +97337,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97384,7 +97384,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97431,7 +97431,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97478,7 +97478,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97525,7 +97525,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97572,7 +97572,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97619,7 +97619,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97666,7 +97666,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97713,7 +97713,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97760,7 +97760,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97807,7 +97807,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97854,7 +97854,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97901,7 +97901,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97948,7 +97948,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -97995,7 +97995,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98042,7 +98042,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98089,7 +98089,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98136,7 +98136,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98183,7 +98183,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98230,7 +98230,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98277,7 +98277,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98324,7 +98324,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98371,7 +98371,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98418,7 +98418,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98465,7 +98465,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98512,7 +98512,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98559,7 +98559,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98606,7 +98606,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98653,7 +98653,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98700,7 +98700,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98747,7 +98747,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98794,7 +98794,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98841,7 +98841,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98888,7 +98888,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98935,7 +98935,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -98982,7 +98982,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99029,7 +99029,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99076,7 +99076,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99123,7 +99123,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99170,7 +99170,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99217,7 +99217,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99264,7 +99264,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99311,7 +99311,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99358,7 +99358,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99405,7 +99405,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99452,7 +99452,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99499,7 +99499,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99546,7 +99546,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99593,7 +99593,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99640,7 +99640,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99687,7 +99687,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99734,7 +99734,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99781,7 +99781,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99828,7 +99828,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99875,7 +99875,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99922,7 +99922,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -99969,7 +99969,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100016,7 +100016,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100063,7 +100063,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100110,7 +100110,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100157,7 +100157,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100204,7 +100204,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100251,7 +100251,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100298,7 +100298,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100345,7 +100345,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100392,7 +100392,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100439,7 +100439,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100486,7 +100486,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100533,7 +100533,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100580,7 +100580,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100627,7 +100627,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100674,7 +100674,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100721,7 +100721,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100768,7 +100768,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100815,7 +100815,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100862,7 +100862,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100909,7 +100909,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -100956,7 +100956,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101003,7 +101003,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101050,7 +101050,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101097,7 +101097,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101144,7 +101144,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101191,7 +101191,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101238,7 +101238,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101285,7 +101285,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101332,7 +101332,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101379,7 +101379,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101426,7 +101426,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101473,7 +101473,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101520,7 +101520,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101567,7 +101567,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101614,7 +101614,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101661,7 +101661,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101708,7 +101708,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101755,7 +101755,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101802,7 +101802,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101849,7 +101849,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101896,7 +101896,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101943,7 +101943,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -101990,7 +101990,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102037,7 +102037,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102084,7 +102084,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102131,7 +102131,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102178,7 +102178,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102225,7 +102225,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102272,7 +102272,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102319,7 +102319,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102366,7 +102366,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102413,7 +102413,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102460,7 +102460,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102507,7 +102507,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102554,7 +102554,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102601,7 +102601,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102648,7 +102648,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102695,7 +102695,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102742,7 +102742,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102789,7 +102789,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102836,7 +102836,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102883,7 +102883,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102930,7 +102930,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -102977,7 +102977,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103024,7 +103024,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103071,7 +103071,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103118,7 +103118,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103165,7 +103165,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103212,7 +103212,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103259,7 +103259,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103306,7 +103306,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103353,7 +103353,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103400,7 +103400,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103447,7 +103447,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103494,7 +103494,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103541,7 +103541,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103588,7 +103588,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103635,7 +103635,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103682,7 +103682,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103729,7 +103729,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103776,7 +103776,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103823,7 +103823,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103870,7 +103870,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103917,7 +103917,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -103964,7 +103964,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104011,7 +104011,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104058,7 +104058,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104105,7 +104105,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104152,7 +104152,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104199,7 +104199,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104246,7 +104246,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104293,7 +104293,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104340,7 +104340,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104387,7 +104387,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104434,7 +104434,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104481,7 +104481,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104528,7 +104528,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104575,7 +104575,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104622,7 +104622,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104669,7 +104669,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104716,7 +104716,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104763,7 +104763,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104810,7 +104810,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104857,7 +104857,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104904,7 +104904,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104951,7 +104951,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -104998,7 +104998,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105045,7 +105045,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105092,7 +105092,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105139,7 +105139,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105186,7 +105186,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105233,7 +105233,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105280,7 +105280,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105327,7 +105327,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105374,7 +105374,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105421,7 +105421,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105468,7 +105468,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105515,7 +105515,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105562,7 +105562,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105609,7 +105609,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105656,7 +105656,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105703,7 +105703,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105750,7 +105750,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105797,7 +105797,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105844,7 +105844,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105891,7 +105891,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105938,7 +105938,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -105985,7 +105985,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106032,7 +106032,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106079,7 +106079,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106126,7 +106126,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106173,7 +106173,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106220,7 +106220,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106267,7 +106267,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106314,7 +106314,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106361,7 +106361,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106408,7 +106408,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106455,7 +106455,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106502,7 +106502,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106549,7 +106549,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106596,7 +106596,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106643,7 +106643,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106690,7 +106690,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106737,7 +106737,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106784,7 +106784,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106831,7 +106831,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106878,7 +106878,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106925,7 +106925,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -106972,7 +106972,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107019,7 +107019,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107066,7 +107066,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107113,7 +107113,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107160,7 +107160,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107207,7 +107207,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107254,7 +107254,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107301,7 +107301,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107348,7 +107348,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107395,7 +107395,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107442,7 +107442,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107489,7 +107489,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107536,7 +107536,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107583,7 +107583,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107630,7 +107630,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107677,7 +107677,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107724,7 +107724,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107771,7 +107771,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107818,7 +107818,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107865,7 +107865,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107912,7 +107912,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -107959,7 +107959,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108006,7 +108006,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108053,7 +108053,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108100,7 +108100,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108147,7 +108147,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108194,7 +108194,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108241,7 +108241,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108288,7 +108288,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108335,7 +108335,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108382,7 +108382,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108429,7 +108429,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108476,7 +108476,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108523,7 +108523,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108570,7 +108570,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108617,7 +108617,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108664,7 +108664,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108711,7 +108711,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108758,7 +108758,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108805,7 +108805,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108852,7 +108852,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108899,7 +108899,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108946,7 +108946,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -108993,7 +108993,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109040,7 +109040,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109087,7 +109087,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109134,7 +109134,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109181,7 +109181,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109228,7 +109228,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109275,7 +109275,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109322,7 +109322,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109369,7 +109369,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109416,7 +109416,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109463,7 +109463,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109510,7 +109510,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109557,7 +109557,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109604,7 +109604,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109651,7 +109651,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109698,7 +109698,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109745,7 +109745,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109792,7 +109792,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109839,7 +109839,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109886,7 +109886,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109933,7 +109933,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -109980,7 +109980,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110027,7 +110027,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110074,7 +110074,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110121,7 +110121,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110168,7 +110168,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110215,7 +110215,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110262,7 +110262,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110309,7 +110309,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110356,7 +110356,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110403,7 +110403,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110450,7 +110450,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110497,7 +110497,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110544,7 +110544,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110591,7 +110591,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110638,7 +110638,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110685,7 +110685,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110732,7 +110732,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110779,7 +110779,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110826,7 +110826,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110873,7 +110873,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110920,7 +110920,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -110967,7 +110967,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111014,7 +111014,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111061,7 +111061,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111108,7 +111108,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111155,7 +111155,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111202,7 +111202,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111249,7 +111249,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111296,7 +111296,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111343,7 +111343,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111390,7 +111390,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111437,7 +111437,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111484,7 +111484,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111531,7 +111531,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111578,7 +111578,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111625,7 +111625,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111672,7 +111672,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111719,7 +111719,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111766,7 +111766,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111813,7 +111813,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111860,7 +111860,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111907,7 +111907,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -111954,7 +111954,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112001,7 +112001,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112048,7 +112048,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112095,7 +112095,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112142,7 +112142,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112189,7 +112189,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112236,7 +112236,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112283,7 +112283,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112330,7 +112330,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112377,7 +112377,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112424,7 +112424,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112471,7 +112471,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112518,7 +112518,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112565,7 +112565,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112612,7 +112612,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112659,7 +112659,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112706,7 +112706,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112753,7 +112753,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112800,7 +112800,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112847,7 +112847,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112894,7 +112894,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112941,7 +112941,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -112988,7 +112988,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113035,7 +113035,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113082,7 +113082,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113129,7 +113129,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113176,7 +113176,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113223,7 +113223,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113270,7 +113270,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113317,7 +113317,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113364,7 +113364,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113411,7 +113411,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113458,7 +113458,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113505,7 +113505,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113552,7 +113552,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113599,7 +113599,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113646,7 +113646,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113693,7 +113693,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113740,7 +113740,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113787,7 +113787,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113834,7 +113834,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113881,7 +113881,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113928,7 +113928,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -113975,7 +113975,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114022,7 +114022,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114069,7 +114069,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114116,7 +114116,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114163,7 +114163,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114210,7 +114210,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114257,7 +114257,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114304,7 +114304,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114351,7 +114351,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114398,7 +114398,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114445,7 +114445,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114492,7 +114492,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114539,7 +114539,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114586,7 +114586,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114633,7 +114633,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114680,7 +114680,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114727,7 +114727,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114774,7 +114774,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114821,7 +114821,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114868,7 +114868,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114915,7 +114915,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -114962,7 +114962,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115009,7 +115009,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115056,7 +115056,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115103,7 +115103,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115150,7 +115150,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115197,7 +115197,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115244,7 +115244,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115291,7 +115291,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115338,7 +115338,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115385,7 +115385,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115432,7 +115432,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115479,7 +115479,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115526,7 +115526,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115573,7 +115573,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115620,7 +115620,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115667,7 +115667,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115714,7 +115714,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115761,7 +115761,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115808,7 +115808,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115855,7 +115855,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115902,7 +115902,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115949,7 +115949,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -115996,7 +115996,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116043,7 +116043,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116090,7 +116090,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116137,7 +116137,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116184,7 +116184,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116231,7 +116231,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116278,7 +116278,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116325,7 +116325,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116372,7 +116372,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116419,7 +116419,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116466,7 +116466,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116513,7 +116513,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116560,7 +116560,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116607,7 +116607,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116654,7 +116654,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116701,7 +116701,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116748,7 +116748,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116795,7 +116795,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116842,7 +116842,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116889,7 +116889,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116936,7 +116936,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -116983,7 +116983,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117030,7 +117030,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117077,7 +117077,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117124,7 +117124,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117171,7 +117171,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117218,7 +117218,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117265,7 +117265,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117312,7 +117312,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117359,7 +117359,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117406,7 +117406,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117453,7 +117453,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117500,7 +117500,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117547,7 +117547,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117594,7 +117594,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117641,7 +117641,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117688,7 +117688,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117735,7 +117735,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117782,7 +117782,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117829,7 +117829,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117876,7 +117876,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117923,7 +117923,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -117970,7 +117970,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118017,7 +118017,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118064,7 +118064,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118111,7 +118111,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118158,7 +118158,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118205,7 +118205,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118252,7 +118252,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118299,7 +118299,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118346,7 +118346,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118393,7 +118393,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118440,7 +118440,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118487,7 +118487,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118534,7 +118534,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118581,7 +118581,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118628,7 +118628,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118675,7 +118675,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118722,7 +118722,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118769,7 +118769,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118816,7 +118816,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118863,7 +118863,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118910,7 +118910,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -118957,7 +118957,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119004,7 +119004,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119051,7 +119051,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119098,7 +119098,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119145,7 +119145,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119192,7 +119192,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119239,7 +119239,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119286,7 +119286,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119333,7 +119333,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119380,7 +119380,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119427,7 +119427,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119474,7 +119474,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119521,7 +119521,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119568,7 +119568,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119615,7 +119615,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119662,7 +119662,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119709,7 +119709,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119756,7 +119756,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119803,7 +119803,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119850,7 +119850,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119897,7 +119897,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119944,7 +119944,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -119991,7 +119991,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120038,7 +120038,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120085,7 +120085,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120132,7 +120132,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120179,7 +120179,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120226,7 +120226,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120273,7 +120273,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120320,7 +120320,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120367,7 +120367,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120414,7 +120414,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120461,7 +120461,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120508,7 +120508,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120555,7 +120555,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120602,7 +120602,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120649,7 +120649,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120696,7 +120696,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120743,7 +120743,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120790,7 +120790,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120837,7 +120837,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120884,7 +120884,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120931,7 +120931,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -120978,7 +120978,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121025,7 +121025,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121072,7 +121072,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121119,7 +121119,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121166,7 +121166,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121213,7 +121213,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121260,7 +121260,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121307,7 +121307,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121354,7 +121354,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121401,7 +121401,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121448,7 +121448,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121495,7 +121495,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121542,7 +121542,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121589,7 +121589,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121636,7 +121636,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121683,7 +121683,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121730,7 +121730,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121777,7 +121777,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121824,7 +121824,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121871,7 +121871,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121918,7 +121918,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -121965,7 +121965,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122012,7 +122012,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122059,7 +122059,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122106,7 +122106,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122153,7 +122153,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122200,7 +122200,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122247,7 +122247,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122294,7 +122294,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122341,7 +122341,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122388,7 +122388,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122435,7 +122435,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122482,7 +122482,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122529,7 +122529,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122576,7 +122576,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122623,7 +122623,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122670,7 +122670,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122717,7 +122717,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122764,7 +122764,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122811,7 +122811,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122858,7 +122858,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122905,7 +122905,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122952,7 +122952,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -122999,7 +122999,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123046,7 +123046,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123093,7 +123093,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123140,7 +123140,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123187,7 +123187,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123234,7 +123234,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123281,7 +123281,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123328,7 +123328,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123375,7 +123375,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123422,7 +123422,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123469,7 +123469,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123516,7 +123516,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123563,7 +123563,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123610,7 +123610,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123657,7 +123657,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123704,7 +123704,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123751,7 +123751,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123798,7 +123798,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123845,7 +123845,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123892,7 +123892,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123939,7 +123939,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -123986,7 +123986,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124033,7 +124033,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124080,7 +124080,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124127,7 +124127,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124174,7 +124174,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124221,7 +124221,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124268,7 +124268,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124315,7 +124315,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124362,7 +124362,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124409,7 +124409,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124456,7 +124456,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124503,7 +124503,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124550,7 +124550,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124597,7 +124597,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124644,7 +124644,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124691,7 +124691,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124738,7 +124738,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124785,7 +124785,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124832,7 +124832,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124879,7 +124879,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124926,7 +124926,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -124973,7 +124973,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125020,7 +125020,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125067,7 +125067,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125114,7 +125114,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125161,7 +125161,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125208,7 +125208,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125255,7 +125255,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125302,7 +125302,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125349,7 +125349,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125396,7 +125396,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125443,7 +125443,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125490,7 +125490,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125537,7 +125537,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125584,7 +125584,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125631,7 +125631,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125678,7 +125678,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125725,7 +125725,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125772,7 +125772,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125819,7 +125819,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125866,7 +125866,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125913,7 +125913,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -125960,7 +125960,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126007,7 +126007,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126054,7 +126054,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126101,7 +126101,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126148,7 +126148,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126195,7 +126195,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126242,7 +126242,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126289,7 +126289,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126336,7 +126336,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126383,7 +126383,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126430,7 +126430,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126477,7 +126477,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126524,7 +126524,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126571,7 +126571,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126618,7 +126618,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126665,7 +126665,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126712,7 +126712,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126759,7 +126759,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126806,7 +126806,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126853,7 +126853,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126900,7 +126900,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126947,7 +126947,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -126994,7 +126994,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127041,7 +127041,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127088,7 +127088,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127135,7 +127135,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127182,7 +127182,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127229,7 +127229,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127276,7 +127276,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127323,7 +127323,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127370,7 +127370,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127417,7 +127417,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127464,7 +127464,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127511,7 +127511,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127558,7 +127558,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127605,7 +127605,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127652,7 +127652,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127699,7 +127699,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127746,7 +127746,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127793,7 +127793,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127840,7 +127840,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127887,7 +127887,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127934,7 +127934,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -127981,7 +127981,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128028,7 +128028,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128075,7 +128075,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128122,7 +128122,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128169,7 +128169,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128216,7 +128216,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128263,7 +128263,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128310,7 +128310,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128357,7 +128357,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128404,7 +128404,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128451,7 +128451,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128498,7 +128498,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128545,7 +128545,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128592,7 +128592,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128639,7 +128639,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128686,7 +128686,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128733,7 +128733,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128780,7 +128780,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128827,7 +128827,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128874,7 +128874,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128921,7 +128921,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -128968,7 +128968,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129015,7 +129015,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129062,7 +129062,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129109,7 +129109,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129156,7 +129156,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129203,7 +129203,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129250,7 +129250,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129297,7 +129297,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129344,7 +129344,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129391,7 +129391,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129438,7 +129438,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129485,7 +129485,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129532,7 +129532,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129579,7 +129579,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129626,7 +129626,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129673,7 +129673,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129720,7 +129720,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129767,7 +129767,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129814,7 +129814,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129861,7 +129861,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129908,7 +129908,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -129955,7 +129955,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130002,7 +130002,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130049,7 +130049,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130096,7 +130096,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130143,7 +130143,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130190,7 +130190,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130237,7 +130237,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130284,7 +130284,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130331,7 +130331,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130378,7 +130378,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130425,7 +130425,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130472,7 +130472,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130519,7 +130519,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130566,7 +130566,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130613,7 +130613,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130660,7 +130660,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130707,7 +130707,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130754,7 +130754,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130801,7 +130801,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130848,7 +130848,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130895,7 +130895,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130942,7 +130942,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -130989,7 +130989,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131036,7 +131036,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131083,7 +131083,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131130,7 +131130,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131177,7 +131177,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131224,7 +131224,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131271,7 +131271,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131318,7 +131318,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131365,7 +131365,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131412,7 +131412,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131459,7 +131459,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131506,7 +131506,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131553,7 +131553,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131600,7 +131600,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131647,7 +131647,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131694,7 +131694,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131741,7 +131741,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131788,7 +131788,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131835,7 +131835,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131882,7 +131882,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131929,7 +131929,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -131976,7 +131976,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132023,7 +132023,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132070,7 +132070,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132117,7 +132117,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132164,7 +132164,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132211,7 +132211,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132258,7 +132258,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132305,7 +132305,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132352,7 +132352,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132399,7 +132399,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132446,7 +132446,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132493,7 +132493,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132540,7 +132540,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132587,7 +132587,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132634,7 +132634,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132681,7 +132681,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132728,7 +132728,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132775,7 +132775,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132822,7 +132822,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132869,7 +132869,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132916,7 +132916,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -132963,7 +132963,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133010,7 +133010,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133057,7 +133057,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133104,7 +133104,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133151,7 +133151,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133198,7 +133198,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133245,7 +133245,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133292,7 +133292,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133339,7 +133339,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133386,7 +133386,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133433,7 +133433,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133480,7 +133480,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133527,7 +133527,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133574,7 +133574,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133621,7 +133621,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133668,7 +133668,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133715,7 +133715,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133762,7 +133762,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133809,7 +133809,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133856,7 +133856,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133903,7 +133903,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133950,7 +133950,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -133997,7 +133997,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134044,7 +134044,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134091,7 +134091,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134138,7 +134138,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134185,7 +134185,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134232,7 +134232,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134279,7 +134279,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134326,7 +134326,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134373,7 +134373,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134420,7 +134420,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134467,7 +134467,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134514,7 +134514,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134561,7 +134561,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134608,7 +134608,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134655,7 +134655,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134702,7 +134702,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134749,7 +134749,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134796,7 +134796,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134843,7 +134843,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134890,7 +134890,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134937,7 +134937,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -134984,7 +134984,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135031,7 +135031,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135078,7 +135078,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135125,7 +135125,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135172,7 +135172,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135219,7 +135219,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135266,7 +135266,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135313,7 +135313,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135360,7 +135360,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135407,7 +135407,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135454,7 +135454,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135501,7 +135501,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135548,7 +135548,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135595,7 +135595,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135642,7 +135642,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135689,7 +135689,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135736,7 +135736,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135783,7 +135783,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135830,7 +135830,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135877,7 +135877,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135924,7 +135924,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -135971,7 +135971,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136018,7 +136018,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136065,7 +136065,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136112,7 +136112,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136159,7 +136159,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136206,7 +136206,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136253,7 +136253,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136300,7 +136300,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136347,7 +136347,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136394,7 +136394,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136441,7 +136441,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136488,7 +136488,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136535,7 +136535,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136582,7 +136582,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136629,7 +136629,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136676,7 +136676,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136723,7 +136723,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136770,7 +136770,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136817,7 +136817,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136864,7 +136864,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136911,7 +136911,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -136958,7 +136958,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137005,7 +137005,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137052,7 +137052,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137099,7 +137099,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137146,7 +137146,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137193,7 +137193,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137240,7 +137240,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137287,7 +137287,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137334,7 +137334,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137381,7 +137381,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137428,7 +137428,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137475,7 +137475,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137522,7 +137522,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137569,7 +137569,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137616,7 +137616,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137663,7 +137663,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137710,7 +137710,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137757,7 +137757,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137804,7 +137804,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137851,7 +137851,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137898,7 +137898,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137945,7 +137945,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -137992,7 +137992,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138039,7 +138039,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138086,7 +138086,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138133,7 +138133,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138180,7 +138180,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138227,7 +138227,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138274,7 +138274,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138321,7 +138321,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138368,7 +138368,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138415,7 +138415,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138462,7 +138462,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138509,7 +138509,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138556,7 +138556,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138603,7 +138603,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138650,7 +138650,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138697,7 +138697,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138744,7 +138744,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138791,7 +138791,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138838,7 +138838,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138885,7 +138885,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138932,7 +138932,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -138979,7 +138979,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139026,7 +139026,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139073,7 +139073,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139120,7 +139120,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139167,7 +139167,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139214,7 +139214,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139261,7 +139261,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139308,7 +139308,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139355,7 +139355,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139402,7 +139402,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139449,7 +139449,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139496,7 +139496,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139543,7 +139543,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139590,7 +139590,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139637,7 +139637,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139684,7 +139684,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139731,7 +139731,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139778,7 +139778,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139825,7 +139825,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139872,7 +139872,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139919,7 +139919,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -139966,7 +139966,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140013,7 +140013,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140060,7 +140060,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140107,7 +140107,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140154,7 +140154,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140201,7 +140201,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140248,7 +140248,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140295,7 +140295,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140342,7 +140342,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140389,7 +140389,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140436,7 +140436,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140483,7 +140483,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140530,7 +140530,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140577,7 +140577,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140624,7 +140624,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140671,7 +140671,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140718,7 +140718,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140765,7 +140765,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140812,7 +140812,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140859,7 +140859,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140906,7 +140906,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -140953,7 +140953,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141000,7 +141000,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141047,7 +141047,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141094,7 +141094,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141141,7 +141141,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141188,7 +141188,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141235,7 +141235,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141282,7 +141282,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141329,7 +141329,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141376,7 +141376,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141423,7 +141423,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141470,7 +141470,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141517,7 +141517,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141564,7 +141564,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141611,7 +141611,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141658,7 +141658,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141705,7 +141705,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141752,7 +141752,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141799,7 +141799,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141846,7 +141846,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141893,7 +141893,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141940,7 +141940,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -141987,7 +141987,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142034,7 +142034,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142081,7 +142081,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142128,7 +142128,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142175,7 +142175,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142222,7 +142222,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142269,7 +142269,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142316,7 +142316,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142363,7 +142363,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142410,7 +142410,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142457,7 +142457,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142504,7 +142504,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142551,7 +142551,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142598,7 +142598,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142645,7 +142645,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142692,7 +142692,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142739,7 +142739,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142786,7 +142786,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142833,7 +142833,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142880,7 +142880,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142927,7 +142927,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -142974,7 +142974,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143021,7 +143021,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143068,7 +143068,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143115,7 +143115,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143162,7 +143162,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143209,7 +143209,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143256,7 +143256,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143303,7 +143303,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143350,7 +143350,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143397,7 +143397,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143444,7 +143444,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143491,7 +143491,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143538,7 +143538,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143585,7 +143585,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143632,7 +143632,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143679,7 +143679,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143726,7 +143726,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143773,7 +143773,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143820,7 +143820,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143867,7 +143867,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143914,7 +143914,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -143961,7 +143961,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144008,7 +144008,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144055,7 +144055,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144102,7 +144102,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144149,7 +144149,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144196,7 +144196,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144243,7 +144243,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144290,7 +144290,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144337,7 +144337,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144384,7 +144384,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144431,7 +144431,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144478,7 +144478,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144525,7 +144525,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144572,7 +144572,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144619,7 +144619,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144666,7 +144666,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144713,7 +144713,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144760,7 +144760,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144807,7 +144807,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144854,7 +144854,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144901,7 +144901,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144948,7 +144948,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -144995,7 +144995,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145042,7 +145042,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145089,7 +145089,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145136,7 +145136,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145183,7 +145183,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145230,7 +145230,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145277,7 +145277,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145324,7 +145324,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145371,7 +145371,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145418,7 +145418,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145465,7 +145465,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145512,7 +145512,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145559,7 +145559,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145606,7 +145606,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145653,7 +145653,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145700,7 +145700,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145747,7 +145747,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145794,7 +145794,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145841,7 +145841,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145888,7 +145888,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145935,7 +145935,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -145982,7 +145982,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146029,7 +146029,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146076,7 +146076,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146123,7 +146123,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146170,7 +146170,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146217,7 +146217,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146264,7 +146264,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146311,7 +146311,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146358,7 +146358,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146405,7 +146405,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146452,7 +146452,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146499,7 +146499,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146546,7 +146546,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146593,7 +146593,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146640,7 +146640,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146687,7 +146687,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146734,7 +146734,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146781,7 +146781,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146828,7 +146828,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146875,7 +146875,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146922,7 +146922,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -146969,7 +146969,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147016,7 +147016,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147063,7 +147063,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147110,7 +147110,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147157,7 +147157,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147204,7 +147204,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147251,7 +147251,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147298,7 +147298,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147345,7 +147345,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147392,7 +147392,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147439,7 +147439,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147486,7 +147486,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147533,7 +147533,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147580,7 +147580,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147627,7 +147627,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147674,7 +147674,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147721,7 +147721,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147768,7 +147768,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147815,7 +147815,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147862,7 +147862,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147909,7 +147909,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -147956,7 +147956,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148003,7 +148003,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148050,7 +148050,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148097,7 +148097,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148144,7 +148144,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148191,7 +148191,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148238,7 +148238,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148285,7 +148285,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148332,7 +148332,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148379,7 +148379,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148426,7 +148426,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148473,7 +148473,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148520,7 +148520,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148567,7 +148567,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148614,7 +148614,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148661,7 +148661,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148708,7 +148708,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148755,7 +148755,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148802,7 +148802,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148849,7 +148849,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148896,7 +148896,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148943,7 +148943,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -148990,7 +148990,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149037,7 +149037,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149084,7 +149084,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149131,7 +149131,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149178,7 +149178,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149225,7 +149225,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149272,7 +149272,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149319,7 +149319,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149366,7 +149366,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149413,7 +149413,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149460,7 +149460,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149507,7 +149507,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149554,7 +149554,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149601,7 +149601,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149648,7 +149648,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149695,7 +149695,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149742,7 +149742,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149789,7 +149789,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149836,7 +149836,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149883,7 +149883,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149930,7 +149930,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -149977,7 +149977,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -150024,7 +150024,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -150071,7 +150071,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -150118,7 +150118,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -150165,7 +150165,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -150212,7 +150212,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -150259,7 +150259,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -150306,7 +150306,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -150353,7 +150353,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
@@ -150400,7 +150400,7 @@ SUITE(INTEGRATOR){
     S.computeFourierTransform();
     f = S.fourierTransform();
     // Backward
-    G = integrator.integrate(f);
+    G = integrator.backwardFFT(f);
 
 
     // Test
