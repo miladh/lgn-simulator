@@ -34,6 +34,7 @@ void Neuron::computeResponse(Stimulus *stimulus)
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
     m_response = real(m_integrator->backwardFFT(m_responseFT));
 
+
 }
 
 

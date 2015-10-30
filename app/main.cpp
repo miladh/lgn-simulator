@@ -7,6 +7,7 @@
 #include "stimuli/grating.h"
 #include "stimuli/oscillatinggaussian.h"
 #include "stimuli/staticimage.h"
+#include "stimuli/naturalscenevideo.h"
 
 #include "integrator.h"
 
@@ -39,7 +40,8 @@ int main()
     Integrator integrator = createIntegrator(&cfg);
 
     //Stim---------------------------------------------------------------------
-    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
+    NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
+//    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
 //    Grating S = createGratingStimulus(&integrator,&cfg);
 //    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
 //    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
@@ -59,7 +61,7 @@ int main()
 
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &tempConst);
+    GanglionCell ganglion(&integrator, &dog, &Kt);
     RelayCell relay(&integrator);
     Interneuron interneuron(&integrator);
     CorticalCell cortical(&integrator);

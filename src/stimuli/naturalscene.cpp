@@ -40,7 +40,7 @@ void NaturalScene::readScene()
     cv::Mat cvMat = cv::imread(m_sceneFilename, 0);
     if (cvMat.empty())
     {
-        cout << "Cannot open image!" << endl;
+        throw "Cannot open image!";
     }
 
     //    cv::imshow("image", cvMat);

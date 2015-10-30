@@ -22,8 +22,6 @@ double StaticImage::fourierTransformAtTemporalFrequency(double w)
 }
 
 
-
-
 StaticImage createStaticImageStimulus(Integrator *integrator, const Config *cfg)
 {
     //Read file

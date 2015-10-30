@@ -38,7 +38,8 @@ SOURCES += \
     stimuli/oscillatinggaussian.cpp \
     temporalKernels/temporallyconstant.cpp \
     stimuli/naturalscene.cpp \
-    stimuli/staticimage.cpp
+    stimuli/staticimage.cpp \
+    stimuli/naturalscenevideo.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -62,4 +63,5 @@ HEADERS += \
     stimuli/oscillatinggaussian.h \
     temporalKernels/temporallyconstant.h \
     stimuli/naturalscene.h \
-    stimuli/staticimage.h
+    stimuli/staticimage.h \
+    stimuli/naturalscenevideo.h

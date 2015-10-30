@@ -129,5 +129,5 @@ if __name__ == "__main__":
     ,exp.cortical["impulseResponse"]["spatioTemporal"]
     ]
     print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
-    animateImshowPlots(data, colorbar = True, save_animation = False)
+    animateImshowPlots(data, colorbar = True, save_animation = True)
     # animate3dPlots(data, resolution = 3)
