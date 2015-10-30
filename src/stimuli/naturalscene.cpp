@@ -27,16 +27,7 @@ void NaturalScene::computeSpatiotemporal()
 
 void NaturalScene::computeFourierTransform()
 {
-    int size[2] = {int(m_scene.n_cols), int(m_scene.n_rows)};
-    m_scene = FFTHelper::fftShift(m_scene);
-
-    fftw_complex* in = reinterpret_cast<fftw_complex*> (m_scene.memptr());
-    fftw_complex* out = reinterpret_cast<fftw_complex*> (m_sceneFourierTransform.memptr());
-    fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
-
-    fftw_execute(plan);
-    fftw_destroy_plan(plan);
-//    m_sceneFourierTransform *= m_dk * m_dk;
+    m_sceneFourierTransform = m_integrator->forwardFFT(m_scene);
 
     for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
         m_fourierTransform.slice(k) = m_sceneFourierTransform
@@ -48,8 +39,14 @@ void NaturalScene::computeFourierTransform()
 
 NaturalScene createNaturalSceneStimulus(Integrator *integrator, const Config *cfg)
 {
+    //Read file
     const Setting & root = cfg->getRoot();
     string scenePath = root["stimuliSettings"]["scenePath"];
+    int ns = root["integratorSettings"]["ns"];
+    int nt = root["integratorSettings"]["nt"];
+
+    int Ns = pow(2,ns);
+    int Nt = pow(2,nt);
 
 
     cv::Mat cvMat = cv::imread(scenePath, 0);
@@ -58,9 +55,18 @@ NaturalScene createNaturalSceneStimulus(Integrator *integrator, const Config *cf
         cout << "Cannot open image!" << endl;
     }
 
-//    cv::imshow("image", cvMat);
-//    cv::waitKey(0);
+    //    cv::imshow("image", cvMat);
+    //    cv::waitKey(0);
 
+
+    //Scaling
+    if(cvMat.rows != Ns ||cvMat.cols != Ns){
+        cv::Size size(Ns, Ns);
+        cv::resize(cvMat, cvMat, size);
+    }
+
+
+    //Convert to arma mat
     cvMat.convertTo(cvMat, CV_64F);
     mat scene(reinterpret_cast<double*>(cvMat.data), cvMat.rows, cvMat.cols);
 

@@ -22,7 +22,6 @@ Integrator::Integrator(int nt, double dt, int ns, double ds)
 
 Integrator::~Integrator()
 {
-
 }
 
 cx_cube Integrator::backwardFFT(cx_cube data)
@@ -68,6 +67,44 @@ cx_mat Integrator::backwardFFT(cx_mat data)
     return fftData;
 }
 
+cx_cube Integrator::forwardFFT(cx_cube data)
+{
+    //fftShift
+    for(int i = 0; i < int(data.n_slices); i++){
+        data.slice(i) = FFTHelper::fftShift(data.slice(i));
+    }
+
+    cx_cube ifftData = 0 * data;
+    int size[3] = {int(data.n_slices), int(data.n_cols), int(data.n_rows)};
+
+    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
+    fftw_complex* out = reinterpret_cast<fftw_complex*> (ifftData.memptr());
+    fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
+
+    fftw_execute(plan);
+    fftw_destroy_plan(plan);
+    return ifftData;
+
+}
+
+
+cx_mat Integrator::forwardFFT(cx_mat data)
+{
+    //fftShift
+    data = FFTHelper::fftShift(data);
+
+    cx_mat ifftData = 0 * data;
+    int size[2] = {int(data.n_cols), int(data.n_rows)};
+
+    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
+    fftw_complex* out = reinterpret_cast<fftw_complex*> (ifftData.memptr());
+    fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
+
+    fftw_execute(plan);
+    fftw_destroy_plan(plan);
+
+    return ifftData;
+}
 
 vec Integrator::timeVec() const
 {

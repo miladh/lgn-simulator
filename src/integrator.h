@@ -23,6 +23,9 @@ public:
     cx_cube backwardFFT(cx_cube data);
     cx_mat backwardFFT(cx_mat data);
 
+    cx_cube forwardFFT(cx_cube data);
+    cx_mat forwardFFT(cx_mat data);
+
     vec timeVec() const;
     vec coordinateVec() const;
     vec temporalFreqVec() const;

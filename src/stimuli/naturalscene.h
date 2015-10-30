@@ -3,7 +3,7 @@
 
 #include "stimuli.h"
 #include "opencv2/highgui/highgui.hpp"
-
+#include "opencv2/photo/photo.hpp"
 
 
 class NaturalScene : public Stimulus
@@ -11,6 +11,7 @@ class NaturalScene : public Stimulus
 public:
     NaturalScene(Integrator *integrator, mat scene);
     ~NaturalScene();
+
 
     // Stimulus interface
 public:
@@ -30,8 +31,6 @@ private:
 private:
     cx_mat m_scene;
     cx_mat m_sceneFourierTransform;
-
-
 };
 
 NaturalScene createNaturalSceneStimulus(Integrator *integrator, const Config *cfg);
