@@ -23,10 +23,19 @@ Stimulus::Stimulus(Integrator *integrator)
 
 Stimulus::~Stimulus()
 {
-
 }
 
-void Stimulus::computeSpatiotemporal()
+cube Stimulus::spatioTemporal() const
+{
+    return m_spatioTemporal;
+}
+
+cx_cube Stimulus::fourierTransform() const
+{
+    return m_fourierTransform;
+}
+
+void Stimulus::computeSpatiotemporalAnalytic()
 {
     for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
         for(int i = 0; i < int(m_spatioTemporal.n_rows); i++){
@@ -37,13 +46,10 @@ void Stimulus::computeSpatiotemporal()
             }
         }
     }
-
 }
 
-
-void Stimulus::computeFourierTransform()
+void Stimulus::computeFourierTransformAnalytic()
 {
-
     for(int k = 0; k < int(m_fourierTransform.n_slices); k++){
         for(int i = 0; i < int(m_fourierTransform.n_rows); i++){
             for(int j = 0; j < int(m_fourierTransform.n_cols); j++){
@@ -55,18 +61,6 @@ void Stimulus::computeFourierTransform()
             }
         }
     }
-
-}
-
-
-cube Stimulus::spatioTemporal() const
-{
-    return m_spatioTemporal;
-}
-
-cx_cube Stimulus::fourierTransform() const
-{
-    return m_fourierTransform;
 }
 
 

@@ -46,16 +46,6 @@ void NaturalScene::computeFourierTransform()
 }
 
 
-
-double NaturalScene::valueAtPoint(vec2 rVec, double t)
-{
-}
-
-double NaturalScene::fourierTransformAtFrequency(vec2 k, double w)
-{
-}
-
-
 NaturalScene createNaturalSceneStimulus(Integrator *integrator, const Config *cfg)
 {
     const Setting & root = cfg->getRoot();

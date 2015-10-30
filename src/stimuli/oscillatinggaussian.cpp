@@ -28,6 +28,15 @@ double OscillatingGaussian::fourierTransformAtFrequency(vec2 k, double w)
            /m_integrator->temporalFreqResolution();
 }
 
+void OscillatingGaussian::computeSpatiotemporal()
+{
+    computeSpatiotemporalAnalytic();
+}
+
+void OscillatingGaussian::computeFourierTransform()
+{
+    computeFourierTransformAnalytic();
+}
 
 
 OscillatingGaussian createOscillatingGaussianStimulus(Integrator *integrator,
@@ -41,3 +50,4 @@ OscillatingGaussian createOscillatingGaussianStimulus(Integrator *integrator,
 
     return OscillatingGaussian(integrator, exponent, wd);
 }
+

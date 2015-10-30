@@ -46,6 +46,18 @@ double PatchGrating::fourierTransformAtFrequency(vec2 kVec, double w)
 
 
 
+void PatchGrating::computeSpatiotemporal()
+{
+    computeSpatiotemporalAnalytic();
+
+}
+
+void PatchGrating::computeFourierTransform()
+{
+    computeFourierTransformAnalytic();
+}
+
+
 
 PatchGrating createPatchGratingStimulus(Integrator *integrator, const Config *cfg)
 {

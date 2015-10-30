@@ -12,17 +12,26 @@ public:
     NaturalScene(Integrator *integrator, mat scene);
     ~NaturalScene();
 
+    // Stimulus interface
 public:
     void computeSpatiotemporal();
     void computeFourierTransform();
 
-    // Stimulus interface
 private:
-    virtual double valueAtPoint(vec2 rVec, double t);
-    virtual double fourierTransformAtFrequency(vec2 k, double w);
+    double valueAtPoint(vec2 rVec, double t){
+        (void)rVec;
+        (void)t;
+    }
+    double fourierTransformAtFrequency(vec2 kVec, double w){
+        (void)kVec;
+        (void)w;
+    }
 
+private:
     cx_mat m_scene;
     cx_mat m_sceneFourierTransform;
+
+
 };
 
 NaturalScene createNaturalSceneStimulus(Integrator *integrator, const Config *cfg);

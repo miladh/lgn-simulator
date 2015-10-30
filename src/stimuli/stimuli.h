@@ -17,9 +17,8 @@ public:
     Stimulus(Integrator *integrator);
     ~Stimulus();
 
-    void computeSpatiotemporal();
-    void computeFourierTransform();
-    void setSpatial(cube valueAtPoint);
+    virtual void computeSpatiotemporal() = 0;
+    virtual void computeFourierTransform() = 0;
 
     cube spatioTemporal() const;
     cx_cube fourierTransform() const;
@@ -35,6 +34,9 @@ protected:
     vec m_temporalFreqs;
 
     Integrator *m_integrator;
+
+    void computeSpatiotemporalAnalytic();
+    void computeFourierTransformAnalytic();
 
 private:
     virtual double valueAtPoint(vec2 rVec, double t) = 0;

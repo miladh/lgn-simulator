@@ -13,12 +13,18 @@ public:
     ~OscillatingGaussian();
 
     // Stimulus interface
+public:
+    virtual void computeSpatiotemporal();
+    virtual void computeFourierTransform();
 private:
-    virtual double valueAtPoint(vec2 rVec, double t);
-    virtual double fourierTransformAtFrequency(vec2 k, double w);
+    double valueAtPoint(vec2 rVec, double t);
+    double fourierTransformAtFrequency(vec2 kVec, double w);
 
+
+private:
     double m_exponent;
     double m_wd;
+
 };
 
 

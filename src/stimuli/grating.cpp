@@ -33,6 +33,17 @@ double Grating::fourierTransformAtFrequency(vec2 k, double w)
 }
 
 
+void Grating::computeSpatiotemporal()
+{
+    computeSpatiotemporalAnalytic();
+
+}
+
+void Grating::computeFourierTransform()
+{
+    computeFourierTransformAnalytic();
+}
+
 Grating createGratingStimulus(Integrator *integrator, const Config *cfg)
 {
     const Setting & root = cfg->getRoot();
@@ -46,3 +57,4 @@ Grating createGratingStimulus(Integrator *integrator, const Config *cfg)
 
     return Grating(integrator, {kx, ky}, wd, contrast);
 }
+
