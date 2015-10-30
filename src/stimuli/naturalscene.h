@@ -9,7 +9,7 @@
 class NaturalScene : public Stimulus
 {
 public:
-    NaturalScene(Integrator *integrator, mat scene);
+    NaturalScene(Integrator *integrator, string scenePath);
     ~NaturalScene();
 
 
@@ -29,10 +29,14 @@ private:
     }
 
 private:
+    string m_sceneFilename;
     cx_mat m_scene;
     cx_mat m_sceneFourierTransform;
-};
 
-NaturalScene createNaturalSceneStimulus(Integrator *integrator, const Config *cfg);
+    void readScene();
+
+    virtual double temporalValueAtPoint(double t) = 0;
+    virtual double fourierTransformAtTemporalFrequency(double w) = 0;
+};
 
 #endif // NATURALSCENE_H

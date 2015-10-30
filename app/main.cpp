@@ -6,7 +6,7 @@
 #include "stimuli/patchgrating.h"
 #include "stimuli/grating.h"
 #include "stimuli/oscillatinggaussian.h"
-#include "stimuli/naturalscene.h"
+#include "stimuli/staticimage.h"
 
 #include "integrator.h"
 
@@ -39,7 +39,7 @@ int main()
     Integrator integrator = createIntegrator(&cfg);
 
     //Stim---------------------------------------------------------------------
-    NaturalScene S = createNaturalSceneStimulus(&integrator,&cfg);
+    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
 //    Grating S = createGratingStimulus(&integrator,&cfg);
 //    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
 //    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);

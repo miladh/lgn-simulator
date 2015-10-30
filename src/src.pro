@@ -37,7 +37,8 @@ SOURCES += \
     neurons/interneuron.cpp \
     stimuli/oscillatinggaussian.cpp \
     temporalKernels/temporallyconstant.cpp \
-    stimuli/naturalscene.cpp
+    stimuli/naturalscene.cpp \
+    stimuli/staticimage.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -60,4 +61,5 @@ HEADERS += \
     neurons/interneuron.h \
     stimuli/oscillatinggaussian.h \
     temporalKernels/temporallyconstant.h \
-    stimuli/naturalscene.h
+    stimuli/naturalscene.h \
+    stimuli/staticimage.h
