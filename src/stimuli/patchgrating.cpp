@@ -63,7 +63,7 @@ PatchGrating createPatchGratingStimulus(Integrator *integrator, const Config *cf
 {
     const Setting & root = cfg->getRoot();
     double contrast = root["stimuliSettings"]["C"];
-    double spotDiameter = root["stimuliSettings"]["d"];
+    double spotDiameterRatio = root["stimuliSettings"]["d"];
 
     vec k = integrator->spatialFreqVec();
     vec w = integrator->temporalFreqVec();
@@ -72,5 +72,5 @@ PatchGrating createPatchGratingStimulus(Integrator *integrator, const Config *cf
     double ky = k(0);
 
 
-    return PatchGrating(integrator, {kx, ky}, wd, contrast, spotDiameter);
+    return PatchGrating(integrator, {kx, ky}, wd, contrast, spotDiameterRatio);
 }

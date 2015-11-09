@@ -28,7 +28,6 @@ SOURCES += \
     neurons/relaycell.cpp \
     spatialKernels/dog.cpp \
     temporalKernels/decayingexponential.cpp \
-    spatialKernels/gaussian.cpp \
     neurons/ganglioncell.cpp \
     spatialKernels/ellipticgaussian.cpp \
     temporalKernels/dampedoscillator.cpp \
@@ -53,7 +52,6 @@ HEADERS += \
     neurons/relaycell.h \
     spatialKernels/dog.h \
     temporalKernels/decayingexponential.h \
-    spatialKernels/gaussian.h \
     neurons/ganglioncell.h \
     spatialKernels/ellipticgaussian.h \
     temporalKernels/dampedoscillator.h \

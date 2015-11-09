@@ -17,7 +17,6 @@
 #include "neurons/corticalcell.h"
 
 #include "spatialKernels/dog.h"
-#include "spatialKernels/gaussian.h"
 #include "spatialKernels/ellipticgaussian.h"
 
 #include "temporalKernels/decayingexponential.h"
@@ -40,8 +39,8 @@ int main()
     Integrator integrator = createIntegrator(&cfg);
 
     //Stim---------------------------------------------------------------------
-    NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
-//    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
+//    NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
+    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
 //    Grating S = createGratingStimulus(&integrator,&cfg);
 //    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
 //    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
@@ -50,7 +49,6 @@ int main()
 
     //Spatial kernels:----------------------------------------------------------
     DOG dog = createDOGSpatialKernel(&cfg);
-    Gaussian gauss = createGaussianSpatialKernel(&cfg);
     EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
 
 
@@ -63,26 +61,26 @@ int main()
     //Neurons:-----------------------------------------------------------------
     GanglionCell ganglion(&integrator, &dog, &Kt);
     RelayCell relay(&integrator);
-    Interneuron interneuron(&integrator);
-    CorticalCell cortical(&integrator);
+//    Interneuron interneuron(&integrator);
+//    CorticalCell cortical(&integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
     neurons.push_back(&relay);
-    neurons.push_back(&interneuron);
-    neurons.push_back(&cortical);
+//    neurons.push_back(&interneuron);
+//    neurons.push_back(&cortical);
 
 
 
     //connect neurons----------------------------------------------------------
-    relay.addGanglionCell(&ganglion,&gauss, &damped);
-    relay.addInterNeuron(&interneuron,&gauss, &damped);
-    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
+    relay.addGanglionCell(&ganglion,&dog, &Kt);
+//    relay.addInterNeuron(&interneuron,&gauss, &damped);
+//    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
 
-    interneuron.addGanglionCell(&ganglion,&gauss, &Kt);
-    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
+//    interneuron.addGanglionCell(&ganglion,&gauss, &Kt);
+//    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
 
-    cortical.addRelayCell(&relay, &dog, &damped);
+//    cortical.addRelayCell(&relay, &dog, &damped);
 
 
 
@@ -92,8 +90,8 @@ int main()
 
     ganglion.computeResponse(&S);
     relay.computeResponse(&S);
-    interneuron.computeResponse(&S);
-    cortical.computeResponse(&S);
+//    interneuron.computeResponse(&S);
+//    cortical.computeResponse(&S);
 
 
 

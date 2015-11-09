@@ -42,13 +42,14 @@ if __name__ == "__main__":
     import h5py
     from glob import glob
     from pylab import*
-    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
+    # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
+    outputFilePath = "/home/milad/kurs/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     sim = Simulation(f)
     print sim.ganglion["response"]["spatioTemporal"].shape
     print sim.stimuli.keys()
-    plot(sim.singleCellTemporalResponse("interneuron", 32 , 32), 'r')
-    plot(sim.singleCellTemporalResponse("relay", 32, 32),'b')
-    plot(sim.singleCellTemporalResponse("cortical", 32, 32),'g')
+    plot(sim.singleCellTemporalResponse("interneuron", 256 , 256), 'r')
+    plot(sim.singleCellTemporalResponse("relay", 256,256),'b')
+    plot(sim.singleCellTemporalResponse("cortical", 256, 256),'g')
     show()

@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from mpl_toolkits.mplot3d import axes3d
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 import time
 import colormaps as cmaps
 import numpy as np
@@ -10,6 +11,14 @@ def plotResponse(data, figsize = (15,8)):
     plt.plot(data)
     plt.show()
 
+def simpleaxis(ax):
+    """
+    Removes axis lines
+    """
+    # plt.axis('off')
+    ax.set_axis_off()
+    # ax.spines['top'].set_visible(False)
+    # ax.get_xaxis().tick_bottom()
 
 def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis, resolution = 0,
                         save_animation = False, animation_name = "unnamed" ):
@@ -59,38 +68,74 @@ def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis, resolution = 0,
 
 def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
                         save_animation = False, colorbar = False, animation_name = "unnamed" ):
+
+
+
     num_subplots = len(data)
     imshowPlots = []
-    nStates = data[0].shape[0]
+    nStates = np.array(data[0][0]).shape[0]
+    Nx = np.array(data[0][0]).shape[1]
+    Ny = np.array(data[0][0]).shape[2]
 
     num_cols = 2 if num_subplots >= 2 else num_subplots
-    num_rows = int(np.ceil(num_subplots/2.))
+    num_rows = int(np.ceil((num_subplots-1)/2.))+1
 
     fig = plt.figure(figsize=figsize)
+
+    # extent = self.screenSizeX * np.arctan(1./self.screenDist) * 180./np.pi
 
 
     def init():
         for i in range(num_subplots):
-            imshowPlots[i].set_data(data[i][1,:,:])
+            imshowPlots[i].set_data(data[i][0][1,:,:])
         ttl.set_text("")
         return imshowPlots, ttl
 
     def animate(j):
         for i in range(num_subplots):
-            imshowPlots[i].set_data(data[i][j,:,:])
-        ttl.set_text("timestep = " + str(j) + " s")
+            imshowPlots[i].set_data(data[i][0][j,:,:])
+        ttl.set_text("timestep = " + str(j))
         return imshowPlots, ttl
 
 
-    ttl = plt.suptitle("",fontsize = 16)
-    iplot = [num_rows, num_cols, 0]
+    #Nomarlize
     for i in range(num_subplots):
-        iplot[2] += 1
-        ax = fig.add_subplot(iplot[0], iplot[1], iplot[2])
-        imshowPlots.append(ax.imshow(data[i][1,:,:], cmap=cmap,
-        interpolation="None"))
-        if(colorbar):
-            plt.colorbar(imshowPlots[-1], ax=ax, orientation='vertical')
+        for j in range(nStates):
+            data[i][0][j,:,:] /= abs(data[i][0][j,:,:]).max()
+
+
+    ttl = plt.suptitle("",fontsize = 16)
+
+    #Plot stimulus
+    colspanStim = 2
+    ax = plt.subplot2grid((num_rows, num_cols),(0, 0), colspan = colspanStim)
+    simpleaxis(ax)
+    ax.set_title(data[0][1])
+    imshowPlots.append(ax.imshow(data[0][0][1,:,:], cmap="gray", interpolation="None"))
+    if(colorbar):
+        divider = make_axes_locatable(ax)
+        cax = divider.append_axes("right", size="5%", pad=0.05)
+        plt.colorbar(imshowPlots[-1], ax=ax, orientation='vertical', cax = cax)
+
+    k = 1
+    for i in range(1, num_rows):
+        for j in range(num_cols):
+            if(k>= num_subplots):
+                break
+            ax = plt.subplot2grid((num_rows, num_cols),(i, j))
+            simpleaxis(ax)
+            ax.set_title(data[k][1])
+            imshowPlots.append(ax.imshow(data[k][0][1,:,:], cmap=cmap,
+            interpolation="None"))
+            if(colorbar):
+                divider = make_axes_locatable(ax)
+                cax = divider.append_axes("right", size="5%", pad=0.05)
+                plt.colorbar(imshowPlots[-1], ax=ax, orientation='vertical',
+                cax = cax)
+
+
+            k+=1
+
     plt.tight_layout()
     plt.subplots_adjust(top=0.95)
 
@@ -112,22 +157,22 @@ if __name__ == "__main__":
 
 
     outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
+    # outputFilePath = "/home/milad/kurs/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
 
     data = [
-    exp.stimuli["spatioTemporal"]
-    ,exp.stimuli["spatioTemporal"]
-    ,exp.ganglion["response"]["spatioTemporal"]
-    ,exp.ganglion["impulseResponse"]["spatioTemporal"]
-    ,exp.interneuron["response"]["spatioTemporal"]
-    ,exp.interneuron["impulseResponse"]["spatioTemporal"]
-    ,exp.relay["response"]["spatioTemporal"]
-    ,exp.relay["impulseResponse"]["spatioTemporal"]
-    ,exp.cortical["response"]["spatioTemporal"]
-    ,exp.cortical["impulseResponse"]["spatioTemporal"]
+     [exp.stimuli["spatioTemporal"], "Stimulus"]
+    ,[exp.ganglion["response"]["spatioTemporal"], "Ganglion cell response"]
+    # ,[exp.interneuron["response"]["spatioTemporal"], "Interneuron"]
+    ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
+    # ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell response"]
+    # ,[exp.cortical["response"]["spatioTemporal"], "Cortical"]
     ]
-    print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
-    animateImshowPlots(data, colorbar = True, save_animation = True)
+
+
+        # ,exp.cortical["impulseResponse"]["spatioTemporal"]
+    # print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
+    animateImshowPlots(data, colorbar = True, save_animation = False)
     # animate3dPlots(data, resolution = 3)

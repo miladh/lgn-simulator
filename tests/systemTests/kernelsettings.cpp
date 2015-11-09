@@ -1,7 +1,6 @@
 #include "kernelsettings.h"
 
 #include "spatialKernels/dog.h"
-#include "spatialKernels/gaussian.h"
 #include "spatialKernels/ellipticgaussian.h"
 
 #include "temporalKernels/decayingexponential.h"
@@ -37,7 +36,6 @@ vector<SpatialKernel *> KernelSettings::spatialKernelVector()
     double widthNarrow = 1.0;
 
     vector<SpatialKernel*> spatialKernels = {new DOG(A,a,B,b),
-                                             new Gaussian(weightGauss, spread),
                                              new EllipticGaussian
                                              (weightElliptic, angle, widthLong,
                                              widthNarrow)};

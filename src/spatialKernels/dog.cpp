@@ -44,5 +44,6 @@ DOG createDOGSpatialKernel(const Config *cfg)
     double B = root["spatialKernelSettings"]["B"];
     double b = root["spatialKernelSettings"]["b"];
 
+
     return DOG(A, a, B, b);
 }
