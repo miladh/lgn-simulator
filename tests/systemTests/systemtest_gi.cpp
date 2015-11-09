@@ -21,9 +21,9 @@ SUITE(SYSTEM){
         int Nt = pow(2,nt);
 
         cube Rg = zeros<cube>(Ns, Ns, Nt);
-        cube Rg_ex = zeros<cube>(Ns, Ns, Nt);
+        cx_cube Rg_ex = zeros<cx_cube>(Ns, Ns, Nt);
         cube Ri = zeros<cube>(Ns, Ns, Nt);
-        cube Ri_ex = zeros<cube>(Ns, Ns, Nt);
+        cx_cube Ri_ex = zeros<cx_cube>(Ns, Ns, Nt);
 
         //Integrator
         Integrator integrator(nt, dt, ns, ds);
@@ -52,7 +52,7 @@ SUITE(SYSTEM){
 
                 //ganglion cell
                 GanglionCell ganglion(&integrator, Fs, Ft);
-                double Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
+                complex<double> Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
 
                 for(SpatialKernel* Ks : spatialKernels){
                     for(TemporalKernel* Kt : temporalKernels){
@@ -65,9 +65,9 @@ SUITE(SYSTEM){
 
 
                         //Compute analytic:
-                        double Kig =  Ks->fourierTransform({kx, ky})
+                        complex<double> Kig =  Ks->fourierTransform({kx, ky})
                                 * Kt->fourierTransform(wd);
-                        double Wi = Kig * Wg;
+                        complex<double> Wi = Kig * Wg;
 
                         for(int l = 0; l < Nt; l++){
                             for(int i = 0; i < Ns; i++){
@@ -92,8 +92,8 @@ SUITE(SYSTEM){
                         for(int l = 0; l < Nt; l++){
                             for(int i = 0; i < Ns; i++){
                                 for(int j = 0; j < Ns; j++){
-                                    CHECK_CLOSE(Ri_ex(i,j,l), Ri(i,j,l), 1e-12);
-                                    CHECK_CLOSE(Rg_ex(i,j,l), Rg(i,j,l), 1e-12);
+                                    CHECK_CLOSE(real(Ri_ex(i,j,l)), Ri(i,j,l), 1e-12);
+                                    CHECK_CLOSE(real(Rg_ex(i,j,l)), Rg(i,j,l), 1e-12);
 
                                 }
                             }

@@ -36,7 +36,7 @@ double GanglionCell::impulseResponseValueAtPoint(vec2 rVec, double t)
     return m_spatialKernel->spatial(rVec) * m_temporalKernel->temporal(t);
 }
 
-double GanglionCell::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w)
+complex<double> GanglionCell::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w)
 {
     return m_spatialKernel->fourierTransform(kVec)
             * m_temporalKernel->fourierTransform(w);

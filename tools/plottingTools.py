@@ -157,7 +157,7 @@ if __name__ == "__main__":
 
 
     outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
-    # outputFilePath = "/home/milad/kurs/*.h5"
+    outputFilePath = "/home/milad/kurs/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
@@ -165,10 +165,13 @@ if __name__ == "__main__":
     data = [
      [exp.stimuli["spatioTemporal"], "Stimulus"]
     ,[exp.ganglion["response"]["spatioTemporal"], "Ganglion cell response"]
+    ,[exp.ganglion["impulseResponse"]["spatioTemporal"], "Ganglion cell impulseResponse"]
     # ,[exp.interneuron["response"]["spatioTemporal"], "Interneuron"]
     ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
+    ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell impulseResponse"]
     # ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell response"]
-    # ,[exp.cortical["response"]["spatioTemporal"], "Cortical"]
+    ,[exp.cortical["response"]["spatioTemporal"], "Cortical"]
+    ,[exp.cortical["impulseResponse"]["spatioTemporal"], "Cortical impulseResponse"]
     ]
 
 

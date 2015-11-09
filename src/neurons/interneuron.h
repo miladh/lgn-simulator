@@ -13,7 +13,7 @@ public:
 
     // Neuron interface
 private:
-    virtual double impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
+    virtual complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
 };
 
 #endif // INTERNEURONS_H

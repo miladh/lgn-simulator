@@ -38,7 +38,8 @@ SOURCES += \
     temporalKernels/temporallyconstant.cpp \
     stimuli/naturalscene.cpp \
     stimuli/staticimage.cpp \
-    stimuli/naturalscenevideo.cpp
+    stimuli/naturalscenevideo.cpp \
+    temporalKernels/temporaldelta.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -62,4 +63,5 @@ HEADERS += \
     temporalKernels/temporallyconstant.h \
     stimuli/naturalscene.h \
     stimuli/staticimage.h \
-    stimuli/naturalscenevideo.h
+    stimuli/naturalscenevideo.h \
+    temporalKernels/temporaldelta.h

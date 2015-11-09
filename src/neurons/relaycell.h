@@ -11,7 +11,7 @@ public:
 
 private:
     // Neuron interface
-    double impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
+    complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
 };
 
 #endif // RELAYCELL_H

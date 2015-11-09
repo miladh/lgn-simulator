@@ -11,7 +11,7 @@ public:
 
     // TemporalKernel interface
     double temporal(double t);
-    double fourierTransform(double w);
+    complex<double> fourierTransform(double w);
 
 
 private:

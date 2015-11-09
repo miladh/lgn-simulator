@@ -22,11 +22,11 @@ SUITE(SYSTEM){
         int Nt = pow(2,nt);
 
         cube Rg = zeros<cube>(Ns, Ns, Nt);
-        cube Rg_ex = zeros<cube>(Ns, Ns, Nt);
+        cx_cube Rg_ex = zeros<cx_cube>(Ns, Ns, Nt);
         cube Rr = zeros<cube>(Ns, Ns, Nt);
-        cube Rr_ex = zeros<cube>(Ns, Ns, Nt);
+        cx_cube Rr_ex = zeros<cx_cube>(Ns, Ns, Nt);
         cube Rc = zeros<cube>(Ns, Ns, Nt);
-        cube Rc_ex = zeros<cube>(Ns, Ns, Nt);
+        cx_cube Rc_ex = zeros<cx_cube>(Ns, Ns, Nt);
 
         //Integrator
         Integrator integrator(nt, dt, ns, ds);
@@ -55,7 +55,7 @@ SUITE(SYSTEM){
 
                 //ganglion cell
                 GanglionCell ganglion(&integrator, Fs, Ft);
-                double Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
+                complex<double> Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
 
 
                 //Compute ganglion response numerical
@@ -75,7 +75,7 @@ SUITE(SYSTEM){
                 for(SpatialKernel* Ks_rg : spatialKernels){
                     for(TemporalKernel* Kt_rg : temporalKernels){
 
-                        double Krg =  Ks_rg->fourierTransform({kx, ky})
+                        complex<double> Krg =  Ks_rg->fourierTransform({kx, ky})
                                 * Kt_rg->fourierTransform(wd);
 
                         for(SpatialKernel* Ks_rc : spatialKernels){
@@ -91,13 +91,13 @@ SUITE(SYSTEM){
                                 cortical.addRelayCell(&relay, Ks_rc, Kt_rc);
 
 
-                                double Krc =  Ks_rc->fourierTransform({kx, ky})
+                                complex<double> Krc =  Ks_rc->fourierTransform({kx, ky})
                                         * Kt_rc->fourierTransform(wd);
-                                double Kcr =  Krc;
+                                complex<double> Kcr =  Krc;
 
                                 //Compute analytic:
-                                double Wr = Krg * Wg/(1. -  Krc * Kcr);
-                                double Wc = Kcr * Wr;
+                                complex<double> Wr = Krg * Wg/(1. -  Krc * Kcr);
+                                complex<double> Wc = Kcr * Wr;
 
 
                                 for(int l = 0; l < Nt; l++){
@@ -124,8 +124,8 @@ SUITE(SYSTEM){
                                 for(int l = 0; l < Nt; l++){
                                     for(int i = 0; i < Ns; i++){
                                         for(int j = 0; j < Ns; j++){
-                                            CHECK_CLOSE(Rr_ex(i,j,l), Rr(i,j,l), 1e-12);
-                                            CHECK_CLOSE(Rc_ex(i,j,l), Rc(i,j,l), 1e-12);
+                                            CHECK_CLOSE(real(Rr_ex(i,j,l)), Rr(i,j,l), 1e-12);
+                                            CHECK_CLOSE(real(Rc_ex(i,j,l)), Rc(i,j,l), 1e-12);
 
                                         }
                                     }
@@ -142,7 +142,7 @@ SUITE(SYSTEM){
                 for(int l = 0; l < Nt; l++){
                     for(int i = 0; i < Ns; i++){
                         for(int j = 0; j < Ns; j++){
-                            CHECK_CLOSE(Rg_ex(i,j,l), Rg(i,j,l), 1e-12);
+                            CHECK_CLOSE(real(Rg_ex(i,j,l)), Rg(i,j,l), 1e-12);
 
                         }
                     }

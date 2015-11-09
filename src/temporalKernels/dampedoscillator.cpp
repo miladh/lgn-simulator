@@ -24,7 +24,7 @@ double DampedOscillator::temporal(double t)
     }
 }
 
-double DampedOscillator::fourierTransform(double w)
+complex<double> DampedOscillator::fourierTransform(double w)
 {
     double factor = PI*m_phaseDuration/
             (PI*PI - m_phaseDuration * m_phaseDuration * w * w);

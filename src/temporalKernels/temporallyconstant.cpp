@@ -18,7 +18,7 @@ double TemporallyConstant::temporal(double t)
     return m_constant;
 }
 
-double TemporallyConstant::fourierTransform(double w)
+complex<double> TemporallyConstant::fourierTransform(double w)
 {
     return m_constant * Functions::delta(w,0);
 }

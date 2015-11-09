@@ -30,7 +30,7 @@ public:
 
 
     // Virtual functions
-    virtual double impulseResponseFourierTransformAtFrequency(vec2 kVec, double w) = 0;
+    virtual complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w) = 0;
 
 
     // Add cell functions

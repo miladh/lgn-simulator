@@ -19,7 +19,7 @@ double DecayingExponential::temporal(double t)
             * Functions::heaviside(t - m_delay);
 }
 
-double DecayingExponential::fourierTransform(double w)
+complex<double> DecayingExponential::fourierTransform(double w)
 {
     return cos(w*m_delay)/ (1 + w*w * m_tau*m_tau);
 }

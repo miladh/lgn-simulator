@@ -15,12 +15,12 @@ Interneuron::~Interneuron()
 
 
 
-double Interneuron::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w)
+complex<double> Interneuron::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w)
 {
 
 
-    double G = 0;
-    double C = 0;
+    complex<double> G = 0;
+    complex<double> C = 0;
 
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
@@ -31,7 +31,7 @@ double Interneuron::impulseResponseFourierTransformAtFrequency(vec2 kVec, double
 
     for (const Input c : m_corticalNeurons){
         Neuron *corticalCell = c.neuron;
-        double Kic = c.spatialKernel->fourierTransform(kVec)
+        complex<double> Kic = c.spatialKernel->fourierTransform(kVec)
                 * c.temporalKernel->fourierTransform(w);
 
         for (const Input r : corticalCell->relayCells()){
@@ -43,6 +43,6 @@ double Interneuron::impulseResponseFourierTransformAtFrequency(vec2 kVec, double
         C*= Kic;
     }
 
-    double Gr = (G + C);
+    complex<double> Gr = (G + C);
     return Gr;
 }
