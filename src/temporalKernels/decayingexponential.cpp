@@ -21,7 +21,9 @@ double DecayingExponential::temporal(double t)
 
 complex<double> DecayingExponential::fourierTransform(double w)
 {
-    return cos(w*m_delay)/ (1 + w*w * m_tau*m_tau);
+//    return cos(w*m_delay)/ (1 + w*w * m_tau*m_tau);
+        return exp(-complex<double>(0,1)*w*m_delay)
+                /(complex<double>(1,0) + complex<double>(0,1)*w* m_tau);
 }
 
 

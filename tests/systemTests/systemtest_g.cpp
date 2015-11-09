@@ -22,7 +22,7 @@ SUITE(SYSTEM){
         int Nt = pow(2,nt);
 
         cube Rg = zeros<cube>(Ns, Ns, Nt);
-        cx_cube Rg_ex = zeros<cx_cube>(Ns, Ns, Nt);
+        cube Rg_ex = zeros<cube>(Ns, Ns, Nt);
 
         //Integrator
         Integrator integrator(nt, dt, ns, ds);
@@ -54,7 +54,8 @@ SUITE(SYSTEM){
                 for(int l = 0; l < Nt; l++){
                     for(int i = 0; i < Ns; i++){
                         for(int j = 0; j < Ns; j++){
-                            Rg_ex(i,j,l) = C * W * cos(kx*s[i] + ky*s[j] - wd * t[l]);
+                            Rg_ex(i,j,l) = C * abs(W)
+                                    * cos(kx*s[i] + ky*s[j] - wd * t[l] + arg(W));
 
                         }
                     }
@@ -69,7 +70,7 @@ SUITE(SYSTEM){
                 for(int l = 0; l < Nt; l++){
                     for(int i = 0; i < Ns; i++){
                         for(int j = 0; j < Ns; j++){
-                            CHECK_CLOSE(real(Rg_ex(i,j,l)), Rg(i,j,l), 1e-12);
+                            CHECK_CLOSE(Rg_ex(i,j,l), Rg(i,j,l), 1e-12);
 
                         }
                     }

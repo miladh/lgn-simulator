@@ -19,7 +19,7 @@ double TemporalDelta::temporal(double t)
 
 complex<double> TemporalDelta::fourierTransform(double w)
 {
-    return cos(m_delay * w);
+    return exp(-complex<double>(0,1) * m_delay * w);
 }
 
 

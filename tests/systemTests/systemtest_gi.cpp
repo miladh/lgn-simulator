@@ -21,9 +21,9 @@ SUITE(SYSTEM){
         int Nt = pow(2,nt);
 
         cube Rg = zeros<cube>(Ns, Ns, Nt);
-        cx_cube Rg_ex = zeros<cx_cube>(Ns, Ns, Nt);
+        cube Rg_ex = zeros<cube>(Ns, Ns, Nt);
         cube Ri = zeros<cube>(Ns, Ns, Nt);
-        cx_cube Ri_ex = zeros<cx_cube>(Ns, Ns, Nt);
+        cube Ri_ex = zeros<cube>(Ns, Ns, Nt);
 
         //Integrator
         Integrator integrator(nt, dt, ns, ds);
@@ -34,7 +34,7 @@ SUITE(SYSTEM){
 
         //Stimulus
         double C = -2.3;
-        double wd = w(0);
+        double wd = w(2);
         double kx = k(1);
         double ky = k(4);
         Grating S(&integrator, {kx, ky}, wd, C);
@@ -72,10 +72,10 @@ SUITE(SYSTEM){
                         for(int l = 0; l < Nt; l++){
                             for(int i = 0; i < Ns; i++){
                                 for(int j = 0; j < Ns; j++){
-                                    Ri_ex(i,j,l) = C * Wi *
-                                            cos(kx*s[i] + ky*s[j] - wd * t[l]);
-                                    Rg_ex(i,j,l) = C * Wg *
-                                            cos(kx*s[i] + ky*s[j] - wd * t[l]);
+                                    Ri_ex(i,j,l) = C * abs(Wi) *
+                                            cos(kx*s[i] + ky*s[j] - wd * t[l] + arg(Wi));
+                                    Rg_ex(i,j,l) = C * abs(Wg) *
+                                            cos(kx*s[i] + ky*s[j] - wd * t[l] + arg(Wg));
 
                                 }
                             }
@@ -92,8 +92,8 @@ SUITE(SYSTEM){
                         for(int l = 0; l < Nt; l++){
                             for(int i = 0; i < Ns; i++){
                                 for(int j = 0; j < Ns; j++){
-                                    CHECK_CLOSE(real(Ri_ex(i,j,l)), Ri(i,j,l), 1e-12);
-                                    CHECK_CLOSE(real(Rg_ex(i,j,l)), Rg(i,j,l), 1e-12);
+                                    CHECK_CLOSE(Ri_ex(i,j,l), Ri(i,j,l), 1e-12);
+                                    CHECK_CLOSE(Rg_ex(i,j,l), Rg(i,j,l), 1e-12);
 
                                 }
                             }

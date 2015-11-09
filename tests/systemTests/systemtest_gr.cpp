@@ -21,9 +21,9 @@ SUITE(SYSTEM){
         int Nt = pow(2,nt);
 
         cube Rg = zeros<cube>(Ns, Ns, Nt);
-        cx_cube Rg_ex = zeros<cx_cube>(Ns, Ns, Nt);
+        cube Rg_ex = zeros<cube>(Ns, Ns, Nt);
         cube Rr = zeros<cube>(Ns, Ns, Nt);
-        cx_cube Rr_ex = zeros<cx_cube>(Ns, Ns, Nt);
+        cube Rr_ex = zeros<cube>(Ns, Ns, Nt);
 
         //Integrator
         Integrator integrator(nt, dt, ns, ds);
@@ -36,7 +36,7 @@ SUITE(SYSTEM){
         double C = -2.3;
         double wd = w(2);
         double kx = k(1);
-        double ky = k(1);
+        double ky = k(4);
         Grating S(&integrator, {kx, ky}, wd, C);
         S.computeFourierTransform();
 
@@ -69,13 +69,14 @@ SUITE(SYSTEM){
                                 * Kt->fourierTransform(wd);
                         complex<double> Wr = Krg * Wg;
 
+//                        cout << arg(Wr) << endl;
                         for(int l = 0; l < Nt; l++){
                             for(int i = 0; i < Ns; i++){
                                 for(int j = 0; j < Ns; j++){
-                                    Rr_ex(i,j,l) = C * Wr *
-                                            cos(kx*s[i] + ky*s[j] - wd * t[l]);
-                                    Rg_ex(i,j,l) = C * Wg *
-                                            cos(kx*s[i] + ky*s[j] - wd * t[l]);
+                                    Rr_ex(i,j,l) = C * abs(Wr) *
+                                            cos(kx*s[i] + ky*s[j] - wd * t[l] + arg(Wr));
+                                    Rg_ex(i,j,l) = C * abs(Wg) *
+                                            cos(kx*s[i] + ky*s[j] - wd * t[l] + arg(Wg));
 
                                 }
                             }
@@ -92,8 +93,8 @@ SUITE(SYSTEM){
                         for(int l = 0; l < Nt; l++){
                             for(int i = 0; i < Ns; i++){
                                 for(int j = 0; j < Ns; j++){
-                                    CHECK_CLOSE(real(Rr_ex(i,j,l)), Rr(i,j,l), 1e-12);
-                                    CHECK_CLOSE(real(Rg_ex(i,j,l)), Rg(i,j,l), 1e-12);
+                                    CHECK_CLOSE(Rr_ex(i,j,l), Rr(i,j,l), 1e-12);
+                                    CHECK_CLOSE(Rg_ex(i,j,l), Rg(i,j,l), 1e-12);
 
                                 }
                             }

@@ -23,13 +23,13 @@ SUITE(SYSTEM){
         int Nt = pow(2,nt);
 
         cube Rg = zeros<cube>(Ns, Ns, Nt);
-        cx_cube Rg_ex = zeros<cx_cube>(Ns, Ns, Nt);
+        cube Rg_ex = zeros<cube>(Ns, Ns, Nt);
         cube Rr = zeros<cube>(Ns, Ns, Nt);
-        cx_cube Rr_ex = zeros<cx_cube>(Ns, Ns, Nt);
+        cube Rr_ex = zeros<cube>(Ns, Ns, Nt);
         cube Ri = zeros<cube>(Ns, Ns, Nt);
-        cx_cube Ri_ex = zeros<cx_cube>(Ns, Ns, Nt);
+        cube Ri_ex = zeros<cube>(Ns, Ns, Nt);
         cube Rc = zeros<cube>(Ns, Ns, Nt);
-        cx_cube Rc_ex = zeros<cx_cube>(Ns, Ns, Nt);
+        cube Rc_ex = zeros<cube>(Ns, Ns, Nt);
 
         //Integrator
         Integrator integrator(nt, dt, ns, ds);
@@ -40,7 +40,7 @@ SUITE(SYSTEM){
 
         //Stimulus
         double C = -2.3;
-        double wd = w(0);
+        double wd = w(2);
         double kx = k(1);
         double ky = k(2);
         Grating S(&integrator, {kx, ky}, wd, C);
@@ -73,8 +73,8 @@ SUITE(SYSTEM){
                 for(int l = 0; l < Nt; l++){
                     for(int i = 0; i < Ns; i++){
                         for(int j = 0; j < Ns; j++){
-                            Rg_ex(i,j,l) = C * Wg *
-                                    cos(kx*s[i] + ky*s[j] - wd * t[l]);
+                            Rg_ex(i,j,l) = C * abs(Wg) *
+                                    cos(kx*s[i] + ky*s[j] - wd * t[l] + arg(Wg));
                         }
                     }
                 }
@@ -143,12 +143,12 @@ SUITE(SYSTEM){
                                                         for(int l = 0; l < Nt; l++){
                                                             for(int i = 0; i < Ns; i++){
                                                                 for(int j = 0; j < Ns; j++){
-                                                                    Rr_ex(i,j,l) = C * Wr *
-                                                                            cos(kx*s[i] + ky*s[j] - wd * t[l]);
-                                                                    Ri_ex(i,j,l) = C * Wi *
-                                                                            cos(kx*s[i] + ky*s[j] - wd * t[l]);
-                                                                    Rc_ex(i,j,l) = C * Wc *
-                                                                            cos(kx*s[i] + ky*s[j] - wd * t[l]);
+                                                                    Rr_ex(i,j,l) = C * abs(Wr) *
+                                                                            cos(kx*s[i] + ky*s[j] - wd * t[l]+ arg(Wr));
+                                                                    Ri_ex(i,j,l) = C * abs(Wi) *
+                                                                            cos(kx*s[i] + ky*s[j] - wd * t[l] + arg(Wi));
+                                                                    Rc_ex(i,j,l) = C * abs(Wc) *
+                                                                            cos(kx*s[i] + ky*s[j] - wd * t[l] + arg(Wc));
 
                                                                 }
                                                             }
@@ -168,9 +168,9 @@ SUITE(SYSTEM){
                                                         for(int l = 0; l < Nt; l++){
                                                             for(int i = 0; i < Ns; i++){
                                                                 for(int j = 0; j < Ns; j++){
-                                                                    CHECK_CLOSE(real(Rr_ex(i,j,l)), Rr(i,j,l), 1e-12);
-                                                                    CHECK_CLOSE(real(Ri_ex(i,j,l)), Ri(i,j,l), 1e-12);
-                                                                    CHECK_CLOSE(real(Rc_ex(i,j,l)), Rc(i,j,l), 1e-12);
+                                                                    CHECK_CLOSE(Rr_ex(i,j,l), Rr(i,j,l), 1e-12);
+                                                                    CHECK_CLOSE(Ri_ex(i,j,l), Ri(i,j,l), 1e-12);
+                                                                    CHECK_CLOSE(Rc_ex(i,j,l), Rc(i,j,l), 1e-12);
 
                                                                 }
                                                             }
@@ -196,7 +196,7 @@ SUITE(SYSTEM){
                 for(int l = 0; l < Nt; l++){
                     for(int i = 0; i < Ns; i++){
                         for(int j = 0; j < Ns; j++){
-                            CHECK_CLOSE(real(Rg_ex(i,j,l)), Rg(i,j,l), 1e-12);
+                            CHECK_CLOSE(Rg_ex(i,j,l), Rg(i,j,l), 1e-12);
 
                         }
                     }

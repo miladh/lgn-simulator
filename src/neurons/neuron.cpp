@@ -12,7 +12,7 @@ Neuron::Neuron(Integrator *integrator)
     m_impulseResponseFT=zeros<cx_cube>(nPointsSpatial,nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
-    timeVec = integrator->timeVec();
+    m_timeVec = integrator->timeVec();
     m_temporalFreqs = integrator->temporalFreqVec();
 
     //Spatial Mesh
@@ -32,6 +32,7 @@ void Neuron::computeResponse(Stimulus *stimulus)
     computeImpulseResponse();
 
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
+//    cout << m_integrator->backwardFFT(m_responseFT).max() << endl;
     m_response = real(m_integrator->backwardFFT(m_responseFT));
 
 
@@ -53,7 +54,7 @@ void Neuron::computeImpulseResponseFourierTransform()
             for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){
                 m_impulseResponseFT(i,j,k) =
                         impulseResponseFourierTransformAtFrequency(
-                {m_spatialFreqs[i], m_spatialFreqs[j]},m_temporalFreqs[k]);
+                {m_spatialFreqs[i], m_spatialFreqs[j]}, -m_temporalFreqs[k]);
             }
         }
     }

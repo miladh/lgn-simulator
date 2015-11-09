@@ -78,7 +78,7 @@ protected:
     vec m_coordinateVec;
     vec m_spatialFreqs;
 
-    vec timeVec;
+    vec m_timeVec;
     vec m_temporalFreqs;
 
 

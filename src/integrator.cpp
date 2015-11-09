@@ -47,26 +47,6 @@ cx_cube Integrator::backwardFFT(cx_cube data)
     return fftData;
 }
 
-cx_mat Integrator::backwardFFT(cx_mat data)
-{
-    cx_mat fftData = 0 * data;
-    int size[2] = {int(data.n_cols), int(data.n_rows)};
-
-    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
-    fftw_complex* out = reinterpret_cast<fftw_complex*> (fftData.memptr());
-    fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
-
-    fftw_execute(plan);
-    fftw_destroy_plan(plan);
-
-    fftData *= m_dk * m_dk /4./PI/PI;
-
-    //fftShift
-    fftData = FFTHelper::fftShift(fftData);
-
-    return fftData;
-}
-
 cx_cube Integrator::forwardFFT(cx_cube data)
 {
     //fftShift
@@ -85,6 +65,32 @@ cx_cube Integrator::forwardFFT(cx_cube data)
     fftw_destroy_plan(plan);
     return ifftData;
 
+}
+
+
+
+
+
+
+
+cx_mat Integrator::backwardFFT(cx_mat data)
+{
+    cx_mat fftData = 0 * data;
+    int size[2] = {int(data.n_cols), int(data.n_rows)};
+
+    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
+    fftw_complex* out = reinterpret_cast<fftw_complex*> (fftData.memptr());
+    fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
+
+    fftw_execute(plan);
+    fftw_destroy_plan(plan);
+
+    fftData *= m_dk * m_dk /4./PI/PI;
+
+    //fftShift
+    fftData = FFTHelper::fftShift(fftData);
+
+    return fftData;
 }
 
 
