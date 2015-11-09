@@ -29,8 +29,10 @@ complex<double> DampedOscillator::fourierTransform(double w)
     double factor = PI*m_phaseDuration/
             (PI*PI - m_phaseDuration * m_phaseDuration * w * w);
 
-    return factor * (1 + cos(m_phaseDuration * w)*(1 - m_weight)
-                     - m_weight * cos(2* m_phaseDuration * w));
+
+    return -factor*((complex<double>(1,0)+ exp(complex<double>(0,1)*m_phaseDuration*w))
+            * (complex<double>(-1,0)
+               + m_weight *exp(complex<double>(0,1)*m_phaseDuration*w)));
 }
 
 

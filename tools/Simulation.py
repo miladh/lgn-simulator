@@ -8,7 +8,7 @@ class Simulation:
     def __init__(self, h5_file):
         self.numCellTypes =  len(h5_file.keys())
         self.nSpatialPoints = 256 #READ FROM FILE!!!!!
-        self.nTemporalSteps = 16  #READ FROM FILE!!!!!
+        self.nTemporalSteps = 256  #READ FROM FILE!!!!!
 
         for item in h5_file.keys():
             if(item== "stimuli"):
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     sim = Simulation(f)
     print sim.ganglion["response"]["spatioTemporal"].shape
     print sim.stimuli.keys()
-    plot(sim.singleCellTemporalResponse("interneuron", 256 , 256), 'r')
-    plot(sim.singleCellTemporalResponse("relay", 256,256),'b')
-    plot(sim.singleCellTemporalResponse("cortical", 256, 256),'g')
+    # plot(sim.singleCellTemporalResponse("interneuron", 256 , 256), 'r')
+    plot(sim.singleCellTemporalResponse("relay", 16,256),'b')
+    plot(sim.singleCellTemporalResponse("cortical", 16, 256),'g')
     show()

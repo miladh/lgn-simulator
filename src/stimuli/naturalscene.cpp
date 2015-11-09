@@ -31,7 +31,7 @@ void NaturalScene::computeFourierTransform()
 
     for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
         m_fourierTransform.slice(k) = m_sceneFourierTransform
-                * fourierTransformAtTemporalFrequency(m_timeVec[k]);
+                * fourierTransformAtTemporalFrequency(m_temporalFreqs[k]);
     }
 }
 

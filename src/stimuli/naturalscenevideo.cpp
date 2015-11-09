@@ -41,10 +41,10 @@ void NaturalSceneVideo::readScene()
     for( ; ; )
     {
         capture.read(frame);
-        cvtColor(frame, frame, CV_BGR2GRAY);
         if(frame.empty() || i > m_integrator->nPointsTemporal() - 1 ){
             break;
         }
+        cvtColor(frame, frame, CV_BGR2GRAY);
 
         //Scaling
         if(frame.rows != m_integrator->nPointsSpatial()

@@ -40,8 +40,8 @@ int main()
     Integrator integrator = createIntegrator(&cfg);
 
     //Stim---------------------------------------------------------------------
-//    NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
-    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
+    NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
+//    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
 //    Grating S = createGratingStimulus(&integrator,&cfg);
 //    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
 //    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
@@ -55,10 +55,10 @@ int main()
 
 
     //Temporal kernels:-------------------------------------------------------
-    DecayingExponential Kt_rg(21,0);
-    DecayingExponential Kt_rig(30,0);
-    DecayingExponential Kt_rc(42,10);
-    TemporalDelta Kt_cr(20);
+    DecayingExponential Kt_rg(0.21,0);
+    DecayingExponential Kt_rig(0.30,0);
+    DecayingExponential Kt_rc(0.42,0.10);
+    TemporalDelta Kt_cr(0.20);
     DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
 //    TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
 
