@@ -98,7 +98,7 @@ SUITE(INTEGRATOR){
         cx_cube f = zeros<cx_cube>(Ns, Ns, Nt);
 
         double wd = w(2);
-        double a =0.1;
+        double a = 0.1;
 
         //Spatiotemporal signal
         for(int l = 0; l < Nt; l++){
