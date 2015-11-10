@@ -66,7 +66,7 @@ def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis, resolution = 0,
 
 
 
-def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
+def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.viridis,
                         save_animation = False, colorbar = False, animation_name = "unnamed" ):
 
 
@@ -76,6 +76,7 @@ def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
     nStates = np.array(data[0][0]).shape[0]
     Nx = np.array(data[0][0]).shape[1]
     Ny = np.array(data[0][0]).shape[2]
+    dt = 1 if dt==None else dt
 
     num_cols = 2 if num_subplots >= 2 else num_subplots
     num_rows = int(np.ceil((num_subplots-1)/2.))+1
@@ -94,7 +95,8 @@ def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
     def animate(j):
         for i in range(num_subplots):
             imshowPlots[i].set_data(data[i][0][j,:,:])
-        ttl.set_text("timestep = " + str(j))
+        t = j*dt
+        ttl.set_text("time = " + str('%.2f' % (t,)) + "s")
         return imshowPlots, ttl
 
 
@@ -105,6 +107,7 @@ def animateImshowPlots(data, figsize = (8,15), cmap = cmaps.viridis,
 
 
     ttl = plt.suptitle("",fontsize = 16)
+    # ttl = plt.suptitle("",fontsize = 16, x = 0.45, horizontalalignment = "left")
 
     #Plot stimulus
     colspanStim = 2
@@ -177,5 +180,5 @@ if __name__ == "__main__":
 
         # ,exp.cortical["impulseResponse"]["spatioTemporal"]
     # print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
-    animateImshowPlots(data, colorbar = True, save_animation = False)
+    animateImshowPlots(data,exp.dt, colorbar = True, save_animation = False)
     # animate3dPlots(data, resolution = 3)
