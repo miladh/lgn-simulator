@@ -163,7 +163,7 @@ if __name__ == "__main__":
     exp = sim.Simulation(f)
 
     data = [
-     [exp.stimuli["spatioTemporal"], "Stimulus"]
+     [exp.stimulus["spatioTemporal"], "Stimulus"]
     ,[exp.ganglion["response"]["spatioTemporal"], "Ganglion cell response"]
     ,[exp.ganglion["impulseResponse"]["spatioTemporal"], "Ganglion cell impulseResponse"]
     # ,[exp.interneuron["response"]["spatioTemporal"], "Interneuron"]

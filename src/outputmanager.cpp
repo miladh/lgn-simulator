@@ -24,14 +24,29 @@ void OutputManager::initialize()
     Group rootGroup = m_output->openGroup("/");
     const Setting & root = m_cfg->getRoot();
 
+
+    double dt = root["integratorSettings"]["dt"];
+    double ds = root["integratorSettings"]["ds"];
     int nSteps = root["integratorSettings"]["nt"];
+    int nPoints = root["integratorSettings"]["ns"];
     nSteps = pow(2, nSteps);
+    nPoints = pow(2, nPoints);
 
-    Attribute nSteps_a(rootGroup.createAttribute("nSteps", PredType::NATIVE_INT, H5S_SCALAR));
+    Attribute dt_a(rootGroup.createAttribute("dt",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute ds_a(rootGroup.createAttribute("ds",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute nSteps_a(rootGroup.createAttribute("nSteps",PredType::NATIVE_INT, H5S_SCALAR));
+    Attribute nPoints_a(rootGroup.createAttribute("nPoints",PredType::NATIVE_INT, H5S_SCALAR));
+
+
+    dt_a.write(PredType::NATIVE_DOUBLE, &dt);
+    ds_a.write(PredType::NATIVE_DOUBLE, &ds);
     nSteps_a.write(PredType::NATIVE_INT, &nSteps);
+    nPoints_a.write(PredType::NATIVE_INT, &nPoints);
 
-
+    m_dataset.reserve(dt);
+    m_dataset.reserve(ds);
     m_dataset.reserve(nSteps);
+    m_dataset.reserve(nPoints);
 }
 
 
@@ -41,13 +56,13 @@ void OutputManager::writeResponse(const vector<Neuron*> &neurons,
 
 
     // Write stimuli
-    Group stim = m_output->createGroup("/stimuli");
+    Group stim = m_output->createGroup("/stimulus");
     cube realStim = stimuli.spatioTemporal();
     cube complexStim = real(stimuli.fourierTransform());
 
     //   cout <<realStim.size() << endl;
-    writeDataSet(realStim, &stim, "real");
-    writeDataSet(complexStim, &stim, "complex");
+    writeDataSet(realStim, &stim, "spatioTemporal");
+    writeDataSet(complexStim, &stim, "fourierTransform");
 
 
 
@@ -66,13 +81,13 @@ void OutputManager::writeResponse(const vector<Neuron*> &neurons,
         //write response:
         Group res = m_output->createGroup(cellGroupName+"/response");
 
-        writeDataSet(realResponse, &res, "real");
-        writeDataSet(complexResponse, &res, "complex");
+        writeDataSet(realResponse, &res, "spatioTemporal");
+        writeDataSet(complexResponse, &res, "fourierTransform");
 
         //write impulse response:
         Group impRes = m_output->createGroup(cellGroupName+"/impulseResponse");
-        writeDataSet(realImpulseResponse, &impRes, "real");
-        writeDataSet(complexImpulseResponse, &impRes, "complex");
+        writeDataSet(realImpulseResponse, &impRes, "spatioTemporal");
+        writeDataSet(complexImpulseResponse, &impRes, "fourierTransform");
 
     }
 
