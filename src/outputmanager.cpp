@@ -60,7 +60,6 @@ void OutputManager::writeResponse(const vector<Neuron*> &neurons,
     cube realStim = stimuli.spatioTemporal();
     cube complexStim = real(stimuli.fourierTransform());
 
-    //   cout <<realStim.size() << endl;
     writeDataSet(realStim, &stim, "spatioTemporal");
     writeDataSet(complexStim, &stim, "fourierTransform");
 
@@ -77,6 +76,7 @@ void OutputManager::writeResponse(const vector<Neuron*> &neurons,
 
         string cellGroupName = neuron->cellType();
         Group cellGroup = m_output->createGroup(cellGroupName);
+
 
         //write response:
         Group res = m_output->createGroup(cellGroupName+"/response");

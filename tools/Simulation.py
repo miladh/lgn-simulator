@@ -10,6 +10,7 @@ class Simulation:
         self.num_points = h5_file.attrs["nPoints"]
         self.dt = h5_file.attrs["dt"]
         self.ds = h5_file.attrs["ds"]
+        self.time_vec = np.arange(0, self.num_steps*self.dt, self.dt )
 
         self.cellTypes = []
 
@@ -30,8 +31,8 @@ class Simulation:
                 for attr in cellAttr:
                     spaces = h5_file.get("/"+str(item)+"/" +str(attr)).keys()
                     data[attr] = {}
-                    for space in spaces:
-                        values = h5_file.get("/"+str(item)+"/"+str(attr)+"/"+str(space))
+                    for space in spaces[1:]:
+                        values = np.array(h5_file.get("/"+str(item)+"/"+str(attr)+"/"+str(space)))
                         data[attr].update({str(space): np.array(values)})
                 setattr(self, item, data)
         ########################################################################
@@ -44,15 +45,19 @@ class Simulation:
                 temp =  getattr(self, cell)
                 for attr in temp.keys():
                     for i in range(temp[attr]["spatioTemporal"].shape[0]):
-                        temp[attr]["spatioTemporal"][i,:,:]/= \
-                        abs(temp[attr]["spatioTemporal"][i,:,:]).max()
+                        if not abs(temp[attr]["spatioTemporal"][i,:,:]).max()==0:
+                            temp[attr]["spatioTemporal"][i,:,:]/= \
+                            abs(temp[attr]["spatioTemporal"][i,:,:]).max()
+                        # temp[attr]["spatioTemporal"][i,:,:]+=1
                     setattr(self, cell,temp)
         else:
             temp =  getattr(self, cellType)
             for attr in temp.keys():
                 for i in range(temp[attr]["spatioTemporal"].shape[0]):
-                    temp[attr]["spatioTemporal"][i,:,:]/=\
-                    abs(temp[attr]["spatioTemporal"][i,:,:]).max()
+                    if not abs(temp[attr]["spatioTemporal"][i,:,:]).max()==0:
+                        temp[attr]["spatioTemporal"][i,:,:]/= \
+                        abs(temp[attr]["spatioTemporal"][i,:,:]).max()
+                        # temp[attr]["spatioTemporal"][i,:,:] +=1
                 setattr(self, cellType,temp)
 
 
@@ -64,6 +69,16 @@ class Simulation:
         FreqResponse = getattr(self, cellType)["response"]["fourierTransform"][:,idx, idy]
         return FreqResponse
 
+    def spikeTrain(self, cellType, idx=0 , idy=0, num_trails=2):
+        response = self.singleCellTemporalResponse(cellType, idx , idy)
+        spike_times = [[] for i in range(num_trails)]
+
+        for k in range(num_trails):
+            for i in range(self.num_steps):
+                r = np.random.uniform(0,1)
+                if(response[i]+1 * self.dt > r):
+                    spike_times[k].append(i*self.dt)
+        return spike_times
 
 if __name__ == "__main__":
     import h5py
@@ -75,9 +90,9 @@ if __name__ == "__main__":
     f = h5py.File(outputFile, "r")
     sim = Simulation(f)
     # print sim.stimulus.keys()
-    # print sim.ganglion["response"]["spatioTemporal"].shape
 
-    plot(sim.singleCellTemporalResponse("ganglion", 64,64),'r')
-    plot(sim.singleCellTemporalResponse("relay", 64,64),'b')
-    plot(sim.singleCellTemporalResponse("cortical", 64, 64),'g')
+    # spikeTrain = sim.spikeTrain("ganglion", 0,0, num_trails = 2)
+    # plot(sim.singleCellTemporalResponse("ganglion", 64,64),'r')
+    # plot(sim.singleCellTemporalResponse("relay", 64,64),'b')
+    # plot(sim.singleCellTemporalResponse("cortical", 64, 64),'g')
     show()

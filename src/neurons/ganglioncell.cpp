@@ -8,7 +8,6 @@ GanglionCell::GanglionCell(Integrator *integrator,
     , m_temporalKernel(temporalKernel)
 {
     m_cellType = "ganglion";
-
 }
 
 GanglionCell::~GanglionCell()

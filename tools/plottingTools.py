@@ -6,11 +6,6 @@ import time
 import colormaps as cmaps
 import numpy as np
 
-def plotResponse(data, figsize = (15,8)):
-    fig = plt.figure(figsize=figsize)
-    plt.plot(data)
-    plt.show()
-
 def simpleaxis(ax):
     """
     Removes axis lines
@@ -19,6 +14,41 @@ def simpleaxis(ax):
     ax.set_axis_off()
     # ax.spines['top'].set_visible(False)
     # ax.get_xaxis().tick_bottom()
+
+
+def raster(spike_times, figsize = (12,8), ax = None, ylabel = "Cell Id"):
+    """
+    Raster plot
+    """
+
+    if not isinstance(spike_times, list):
+        spike_times  = [spike_times]
+
+    num_cells = len(spike_times)
+    if ax ==None:
+        f = plt.figure(figsize=figsize)
+        ax = f.add_subplot(111)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.get_xaxis().tick_bottom()
+    ax.get_yaxis().tick_left()
+    ax.tick_params(axis='x', labelsize=12)
+
+    yticks = []
+    yticks.append("")
+    for i in range(num_cells):
+        for t in spike_times[i][0]:
+            ax.vlines(t, i + .9, i + 1.1)
+        yticks.append(spike_times[i][1])
+
+        plt.ylim(0.,num_cells+0.5)
+        plt.xlabel('t [s]', fontsize = 16)
+        plt.ylabel(ylabel, fontsize = 16)
+
+    plt.yticks(range(num_cells+1), yticks, fontsize = 12)
+    plt.tight_layout()
+    return ax
 
 def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis, resolution = 0,
                         save_animation = False, animation_name = "unnamed" ):
@@ -96,14 +126,9 @@ def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.viridis,
         for i in range(num_subplots):
             imshowPlots[i].set_data(data[i][0][j,:,:])
         t = j*dt
-        ttl.set_text("time = " + str('%.2f' % (t,)) + "s")
+        ttl.set_text("Time = " + str('%.2f' % (t,)) + "s")
         return imshowPlots, ttl
 
-
-    #Nomarlize
-    for i in range(num_subplots):
-        for j in range(nStates):
-            data[i][0][j,:,:] /= abs(data[i][0][j,:,:]).max()
 
 
     ttl = plt.suptitle("",fontsize = 16)
@@ -114,7 +139,7 @@ def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.viridis,
     ax = plt.subplot2grid((num_rows, num_cols),(0, 0), colspan = colspanStim)
     simpleaxis(ax)
     ax.set_title(data[0][1])
-    imshowPlots.append(ax.imshow(data[0][0][1,:,:], cmap="gray", interpolation="None"))
+    imshowPlots.append(ax.imshow(data[0][0][0,:,:], cmap="gray", interpolation="None"))
     if(colorbar):
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.05)
@@ -128,7 +153,7 @@ def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.viridis,
             ax = plt.subplot2grid((num_rows, num_cols),(i, j))
             simpleaxis(ax)
             ax.set_title(data[k][1])
-            imshowPlots.append(ax.imshow(data[k][0][1,:,:], cmap=cmap,
+            imshowPlots.append(ax.imshow(data[k][0][0,:,:], cmap=cmap,
             interpolation="None"))
             if(colorbar):
                 divider = make_axes_locatable(ax)
@@ -160,25 +185,29 @@ if __name__ == "__main__":
 
 
     outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
-    outputFilePath = "/home/milad/kurs/*.h5"
+    # outputFilePath = "/home/milad/kurs/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
 
+    # spikeTrain = exp.spikeTrain("ganglion", 64, 64, num_trails = 1)
+    # spikeTrain2 = exp.spikeTrain("relay", 64, 64, num_trails = 1)
+
     data = [
      [exp.stimulus["spatioTemporal"], "Stimulus"]
     ,[exp.ganglion["response"]["spatioTemporal"], "Ganglion cell response"]
-    ,[exp.ganglion["impulseResponse"]["spatioTemporal"], "Ganglion cell impulseResponse"]
+    ,[exp.ganglion["impulseResponse"]["spatioTemporal"], "Ganglion cell impulse response"]
     # ,[exp.interneuron["response"]["spatioTemporal"], "Interneuron"]
-    ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
-    ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell impulseResponse"]
-    # ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell response"]
-    ,[exp.cortical["response"]["spatioTemporal"], "Cortical"]
-    ,[exp.cortical["impulseResponse"]["spatioTemporal"], "Cortical impulseResponse"]
+    # ,[exp.interneuron["impulseResponse"]["spatioTemporal"], "Interneuron"]
+    # ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
+    # ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell impulse response"]
+    # ,[exp.cortical["response"]["spatioTemporal"], "Cortical cell response"]
+    # ,[exp.cortical["impulseResponse"]["spatioTemporal"], "Cortical impulse response"]
     ]
 
-
-        # ,exp.cortical["impulseResponse"]["spatioTemporal"]
-    # print (exp.stimuli["spatioTemporal"][0] - exp.ganglion["response"]["spatioTemporal"][0]).max()
-    animateImshowPlots(data,exp.dt, colorbar = True, save_animation = False)
+    # raster([[spikeTrain, "Ganglion"], [spikeTrain2, "Relay"]] )
+    print exp.ganglion["impulseResponse"]
+    print exp.dt*2**8
+    animateImshowPlots(data,exp.dt, colorbar = True, save_animation = False, animation_name = "rat")
     # animate3dPlots(data, resolution = 3)
+    plt.show()

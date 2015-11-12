@@ -32,7 +32,6 @@ void Neuron::computeResponse(Stimulus *stimulus)
     computeImpulseResponse();
 
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
-//    cout << stimulus->fourierTransform()  << endl;
     m_response = real(m_integrator->backwardFFT(m_responseFT));
 
 
@@ -43,6 +42,7 @@ void Neuron::computeImpulseResponse()
 {
     computeImpulseResponseFourierTransform();
     m_impulseResponse = real(m_integrator->backwardFFT(m_impulseResponseFT));
+
 }
 
 
