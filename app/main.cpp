@@ -2,6 +2,7 @@
 
 #include <outputmanager.h>
 #include <unistd.h>
+#include <time.h>
 
 #include "stimuli/patchgrating.h"
 #include "stimuli/grating.h"
@@ -25,12 +26,16 @@
 #include "temporalKernels/temporaldelta.h"
 
 
+
 using namespace std;
 
 int main()
 {
 
     cout << "=====Extended-DOG Model=====" << endl;
+    clock_t t;
+    t = clock();
+
 
     //read config file-------------------------------------------------------
     Config cfg;
@@ -40,11 +45,11 @@ int main()
     Integrator integrator = createIntegrator(&cfg);
 
     //Stim---------------------------------------------------------------------
-//    NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
-//    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
-//    Grating S = createGratingStimulus(&integrator,&cfg);
+    //    NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
+    //    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
+    //    Grating S = createGratingStimulus(&integrator,&cfg);
     PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
-//    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
+    //    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
 
 
 
@@ -60,7 +65,7 @@ int main()
     DecayingExponential Kt_rc(0.42,0.10);
     TemporalDelta Kt_cr(0.0);
     DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
-//    TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
+    //    TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
 
 
     //Neurons:-----------------------------------------------------------------
@@ -107,13 +112,12 @@ int main()
     interneuron.computeImpulseResponse();
 
 
-
-
-
     //Output manager:----------------------------------------------------------
     OutputManager io(&cfg);
     io.writeResponse(neurons, S);
 
+    t = clock() - t;
+    printf ("%f seconds.\n",((float)t)/CLOCKS_PER_SEC);
 
     return 0;
 }
