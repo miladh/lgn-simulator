@@ -67,7 +67,7 @@ SUITE(SYSTEM){
 
                 //Compute ganglion response numerical
                 ganglion.computeResponse(&S);
-                Rg = ganglion.response();
+                Rg = ganglion.GanglionCell::response();
 
                 //Compute ganglion response analytic
                 for(int l = 0; l < Nt; l++){

@@ -18,7 +18,6 @@ Neuron::Neuron(Integrator *integrator)
     //Spatial Mesh
     m_coordinateVec = integrator->coordinateVec();
     m_spatialFreqs =integrator->spatialFreqVec();
-
 }
 
 Neuron::~Neuron()
@@ -29,7 +28,9 @@ Neuron::~Neuron()
 
 void Neuron::computeResponse(Stimulus *stimulus)
 {
-    computeImpulseResponse();
+    if(!impulseResponseFourierTransformComputed){
+        computeImpulseResponseFourierTransform();
+    }
 
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
     m_response = real(m_integrator->backwardFFT(m_responseFT));
@@ -37,29 +38,20 @@ void Neuron::computeResponse(Stimulus *stimulus)
 
 }
 
-
 void Neuron::computeImpulseResponse()
 {
-    computeImpulseResponseFourierTransform();
+    if(!impulseResponseFourierTransformComputed){
+        computeImpulseResponseFourierTransform();
+    }
     m_impulseResponse = real(m_integrator->backwardFFT(m_impulseResponseFT));
 
 }
 
 
-void Neuron::computeImpulseResponseFourierTransform()
+bool Neuron::isImpulseResponseFourierTransformComputed()
 {
-
-    for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
-        for(int i = 0; i < int(m_impulseResponseFT.n_rows); i++){
-            for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){
-                m_impulseResponseFT(i,j,k) =
-                        impulseResponseFourierTransformAtFrequency(
-                {m_spatialFreqs[i], m_spatialFreqs[j]}, -m_temporalFreqs[k]);
-            }
-        }
-    }
+    return impulseResponseFourierTransformComputed;
 }
-
 
 
 void Neuron::addGanglionCell(Neuron *neuron,
@@ -118,6 +110,7 @@ string Neuron::cellType() const
     return m_cellType;
 }
 
+
 cube Neuron::response() const
 {
     return m_response;
@@ -133,7 +126,7 @@ cx_cube Neuron::responseFT() const
     return m_responseFT;
 }
 
-cx_cube Neuron::impulseResponseFourierTransformAtFrequency() const
+const cx_cube& Neuron::impulseResponseFourierTransform() const
 {
     return m_impulseResponseFT;
 }

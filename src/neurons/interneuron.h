@@ -4,16 +4,16 @@
 #include "neuron.h"
 
 
-
 class Interneuron : public Neuron
 {
+    friend class RelayCell;
+
 public:
     Interneuron(Integrator *integrator);
     ~Interneuron();
 
     // Neuron interface
-private:
-    virtual complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
+    virtual void computeImpulseResponseFourierTransform();
 };
 
 #endif // INTERNEURONS_H

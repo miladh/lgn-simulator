@@ -15,9 +15,23 @@ GanglionCell::~GanglionCell()
 
 }
 
+void GanglionCell::computeImpulseResponseFourierTransform()
+{
+    impulseResponseFourierTransformComputed = true;
+
+    for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
+        for(int i = 0; i < int(m_impulseResponseFT.n_rows); i++){
+            for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){
+                m_impulseResponseFT(i,j,k) =
+                        impulseResponseFourierTransformAtFrequency(
+                {m_spatialFreqs[i], m_spatialFreqs[j]}, -m_temporalFreqs[k]);
+            }
+        }
+    }
+}
+
 void GanglionCell::computeImpulseResponse()
 {
-    computeImpulseResponseFourierTransform();
     for(int k = 0; k < int(m_impulseResponse.n_slices); k++){
         for(int i = 0; i < int(m_impulseResponse.n_rows); i++){
             for(int j = 0; j < int(m_impulseResponse.n_cols); j++){
@@ -28,6 +42,8 @@ void GanglionCell::computeImpulseResponse()
         }
     }
 }
+
+
 
 
 double GanglionCell::impulseResponseValueAtPoint(vec2 rVec, double t)

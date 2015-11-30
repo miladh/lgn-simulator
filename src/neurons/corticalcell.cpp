@@ -3,7 +3,7 @@
 CorticalCell::CorticalCell(Integrator* integrator)
     : Neuron(integrator)
 {
-        m_cellType = "cortical";
+    m_cellType = "cortical";
 
 }
 
@@ -12,17 +12,30 @@ CorticalCell::~CorticalCell()
 
 }
 
-complex<double> CorticalCell::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w)
+void CorticalCell::computeImpulseResponseFourierTransform()
 {
-    complex<double> R = 0;
-    for (const Input r : m_relayCells){
-        Neuron *relayCell = r.neuron;
-        R += r.spatialKernel->fourierTransform(kVec)
-                * r.temporalKernel->fourierTransform(w)
-                * relayCell->impulseResponseFourierTransformAtFrequency(kVec,w);
-    }
+    impulseResponseFourierTransformComputed = true;
 
-    return R;
+    for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
+        double w = -m_temporalFreqs[k];
+
+        for(int i = 0; i < int(m_impulseResponseFT.n_rows); i++){
+            for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){
+                vec2 kVec= {m_spatialFreqs[i], m_spatialFreqs[j]};
+
+                for (const Input r : m_relayCells){
+                    Neuron *relayCell = r.neuron;
+                    if(!relayCell->isImpulseResponseFourierTransformComputed()){
+                        relayCell->computeImpulseResponseFourierTransform();
+                    }
+                    m_impulseResponseFT(i,j,k)
+                            += r.spatialKernel->fourierTransform(kVec)
+                            * r.temporalKernel->fourierTransform(w)
+                            * relayCell->impulseResponseFourierTransform()(i,j,k);
+                }
+            }
+        }
+    }
 }
 
 

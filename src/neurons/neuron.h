@@ -28,9 +28,8 @@ public:
     void computeResponse(Stimulus *stimulus);
     void computeImpulseResponse();
 
-
-    // Virtual functions
-    virtual complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w) = 0;
+    //Virtual function:
+    virtual void computeImpulseResponseFourierTransform() = 0;
 
 
     // Add cell functions
@@ -54,7 +53,7 @@ public:
     cube response() const;
     cube impulseResponse() const;
     cx_cube responseFT() const;
-    cx_cube impulseResponseFourierTransformAtFrequency() const;
+    const cx_cube &impulseResponseFourierTransform() const;
 
 
     vector<Input> ganglionCells() const;
@@ -63,11 +62,13 @@ public:
     vector<Input> corticalNeurons() const;
 
     string cellType() const;
+    bool isImpulseResponseFourierTransformComputed();
 
 private:
     Integrator* m_integrator;
 
 protected:
+    bool impulseResponseFourierTransformComputed  = false;
     string m_cellType;
 
     cube m_response;
@@ -87,7 +88,6 @@ protected:
     vector<Input> m_interNeurons;
     vector<Input> m_corticalNeurons;
 
-    void computeImpulseResponseFourierTransform();
 };
 
 #endif // NEURON_H

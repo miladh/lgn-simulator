@@ -51,7 +51,7 @@ int main()
     //Spatial kernels:----------------------------------------------------------
     DOG dog = createDOGSpatialKernel(&cfg);
     DOG gauss(1.0, 2.5, 0, 0.1);
-//    EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
+    EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
 
 
     //Temporal kernels:-------------------------------------------------------
@@ -65,28 +65,28 @@ int main()
 
     //Neurons:-----------------------------------------------------------------
     GanglionCell ganglion(&integrator, &dog, &Kt_cr);
-//    RelayCell relay(&integrator);
-//    CorticalCell cortical(&integrator);
-//    Interneuron interneuron(&integrator);
+    RelayCell relay(&integrator);
+    CorticalCell cortical(&integrator);
+    Interneuron interneuron(&integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
-//    neurons.push_back(&relay);
-//    neurons.push_back(&cortical);
-//    neurons.push_back(&interneuron);
+    neurons.push_back(&relay);
+    neurons.push_back(&cortical);
+    neurons.push_back(&interneuron);
 
 
 
     //connect neurons----------------------------------------------------------
-//    relay.addGanglionCell(&ganglion,&dog, &Kt_rg);
-//    relay.addGanglionCell(&ganglion,&dog, &Kt_rig);
-//    relay.addCorticalNeuron(&cortical, &gauss, &Kt_rc);
-//    relay.addInterNeuron(&interneuron,&gauss, &damped);
+    relay.addGanglionCell(&ganglion,&dog, &Kt_rg);
+    relay.addGanglionCell(&ganglion,&dog, &Kt_rig);
+    relay.addCorticalNeuron(&cortical, &gauss, &Kt_rc);
+    relay.addInterNeuron(&interneuron,&gauss, &damped);
 
-//    interneuron.addGanglionCell(&ganglion,&gauss, &Kt);
-//    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt);
+    interneuron.addGanglionCell(&ganglion,&gauss, &Kt_rig);
+    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rig);
 
-//    cortical.addRelayCell(&relay, &dog, &Kt_cr);
+    cortical.addRelayCell(&relay, &dog, &Kt_cr);
 
 
 
@@ -94,11 +94,17 @@ int main()
     S.computeSpatiotemporal();
     S.computeFourierTransform();
 
-    ganglion.computeResponse(&S);
     ganglion.GanglionCell::computeImpulseResponse();
-//    relay.computeResponse(&S);
-//    cortical.computeResponse(&S);
-//    interneuron.computeResponse(&S);
+    ganglion.computeResponse(&S);
+
+    cortical.computeResponse(&S);
+    cortical.computeImpulseResponse();
+
+    relay.computeResponse(&S);
+    relay.computeImpulseResponse();
+
+    interneuron.computeResponse(&S);
+    interneuron.computeImpulseResponse();
 
 
 

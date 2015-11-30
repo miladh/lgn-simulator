@@ -3,15 +3,17 @@
 
 #include "neuron.h"
 
+
 class CorticalCell : public Neuron
 {
+    friend class RelayCell;
+
 public:
     CorticalCell(Integrator *integrator);
     ~CorticalCell();
 
-private:
     // Neuron interface
-    complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
+    virtual void computeImpulseResponseFourierTransform();
 };
 
 #endif // CORTICALCELL_H

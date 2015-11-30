@@ -9,9 +9,12 @@ public:
     RelayCell(Integrator *integrator);
     ~RelayCell();
 
-private:
     // Neuron interface
-    complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
+    virtual void computeImpulseResponseFourierTransform();
+
+private:
+    complex<double> impulseResponseFourierTransformAtFrequency(int idx, int jdx, int kdx);
+
 };
 
 #endif // RELAYCELL_H

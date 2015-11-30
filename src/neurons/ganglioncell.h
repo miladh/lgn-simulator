@@ -18,6 +18,7 @@ public:
     ~GanglionCell();
 
     void computeImpulseResponse();
+    virtual void computeImpulseResponseFourierTransform();
 
 private:
     SpatialKernel *m_spatialKernel;
@@ -25,9 +26,8 @@ private:
 
 
     double impulseResponseValueAtPoint(vec2 rVec, double t);
-
-    // Neuron interface
     complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
+
 };
 
 #endif // GANGLIONCELL_H

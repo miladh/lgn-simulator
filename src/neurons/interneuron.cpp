@@ -13,36 +13,40 @@ Interneuron::~Interneuron()
 
 }
 
-
-
-complex<double> Interneuron::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w)
+void Interneuron::computeImpulseResponseFourierTransform()
 {
+    impulseResponseFourierTransformComputed = true;
 
+    for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
+        double w = -m_temporalFreqs[k];
 
-    complex<double> G = 0;
-    complex<double> C = 0;
+        for(int i = 0; i < int(m_impulseResponseFT.n_rows); i++){
+            for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){
+                vec2 kVec= {m_spatialFreqs[i], m_spatialFreqs[j]};
 
-    for (const Input g : m_ganglionCells){
-        Neuron *ganglionCell = g.neuron;
-        G += g.spatialKernel->fourierTransform(kVec)
-                * g.temporalKernel->fourierTransform(w)
-                * ganglionCell->impulseResponseFourierTransformAtFrequency(kVec,w);
-    }
+                for (const Input g : m_ganglionCells){
+                    Neuron *ganglionCell = g.neuron;
+                    if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
+                        ganglionCell->computeImpulseResponseFourierTransform();
+                    }
+                    m_impulseResponseFT(i,j,k)
+                            += g.spatialKernel->fourierTransform(kVec)
+                            * g.temporalKernel->fourierTransform(w)
+                            * ganglionCell->impulseResponseFourierTransform()(i,j,k);
+                }
 
-    for (const Input c : m_corticalNeurons){
-        Neuron *corticalCell = c.neuron;
-        complex<double> Kic = c.spatialKernel->fourierTransform(kVec)
-                * c.temporalKernel->fourierTransform(w);
-
-        for (const Input r : corticalCell->relayCells()){
-            Neuron *relayCell = r.neuron;
-            C += r.spatialKernel->fourierTransform(kVec)
-                    * r.temporalKernel->fourierTransform(w)
-                    * relayCell->impulseResponseFourierTransformAtFrequency(kVec,w);
+                for (const Input r : m_relayCells){
+                    Neuron *relayCell = r.neuron;
+                    if(!relayCell->isImpulseResponseFourierTransformComputed()){
+                        relayCell->computeImpulseResponseFourierTransform();
+                    }
+                    m_impulseResponseFT(i,j,k)
+                            += r.spatialKernel->fourierTransform(kVec)
+                            * r.temporalKernel->fourierTransform(w)
+                            * relayCell->impulseResponseFourierTransform()(i,j,k);
+                }
+            }
         }
-        C*= Kic;
     }
-
-    complex<double> Gr = (G + C);
-    return Gr;
 }
+
