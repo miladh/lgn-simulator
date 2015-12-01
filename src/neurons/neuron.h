@@ -50,11 +50,10 @@ public:
 
 
     // Getter member functions
-    cube response() const;
-    cube impulseResponse() const;
-    cx_cube responseFT() const;
+    const cube &response() const;
+    const cube &impulseResponse() const;
+    const cx_cube &responseFT() const;
     const cx_cube &impulseResponseFourierTransform() const;
-
 
     vector<Input> ganglionCells() const;
     vector<Input> relayCells() const;
@@ -62,7 +61,12 @@ public:
     vector<Input> corticalNeurons() const;
 
     string cellType() const;
-    bool isImpulseResponseFourierTransformComputed();
+
+
+    void clearResponse();
+    void clearImpulseResponse();
+
+    bool isImpulseResponseFourierTransformComputed() const;
 
 private:
     Integrator* m_integrator;

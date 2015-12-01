@@ -64,4 +64,15 @@ void Stimulus::computeFourierTransformAnalytic()
 }
 
 
+void Stimulus::clearSpatioTemporal()
+{
+    m_spatioTemporal.clear();
+}
 
+
+void Stimulus::clearFourierTransform()
+{
+
+    m_fourierTransform.clear();
+
+}

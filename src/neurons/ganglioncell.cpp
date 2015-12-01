@@ -32,6 +32,10 @@ void GanglionCell::computeImpulseResponseFourierTransform()
 
 void GanglionCell::computeImpulseResponse()
 {
+    m_impulseResponse.set_size(m_impulseResponseFT.n_rows,
+                               m_impulseResponseFT.n_rows,
+                               m_impulseResponseFT.n_slices);
+
     for(int k = 0; k < int(m_impulseResponse.n_slices); k++){
         for(int i = 0; i < int(m_impulseResponse.n_rows); i++){
             for(int j = 0; j < int(m_impulseResponse.n_cols); j++){

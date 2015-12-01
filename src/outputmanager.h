@@ -24,9 +24,9 @@ public:
     void writeResponse(const vector<Neuron *> &neurons,
                        const Stimulus &stimuli);
 
-
-//    void writeResponse(const vector<Neuron *> &neurons,
-//                       const Stimuli &stimuli);
+    void writeResponse(const Neuron *neuron);
+    void writeImpulseResponse(const Neuron* neuron);
+    void writeStimulus(const Stimulus *stimuli);
 
 private:
     const Config* m_cfg;

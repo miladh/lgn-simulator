@@ -23,6 +23,12 @@ public:
     cube spatioTemporal() const;
     cx_cube fourierTransform() const;
 
+    void clearSpatioTemporal();
+    void clearFourierTransform();
+
+
+
+
 protected:
     cube m_spatioTemporal;
     cx_cube m_fourierTransform;

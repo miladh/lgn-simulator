@@ -9,7 +9,6 @@ CorticalCell::CorticalCell(Integrator* integrator)
 
 CorticalCell::~CorticalCell()
 {
-
 }
 
 void CorticalCell::computeImpulseResponseFourierTransform()

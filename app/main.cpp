@@ -41,14 +41,17 @@ int main()
     Config cfg;
     cfg.readFile("../../eDOG/app/config.cfg");
 
+    //Output manager:----------------------------------------------------------
+    OutputManager io(&cfg);
+
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);
 
     //Stim---------------------------------------------------------------------
-    //    NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
+        NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
     //    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
     //    Grating S = createGratingStimulus(&integrator,&cfg);
-    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
+//    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
     //    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
 
 
@@ -97,23 +100,25 @@ int main()
     //Compute:-----------------------------------------------------------------
     S.computeSpatiotemporal();
     S.computeFourierTransform();
+    io.writeStimulus(&S);
+    S.clearSpatioTemporal();
 
-    ganglion.GanglionCell::computeImpulseResponse();
-    ganglion.computeResponse(&S);
+    for(Neuron* neuron : neurons){
 
-    cortical.computeResponse(&S);
-    cortical.computeImpulseResponse();
+        neuron->computeResponse(&S);
+        io.writeResponse(neuron);
+        neuron->clearResponse();
 
-    relay.computeResponse(&S);
-    relay.computeImpulseResponse();
+        if(neuron->cellType() == "ganglion"){
+            ganglion.GanglionCell::computeImpulseResponse();
+        }else{
+            neuron->computeImpulseResponse();
+        }
+        io.writeImpulseResponse(neuron);
+        neuron->clearImpulseResponse();
 
-    interneuron.computeResponse(&S);
-    interneuron.computeImpulseResponse();
+    }
 
-
-    //Output manager:----------------------------------------------------------
-    OutputManager io(&cfg);
-    io.writeResponse(neurons, S);
 
     t = clock() - t;
     printf ("%f seconds.\n",((float)t)/CLOCKS_PER_SEC);

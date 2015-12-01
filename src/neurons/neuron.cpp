@@ -6,9 +6,9 @@ Neuron::Neuron(Integrator *integrator)
     int nPointsTemporal = integrator->nPointsTemporal();
     int nPointsSpatial = integrator->nPointsSpatial();
 
-    m_response = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
-    m_impulseResponse = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
-    m_responseFT = zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
+//    m_response = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
+//    m_impulseResponse = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
+//    m_responseFT = zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
     m_impulseResponseFT=zeros<cx_cube>(nPointsSpatial,nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
@@ -31,7 +31,6 @@ void Neuron::computeResponse(Stimulus *stimulus)
     if(!impulseResponseFourierTransformComputed){
         computeImpulseResponseFourierTransform();
     }
-
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
     m_response = real(m_integrator->backwardFFT(m_responseFT));
 
@@ -46,13 +45,6 @@ void Neuron::computeImpulseResponse()
     m_impulseResponse = real(m_integrator->backwardFFT(m_impulseResponseFT));
 
 }
-
-
-bool Neuron::isImpulseResponseFourierTransformComputed()
-{
-    return impulseResponseFourierTransformComputed;
-}
-
 
 void Neuron::addGanglionCell(Neuron *neuron,
                              SpatialKernel *sKernel,
@@ -84,6 +76,13 @@ void Neuron::addCorticalNeuron(Neuron *neuron,
 }
 
 
+
+bool Neuron::isImpulseResponseFourierTransformComputed() const
+{
+    return impulseResponseFourierTransformComputed;
+}
+
+
 vector<Neuron::Input> Neuron::ganglionCells() const
 {
     return m_ganglionCells;
@@ -112,17 +111,17 @@ string Neuron::cellType() const
 }
 
 
-cube Neuron::response() const
+const cube& Neuron::response() const
 {
     return m_response;
 }
 
-cube Neuron::impulseResponse() const
+const cube& Neuron::impulseResponse() const
 {
     return m_impulseResponse;
 }
 
-cx_cube Neuron::responseFT() const
+const cx_cube& Neuron::responseFT() const
 {
     return m_responseFT;
 }
@@ -133,7 +132,18 @@ const cx_cube& Neuron::impulseResponseFourierTransform() const
 }
 
 
+void Neuron::clearResponse()
+{
+    m_response.clear();
+    m_responseFT.clear();
+}
 
+
+void Neuron::clearImpulseResponse()
+{
+    m_impulseResponse.clear();
+
+}
 
 
 

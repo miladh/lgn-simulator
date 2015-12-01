@@ -50,6 +50,64 @@ void OutputManager::initialize()
 }
 
 
+
+void OutputManager::writeResponse(const Neuron* neuron)
+{
+
+    cube realResponse = neuron->response();
+    cube complexResponse = real(neuron->responseFT());
+
+    string cellGroupName = neuron->cellType();
+//    herr_t status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
+//    if (!status == 0){
+        Group cellGroup = m_output->createGroup(cellGroupName);
+//    }
+
+    //write response:
+    Group res = m_output->createGroup(cellGroupName+"/response");
+
+    writeDataSet(realResponse, &res, "spatioTemporal");
+    writeDataSet(complexResponse, &res, "fourierTransform");
+
+}
+
+void OutputManager::writeImpulseResponse(const Neuron* neuron)
+{
+
+    cube realImpulseResponse = neuron->impulseResponse();
+    cube complexImpulseResponse = real(neuron->impulseResponseFourierTransform());
+
+    string cellGroupName = neuron->cellType();
+
+    herr_t status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
+    if (!status == 0){
+        Group cellGroup = m_output->createGroup(cellGroupName);
+    }
+
+    //write impulse response:
+    Group impRes = m_output->createGroup(cellGroupName+"/impulseResponse");
+    writeDataSet(realImpulseResponse, &impRes, "spatioTemporal");
+    writeDataSet(complexImpulseResponse, &impRes, "fourierTransform");
+
+}
+
+
+void OutputManager::writeStimulus(const Stimulus* stimuli)
+{
+
+    // Write stimuli
+    Group stim = m_output->createGroup("/stimulus");
+    cube realStim = stimuli->spatioTemporal();
+    cube complexStim = real(stimuli->fourierTransform());
+
+    writeDataSet(realStim, &stim, "spatioTemporal");
+    writeDataSet(complexStim, &stim, "fourierTransform");
+
+
+}
+
+
+
 void OutputManager::writeResponse(const vector<Neuron*> &neurons,
                                   const Stimulus &stimuli){
 
