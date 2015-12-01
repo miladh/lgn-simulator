@@ -15,6 +15,7 @@ Interneuron::~Interneuron()
 
 void Interneuron::computeImpulseResponseFourierTransform()
 {
+    computeNeededcubes();
     impulseResponseFourierTransformComputed = true;
 
     for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
@@ -26,26 +27,37 @@ void Interneuron::computeImpulseResponseFourierTransform()
 
                 for (const Input g : m_ganglionCells){
                     Neuron *ganglionCell = g.neuron;
-                    if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
-                        ganglionCell->computeImpulseResponseFourierTransform();
-                    }
                     m_impulseResponseFT(i,j,k)
                             += g.spatialKernel->fourierTransform(kVec)
                             * g.temporalKernel->fourierTransform(w)
                             * ganglionCell->impulseResponseFourierTransform()(i,j,k);
                 }
 
-                for (const Input r : m_relayCells){
-                    Neuron *relayCell = r.neuron;
-                    if(!relayCell->isImpulseResponseFourierTransformComputed()){
-                        relayCell->computeImpulseResponseFourierTransform();
-                    }
+                for (const Input c : m_corticalNeurons){
+                    Neuron *corticalCell = c.neuron;
                     m_impulseResponseFT(i,j,k)
-                            += r.spatialKernel->fourierTransform(kVec)
-                            * r.temporalKernel->fourierTransform(w)
-                            * relayCell->impulseResponseFourierTransform()(i,j,k);
+                            += c.spatialKernel->fourierTransform(kVec)
+                            * c.temporalKernel->fourierTransform(w)
+                            * corticalCell->impulseResponseFourierTransform()(i,j,k);
                 }
             }
+        }
+    }
+}
+
+void Interneuron::computeNeededcubes()
+{
+    for (const Input g : m_ganglionCells){
+        Neuron *ganglionCell = g.neuron;
+        if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
+            ganglionCell->computeImpulseResponseFourierTransform();
+        }
+    }
+
+    for (const Input c : m_corticalNeurons){
+        Neuron *corticalCell = c.neuron;
+        if(!corticalCell->isImpulseResponseFourierTransformComputed()){
+            corticalCell->computeImpulseResponseFourierTransform();
         }
     }
 }

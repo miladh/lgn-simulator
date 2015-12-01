@@ -14,6 +14,9 @@ public:
 
     // Neuron interface
     virtual void computeImpulseResponseFourierTransform();
+
+private:
+    void computeNeededcubes();
 };
 
 #endif // INTERNEURONS_H

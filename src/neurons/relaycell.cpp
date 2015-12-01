@@ -14,6 +14,7 @@ RelayCell::~RelayCell()
 
 void RelayCell::computeImpulseResponseFourierTransform()
 {
+    computeNeededcubes();
     impulseResponseFourierTransformComputed = true;
 
     for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
@@ -25,6 +26,30 @@ void RelayCell::computeImpulseResponseFourierTransform()
         }
     }
 }
+
+
+void RelayCell::computeNeededcubes()
+{
+    for (const Input g : m_ganglionCells){
+        Neuron *ganglionCell = g.neuron;
+        if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
+            ganglionCell->computeImpulseResponseFourierTransform();
+        }
+    }
+
+    for (const Input i : m_interNeurons){
+        Neuron *interneuron = i.neuron;
+        for (const Input g : interneuron->ganglionCells()){
+            Neuron *ganglionCell = g.neuron;
+            if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
+                ganglionCell->computeImpulseResponseFourierTransform();
+            }
+        }
+    }
+}
+
+
+
 
 
 complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
@@ -42,14 +67,10 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
 
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
-        if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
-            ganglionCell->computeImpulseResponseFourierTransform();
-        }
         G += g.spatialKernel->fourierTransform(kVec)
                 * g.temporalKernel->fourierTransform(w)
                 * ganglionCell->impulseResponseFourierTransform()(idx,jdx,kdx);
     }
-
 
 
     for (const Input i : m_interNeurons){
@@ -61,9 +82,6 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
         //Feedforward term
         for (const Input g : interneuron->ganglionCells()){
             Neuron *ganglionCell = g.neuron;
-            if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
-                ganglionCell->computeImpulseResponseFourierTransform();
-            }
             Iff += g.spatialKernel->fourierTransform(kVec)
                     * g.temporalKernel->fourierTransform(w)
                     * ganglionCell->impulseResponseFourierTransform()(idx,jdx,kdx);

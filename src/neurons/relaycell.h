@@ -14,7 +14,7 @@ public:
 
 private:
     complex<double> impulseResponseFourierTransformAtFrequency(int idx, int jdx, int kdx);
-
+    void computeNeededcubes();
 };
 
 #endif // RELAYCELL_H

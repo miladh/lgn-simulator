@@ -84,12 +84,11 @@ int main()
 
     //connect neurons----------------------------------------------------------
     relay.addGanglionCell(&ganglion,&dog, &Kt_rg);
-    relay.addGanglionCell(&ganglion,&dog, &Kt_rig);
     relay.addCorticalNeuron(&cortical, &gauss, &Kt_rc);
     relay.addInterNeuron(&interneuron,&gauss, &damped);
 
-    interneuron.addGanglionCell(&ganglion,&gauss, &Kt_rig);
-    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rig);
+    interneuron.addGanglionCell(&ganglion, &gauss, &Kt_rg);
+    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
 
     cortical.addRelayCell(&relay, &dog, &Kt_cr);
 

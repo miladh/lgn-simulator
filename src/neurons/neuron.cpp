@@ -65,6 +65,7 @@ void Neuron::addRelayCell(Neuron *neuron,
                           SpatialKernel *sKernel,
                           TemporalKernel *tKernel)
 {
+
     m_relayCells.emplace_back(Input{neuron, sKernel, tKernel});
 }
 
