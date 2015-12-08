@@ -31,13 +31,13 @@ class Simulation:
                 for attr in cellAttr:
                     spaces = h5_file.get("/"+str(item)+"/" +str(attr)).keys()
                     data[attr] = {}
-                    for space in spaces[1:]:
+                    for space in spaces[0:]:
                         values = np.array(h5_file.get("/"+str(item)+"/"+str(attr)+"/"+str(space)))
                         data[attr].update({str(space): np.array(values)})
                 setattr(self, item, data)
         ########################################################################
         self.numCellTypes  = len(self.cellTypes)
-        # self.normalize()
+        self.normalize()
 
     def normalize(self, cellType=None):
         if cellType == None:
@@ -84,12 +84,12 @@ if __name__ == "__main__":
     import h5py
     from glob import glob
     from pylab import*
-    # outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
-    outputFilePath = "/home/milad/kurs/*.h5"
+    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
+    # outputFilePath = "/home/milad/kurs/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     sim = Simulation(f)
-    # print sim.stimulus.keys()
+    print sim.ganglion["response"].keys()
 
     # spikeTrain = sim.spikeTrain("ganglion", 0,0, num_trails = 2)
     # plot(sim.singleCellTemporalResponse("ganglion", 64,64),'r')

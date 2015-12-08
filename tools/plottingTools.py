@@ -96,7 +96,7 @@ def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis, resolution = 0,
 
 
 
-def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.viridis,
+def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.inferno,
                         save_animation = False, colorbar = False, animation_name = "unnamed" ):
 
 
@@ -199,14 +199,13 @@ if __name__ == "__main__":
     ,[exp.ganglion["impulseResponse"]["spatioTemporal"], "Ganglion cell impulse response"]
     ,[exp.interneuron["response"]["spatioTemporal"], "Interneuron"]
     ,[exp.interneuron["impulseResponse"]["spatioTemporal"], "Interneuron"]
-    ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
-    ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell impulse response"]
-    ,[exp.cortical["response"]["spatioTemporal"], "Cortical cell response"]
-    ,[exp.cortical["impulseResponse"]["spatioTemporal"], "Cortical impulse response"]
+    # ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
+    # ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell impulse response"]
+    # ,[exp.cortical["response"]["spatioTemporal"], "Cortical cell response"]
+    # ,[exp.cortical["impulseResponse"]["spatioTemporal"], "Cortical impulse response"]
     ]
 
     # raster([[spikeTrain, "Ganglion"], [spikeTrain2, "Relay"]] )
-    # print exp.ganglion["impulseResponse"]
     print exp.dt*2**8
     animateImshowPlots(data,exp.dt, colorbar = True, save_animation = False, animation_name = "rat")
     # animate3dPlots(data, resolution = 3)

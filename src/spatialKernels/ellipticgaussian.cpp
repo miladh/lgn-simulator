@@ -44,7 +44,5 @@ EllipticGaussian createEllipticGaussianSpatialKernel(const Config *cfg)
     double widthLong = root["spatialKernelSettings"]["widthLong"];
     double widthNarrow = root["spatialKernelSettings"]["widthNarrow"];
 
-    angle *=PI/180.;
-
     return EllipticGaussian(weight, angle, widthLong, widthNarrow);
 }

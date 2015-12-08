@@ -48,16 +48,15 @@ int main()
 
     //Stim---------------------------------------------------------------------
 //        NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
-    //    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
-        Grating S = createGratingStimulus(&integrator,&cfg);
+        StaticImage S = createStaticImageStimulus(&integrator,&cfg);
+//        Grating S = createGratingStimulus(&integrator,&cfg);
 //    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
-//        OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
 
 
 
     //Spatial kernels:----------------------------------------------------------
     DOG dog = createDOGSpatialKernel(&cfg);
-    DOG gauss(1.0, 0.2, 0, 0.1);
+    DOG gauss(0.3, 0.05, 0, 1.);
     EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
 
 
@@ -71,7 +70,7 @@ int main()
 
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &gauss, &Kt_cr);
+    GanglionCell ganglion(&integrator, &dog, &Kt_cr);
     RelayCell relay(&integrator);
     CorticalCell cortical(&integrator);
     Interneuron interneuron(&integrator);
@@ -85,14 +84,14 @@ int main()
 
 
     //connect neurons----------------------------------------------------------
-    relay.addGanglionCell(&ganglion,&dog, &Kt_rg);
-    relay.addCorticalNeuron(&cortical, &gauss, &Kt_rc);
+    relay.addGanglionCell(&ganglion,&gauss, &Kt_rg);
+    relay.addCorticalNeuron(&cortical, &gauss, &Kt_rg);
     relay.addInterNeuron(&interneuron,&gauss, &damped);
 
     interneuron.addGanglionCell(&ganglion, &gauss, &Kt_rg);
     interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
 
-    cortical.addRelayCell(&relay, &dog, &Kt_cr);
+    cortical.addRelayCell(&relay, &gauss, &Kt_rg);
 
 
 
