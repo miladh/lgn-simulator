@@ -37,6 +37,9 @@ void NaturalSceneVideo::readScene()
         throw "Error when reading video";
     }
 
+//    cout  <<  capture.get(CV_CAP_PROP_FRAME_COUNT) << endl;
+//    cout <<  capture.get(CV_CAP_PROP_FPS) << endl;
+
     int i = 0;
     for( ; ; )
     {

@@ -85,13 +85,13 @@ int main()
 
     //connect neurons----------------------------------------------------------
     relay.addGanglionCell(&ganglion,&gauss, &Kt_rg);
-    relay.addCorticalNeuron(&cortical, &gauss, &Kt_rg);
+    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
     relay.addInterNeuron(&interneuron,&gauss, &damped);
 
-    interneuron.addGanglionCell(&ganglion, &gauss, &Kt_rg);
+    interneuron.addGanglionCell(&ganglion, &gauss, &Kt_rig);
     interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
 
-    cortical.addRelayCell(&relay, &gauss, &Kt_rg);
+    cortical.addRelayCell(&relay, &gauss, &Kt_cr);
 
 
 
@@ -108,7 +108,7 @@ int main()
         neuron->clearResponse();
 
         if(neuron->cellType() == "ganglion"){
-            ganglion.GanglionCell::computeImpulseResponse();
+            ganglion.computeImpulseResponse();
         }else{
             neuron->computeImpulseResponse();
         }

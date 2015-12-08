@@ -199,10 +199,10 @@ if __name__ == "__main__":
     ,[exp.ganglion["impulseResponse"]["spatioTemporal"], "Ganglion cell impulse response"]
     ,[exp.interneuron["response"]["spatioTemporal"], "Interneuron"]
     ,[exp.interneuron["impulseResponse"]["spatioTemporal"], "Interneuron"]
-    # ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
-    # ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell impulse response"]
-    # ,[exp.cortical["response"]["spatioTemporal"], "Cortical cell response"]
-    # ,[exp.cortical["impulseResponse"]["spatioTemporal"], "Cortical impulse response"]
+    ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
+    ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell impulse response"]
+    ,[exp.cortical["response"]["spatioTemporal"], "Cortical cell response"]
+    ,[exp.cortical["impulseResponse"]["spatioTemporal"], "Cortical impulse response"]
     ]
 
     # raster([[spikeTrain, "Ganglion"], [spikeTrain2, "Relay"]] )
