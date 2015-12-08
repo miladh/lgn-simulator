@@ -17,7 +17,7 @@ using namespace libconfig;
 class Integrator
 {
 public:
-    Integrator(int nt, double dt, int ns, double ds);
+    Integrator(int nt, double dt, int ns);
     ~Integrator();
 
     cx_cube backwardFFT(cx_cube data);

@@ -34,7 +34,6 @@ SOURCES += \
     math/ffthelper.cpp \
     stimuli/grating.cpp \
     neurons/interneuron.cpp \
-    stimuli/oscillatinggaussian.cpp \
     temporalKernels/temporallyconstant.cpp \
     stimuli/naturalscene.cpp \
     stimuli/staticimage.cpp \
@@ -59,7 +58,6 @@ HEADERS += \
     math/ffthelper.h \
     stimuli/grating.h \
     neurons/interneuron.h \
-    stimuli/oscillatinggaussian.h \
     temporalKernels/temporallyconstant.h \
     stimuli/naturalscene.h \
     stimuli/staticimage.h \

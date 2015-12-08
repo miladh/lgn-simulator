@@ -14,13 +14,13 @@ SUITE(INTEGRATOR){
         //Mesh
         int ns = 8;
         int nt = 2;
-        double ds = 0.1;
+        
         double dt = 0.1;
 
         int Ns = pow(2,ns);
         int Nt = pow(2,nt);
 
-        Integrator integrator(nt, dt, ns, ds);
+        Integrator integrator(nt, dt, ns);
 
         vec s = integrator.coordinateVec();
         vec k = integrator.spatialFreqVec();

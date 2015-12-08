@@ -15,7 +15,7 @@ SUITE(SYSTEM){
     TEST(ganglion_relay_interneuron_cortical){
         int ns = 4;
         int nt = 3;
-        double ds = 0.1;
+
         double dt = 0.2;
 
 
@@ -32,7 +32,7 @@ SUITE(SYSTEM){
         cube Rc_ex = zeros<cube>(Ns, Ns, Nt);
 
         //Integrator
-        Integrator integrator(nt, dt, ns, ds);
+        Integrator integrator(nt, dt, ns);
         vec s = integrator.coordinateVec();
         vec k = integrator.spatialFreqVec();
         vec t = integrator.timeVec();

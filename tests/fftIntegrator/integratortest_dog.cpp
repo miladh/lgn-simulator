@@ -15,13 +15,13 @@ SUITE(INTEGRATOR){
     TEST(dogfft){
         //Mesh
         int ns = 9;
-        double ds = 0.1;
-        double A = 1.0;
-        double a = 2.1;
-        double B = 1.0;
-        double b = 3.1;
 
-        Integrator integrator(0, 0, ns, ds);
+        double A = 1.0;
+        double a = 0.1;
+        double B = 1.0;
+        double b = 0.05;
+
+        Integrator integrator(0, 0, ns);
 
         int Ns = pow(2,ns);
         cx_mat g = zeros<cx_mat>(Ns, Ns);

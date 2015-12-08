@@ -184,8 +184,8 @@ if __name__ == "__main__":
     import Simulation as sim
 
 
-    #outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
-    outputFilePath = "/home/milad/kurs/*.h5"
+    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
+    # outputFilePath = "/home/milad/kurs/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
@@ -208,6 +208,6 @@ if __name__ == "__main__":
     # raster([[spikeTrain, "Ganglion"], [spikeTrain2, "Relay"]] )
     # print exp.ganglion["impulseResponse"]
     print exp.dt*2**8
-    animateImshowPlots(data,exp.dt, colorbar = True, save_animation = True, animation_name = "rat1")
+    animateImshowPlots(data,exp.dt, colorbar = True, save_animation = False, animation_name = "rat")
     # animate3dPlots(data, resolution = 3)
     plt.show()

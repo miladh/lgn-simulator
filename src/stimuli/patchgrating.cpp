@@ -71,6 +71,5 @@ PatchGrating createPatchGratingStimulus(Integrator *integrator, const Config *cf
     double kx = k(4);
     double ky = k(0);
 
-
     return PatchGrating(integrator, {kx, ky}, wd, contrast, spotDiameterRatio);
 }

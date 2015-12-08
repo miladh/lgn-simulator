@@ -1,11 +1,11 @@
 #include "integrator.h"
 
-Integrator::Integrator(int nt, double dt, int ns, double ds)
+Integrator::Integrator(int nt, double dt, int ns)
     : m_nPointsTemporal(pow(2,nt))
     , m_nPointsSpatial(pow(2,ns))
     , m_dt(dt)
     , m_dw(2.* PI/m_nPointsTemporal/m_dt)
-    , m_ds(ds)
+    , m_ds(1./m_nPointsSpatial)
     , m_dk(2.* PI/m_nPointsSpatial/m_ds)
 {
     //Temporal Grid
@@ -13,8 +13,11 @@ Integrator::Integrator(int nt, double dt, int ns, double ds)
     m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt)*2*PI;
 
     //Spatial Grid
-    m_coordinateVec = linspace(-m_nPointsSpatial/2, m_nPointsSpatial/2-1,
-                               m_nPointsSpatial)*m_ds;
+    m_coordinateVec = linspace(-0.5, 0.5-m_ds,
+                               m_nPointsSpatial);
+
+
+
     m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds)*2*PI;
 
 
@@ -164,8 +167,7 @@ Integrator createIntegrator(const Config *cfg)
     int ns = root["integratorSettings"]["ns"];
     int nt = root["integratorSettings"]["nt"];
     double dt = root["integratorSettings"]["dt"];
-    double ds = root["integratorSettings"]["ds"];
 
-    return Integrator(nt, dt, ns, ds);
+    return Integrator(nt, dt, ns);
 
 }

@@ -50,8 +50,6 @@ void RelayCell::computeNeededcubes()
 
 
 
-
-
 complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
                                                                       int jdx,
                                                                       int kdx)

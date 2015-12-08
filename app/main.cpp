@@ -6,7 +6,6 @@
 
 #include "stimuli/patchgrating.h"
 #include "stimuli/grating.h"
-#include "stimuli/oscillatinggaussian.h"
 #include "stimuli/staticimage.h"
 #include "stimuli/naturalscenevideo.h"
 
@@ -48,17 +47,17 @@ int main()
     Integrator integrator = createIntegrator(&cfg);
 
     //Stim---------------------------------------------------------------------
-        NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
+//        NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
     //    StaticImage S = createStaticImageStimulus(&integrator,&cfg);
-    //    Grating S = createGratingStimulus(&integrator,&cfg);
+        Grating S = createGratingStimulus(&integrator,&cfg);
 //    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
-    //    OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
+//        OscillatingGaussian S = createOscillatingGaussianStimulus(&integrator,&cfg);
 
 
 
     //Spatial kernels:----------------------------------------------------------
     DOG dog = createDOGSpatialKernel(&cfg);
-    DOG gauss(1.0, 2.5, 0, 0.1);
+    DOG gauss(1.0, 0.2, 0, 0.1);
     EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
 
 
@@ -72,7 +71,7 @@ int main()
 
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &Kt_cr);
+    GanglionCell ganglion(&integrator, &gauss, &Kt_cr);
     RelayCell relay(&integrator);
     CorticalCell cortical(&integrator);
     Interneuron interneuron(&integrator);

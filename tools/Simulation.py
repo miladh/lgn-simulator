@@ -37,7 +37,7 @@ class Simulation:
                 setattr(self, item, data)
         ########################################################################
         self.numCellTypes  = len(self.cellTypes)
-        self.normalize()
+        # self.normalize()
 
     def normalize(self, cellType=None):
         if cellType == None:

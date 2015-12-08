@@ -14,13 +14,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_0){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77,13 +77,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -140,13 +140,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_2){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -203,13 +203,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_3){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -266,13 +266,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_4){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -329,13 +329,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_5){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -392,13 +392,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_6){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -455,13 +455,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_7){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -518,13 +518,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_8){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -581,13 +581,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_9){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -644,13 +644,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_10){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -707,13 +707,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_11){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -770,13 +770,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_12){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -833,13 +833,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_13){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -896,13 +896,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_14){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -959,13 +959,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_15){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1022,13 +1022,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_16){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1085,13 +1085,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_17){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1148,13 +1148,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_18){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1211,13 +1211,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_19){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1274,13 +1274,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_20){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1337,13 +1337,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_21){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1400,13 +1400,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_22){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1463,13 +1463,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_23){
     int ns = 2;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1526,13 +1526,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_24){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1589,13 +1589,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_25){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1652,13 +1652,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_26){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1715,13 +1715,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_27){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1778,13 +1778,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_28){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1841,13 +1841,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_29){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1904,13 +1904,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_30){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -1967,13 +1967,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_31){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2030,13 +2030,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_32){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2093,13 +2093,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_33){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2156,13 +2156,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_34){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2219,13 +2219,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_35){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2282,13 +2282,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_36){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2345,13 +2345,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_37){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2408,13 +2408,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_38){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2471,13 +2471,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_39){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2534,13 +2534,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_40){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2597,13 +2597,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_41){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2660,13 +2660,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_42){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2723,13 +2723,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_43){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2786,13 +2786,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_44){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2849,13 +2849,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_45){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2912,13 +2912,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_46){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -2975,13 +2975,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_47){
     int ns = 2;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3038,13 +3038,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_48){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3101,13 +3101,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_49){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3164,13 +3164,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_50){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3227,13 +3227,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_51){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3290,13 +3290,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_52){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3353,13 +3353,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_53){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3416,13 +3416,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_54){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3479,13 +3479,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_55){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3542,13 +3542,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_56){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3605,13 +3605,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_57){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3668,13 +3668,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_58){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3731,13 +3731,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_59){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3794,13 +3794,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_60){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3857,13 +3857,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_61){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3920,13 +3920,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_62){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -3983,13 +3983,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_63){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4046,13 +4046,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_64){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4109,13 +4109,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_65){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4172,13 +4172,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_66){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4235,13 +4235,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_67){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4298,13 +4298,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_68){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4361,13 +4361,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_69){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4424,13 +4424,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_70){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4487,13 +4487,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_71){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4550,13 +4550,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_72){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4613,13 +4613,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_73){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4676,13 +4676,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_74){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4739,13 +4739,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_75){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4802,13 +4802,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_76){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4865,13 +4865,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_77){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4928,13 +4928,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_78){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -4991,13 +4991,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_79){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5054,13 +5054,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_80){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5117,13 +5117,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_81){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5180,13 +5180,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_82){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5243,13 +5243,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_83){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5306,13 +5306,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_84){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5369,13 +5369,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_85){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5432,13 +5432,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_86){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5495,13 +5495,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_87){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5558,13 +5558,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_88){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5621,13 +5621,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_89){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5684,13 +5684,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_90){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5747,13 +5747,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_91){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5810,13 +5810,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_92){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5873,13 +5873,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_93){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5936,13 +5936,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_94){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -5999,13 +5999,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_95){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6062,13 +6062,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_96){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6125,13 +6125,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_97){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6188,13 +6188,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_98){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6251,13 +6251,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_99){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6314,13 +6314,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_100){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6377,13 +6377,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_101){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6440,13 +6440,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_102){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6503,13 +6503,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_103){
     int ns = 2;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6566,13 +6566,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_104){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6629,13 +6629,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_105){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6692,13 +6692,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_106){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6755,13 +6755,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_107){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6818,13 +6818,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_108){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6881,13 +6881,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_109){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -6944,13 +6944,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_110){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7007,13 +7007,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_111){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7070,13 +7070,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_112){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7133,13 +7133,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_113){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7196,13 +7196,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_114){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7259,13 +7259,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_115){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7322,13 +7322,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_116){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7385,13 +7385,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_117){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7448,13 +7448,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_118){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7511,13 +7511,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_119){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7574,13 +7574,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_120){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7637,13 +7637,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_121){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7700,13 +7700,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_122){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7763,13 +7763,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_123){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7826,13 +7826,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_124){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7889,13 +7889,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_125){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -7952,13 +7952,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_126){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8015,13 +8015,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_127){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8078,13 +8078,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_128){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8141,13 +8141,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_129){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8204,13 +8204,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_130){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8267,13 +8267,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_131){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8330,13 +8330,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_132){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8393,13 +8393,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_133){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8456,13 +8456,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_134){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8519,13 +8519,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_135){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8582,13 +8582,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_136){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8645,13 +8645,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_137){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8708,13 +8708,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_138){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8771,13 +8771,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_139){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8834,13 +8834,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_140){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8897,13 +8897,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_141){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -8960,13 +8960,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_142){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9023,13 +9023,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_143){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9086,13 +9086,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_144){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9149,13 +9149,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_145){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9212,13 +9212,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_146){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9275,13 +9275,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_147){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9338,13 +9338,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_148){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9401,13 +9401,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_149){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9464,13 +9464,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_150){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9527,13 +9527,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_151){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9590,13 +9590,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_152){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9653,13 +9653,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_153){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9716,13 +9716,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_154){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9779,13 +9779,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_155){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9842,13 +9842,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_156){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9905,13 +9905,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_157){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -9968,13 +9968,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_158){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10031,13 +10031,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_159){
     int ns = 2;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10094,13 +10094,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_160){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10157,13 +10157,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_161){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10220,13 +10220,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_162){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10283,13 +10283,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_163){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10346,13 +10346,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_164){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10409,13 +10409,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_165){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10472,13 +10472,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_166){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10535,13 +10535,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_167){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10598,13 +10598,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_168){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10661,13 +10661,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_169){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10724,13 +10724,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_170){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10787,13 +10787,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_171){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10850,13 +10850,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_172){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10913,13 +10913,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_173){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -10976,13 +10976,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_174){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11039,13 +11039,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_175){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11102,13 +11102,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_176){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11165,13 +11165,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_177){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11228,13 +11228,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_178){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11291,13 +11291,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_179){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11354,13 +11354,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_180){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11417,13 +11417,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_181){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11480,13 +11480,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_182){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11543,13 +11543,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_183){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11606,13 +11606,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_184){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11669,13 +11669,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_185){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11732,13 +11732,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_186){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11795,13 +11795,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_187){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11858,13 +11858,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_188){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11921,13 +11921,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_189){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -11984,13 +11984,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_190){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12047,13 +12047,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_191){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12110,13 +12110,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_192){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12173,13 +12173,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_193){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12236,13 +12236,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_194){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12299,13 +12299,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_195){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12362,13 +12362,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_196){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12425,13 +12425,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_197){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12488,13 +12488,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_198){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12551,13 +12551,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_199){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12614,13 +12614,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_200){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12677,13 +12677,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_201){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12740,13 +12740,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_202){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12803,13 +12803,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_203){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12866,13 +12866,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_204){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12929,13 +12929,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_205){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -12992,13 +12992,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_206){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13055,13 +13055,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_207){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13118,13 +13118,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_208){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13181,13 +13181,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_209){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13244,13 +13244,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_210){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13307,13 +13307,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_211){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13370,13 +13370,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_212){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13433,13 +13433,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_213){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13496,13 +13496,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_214){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13559,13 +13559,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_215){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13622,13 +13622,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_216){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13685,13 +13685,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_217){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13748,13 +13748,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_218){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13811,13 +13811,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_219){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13874,13 +13874,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_220){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -13937,13 +13937,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_221){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14000,13 +14000,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_222){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14063,13 +14063,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_223){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14126,13 +14126,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_224){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14189,13 +14189,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_225){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14252,13 +14252,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_226){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14315,13 +14315,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_227){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14378,13 +14378,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_228){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14441,13 +14441,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_229){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14504,13 +14504,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_230){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14567,13 +14567,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_231){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14630,13 +14630,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_232){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14693,13 +14693,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_233){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14756,13 +14756,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_234){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14819,13 +14819,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_235){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14882,13 +14882,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_236){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -14945,13 +14945,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_237){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15008,13 +15008,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_238){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15071,13 +15071,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_239){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15134,13 +15134,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_240){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15197,13 +15197,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_241){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15260,13 +15260,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_242){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15323,13 +15323,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_243){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15386,13 +15386,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_244){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15449,13 +15449,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_245){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15512,13 +15512,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_246){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15575,13 +15575,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_247){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15638,13 +15638,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_248){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15701,13 +15701,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_249){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15764,13 +15764,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_250){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15827,13 +15827,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_251){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15890,13 +15890,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_252){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -15953,13 +15953,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_253){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16016,13 +16016,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_254){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16079,13 +16079,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_255){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16142,13 +16142,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_256){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16205,13 +16205,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_257){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16268,13 +16268,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_258){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16331,13 +16331,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_259){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16394,13 +16394,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_260){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16457,13 +16457,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_261){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16520,13 +16520,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_262){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16583,13 +16583,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_263){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16646,13 +16646,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_264){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16709,13 +16709,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_265){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16772,13 +16772,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_266){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16835,13 +16835,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_267){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16898,13 +16898,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_268){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -16961,13 +16961,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_269){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17024,13 +17024,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_270){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17087,13 +17087,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_271){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17150,13 +17150,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_272){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17213,13 +17213,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_273){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17276,13 +17276,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_274){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17339,13 +17339,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_275){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17402,13 +17402,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_276){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17465,13 +17465,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_277){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17528,13 +17528,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_278){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17591,13 +17591,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_279){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17654,13 +17654,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_280){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17717,13 +17717,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_281){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17780,13 +17780,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_282){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17843,13 +17843,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_283){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17906,13 +17906,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_284){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -17969,13 +17969,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_285){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18032,13 +18032,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_286){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18095,13 +18095,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_287){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18158,13 +18158,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_288){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18221,13 +18221,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_289){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18284,13 +18284,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_290){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18347,13 +18347,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_291){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18410,13 +18410,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_292){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18473,13 +18473,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_293){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18536,13 +18536,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_294){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18599,13 +18599,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_295){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18662,13 +18662,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_296){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18725,13 +18725,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_297){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18788,13 +18788,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_298){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18851,13 +18851,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_299){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18914,13 +18914,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_300){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -18977,13 +18977,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_301){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19040,13 +19040,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_302){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19103,13 +19103,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_303){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19166,13 +19166,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_304){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19229,13 +19229,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_305){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19292,13 +19292,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_306){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19355,13 +19355,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_307){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19418,13 +19418,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_308){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19481,13 +19481,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_309){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19544,13 +19544,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_310){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19607,13 +19607,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_311){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19670,13 +19670,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_312){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19733,13 +19733,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_313){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19796,13 +19796,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_314){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19859,13 +19859,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_315){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19922,13 +19922,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_316){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -19985,13 +19985,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_317){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20048,13 +20048,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_318){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20111,13 +20111,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_319){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20174,13 +20174,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_320){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20237,13 +20237,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_321){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20300,13 +20300,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_322){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20363,13 +20363,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_323){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20426,13 +20426,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_324){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20489,13 +20489,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_325){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20552,13 +20552,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_326){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20615,13 +20615,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_327){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20678,13 +20678,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_328){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20741,13 +20741,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_329){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20804,13 +20804,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_330){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20867,13 +20867,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_331){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20930,13 +20930,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_332){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -20993,13 +20993,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_333){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21056,13 +21056,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_334){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21119,13 +21119,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_335){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21182,13 +21182,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_336){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21245,13 +21245,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_337){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21308,13 +21308,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_338){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21371,13 +21371,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_339){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21434,13 +21434,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_340){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21497,13 +21497,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_341){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21560,13 +21560,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_342){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21623,13 +21623,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_343){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21686,13 +21686,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_344){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21749,13 +21749,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_345){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21812,13 +21812,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_346){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21875,13 +21875,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_347){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -21938,13 +21938,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_348){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22001,13 +22001,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_349){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22064,13 +22064,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_350){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22127,13 +22127,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_351){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22190,13 +22190,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_352){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22253,13 +22253,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_353){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22316,13 +22316,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_354){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22379,13 +22379,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_355){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22442,13 +22442,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_356){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22505,13 +22505,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_357){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22568,13 +22568,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_358){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22631,13 +22631,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_359){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22694,13 +22694,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_360){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22757,13 +22757,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_361){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22820,13 +22820,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_362){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22883,13 +22883,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_363){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -22946,13 +22946,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_364){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23009,13 +23009,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_365){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23072,13 +23072,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_366){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23135,13 +23135,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_367){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23198,13 +23198,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_368){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23261,13 +23261,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_369){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23324,13 +23324,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_370){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23387,13 +23387,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_371){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23450,13 +23450,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_372){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23513,13 +23513,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_373){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23576,13 +23576,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_374){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23639,13 +23639,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_375){
     int ns = 3;
     int nt = 2;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23702,13 +23702,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_376){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23765,13 +23765,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_377){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23828,13 +23828,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_378){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23891,13 +23891,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_379){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -23954,13 +23954,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_380){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24017,13 +24017,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_381){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24080,13 +24080,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_382){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24143,13 +24143,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_383){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24206,13 +24206,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_384){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24269,13 +24269,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_385){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24332,13 +24332,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_386){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24395,13 +24395,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_387){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24458,13 +24458,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_388){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24521,13 +24521,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_389){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24584,13 +24584,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_390){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24647,13 +24647,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_391){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24710,13 +24710,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_392){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24773,13 +24773,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_393){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24836,13 +24836,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_394){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24899,13 +24899,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_395){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -24962,13 +24962,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_396){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25025,13 +25025,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_397){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25088,13 +25088,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_398){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25151,13 +25151,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_399){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25214,13 +25214,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_400){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25277,13 +25277,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_401){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25340,13 +25340,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_402){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25403,13 +25403,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_403){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25466,13 +25466,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_404){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25529,13 +25529,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_405){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25592,13 +25592,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_406){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25655,13 +25655,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_407){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25718,13 +25718,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_408){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25781,13 +25781,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_409){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25844,13 +25844,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_410){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25907,13 +25907,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_411){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -25970,13 +25970,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_412){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26033,13 +26033,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_413){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26096,13 +26096,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_414){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26159,13 +26159,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_415){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26222,13 +26222,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_416){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26285,13 +26285,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_417){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26348,13 +26348,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_418){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26411,13 +26411,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_419){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26474,13 +26474,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_420){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26537,13 +26537,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_421){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26600,13 +26600,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_422){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26663,13 +26663,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_423){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26726,13 +26726,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_424){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26789,13 +26789,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_425){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26852,13 +26852,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_426){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26915,13 +26915,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_427){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -26978,13 +26978,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_428){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27041,13 +27041,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_429){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27104,13 +27104,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_430){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27167,13 +27167,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_431){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27230,13 +27230,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_432){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27293,13 +27293,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_433){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27356,13 +27356,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_434){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27419,13 +27419,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_435){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27482,13 +27482,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_436){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27545,13 +27545,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_437){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27608,13 +27608,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_438){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27671,13 +27671,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_439){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27734,13 +27734,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_440){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27797,13 +27797,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_441){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27860,13 +27860,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_442){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27923,13 +27923,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_443){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -27986,13 +27986,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_444){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28049,13 +28049,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_445){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28112,13 +28112,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_446){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28175,13 +28175,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_447){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28238,13 +28238,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_448){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28301,13 +28301,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_449){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28364,13 +28364,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_450){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28427,13 +28427,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_451){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28490,13 +28490,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_452){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28553,13 +28553,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_453){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28616,13 +28616,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_454){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28679,13 +28679,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_455){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28742,13 +28742,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_456){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28805,13 +28805,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_457){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28868,13 +28868,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_458){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28931,13 +28931,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_459){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -28994,13 +28994,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_460){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29057,13 +29057,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_461){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29120,13 +29120,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_462){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29183,13 +29183,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_463){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29246,13 +29246,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_464){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29309,13 +29309,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_465){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29372,13 +29372,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_466){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29435,13 +29435,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_467){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29498,13 +29498,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_468){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29561,13 +29561,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_469){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29624,13 +29624,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_470){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29687,13 +29687,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_471){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29750,13 +29750,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_472){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29813,13 +29813,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_473){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29876,13 +29876,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_474){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -29939,13 +29939,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_475){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30002,13 +30002,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_476){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30065,13 +30065,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_477){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30128,13 +30128,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_478){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30191,13 +30191,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_479){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30254,13 +30254,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_480){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30317,13 +30317,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_481){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30380,13 +30380,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_482){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30443,13 +30443,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_483){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30506,13 +30506,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_484){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30569,13 +30569,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_485){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30632,13 +30632,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_486){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30695,13 +30695,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_487){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30758,13 +30758,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_488){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30821,13 +30821,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_489){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30884,13 +30884,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_490){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -30947,13 +30947,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_491){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31010,13 +31010,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_492){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31073,13 +31073,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_493){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31136,13 +31136,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_494){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31199,13 +31199,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_495){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31262,13 +31262,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_496){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31325,13 +31325,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_497){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31388,13 +31388,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_498){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31451,13 +31451,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_499){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31514,13 +31514,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_500){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31577,13 +31577,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_501){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31640,13 +31640,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_502){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31703,13 +31703,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_503){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31766,13 +31766,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_504){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31829,13 +31829,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_505){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31892,13 +31892,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_506){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -31955,13 +31955,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_507){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32018,13 +32018,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_508){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32081,13 +32081,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_509){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32144,13 +32144,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_510){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32207,13 +32207,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_511){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32270,13 +32270,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_512){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32333,13 +32333,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_513){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32396,13 +32396,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_514){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32459,13 +32459,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_515){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32522,13 +32522,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_516){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32585,13 +32585,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_517){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32648,13 +32648,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_518){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32711,13 +32711,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_519){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32774,13 +32774,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_520){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32837,13 +32837,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_521){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32900,13 +32900,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_522){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -32963,13 +32963,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_523){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33026,13 +33026,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_524){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33089,13 +33089,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_525){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33152,13 +33152,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_526){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33215,13 +33215,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_527){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33278,13 +33278,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_528){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33341,13 +33341,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_529){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33404,13 +33404,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_530){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33467,13 +33467,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_531){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33530,13 +33530,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_532){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33593,13 +33593,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_533){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33656,13 +33656,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_534){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33719,13 +33719,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_535){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33782,13 +33782,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_536){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33845,13 +33845,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_537){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33908,13 +33908,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_538){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -33971,13 +33971,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_539){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34034,13 +34034,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_540){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34097,13 +34097,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_541){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34160,13 +34160,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_542){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34223,13 +34223,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_543){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34286,13 +34286,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_544){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34349,13 +34349,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_545){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34412,13 +34412,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_546){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34475,13 +34475,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_547){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34538,13 +34538,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_548){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34601,13 +34601,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_549){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34664,13 +34664,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_550){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34727,13 +34727,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_551){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34790,13 +34790,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_552){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34853,13 +34853,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_553){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34916,13 +34916,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_554){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -34979,13 +34979,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_555){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35042,13 +35042,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_556){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35105,13 +35105,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_557){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35168,13 +35168,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_558){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35231,13 +35231,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_559){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35294,13 +35294,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_560){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35357,13 +35357,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_561){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35420,13 +35420,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_562){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35483,13 +35483,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_563){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35546,13 +35546,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_564){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35609,13 +35609,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_565){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35672,13 +35672,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_566){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35735,13 +35735,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_567){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35798,13 +35798,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_568){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35861,13 +35861,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_569){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35924,13 +35924,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_570){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -35987,13 +35987,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_571){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36050,13 +36050,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_572){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36113,13 +36113,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_573){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36176,13 +36176,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_574){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36239,13 +36239,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_575){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36302,13 +36302,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_576){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36365,13 +36365,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_577){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36428,13 +36428,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_578){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36491,13 +36491,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_579){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36554,13 +36554,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_580){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36617,13 +36617,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_581){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36680,13 +36680,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_582){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36743,13 +36743,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_583){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36806,13 +36806,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_584){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36869,13 +36869,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_585){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36932,13 +36932,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_586){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -36995,13 +36995,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_587){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37058,13 +37058,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_588){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37121,13 +37121,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_589){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37184,13 +37184,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_590){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37247,13 +37247,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_591){
     int ns = 3;
     int nt = 2;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37310,13 +37310,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_592){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37373,13 +37373,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_593){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37436,13 +37436,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_594){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37499,13 +37499,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_595){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37562,13 +37562,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_596){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37625,13 +37625,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_597){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37688,13 +37688,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_598){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37751,13 +37751,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_599){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37814,13 +37814,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_600){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37877,13 +37877,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_601){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -37940,13 +37940,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_602){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38003,13 +38003,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_603){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38066,13 +38066,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_604){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38129,13 +38129,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_605){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38192,13 +38192,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_606){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38255,13 +38255,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_607){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38318,13 +38318,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_608){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38381,13 +38381,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_609){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38444,13 +38444,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_610){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38507,13 +38507,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_611){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38570,13 +38570,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_612){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38633,13 +38633,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_613){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38696,13 +38696,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_614){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38759,13 +38759,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_615){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38822,13 +38822,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_616){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38885,13 +38885,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_617){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -38948,13 +38948,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_618){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39011,13 +39011,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_619){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39074,13 +39074,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_620){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39137,13 +39137,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_621){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39200,13 +39200,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_622){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39263,13 +39263,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_623){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39326,13 +39326,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_624){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39389,13 +39389,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_625){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39452,13 +39452,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_626){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39515,13 +39515,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_627){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39578,13 +39578,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_628){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39641,13 +39641,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_629){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39704,13 +39704,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_630){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39767,13 +39767,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_631){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39830,13 +39830,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_632){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39893,13 +39893,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_633){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -39956,13 +39956,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_634){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40019,13 +40019,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_635){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40082,13 +40082,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_636){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40145,13 +40145,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_637){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40208,13 +40208,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_638){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40271,13 +40271,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_639){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40334,13 +40334,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_640){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40397,13 +40397,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_641){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40460,13 +40460,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_642){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40523,13 +40523,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_643){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40586,13 +40586,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_644){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40649,13 +40649,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_645){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40712,13 +40712,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_646){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40775,13 +40775,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_647){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40838,13 +40838,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_648){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40901,13 +40901,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_649){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -40964,13 +40964,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_650){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41027,13 +41027,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_651){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41090,13 +41090,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_652){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41153,13 +41153,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_653){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41216,13 +41216,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_654){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41279,13 +41279,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_655){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41342,13 +41342,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_656){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41405,13 +41405,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_657){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41468,13 +41468,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_658){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41531,13 +41531,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_659){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41594,13 +41594,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_660){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41657,13 +41657,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_661){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41720,13 +41720,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_662){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41783,13 +41783,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_663){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41846,13 +41846,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_664){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41909,13 +41909,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_665){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -41972,13 +41972,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_666){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42035,13 +42035,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_667){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42098,13 +42098,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_668){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42161,13 +42161,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_669){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42224,13 +42224,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_670){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42287,13 +42287,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_671){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42350,13 +42350,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_672){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42413,13 +42413,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_673){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42476,13 +42476,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_674){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42539,13 +42539,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_675){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42602,13 +42602,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_676){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42665,13 +42665,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_677){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42728,13 +42728,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_678){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42791,13 +42791,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_679){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42854,13 +42854,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_680){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42917,13 +42917,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_681){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -42980,13 +42980,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_682){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43043,13 +43043,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_683){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43106,13 +43106,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_684){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43169,13 +43169,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_685){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43232,13 +43232,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_686){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43295,13 +43295,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_687){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43358,13 +43358,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_688){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43421,13 +43421,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_689){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43484,13 +43484,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_690){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43547,13 +43547,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_691){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43610,13 +43610,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_692){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43673,13 +43673,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_693){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43736,13 +43736,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_694){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43799,13 +43799,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_695){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43862,13 +43862,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_696){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43925,13 +43925,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_697){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -43988,13 +43988,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_698){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44051,13 +44051,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_699){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44114,13 +44114,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_700){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44177,13 +44177,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_701){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44240,13 +44240,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_702){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44303,13 +44303,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_703){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44366,13 +44366,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_704){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44429,13 +44429,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_705){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44492,13 +44492,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_706){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44555,13 +44555,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_707){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44618,13 +44618,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_708){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44681,13 +44681,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_709){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44744,13 +44744,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_710){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44807,13 +44807,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_711){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44870,13 +44870,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_712){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44933,13 +44933,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_713){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -44996,13 +44996,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_714){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45059,13 +45059,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_715){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45122,13 +45122,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_716){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45185,13 +45185,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_717){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45248,13 +45248,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_718){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45311,13 +45311,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_719){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45374,13 +45374,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_720){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45437,13 +45437,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_721){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45500,13 +45500,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_722){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45563,13 +45563,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_723){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45626,13 +45626,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_724){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45689,13 +45689,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_725){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45752,13 +45752,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_726){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45815,13 +45815,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_727){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45878,13 +45878,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_728){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -45941,13 +45941,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_729){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46004,13 +46004,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_730){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46067,13 +46067,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_731){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46130,13 +46130,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_732){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46193,13 +46193,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_733){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46256,13 +46256,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_734){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46319,13 +46319,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_735){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46382,13 +46382,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_736){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46445,13 +46445,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_737){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46508,13 +46508,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_738){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46571,13 +46571,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_739){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46634,13 +46634,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_740){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46697,13 +46697,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_741){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46760,13 +46760,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_742){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46823,13 +46823,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_743){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46886,13 +46886,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_744){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -46949,13 +46949,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_745){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47012,13 +47012,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_746){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47075,13 +47075,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_747){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47138,13 +47138,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_748){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47201,13 +47201,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_749){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47264,13 +47264,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_750){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47327,13 +47327,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_751){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47390,13 +47390,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_752){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47453,13 +47453,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_753){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47516,13 +47516,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_754){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47579,13 +47579,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_755){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47642,13 +47642,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_756){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47705,13 +47705,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_757){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47768,13 +47768,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_758){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47831,13 +47831,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_759){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47894,13 +47894,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_760){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -47957,13 +47957,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_761){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48020,13 +48020,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_762){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48083,13 +48083,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_763){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48146,13 +48146,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_764){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48209,13 +48209,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_765){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48272,13 +48272,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_766){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48335,13 +48335,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_767){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48398,13 +48398,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_768){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48461,13 +48461,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_769){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48524,13 +48524,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_770){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48587,13 +48587,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_771){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48650,13 +48650,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_772){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48713,13 +48713,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_773){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48776,13 +48776,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_774){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48839,13 +48839,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_775){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48902,13 +48902,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_776){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -48965,13 +48965,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_777){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49028,13 +49028,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_778){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49091,13 +49091,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_779){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49154,13 +49154,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_780){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49217,13 +49217,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_781){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49280,13 +49280,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_782){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49343,13 +49343,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_783){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49406,13 +49406,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_784){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49469,13 +49469,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_785){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49532,13 +49532,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_786){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49595,13 +49595,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_787){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49658,13 +49658,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_788){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49721,13 +49721,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_789){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49784,13 +49784,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_790){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49847,13 +49847,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_791){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49910,13 +49910,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_792){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -49973,13 +49973,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_793){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50036,13 +50036,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_794){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50099,13 +50099,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_795){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50162,13 +50162,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_796){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50225,13 +50225,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_797){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50288,13 +50288,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_798){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50351,13 +50351,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_799){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50414,13 +50414,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_800){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50477,13 +50477,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_801){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50540,13 +50540,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_802){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50603,13 +50603,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_803){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50666,13 +50666,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_804){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50729,13 +50729,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_805){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50792,13 +50792,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_806){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50855,13 +50855,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_807){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50918,13 +50918,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_808){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -50981,13 +50981,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_809){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51044,13 +51044,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_810){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51107,13 +51107,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_811){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51170,13 +51170,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_812){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51233,13 +51233,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_813){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51296,13 +51296,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_814){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51359,13 +51359,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_815){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51422,13 +51422,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_816){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51485,13 +51485,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_817){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51548,13 +51548,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_818){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51611,13 +51611,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_819){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51674,13 +51674,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_820){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51737,13 +51737,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_821){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51800,13 +51800,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_822){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51863,13 +51863,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_823){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51926,13 +51926,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_824){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -51989,13 +51989,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_825){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52052,13 +52052,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_826){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52115,13 +52115,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_827){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52178,13 +52178,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_828){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52241,13 +52241,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_829){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52304,13 +52304,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_830){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52367,13 +52367,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_831){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52430,13 +52430,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_832){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52493,13 +52493,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_833){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52556,13 +52556,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_834){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52619,13 +52619,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_835){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52682,13 +52682,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_836){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52745,13 +52745,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_837){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52808,13 +52808,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_838){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52871,13 +52871,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_839){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52934,13 +52934,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_840){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -52997,13 +52997,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_841){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53060,13 +53060,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_842){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53123,13 +53123,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_843){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53186,13 +53186,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_844){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53249,13 +53249,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_845){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53312,13 +53312,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_846){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53375,13 +53375,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_847){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53438,13 +53438,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_848){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53501,13 +53501,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_849){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53564,13 +53564,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_850){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53627,13 +53627,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_851){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53690,13 +53690,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_852){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53753,13 +53753,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_853){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53816,13 +53816,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_854){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53879,13 +53879,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_855){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -53942,13 +53942,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_856){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54005,13 +54005,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_857){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54068,13 +54068,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_858){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54131,13 +54131,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_859){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54194,13 +54194,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_860){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54257,13 +54257,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_861){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54320,13 +54320,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_862){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54383,13 +54383,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_863){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54446,13 +54446,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_864){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54509,13 +54509,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_865){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54572,13 +54572,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_866){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54635,13 +54635,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_867){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54698,13 +54698,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_868){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54761,13 +54761,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_869){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54824,13 +54824,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_870){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54887,13 +54887,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_871){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -54950,13 +54950,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_872){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55013,13 +55013,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_873){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55076,13 +55076,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_874){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55139,13 +55139,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_875){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55202,13 +55202,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_876){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55265,13 +55265,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_877){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55328,13 +55328,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_878){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55391,13 +55391,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_879){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55454,13 +55454,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_880){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55517,13 +55517,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_881){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55580,13 +55580,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_882){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55643,13 +55643,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_883){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55706,13 +55706,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_884){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55769,13 +55769,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_885){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55832,13 +55832,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_886){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55895,13 +55895,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_887){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -55958,13 +55958,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_888){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56021,13 +56021,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_889){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56084,13 +56084,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_890){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56147,13 +56147,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_891){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56210,13 +56210,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_892){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56273,13 +56273,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_893){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56336,13 +56336,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_894){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56399,13 +56399,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_895){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56462,13 +56462,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_896){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56525,13 +56525,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_897){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56588,13 +56588,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_898){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56651,13 +56651,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_899){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56714,13 +56714,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_900){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56777,13 +56777,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_901){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56840,13 +56840,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_902){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56903,13 +56903,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_903){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -56966,13 +56966,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_904){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57029,13 +57029,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_905){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57092,13 +57092,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_906){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57155,13 +57155,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_907){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57218,13 +57218,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_908){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57281,13 +57281,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_909){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57344,13 +57344,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_910){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57407,13 +57407,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_911){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57470,13 +57470,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_912){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57533,13 +57533,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_913){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57596,13 +57596,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_914){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57659,13 +57659,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_915){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57722,13 +57722,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_916){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57785,13 +57785,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_917){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57848,13 +57848,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_918){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57911,13 +57911,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_919){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -57974,13 +57974,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_920){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58037,13 +58037,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_921){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58100,13 +58100,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_922){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58163,13 +58163,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_923){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58226,13 +58226,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_924){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58289,13 +58289,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_925){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58352,13 +58352,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_926){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58415,13 +58415,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_927){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58478,13 +58478,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_928){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58541,13 +58541,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_929){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58604,13 +58604,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_930){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58667,13 +58667,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_931){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58730,13 +58730,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_932){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58793,13 +58793,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_933){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58856,13 +58856,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_934){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58919,13 +58919,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_935){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -58982,13 +58982,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_936){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59045,13 +59045,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_937){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59108,13 +59108,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_938){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59171,13 +59171,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_939){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59234,13 +59234,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_940){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59297,13 +59297,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_941){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59360,13 +59360,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_942){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59423,13 +59423,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_943){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59486,13 +59486,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_944){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59549,13 +59549,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_945){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59612,13 +59612,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_946){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59675,13 +59675,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_947){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59738,13 +59738,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_948){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59801,13 +59801,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_949){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59864,13 +59864,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_950){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59927,13 +59927,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_951){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -59990,13 +59990,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_952){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60053,13 +60053,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_953){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60116,13 +60116,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_954){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60179,13 +60179,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_955){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60242,13 +60242,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_956){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60305,13 +60305,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_957){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60368,13 +60368,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_958){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60431,13 +60431,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_959){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60494,13 +60494,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_960){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60557,13 +60557,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_961){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60620,13 +60620,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_962){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60683,13 +60683,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_963){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60746,13 +60746,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_964){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60809,13 +60809,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_965){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60872,13 +60872,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_966){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60935,13 +60935,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_967){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -60998,13 +60998,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_968){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61061,13 +61061,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_969){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61124,13 +61124,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_970){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61187,13 +61187,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_971){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61250,13 +61250,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_972){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61313,13 +61313,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_973){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61376,13 +61376,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_974){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61439,13 +61439,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_975){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61502,13 +61502,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_976){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61565,13 +61565,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_977){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61628,13 +61628,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_978){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61691,13 +61691,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_979){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61754,13 +61754,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_980){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61817,13 +61817,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_981){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61880,13 +61880,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_982){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -61943,13 +61943,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_983){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62006,13 +62006,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_984){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62069,13 +62069,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_985){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62132,13 +62132,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_986){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62195,13 +62195,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_987){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62258,13 +62258,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_988){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62321,13 +62321,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_989){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62384,13 +62384,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_990){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62447,13 +62447,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_991){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62510,13 +62510,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_992){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62573,13 +62573,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_993){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62636,13 +62636,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_994){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62699,13 +62699,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_995){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62762,13 +62762,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_996){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62825,13 +62825,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_997){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62888,13 +62888,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_998){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -62951,13 +62951,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_999){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63014,13 +63014,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1000){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63077,13 +63077,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1001){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63140,13 +63140,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1002){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63203,13 +63203,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1003){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63266,13 +63266,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1004){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63329,13 +63329,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1005){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63392,13 +63392,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1006){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63455,13 +63455,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1007){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63518,13 +63518,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1008){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63581,13 +63581,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1009){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63644,13 +63644,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1010){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63707,13 +63707,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1011){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63770,13 +63770,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1012){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63833,13 +63833,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1013){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63896,13 +63896,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1014){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -63959,13 +63959,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1015){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64022,13 +64022,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1016){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64085,13 +64085,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1017){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64148,13 +64148,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1018){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64211,13 +64211,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1019){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64274,13 +64274,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1020){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64337,13 +64337,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1021){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64400,13 +64400,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1022){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64463,13 +64463,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1023){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64526,13 +64526,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1024){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64589,13 +64589,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1025){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64652,13 +64652,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1026){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64715,13 +64715,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1027){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64778,13 +64778,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1028){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64841,13 +64841,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1029){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64904,13 +64904,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1030){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -64967,13 +64967,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1031){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65030,13 +65030,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1032){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65093,13 +65093,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1033){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65156,13 +65156,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1034){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65219,13 +65219,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1035){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65282,13 +65282,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1036){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65345,13 +65345,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1037){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65408,13 +65408,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1038){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65471,13 +65471,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1039){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65534,13 +65534,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1040){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65597,13 +65597,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1041){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65660,13 +65660,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1042){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65723,13 +65723,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1043){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65786,13 +65786,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1044){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65849,13 +65849,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1045){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65912,13 +65912,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1046){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -65975,13 +65975,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1047){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66038,13 +66038,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1048){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66101,13 +66101,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1049){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66164,13 +66164,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1050){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66227,13 +66227,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1051){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66290,13 +66290,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1052){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66353,13 +66353,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1053){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66416,13 +66416,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1054){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66479,13 +66479,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1055){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66542,13 +66542,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1056){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66605,13 +66605,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1057){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66668,13 +66668,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1058){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66731,13 +66731,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1059){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66794,13 +66794,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1060){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66857,13 +66857,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1061){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66920,13 +66920,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1062){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -66983,13 +66983,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1063){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67046,13 +67046,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1064){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67109,13 +67109,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1065){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67172,13 +67172,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1066){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67235,13 +67235,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1067){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67298,13 +67298,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1068){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67361,13 +67361,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1069){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67424,13 +67424,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1070){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67487,13 +67487,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1071){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67550,13 +67550,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1072){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67613,13 +67613,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1073){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67676,13 +67676,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1074){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67739,13 +67739,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1075){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67802,13 +67802,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1076){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67865,13 +67865,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1077){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67928,13 +67928,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1078){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -67991,13 +67991,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1079){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68054,13 +68054,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1080){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68117,13 +68117,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1081){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68180,13 +68180,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1082){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68243,13 +68243,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1083){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68306,13 +68306,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1084){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68369,13 +68369,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1085){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68432,13 +68432,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1086){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68495,13 +68495,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1087){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68558,13 +68558,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1088){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68621,13 +68621,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1089){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68684,13 +68684,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1090){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68747,13 +68747,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1091){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68810,13 +68810,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1092){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68873,13 +68873,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1093){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68936,13 +68936,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1094){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -68999,13 +68999,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1095){
     int ns = 3;
     int nt = 3;
-    double ds = 0.01;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69062,13 +69062,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1096){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69125,13 +69125,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1097){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69188,13 +69188,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1098){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69251,13 +69251,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1099){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69314,13 +69314,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1100){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69377,13 +69377,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1101){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69440,13 +69440,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1102){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69503,13 +69503,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1103){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69566,13 +69566,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1104){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69629,13 +69629,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1105){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69692,13 +69692,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1106){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69755,13 +69755,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1107){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69818,13 +69818,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1108){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69881,13 +69881,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1109){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -69944,13 +69944,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1110){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70007,13 +70007,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1111){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70070,13 +70070,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1112){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70133,13 +70133,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1113){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70196,13 +70196,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1114){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70259,13 +70259,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1115){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70322,13 +70322,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1116){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70385,13 +70385,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1117){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70448,13 +70448,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1118){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70511,13 +70511,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1119){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70574,13 +70574,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1120){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70637,13 +70637,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1121){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70700,13 +70700,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1122){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70763,13 +70763,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1123){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70826,13 +70826,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1124){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70889,13 +70889,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1125){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -70952,13 +70952,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1126){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71015,13 +71015,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1127){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71078,13 +71078,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1128){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71141,13 +71141,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1129){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71204,13 +71204,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1130){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71267,13 +71267,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1131){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71330,13 +71330,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1132){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71393,13 +71393,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1133){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71456,13 +71456,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1134){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71519,13 +71519,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1135){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71582,13 +71582,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1136){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71645,13 +71645,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1137){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71708,13 +71708,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1138){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71771,13 +71771,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1139){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71834,13 +71834,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1140){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71897,13 +71897,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1141){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -71960,13 +71960,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1142){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72023,13 +72023,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1143){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72086,13 +72086,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1144){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72149,13 +72149,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1145){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72212,13 +72212,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1146){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72275,13 +72275,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1147){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72338,13 +72338,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1148){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72401,13 +72401,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1149){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72464,13 +72464,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1150){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72527,13 +72527,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1151){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72590,13 +72590,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1152){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72653,13 +72653,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1153){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72716,13 +72716,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1154){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72779,13 +72779,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1155){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72842,13 +72842,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1156){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72905,13 +72905,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1157){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -72968,13 +72968,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1158){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73031,13 +73031,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1159){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73094,13 +73094,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1160){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73157,13 +73157,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1161){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73220,13 +73220,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1162){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73283,13 +73283,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1163){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73346,13 +73346,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1164){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73409,13 +73409,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1165){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73472,13 +73472,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1166){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73535,13 +73535,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1167){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73598,13 +73598,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1168){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73661,13 +73661,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1169){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73724,13 +73724,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1170){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73787,13 +73787,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1171){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73850,13 +73850,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1172){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73913,13 +73913,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1173){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -73976,13 +73976,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1174){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74039,13 +74039,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1175){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74102,13 +74102,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1176){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74165,13 +74165,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1177){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74228,13 +74228,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1178){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74291,13 +74291,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1179){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74354,13 +74354,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1180){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74417,13 +74417,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1181){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74480,13 +74480,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1182){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74543,13 +74543,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1183){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74606,13 +74606,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1184){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74669,13 +74669,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1185){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74732,13 +74732,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1186){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74795,13 +74795,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1187){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74858,13 +74858,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1188){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74921,13 +74921,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1189){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -74984,13 +74984,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1190){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75047,13 +75047,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1191){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75110,13 +75110,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1192){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75173,13 +75173,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1193){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75236,13 +75236,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1194){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75299,13 +75299,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1195){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75362,13 +75362,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1196){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75425,13 +75425,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1197){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75488,13 +75488,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1198){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75551,13 +75551,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1199){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75614,13 +75614,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1200){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75677,13 +75677,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1201){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75740,13 +75740,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1202){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75803,13 +75803,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1203){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75866,13 +75866,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1204){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75929,13 +75929,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1205){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -75992,13 +75992,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1206){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76055,13 +76055,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1207){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76118,13 +76118,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1208){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76181,13 +76181,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1209){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76244,13 +76244,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1210){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76307,13 +76307,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1211){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76370,13 +76370,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1212){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76433,13 +76433,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1213){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76496,13 +76496,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1214){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76559,13 +76559,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1215){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76622,13 +76622,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1216){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76685,13 +76685,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1217){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76748,13 +76748,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1218){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76811,13 +76811,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1219){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76874,13 +76874,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1220){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -76937,13 +76937,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1221){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77000,13 +77000,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1222){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77063,13 +77063,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1223){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77126,13 +77126,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1224){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77189,13 +77189,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1225){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77252,13 +77252,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1226){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77315,13 +77315,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1227){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77378,13 +77378,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1228){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77441,13 +77441,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1229){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77504,13 +77504,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1230){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77567,13 +77567,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1231){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77630,13 +77630,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1232){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77693,13 +77693,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1233){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77756,13 +77756,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1234){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77819,13 +77819,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1235){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77882,13 +77882,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1236){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -77945,13 +77945,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1237){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78008,13 +78008,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1238){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78071,13 +78071,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1239){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78134,13 +78134,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1240){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78197,13 +78197,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1241){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78260,13 +78260,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1242){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78323,13 +78323,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1243){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78386,13 +78386,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1244){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78449,13 +78449,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1245){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78512,13 +78512,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1246){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78575,13 +78575,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1247){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78638,13 +78638,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1248){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78701,13 +78701,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1249){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78764,13 +78764,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1250){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78827,13 +78827,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1251){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78890,13 +78890,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1252){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -78953,13 +78953,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1253){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79016,13 +79016,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1254){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79079,13 +79079,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1255){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79142,13 +79142,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1256){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79205,13 +79205,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1257){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79268,13 +79268,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1258){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79331,13 +79331,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1259){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79394,13 +79394,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1260){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79457,13 +79457,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1261){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79520,13 +79520,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1262){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79583,13 +79583,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1263){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79646,13 +79646,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1264){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79709,13 +79709,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1265){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79772,13 +79772,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1266){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79835,13 +79835,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1267){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79898,13 +79898,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1268){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -79961,13 +79961,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1269){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80024,13 +80024,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1270){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80087,13 +80087,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1271){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80150,13 +80150,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1272){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80213,13 +80213,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1273){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80276,13 +80276,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1274){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80339,13 +80339,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1275){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80402,13 +80402,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1276){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80465,13 +80465,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1277){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80528,13 +80528,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1278){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80591,13 +80591,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1279){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80654,13 +80654,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1280){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80717,13 +80717,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1281){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80780,13 +80780,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1282){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80843,13 +80843,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1283){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80906,13 +80906,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1284){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -80969,13 +80969,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1285){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81032,13 +81032,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1286){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81095,13 +81095,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1287){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81158,13 +81158,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1288){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81221,13 +81221,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1289){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81284,13 +81284,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1290){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81347,13 +81347,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1291){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81410,13 +81410,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1292){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81473,13 +81473,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1293){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81536,13 +81536,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1294){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81599,13 +81599,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1295){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81662,13 +81662,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1296){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81725,13 +81725,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1297){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81788,13 +81788,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1298){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81851,13 +81851,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1299){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81914,13 +81914,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1300){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -81977,13 +81977,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1301){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82040,13 +82040,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1302){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82103,13 +82103,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1303){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82166,13 +82166,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1304){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82229,13 +82229,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1305){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82292,13 +82292,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1306){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82355,13 +82355,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1307){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82418,13 +82418,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1308){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82481,13 +82481,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1309){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82544,13 +82544,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1310){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82607,13 +82607,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1311){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82670,13 +82670,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1312){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82733,13 +82733,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1313){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82796,13 +82796,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1314){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82859,13 +82859,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1315){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82922,13 +82922,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1316){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -82985,13 +82985,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1317){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83048,13 +83048,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1318){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83111,13 +83111,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1319){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83174,13 +83174,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1320){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83237,13 +83237,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1321){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83300,13 +83300,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1322){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83363,13 +83363,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1323){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83426,13 +83426,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1324){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83489,13 +83489,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1325){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83552,13 +83552,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1326){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83615,13 +83615,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1327){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83678,13 +83678,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1328){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83741,13 +83741,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1329){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83804,13 +83804,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1330){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83867,13 +83867,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1331){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83930,13 +83930,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1332){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -83993,13 +83993,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1333){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84056,13 +84056,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1334){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84119,13 +84119,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1335){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84182,13 +84182,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1336){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84245,13 +84245,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1337){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84308,13 +84308,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1338){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84371,13 +84371,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1339){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84434,13 +84434,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1340){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84497,13 +84497,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1341){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84560,13 +84560,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1342){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84623,13 +84623,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1343){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84686,13 +84686,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1344){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84749,13 +84749,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1345){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84812,13 +84812,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1346){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84875,13 +84875,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1347){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.01;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -84938,13 +84938,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1348){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85001,13 +85001,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1349){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85064,13 +85064,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1350){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85127,13 +85127,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1351){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85190,13 +85190,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1352){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85253,13 +85253,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1353){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85316,13 +85316,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1354){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85379,13 +85379,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1355){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85442,13 +85442,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1356){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85505,13 +85505,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1357){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85568,13 +85568,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1358){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85631,13 +85631,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1359){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85694,13 +85694,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1360){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85757,13 +85757,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1361){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85820,13 +85820,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1362){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85883,13 +85883,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1363){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -85946,13 +85946,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1364){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86009,13 +86009,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1365){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86072,13 +86072,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1366){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86135,13 +86135,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1367){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86198,13 +86198,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1368){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86261,13 +86261,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1369){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86324,13 +86324,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1370){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86387,13 +86387,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1371){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86450,13 +86450,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1372){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86513,13 +86513,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1373){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86576,13 +86576,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1374){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86639,13 +86639,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1375){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86702,13 +86702,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1376){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86765,13 +86765,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1377){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86828,13 +86828,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1378){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86891,13 +86891,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1379){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -86954,13 +86954,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1380){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87017,13 +87017,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1381){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87080,13 +87080,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1382){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87143,13 +87143,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1383){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87206,13 +87206,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1384){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87269,13 +87269,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1385){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87332,13 +87332,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1386){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87395,13 +87395,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1387){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87458,13 +87458,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1388){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87521,13 +87521,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1389){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87584,13 +87584,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1390){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87647,13 +87647,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1391){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87710,13 +87710,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1392){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87773,13 +87773,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1393){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87836,13 +87836,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1394){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87899,13 +87899,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1395){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -87962,13 +87962,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1396){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88025,13 +88025,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1397){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88088,13 +88088,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1398){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88151,13 +88151,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1399){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88214,13 +88214,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1400){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88277,13 +88277,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1401){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88340,13 +88340,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1402){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88403,13 +88403,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1403){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88466,13 +88466,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1404){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88529,13 +88529,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1405){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88592,13 +88592,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1406){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88655,13 +88655,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1407){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88718,13 +88718,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1408){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88781,13 +88781,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1409){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88844,13 +88844,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1410){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88907,13 +88907,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1411){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -88970,13 +88970,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1412){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89033,13 +89033,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1413){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89096,13 +89096,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1414){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89159,13 +89159,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1415){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89222,13 +89222,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1416){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89285,13 +89285,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1417){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89348,13 +89348,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1418){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89411,13 +89411,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1419){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89474,13 +89474,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1420){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89537,13 +89537,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1421){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89600,13 +89600,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1422){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89663,13 +89663,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1423){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89726,13 +89726,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1424){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89789,13 +89789,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1425){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89852,13 +89852,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1426){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89915,13 +89915,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1427){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -89978,13 +89978,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1428){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90041,13 +90041,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1429){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90104,13 +90104,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1430){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90167,13 +90167,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1431){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90230,13 +90230,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1432){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90293,13 +90293,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1433){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90356,13 +90356,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1434){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90419,13 +90419,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1435){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90482,13 +90482,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1436){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90545,13 +90545,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1437){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90608,13 +90608,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1438){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90671,13 +90671,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1439){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90734,13 +90734,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1440){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90797,13 +90797,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1441){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90860,13 +90860,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1442){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90923,13 +90923,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1443){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -90986,13 +90986,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1444){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91049,13 +91049,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1445){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91112,13 +91112,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1446){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91175,13 +91175,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1447){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91238,13 +91238,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1448){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91301,13 +91301,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1449){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91364,13 +91364,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1450){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91427,13 +91427,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1451){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91490,13 +91490,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1452){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91553,13 +91553,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1453){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91616,13 +91616,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1454){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91679,13 +91679,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1455){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91742,13 +91742,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1456){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91805,13 +91805,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1457){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91868,13 +91868,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1458){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91931,13 +91931,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1459){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -91994,13 +91994,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1460){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92057,13 +92057,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1461){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92120,13 +92120,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1462){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92183,13 +92183,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1463){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92246,13 +92246,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1464){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92309,13 +92309,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1465){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92372,13 +92372,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1466){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92435,13 +92435,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1467){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92498,13 +92498,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1468){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92561,13 +92561,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1469){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92624,13 +92624,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1470){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92687,13 +92687,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1471){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92750,13 +92750,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1472){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92813,13 +92813,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1473){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92876,13 +92876,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1474){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -92939,13 +92939,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1475){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93002,13 +93002,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1476){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93065,13 +93065,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1477){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93128,13 +93128,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1478){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93191,13 +93191,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1479){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93254,13 +93254,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1480){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93317,13 +93317,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1481){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93380,13 +93380,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1482){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93443,13 +93443,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1483){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93506,13 +93506,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1484){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93569,13 +93569,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1485){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93632,13 +93632,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1486){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93695,13 +93695,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1487){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93758,13 +93758,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1488){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93821,13 +93821,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1489){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93884,13 +93884,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1490){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -93947,13 +93947,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1491){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94010,13 +94010,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1492){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94073,13 +94073,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1493){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94136,13 +94136,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1494){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94199,13 +94199,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1495){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94262,13 +94262,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1496){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94325,13 +94325,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1497){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94388,13 +94388,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1498){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94451,13 +94451,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1499){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94514,13 +94514,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1500){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94577,13 +94577,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1501){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94640,13 +94640,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1502){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94703,13 +94703,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1503){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94766,13 +94766,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1504){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94829,13 +94829,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1505){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94892,13 +94892,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1506){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -94955,13 +94955,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1507){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95018,13 +95018,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1508){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95081,13 +95081,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1509){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95144,13 +95144,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1510){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95207,13 +95207,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1511){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95270,13 +95270,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1512){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95333,13 +95333,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1513){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95396,13 +95396,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1514){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95459,13 +95459,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1515){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95522,13 +95522,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1516){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95585,13 +95585,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1517){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95648,13 +95648,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1518){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95711,13 +95711,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1519){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95774,13 +95774,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1520){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95837,13 +95837,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1521){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95900,13 +95900,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1522){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -95963,13 +95963,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1523){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96026,13 +96026,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1524){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96089,13 +96089,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1525){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96152,13 +96152,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1526){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96215,13 +96215,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1527){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96278,13 +96278,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1528){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96341,13 +96341,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1529){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96404,13 +96404,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1530){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96467,13 +96467,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1531){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96530,13 +96530,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1532){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96593,13 +96593,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1533){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96656,13 +96656,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1534){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96719,13 +96719,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1535){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96782,13 +96782,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1536){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96845,13 +96845,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1537){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96908,13 +96908,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1538){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -96971,13 +96971,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1539){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97034,13 +97034,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1540){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97097,13 +97097,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1541){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97160,13 +97160,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1542){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97223,13 +97223,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1543){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97286,13 +97286,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1544){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97349,13 +97349,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1545){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97412,13 +97412,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1546){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97475,13 +97475,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1547){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97538,13 +97538,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1548){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97601,13 +97601,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1549){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97664,13 +97664,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1550){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97727,13 +97727,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1551){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97790,13 +97790,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1552){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97853,13 +97853,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1553){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97916,13 +97916,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1554){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -97979,13 +97979,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1555){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98042,13 +98042,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1556){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98105,13 +98105,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1557){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98168,13 +98168,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1558){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98231,13 +98231,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1559){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98294,13 +98294,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1560){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98357,13 +98357,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1561){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98420,13 +98420,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1562){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98483,13 +98483,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1563){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98546,13 +98546,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1564){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98609,13 +98609,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1565){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98672,13 +98672,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1566){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98735,13 +98735,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1567){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98798,13 +98798,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1568){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98861,13 +98861,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1569){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98924,13 +98924,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1570){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -98987,13 +98987,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1571){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99050,13 +99050,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1572){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99113,13 +99113,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1573){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99176,13 +99176,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1574){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99239,13 +99239,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1575){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99302,13 +99302,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1576){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99365,13 +99365,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1577){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99428,13 +99428,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1578){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99491,13 +99491,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1579){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99554,13 +99554,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1580){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99617,13 +99617,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1581){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99680,13 +99680,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1582){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99743,13 +99743,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1583){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99806,13 +99806,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1584){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99869,13 +99869,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1585){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99932,13 +99932,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1586){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -99995,13 +99995,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1587){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100058,13 +100058,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1588){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100121,13 +100121,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1589){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100184,13 +100184,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1590){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100247,13 +100247,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1591){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100310,13 +100310,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1592){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100373,13 +100373,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1593){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100436,13 +100436,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1594){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100499,13 +100499,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1595){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100562,13 +100562,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1596){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100625,13 +100625,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1597){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100688,13 +100688,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1598){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();
@@ -100751,13 +100751,13 @@ SUITE(INTEGRATOR){
     TEST(cosine_1599){
     int ns = 3;
     int nt = 3;
-    double ds = 0.5;
+
     double dt = 0.5;
 
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns, ds);
+    Integrator integrator(nt, dt, ns);
 
     vec s = integrator.coordinateVec();
     vec k = integrator.spatialFreqVec();

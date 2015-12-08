@@ -26,9 +26,9 @@ void OutputManager::initialize()
 
 
     double dt = root["integratorSettings"]["dt"];
-    double ds = root["integratorSettings"]["ds"];
     int nSteps = root["integratorSettings"]["nt"];
     int nPoints = root["integratorSettings"]["ns"];
+    double ds = 1.0/nPoints;
     nSteps = pow(2, nSteps);
     nPoints = pow(2, nPoints);
 
@@ -58,10 +58,13 @@ void OutputManager::writeResponse(const Neuron* neuron)
     cube complexResponse = real(neuron->responseFT());
 
     string cellGroupName = neuron->cellType();
-//    herr_t status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
-//    if (!status == 0){
+    herr_t status = H5Eset_auto1(NULL, NULL);
+    status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
+
+    if (!status == 0){
+//        cout << "writeResponse: Cell group doesn't exist.....creating group" << endl;
         Group cellGroup = m_output->createGroup(cellGroupName);
-//    }
+    }
 
     //write response:
     Group res = m_output->createGroup(cellGroupName+"/response");
@@ -78,9 +81,11 @@ void OutputManager::writeImpulseResponse(const Neuron* neuron)
     cube complexImpulseResponse = real(neuron->impulseResponseFourierTransform());
 
     string cellGroupName = neuron->cellType();
+    herr_t status = H5Eset_auto1(NULL, NULL);
+    status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
 
-    herr_t status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
     if (!status == 0){
+//        cout << "writeResponse: Cell group doesn't exist.....creating group" << endl;
         Group cellGroup = m_output->createGroup(cellGroupName);
     }
 

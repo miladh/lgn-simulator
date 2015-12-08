@@ -1,7 +1,6 @@
 #include "interneuron.h"
 
 
-
 Interneuron::Interneuron(Integrator *integrator)
     : Neuron(integrator)
 {
