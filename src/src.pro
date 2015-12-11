@@ -19,7 +19,6 @@ SOURCES += \
     integrator.cpp \
     outputmanager.cpp \
     stimuli/stimuli.cpp \
-    stimuli/patchgrating.cpp \
     math/functions.cpp \
     neurons/neuron.cpp \
     neurons/corticalcell.cpp \
@@ -32,18 +31,20 @@ SOURCES += \
     spatialKernels/ellipticgaussian.cpp \
     temporalKernels/dampedoscillator.cpp \
     math/ffthelper.cpp \
-    stimuli/grating.cpp \
     neurons/interneuron.cpp \
     temporalKernels/temporallyconstant.cpp \
     stimuli/naturalscene.cpp \
     stimuli/staticimage.cpp \
     stimuli/naturalscenevideo.cpp \
-    temporalKernels/temporaldelta.cpp
+    temporalKernels/temporaldelta.cpp \
+    stimuli/grating/grating.cpp \
+    stimuli/grating/gaussianmaskgrating.cpp \
+    stimuli/grating/circlemaskgrating.cpp \
+    stimuli/grating/fullfieldgrating.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
     stimuli/stimuli.h \
-    stimuli/patchgrating.h \
     math/functions.h \
     neurons/neuron.h \
     neurons/corticalcell.h \
@@ -56,10 +57,13 @@ HEADERS += \
     spatialKernels/ellipticgaussian.h \
     temporalKernels/dampedoscillator.h \
     math/ffthelper.h \
-    stimuli/grating.h \
     neurons/interneuron.h \
     temporalKernels/temporallyconstant.h \
     stimuli/naturalscene.h \
     stimuli/staticimage.h \
     stimuli/naturalscenevideo.h \
-    temporalKernels/temporaldelta.h
+    temporalKernels/temporaldelta.h \
+    stimuli/grating/grating.h \
+    stimuli/grating/gaussianmaskgrating.h \
+    stimuli/grating/circlemaskgrating.h \
+    stimuli/grating/fullfieldgrating.h

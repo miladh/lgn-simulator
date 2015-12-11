@@ -5,7 +5,7 @@
 #include "neurons/relaycell.h"
 #include "neurons/corticalcell.h"
 
-#include "stimuli/grating.h"
+#include "stimuli/grating/fullfieldgrating.h"
 #include "integrator.h"
 
 #include "../tests/systemTests/kernelsettings.h"
@@ -43,7 +43,7 @@ SUITE(SYSTEM){
         double wd = w(2);
         double kx = k(1);
         double ky = k(2);
-        Grating S(&integrator, {kx, ky}, wd, C);
+        FullFieldGrating S(&integrator, {kx, ky}, wd, C);
         S.computeFourierTransform();
 
 

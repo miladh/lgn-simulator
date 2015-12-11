@@ -7,6 +7,7 @@ INCLUDEPATH += /usr/local/include/opencv
 INCLUDEPATH +=/usr/include/hdf5/serial/
 
 
+
 LIBS += -L/usr/local/lib -lopencv_core -lopencv_highgui
 LIBS += -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lhdf5 -lhdf5_cpp
 

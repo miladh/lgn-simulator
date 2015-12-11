@@ -4,8 +4,7 @@
 #include <unistd.h>
 #include <time.h>
 
-#include "stimuli/patchgrating.h"
-#include "stimuli/grating.h"
+#include "stimuli/grating/grating.h"
 #include "stimuli/staticimage.h"
 #include "stimuli/naturalscenevideo.h"
 
@@ -48,62 +47,62 @@ int main()
 
     //Stim---------------------------------------------------------------------
 //        NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
-        StaticImage S = createStaticImageStimulus(&integrator,&cfg);
-//        Grating S = createGratingStimulus(&integrator,&cfg);
-//    PatchGrating S = createPatchGratingStimulus(&integrator,&cfg);
+//        StaticImage S = createStaticImageStimulus(&integrator,&cfg);
+        Grating* S = createGratingStimulus(&integrator,&cfg);
+//    CircleMaskGrating S = createPatchGratingStimulus(&integrator,&cfg);
 
 
 
     //Spatial kernels:----------------------------------------------------------
     DOG dog = createDOGSpatialKernel(&cfg);
-    DOG gauss(0.3, 0.05, 0, 1.);
-    EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
+//    DOG gauss(0.3, 0.05, 0, 1.);
+//    EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
 
 
     //Temporal kernels:-------------------------------------------------------
-    DecayingExponential Kt_rg(0.21,0);
-    DecayingExponential Kt_rig(0.30,0);
-    DecayingExponential Kt_rc(0.42,0.10);
-    TemporalDelta Kt_cr(0.0);
-    DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
+//    DecayingExponential Kt_rg(0.21,0);
+//    DecayingExponential Kt_rig(0.30,0);
+//    DecayingExponential Kt_rc(0.42,0.10);
+    TemporalDelta Kt_cr(0.4);
+//    DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
     //    TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
 
 
     //Neurons:-----------------------------------------------------------------
     GanglionCell ganglion(&integrator, &dog, &Kt_cr);
-    RelayCell relay(&integrator);
-    CorticalCell cortical(&integrator);
-    Interneuron interneuron(&integrator);
+//    RelayCell relay(&integrator);
+//    CorticalCell cortical(&integrator);
+//    Interneuron interneuron(&integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
-    neurons.push_back(&relay);
-    neurons.push_back(&cortical);
-    neurons.push_back(&interneuron);
+//    neurons.push_back(&relay);
+//    neurons.push_back(&cortical);
+//    neurons.push_back(&interneuron);
 
 
 
     //connect neurons----------------------------------------------------------
-    relay.addGanglionCell(&ganglion,&gauss, &Kt_rg);
-    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
-    relay.addInterNeuron(&interneuron,&gauss, &damped);
+//    relay.addGanglionCell(&ganglion, &dog, &Kt_cr);
+//    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
+//    relay.addInterNeuron(&interneuron,&gauss, &damped);
 
-    interneuron.addGanglionCell(&ganglion, &gauss, &Kt_rig);
-    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
+//    interneuron.addGanglionCell(&ganglion, &gauss, &Kt_rig);
+//    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
 
-    cortical.addRelayCell(&relay, &gauss, &Kt_cr);
+//    cortical.addRelayCell(&relay, &gauss, &Kt_cr);
 
 
 
     //Compute:-----------------------------------------------------------------
-    S.computeSpatiotemporal();
-    S.computeFourierTransform();
-    io.writeStimulus(&S);
-    S.clearSpatioTemporal();
+    S->computeSpatiotemporal();
+    S->computeFourierTransform();
+    io.writeStimulus(S);
+    S->clearSpatioTemporal();
 
     for(Neuron* neuron : neurons){
 
-        neuron->computeResponse(&S);
+        neuron->computeResponse(S);
         io.writeResponse(neuron);
         neuron->clearResponse();
 

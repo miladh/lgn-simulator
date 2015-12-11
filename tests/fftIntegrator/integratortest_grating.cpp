@@ -3,7 +3,7 @@
 #include <iostream>
 
 #include "integrator.h"
-#include "stimuli/grating.h"
+#include "stimuli/grating/fullfieldgrating.h"
 
 using namespace std;
 using namespace arma;
@@ -38,7 +38,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85,7 +85,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132,7 +132,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -179,7 +179,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -226,7 +226,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -273,7 +273,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -320,7 +320,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -367,7 +367,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -414,7 +414,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -461,7 +461,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -508,7 +508,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -555,7 +555,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -602,7 +602,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -649,7 +649,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -696,7 +696,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -743,7 +743,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -790,7 +790,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -837,7 +837,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -884,7 +884,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -931,7 +931,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -978,7 +978,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1025,7 +1025,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1072,7 +1072,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1119,7 +1119,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1166,7 +1166,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1213,7 +1213,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1260,7 +1260,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1307,7 +1307,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1354,7 +1354,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1401,7 +1401,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1448,7 +1448,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1495,7 +1495,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1542,7 +1542,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1589,7 +1589,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1636,7 +1636,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1683,7 +1683,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1730,7 +1730,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1777,7 +1777,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1824,7 +1824,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1871,7 +1871,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1918,7 +1918,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -1965,7 +1965,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2012,7 +2012,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2059,7 +2059,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2106,7 +2106,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2153,7 +2153,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2200,7 +2200,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2247,7 +2247,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2294,7 +2294,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2341,7 +2341,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2388,7 +2388,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2435,7 +2435,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2482,7 +2482,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2529,7 +2529,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2576,7 +2576,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2623,7 +2623,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2670,7 +2670,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2717,7 +2717,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2764,7 +2764,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2811,7 +2811,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2858,7 +2858,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2905,7 +2905,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2952,7 +2952,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -2999,7 +2999,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3046,7 +3046,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3093,7 +3093,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3140,7 +3140,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3187,7 +3187,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3234,7 +3234,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3281,7 +3281,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3328,7 +3328,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3375,7 +3375,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3422,7 +3422,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3469,7 +3469,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3516,7 +3516,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3563,7 +3563,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3610,7 +3610,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3657,7 +3657,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3704,7 +3704,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3751,7 +3751,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3798,7 +3798,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3845,7 +3845,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3892,7 +3892,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3939,7 +3939,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -3986,7 +3986,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4033,7 +4033,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4080,7 +4080,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4127,7 +4127,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4174,7 +4174,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4221,7 +4221,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4268,7 +4268,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4315,7 +4315,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4362,7 +4362,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4409,7 +4409,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4456,7 +4456,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4503,7 +4503,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4550,7 +4550,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4597,7 +4597,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4644,7 +4644,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4691,7 +4691,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4738,7 +4738,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4785,7 +4785,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4832,7 +4832,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4879,7 +4879,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4926,7 +4926,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -4973,7 +4973,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5020,7 +5020,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5067,7 +5067,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5114,7 +5114,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5161,7 +5161,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5208,7 +5208,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5255,7 +5255,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5302,7 +5302,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5349,7 +5349,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5396,7 +5396,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5443,7 +5443,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5490,7 +5490,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5537,7 +5537,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5584,7 +5584,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5631,7 +5631,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5678,7 +5678,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5725,7 +5725,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5772,7 +5772,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5819,7 +5819,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5866,7 +5866,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5913,7 +5913,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -5960,7 +5960,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6007,7 +6007,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6054,7 +6054,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6101,7 +6101,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6148,7 +6148,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6195,7 +6195,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6242,7 +6242,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6289,7 +6289,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6336,7 +6336,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6383,7 +6383,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6430,7 +6430,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6477,7 +6477,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6524,7 +6524,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6571,7 +6571,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6618,7 +6618,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6665,7 +6665,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6712,7 +6712,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6759,7 +6759,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6806,7 +6806,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6853,7 +6853,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6900,7 +6900,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6947,7 +6947,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -6994,7 +6994,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7041,7 +7041,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7088,7 +7088,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7135,7 +7135,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7182,7 +7182,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7229,7 +7229,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7276,7 +7276,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7323,7 +7323,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7370,7 +7370,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7417,7 +7417,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7464,7 +7464,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7511,7 +7511,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7558,7 +7558,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7605,7 +7605,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7652,7 +7652,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7699,7 +7699,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7746,7 +7746,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7793,7 +7793,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7840,7 +7840,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7887,7 +7887,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7934,7 +7934,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -7981,7 +7981,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8028,7 +8028,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8075,7 +8075,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8122,7 +8122,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8169,7 +8169,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8216,7 +8216,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8263,7 +8263,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8310,7 +8310,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8357,7 +8357,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8404,7 +8404,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8451,7 +8451,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8498,7 +8498,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8545,7 +8545,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8592,7 +8592,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8639,7 +8639,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8686,7 +8686,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8733,7 +8733,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8780,7 +8780,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8827,7 +8827,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8874,7 +8874,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8921,7 +8921,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -8968,7 +8968,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9015,7 +9015,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9062,7 +9062,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9109,7 +9109,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9156,7 +9156,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9203,7 +9203,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9250,7 +9250,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9297,7 +9297,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9344,7 +9344,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9391,7 +9391,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9438,7 +9438,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9485,7 +9485,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9532,7 +9532,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9579,7 +9579,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9626,7 +9626,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9673,7 +9673,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9720,7 +9720,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9767,7 +9767,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9814,7 +9814,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9861,7 +9861,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9908,7 +9908,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -9955,7 +9955,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10002,7 +10002,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10049,7 +10049,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10096,7 +10096,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10143,7 +10143,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10190,7 +10190,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10237,7 +10237,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10284,7 +10284,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10331,7 +10331,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10378,7 +10378,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10425,7 +10425,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10472,7 +10472,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10519,7 +10519,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10566,7 +10566,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10613,7 +10613,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10660,7 +10660,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10707,7 +10707,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10754,7 +10754,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10801,7 +10801,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10848,7 +10848,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10895,7 +10895,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10942,7 +10942,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -10989,7 +10989,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11036,7 +11036,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11083,7 +11083,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11130,7 +11130,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11177,7 +11177,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11224,7 +11224,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11271,7 +11271,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11318,7 +11318,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11365,7 +11365,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11412,7 +11412,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11459,7 +11459,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11506,7 +11506,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11553,7 +11553,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11600,7 +11600,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11647,7 +11647,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11694,7 +11694,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11741,7 +11741,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11788,7 +11788,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11835,7 +11835,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11882,7 +11882,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11929,7 +11929,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -11976,7 +11976,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12023,7 +12023,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12070,7 +12070,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12117,7 +12117,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12164,7 +12164,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12211,7 +12211,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12258,7 +12258,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12305,7 +12305,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12352,7 +12352,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12399,7 +12399,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12446,7 +12446,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12493,7 +12493,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12540,7 +12540,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12587,7 +12587,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12634,7 +12634,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12681,7 +12681,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12728,7 +12728,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12775,7 +12775,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12822,7 +12822,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12869,7 +12869,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12916,7 +12916,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -12963,7 +12963,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13010,7 +13010,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13057,7 +13057,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13104,7 +13104,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13151,7 +13151,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13198,7 +13198,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13245,7 +13245,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13292,7 +13292,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13339,7 +13339,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13386,7 +13386,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13433,7 +13433,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13480,7 +13480,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13527,7 +13527,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13574,7 +13574,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13621,7 +13621,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13668,7 +13668,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13715,7 +13715,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13762,7 +13762,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13809,7 +13809,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13856,7 +13856,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13903,7 +13903,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13950,7 +13950,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -13997,7 +13997,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14044,7 +14044,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14091,7 +14091,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14138,7 +14138,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14185,7 +14185,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14232,7 +14232,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14279,7 +14279,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14326,7 +14326,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14373,7 +14373,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14420,7 +14420,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14467,7 +14467,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14514,7 +14514,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14561,7 +14561,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14608,7 +14608,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14655,7 +14655,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14702,7 +14702,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14749,7 +14749,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14796,7 +14796,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14843,7 +14843,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14890,7 +14890,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14937,7 +14937,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -14984,7 +14984,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15031,7 +15031,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15078,7 +15078,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15125,7 +15125,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15172,7 +15172,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15219,7 +15219,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15266,7 +15266,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15313,7 +15313,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15360,7 +15360,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15407,7 +15407,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15454,7 +15454,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15501,7 +15501,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15548,7 +15548,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15595,7 +15595,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15642,7 +15642,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15689,7 +15689,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15736,7 +15736,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15783,7 +15783,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15830,7 +15830,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15877,7 +15877,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15924,7 +15924,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -15971,7 +15971,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16018,7 +16018,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16065,7 +16065,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16112,7 +16112,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16159,7 +16159,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16206,7 +16206,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16253,7 +16253,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16300,7 +16300,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16347,7 +16347,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16394,7 +16394,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16441,7 +16441,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16488,7 +16488,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16535,7 +16535,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16582,7 +16582,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16629,7 +16629,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16676,7 +16676,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16723,7 +16723,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16770,7 +16770,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16817,7 +16817,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16864,7 +16864,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16911,7 +16911,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -16958,7 +16958,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17005,7 +17005,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17052,7 +17052,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17099,7 +17099,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17146,7 +17146,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17193,7 +17193,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17240,7 +17240,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17287,7 +17287,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17334,7 +17334,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17381,7 +17381,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17428,7 +17428,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17475,7 +17475,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17522,7 +17522,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17569,7 +17569,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17616,7 +17616,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17663,7 +17663,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17710,7 +17710,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17757,7 +17757,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17804,7 +17804,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17851,7 +17851,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17898,7 +17898,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17945,7 +17945,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -17992,7 +17992,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18039,7 +18039,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18086,7 +18086,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18133,7 +18133,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18180,7 +18180,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18227,7 +18227,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18274,7 +18274,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18321,7 +18321,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18368,7 +18368,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18415,7 +18415,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18462,7 +18462,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18509,7 +18509,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18556,7 +18556,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18603,7 +18603,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18650,7 +18650,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18697,7 +18697,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18744,7 +18744,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18791,7 +18791,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18838,7 +18838,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18885,7 +18885,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18932,7 +18932,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -18979,7 +18979,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19026,7 +19026,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19073,7 +19073,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19120,7 +19120,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19167,7 +19167,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19214,7 +19214,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19261,7 +19261,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19308,7 +19308,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19355,7 +19355,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19402,7 +19402,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19449,7 +19449,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19496,7 +19496,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19543,7 +19543,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19590,7 +19590,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19637,7 +19637,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19684,7 +19684,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19731,7 +19731,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19778,7 +19778,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19825,7 +19825,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19872,7 +19872,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19919,7 +19919,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -19966,7 +19966,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20013,7 +20013,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20060,7 +20060,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20107,7 +20107,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20154,7 +20154,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20201,7 +20201,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20248,7 +20248,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20295,7 +20295,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20342,7 +20342,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20389,7 +20389,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20436,7 +20436,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20483,7 +20483,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20530,7 +20530,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20577,7 +20577,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20624,7 +20624,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20671,7 +20671,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20718,7 +20718,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20765,7 +20765,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20812,7 +20812,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20859,7 +20859,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20906,7 +20906,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -20953,7 +20953,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21000,7 +21000,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21047,7 +21047,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21094,7 +21094,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21141,7 +21141,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21188,7 +21188,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21235,7 +21235,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21282,7 +21282,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21329,7 +21329,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21376,7 +21376,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21423,7 +21423,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21470,7 +21470,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21517,7 +21517,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21564,7 +21564,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21611,7 +21611,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21658,7 +21658,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21705,7 +21705,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21752,7 +21752,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21799,7 +21799,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21846,7 +21846,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21893,7 +21893,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21940,7 +21940,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -21987,7 +21987,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22034,7 +22034,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22081,7 +22081,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22128,7 +22128,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22175,7 +22175,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22222,7 +22222,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22269,7 +22269,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22316,7 +22316,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22363,7 +22363,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22410,7 +22410,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22457,7 +22457,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22504,7 +22504,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22551,7 +22551,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22598,7 +22598,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22645,7 +22645,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22692,7 +22692,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22739,7 +22739,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22786,7 +22786,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22833,7 +22833,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22880,7 +22880,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22927,7 +22927,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -22974,7 +22974,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23021,7 +23021,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23068,7 +23068,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23115,7 +23115,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23162,7 +23162,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23209,7 +23209,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23256,7 +23256,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23303,7 +23303,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23350,7 +23350,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23397,7 +23397,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23444,7 +23444,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23491,7 +23491,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23538,7 +23538,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23585,7 +23585,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23632,7 +23632,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23679,7 +23679,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23726,7 +23726,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23773,7 +23773,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23820,7 +23820,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23867,7 +23867,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23914,7 +23914,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -23961,7 +23961,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24008,7 +24008,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24055,7 +24055,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24102,7 +24102,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24149,7 +24149,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24196,7 +24196,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24243,7 +24243,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24290,7 +24290,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24337,7 +24337,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24384,7 +24384,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24431,7 +24431,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24478,7 +24478,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24525,7 +24525,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24572,7 +24572,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24619,7 +24619,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24666,7 +24666,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24713,7 +24713,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24760,7 +24760,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24807,7 +24807,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24854,7 +24854,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24901,7 +24901,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24948,7 +24948,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -24995,7 +24995,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25042,7 +25042,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25089,7 +25089,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25136,7 +25136,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25183,7 +25183,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25230,7 +25230,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25277,7 +25277,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25324,7 +25324,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25371,7 +25371,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25418,7 +25418,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25465,7 +25465,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25512,7 +25512,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25559,7 +25559,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25606,7 +25606,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25653,7 +25653,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25700,7 +25700,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25747,7 +25747,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25794,7 +25794,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25841,7 +25841,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25888,7 +25888,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25935,7 +25935,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -25982,7 +25982,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26029,7 +26029,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26076,7 +26076,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26123,7 +26123,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26170,7 +26170,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26217,7 +26217,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26264,7 +26264,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26311,7 +26311,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26358,7 +26358,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26405,7 +26405,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26452,7 +26452,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26499,7 +26499,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26546,7 +26546,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26593,7 +26593,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26640,7 +26640,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26687,7 +26687,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26734,7 +26734,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26781,7 +26781,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26828,7 +26828,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26875,7 +26875,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26922,7 +26922,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -26969,7 +26969,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27016,7 +27016,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27063,7 +27063,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27110,7 +27110,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27157,7 +27157,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27204,7 +27204,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27251,7 +27251,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27298,7 +27298,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27345,7 +27345,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27392,7 +27392,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27439,7 +27439,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27486,7 +27486,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27533,7 +27533,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27580,7 +27580,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27627,7 +27627,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27674,7 +27674,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27721,7 +27721,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27768,7 +27768,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27815,7 +27815,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27862,7 +27862,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27909,7 +27909,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -27956,7 +27956,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28003,7 +28003,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28050,7 +28050,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28097,7 +28097,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28144,7 +28144,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28191,7 +28191,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28238,7 +28238,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28285,7 +28285,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28332,7 +28332,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28379,7 +28379,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28426,7 +28426,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28473,7 +28473,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28520,7 +28520,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28567,7 +28567,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28614,7 +28614,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28661,7 +28661,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28708,7 +28708,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28755,7 +28755,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28802,7 +28802,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28849,7 +28849,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28896,7 +28896,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28943,7 +28943,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -28990,7 +28990,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29037,7 +29037,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29084,7 +29084,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29131,7 +29131,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29178,7 +29178,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29225,7 +29225,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29272,7 +29272,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29319,7 +29319,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29366,7 +29366,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29413,7 +29413,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29460,7 +29460,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29507,7 +29507,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29554,7 +29554,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29601,7 +29601,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29648,7 +29648,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29695,7 +29695,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29742,7 +29742,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29789,7 +29789,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29836,7 +29836,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29883,7 +29883,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29930,7 +29930,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -29977,7 +29977,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30024,7 +30024,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30071,7 +30071,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30118,7 +30118,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30165,7 +30165,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30212,7 +30212,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30259,7 +30259,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30306,7 +30306,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30353,7 +30353,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30400,7 +30400,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30447,7 +30447,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30494,7 +30494,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30541,7 +30541,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30588,7 +30588,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30635,7 +30635,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30682,7 +30682,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30729,7 +30729,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30776,7 +30776,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30823,7 +30823,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30870,7 +30870,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30917,7 +30917,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -30964,7 +30964,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31011,7 +31011,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31058,7 +31058,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31105,7 +31105,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31152,7 +31152,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31199,7 +31199,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31246,7 +31246,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31293,7 +31293,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31340,7 +31340,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31387,7 +31387,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31434,7 +31434,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31481,7 +31481,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31528,7 +31528,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31575,7 +31575,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31622,7 +31622,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31669,7 +31669,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31716,7 +31716,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31763,7 +31763,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31810,7 +31810,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31857,7 +31857,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31904,7 +31904,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31951,7 +31951,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -31998,7 +31998,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32045,7 +32045,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32092,7 +32092,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32139,7 +32139,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32186,7 +32186,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32233,7 +32233,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32280,7 +32280,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32327,7 +32327,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32374,7 +32374,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32421,7 +32421,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32468,7 +32468,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32515,7 +32515,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32562,7 +32562,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32609,7 +32609,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32656,7 +32656,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32703,7 +32703,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32750,7 +32750,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32797,7 +32797,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32844,7 +32844,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32891,7 +32891,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32938,7 +32938,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -32985,7 +32985,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33032,7 +33032,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33079,7 +33079,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33126,7 +33126,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33173,7 +33173,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33220,7 +33220,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33267,7 +33267,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33314,7 +33314,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33361,7 +33361,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33408,7 +33408,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33455,7 +33455,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33502,7 +33502,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33549,7 +33549,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33596,7 +33596,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33643,7 +33643,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33690,7 +33690,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33737,7 +33737,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33784,7 +33784,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33831,7 +33831,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33878,7 +33878,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33925,7 +33925,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -33972,7 +33972,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34019,7 +34019,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34066,7 +34066,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34113,7 +34113,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34160,7 +34160,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34207,7 +34207,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34254,7 +34254,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34301,7 +34301,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34348,7 +34348,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34395,7 +34395,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34442,7 +34442,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34489,7 +34489,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34536,7 +34536,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34583,7 +34583,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34630,7 +34630,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34677,7 +34677,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34724,7 +34724,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34771,7 +34771,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34818,7 +34818,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34865,7 +34865,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34912,7 +34912,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -34959,7 +34959,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35006,7 +35006,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35053,7 +35053,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35100,7 +35100,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35147,7 +35147,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35194,7 +35194,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35241,7 +35241,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35288,7 +35288,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35335,7 +35335,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35382,7 +35382,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35429,7 +35429,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35476,7 +35476,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35523,7 +35523,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35570,7 +35570,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35617,7 +35617,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35664,7 +35664,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35711,7 +35711,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35758,7 +35758,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35805,7 +35805,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35852,7 +35852,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35899,7 +35899,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35946,7 +35946,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -35993,7 +35993,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36040,7 +36040,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36087,7 +36087,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36134,7 +36134,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36181,7 +36181,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36228,7 +36228,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36275,7 +36275,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36322,7 +36322,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36369,7 +36369,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36416,7 +36416,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36463,7 +36463,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36510,7 +36510,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36557,7 +36557,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36604,7 +36604,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36651,7 +36651,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36698,7 +36698,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36745,7 +36745,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36792,7 +36792,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36839,7 +36839,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36886,7 +36886,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36933,7 +36933,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -36980,7 +36980,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37027,7 +37027,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37074,7 +37074,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37121,7 +37121,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37168,7 +37168,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37215,7 +37215,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37262,7 +37262,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37309,7 +37309,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37356,7 +37356,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37403,7 +37403,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37450,7 +37450,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37497,7 +37497,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37544,7 +37544,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37591,7 +37591,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37638,7 +37638,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37685,7 +37685,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37732,7 +37732,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37779,7 +37779,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37826,7 +37826,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37873,7 +37873,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37920,7 +37920,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -37967,7 +37967,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38014,7 +38014,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38061,7 +38061,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38108,7 +38108,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38155,7 +38155,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38202,7 +38202,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38249,7 +38249,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38296,7 +38296,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38343,7 +38343,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38390,7 +38390,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38437,7 +38437,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38484,7 +38484,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38531,7 +38531,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38578,7 +38578,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38625,7 +38625,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38672,7 +38672,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38719,7 +38719,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38766,7 +38766,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38813,7 +38813,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38860,7 +38860,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38907,7 +38907,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -38954,7 +38954,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39001,7 +39001,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39048,7 +39048,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39095,7 +39095,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39142,7 +39142,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39189,7 +39189,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39236,7 +39236,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39283,7 +39283,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39330,7 +39330,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39377,7 +39377,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39424,7 +39424,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39471,7 +39471,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39518,7 +39518,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39565,7 +39565,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39612,7 +39612,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39659,7 +39659,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39706,7 +39706,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39753,7 +39753,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39800,7 +39800,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39847,7 +39847,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39894,7 +39894,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39941,7 +39941,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -39988,7 +39988,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40035,7 +40035,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40082,7 +40082,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40129,7 +40129,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40176,7 +40176,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40223,7 +40223,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40270,7 +40270,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40317,7 +40317,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40364,7 +40364,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40411,7 +40411,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40458,7 +40458,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40505,7 +40505,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40552,7 +40552,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40599,7 +40599,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40646,7 +40646,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40693,7 +40693,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40740,7 +40740,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40787,7 +40787,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40834,7 +40834,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40881,7 +40881,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40928,7 +40928,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -40975,7 +40975,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41022,7 +41022,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41069,7 +41069,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41116,7 +41116,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41163,7 +41163,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41210,7 +41210,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41257,7 +41257,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41304,7 +41304,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41351,7 +41351,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41398,7 +41398,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41445,7 +41445,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41492,7 +41492,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41539,7 +41539,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41586,7 +41586,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41633,7 +41633,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41680,7 +41680,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41727,7 +41727,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41774,7 +41774,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41821,7 +41821,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41868,7 +41868,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41915,7 +41915,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -41962,7 +41962,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42009,7 +42009,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42056,7 +42056,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42103,7 +42103,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42150,7 +42150,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42197,7 +42197,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42244,7 +42244,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42291,7 +42291,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42338,7 +42338,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42385,7 +42385,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42432,7 +42432,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42479,7 +42479,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42526,7 +42526,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42573,7 +42573,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42620,7 +42620,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42667,7 +42667,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42714,7 +42714,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42761,7 +42761,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42808,7 +42808,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42855,7 +42855,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42902,7 +42902,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42949,7 +42949,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -42996,7 +42996,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43043,7 +43043,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43090,7 +43090,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43137,7 +43137,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43184,7 +43184,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43231,7 +43231,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43278,7 +43278,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43325,7 +43325,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43372,7 +43372,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43419,7 +43419,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43466,7 +43466,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43513,7 +43513,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43560,7 +43560,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43607,7 +43607,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43654,7 +43654,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43701,7 +43701,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43748,7 +43748,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43795,7 +43795,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43842,7 +43842,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43889,7 +43889,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43936,7 +43936,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -43983,7 +43983,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44030,7 +44030,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44077,7 +44077,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44124,7 +44124,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44171,7 +44171,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44218,7 +44218,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44265,7 +44265,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44312,7 +44312,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44359,7 +44359,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44406,7 +44406,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44453,7 +44453,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44500,7 +44500,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44547,7 +44547,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44594,7 +44594,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44641,7 +44641,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44688,7 +44688,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44735,7 +44735,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44782,7 +44782,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44829,7 +44829,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44876,7 +44876,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44923,7 +44923,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -44970,7 +44970,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45017,7 +45017,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45064,7 +45064,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45111,7 +45111,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45158,7 +45158,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45205,7 +45205,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45252,7 +45252,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45299,7 +45299,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45346,7 +45346,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45393,7 +45393,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45440,7 +45440,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45487,7 +45487,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45534,7 +45534,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45581,7 +45581,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45628,7 +45628,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45675,7 +45675,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45722,7 +45722,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45769,7 +45769,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45816,7 +45816,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45863,7 +45863,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45910,7 +45910,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -45957,7 +45957,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46004,7 +46004,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46051,7 +46051,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46098,7 +46098,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46145,7 +46145,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46192,7 +46192,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46239,7 +46239,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46286,7 +46286,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46333,7 +46333,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46380,7 +46380,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46427,7 +46427,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46474,7 +46474,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46521,7 +46521,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46568,7 +46568,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46615,7 +46615,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46662,7 +46662,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46709,7 +46709,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46756,7 +46756,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46803,7 +46803,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46850,7 +46850,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46897,7 +46897,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46944,7 +46944,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -46991,7 +46991,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47038,7 +47038,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47085,7 +47085,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47132,7 +47132,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47179,7 +47179,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47226,7 +47226,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47273,7 +47273,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47320,7 +47320,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47367,7 +47367,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47414,7 +47414,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47461,7 +47461,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47508,7 +47508,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47555,7 +47555,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47602,7 +47602,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47649,7 +47649,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47696,7 +47696,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47743,7 +47743,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47790,7 +47790,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47837,7 +47837,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47884,7 +47884,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47931,7 +47931,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -47978,7 +47978,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48025,7 +48025,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48072,7 +48072,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48119,7 +48119,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48166,7 +48166,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48213,7 +48213,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48260,7 +48260,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48307,7 +48307,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48354,7 +48354,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48401,7 +48401,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48448,7 +48448,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48495,7 +48495,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48542,7 +48542,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48589,7 +48589,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48636,7 +48636,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48683,7 +48683,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48730,7 +48730,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48777,7 +48777,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48824,7 +48824,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48871,7 +48871,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48918,7 +48918,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -48965,7 +48965,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49012,7 +49012,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49059,7 +49059,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49106,7 +49106,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49153,7 +49153,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49200,7 +49200,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49247,7 +49247,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49294,7 +49294,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49341,7 +49341,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49388,7 +49388,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49435,7 +49435,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49482,7 +49482,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49529,7 +49529,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49576,7 +49576,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49623,7 +49623,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49670,7 +49670,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49717,7 +49717,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49764,7 +49764,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49811,7 +49811,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49858,7 +49858,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49905,7 +49905,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49952,7 +49952,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -49999,7 +49999,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50046,7 +50046,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50093,7 +50093,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50140,7 +50140,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50187,7 +50187,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50234,7 +50234,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50281,7 +50281,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50328,7 +50328,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50375,7 +50375,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50422,7 +50422,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50469,7 +50469,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50516,7 +50516,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50563,7 +50563,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50610,7 +50610,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50657,7 +50657,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50704,7 +50704,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50751,7 +50751,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50798,7 +50798,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50845,7 +50845,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50892,7 +50892,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50939,7 +50939,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -50986,7 +50986,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51033,7 +51033,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51080,7 +51080,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51127,7 +51127,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51174,7 +51174,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51221,7 +51221,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51268,7 +51268,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51315,7 +51315,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51362,7 +51362,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51409,7 +51409,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51456,7 +51456,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51503,7 +51503,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51550,7 +51550,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51597,7 +51597,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51644,7 +51644,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51691,7 +51691,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51738,7 +51738,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51785,7 +51785,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51832,7 +51832,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51879,7 +51879,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51926,7 +51926,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -51973,7 +51973,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52020,7 +52020,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52067,7 +52067,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52114,7 +52114,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52161,7 +52161,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52208,7 +52208,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52255,7 +52255,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52302,7 +52302,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52349,7 +52349,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52396,7 +52396,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52443,7 +52443,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52490,7 +52490,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52537,7 +52537,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52584,7 +52584,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52631,7 +52631,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52678,7 +52678,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52725,7 +52725,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52772,7 +52772,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52819,7 +52819,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52866,7 +52866,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52913,7 +52913,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -52960,7 +52960,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53007,7 +53007,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53054,7 +53054,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53101,7 +53101,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53148,7 +53148,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53195,7 +53195,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53242,7 +53242,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53289,7 +53289,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53336,7 +53336,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53383,7 +53383,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53430,7 +53430,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53477,7 +53477,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53524,7 +53524,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53571,7 +53571,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53618,7 +53618,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53665,7 +53665,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53712,7 +53712,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53759,7 +53759,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53806,7 +53806,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53853,7 +53853,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53900,7 +53900,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53947,7 +53947,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -53994,7 +53994,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54041,7 +54041,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54088,7 +54088,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54135,7 +54135,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54182,7 +54182,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54229,7 +54229,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54276,7 +54276,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54323,7 +54323,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54370,7 +54370,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54417,7 +54417,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54464,7 +54464,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54511,7 +54511,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54558,7 +54558,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54605,7 +54605,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54652,7 +54652,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54699,7 +54699,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54746,7 +54746,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54793,7 +54793,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54840,7 +54840,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54887,7 +54887,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54934,7 +54934,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -54981,7 +54981,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55028,7 +55028,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55075,7 +55075,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55122,7 +55122,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55169,7 +55169,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55216,7 +55216,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55263,7 +55263,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55310,7 +55310,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55357,7 +55357,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55404,7 +55404,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55451,7 +55451,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55498,7 +55498,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55545,7 +55545,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55592,7 +55592,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55639,7 +55639,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55686,7 +55686,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55733,7 +55733,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55780,7 +55780,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55827,7 +55827,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55874,7 +55874,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55921,7 +55921,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -55968,7 +55968,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56015,7 +56015,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56062,7 +56062,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56109,7 +56109,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56156,7 +56156,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56203,7 +56203,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56250,7 +56250,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56297,7 +56297,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56344,7 +56344,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56391,7 +56391,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56438,7 +56438,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56485,7 +56485,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56532,7 +56532,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56579,7 +56579,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56626,7 +56626,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56673,7 +56673,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56720,7 +56720,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56767,7 +56767,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56814,7 +56814,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56861,7 +56861,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56908,7 +56908,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -56955,7 +56955,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57002,7 +57002,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57049,7 +57049,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57096,7 +57096,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57143,7 +57143,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57190,7 +57190,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57237,7 +57237,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57284,7 +57284,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57331,7 +57331,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57378,7 +57378,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57425,7 +57425,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57472,7 +57472,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57519,7 +57519,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57566,7 +57566,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57613,7 +57613,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57660,7 +57660,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57707,7 +57707,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57754,7 +57754,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57801,7 +57801,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57848,7 +57848,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57895,7 +57895,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57942,7 +57942,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -57989,7 +57989,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58036,7 +58036,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58083,7 +58083,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58130,7 +58130,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58177,7 +58177,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58224,7 +58224,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58271,7 +58271,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58318,7 +58318,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58365,7 +58365,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58412,7 +58412,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58459,7 +58459,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58506,7 +58506,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58553,7 +58553,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58600,7 +58600,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58647,7 +58647,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58694,7 +58694,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58741,7 +58741,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58788,7 +58788,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58835,7 +58835,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58882,7 +58882,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58929,7 +58929,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -58976,7 +58976,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59023,7 +59023,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59070,7 +59070,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59117,7 +59117,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59164,7 +59164,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59211,7 +59211,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59258,7 +59258,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59305,7 +59305,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59352,7 +59352,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59399,7 +59399,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59446,7 +59446,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59493,7 +59493,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59540,7 +59540,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59587,7 +59587,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59634,7 +59634,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59681,7 +59681,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59728,7 +59728,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59775,7 +59775,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59822,7 +59822,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59869,7 +59869,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59916,7 +59916,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -59963,7 +59963,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60010,7 +60010,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60057,7 +60057,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60104,7 +60104,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60151,7 +60151,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60198,7 +60198,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60245,7 +60245,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60292,7 +60292,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60339,7 +60339,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60386,7 +60386,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60433,7 +60433,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60480,7 +60480,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60527,7 +60527,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60574,7 +60574,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60621,7 +60621,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60668,7 +60668,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60715,7 +60715,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60762,7 +60762,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60809,7 +60809,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60856,7 +60856,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60903,7 +60903,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60950,7 +60950,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -60997,7 +60997,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61044,7 +61044,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61091,7 +61091,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61138,7 +61138,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61185,7 +61185,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61232,7 +61232,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61279,7 +61279,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61326,7 +61326,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61373,7 +61373,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61420,7 +61420,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61467,7 +61467,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61514,7 +61514,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61561,7 +61561,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61608,7 +61608,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61655,7 +61655,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61702,7 +61702,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61749,7 +61749,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61796,7 +61796,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61843,7 +61843,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61890,7 +61890,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61937,7 +61937,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -61984,7 +61984,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62031,7 +62031,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62078,7 +62078,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62125,7 +62125,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62172,7 +62172,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62219,7 +62219,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62266,7 +62266,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62313,7 +62313,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62360,7 +62360,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62407,7 +62407,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62454,7 +62454,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62501,7 +62501,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62548,7 +62548,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62595,7 +62595,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62642,7 +62642,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62689,7 +62689,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62736,7 +62736,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62783,7 +62783,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62830,7 +62830,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62877,7 +62877,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62924,7 +62924,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -62971,7 +62971,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63018,7 +63018,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63065,7 +63065,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63112,7 +63112,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63159,7 +63159,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63206,7 +63206,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63253,7 +63253,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63300,7 +63300,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63347,7 +63347,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63394,7 +63394,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63441,7 +63441,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63488,7 +63488,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63535,7 +63535,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63582,7 +63582,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63629,7 +63629,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63676,7 +63676,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63723,7 +63723,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63770,7 +63770,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63817,7 +63817,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63864,7 +63864,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63911,7 +63911,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -63958,7 +63958,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64005,7 +64005,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64052,7 +64052,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64099,7 +64099,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64146,7 +64146,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64193,7 +64193,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64240,7 +64240,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64287,7 +64287,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64334,7 +64334,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64381,7 +64381,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64428,7 +64428,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64475,7 +64475,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64522,7 +64522,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64569,7 +64569,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64616,7 +64616,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64663,7 +64663,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64710,7 +64710,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64757,7 +64757,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64804,7 +64804,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64851,7 +64851,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64898,7 +64898,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64945,7 +64945,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -64992,7 +64992,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65039,7 +65039,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65086,7 +65086,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65133,7 +65133,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65180,7 +65180,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65227,7 +65227,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65274,7 +65274,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65321,7 +65321,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65368,7 +65368,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65415,7 +65415,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65462,7 +65462,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65509,7 +65509,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65556,7 +65556,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65603,7 +65603,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65650,7 +65650,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65697,7 +65697,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65744,7 +65744,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65791,7 +65791,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65838,7 +65838,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65885,7 +65885,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65932,7 +65932,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -65979,7 +65979,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66026,7 +66026,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66073,7 +66073,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66120,7 +66120,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66167,7 +66167,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66214,7 +66214,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66261,7 +66261,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66308,7 +66308,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66355,7 +66355,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66402,7 +66402,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66449,7 +66449,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66496,7 +66496,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66543,7 +66543,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66590,7 +66590,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66637,7 +66637,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66684,7 +66684,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66731,7 +66731,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66778,7 +66778,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66825,7 +66825,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66872,7 +66872,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66919,7 +66919,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -66966,7 +66966,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67013,7 +67013,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67060,7 +67060,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67107,7 +67107,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67154,7 +67154,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67201,7 +67201,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67248,7 +67248,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67295,7 +67295,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67342,7 +67342,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67389,7 +67389,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67436,7 +67436,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67483,7 +67483,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67530,7 +67530,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67577,7 +67577,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67624,7 +67624,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67671,7 +67671,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67718,7 +67718,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67765,7 +67765,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67812,7 +67812,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67859,7 +67859,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67906,7 +67906,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -67953,7 +67953,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68000,7 +68000,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68047,7 +68047,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68094,7 +68094,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68141,7 +68141,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68188,7 +68188,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68235,7 +68235,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68282,7 +68282,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68329,7 +68329,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68376,7 +68376,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68423,7 +68423,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68470,7 +68470,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68517,7 +68517,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68564,7 +68564,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68611,7 +68611,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68658,7 +68658,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68705,7 +68705,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68752,7 +68752,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68799,7 +68799,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68846,7 +68846,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68893,7 +68893,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68940,7 +68940,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -68987,7 +68987,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69034,7 +69034,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69081,7 +69081,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69128,7 +69128,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69175,7 +69175,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69222,7 +69222,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69269,7 +69269,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69316,7 +69316,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69363,7 +69363,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69410,7 +69410,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69457,7 +69457,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69504,7 +69504,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69551,7 +69551,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69598,7 +69598,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69645,7 +69645,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69692,7 +69692,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69739,7 +69739,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69786,7 +69786,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69833,7 +69833,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69880,7 +69880,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69927,7 +69927,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -69974,7 +69974,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70021,7 +70021,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70068,7 +70068,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70115,7 +70115,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70162,7 +70162,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70209,7 +70209,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70256,7 +70256,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70303,7 +70303,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70350,7 +70350,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70397,7 +70397,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70444,7 +70444,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70491,7 +70491,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70538,7 +70538,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70585,7 +70585,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70632,7 +70632,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70679,7 +70679,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70726,7 +70726,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70773,7 +70773,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70820,7 +70820,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70867,7 +70867,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70914,7 +70914,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -70961,7 +70961,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71008,7 +71008,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71055,7 +71055,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71102,7 +71102,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71149,7 +71149,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71196,7 +71196,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71243,7 +71243,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71290,7 +71290,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71337,7 +71337,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71384,7 +71384,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71431,7 +71431,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71478,7 +71478,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71525,7 +71525,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71572,7 +71572,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71619,7 +71619,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71666,7 +71666,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71713,7 +71713,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71760,7 +71760,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71807,7 +71807,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71854,7 +71854,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71901,7 +71901,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71948,7 +71948,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -71995,7 +71995,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72042,7 +72042,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72089,7 +72089,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72136,7 +72136,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72183,7 +72183,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72230,7 +72230,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72277,7 +72277,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72324,7 +72324,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72371,7 +72371,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72418,7 +72418,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72465,7 +72465,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72512,7 +72512,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72559,7 +72559,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72606,7 +72606,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72653,7 +72653,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72700,7 +72700,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72747,7 +72747,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72794,7 +72794,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72841,7 +72841,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72888,7 +72888,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72935,7 +72935,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -72982,7 +72982,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73029,7 +73029,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73076,7 +73076,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73123,7 +73123,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73170,7 +73170,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73217,7 +73217,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73264,7 +73264,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73311,7 +73311,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73358,7 +73358,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73405,7 +73405,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73452,7 +73452,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73499,7 +73499,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73546,7 +73546,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73593,7 +73593,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73640,7 +73640,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73687,7 +73687,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73734,7 +73734,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73781,7 +73781,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73828,7 +73828,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73875,7 +73875,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73922,7 +73922,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -73969,7 +73969,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74016,7 +74016,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74063,7 +74063,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74110,7 +74110,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74157,7 +74157,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74204,7 +74204,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74251,7 +74251,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74298,7 +74298,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74345,7 +74345,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74392,7 +74392,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74439,7 +74439,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74486,7 +74486,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74533,7 +74533,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74580,7 +74580,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74627,7 +74627,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74674,7 +74674,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74721,7 +74721,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74768,7 +74768,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74815,7 +74815,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74862,7 +74862,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74909,7 +74909,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -74956,7 +74956,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75003,7 +75003,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75050,7 +75050,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75097,7 +75097,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75144,7 +75144,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75191,7 +75191,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75238,7 +75238,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75285,7 +75285,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75332,7 +75332,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75379,7 +75379,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75426,7 +75426,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75473,7 +75473,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75520,7 +75520,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75567,7 +75567,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75614,7 +75614,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75661,7 +75661,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75708,7 +75708,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75755,7 +75755,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75802,7 +75802,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75849,7 +75849,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75896,7 +75896,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75943,7 +75943,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -75990,7 +75990,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76037,7 +76037,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76084,7 +76084,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76131,7 +76131,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76178,7 +76178,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76225,7 +76225,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76272,7 +76272,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76319,7 +76319,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76366,7 +76366,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76413,7 +76413,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76460,7 +76460,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76507,7 +76507,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76554,7 +76554,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76601,7 +76601,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76648,7 +76648,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76695,7 +76695,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76742,7 +76742,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76789,7 +76789,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76836,7 +76836,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76883,7 +76883,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76930,7 +76930,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -76977,7 +76977,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77024,7 +77024,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77071,7 +77071,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77118,7 +77118,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77165,7 +77165,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77212,7 +77212,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77259,7 +77259,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77306,7 +77306,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77353,7 +77353,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77400,7 +77400,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77447,7 +77447,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77494,7 +77494,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77541,7 +77541,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77588,7 +77588,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77635,7 +77635,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77682,7 +77682,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77729,7 +77729,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77776,7 +77776,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77823,7 +77823,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77870,7 +77870,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77917,7 +77917,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -77964,7 +77964,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78011,7 +78011,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78058,7 +78058,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78105,7 +78105,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78152,7 +78152,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78199,7 +78199,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78246,7 +78246,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78293,7 +78293,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78340,7 +78340,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78387,7 +78387,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78434,7 +78434,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78481,7 +78481,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78528,7 +78528,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78575,7 +78575,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78622,7 +78622,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78669,7 +78669,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78716,7 +78716,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78763,7 +78763,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78810,7 +78810,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78857,7 +78857,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78904,7 +78904,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78951,7 +78951,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -78998,7 +78998,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79045,7 +79045,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79092,7 +79092,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79139,7 +79139,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79186,7 +79186,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79233,7 +79233,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79280,7 +79280,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79327,7 +79327,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79374,7 +79374,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79421,7 +79421,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79468,7 +79468,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79515,7 +79515,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79562,7 +79562,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79609,7 +79609,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79656,7 +79656,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79703,7 +79703,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79750,7 +79750,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79797,7 +79797,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79844,7 +79844,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79891,7 +79891,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79938,7 +79938,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -79985,7 +79985,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80032,7 +80032,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80079,7 +80079,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80126,7 +80126,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80173,7 +80173,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80220,7 +80220,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80267,7 +80267,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80314,7 +80314,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80361,7 +80361,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80408,7 +80408,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80455,7 +80455,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80502,7 +80502,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80549,7 +80549,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80596,7 +80596,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80643,7 +80643,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80690,7 +80690,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80737,7 +80737,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80784,7 +80784,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80831,7 +80831,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80878,7 +80878,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80925,7 +80925,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -80972,7 +80972,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81019,7 +81019,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81066,7 +81066,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81113,7 +81113,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81160,7 +81160,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81207,7 +81207,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81254,7 +81254,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81301,7 +81301,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81348,7 +81348,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81395,7 +81395,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81442,7 +81442,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81489,7 +81489,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81536,7 +81536,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81583,7 +81583,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81630,7 +81630,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81677,7 +81677,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81724,7 +81724,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81771,7 +81771,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81818,7 +81818,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81865,7 +81865,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81912,7 +81912,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -81959,7 +81959,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82006,7 +82006,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82053,7 +82053,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82100,7 +82100,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82147,7 +82147,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82194,7 +82194,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82241,7 +82241,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82288,7 +82288,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82335,7 +82335,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82382,7 +82382,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82429,7 +82429,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82476,7 +82476,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82523,7 +82523,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82570,7 +82570,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82617,7 +82617,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82664,7 +82664,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82711,7 +82711,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82758,7 +82758,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82805,7 +82805,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82852,7 +82852,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82899,7 +82899,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82946,7 +82946,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -82993,7 +82993,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83040,7 +83040,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83087,7 +83087,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83134,7 +83134,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83181,7 +83181,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83228,7 +83228,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83275,7 +83275,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83322,7 +83322,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83369,7 +83369,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83416,7 +83416,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83463,7 +83463,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83510,7 +83510,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83557,7 +83557,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83604,7 +83604,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83651,7 +83651,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83698,7 +83698,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83745,7 +83745,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83792,7 +83792,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83839,7 +83839,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83886,7 +83886,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83933,7 +83933,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -83980,7 +83980,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84027,7 +84027,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84074,7 +84074,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84121,7 +84121,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84168,7 +84168,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84215,7 +84215,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84262,7 +84262,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84309,7 +84309,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84356,7 +84356,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84403,7 +84403,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84450,7 +84450,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84497,7 +84497,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84544,7 +84544,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84591,7 +84591,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84638,7 +84638,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84685,7 +84685,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84732,7 +84732,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84779,7 +84779,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84826,7 +84826,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84873,7 +84873,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84920,7 +84920,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -84967,7 +84967,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85014,7 +85014,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85061,7 +85061,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85108,7 +85108,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85155,7 +85155,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85202,7 +85202,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85249,7 +85249,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85296,7 +85296,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85343,7 +85343,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85390,7 +85390,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85437,7 +85437,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85484,7 +85484,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85531,7 +85531,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85578,7 +85578,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85625,7 +85625,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85672,7 +85672,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85719,7 +85719,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85766,7 +85766,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85813,7 +85813,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85860,7 +85860,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85907,7 +85907,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -85954,7 +85954,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86001,7 +86001,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86048,7 +86048,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86095,7 +86095,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86142,7 +86142,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86189,7 +86189,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86236,7 +86236,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86283,7 +86283,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86330,7 +86330,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86377,7 +86377,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86424,7 +86424,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86471,7 +86471,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86518,7 +86518,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86565,7 +86565,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86612,7 +86612,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86659,7 +86659,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86706,7 +86706,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86753,7 +86753,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86800,7 +86800,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86847,7 +86847,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86894,7 +86894,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86941,7 +86941,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -86988,7 +86988,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87035,7 +87035,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87082,7 +87082,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87129,7 +87129,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87176,7 +87176,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87223,7 +87223,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87270,7 +87270,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87317,7 +87317,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87364,7 +87364,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87411,7 +87411,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87458,7 +87458,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87505,7 +87505,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87552,7 +87552,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87599,7 +87599,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87646,7 +87646,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87693,7 +87693,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87740,7 +87740,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87787,7 +87787,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87834,7 +87834,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87881,7 +87881,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87928,7 +87928,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -87975,7 +87975,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88022,7 +88022,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88069,7 +88069,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88116,7 +88116,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88163,7 +88163,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88210,7 +88210,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88257,7 +88257,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88304,7 +88304,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88351,7 +88351,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88398,7 +88398,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88445,7 +88445,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88492,7 +88492,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88539,7 +88539,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88586,7 +88586,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88633,7 +88633,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88680,7 +88680,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88727,7 +88727,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88774,7 +88774,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88821,7 +88821,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88868,7 +88868,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88915,7 +88915,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -88962,7 +88962,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89009,7 +89009,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89056,7 +89056,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89103,7 +89103,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89150,7 +89150,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89197,7 +89197,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89244,7 +89244,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89291,7 +89291,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89338,7 +89338,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89385,7 +89385,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89432,7 +89432,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89479,7 +89479,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89526,7 +89526,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89573,7 +89573,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89620,7 +89620,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89667,7 +89667,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89714,7 +89714,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89761,7 +89761,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89808,7 +89808,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89855,7 +89855,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89902,7 +89902,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89949,7 +89949,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -89996,7 +89996,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90043,7 +90043,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90090,7 +90090,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90137,7 +90137,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90184,7 +90184,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90231,7 +90231,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90278,7 +90278,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90325,7 +90325,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90372,7 +90372,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90419,7 +90419,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90466,7 +90466,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90513,7 +90513,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90560,7 +90560,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90607,7 +90607,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90654,7 +90654,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90701,7 +90701,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90748,7 +90748,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90795,7 +90795,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90842,7 +90842,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90889,7 +90889,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90936,7 +90936,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -90983,7 +90983,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91030,7 +91030,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91077,7 +91077,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91124,7 +91124,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91171,7 +91171,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91218,7 +91218,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91265,7 +91265,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91312,7 +91312,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91359,7 +91359,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91406,7 +91406,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91453,7 +91453,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91500,7 +91500,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91547,7 +91547,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91594,7 +91594,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91641,7 +91641,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91688,7 +91688,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91735,7 +91735,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91782,7 +91782,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91829,7 +91829,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91876,7 +91876,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91923,7 +91923,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -91970,7 +91970,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92017,7 +92017,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92064,7 +92064,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92111,7 +92111,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92158,7 +92158,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92205,7 +92205,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92252,7 +92252,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92299,7 +92299,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92346,7 +92346,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92393,7 +92393,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92440,7 +92440,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92487,7 +92487,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92534,7 +92534,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92581,7 +92581,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92628,7 +92628,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92675,7 +92675,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92722,7 +92722,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92769,7 +92769,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92816,7 +92816,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92863,7 +92863,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92910,7 +92910,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -92957,7 +92957,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93004,7 +93004,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93051,7 +93051,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93098,7 +93098,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93145,7 +93145,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93192,7 +93192,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93239,7 +93239,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93286,7 +93286,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93333,7 +93333,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93380,7 +93380,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93427,7 +93427,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93474,7 +93474,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93521,7 +93521,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93568,7 +93568,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93615,7 +93615,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93662,7 +93662,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93709,7 +93709,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93756,7 +93756,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93803,7 +93803,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93850,7 +93850,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93897,7 +93897,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93944,7 +93944,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -93991,7 +93991,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94038,7 +94038,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94085,7 +94085,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94132,7 +94132,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94179,7 +94179,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94226,7 +94226,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94273,7 +94273,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94320,7 +94320,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94367,7 +94367,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94414,7 +94414,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94461,7 +94461,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94508,7 +94508,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94555,7 +94555,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94602,7 +94602,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94649,7 +94649,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94696,7 +94696,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94743,7 +94743,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94790,7 +94790,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94837,7 +94837,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94884,7 +94884,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94931,7 +94931,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -94978,7 +94978,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95025,7 +95025,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95072,7 +95072,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95119,7 +95119,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95166,7 +95166,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95213,7 +95213,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95260,7 +95260,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95307,7 +95307,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95354,7 +95354,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95401,7 +95401,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95448,7 +95448,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95495,7 +95495,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95542,7 +95542,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95589,7 +95589,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95636,7 +95636,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95683,7 +95683,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95730,7 +95730,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95777,7 +95777,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95824,7 +95824,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95871,7 +95871,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95918,7 +95918,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -95965,7 +95965,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96012,7 +96012,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96059,7 +96059,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96106,7 +96106,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96153,7 +96153,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96200,7 +96200,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96247,7 +96247,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96294,7 +96294,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96341,7 +96341,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96388,7 +96388,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96435,7 +96435,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96482,7 +96482,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96529,7 +96529,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96576,7 +96576,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96623,7 +96623,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96670,7 +96670,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96717,7 +96717,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96764,7 +96764,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96811,7 +96811,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96858,7 +96858,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96905,7 +96905,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96952,7 +96952,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -96999,7 +96999,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97046,7 +97046,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97093,7 +97093,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97140,7 +97140,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97187,7 +97187,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97234,7 +97234,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97281,7 +97281,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97328,7 +97328,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97375,7 +97375,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97422,7 +97422,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97469,7 +97469,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97516,7 +97516,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97563,7 +97563,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97610,7 +97610,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97657,7 +97657,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97704,7 +97704,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97751,7 +97751,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97798,7 +97798,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97845,7 +97845,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97892,7 +97892,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97939,7 +97939,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -97986,7 +97986,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98033,7 +98033,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98080,7 +98080,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98127,7 +98127,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98174,7 +98174,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98221,7 +98221,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98268,7 +98268,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98315,7 +98315,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98362,7 +98362,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98409,7 +98409,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98456,7 +98456,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98503,7 +98503,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98550,7 +98550,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98597,7 +98597,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98644,7 +98644,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98691,7 +98691,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98738,7 +98738,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98785,7 +98785,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98832,7 +98832,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98879,7 +98879,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98926,7 +98926,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -98973,7 +98973,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99020,7 +99020,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99067,7 +99067,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99114,7 +99114,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99161,7 +99161,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99208,7 +99208,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99255,7 +99255,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99302,7 +99302,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99349,7 +99349,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99396,7 +99396,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99443,7 +99443,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99490,7 +99490,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99537,7 +99537,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99584,7 +99584,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99631,7 +99631,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99678,7 +99678,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99725,7 +99725,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99772,7 +99772,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99819,7 +99819,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99866,7 +99866,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99913,7 +99913,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -99960,7 +99960,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100007,7 +100007,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100054,7 +100054,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100101,7 +100101,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100148,7 +100148,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100195,7 +100195,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100242,7 +100242,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100289,7 +100289,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100336,7 +100336,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100383,7 +100383,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100430,7 +100430,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100477,7 +100477,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100524,7 +100524,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100571,7 +100571,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100618,7 +100618,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100665,7 +100665,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100712,7 +100712,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100759,7 +100759,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100806,7 +100806,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100853,7 +100853,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100900,7 +100900,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100947,7 +100947,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -100994,7 +100994,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101041,7 +101041,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101088,7 +101088,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101135,7 +101135,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101182,7 +101182,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101229,7 +101229,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101276,7 +101276,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101323,7 +101323,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101370,7 +101370,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101417,7 +101417,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101464,7 +101464,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101511,7 +101511,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101558,7 +101558,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101605,7 +101605,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101652,7 +101652,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101699,7 +101699,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101746,7 +101746,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101793,7 +101793,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101840,7 +101840,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101887,7 +101887,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101934,7 +101934,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -101981,7 +101981,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102028,7 +102028,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102075,7 +102075,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102122,7 +102122,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102169,7 +102169,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102216,7 +102216,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102263,7 +102263,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102310,7 +102310,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102357,7 +102357,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102404,7 +102404,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102451,7 +102451,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102498,7 +102498,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102545,7 +102545,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102592,7 +102592,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102639,7 +102639,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102686,7 +102686,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102733,7 +102733,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102780,7 +102780,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102827,7 +102827,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102874,7 +102874,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102921,7 +102921,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -102968,7 +102968,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103015,7 +103015,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103062,7 +103062,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103109,7 +103109,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103156,7 +103156,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103203,7 +103203,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103250,7 +103250,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103297,7 +103297,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103344,7 +103344,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103391,7 +103391,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103438,7 +103438,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103485,7 +103485,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103532,7 +103532,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103579,7 +103579,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103626,7 +103626,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103673,7 +103673,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103720,7 +103720,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103767,7 +103767,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103814,7 +103814,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103861,7 +103861,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103908,7 +103908,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -103955,7 +103955,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104002,7 +104002,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104049,7 +104049,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104096,7 +104096,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104143,7 +104143,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104190,7 +104190,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104237,7 +104237,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104284,7 +104284,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104331,7 +104331,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104378,7 +104378,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104425,7 +104425,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104472,7 +104472,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104519,7 +104519,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104566,7 +104566,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104613,7 +104613,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104660,7 +104660,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104707,7 +104707,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104754,7 +104754,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104801,7 +104801,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104848,7 +104848,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104895,7 +104895,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104942,7 +104942,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -104989,7 +104989,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105036,7 +105036,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105083,7 +105083,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105130,7 +105130,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105177,7 +105177,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105224,7 +105224,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105271,7 +105271,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105318,7 +105318,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105365,7 +105365,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105412,7 +105412,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105459,7 +105459,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105506,7 +105506,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105553,7 +105553,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105600,7 +105600,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105647,7 +105647,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105694,7 +105694,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105741,7 +105741,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105788,7 +105788,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105835,7 +105835,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105882,7 +105882,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105929,7 +105929,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -105976,7 +105976,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106023,7 +106023,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106070,7 +106070,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106117,7 +106117,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106164,7 +106164,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106211,7 +106211,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106258,7 +106258,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106305,7 +106305,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106352,7 +106352,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106399,7 +106399,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106446,7 +106446,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106493,7 +106493,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106540,7 +106540,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106587,7 +106587,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106634,7 +106634,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106681,7 +106681,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106728,7 +106728,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106775,7 +106775,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106822,7 +106822,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106869,7 +106869,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106916,7 +106916,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -106963,7 +106963,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107010,7 +107010,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107057,7 +107057,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107104,7 +107104,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107151,7 +107151,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107198,7 +107198,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107245,7 +107245,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107292,7 +107292,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107339,7 +107339,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107386,7 +107386,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107433,7 +107433,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107480,7 +107480,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107527,7 +107527,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107574,7 +107574,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107621,7 +107621,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107668,7 +107668,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107715,7 +107715,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107762,7 +107762,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107809,7 +107809,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107856,7 +107856,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107903,7 +107903,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107950,7 +107950,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -107997,7 +107997,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108044,7 +108044,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108091,7 +108091,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108138,7 +108138,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108185,7 +108185,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108232,7 +108232,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108279,7 +108279,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108326,7 +108326,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108373,7 +108373,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108420,7 +108420,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108467,7 +108467,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108514,7 +108514,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108561,7 +108561,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108608,7 +108608,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108655,7 +108655,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108702,7 +108702,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108749,7 +108749,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108796,7 +108796,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108843,7 +108843,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108890,7 +108890,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108937,7 +108937,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -108984,7 +108984,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109031,7 +109031,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109078,7 +109078,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109125,7 +109125,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109172,7 +109172,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109219,7 +109219,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109266,7 +109266,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109313,7 +109313,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109360,7 +109360,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109407,7 +109407,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109454,7 +109454,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109501,7 +109501,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109548,7 +109548,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109595,7 +109595,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109642,7 +109642,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109689,7 +109689,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109736,7 +109736,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109783,7 +109783,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109830,7 +109830,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109877,7 +109877,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109924,7 +109924,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -109971,7 +109971,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110018,7 +110018,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110065,7 +110065,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110112,7 +110112,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110159,7 +110159,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110206,7 +110206,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110253,7 +110253,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110300,7 +110300,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110347,7 +110347,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110394,7 +110394,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110441,7 +110441,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110488,7 +110488,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110535,7 +110535,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110582,7 +110582,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110629,7 +110629,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110676,7 +110676,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110723,7 +110723,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110770,7 +110770,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110817,7 +110817,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110864,7 +110864,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110911,7 +110911,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -110958,7 +110958,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111005,7 +111005,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111052,7 +111052,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111099,7 +111099,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111146,7 +111146,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111193,7 +111193,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111240,7 +111240,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111287,7 +111287,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111334,7 +111334,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111381,7 +111381,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111428,7 +111428,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111475,7 +111475,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111522,7 +111522,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111569,7 +111569,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111616,7 +111616,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111663,7 +111663,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111710,7 +111710,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111757,7 +111757,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111804,7 +111804,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111851,7 +111851,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111898,7 +111898,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111945,7 +111945,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -111992,7 +111992,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112039,7 +112039,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112086,7 +112086,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112133,7 +112133,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112180,7 +112180,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112227,7 +112227,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112274,7 +112274,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112321,7 +112321,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112368,7 +112368,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112415,7 +112415,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112462,7 +112462,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112509,7 +112509,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112556,7 +112556,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112603,7 +112603,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112650,7 +112650,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112697,7 +112697,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112744,7 +112744,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112791,7 +112791,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112838,7 +112838,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112885,7 +112885,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112932,7 +112932,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -112979,7 +112979,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113026,7 +113026,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113073,7 +113073,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113120,7 +113120,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113167,7 +113167,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113214,7 +113214,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113261,7 +113261,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113308,7 +113308,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113355,7 +113355,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113402,7 +113402,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113449,7 +113449,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113496,7 +113496,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113543,7 +113543,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113590,7 +113590,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113637,7 +113637,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113684,7 +113684,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113731,7 +113731,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113778,7 +113778,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113825,7 +113825,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113872,7 +113872,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113919,7 +113919,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -113966,7 +113966,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114013,7 +114013,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114060,7 +114060,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114107,7 +114107,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114154,7 +114154,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114201,7 +114201,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114248,7 +114248,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114295,7 +114295,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114342,7 +114342,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114389,7 +114389,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114436,7 +114436,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114483,7 +114483,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114530,7 +114530,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114577,7 +114577,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114624,7 +114624,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114671,7 +114671,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114718,7 +114718,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114765,7 +114765,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114812,7 +114812,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114859,7 +114859,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114906,7 +114906,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -114953,7 +114953,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115000,7 +115000,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115047,7 +115047,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115094,7 +115094,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115141,7 +115141,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115188,7 +115188,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115235,7 +115235,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115282,7 +115282,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115329,7 +115329,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115376,7 +115376,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115423,7 +115423,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115470,7 +115470,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115517,7 +115517,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115564,7 +115564,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115611,7 +115611,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115658,7 +115658,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115705,7 +115705,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115752,7 +115752,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115799,7 +115799,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115846,7 +115846,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115893,7 +115893,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115940,7 +115940,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -115987,7 +115987,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116034,7 +116034,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116081,7 +116081,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116128,7 +116128,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116175,7 +116175,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116222,7 +116222,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116269,7 +116269,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116316,7 +116316,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116363,7 +116363,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116410,7 +116410,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116457,7 +116457,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116504,7 +116504,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116551,7 +116551,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116598,7 +116598,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116645,7 +116645,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116692,7 +116692,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116739,7 +116739,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116786,7 +116786,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116833,7 +116833,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116880,7 +116880,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116927,7 +116927,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -116974,7 +116974,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117021,7 +117021,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117068,7 +117068,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117115,7 +117115,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117162,7 +117162,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117209,7 +117209,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117256,7 +117256,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117303,7 +117303,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117350,7 +117350,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117397,7 +117397,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117444,7 +117444,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117491,7 +117491,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117538,7 +117538,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117585,7 +117585,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117632,7 +117632,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117679,7 +117679,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117726,7 +117726,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117773,7 +117773,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117820,7 +117820,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117867,7 +117867,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117914,7 +117914,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -117961,7 +117961,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118008,7 +118008,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118055,7 +118055,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118102,7 +118102,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118149,7 +118149,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118196,7 +118196,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118243,7 +118243,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118290,7 +118290,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118337,7 +118337,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118384,7 +118384,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118431,7 +118431,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118478,7 +118478,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118525,7 +118525,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118572,7 +118572,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118619,7 +118619,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118666,7 +118666,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118713,7 +118713,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118760,7 +118760,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118807,7 +118807,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118854,7 +118854,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118901,7 +118901,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118948,7 +118948,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -118995,7 +118995,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119042,7 +119042,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119089,7 +119089,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119136,7 +119136,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119183,7 +119183,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119230,7 +119230,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119277,7 +119277,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119324,7 +119324,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119371,7 +119371,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119418,7 +119418,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119465,7 +119465,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119512,7 +119512,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119559,7 +119559,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119606,7 +119606,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119653,7 +119653,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119700,7 +119700,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119747,7 +119747,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119794,7 +119794,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119841,7 +119841,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119888,7 +119888,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119935,7 +119935,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -119982,7 +119982,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120029,7 +120029,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120076,7 +120076,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120123,7 +120123,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120170,7 +120170,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120217,7 +120217,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120264,7 +120264,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120311,7 +120311,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120358,7 +120358,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120405,7 +120405,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120452,7 +120452,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120499,7 +120499,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120546,7 +120546,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120593,7 +120593,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120640,7 +120640,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120687,7 +120687,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120734,7 +120734,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120781,7 +120781,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120828,7 +120828,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120875,7 +120875,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120922,7 +120922,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -120969,7 +120969,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121016,7 +121016,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121063,7 +121063,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121110,7 +121110,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121157,7 +121157,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121204,7 +121204,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121251,7 +121251,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121298,7 +121298,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121345,7 +121345,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121392,7 +121392,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121439,7 +121439,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121486,7 +121486,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121533,7 +121533,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121580,7 +121580,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121627,7 +121627,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121674,7 +121674,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121721,7 +121721,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121768,7 +121768,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121815,7 +121815,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121862,7 +121862,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121909,7 +121909,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -121956,7 +121956,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122003,7 +122003,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122050,7 +122050,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122097,7 +122097,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122144,7 +122144,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122191,7 +122191,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122238,7 +122238,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122285,7 +122285,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122332,7 +122332,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122379,7 +122379,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122426,7 +122426,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122473,7 +122473,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122520,7 +122520,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122567,7 +122567,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122614,7 +122614,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122661,7 +122661,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122708,7 +122708,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122755,7 +122755,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122802,7 +122802,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122849,7 +122849,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122896,7 +122896,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122943,7 +122943,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -122990,7 +122990,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123037,7 +123037,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123084,7 +123084,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123131,7 +123131,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123178,7 +123178,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123225,7 +123225,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123272,7 +123272,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123319,7 +123319,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123366,7 +123366,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123413,7 +123413,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123460,7 +123460,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123507,7 +123507,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123554,7 +123554,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123601,7 +123601,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123648,7 +123648,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123695,7 +123695,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123742,7 +123742,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123789,7 +123789,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123836,7 +123836,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123883,7 +123883,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123930,7 +123930,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -123977,7 +123977,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124024,7 +124024,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124071,7 +124071,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124118,7 +124118,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124165,7 +124165,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124212,7 +124212,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124259,7 +124259,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124306,7 +124306,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124353,7 +124353,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124400,7 +124400,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124447,7 +124447,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124494,7 +124494,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124541,7 +124541,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124588,7 +124588,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124635,7 +124635,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124682,7 +124682,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124729,7 +124729,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124776,7 +124776,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124823,7 +124823,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124870,7 +124870,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124917,7 +124917,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -124964,7 +124964,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125011,7 +125011,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125058,7 +125058,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125105,7 +125105,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125152,7 +125152,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125199,7 +125199,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125246,7 +125246,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125293,7 +125293,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125340,7 +125340,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125387,7 +125387,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125434,7 +125434,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125481,7 +125481,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125528,7 +125528,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125575,7 +125575,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125622,7 +125622,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125669,7 +125669,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125716,7 +125716,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125763,7 +125763,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125810,7 +125810,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125857,7 +125857,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125904,7 +125904,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125951,7 +125951,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -125998,7 +125998,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126045,7 +126045,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126092,7 +126092,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126139,7 +126139,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126186,7 +126186,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126233,7 +126233,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126280,7 +126280,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126327,7 +126327,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126374,7 +126374,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126421,7 +126421,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126468,7 +126468,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126515,7 +126515,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126562,7 +126562,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126609,7 +126609,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126656,7 +126656,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126703,7 +126703,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126750,7 +126750,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126797,7 +126797,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126844,7 +126844,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126891,7 +126891,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126938,7 +126938,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -126985,7 +126985,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127032,7 +127032,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127079,7 +127079,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127126,7 +127126,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127173,7 +127173,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127220,7 +127220,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127267,7 +127267,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127314,7 +127314,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127361,7 +127361,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127408,7 +127408,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127455,7 +127455,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127502,7 +127502,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127549,7 +127549,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127596,7 +127596,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127643,7 +127643,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127690,7 +127690,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127737,7 +127737,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127784,7 +127784,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127831,7 +127831,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127878,7 +127878,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127925,7 +127925,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -127972,7 +127972,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128019,7 +128019,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128066,7 +128066,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128113,7 +128113,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128160,7 +128160,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128207,7 +128207,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128254,7 +128254,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128301,7 +128301,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128348,7 +128348,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128395,7 +128395,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128442,7 +128442,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128489,7 +128489,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128536,7 +128536,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128583,7 +128583,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128630,7 +128630,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128677,7 +128677,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128724,7 +128724,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128771,7 +128771,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128818,7 +128818,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128865,7 +128865,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128912,7 +128912,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -128959,7 +128959,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129006,7 +129006,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129053,7 +129053,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129100,7 +129100,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129147,7 +129147,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129194,7 +129194,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129241,7 +129241,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129288,7 +129288,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129335,7 +129335,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129382,7 +129382,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129429,7 +129429,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129476,7 +129476,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129523,7 +129523,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129570,7 +129570,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129617,7 +129617,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129664,7 +129664,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129711,7 +129711,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129758,7 +129758,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129805,7 +129805,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129852,7 +129852,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129899,7 +129899,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129946,7 +129946,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -129993,7 +129993,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130040,7 +130040,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130087,7 +130087,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130134,7 +130134,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130181,7 +130181,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130228,7 +130228,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130275,7 +130275,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130322,7 +130322,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130369,7 +130369,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130416,7 +130416,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130463,7 +130463,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130510,7 +130510,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130557,7 +130557,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130604,7 +130604,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130651,7 +130651,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130698,7 +130698,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130745,7 +130745,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130792,7 +130792,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130839,7 +130839,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130886,7 +130886,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130933,7 +130933,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -130980,7 +130980,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131027,7 +131027,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131074,7 +131074,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131121,7 +131121,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131168,7 +131168,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131215,7 +131215,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131262,7 +131262,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131309,7 +131309,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131356,7 +131356,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131403,7 +131403,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131450,7 +131450,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131497,7 +131497,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131544,7 +131544,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131591,7 +131591,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131638,7 +131638,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131685,7 +131685,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131732,7 +131732,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131779,7 +131779,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131826,7 +131826,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131873,7 +131873,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131920,7 +131920,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -131967,7 +131967,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132014,7 +132014,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132061,7 +132061,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132108,7 +132108,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132155,7 +132155,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132202,7 +132202,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132249,7 +132249,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132296,7 +132296,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132343,7 +132343,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132390,7 +132390,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132437,7 +132437,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132484,7 +132484,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132531,7 +132531,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132578,7 +132578,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132625,7 +132625,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132672,7 +132672,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132719,7 +132719,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132766,7 +132766,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132813,7 +132813,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132860,7 +132860,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132907,7 +132907,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -132954,7 +132954,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133001,7 +133001,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133048,7 +133048,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133095,7 +133095,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133142,7 +133142,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133189,7 +133189,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133236,7 +133236,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133283,7 +133283,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133330,7 +133330,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133377,7 +133377,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133424,7 +133424,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133471,7 +133471,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133518,7 +133518,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133565,7 +133565,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133612,7 +133612,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133659,7 +133659,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133706,7 +133706,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133753,7 +133753,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133800,7 +133800,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133847,7 +133847,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133894,7 +133894,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133941,7 +133941,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -133988,7 +133988,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134035,7 +134035,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134082,7 +134082,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134129,7 +134129,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134176,7 +134176,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134223,7 +134223,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134270,7 +134270,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134317,7 +134317,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134364,7 +134364,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134411,7 +134411,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134458,7 +134458,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134505,7 +134505,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134552,7 +134552,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134599,7 +134599,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134646,7 +134646,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134693,7 +134693,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134740,7 +134740,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134787,7 +134787,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134834,7 +134834,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134881,7 +134881,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134928,7 +134928,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -134975,7 +134975,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135022,7 +135022,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135069,7 +135069,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135116,7 +135116,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135163,7 +135163,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135210,7 +135210,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135257,7 +135257,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135304,7 +135304,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135351,7 +135351,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135398,7 +135398,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135445,7 +135445,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135492,7 +135492,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135539,7 +135539,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135586,7 +135586,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135633,7 +135633,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135680,7 +135680,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135727,7 +135727,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135774,7 +135774,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135821,7 +135821,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135868,7 +135868,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135915,7 +135915,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -135962,7 +135962,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136009,7 +136009,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136056,7 +136056,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136103,7 +136103,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136150,7 +136150,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136197,7 +136197,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136244,7 +136244,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136291,7 +136291,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136338,7 +136338,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136385,7 +136385,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136432,7 +136432,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136479,7 +136479,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136526,7 +136526,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136573,7 +136573,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136620,7 +136620,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136667,7 +136667,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136714,7 +136714,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136761,7 +136761,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136808,7 +136808,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136855,7 +136855,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136902,7 +136902,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136949,7 +136949,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -136996,7 +136996,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137043,7 +137043,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137090,7 +137090,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137137,7 +137137,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137184,7 +137184,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137231,7 +137231,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137278,7 +137278,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137325,7 +137325,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137372,7 +137372,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137419,7 +137419,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137466,7 +137466,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137513,7 +137513,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137560,7 +137560,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137607,7 +137607,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137654,7 +137654,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137701,7 +137701,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137748,7 +137748,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137795,7 +137795,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137842,7 +137842,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137889,7 +137889,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137936,7 +137936,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -137983,7 +137983,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138030,7 +138030,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138077,7 +138077,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138124,7 +138124,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138171,7 +138171,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138218,7 +138218,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138265,7 +138265,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138312,7 +138312,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138359,7 +138359,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138406,7 +138406,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138453,7 +138453,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138500,7 +138500,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138547,7 +138547,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138594,7 +138594,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138641,7 +138641,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138688,7 +138688,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138735,7 +138735,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138782,7 +138782,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138829,7 +138829,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138876,7 +138876,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138923,7 +138923,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -138970,7 +138970,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139017,7 +139017,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139064,7 +139064,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139111,7 +139111,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139158,7 +139158,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139205,7 +139205,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139252,7 +139252,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139299,7 +139299,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139346,7 +139346,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139393,7 +139393,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139440,7 +139440,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139487,7 +139487,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139534,7 +139534,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139581,7 +139581,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139628,7 +139628,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139675,7 +139675,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139722,7 +139722,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139769,7 +139769,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139816,7 +139816,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139863,7 +139863,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139910,7 +139910,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -139957,7 +139957,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140004,7 +140004,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140051,7 +140051,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140098,7 +140098,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140145,7 +140145,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140192,7 +140192,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140239,7 +140239,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140286,7 +140286,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140333,7 +140333,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140380,7 +140380,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140427,7 +140427,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140474,7 +140474,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140521,7 +140521,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140568,7 +140568,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140615,7 +140615,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140662,7 +140662,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140709,7 +140709,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140756,7 +140756,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140803,7 +140803,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140850,7 +140850,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140897,7 +140897,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140944,7 +140944,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -140991,7 +140991,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141038,7 +141038,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141085,7 +141085,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141132,7 +141132,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141179,7 +141179,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141226,7 +141226,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141273,7 +141273,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141320,7 +141320,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141367,7 +141367,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141414,7 +141414,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141461,7 +141461,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141508,7 +141508,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141555,7 +141555,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141602,7 +141602,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141649,7 +141649,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141696,7 +141696,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141743,7 +141743,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141790,7 +141790,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141837,7 +141837,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141884,7 +141884,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141931,7 +141931,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -141978,7 +141978,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142025,7 +142025,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142072,7 +142072,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142119,7 +142119,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142166,7 +142166,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142213,7 +142213,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142260,7 +142260,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142307,7 +142307,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142354,7 +142354,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142401,7 +142401,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142448,7 +142448,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142495,7 +142495,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142542,7 +142542,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142589,7 +142589,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142636,7 +142636,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142683,7 +142683,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142730,7 +142730,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142777,7 +142777,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142824,7 +142824,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142871,7 +142871,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142918,7 +142918,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -142965,7 +142965,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143012,7 +143012,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143059,7 +143059,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143106,7 +143106,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143153,7 +143153,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143200,7 +143200,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143247,7 +143247,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143294,7 +143294,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143341,7 +143341,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143388,7 +143388,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143435,7 +143435,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143482,7 +143482,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143529,7 +143529,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143576,7 +143576,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143623,7 +143623,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143670,7 +143670,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143717,7 +143717,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143764,7 +143764,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143811,7 +143811,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143858,7 +143858,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143905,7 +143905,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143952,7 +143952,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -143999,7 +143999,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144046,7 +144046,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144093,7 +144093,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144140,7 +144140,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144187,7 +144187,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144234,7 +144234,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144281,7 +144281,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144328,7 +144328,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144375,7 +144375,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144422,7 +144422,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144469,7 +144469,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144516,7 +144516,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144563,7 +144563,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144610,7 +144610,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144657,7 +144657,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144704,7 +144704,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144751,7 +144751,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144798,7 +144798,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144845,7 +144845,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144892,7 +144892,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144939,7 +144939,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -144986,7 +144986,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145033,7 +145033,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145080,7 +145080,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145127,7 +145127,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145174,7 +145174,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145221,7 +145221,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145268,7 +145268,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145315,7 +145315,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145362,7 +145362,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145409,7 +145409,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145456,7 +145456,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145503,7 +145503,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145550,7 +145550,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145597,7 +145597,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145644,7 +145644,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145691,7 +145691,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145738,7 +145738,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145785,7 +145785,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145832,7 +145832,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145879,7 +145879,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145926,7 +145926,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -145973,7 +145973,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146020,7 +146020,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146067,7 +146067,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146114,7 +146114,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146161,7 +146161,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146208,7 +146208,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146255,7 +146255,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146302,7 +146302,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146349,7 +146349,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146396,7 +146396,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146443,7 +146443,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146490,7 +146490,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146537,7 +146537,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146584,7 +146584,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146631,7 +146631,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146678,7 +146678,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146725,7 +146725,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146772,7 +146772,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146819,7 +146819,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146866,7 +146866,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146913,7 +146913,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -146960,7 +146960,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147007,7 +147007,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147054,7 +147054,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147101,7 +147101,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147148,7 +147148,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147195,7 +147195,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147242,7 +147242,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147289,7 +147289,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147336,7 +147336,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147383,7 +147383,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147430,7 +147430,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147477,7 +147477,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147524,7 +147524,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147571,7 +147571,7 @@ SUITE(INTEGRATOR){
     double kx = k(1);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147618,7 +147618,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147665,7 +147665,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147712,7 +147712,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147759,7 +147759,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147806,7 +147806,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147853,7 +147853,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147900,7 +147900,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147947,7 +147947,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -147994,7 +147994,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148041,7 +148041,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148088,7 +148088,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148135,7 +148135,7 @@ SUITE(INTEGRATOR){
     double kx = k(2);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148182,7 +148182,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148229,7 +148229,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148276,7 +148276,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148323,7 +148323,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148370,7 +148370,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148417,7 +148417,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148464,7 +148464,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148511,7 +148511,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148558,7 +148558,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148605,7 +148605,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148652,7 +148652,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148699,7 +148699,7 @@ SUITE(INTEGRATOR){
     double kx = k(3);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148746,7 +148746,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148793,7 +148793,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148840,7 +148840,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148887,7 +148887,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148934,7 +148934,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -148981,7 +148981,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149028,7 +149028,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149075,7 +149075,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149122,7 +149122,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149169,7 +149169,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149216,7 +149216,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149263,7 +149263,7 @@ SUITE(INTEGRATOR){
     double kx = k(5);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149310,7 +149310,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149357,7 +149357,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149404,7 +149404,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149451,7 +149451,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149498,7 +149498,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149545,7 +149545,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149592,7 +149592,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149639,7 +149639,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149686,7 +149686,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149733,7 +149733,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149780,7 +149780,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149827,7 +149827,7 @@ SUITE(INTEGRATOR){
     double kx = k(6);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149874,7 +149874,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149921,7 +149921,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(1);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -149968,7 +149968,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -150015,7 +150015,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(2);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -150062,7 +150062,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -150109,7 +150109,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(3);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -150156,7 +150156,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -150203,7 +150203,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(5);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -150250,7 +150250,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -150297,7 +150297,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(6);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -150344,7 +150344,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());
@@ -150391,7 +150391,7 @@ SUITE(INTEGRATOR){
     double kx = k(7);
     double ky = k(7);
 
-    Grating S(&integrator, {kx, ky}, wd, C);
+    FullFieldGrating S(&integrator, {kx, ky}, wd, C);
     //Spatiotemporal signal
     S.computeSpatiotemporal();
     g.set_real(S.spatioTemporal());

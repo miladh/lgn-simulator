@@ -118,13 +118,14 @@ def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.inferno,
 
     def init():
         for i in range(num_subplots):
-            imshowPlots[i].set_data(data[i][0][1,:,:])
+            imshowPlots[i].set_data(data[i][0][0,:,:])
         ttl.set_text("")
         return imshowPlots, ttl
 
     def animate(j):
         for i in range(num_subplots):
             imshowPlots[i].set_data(data[i][0][j,:,:])
+            # imshowPlots[i].autoscale()
         t = j*dt
         ttl.set_text("Time = " + str('%.2f' % (t,)) + "s")
         return imshowPlots, ttl
@@ -153,8 +154,10 @@ def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.inferno,
             ax = plt.subplot2grid((num_rows, num_cols),(i, j))
             simpleaxis(ax)
             ax.set_title(data[k][1])
+
             imshowPlots.append(ax.imshow(data[k][0][0,:,:], cmap=cmap,
-            interpolation="None"))
+            interpolation="None", vmax=1))
+
             if(colorbar):
                 divider = make_axes_locatable(ax)
                 cax = divider.append_axes("right", size="5%", pad=0.05)
@@ -197,16 +200,17 @@ if __name__ == "__main__":
      [exp.stimulus["spatioTemporal"], "Stimulus"]
     ,[exp.ganglion["response"]["spatioTemporal"], "Ganglion cell response"]
     ,[exp.ganglion["impulseResponse"]["spatioTemporal"], "Ganglion cell impulse response"]
-    ,[exp.interneuron["response"]["spatioTemporal"], "Interneuron"]
-    ,[exp.interneuron["impulseResponse"]["spatioTemporal"], "Interneuron"]
-    ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
-    ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell impulse response"]
-    ,[exp.cortical["response"]["spatioTemporal"], "Cortical cell response"]
-    ,[exp.cortical["impulseResponse"]["spatioTemporal"], "Cortical impulse response"]
+    # ,[exp.interneuron["response"]["spatioTemporal"], "Interneuron"]
+    # ,[exp.interneuron["impulseResponse"]["spatioTemporal"], "Interneuron"]
+    # ,[exp.relay["response"]["spatioTemporal"], "Relay cell response"]
+    # ,[exp.relay["impulseResponse"]["spatioTemporal"], "Relay cell impulse response"]
+    # ,[exp.cortical["response"]["spatioTemporal"], "Cortical cell response"]
+    # ,[exp.cortical["impulseResponse"]["spatioTemporal"], "Cortical impulse response"]
     ]
 
+    # print exp.ganglion["impulseResponse"]["spatioTemporal"][0,:,:].max()
+
     # raster([[spikeTrain, "Ganglion"], [spikeTrain2, "Relay"]] )
-    print exp.dt*2**8
     animateImshowPlots(data,exp.dt, colorbar = True, save_animation = False, animation_name = "rat")
     # animate3dPlots(data, resolution = 3)
     plt.show()

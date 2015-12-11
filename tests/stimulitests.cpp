@@ -1,5 +1,5 @@
 #include <unittest++/UnitTest++.h>
-#include "stimuli/patchgrating.h"
+#include "stimuli/grating/circlemaskgrating.h"
 
 
 SUITE(STIMULI){
