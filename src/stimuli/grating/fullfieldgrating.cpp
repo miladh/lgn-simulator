@@ -2,7 +2,7 @@
 
 FullFieldGrating::FullFieldGrating(Integrator *integrator,
                                    vec2 kd, double wd, double contrast)
-    : Grating(integrator, kd, wd, contrast, "None", 0)
+    : Grating(integrator, kd, wd, contrast, 0)
 {
 
 }

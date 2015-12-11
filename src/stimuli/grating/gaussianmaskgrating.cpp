@@ -2,7 +2,7 @@
 
 GaussianMaskGrating::GaussianMaskGrating(Integrator *integrator,
                                          vec2 kd, double wd, double contrast, double maskSize)
-    : Grating(integrator, kd, wd, contrast, "gauss", maskSize)
+    : Grating(integrator, kd, wd, contrast, maskSize)
 {
 }
 

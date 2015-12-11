@@ -5,7 +5,7 @@
 #include "gaussianmaskgrating.h"
 
 Grating::Grating(Integrator *integrator,
-                 vec2 kd, double wd, double contrast, string mask, double maskSize)
+                 vec2 kd, double wd, double contrast, double maskSize)
     : Stimulus(integrator)
     , m_k(kd)
     , m_w(wd)
@@ -32,25 +32,6 @@ void Grating::computeFourierTransform()
 }
 
 
-Grating* setGratingType(Integrator *integrator,
-                                vec2 kd, double wd, double contrast,
-                                string mask, double maskSize)
-{
-    if(mask == "none"){
-        return new FullFieldGrating(integrator, kd, wd, contrast);
-
-    }else if(mask == "gauss"){
-        return new GaussianMaskGrating(integrator, kd, wd, contrast, maskSize);
-
-    }else if(mask == "circle"){
-        return new CircleMaskGrating(integrator, kd, wd, contrast, maskSize);
-
-    }else{
-        cout << "mask: " << mask << endl;
-        throw overflow_error("Unknown grating mask");
-    }
-}
-
 
 Grating* createGratingStimulus(Integrator *integrator, const Config *cfg)
 {
@@ -65,5 +46,17 @@ Grating* createGratingStimulus(Integrator *integrator, const Config *cfg)
     double kx = k(4);
     double ky = k(0);
 
-    return setGratingType(integrator, {kx, ky}, wd, contrast, mask, maskSize);
+    if(mask == "none"){
+        return new FullFieldGrating(integrator, {kx, ky}, wd, contrast);
+
+    }else if(mask == "gauss"){
+        return new GaussianMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize);
+
+    }else if(mask == "circle"){
+        return new CircleMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize);
+
+    }else{
+        cout << "mask: " << mask << endl;
+        throw overflow_error("Unknown grating mask");
+    }
 }
