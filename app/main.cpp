@@ -49,7 +49,6 @@ int main()
 //        NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
 //        StaticImage S = createStaticImageStimulus(&integrator,&cfg);
         Grating* S = createGratingStimulus(&integrator,&cfg);
-//    CircleMaskGrating S = createPatchGratingStimulus(&integrator,&cfg);
 
 
 

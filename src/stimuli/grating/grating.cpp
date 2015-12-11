@@ -43,7 +43,7 @@ Grating* createGratingStimulus(Integrator *integrator, const Config *cfg)
     vec k = integrator->spatialFreqVec();
     vec w = integrator->temporalFreqVec();
     double wd = w(1);
-    double kx = k(4);
+    double kx = k(10);
     double ky = k(0);
 
     if(mask == "none"){

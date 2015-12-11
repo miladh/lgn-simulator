@@ -2,6 +2,8 @@
 #define GAUSSIANMASKGRATING_H
 
 #include "grating.h"
+#include "../../spatialKernels/dog.h"
+
 
 class GaussianMaskGrating : public Grating
 {
@@ -14,6 +16,8 @@ public:
 private:
     virtual double valueAtPoint(vec2 rVec, double t);
     virtual double fourierTransformAtFrequency(vec2 kVec, double w);
+
+    DOG* m_dog;
 
 };
 
