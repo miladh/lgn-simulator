@@ -21,6 +21,4 @@ private:
 
 };
 
-GaussianMaskGrating createGaussianMaskGratingStimulus(Integrator *integrator, const Config* cfg);
-
 #endif // GAUSSIANMASKGRATING_H

@@ -44,7 +44,7 @@ Grating* createGratingStimulus(Integrator *integrator, const Config *cfg)
     vec w = integrator->temporalFreqVec();
     double wd = w(1);
     double kx = k(10);
-    double ky = k(0);
+    double ky = k(5);
 
     if(mask == "none"){
         return new FullFieldGrating(integrator, {kx, ky}, wd, contrast);

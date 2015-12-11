@@ -35,19 +35,3 @@ double GaussianMaskGrating::fourierTransformAtFrequency(vec2 k, double w)
 }
 
 
-
-
-GaussianMaskGrating createGaussianMaskGratingStimulus(Integrator *integrator, const Config *cfg)
-{
-    const Setting & root = cfg->getRoot();
-    double contrast = root["stimuliSettings"]["GratingSettings"]["C"];
-    double maskSize = root["stimuliSettings"]["GratingSettings"]["maskSize"];
-
-    vec k = integrator->spatialFreqVec();
-    vec w = integrator->temporalFreqVec();
-    double wd = w(1);
-    double kx = k(4);
-    double ky = k(0);
-
-    return GaussianMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize);
-}

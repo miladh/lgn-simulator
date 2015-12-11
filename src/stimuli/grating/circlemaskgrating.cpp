@@ -37,20 +37,3 @@ double CircleMaskGrating::fourierTransformAtFrequency(vec2 kVec, double w)
 
     return s/m_integrator->temporalFreqResolution();
 }
-
-
-
-CircleMaskGrating createCircleMaskGratingStimulus(Integrator *integrator, const Config *cfg)
-{
-    const Setting & root = cfg->getRoot();
-    double contrast = root["stimuliSettings"]["GratingSettings"]["C"];
-    double maskSize = root["stimuliSettings"]["GratingSettings"]["maskSize"];
-
-    vec k = integrator->spatialFreqVec();
-    vec w = integrator->temporalFreqVec();
-    double wd = w(1);
-    double kx = k(4);
-    double ky = k(0);
-
-    return CircleMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize);
-}

@@ -18,6 +18,5 @@ private:
 
 };
 
-CircleMaskGrating createCircleMaskGratingStimulus(Integrator *integrator, const Config* cfg);
 
 #endif // CIRCLEMASKGRATING_H

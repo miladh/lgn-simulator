@@ -30,20 +30,3 @@ double FullFieldGrating::fourierTransformAtFrequency(vec2 k, double w)
 
     return 8*PI*PI*PI* m_contrast * s;
 }
-
-
-FullFieldGrating createFullFieldGratingStimulus(Integrator *integrator, const Config *cfg)
-{
-    const Setting & root = cfg->getRoot();
-    double contrast = root["stimuliSettings"]["GratingSettings"]["C"];
-
-    vec k = integrator->spatialFreqVec();
-    vec w = integrator->temporalFreqVec();
-    double wd = w(1);
-    double kx = k(7);
-    double ky = k(0);
-
-
-    return FullFieldGrating(integrator, {kx, ky}, wd, contrast);
-}
-

@@ -17,6 +17,5 @@ private:
     virtual double fourierTransformAtFrequency(vec2 k, double w);
 };
 
-FullFieldGrating createFullFieldGratingStimulus(Integrator *integrator, const Config *cfg);
 
 #endif // FULLFIELDGRATING_H
