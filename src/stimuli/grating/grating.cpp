@@ -12,7 +12,6 @@ Grating::Grating(Integrator *integrator,
     , m_contrast(contrast)
     , m_maskSize(maskSize * m_coordinateVec.max() * 2)
 {
-
 }
 
 Grating::~Grating()
@@ -44,7 +43,7 @@ Grating* createGratingStimulus(Integrator *integrator, const Config *cfg)
     vec w = integrator->temporalFreqVec();
     double wd = w(1);
     double kx = k(10);
-    double ky = k(5);
+    double ky = k(0);
 
     if(mask == "none"){
         return new FullFieldGrating(integrator, {kx, ky}, wd, contrast);

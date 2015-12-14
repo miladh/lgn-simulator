@@ -1,14 +1,12 @@
 #include "neuron.h"
 
-Neuron::Neuron(Integrator *integrator)
+Neuron::Neuron(Integrator *integrator, StaticNonlinearity *staticNonlinearity)
     : m_integrator(integrator)
+    , m_staticNonlinearity(staticNonlinearity)
 {
     int nPointsTemporal = integrator->nPointsTemporal();
     int nPointsSpatial = integrator->nPointsSpatial();
 
-//    m_response = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
-//    m_impulseResponse = zeros(nPointsSpatial, nPointsSpatial, nPointsTemporal);
-//    m_responseFT = zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
     m_impulseResponseFT=zeros<cx_cube>(nPointsSpatial,nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
@@ -33,6 +31,10 @@ void Neuron::computeResponse(Stimulus *stimulus)
     }
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
     m_response = real(m_integrator->backwardFFT(m_responseFT));
+
+    if(m_staticNonlinearity != nullptr){
+        m_staticNonlinearity->applyStaticNonlinearity(&m_response);
+    }
 
 
 }

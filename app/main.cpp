@@ -23,6 +23,10 @@
 #include "temporalKernels/temporallyconstant.h"
 #include "temporalKernels/temporaldelta.h"
 
+#include "staticNonlinearity/thresholdnonlinearity.h"
+#include "staticNonlinearity/heavisidenonlinearity.h"
+#include "staticNonlinearity/sigmoidalnonlinearity.h"
+
 
 
 using namespace std;
@@ -67,8 +71,13 @@ int main()
     //    TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
 
 
+    //Static nonlinearity-------------------------------------------------------------
+    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);
+//    SigmoidalNonlinearity staticNonlinearity  = createSigmoidalNonlinearity(&cfg);
+//    HeavisideNonlinearity staticNonlinearity;
+
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &Kt_cr);
+    GanglionCell ganglion(&integrator, &dog, &Kt_cr, &staticNonlinearity);
 //    RelayCell relay(&integrator);
 //    CorticalCell cortical(&integrator);
 //    Interneuron interneuron(&integrator);

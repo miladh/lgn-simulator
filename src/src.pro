@@ -40,7 +40,11 @@ SOURCES += \
     stimuli/grating/grating.cpp \
     stimuli/grating/gaussianmaskgrating.cpp \
     stimuli/grating/circlemaskgrating.cpp \
-    stimuli/grating/fullfieldgrating.cpp
+    stimuli/grating/fullfieldgrating.cpp \
+    staticNonlinearity/staticnonlinearity.cpp \
+    staticNonlinearity/thresholdnonlinearity.cpp \
+    staticNonlinearity/heavisidenonlinearity.cpp \
+    staticNonlinearity/sigmoidalnonlinearity.cpp
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -66,4 +70,8 @@ HEADERS += \
     stimuli/grating/grating.h \
     stimuli/grating/gaussianmaskgrating.h \
     stimuli/grating/circlemaskgrating.h \
-    stimuli/grating/fullfieldgrating.h
+    stimuli/grating/fullfieldgrating.h \
+    staticNonlinearity/staticnonlinearity.h \
+    staticNonlinearity/thresholdnonlinearity.h \
+    staticNonlinearity/heavisidenonlinearity.h \
+    staticNonlinearity/sigmoidalnonlinearity.h

@@ -2,8 +2,9 @@
 
 GanglionCell::GanglionCell(Integrator *integrator,
                            SpatialKernel *spatialKernel,
-                           TemporalKernel *temporalKernel)
-    : Neuron(integrator)
+                           TemporalKernel *temporalKernel,
+                           StaticNonlinearity *staticNonlinearity)
+    : Neuron(integrator, staticNonlinearity)
     , m_spatialKernel(spatialKernel)
     , m_temporalKernel(temporalKernel)
 {
@@ -29,6 +30,7 @@ void GanglionCell::computeImpulseResponseFourierTransform()
         }
     }
 }
+
 
 void GanglionCell::computeImpulseResponse()
 {

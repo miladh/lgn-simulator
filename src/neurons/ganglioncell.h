@@ -14,7 +14,8 @@ class GanglionCell : public Neuron
 public:
     GanglionCell(Integrator *integrator,
                  SpatialKernel *spatialKernel,
-                 TemporalKernel *temporalKernel);
+                 TemporalKernel *temporalKernel,
+                 StaticNonlinearity *staticNonlinearity = nullptr);
     ~GanglionCell();
 
     void computeImpulseResponse();
@@ -23,7 +24,6 @@ public:
 private:
     SpatialKernel *m_spatialKernel;
     TemporalKernel *m_temporalKernel;
-
 
     double impulseResponseValueAtPoint(vec2 rVec, double t);
     complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);

@@ -6,6 +6,7 @@
 #include "integrator.h"
 #include "../temporalKernels/temporalkernel.h"
 #include "../spatialKernels/spatialkernel.h"
+#include "../staticNonlinearity/staticnonlinearity.h"
 
 
 using namespace arma;
@@ -14,7 +15,8 @@ using namespace std;
 class Neuron
 {
 public:
-    Neuron(Integrator *integrator);
+    Neuron(Integrator *integrator,
+           StaticNonlinearity *staticNonlinearity = nullptr);
     ~Neuron();
 
     struct Input {
@@ -70,6 +72,9 @@ public:
 
 private:
     Integrator* m_integrator;
+    StaticNonlinearity *m_staticNonlinearity;
+
+
 
 protected:
     bool impulseResponseFourierTransformComputed  = false;
