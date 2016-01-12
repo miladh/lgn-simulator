@@ -25,7 +25,7 @@ private:
     void readScene();
 };
 
-NaturalSceneVideo *createNaturalSceneVideoStimulus(Integrator *integrator,
+unique_ptr<NaturalSceneVideo> createNaturalSceneVideoStimulus(Integrator *integrator,
                                                   const Config *cfg);
 
 #endif // NATURALSCENEVIDEO_H

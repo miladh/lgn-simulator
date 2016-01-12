@@ -18,5 +18,5 @@ private:
 };
 
 
-StaticImage *createStaticImageStimulus(Integrator *integrator, const Config *cfg);
+unique_ptr<StaticImage> createStaticImageStimulus(Integrator *integrator, const Config *cfg);
 #endif // STATICIMAGE_H

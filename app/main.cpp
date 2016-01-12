@@ -49,9 +49,9 @@ int main()
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);
 
-    //Stim---------------------------------------------------------------------
-//        NaturalSceneVideo* S = createNaturalSceneVideoStimulus(&integrator,&cfg);
-//        StaticImage* S = createStaticImageStimulus(&integrator,&cfg);
+//    Stim---------------------------------------------------------------------
+//        unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(&integrator,&cfg);
+//        unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator,&cfg);
         unique_ptr<Grating> S = createGratingStimulus(&integrator,&cfg);
 
 
