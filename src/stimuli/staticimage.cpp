@@ -22,11 +22,11 @@ double StaticImage::fourierTransformAtTemporalFrequency(double w)
 }
 
 
-StaticImage createStaticImageStimulus(Integrator *integrator, const Config *cfg)
+StaticImage* createStaticImageStimulus(Integrator *integrator, const Config *cfg)
 {
     //Read file
     const Setting & root = cfg->getRoot();
     string sceneFilename = root["stimuliSettings"]["sceneFilename"];
 
-    return StaticImage(integrator, sceneFilename);
+    return new StaticImage(integrator, sceneFilename);
 }

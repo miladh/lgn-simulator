@@ -21,18 +21,36 @@ Grating::~Grating()
 
 void Grating::computeSpatiotemporal()
 {
-    computeSpatiotemporalAnalytic();
+    for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
+        for(int i = 0; i < int(m_spatioTemporal.n_rows); i++){
+            for(int j = 0; j < int(m_spatioTemporal.n_cols); j++){
+                m_spatioTemporal(i,j,k) = valueAtPoint({m_coordinateVec[i],
+                                                        m_coordinateVec[j]},
+                                                       m_timeVec[k]);
+            }
+        }
+    }
 
 }
 
 void Grating::computeFourierTransform()
 {
-    computeFourierTransformAnalytic();
+    for(int k = 0; k < int(m_fourierTransform.n_slices); k++){
+        for(int i = 0; i < int(m_fourierTransform.n_rows); i++){
+            for(int j = 0; j < int(m_fourierTransform.n_cols); j++){
+                m_fourierTransform(i,j,k) =
+                        fourierTransformAtFrequency({m_spatialFreqs[i],
+                                                     m_spatialFreqs[j]},
+                                                    m_temporalFreqs[k]);
+
+            }
+        }
+    }
 }
 
 
 
-Grating* createGratingStimulus(Integrator *integrator, const Config *cfg)
+unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const Config *cfg)
 {
     const Setting & root = cfg->getRoot();
     string mask = root["stimuliSettings"]["GratingSettings"]["mask"];
@@ -46,13 +64,13 @@ Grating* createGratingStimulus(Integrator *integrator, const Config *cfg)
     double ky = k(0);
 
     if(mask == "none"){
-        return new FullFieldGrating(integrator, {kx, ky}, wd, contrast);
+        return unique_ptr<FullFieldGrating>(new FullFieldGrating(integrator, {kx, ky}, wd, contrast));
 
     }else if(mask == "gauss"){
-        return new GaussianMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize);
+        return unique_ptr<GaussianMaskGrating>(new GaussianMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize));
 
     }else if(mask == "circle"){
-        return new CircleMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize);
+        return unique_ptr<CircleMaskGrating>(new CircleMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize));
 
     }else{
         cout << "mask: " << mask << endl;

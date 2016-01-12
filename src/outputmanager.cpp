@@ -6,8 +6,9 @@ OutputManager::OutputManager(const Config *cfg)
 {
     const Setting & root = m_cfg->getRoot();
     string outputFilePath = root["fileManagerSettings"]["outputFilePath"];
-    m_outputFileName << outputFilePath << "/output.h5";
-    m_output = new H5File (m_outputFileName.str(), H5F_ACC_TRUNC);
+    stringstream outputFileName;
+    outputFileName << outputFilePath << "/output.h5";
+    m_output = new H5File (outputFileName.str(), H5F_ACC_TRUNC);
 
     initialize();
 

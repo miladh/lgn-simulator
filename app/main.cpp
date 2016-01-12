@@ -50,9 +50,9 @@ int main()
     Integrator integrator = createIntegrator(&cfg);
 
     //Stim---------------------------------------------------------------------
-//        NaturalSceneVideo S = createNaturalSceneVideoStimulus(&integrator,&cfg);
-//        StaticImage S = createStaticImageStimulus(&integrator,&cfg);
-        Grating* S = createGratingStimulus(&integrator,&cfg);
+//        NaturalSceneVideo* S = createNaturalSceneVideoStimulus(&integrator,&cfg);
+//        StaticImage* S = createStaticImageStimulus(&integrator,&cfg);
+        unique_ptr<Grating> S = createGratingStimulus(&integrator,&cfg);
 
 
 
@@ -72,26 +72,24 @@ int main()
 
 
     //Static nonlinearity-------------------------------------------------------------
-    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);
+//    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);
 //    SigmoidalNonlinearity staticNonlinearity  = createSigmoidalNonlinearity(&cfg);
 //    HeavisideNonlinearity staticNonlinearity;
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &Kt_cr, &staticNonlinearity);
-//    RelayCell relay(&integrator);
+    GanglionCell ganglion(&integrator, &dog, &Kt_cr/*, &staticNonlinearity*/);
+    RelayCell relay(&integrator);
 //    CorticalCell cortical(&integrator);
 //    Interneuron interneuron(&integrator);
 
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
-//    neurons.push_back(&relay);
+    neurons.push_back(&relay);
 //    neurons.push_back(&cortical);
 //    neurons.push_back(&interneuron);
 
-
-
     //connect neurons----------------------------------------------------------
-//    relay.addGanglionCell(&ganglion, &dog, &Kt_cr);
+    relay.addGanglionCell(&ganglion, &dog, &Kt_cr);
 //    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
 //    relay.addInterNeuron(&interneuron,&gauss, &damped);
 
@@ -105,20 +103,16 @@ int main()
     //Compute:-----------------------------------------------------------------
     S->computeSpatiotemporal();
     S->computeFourierTransform();
-    io.writeStimulus(S);
+    io.writeStimulus(S.get());
     S->clearSpatioTemporal();
 
     for(Neuron* neuron : neurons){
 
-        neuron->computeResponse(S);
+        neuron->computeResponse(S.get());
         io.writeResponse(neuron);
         neuron->clearResponse();
 
-        if(neuron->cellType() == "ganglion"){
-            ganglion.computeImpulseResponse();
-        }else{
-            neuron->computeImpulseResponse();
-        }
+        neuron->computeImpulseResponse();
         io.writeImpulseResponse(neuron);
         neuron->clearImpulseResponse();
 

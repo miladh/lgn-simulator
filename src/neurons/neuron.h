@@ -28,7 +28,7 @@ public:
 
     // Compute functions
     void computeResponse(Stimulus *stimulus);
-    void computeImpulseResponse();
+    virtual void computeImpulseResponse();
 
     //Virtual function:
     virtual void computeImpulseResponseFourierTransform() = 0;

@@ -32,7 +32,6 @@ private:
     const Config* m_cfg;
 
     H5File *m_output;
-    stringstream m_outputFileName;
     vector <DataSet *>m_dataset;
 
     void writeDataSet(const cube dataset, Group* group, string name);

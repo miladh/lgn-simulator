@@ -67,11 +67,11 @@ void NaturalSceneVideo::readScene()
 
 
 
-NaturalSceneVideo createNaturalSceneVideoStimulus(Integrator *integrator, const Config *cfg)
+NaturalSceneVideo* createNaturalSceneVideoStimulus(Integrator *integrator, const Config *cfg)
 {
     //Read file
     const Setting & root = cfg->getRoot();
     string sceneFilename = root["stimuliSettings"]["videoFilename"];
 
-    return NaturalSceneVideo(integrator, sceneFilename);
+    return new NaturalSceneVideo(integrator, sceneFilename);
 }

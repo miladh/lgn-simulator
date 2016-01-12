@@ -40,14 +40,6 @@ protected:
     vec m_temporalFreqs;
 
     Integrator *m_integrator;
-
-    void computeSpatiotemporalAnalytic();
-    void computeFourierTransformAnalytic();
-
-private:
-    virtual double valueAtPoint(vec2 rVec, double t) = 0;
-    virtual double fourierTransformAtFrequency(vec2 k, double w) = 0;
-
 };
 
 #endif // STIMULI_H

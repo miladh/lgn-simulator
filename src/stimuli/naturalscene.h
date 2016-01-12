@@ -18,15 +18,6 @@ public:
     void computeSpatiotemporal();
     void computeFourierTransform();
 
-private:
-    double valueAtPoint(vec2 rVec, double t){
-        (void)rVec;
-        (void)t;
-    }
-    double fourierTransformAtFrequency(vec2 kVec, double w){
-        (void)kVec;
-        (void)w;
-    }
 
 private:
     string m_sceneFilename;
