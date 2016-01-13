@@ -72,9 +72,10 @@ int main()
 
 
     //Static nonlinearity-------------------------------------------------------------
-//    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);
+    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);
 //    SigmoidalNonlinearity staticNonlinearity  = createSigmoidalNonlinearity(&cfg);
 //    HeavisideNonlinearity staticNonlinearity;
+
 
     //Neurons:-----------------------------------------------------------------
     GanglionCell ganglion(&integrator, &dog, &Kt_cr/*, &staticNonlinearity*/);
