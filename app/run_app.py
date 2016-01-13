@@ -8,7 +8,7 @@ from argparse import ArgumentParser
 
 
 parser = ArgumentParser()
-# parser.add_argument("config_file")
+parser.add_argument("config_file")
 parser.add_argument("--id", nargs='?', default="tmp")
 args = parser.parse_args()
 
