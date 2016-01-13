@@ -22,11 +22,10 @@ double StaticImage::fourierTransformAtTemporalFrequency(double w)
 }
 
 
-unique_ptr<StaticImage> createStaticImageStimulus(Integrator *integrator, const Config *cfg)
+unique_ptr<StaticImage> createStaticImageStimulus(Integrator *integrator, const YAML::Node *cfg)
 {
     //Read file
-    const Setting & root = cfg->getRoot();
-    string sceneFilename = root["stimuliSettings"]["sceneFilename"];
+    string sceneFilename = (*cfg)["stimuliSettings"]["sceneFilename"].as<string>();
 
     return unique_ptr<StaticImage>(new StaticImage (integrator, sceneFilename));
 }

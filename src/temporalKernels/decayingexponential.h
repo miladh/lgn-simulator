@@ -19,6 +19,6 @@ private:
     double m_delay = 0.0;
 };
 
-DecayingExponential createDecayingExponentialTemporalKernel(const Config *cfg);
+DecayingExponential createDecayingExponentialTemporalKernel(const YAML::Node *cfg);
 
 #endif // DECAYINGEXPONENTIAL_H

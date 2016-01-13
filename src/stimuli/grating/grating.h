@@ -33,6 +33,6 @@ protected:
 
 };
 
-std::unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const Config* cfg);
+std::unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const YAML::Node* cfg);
 
 #endif // GRATING_H

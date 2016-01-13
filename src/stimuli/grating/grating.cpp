@@ -50,12 +50,11 @@ void Grating::computeFourierTransform()
 
 
 
-unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const Config *cfg)
+unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const YAML::Node *cfg)
 {
-    const Setting & root = cfg->getRoot();
-    string mask = root["stimuliSettings"]["GratingSettings"]["mask"];
-    double maskSize = root["stimuliSettings"]["GratingSettings"]["maskSize"];
-    double contrast = root["stimuliSettings"]["GratingSettings"]["C"];
+    string mask = (*cfg)["stimuliSettings"]["GratingSettings"]["mask"].as<string>();
+    double maskSize = (*cfg)["stimuliSettings"]["GratingSettings"]["maskSize"].as<double>();
+    double contrast = (*cfg)["stimuliSettings"]["GratingSettings"]["C"].as<double>();
 
     vec k = integrator->spatialFreqVec();
     vec w = integrator->temporalFreqVec();

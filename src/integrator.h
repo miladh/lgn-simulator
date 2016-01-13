@@ -4,15 +4,14 @@
 #include <iostream>
 #include <armadillo>
 #include <math.h>
-#include <libconfig.h++>
 #include <fftw3.h>
+#include <yaml-cpp/yaml.h>
 
 #include "math/functions.h"
 #include "math/ffthelper.h"
 
 using namespace std;
 using namespace arma;
-using namespace libconfig;
 
 class Integrator
 {
@@ -58,6 +57,6 @@ private:
 
 };
 
-Integrator createIntegrator(const Config* cfg);
+Integrator createIntegrator(const YAML::Node *cfg);
 
 #endif // INTEGRATOR_H

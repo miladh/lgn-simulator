@@ -37,11 +37,10 @@ complex<double> DampedOscillator::fourierTransform(double w)
 
 
 
-DampedOscillator createDampedOscillatorTemporalKernel(const Config *cfg)
+DampedOscillator createDampedOscillatorTemporalKernel(const YAML::Node *cfg)
 {
-    const Setting & root = cfg->getRoot();
-    double phaseDuration = root["temporalKernelSettings"]["phaseDuration"];
-    double weight = root["temporalKernelSettings"]["weight"];
+    double phaseDuration = (*cfg)["temporalKernelSettings"]["phaseDuration"].as<double>();
+    double weight = (*cfg)["temporalKernelSettings"]["weight"].as<double>();
 
     return DampedOscillator(phaseDuration, weight);
 

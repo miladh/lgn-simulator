@@ -1,14 +1,13 @@
 #include "outputmanager.h"
 #include <unistd.h>
 
-OutputManager::OutputManager(const Config *cfg)
+OutputManager::OutputManager(const YAML::Node *cfg)
     : m_cfg(cfg)
 {
-    const Setting & root = m_cfg->getRoot();
-    string outputFilePath = root["fileManagerSettings"]["outputFilePath"];
-    stringstream outputFileName;
-    outputFileName << outputFilePath << "/output.h5";
-    m_output = new H5File (outputFileName.str(), H5F_ACC_TRUNC);
+
+    string outputFilePath = (*m_cfg)["fileManagerSettings"]["outputFilePath"].as<std::string>();
+    m_outputFileName << outputFilePath << "/output.h5";
+    m_output = new H5File (m_outputFileName.str(), H5F_ACC_TRUNC);
 
     initialize();
 
@@ -20,15 +19,12 @@ OutputManager::~OutputManager()
 
 void OutputManager::initialize()
 {
-
-
     Group rootGroup = m_output->openGroup("/");
-    const Setting & root = m_cfg->getRoot();
+    double dt = (*m_cfg)["integratorSettings"]["dt"].as<double>();
+    int nSteps = (*m_cfg)["integratorSettings"]["nt"].as<int>();
+    int nPoints =(*m_cfg)["integratorSettings"]["ns"].as<int>();
 
 
-    double dt = root["integratorSettings"]["dt"];
-    int nSteps = root["integratorSettings"]["nt"];
-    int nPoints = root["integratorSettings"]["ns"];
     double ds = 1.0/nPoints;
     nSteps = pow(2, nSteps);
     nPoints = pow(2, nPoints);

@@ -3,13 +3,12 @@
 
 #include <math.h>
 #include <armadillo>
-#include <libconfig.h++>
+#include <yaml-cpp/yaml.h>
 
 #include "integrator.h"
 
 using namespace std;
 using namespace arma;
-using namespace libconfig;
 
 class Stimulus
 {

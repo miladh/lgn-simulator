@@ -2,13 +2,12 @@
 #define SPATIALKERNELS_H
 
 #include <armadillo>
-#include <libconfig.h++>
+#include <yaml-cpp/yaml.h>
 
 #include "math/functions.h"
 
 using namespace std;
 using namespace arma;
-using namespace libconfig;
 
 
 class SpatialKernel

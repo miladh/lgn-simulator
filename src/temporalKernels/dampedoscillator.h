@@ -20,6 +20,6 @@ private:
     double m_weight;
 };
 
-DampedOscillator createDampedOscillatorTemporalKernel(const Config *cfg);
+DampedOscillator createDampedOscillatorTemporalKernel(const YAML::Node *cfg);
 
 #endif // DAMPEDOSCILLATOR_H

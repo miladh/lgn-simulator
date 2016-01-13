@@ -27,7 +27,7 @@
 #include "staticNonlinearity/heavisidenonlinearity.h"
 #include "staticNonlinearity/sigmoidalnonlinearity.h"
 
-
+#include <yaml-cpp/yaml.h>
 
 using namespace std;
 
@@ -40,8 +40,7 @@ int main()
 
 
     //read config file-------------------------------------------------------
-    Config cfg;
-    cfg.readFile("../../eDOG/app/config.cfg");
+    YAML::Node cfg = YAML::LoadFile("../../eDOG/app/app_config.yaml");
 
     //Output manager:----------------------------------------------------------
     OutputManager io(&cfg);
@@ -52,7 +51,7 @@ int main()
 //    Stim---------------------------------------------------------------------
 //        unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(&integrator,&cfg);
 //        unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator,&cfg);
-        unique_ptr<Grating> S = createGratingStimulus(&integrator,&cfg);
+        unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
 
 
 
@@ -68,11 +67,11 @@ int main()
 //    DecayingExponential Kt_rc(0.42,0.10);
     TemporalDelta Kt_cr(0.4);
 //    DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
-    //    TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
+//        TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
 
 
     //Static nonlinearity-------------------------------------------------------------
-    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);
+//    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);
 //    SigmoidalNonlinearity staticNonlinearity  = createSigmoidalNonlinearity(&cfg);
 //    HeavisideNonlinearity staticNonlinearity;
 

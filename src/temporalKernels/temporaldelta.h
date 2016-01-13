@@ -20,6 +20,6 @@ private:
     double m_delay = 0;
 };
 
-TemporalDelta createTemporalDeltaKernel(const Config *cfg);
+TemporalDelta createTemporalDeltaKernel(const YAML::Node *cfg);
 
 #endif // TEMPORALDELTA_H

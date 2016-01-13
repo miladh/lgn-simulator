@@ -2,10 +2,10 @@
 #define STATICNONLINEARITY_H
 
 #include <armadillo>
-#include <libconfig.h++>
+#include <yaml-cpp/yaml.h>
 
 using namespace arma;
-using namespace libconfig;
+
 
 class StaticNonlinearity
 {

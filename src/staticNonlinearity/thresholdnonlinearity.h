@@ -20,6 +20,6 @@ private:
 
 };
 
-ThresholdNonlinearity createThresholdNonlinearity(const Config *cfg);
+ThresholdNonlinearity createThresholdNonlinearity(const YAML::Node *cfg);
 
 #endif // THRESHOLDNONLINEARITY_H

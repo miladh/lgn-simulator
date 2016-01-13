@@ -36,13 +36,13 @@ double DOG::fourierTransform(vec2 k)
 
 
 
-DOG createDOGSpatialKernel(const Config *cfg)
+DOG createDOGSpatialKernel(const YAML::Node *cfg)
 {
-    const Setting & root = cfg->getRoot();
-    double A = root["spatialKernelSettings"]["A"];
-    double a = root["spatialKernelSettings"]["a"];
-    double B = root["spatialKernelSettings"]["B"];
-    double b = root["spatialKernelSettings"]["b"];
+
+    double A = (*cfg)["spatialKernelSettings"]["A"].as<double>();
+    double a = (*cfg)["spatialKernelSettings"]["a"].as<double>();
+    double B = (*cfg)["spatialKernelSettings"]["B"].as<double>();
+    double b = (*cfg)["spatialKernelSettings"]["b"].as<double>();
 
 
     return DOG(A, a, B, b);

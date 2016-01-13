@@ -26,6 +26,6 @@ private:
 };
 
 unique_ptr<NaturalSceneVideo> createNaturalSceneVideoStimulus(Integrator *integrator,
-                                                  const Config *cfg);
+                                                  const YAML::Node *cfg);
 
 #endif // NATURALSCENEVIDEO_H

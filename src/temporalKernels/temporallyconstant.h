@@ -20,6 +20,6 @@ private:
     double m_constant= 0.0;
 };
 
-TemporallyConstant createTemporallyConstantTemporalKernel(const Config *cfg);
+TemporallyConstant createTemporallyConstantTemporalKernel(const YAML::Node *cfg);
 
 #endif // TEMPORALLYCONSTANT_H

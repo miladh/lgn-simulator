@@ -160,13 +160,11 @@ double Integrator::spatialFreqResolution() const
 }
 
 
-
-Integrator createIntegrator(const Config *cfg)
+Integrator createIntegrator(const YAML::Node *cfg)
 {
-    const Setting & root = cfg->getRoot();
-    int ns = root["integratorSettings"]["ns"];
-    int nt = root["integratorSettings"]["nt"];
-    double dt = root["integratorSettings"]["dt"];
+    double dt = (*cfg)["integratorSettings"]["dt"].as<double>();
+    int nt = (*cfg)["integratorSettings"]["nt"].as<int>();
+    int ns =(*cfg)["integratorSettings"]["ns"].as<int>();
 
     return Integrator(nt, dt, ns);
 

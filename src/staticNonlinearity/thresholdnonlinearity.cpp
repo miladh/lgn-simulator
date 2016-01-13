@@ -24,11 +24,10 @@ double ThresholdNonlinearity::advance(const double u)
 }
 
 
-ThresholdNonlinearity createThresholdNonlinearity(const Config *cfg)
+ThresholdNonlinearity createThresholdNonlinearity(const YAML::Node *cfg)
 {
-    const Setting & root = cfg->getRoot();
-    double threshold = root["staticNonlinearitySettings"]["threshold"];
-    double weight = root["staticNonlinearitySettings"]["weight"];
+    double threshold = (*cfg)["staticNonlinearitySettings"]["threshold"].as<double>();
+    double weight = (*cfg)["staticNonlinearitySettings"]["weight"].as<double>();
 
     return ThresholdNonlinearity(threshold, weight);
 }

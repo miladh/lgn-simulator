@@ -36,13 +36,12 @@ double EllipticGaussian::fourierTransform(vec2 kVec)
 
 
 
-EllipticGaussian createEllipticGaussianSpatialKernel(const Config *cfg)
+EllipticGaussian createEllipticGaussianSpatialKernel(const YAML::Node *cfg)
 {
-    const Setting & root = cfg->getRoot();
-    double weight = root["spatialKernelSettings"]["weight_elliptic"];
-    double angle = root["spatialKernelSettings"]["angle"];
-    double widthLong = root["spatialKernelSettings"]["widthLong"];
-    double widthNarrow = root["spatialKernelSettings"]["widthNarrow"];
+    double weight = (*cfg)["spatialKernelSettings"]["weight_elliptic"].as<double>();
+    double angle = (*cfg)["spatialKernelSettings"]["angle"].as<double>();
+    double widthLong = (*cfg)["spatialKernelSettings"]["widthLong"].as<double>();
+    double widthNarrow = (*cfg)["spatialKernelSettings"]["widthNarrow"].as<double>();
 
     return EllipticGaussian(weight, angle, widthLong, widthNarrow);
 }

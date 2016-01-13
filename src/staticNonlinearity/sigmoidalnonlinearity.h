@@ -19,6 +19,6 @@ private:
     double m_exponent = 0.0;
 };
 
-SigmoidalNonlinearity createSigmoidalNonlinearity(const Config *cfg);
+SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node *cfg);
 
 #endif // SIGMOIDALNONLINEARITY_H

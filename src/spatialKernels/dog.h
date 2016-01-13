@@ -28,6 +28,6 @@ private:
 
 };
 
-DOG createDOGSpatialKernel(const Config *cfg);
+DOG createDOGSpatialKernel(const YAML::Node *cfg);
 
 #endif // DOG_H

@@ -16,4 +16,5 @@ QMAKE_CXXFLAGS += -std=c++14
 CONFIG += c++14
 
 
-LIBS += -llapack -larmadillo -lconfig++ -lboost_regex -lhdf5 -lhdf5_cpp -lfftw3 -lfftw3_omp -lfftw3_threads
+LIBS += -llapack -larmadillo -lboost_regex -lhdf5 -lhdf5_cpp -lfftw3 -lfftw3_omp -lfftw3_threads
+LIBS += -lyaml-cpp
