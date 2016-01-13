@@ -13,4 +13,4 @@ LIBS += -L../src -ledog
 
 
 DISTFILES += \
-    config.yaml
+    config.cfg

@@ -41,7 +41,7 @@ int main()
 
     //read config file-------------------------------------------------------
     Config cfg;
-    cfg.readFile("../../eDOG/app/config.yaml");
+    cfg.readFile("../../eDOG/app/config.cfg");
 
     //Output manager:----------------------------------------------------------
     OutputManager io(&cfg);
