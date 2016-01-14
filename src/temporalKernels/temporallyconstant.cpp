@@ -26,7 +26,7 @@ complex<double> TemporallyConstant::fourierTransform(double w)
 
 TemporallyConstant createTemporallyConstantTemporalKernel(const YAML::Node *cfg)
 {
-    double constant = (*cfg)["temporalKernelSettings"]["constant"].as<double>();
+    double constant = (*cfg)["constant"].as<double>();
 
     return TemporallyConstant(constant);
 

@@ -22,9 +22,9 @@ double SigmoidalNonlinearity::advance(const double u)
 SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node *cfg)
 {
 
-    double maxValue = (*cfg)["staticNonlinearitySettings"]["maxValue"].as<double>();
-    double halfMaxValue = (*cfg)["staticNonlinearitySettings"]["halfMaxValue"].as<double>();
-    double exponent = (*cfg)["staticNonlinearitySettings"]["exponent"].as<double>();
+    double maxValue = (*cfg)["maxValue"].as<double>();
+    double halfMaxValue = (*cfg)["halfMaxValue"].as<double>();
+    double exponent = (*cfg)["exponent"].as<double>();
 
     return SigmoidalNonlinearity(maxValue, halfMaxValue, exponent);
 }

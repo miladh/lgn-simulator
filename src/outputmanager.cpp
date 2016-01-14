@@ -5,7 +5,7 @@ OutputManager::OutputManager(const YAML::Node *cfg)
     : m_cfg(cfg)
 {
 
-    string outputFilePath = (*m_cfg)["fileManagerSettings"]["outputFilePath"].as<std::string>();
+    string outputFilePath = (*m_cfg)["outputFilePath"].as<std::string>();
     m_outputFileName << outputFilePath << "/output.h5";
     m_output = new H5File (m_outputFileName.str(), H5F_ACC_TRUNC);
 
@@ -20,9 +20,9 @@ OutputManager::~OutputManager()
 void OutputManager::initialize()
 {
     Group rootGroup = m_output->openGroup("/");
-    double dt = (*m_cfg)["integratorSettings"]["dt"].as<double>();
-    int nSteps = (*m_cfg)["integratorSettings"]["nt"].as<int>();
-    int nPoints =(*m_cfg)["integratorSettings"]["ns"].as<int>();
+    double dt = (*m_cfg)["dt"].as<double>();
+    int nSteps = (*m_cfg)["nt"].as<int>();
+    int nPoints =(*m_cfg)["ns"].as<int>();
 
 
     double ds = 1.0/nPoints;

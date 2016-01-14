@@ -162,9 +162,9 @@ double Integrator::spatialFreqResolution() const
 
 Integrator createIntegrator(const YAML::Node *cfg)
 {
-    double dt = (*cfg)["integratorSettings"]["dt"].as<double>();
-    int nt = (*cfg)["integratorSettings"]["nt"].as<int>();
-    int ns =(*cfg)["integratorSettings"]["ns"].as<int>();
+    double dt = (*cfg)["dt"].as<double>();
+    int nt = (*cfg)["nt"].as<int>();
+    int ns =(*cfg)["ns"].as<int>();
 
     return Integrator(nt, dt, ns);
 
