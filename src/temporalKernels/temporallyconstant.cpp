@@ -15,6 +15,7 @@ TemporallyConstant::~TemporallyConstant()
 
 double TemporallyConstant::temporal(double t)
 {
+    (void)t;
     return m_constant;
 }
 

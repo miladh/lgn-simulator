@@ -25,10 +25,6 @@ vector<SpatialKernel *> KernelSettings::spatialKernelVector()
     double B = 0.5;
     double b = 0.8;
 
-    //Gauss
-    double weightGauss = 0.5;
-    double spread = 1.1;
-
     //Elliptic gauss
     double weightElliptic = 2.0;
     double angle = 45.0;
