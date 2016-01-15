@@ -40,7 +40,7 @@ if not os.path.exists(build_path):
 subprocess.call(["qmake", project_path], cwd=build_path)
 subprocess.call(["make", "-j", "8"], cwd=build_path)
 
-app_path = os.path.join(build_path, "app")
+app_path = os.path.join(build_path, "apps/spatialSummation")
 lib_path = os.path.join(build_path, "src")
 
 env = dict(os.environ)
