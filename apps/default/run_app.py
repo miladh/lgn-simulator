@@ -30,8 +30,8 @@ states_file = argv[1]
 
 output_file = os.path.join(output_dir, os.path.split(states_file)[-1])
 
-build_path = os.path.abspath(os.path.join(current_path, "..", ".." , "build"))
-project_path = os.path.abspath(os.path.join(current_path, ".."))
+build_path = os.path.abspath(os.path.join(current_path, "..", "..",".." , "build"))
+project_path = os.path.abspath(os.path.join(current_path, "..",".."))
 
 print "Building in:\n", build_path
 
@@ -40,7 +40,7 @@ if not os.path.exists(build_path):
 subprocess.call(["qmake", project_path], cwd=build_path)
 subprocess.call(["make", "-j", "8"], cwd=build_path)
 
-app_path = os.path.join(build_path, "app")
+app_path = os.path.join(build_path, "apps/default")
 lib_path = os.path.join(build_path, "src")
 
 env = dict(os.environ)
