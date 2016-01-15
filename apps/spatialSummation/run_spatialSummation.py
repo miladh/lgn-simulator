@@ -30,8 +30,8 @@ states_file = argv[1]
 
 output_file = os.path.join(output_dir, os.path.split(states_file)[-1])
 
-build_path = os.path.abspath(os.path.join(current_path, "..", ".." , "build"))
-project_path = os.path.abspath(os.path.join(current_path, ".."))
+build_path = os.path.abspath(os.path.join(current_path, "..", "..",".." , "build"))
+project_path = os.path.abspath(os.path.join(current_path, "..",".."))
 
 print "Building in:\n", build_path
 
@@ -46,7 +46,7 @@ lib_path = os.path.join(build_path, "src")
 env = dict(os.environ)
 env['LD_LIBRARY_PATH'] = lib_path
 
-run_argument = ["./app"]
+run_argument = ["./edog_spatialSummation"]
 print " ".join(run_argument)
 proc = subprocess.call(run_argument, cwd=app_path, env=env)
 
