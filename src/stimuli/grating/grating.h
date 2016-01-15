@@ -1,14 +1,14 @@
 #ifndef GRATING_H
 #define GRATING_H
 
-#include "../stimuli.h"
+#include "stimuli/stimuli.h"
 #include <memory>
 
 #include <cstddef>
 #include <memory>
 #include <type_traits>
 #include <utility>
-
+namespace edog {
 class Grating : public Stimulus
 {
 public:
@@ -33,6 +33,7 @@ protected:
 
 };
 
-std::unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const YAML::Node* cfg);
+}
+std::unique_ptr<edog::Grating> createGratingStimulus(edog::Integrator *integrator, const YAML::Node* cfg);
 
 #endif // GRATING_H

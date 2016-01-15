@@ -1,6 +1,9 @@
 #include <unittest++/UnitTest++.h>
 #include "spatialKernels/dog.h"
 
+
+using namespace edog;
+
 SUITE(SPECIALFUNCTIONS){
 
 

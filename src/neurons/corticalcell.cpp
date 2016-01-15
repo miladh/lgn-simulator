@@ -1,5 +1,8 @@
 #include "corticalcell.h"
 
+using namespace edog;
+
+
 CorticalCell::CorticalCell(Integrator* integrator)
     : Neuron(integrator)
 {

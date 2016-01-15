@@ -1,11 +1,11 @@
 #ifndef NATURALSCENE_H
 #define NATURALSCENE_H
 
-#include "stimuli.h"
+#include "stimuli/stimuli.h"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/photo/photo.hpp"
 
-
+namespace edog {
 class NaturalScene : public Stimulus
 {
 public:
@@ -29,5 +29,5 @@ private:
     virtual double temporalValueAtPoint(double t) = 0;
     virtual double fourierTransformAtTemporalFrequency(double w) = 0;
 };
-
+}
 #endif // NATURALSCENE_H

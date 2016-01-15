@@ -1,6 +1,9 @@
 #include "outputmanager.h"
 #include <unistd.h>
 
+using namespace edog;
+
+
 OutputManager::OutputManager(const YAML::Node *cfg)
     : m_cfg(cfg)
 {

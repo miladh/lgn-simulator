@@ -1,5 +1,8 @@
 #include "integrator.h"
 
+using namespace edog;
+
+
 Integrator::Integrator(int nt, double dt, int ns)
     : m_nPointsTemporal(pow(2,nt))
     , m_nPointsSpatial(pow(2,ns))

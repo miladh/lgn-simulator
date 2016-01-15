@@ -1,5 +1,8 @@
 #include "sigmoidalnonlinearity.h"
 
+using namespace edog;
+
+
 SigmoidalNonlinearity::SigmoidalNonlinearity(double maxValue, double halfMaxValue, double exponent)
     : m_maxValue(maxValue)
     , m_halfmaxValue(halfMaxValue)

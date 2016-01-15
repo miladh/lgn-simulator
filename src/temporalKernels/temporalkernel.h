@@ -4,11 +4,11 @@
 #include <armadillo>
 
 #include "integrator.h"
-#include "../math/functions.h"
+#include "math/functions.h"
 
 using namespace std;
 using namespace arma;
-
+namespace edog {
 class TemporalKernel
 {
 public:
@@ -19,5 +19,5 @@ public:
     virtual complex<double> fourierTransform(double w) = 0;
 
 };
-
+}
 #endif // TEMPORALKERNELS_H

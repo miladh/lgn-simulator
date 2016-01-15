@@ -1,10 +1,10 @@
 #ifndef TEMPORALDELTA_H
 #define TEMPORALDELTA_H
 
-#include "temporalkernel.h"
+#include "temporalKernels/temporalkernel.h"
 
 
-
+namespace edog {
 class TemporalDelta : public TemporalKernel
 {
 public:
@@ -20,6 +20,7 @@ private:
     double m_delay = 0;
 };
 
-TemporalDelta createTemporalDeltaKernel(const YAML::Node *cfg);
+}
+edog::TemporalDelta createTemporalDeltaKernel(const YAML::Node *cfg);
 
 #endif // TEMPORALDELTA_H

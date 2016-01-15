@@ -6,7 +6,7 @@
 
 using namespace arma;
 
-
+namespace edog {
 class StaticNonlinearity
 {
 public:
@@ -18,5 +18,5 @@ public:
 protected:
     virtual double advance(const double u) = 0;
 };
-
+}
 #endif // STATICNONLINEARITY_H

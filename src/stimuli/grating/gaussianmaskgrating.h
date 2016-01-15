@@ -2,9 +2,9 @@
 #define GAUSSIANMASKGRATING_H
 
 #include "grating.h"
-#include "../../spatialKernels/dog.h"
+#include "spatialKernels/dog.h"
 
-
+namespace edog {
 class GaussianMaskGrating : public Grating
 {
 public:
@@ -20,5 +20,5 @@ private:
     DOG* m_dog;
 
 };
-
+}
 #endif // GAUSSIANMASKGRATING_H

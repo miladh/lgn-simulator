@@ -1,5 +1,8 @@
 #include "relaycell.h"
 
+using namespace edog;
+
+
 RelayCell::RelayCell(Integrator *integrator)
     : Neuron(integrator)
 

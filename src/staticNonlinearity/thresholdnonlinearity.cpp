@@ -1,5 +1,8 @@
 #include "thresholdnonlinearity.h"
 
+using namespace edog;
+
+
 ThresholdNonlinearity::ThresholdNonlinearity(double threshold, double weight)
     : m_threshold(threshold)
     , m_weight(weight)

@@ -1,10 +1,10 @@
 #ifndef STATICIMAGE_H
 #define STATICIMAGE_H
 
-#include "naturalscene.h"
+#include "stimuli/naturalscene.h"
 
 
-
+namespace edog {
 class StaticImage : public NaturalScene
 {
 public:
@@ -17,6 +17,7 @@ private:
     virtual double fourierTransformAtTemporalFrequency(double w);
 };
 
+}
+unique_ptr<edog::StaticImage> createStaticImageStimulus(edog::Integrator *integrator, const YAML::Node *cfg);
 
-unique_ptr<StaticImage> createStaticImageStimulus(Integrator *integrator, const YAML::Node *cfg);
 #endif // STATICIMAGE_H

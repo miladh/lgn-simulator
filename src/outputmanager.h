@@ -14,7 +14,7 @@ using namespace arma;
 using namespace std;
 using namespace H5;
 
-
+namespace edog {
 class OutputManager
 {
 public:
@@ -41,5 +41,5 @@ private:
     void initialize();
 
 };
-
+}
 #endif // OUTPUTMANAGER_H

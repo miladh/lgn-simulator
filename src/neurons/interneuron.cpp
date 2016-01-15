@@ -1,6 +1,9 @@
 #include "interneuron.h"
 
 
+using namespace edog;
+
+
 Interneuron::Interneuron(Integrator *integrator)
     : Neuron(integrator)
 {

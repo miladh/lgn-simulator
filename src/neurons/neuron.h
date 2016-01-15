@@ -2,16 +2,16 @@
 #define NEURON_H
 
 
-#include "../stimuli/stimuli.h"
+#include "stimuli/stimuli.h"
 #include "integrator.h"
-#include "../temporalKernels/temporalkernel.h"
-#include "../spatialKernels/spatialkernel.h"
-#include "../staticNonlinearity/staticnonlinearity.h"
+#include "temporalKernels/temporalkernel.h"
+#include "spatialKernels/spatialkernel.h"
+#include "staticNonlinearity/staticnonlinearity.h"
 
 
 using namespace arma;
 using namespace std;
-
+namespace edog {
 class Neuron
 {
 public:
@@ -98,5 +98,5 @@ protected:
     vector<Input> m_corticalNeurons;
 
 };
-
+}
 #endif // NEURON_H

@@ -8,7 +8,7 @@
 
 using namespace std;
 using namespace arma;
-
+using namespace edog;
 
 SUITE(INTEGRATOR){
 

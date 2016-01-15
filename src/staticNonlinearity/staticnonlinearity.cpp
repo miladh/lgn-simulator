@@ -1,5 +1,8 @@
 #include "staticnonlinearity.h"
 
+using namespace edog;
+
+
 StaticNonlinearity::StaticNonlinearity()
 {
 

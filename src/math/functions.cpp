@@ -1,5 +1,8 @@
 #include "functions.h"
 
+using namespace edog;
+
+
 Functions::Functions()
 {
 

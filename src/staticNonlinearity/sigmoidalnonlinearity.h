@@ -2,7 +2,7 @@
 #define SIGMOIDALNONLINEARITY_H
 
 #include "staticnonlinearity.h"
-
+namespace edog {
 class SigmoidalNonlinearity : public StaticNonlinearity
 {
 public:
@@ -19,6 +19,7 @@ private:
     double m_exponent = 0.0;
 };
 
-SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node *cfg);
+}
+edog::SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node *cfg);
 
 #endif // SIGMOIDALNONLINEARITY_H

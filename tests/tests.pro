@@ -1,10 +1,15 @@
 include(../defaults.pri)
 
+TEMPLATE = app
 CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-TEMPLATE = app
+TARGET = edog-tests
+
+LIBS += -lunittest++ -L$$TOP_OUT_PWD/lib -ledog
+INCLUDEPATH += $$TOP_PWD/include
+
 
 SOURCES += main.cpp \
     stimulitests.cpp \
@@ -27,10 +32,8 @@ SOURCES += main.cpp \
     systemTests/systemtest_gric.cpp \
     systemTests/systemtest_gi.cpp
 
-LIBS += -lunittest++ -L../src -ledog
 
-DISTFILES += \
-    configTests.cfg
+
 
 HEADERS += \
     systemTests/kernelsettings.h

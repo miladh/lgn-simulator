@@ -6,6 +6,7 @@
 
 using namespace std;
 using namespace arma;
+using namespace edog;
 
 SUITE(fftHelper){
     TEST(ifftshift_3D){

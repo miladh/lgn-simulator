@@ -8,7 +8,7 @@
 #include <armadillo>
 
 using namespace arma;
-
+namespace edog {
 class GanglionCell : public Neuron
 {
 public:
@@ -29,5 +29,5 @@ private:
     complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);
 
 };
-
+}
 #endif // GANGLIONCELL_H

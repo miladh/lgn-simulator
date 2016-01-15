@@ -1,5 +1,8 @@
 #include "ganglioncell.h"
 
+using namespace edog;
+
+
 GanglionCell::GanglionCell(Integrator *integrator,
                            SpatialKernel *spatialKernel,
                            TemporalKernel *temporalKernel,

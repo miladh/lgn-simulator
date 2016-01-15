@@ -1,5 +1,8 @@
 #include "temporallyconstant.h"
 
+using namespace edog;
+
+
 TemporallyConstant::TemporallyConstant(double constant)
     : m_constant(constant)
 {

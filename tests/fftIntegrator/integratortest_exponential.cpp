@@ -6,7 +6,7 @@
 
 using namespace std;
 using namespace arma;
-
+using namespace edog;
 
 double exponential(double a, double t){
 

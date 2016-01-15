@@ -9,7 +9,7 @@
 
 using namespace std;
 using namespace arma;
-
+namespace edog {
 class Stimulus
 {
 public:
@@ -40,5 +40,5 @@ protected:
 
     Integrator *m_integrator;
 };
-
+}
 #endif // STIMULI_H

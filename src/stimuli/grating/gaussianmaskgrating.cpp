@@ -1,5 +1,8 @@
 #include "gaussianmaskgrating.h"
 
+using namespace edog;
+
+
 GaussianMaskGrating::GaussianMaskGrating(Integrator *integrator,
                                          vec2 kd, double wd, double contrast, double maskSize)
 

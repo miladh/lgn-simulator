@@ -1,19 +1,8 @@
 include(../defaults.pri)
 
-CONFIG   += console
-CONFIG   -= app_bundle
-CONFIG   -= qt
-CONFIG += c++11
-
 TEMPLATE = lib
+TARGET = ../lib/edog
 
-TARGET = edog
-
-
-#LIBS += -llapack -larmadillo -lconfig++ -lboost_regex -lhdf5 -lhdf5_cpp -lfftw3 -lfftw3_omp -lfftw3_threads
-
-
-#INCLUDEPATH += /usr/include/hdf5/serial
 
 SOURCES += \
     integrator.cpp \
@@ -45,6 +34,7 @@ SOURCES += \
     staticNonlinearity/thresholdnonlinearity.cpp \
     staticNonlinearity/heavisidenonlinearity.cpp \
     staticNonlinearity/sigmoidalnonlinearity.cpp
+
 HEADERS += \
     integrator.h \
     outputmanager.h \
@@ -75,3 +65,9 @@ HEADERS += \
     staticNonlinearity/thresholdnonlinearity.h \
     staticNonlinearity/heavisidenonlinearity.h \
     staticNonlinearity/sigmoidalnonlinearity.h
+
+OTHER_FILES += ../include/edog.h
+
+!equals(PWD, $${OUT_PWD}) {
+    QMAKE_POST_LINK += $(COPY_DIR) $$OUT_PWD/../lib $$PWD/../
+}

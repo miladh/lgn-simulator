@@ -1,10 +1,10 @@
 #ifndef TEMPORALLYCONSTANT_H
 #define TEMPORALLYCONSTANT_H
 
-#include "temporalkernel.h"
+#include "temporalKernels/temporalkernel.h"
 
 
-
+namespace edog {
 class TemporallyConstant : public TemporalKernel
 {
 public:
@@ -20,6 +20,8 @@ private:
     double m_constant= 0.0;
 };
 
-TemporallyConstant createTemporallyConstantTemporalKernel(const YAML::Node *cfg);
+}
+
+edog::TemporallyConstant createTemporallyConstantTemporalKernel(const YAML::Node *cfg);
 
 #endif // TEMPORALLYCONSTANT_H

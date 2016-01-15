@@ -1,5 +1,8 @@
 #include "staticimage.h"
 
+using namespace edog;
+
+
 StaticImage::StaticImage(Integrator *integrator, string sceneFilename):
     NaturalScene(integrator, sceneFilename)
 {

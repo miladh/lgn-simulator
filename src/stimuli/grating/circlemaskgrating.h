@@ -3,7 +3,7 @@
 
 #include "grating.h"
 
-
+namespace edog {
 class CircleMaskGrating : public Grating
 {
 public:
@@ -18,5 +18,5 @@ private:
 
 };
 
-
+}
 #endif // CIRCLEMASKGRATING_H

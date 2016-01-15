@@ -3,7 +3,7 @@
 
 #include "neuron.h"
 
-
+namespace edog {
 class CorticalCell : public Neuron
 {
     friend class RelayCell;
@@ -18,5 +18,5 @@ public:
 private:
     void computeNeededcubes();
 };
-
+}
 #endif // CORTICALCELL_H

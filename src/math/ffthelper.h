@@ -6,6 +6,8 @@
 
 using namespace arma;
 
+namespace edog {
+
 class FFTHelper
 {
 public:
@@ -21,5 +23,5 @@ public:
     static cx_cube ifftShift(cx_cube x);
 
 };
-
+}
 #endif // FFTHELPER_H

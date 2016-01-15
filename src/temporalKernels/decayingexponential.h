@@ -3,6 +3,8 @@
 
 #include "temporalKernels/temporalkernel.h"
 
+namespace edog {
+
 class DecayingExponential : public TemporalKernel
 {
 public:
@@ -19,6 +21,7 @@ private:
     double m_delay = 0.0;
 };
 
-DecayingExponential createDecayingExponentialTemporalKernel(const YAML::Node *cfg);
+}
+edog::DecayingExponential createDecayingExponentialTemporalKernel(const YAML::Node *cfg);
 
 #endif // DECAYINGEXPONENTIAL_H

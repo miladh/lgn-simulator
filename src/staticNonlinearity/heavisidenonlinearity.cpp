@@ -1,5 +1,8 @@
 #include "heavisidenonlinearity.h"
 
+using namespace edog;
+
+
 HeavisideNonlinearity::HeavisideNonlinearity()
 {
 

@@ -13,6 +13,8 @@
 using namespace std;
 using namespace arma;
 
+namespace edog {
+
 class Integrator
 {
 public:
@@ -56,7 +58,8 @@ private:
     vec m_spatialFreqs;
 
 };
+}
 
-Integrator createIntegrator(const YAML::Node *cfg);
+edog::Integrator createIntegrator(const YAML::Node *cfg);
 
 #endif // INTEGRATOR_H

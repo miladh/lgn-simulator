@@ -1,5 +1,8 @@
 #include "dog.h"
 
+using namespace edog;
+
+
 DOG::DOG(double A, double a, double B, double b)
     : m_A(A)
     , m_a(a)

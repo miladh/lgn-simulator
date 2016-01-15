@@ -2,8 +2,8 @@
 #define THRESHOLDNONLINEARITY_H
 
 #include "staticnonlinearity.h"
-#include "../math/functions.h"
-
+#include "math/functions.h"
+namespace edog {
 class ThresholdNonlinearity : public StaticNonlinearity
 {
 public:
@@ -19,7 +19,8 @@ private:
     double m_weight = 0.0;
 
 };
+}
 
-ThresholdNonlinearity createThresholdNonlinearity(const YAML::Node *cfg);
+edog::ThresholdNonlinearity createThresholdNonlinearity(const YAML::Node *cfg);
 
 #endif // THRESHOLDNONLINEARITY_H

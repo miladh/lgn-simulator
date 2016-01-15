@@ -4,6 +4,8 @@
 
 #include "temporalKernels/temporalkernel.h"
 
+namespace edog {
+
 class DampedOscillator : public TemporalKernel
 {
 public:
@@ -20,6 +22,7 @@ private:
     double m_weight;
 };
 
-DampedOscillator createDampedOscillatorTemporalKernel(const YAML::Node *cfg);
+}
+edog::DampedOscillator createDampedOscillatorTemporalKernel(const YAML::Node *cfg);
 
 #endif // DAMPEDOSCILLATOR_H

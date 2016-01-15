@@ -1,12 +1,12 @@
 #ifndef NATURALSCENEVIDEO_H
 #define NATURALSCENEVIDEO_H
 
-#include "stimuli.h"
+#include "stimuli/stimuli.h"
 
 #include "opencv2/core/core.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/photo/photo.hpp"
-
+namespace edog {
 class NaturalSceneVideo : public Stimulus
 {
 public:
@@ -25,7 +25,7 @@ private:
     void readScene();
 };
 
-unique_ptr<NaturalSceneVideo> createNaturalSceneVideoStimulus(Integrator *integrator,
+}
+unique_ptr<edog::NaturalSceneVideo> createNaturalSceneVideoStimulus(edog::Integrator *integrator,
                                                   const YAML::Node *cfg);
-
 #endif // NATURALSCENEVIDEO_H

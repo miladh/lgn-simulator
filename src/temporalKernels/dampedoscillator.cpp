@@ -1,5 +1,7 @@
 #include "dampedoscillator.h"
 
+using namespace edog;
+
 
 DampedOscillator::DampedOscillator(double phaseDuration, double weight)
     : m_phaseDuration(phaseDuration)

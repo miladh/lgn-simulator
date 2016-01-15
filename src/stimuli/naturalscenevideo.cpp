@@ -1,5 +1,8 @@
 #include "naturalscenevideo.h"
 
+using namespace edog;
+
+
 NaturalSceneVideo::NaturalSceneVideo(Integrator *integrator, string sceneFilename)
     : Stimulus(integrator)
     , m_sceneFilename(sceneFilename)

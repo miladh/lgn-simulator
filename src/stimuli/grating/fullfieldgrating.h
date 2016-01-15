@@ -4,7 +4,7 @@
 #include "grating.h"
 
 
-
+namespace edog {
 class FullFieldGrating : public Grating
 {
 public:
@@ -17,5 +17,5 @@ private:
     virtual double fourierTransformAtFrequency(vec2 k, double w);
 };
 
-
+}
 #endif // FULLFIELDGRATING_H

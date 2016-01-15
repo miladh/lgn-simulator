@@ -1,5 +1,7 @@
 #include "stimuli.h"
 
+using namespace edog;
+
 
 Stimulus::Stimulus(Integrator *integrator)
     : m_integrator(integrator)

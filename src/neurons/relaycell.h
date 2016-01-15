@@ -2,7 +2,7 @@
 #define RELAYCELL_H
 
 #include "neuron.h"
-
+namespace edog {
 class RelayCell : public Neuron
 {
 public:
@@ -16,5 +16,5 @@ private:
     complex<double> impulseResponseFourierTransformAtFrequency(int idx, int jdx, int kdx);
     void computeNeededcubes();
 };
-
+}
 #endif // RELAYCELL_H

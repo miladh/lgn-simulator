@@ -9,7 +9,7 @@
 using namespace std;
 using namespace arma;
 
-
+namespace edog {
 class SpatialKernel
 {
 public:
@@ -20,5 +20,5 @@ public:
     virtual double fourierTransform(vec2 kVec) = 0;
 
 };
-
+}
 #endif // SPATIALKERNELS_H

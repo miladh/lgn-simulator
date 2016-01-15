@@ -1,5 +1,8 @@
 #include "temporaldelta.h"
 
+using namespace edog;
+
+
 TemporalDelta::TemporalDelta(double delay)
     :m_delay(delay)
 {

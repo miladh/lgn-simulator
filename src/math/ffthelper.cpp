@@ -1,5 +1,8 @@
 #include "ffthelper.h"
 
+using namespace edog;
+
+
 FFTHelper::FFTHelper()
 {
 

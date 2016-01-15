@@ -3,7 +3,7 @@
 
 #include "staticnonlinearity.h"
 #include "math/functions.h"
-
+namespace edog {
 class HeavisideNonlinearity : public StaticNonlinearity
 {
 public:
@@ -14,5 +14,5 @@ public:
 protected:
     virtual double advance(const double u);
 };
-
+}
 #endif // HEAVISIDENONLINEARITY_H

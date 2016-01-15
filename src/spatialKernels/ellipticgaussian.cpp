@@ -1,5 +1,8 @@
 #include "ellipticgaussian.h"
 
+using namespace edog;
+
+
 EllipticGaussian::EllipticGaussian(double weight, double angle,
                                    double widthLong, double widthNarrow)
     : m_weight(weight)

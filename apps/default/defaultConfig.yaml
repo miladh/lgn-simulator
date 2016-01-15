@@ -12,10 +12,10 @@ mask: "circle" # none/circle/gauss
 maskSize: 0.8
 
 # NaturalScene:
-sceneFilename: "../../stimuli/lena.png"
+sceneFilename: "../../../stimuli/lena.png"
 
 # NaturalSceneVideo:
-videoFilename: "../../stimuli/minions.mp4"
+videoFilename: "../../../stimuli/minions.mp4"
 
 
 #------------spatialKernelSettings-----------------#
@@ -58,6 +58,6 @@ exponent: 2.0
 
 
 #------------File manager settings-----------------#
-outputFilePath: "../../eDOG/DATA/"
+outputFilePath: "../../../eDOG/DATA"
 #outputFilePath: "/home/milad/kurs"
 

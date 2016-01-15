@@ -6,7 +6,7 @@
 
 using namespace std;
 using namespace arma;
-
+using namespace edog;
 
 void runTest(int ns, int nt, double dt, double c)
 {

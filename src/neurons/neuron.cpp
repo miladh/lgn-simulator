@@ -1,5 +1,8 @@
 #include "neuron.h"
 
+using namespace edog;
+
+
 Neuron::Neuron(Integrator *integrator, StaticNonlinearity *staticNonlinearity)
     : m_integrator(integrator)
     , m_staticNonlinearity(staticNonlinearity)

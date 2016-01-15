@@ -1,5 +1,8 @@
 #include "decayingexponential.h"
 
+using namespace edog;
+
+
 DecayingExponential::DecayingExponential(double tau, double delay)
     : m_tau(tau)
     , m_delay(delay)

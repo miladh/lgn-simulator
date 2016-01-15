@@ -1,35 +1,12 @@
 #include <iostream>
-
-#include <outputmanager.h>
+#include <yaml-cpp/yaml.h>
 #include <unistd.h>
 #include <time.h>
 
-#include "stimuli/grating/grating.h"
-#include "stimuli/staticimage.h"
-#include "stimuli/naturalscenevideo.h"
-
-#include "integrator.h"
-
-#include "neurons/ganglioncell.h"
-#include "neurons/interneuron.h"
-#include "neurons/relaycell.h"
-#include "neurons/corticalcell.h"
-
-#include "spatialKernels/dog.h"
-#include "spatialKernels/ellipticgaussian.h"
-
-#include "temporalKernels/decayingexponential.h"
-#include "temporalKernels/dampedoscillator.h"
-#include "temporalKernels/temporallyconstant.h"
-#include "temporalKernels/temporaldelta.h"
-
-#include "staticNonlinearity/thresholdnonlinearity.h"
-#include "staticNonlinearity/heavisidenonlinearity.h"
-#include "staticNonlinearity/sigmoidalnonlinearity.h"
-
-#include <yaml-cpp/yaml.h>
+#include <edog.h>
 
 using namespace std;
+using namespace edog;
 
 int main()
 {
@@ -40,7 +17,7 @@ int main()
 
 
     //read config file-------------------------------------------------------
-    YAML::Node cfg = YAML::LoadFile("../../eDOG/app/app_config.yaml");
+    YAML::Node cfg = YAML::LoadFile("../../../eDOG/apps/default/defaultConfig.yaml");
 
     //Output manager:----------------------------------------------------------
     OutputManager io(&cfg);

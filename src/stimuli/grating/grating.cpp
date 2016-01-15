@@ -4,6 +4,9 @@
 #include "circlemaskgrating.h"
 #include "gaussianmaskgrating.h"
 
+using namespace edog;
+
+
 Grating::Grating(Integrator *integrator,
                  vec2 kd, double wd, double contrast, double maskSize)
     : Stimulus(integrator)

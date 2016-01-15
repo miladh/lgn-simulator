@@ -4,6 +4,8 @@
 #include "temporalKernels/temporalkernel.h"
 #include "spatialKernels/spatialkernel.h"
 
+using namespace edog;
+
 class KernelSettings
 {
 public:

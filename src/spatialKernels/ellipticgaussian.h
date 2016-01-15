@@ -2,7 +2,7 @@
 #define ELLIPTICGAUSSIAN_H
 
 #include "spatialkernel.h"
-
+namespace edog {
 class EllipticGaussian : public SpatialKernel
 {
 public:
@@ -23,7 +23,8 @@ private:
     double m_sinTheta = 0.0;
 };
 
-EllipticGaussian createEllipticGaussianSpatialKernel(const YAML::Node *cfg);
+}
 
+edog::EllipticGaussian createEllipticGaussianSpatialKernel(const YAML::Node *cfg);
 
 #endif // ELLIPTICGAUSSIAN_H

@@ -1,13 +1,12 @@
 #ifndef DOG_H
 #define DOG_H
 
-#include <armadillo>
 #include "spatialkernel.h"
 
 using namespace std;
 using namespace arma;
 
-
+namespace edog {
 class DOG : public SpatialKernel
 {
 public:
@@ -27,7 +26,8 @@ private:
 
 
 };
+}
 
-DOG createDOGSpatialKernel(const YAML::Node *cfg);
+edog::DOG createDOGSpatialKernel(const YAML::Node *cfg);
 
 #endif // DOG_H

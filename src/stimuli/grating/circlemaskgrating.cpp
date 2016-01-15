@@ -1,5 +1,8 @@
 #include "circlemaskgrating.h"
 
+using namespace edog;
+
+
 CircleMaskGrating::CircleMaskGrating(Integrator *integrator,
                            vec2 kd, double wd, double contrast, double maskSize)
     : Grating(integrator, kd, wd, contrast, maskSize)

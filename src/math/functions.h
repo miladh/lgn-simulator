@@ -11,6 +11,7 @@
 
 using namespace arma;
 
+namespace edog {
 class Functions
 {
 public:
@@ -22,5 +23,5 @@ public:
     static int isOdd(int num);
 
 };
-
+}
 #endif // FUNCTIONS_H
