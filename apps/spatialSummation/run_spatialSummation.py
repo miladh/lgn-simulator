@@ -8,13 +8,13 @@ sys.path.append(lib_path)
 
 import Edog_runner as edog_runner
 
+for arg in argv:
+    print arg
+
 parser = ArgumentParser()
 parser.add_argument("--id", nargs='?')
 parser.add_argument("config_file")
 args = parser.parse_args()
-
-for arg in argv:
-    print arg
 
 config_file = args.config_file
 run_id = "spatialSummation"
