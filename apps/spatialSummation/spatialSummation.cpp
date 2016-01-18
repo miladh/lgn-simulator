@@ -8,7 +8,7 @@
 using namespace std;
 using namespace edog;
 
-int main()
+int main(int argc, char* argv[])
 {
 
     cout << "=====Extended-DOG Model=====" << endl;
@@ -16,11 +16,22 @@ int main()
     t = clock();
 
 
+//    string outputPath = "../../../eDOG/apps/spatialSummation/spatialSummationConfig.yaml";
+    if(argc < 3) {
+        cerr << "Too few arguments." << endl;
+        return 1;
+    }
+//    if(argc >= 3) {
+//        string outputPath = argv[2];
+//        outputPath += "/";
+//        cout << "Output will be written to " << outputPath << endl;
+//    }
+
     //read config file-------------------------------------------------------
-    YAML::Node cfg = YAML::LoadFile("../../../eDOG/apps/spatialSummation/spatialSummationConfig.yaml");
+    YAML::Node cfg = YAML::LoadFile(argv[1]);
 
     //Output manager:----------------------------------------------------------
-    OutputManager io(&cfg);
+    OutputManager io(&cfg, argv[2]);
 
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);

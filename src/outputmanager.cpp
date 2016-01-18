@@ -4,11 +4,11 @@
 using namespace edog;
 
 
-OutputManager::OutputManager(const YAML::Node *cfg)
+OutputManager::OutputManager(const YAML::Node *cfg, const string outputFilePath)
     : m_cfg(cfg)
 {
 
-    string outputFilePath = (*m_cfg)["outputFilePath"].as<std::string>();
+//    string outputFilePath = (*m_cfg)["outputFilePath"].as<std::string>();
     m_outputFileName << outputFilePath << "/output.h5";
     m_output = new H5File (m_outputFileName.str(), H5F_ACC_TRUNC);
 

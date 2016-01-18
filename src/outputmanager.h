@@ -18,7 +18,7 @@ namespace edog {
 class OutputManager
 {
 public:
-    OutputManager(const YAML::Node *cfg);
+    OutputManager(const YAML::Node *cfg, const string outputFilePath);
     ~OutputManager();
 
     void writeResponse(const vector<Neuron *> &neurons,
