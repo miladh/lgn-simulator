@@ -9,13 +9,14 @@ sys.path.append(lib_path)
 import Edog_runner as edog_runner
 
 parser = ArgumentParser()
+parser.add_argument("--id", nargs='?')
 parser.add_argument("config_file")
 args = parser.parse_args()
 
-config_file = argv[1]
+config_file = args.config_file
 run_id = "spatialSummation"
 app_name = "spatialSummation"
 
-edog_runner.run_edog(run_id, app_name, config_file)
+edog_runner.run_edog(args.id, app_name, config_file)
 
 #Plotting
