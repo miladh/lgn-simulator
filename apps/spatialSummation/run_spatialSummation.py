@@ -60,8 +60,8 @@ exp = sim[0]
 
 nPoints = 5
 cells = ["ganglion"]
-idx = sort(random.randint(0, exp.num_points, nPoints))
-idy = sort(random.randint(0, exp.num_points, nPoints))
+idx = [0, 5, 10]
+idy = [0, 5, 10]
 t = exp.time_vec
 
 fig = figure(figsize=(16,12))
