@@ -17,14 +17,13 @@ import matplotlib.pyplot as mplt
 
 parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
-parser.add_argument("--run_edog", default=False)
 parser.add_argument("--data_path", default=None)
 args = parser.parse_args()
 
 app_name = "spatialSummation"
 data_path = args.data_path
 
-if args.run_edog==True:
+if args.config_file!=None:
     print "Running edog..."
     config_file = args.config_file
     run_id = edog_runner.run_edog(app_name, config_file)
@@ -35,6 +34,7 @@ else:
         print "Data path not given...."
 
 data_files = glob.glob1(data_path,'*.h5')
+print data_files
 num_data_files = len(data_files)
 sim = []
 
