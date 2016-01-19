@@ -29,7 +29,7 @@ if args.run_edog==True:
     run_id = edog_runner.run_edog(app_name, config_file)
     data_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "Data", run_id)
     print data_path
-    
+
 
 if data_path==None:
     print "Data path not given...."
@@ -42,7 +42,7 @@ for i in range(num_data_files):
     data_file = os.path.join(data_path, data_files[i])
     f = h5py.File(data_file, "r")
     sim.append(Simulation.Simulation(f))
-    
+
 
 exp = sim[0]
 
