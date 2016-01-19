@@ -13,9 +13,8 @@ parser.add_argument("config_file")
 args = parser.parse_args()
 
 config_file = args.config_file
-run_id = "spatialSummation"
 app_name = "spatialSummation"
 
-edog_runner.run_edog(0, app_name, config_file)
+edog_runner.run_edog(app_name, config_file)
 
 #Plotting
