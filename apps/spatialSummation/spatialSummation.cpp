@@ -21,11 +21,6 @@ int main(int argc, char* argv[])
         cerr << "Too few arguments." << endl;
         return 1;
     }
-//    if(argc >= 3) {
-//        string outputPath = argv[2];
-//        outputPath += "/";
-//        cout << "Output will be written to " << outputPath << endl;
-//    }
 
     //read config file-------------------------------------------------------
     YAML::Node cfg = YAML::LoadFile(argv[1]);
