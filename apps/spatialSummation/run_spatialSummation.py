@@ -89,4 +89,4 @@ for c, cell in enumerate(cells):
     ax.set_title(cell, fontsize = 16)
 
 mplt.tight_layout()
-fig.savefig(os.path.join(data_path, "rat_cellResponse.pdf"))
+fig.savefig(os.path.join(data_path, "rat_cellResponse.png"))
