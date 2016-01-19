@@ -20,7 +20,7 @@ args = parser.parse_args()
 
 app_name = "spatialSummation"
 
-if args.run_edog
+if args.run_edog:
     print "Running edog..."
     config_file = args.config_file
     edog_runner.run_edog(app_name, config_file)
