@@ -9,7 +9,6 @@ sys.path.append(lib_path)
 import Edog_runner as edog_runner
 
 parser = ArgumentParser()
-# parser.add_argument("--id", nargs='?')
 parser.add_argument("config_file")
 args = parser.parse_args()
 
