@@ -4,7 +4,7 @@ import h5py
 import glob
 from sys import argv
 from argparse import ArgumentParser
-from pylab import*
+import numpy as np
 current_path = os.path.dirname(os.path.realpath(__file__))
 lib_path = os.path.abspath(os.path.join(current_path, "..","..","tools"))
 sys.path.append(lib_path)
@@ -60,11 +60,11 @@ exp = sim[0]
 
 nPoints = 5
 cells = ["ganglion"]
-idx = [0, 5, 10]
-idy = [0, 5, 10]
+idx = np.sort(np.random.randint(0, exp.num_points, nPoints))
+idy = np.sort(np.random.randint(0, exp.num_points, nPoints))
 t = exp.time_vec
 
-fig = figure(figsize=(16,12))
+fig = mplt.figure(figsize=(16,12))
 n = 0
 for c, cell in enumerate(cells):
     spikeTrains = []
@@ -85,8 +85,8 @@ for c, cell in enumerate(cells):
 
     n+=1
     ax = fig.add_subplot(len(cells), 2, n)
-    ax = pl.raster(spikeTrains, figsize = (6,6), ax = ax)
+    ax = plt.raster(spikeTrains, figsize = (6,6), ax = ax)
     ax.set_title(cell, fontsize = 16)
 
-tight_layout()
+mplt.tight_layout()
 fig.savefig("rat_cellResponse.pdf")
