@@ -17,8 +17,8 @@ import matplotlib.pyplot as mplt
 
 parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
-parser.add_argument("run_edog", default=False)
-parser.add_argument("data_path", default=None)
+parser.add_argument("--run_edog", default=False)
+parser.add_argument("--data_path", default=None)
 args = parser.parse_args()
 
 app_name = "spatialSummation"
