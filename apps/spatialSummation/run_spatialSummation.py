@@ -9,7 +9,7 @@ current_path = os.path.dirname(os.path.realpath(__file__))
 lib_path = os.path.abspath(os.path.join(current_path, "..","..","tools"))
 sys.path.append(lib_path)
 
-#import Edog_runner as edog_runner
+import Edog_runner as edog_runner
 import Simulation
 import PlottingTools as plt
 import matplotlib.pyplot as mplt
