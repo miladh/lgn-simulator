@@ -10,7 +10,7 @@ OutputManager::OutputManager(const YAML::Node *cfg)
 
     string outputFile = (*m_cfg)["outputFile"].as<std::string>();
     m_output = new H5File (outputFile, H5F_ACC_TRUNC);
-    cout << outputFile << endl;
+
     initialize();
 
 }
