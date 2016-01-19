@@ -1,18 +1,12 @@
 #!/usr/bin/python
 import os, sys
-import h5py
-import glob
 from sys import argv
 from argparse import ArgumentParser
-import numpy as np
 current_path = os.path.dirname(os.path.realpath(__file__))
 lib_path = os.path.abspath(os.path.join(current_path, "..","..","tools"))
 sys.path.append(lib_path)
 
 import Edog_runner as edog_runner
-import Simulation
-import PlottingTools as plt
-import matplotlib.pyplot as mplt
 
 parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
