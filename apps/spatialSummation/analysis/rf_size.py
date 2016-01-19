@@ -66,4 +66,4 @@ for c, cell in enumerate(cells):
 
 mplt.tight_layout()
 mplt.show()
-fig.savefig(os.path.join(data_path, "rat_cellResponse.png"))
+fig.savefig(os.path.join(output_dir, "rat_cellResponse.png"))
