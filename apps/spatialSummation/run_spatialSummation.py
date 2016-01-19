@@ -4,6 +4,7 @@ import h5py
 import glob
 from sys import argv
 from argparse import ArgumentParser
+from pylab import*
 current_path = os.path.dirname(os.path.realpath(__file__))
 lib_path = os.path.abspath(os.path.join(current_path, "..","..","tools"))
 sys.path.append(lib_path)
