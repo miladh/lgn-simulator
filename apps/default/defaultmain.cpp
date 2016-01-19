@@ -20,7 +20,7 @@ int main()
     YAML::Node cfg = YAML::LoadFile("../../../eDOG/apps/default/defaultConfig.yaml");
 
     //Output manager:----------------------------------------------------------
-    OutputManager io(&cfg, "../../../eDOG/DATA");
+    OutputManager io(&cfg);
 
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);

@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 
 
 //    string outputPath = "../../../eDOG/apps/spatialSummation/spatialSummationConfig.yaml";
-    if(argc < 3) {
+    if(argc < 2) {
         cerr << "Too few arguments." << endl;
         return 1;
     }
@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
     YAML::Node cfg = YAML::LoadFile(argv[1]);
 
     //Output manager:----------------------------------------------------------
-    OutputManager io(&cfg, argv[2]);
+    OutputManager io(&cfg);
 
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);
