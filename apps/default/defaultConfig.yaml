@@ -58,6 +58,6 @@ exponent: 2.0
 
 
 #------------File manager settings-----------------#
-outputFilePath: "../../../eDOG/DATA"
+outputFilePath: "../../../eDOG/apps/default/data"
 #outputFilePath: "/home/milad/kurs"
 
