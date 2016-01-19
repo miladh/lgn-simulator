@@ -20,11 +20,12 @@ args = parser.parse_args()
 
 app_name = "spatialSummation"
 
+# Run edog:---------------------------------------------------------------------
 config_file = args.config_file
 run_id = edog_runner.run_edog(app_name, config_file)
 data_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "Data", run_id)
 
-
+# Read data:--------------------------------------------------------------------
 data_files = glob.glob1(data_path,'*.h5')
 num_data_files = len(data_files)
 sim = []
@@ -35,6 +36,7 @@ for i in range(num_data_files):
     sim.append(Simulation.Simulation(f))
 
 
+# Plotting: --------------------------------------------------------------------
 exp = sim[0]
 
 nPoints = 5
