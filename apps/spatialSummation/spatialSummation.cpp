@@ -30,8 +30,6 @@ int main(int argc, char* argv[])
     //read config file-------------------------------------------------------
     YAML::Node cfg = YAML::LoadFile(argv[1]);
 
-    string outputFilePath = cfg["outputFilePath"].as<std::string>();
-    cout << outputFilePath << endl;
 
     //Output manager:----------------------------------------------------------
     OutputManager io(&cfg);
