@@ -8,9 +8,8 @@ OutputManager::OutputManager(const YAML::Node *cfg)
     : m_cfg(cfg)
 {
 
-    string outputFilePath = (*m_cfg)["outputFilePath"].as<std::string>();
-    m_outputFileName << outputFilePath << "/output.h5";
-    m_output = new H5File (m_outputFileName.str(), H5F_ACC_TRUNC);
+    string outputFile = (*m_cfg)["outputFile"].as<std::string>();
+    m_output = new H5File (outputFile, H5F_ACC_TRUNC);
 
     initialize();
 
