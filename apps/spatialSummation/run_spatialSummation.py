@@ -14,49 +14,28 @@ import Simulation
 import PlottingTools as plt
 import matplotlib.pyplot as mplt
 
-
 parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
-parser.add_argument("--data_path", default=None)
 args = parser.parse_args()
 
 app_name = "spatialSummation"
-data_path = args.data_path
 
-if args.config_file!=None:
-    print "Running edog..."
-    config_file = args.config_file
-    run_id = edog_runner.run_edog(app_name, config_file)
-    data_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "Data", run_id)
-    print data_path
-else:
-    if data_path==None:
-        print "Data path not given...."
+config_file = args.config_file
+run_id = edog_runner.run_edog(app_name, config_file)
+data_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "Data", run_id)
+
 
 data_files = glob.glob1(data_path,'*.h5')
-print data_files
 num_data_files = len(data_files)
 sim = []
 
 for i in range(num_data_files):
     data_file = os.path.join(data_path, data_files[i])
-    print data_file
     f = h5py.File(data_file, "r")
     sim.append(Simulation.Simulation(f))
 
 
 exp = sim[0]
-
-#Plotting
-# data = [
-#      [exp.stimulus["spatioTemporal"], "Stimulus"]
-#     ,[exp.ganglion["response"]["spatioTemporal"], "Ganglion cell response"]
-#     ,[exp.ganglion["impulseResponse"]["spatioTemporal"], "Ganglion cell impulse response"]
-#     ]
-# plt.animateImshowPlots(data,exp.dt, colorbar = True, save_animation = False, animation_name = "rat")
-# mplt.show()
-
-
 
 nPoints = 5
 cells = ["ganglion"]
