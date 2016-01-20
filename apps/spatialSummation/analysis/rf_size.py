@@ -15,7 +15,7 @@ parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
 args = parser.parse_args()
 config_file = args.config_file
-sims, output_dir = get_simulations.get_simulation_environment(config_file)
+sims, output_dir = get_simulations.get_simulation_environment(config_file, False)
 
 
 # Analysis: --------------------------------------------------------------------
@@ -44,4 +44,4 @@ for c, cell in enumerate(cells):
     n+=1
 mplt.tight_layout()
 mplt.show()
-fig.savefig(os.path.join(output_dir, "rat_cellResponse.png"))
+# fig.savefig(os.path.join(output_dir, "rat_cellResponse.png"))

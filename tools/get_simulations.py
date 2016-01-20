@@ -6,12 +6,14 @@ import h5py
 from sumatra.projects import load_project
 import Simulation
 
-def get_simulation_environment(config_file):
+def get_simulation_environment(config_file, record=True):
 
+    run_id = "tmp"
     with open(config_file, 'r') as stream:
         config_data = yaml.load(stream)
         data_ids = config_data["simulation_ids"]
-        run_id = config_data["sumatra_label"]
+        if record:
+            run_id = config_data["sumatra_label"]
 
     data_path = os.path.abspath(load_project().data_store.root)
     output_dir = os.path.join(data_path, run_id)
