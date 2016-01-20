@@ -7,6 +7,7 @@ from sumatra.projects import load_project
 
 
 current_path = os.path.dirname(os.path.realpath(__file__))
+print current_path
 lib_path = os.path.abspath(os.path.join(current_path,"..", "..","..","tools"))
 sys.path.append(lib_path)
 import Simulation
