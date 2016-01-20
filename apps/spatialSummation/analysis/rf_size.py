@@ -6,6 +6,7 @@ import h5py
 import glob
 import numpy as np
 from sumatra.projects import load_project
+import yaml
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 lib_path = os.path.abspath(os.path.join(current_path,"..", "..","..","tools"))
