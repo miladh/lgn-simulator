@@ -16,7 +16,6 @@ import PlottingTools as plt
 import matplotlib.pyplot as mplt
 
 
-
 parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
 args = parser.parse_args()
@@ -30,10 +29,11 @@ print "sumatra_ids: ", data_ids
 
 with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
+    data_ids = config_data["sumatra_ids"]
     run_id = config_data["sumatra_label"]
 
 data_path = os.path.abspath(load_project().data_store.root)
-output_dir = os.path.join(data_path, run_id, "images")
+output_dir = os.path.join(data_path, run_id)
 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
