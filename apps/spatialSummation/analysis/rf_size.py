@@ -1,9 +1,7 @@
 #!/usr/bin/python
-import os, sys
-from sys import argv
 from argparse import ArgumentParser
-import h5py
 import numpy as np
+import matplotlib.pyplot as mplt
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 lib_path = os.path.abspath(os.path.join(current_path,"..", "..","..","tools"))
@@ -11,18 +9,15 @@ sys.path.append(lib_path)
 import Simulation
 import get_simulations
 import PlottingTools as plt
-import matplotlib.pyplot as mplt
-
 
 parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
 args = parser.parse_args()
-
 config_file = args.config_file
-
 sims, output_dir = get_simulations.get_simulations_and_sumatra_environment(config_file)
-print output_dir
-# Plotting: --------------------------------------------------------------------
+
+
+# Analysis: --------------------------------------------------------------------
 exp = sims[0]
 
 nPoints = 5
