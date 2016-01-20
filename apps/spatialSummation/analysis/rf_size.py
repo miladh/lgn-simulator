@@ -19,8 +19,8 @@ parser.add_argument("config_file", default=None)
 args = parser.parse_args()
 
 config_file = args.config_file
-# Read config file:-------------------------------------------------------------
-sims = get_simulations.get_simulations(config_file)
+
+sims, output_dir = get_simulations.get_simulations_and_sumatra_environment(config_file)
 
 # Plotting: --------------------------------------------------------------------
 exp = sims[0]
