@@ -17,14 +17,17 @@ import matplotlib.pyplot as mplt
 
 
 parser = ArgumentParser()
-parser.add_argument("param_file", default=None)
+parser.add_argument("config_file", default=None)
 args = parser.parse_args()
+
+config_file = args.config_file
+
 
 # data_ids = np.genfromtxt(current_path + "/" + args.param_file, dtype="str")
 data_ids = ["20160119-144916"]
 print "sumatra_ids: ", data_ids
 
-with open(param_file, 'r') as stream:
+with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
     run_id = config_data["sumatra_label"]
 
