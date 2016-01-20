@@ -20,7 +20,7 @@ args = parser.parse_args()
 
 config_file = args.config_file
 # Read config file:-------------------------------------------------------------
-sim = get_simulations.get_simulations(config_file)
+sims = get_simulations.get_simulations(config_file)
 
 # Plotting: --------------------------------------------------------------------
 exp = sims[0]
