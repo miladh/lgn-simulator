@@ -2,7 +2,7 @@ description: "Default config file"
 
 #------------Integrator settings-----------------#
 ns: 8
-nt: 4
+nt: 6
 dt: 0.1
 
 #------------Stimulus settings-----------------#
