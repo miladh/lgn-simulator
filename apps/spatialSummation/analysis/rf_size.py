@@ -20,8 +20,8 @@ parser = ArgumentParser()
 parser.add_argument("param_file", default=None)
 args = parser.parse_args()
 
-
-data_ids = np.genfromtxt(current_path + "/" + args.param_file, dtype="str")
+# data_ids = np.genfromtxt(current_path + "/" + args.param_file, dtype="str")
+data_ids = ["20160119-144916"]
 print "sumatra_ids: ", data_ids
 
 data_path = os.path.abspath(load_project().data_store.root)
