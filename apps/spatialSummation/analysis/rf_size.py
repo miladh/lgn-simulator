@@ -21,7 +21,7 @@ args = parser.parse_args()
 config_file = args.config_file
 
 sims, output_dir = get_simulations.get_simulations_and_sumatra_environment(config_file)
-
+print output_dir
 # Plotting: --------------------------------------------------------------------
 exp = sims[0]
 
