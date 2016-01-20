@@ -19,29 +19,20 @@ sims, output_dir = get_simulations.get_simulation_environment(config_file, False
 
 
 # Analysis: --------------------------------------------------------------------
-exp = sims[0]
+# exp = sims[0]
 
-cells = ["ganglion"]
-idx = exp.num_points * 0.5
-idy = idx
-t = exp.time_vec
+responses = []
+for exp in sims:
+    idx = exp.num_points * 0.5
+    idy = idx
+    t = exp.time_vec
+    print np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy))
+    responses.append(np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy)))
 
+mplt.plot(responses)
 fig = mplt.figure(figsize=(16,12))
-n = 0
-for c, cell in enumerate(cells):
-    responses = []
-    n+=1
-
-    ax  = fig.add_subplot(len(cells), 2, n)
-    responses.append([exp.singleCellTemporalResponse(cell, idx, idy), "ganglion"])
-
-    ax.plot(t, responses[-1][0], label = responses[-1][1],zorder=3)
-    ax.set_xlabel("t[s]", fontsize= 16)
-    ax.set_ylabel("Response",fontsize= 16)
-    ax.set_title(cell, fontsize = 16)
-    ax.legend(frameon=False)
-
-    n+=1
-mplt.tight_layout()
+# set_xlabel("t[s]", fontsize= 16)
+# set_ylabel("Response",fontsize= 16)
+# mplt.tight_layout()
 mplt.show()
 # fig.savefig(os.path.join(output_dir, "rat_cellResponse.png"))
