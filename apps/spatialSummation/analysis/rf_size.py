@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import os
 from argparse import ArgumentParser
 import numpy as np
 import matplotlib.pyplot as mplt
