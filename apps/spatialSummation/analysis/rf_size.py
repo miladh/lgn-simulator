@@ -1,10 +1,11 @@
 #!/usr/bin/python
 import os, sys
+from sys import argv
+from argparse import ArgumentParser
 import h5py
 import glob
 import numpy as np
 from sumatra.projects import load_project
-
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 lib_path = os.path.abspath(os.path.join(current_path,"..", "..","..","tools"))
@@ -15,8 +16,12 @@ import matplotlib.pyplot as mplt
 
 
 
+parser = ArgumentParser()
+parser.add_argument("param_file", default=None)
+args = parser.parse_args()
 
-data_ids = np.genfromtxt(current_path + "/sumatra_ids.param", dtype="str")
+
+data_ids = np.genfromtxt(current_path + "/" + args.param_file, dtype="str")
 print "sumatra_ids: ", data_ids
 
 data_path = os.path.abspath(load_project().data_store.root)
