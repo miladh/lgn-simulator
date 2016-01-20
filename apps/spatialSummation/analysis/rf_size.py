@@ -25,7 +25,7 @@ data_ids = ["20160119-144916"]
 print "sumatra_ids: ", data_ids
 
 data_path = os.path.abspath(load_project().data_store.root)
-output_dir = os.path.join(data_path, "../images")
+output_dir = os.path.join(data_path, "images")
 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
