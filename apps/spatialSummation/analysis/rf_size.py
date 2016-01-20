@@ -7,7 +7,6 @@ from sumatra.projects import load_project
 
 
 current_path = os.path.dirname(os.path.realpath(__file__))
-print current_path
 lib_path = os.path.abspath(os.path.join(current_path,"..", "..","..","tools"))
 sys.path.append(lib_path)
 import Simulation
@@ -15,8 +14,9 @@ import PlottingTools as plt
 import matplotlib.pyplot as mplt
 
 
-data_ids = ["20160119-144916"]
 
+
+data_ids = np.genfromtxt(current_path + "/sumatra_ids.param", dtype="str")
 print "sumatra_ids: ", data_ids
 
 data_path = os.path.abspath(load_project().data_store.root)
