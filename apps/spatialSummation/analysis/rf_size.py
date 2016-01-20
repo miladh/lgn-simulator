@@ -24,8 +24,7 @@ config_file = args.config_file
 
 
 # data_ids = np.genfromtxt(current_path + "/" + args.param_file, dtype="str")
-data_ids = ["20160119-144916"]
-print "sumatra_ids: ", data_ids
+# data_ids = ["20160119-144916"]
 
 with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
@@ -34,6 +33,9 @@ with open(config_file, 'r') as stream:
 
 data_path = os.path.abspath(load_project().data_store.root)
 output_dir = os.path.join(data_path, run_id)
+
+print "sumatra_ids: ", data_ids
+print "Results saved to this directory:\n", output_dir + "/*"
 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
