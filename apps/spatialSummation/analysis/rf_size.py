@@ -3,15 +3,13 @@ import os, sys
 from sys import argv
 from argparse import ArgumentParser
 import h5py
-import glob
 import numpy as np
-from sumatra.projects import load_project
-import yaml
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 lib_path = os.path.abspath(os.path.join(current_path,"..", "..","..","tools"))
 sys.path.append(lib_path)
 import Simulation
+import get_simulations
 import PlottingTools as plt
 import matplotlib.pyplot as mplt
 
@@ -20,32 +18,8 @@ parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
 args = parser.parse_args()
 
-config_file = args.config_file
-
-
-# data_ids = np.genfromtxt(current_path + "/" + args.param_file, dtype="str")
-# data_ids = ["20160119-144916"]
-
-with open(config_file, 'r') as stream:
-    config_data = yaml.load(stream)
-    data_ids = config_data["sumatra_ids"]
-    run_id = config_data["sumatra_label"]
-
-data_path = os.path.abspath(load_project().data_store.root)
-output_dir = os.path.join(data_path, run_id)
-
-print "sumatra_ids: ", data_ids
-print "Results saved to this directory:\n", output_dir + "/*"
-
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-
-# Read data:--------------------------------------------------------------------
-sims = []
-for data_id in data_ids:
-    data_file = os.path.join(data_path, data_id, data_id +".h5")
-    f = h5py.File(data_file, "r")
-    sims.append(Simulation.Simulation(f))
+# Read config file:-------------------------------------------------------------
+sim = get_simulations.get_simulations(args.confing_file)
 
 # Plotting: --------------------------------------------------------------------
 exp = sims[0]
