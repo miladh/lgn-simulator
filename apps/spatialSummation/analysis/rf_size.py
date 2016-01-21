@@ -32,7 +32,7 @@ for i, (x, y) in enumerate(zip(cell_pos_x, cell_pos_y)):
     for j, exp in enumerate(sims):
         idx = exp.num_points * x
         idy = exp.num_points * y
-        spot_diameter[j] = exp.maskSize
+        spot_diameter[j] = exp.stimulus.maskSize
         responses[i,j] = np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy))
 
     label = "{0:.2f}".format(cell_pos_x[i]) + "," + "{0:.2f}".format(cell_pos_y[i])
