@@ -1,4 +1,8 @@
 import numpy as np
+import h5py
+
+import Stimulus
+
 
 class Simulation:
     """
@@ -18,15 +22,7 @@ class Simulation:
         for item in h5_file.keys():
             if(item == "stimulus"):
                 stim_group = h5_file.get("/" + str(item))
-                for attr in stim_group.attrs.keys():
-                    setattr(self, attr, stim_group.attrs[attr])
-
-                spaces = stim_group.keys()
-                data = {}
-                for space in spaces:
-                    values = h5_file.get("/" + str(item) + "/" + str(space))
-                    data.update({str(space):  np.array(values)})
-                    setattr(self, item, data)
+                self.stimulus = Stimulus.Stimulus(stim_group)
 
             else:
                 self.cellTypes.append(item)
@@ -93,5 +89,5 @@ if __name__ == "__main__":
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     sim = Simulation(f)
-    print sim.ganglion["response"].keys()
-    print sim.maskSize
+    # print sim.ganglion["response"].keys()
+    # print sim.maskSize

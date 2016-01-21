@@ -199,7 +199,7 @@ if __name__ == "__main__":
     print exp.ganglion["impulseResponse"]["spatioTemporal"].min()
     print exp.ganglion["impulseResponse"]["spatioTemporal"].max()
     data = [
-     [exp.stimulus["spatioTemporal"], "Stimulus"]
+     [exp.stimulus.spatioTemporal, "Stimulus"]
     ,[exp.ganglion["response"]["spatioTemporal"], "Ganglion cell response"]
     ,[exp.ganglion["impulseResponse"]["spatioTemporal"], "Ganglion cell impulse response"]
     # ,[exp.interneuron["response"]["spatioTemporal"], "Interneuron"]
