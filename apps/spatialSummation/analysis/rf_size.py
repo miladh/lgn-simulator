@@ -15,6 +15,8 @@ parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
 args = parser.parse_args()
 config_file = args.config_file
+
+
 sims, output_dir = get_simulations.get_simulation_environment(config_file, record=False)
 
 
@@ -23,10 +25,9 @@ sims, output_dir = get_simulations.get_simulation_environment(config_file, recor
 
 responses = []
 for exp in sims:
-    idx = exp.num_points * 0.4
+    idx = exp.num_points * 0.5
     idy = idx
     t = exp.time_vec
-    print np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy))
     responses.append(np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy)))
 
 fig = mplt.figure(figsize=(8,6))

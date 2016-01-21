@@ -7,7 +7,7 @@ dt: 0.1
 
 #------------Stimulus settings-----------------#
 # Grating:
-C: 1.
+C: 1.0
 mask: "circle" # none/circle/gauss
 maskSize: 0.05
 
@@ -21,9 +21,9 @@ videoFilename: "../../../stimuli/minions.mp4"
 #------------spatialKernelSettings-----------------#
 # DOG
 A: 1.0
-a: 0.2
+a: 0.06
 B: 0.8
-b: 0.4
+b: 0.12
 
 # EllipticGaussian
 weight_elliptic: 2.3

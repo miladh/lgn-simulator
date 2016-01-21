@@ -189,6 +189,7 @@ if __name__ == "__main__":
 
     # outputFilePath="/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/apps/default/data/*.h5"
     outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/DATA/spatialSummation/tmp/*.h5"
+    # outputFilePath ="/home/milad/Dropbox/projects/edog/extendedDOG/DATA/spatialSummation/20160121-104849/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)

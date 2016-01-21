@@ -7,7 +7,6 @@ from sumatra.projects import load_project
 import Simulation
 
 def get_simulation_environment(config_file, record=True):
-
     run_id = "tmp"
     with open(config_file, 'r') as stream:
         config_data = yaml.load(stream)
