@@ -15,7 +15,7 @@ parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
 args = parser.parse_args()
 config_file = args.config_file
-sims, output_dir = get_simulations.get_simulation_environment(config_file, record=True)
+sims, output_dir = get_simulations.get_simulation_environment(config_file, record=False)
 
 
 # Analysis: --------------------------------------------------------------------
@@ -29,10 +29,10 @@ for exp in sims:
     print np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy))
     responses.append(np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy)))
 
-fig = mplt.figure(figsize=(16,12))
+fig = mplt.figure(figsize=(8,6))
 mplt.plot(responses)
 # set_xlabel("t[s]", fontsize= 16)
 # set_ylabel("Response",fontsize= 16)
 # mplt.tight_layout()
-# mplt.show()
+mplt.show()
 fig.savefig(os.path.join(output_dir, "rat_cellResponse.png"))

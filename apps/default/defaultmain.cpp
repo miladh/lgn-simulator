@@ -27,8 +27,8 @@ int main()
 
 //    Stim---------------------------------------------------------------------
 //        unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(&integrator,&cfg);
-        unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator,&cfg);
-//        unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
+//        unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator,&cfg);
+        unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
 
 
 
@@ -42,10 +42,9 @@ int main()
 //    DecayingExponential Kt_rg(0.21,0);
 //    DecayingExponential Kt_rig(0.30,0);
 //    DecayingExponential Kt_rc(0.42,0.10);
-    TemporalDelta Kt_cr(0.4);
 //    DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
 //        TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
-
+    TemporalDelta Kt_cr(0.4);
 
     //Static nonlinearity-------------------------------------------------------------
 //    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);

@@ -36,19 +36,17 @@ int main(int argc, char* argv[])
     unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
 
 
-
     //Spatial kernels:----------------------------------------------------------
     DOG dog = createDOGSpatialKernel(&cfg);
 
 
     //Temporal kernels:-------------------------------------------------------
-    TemporalDelta Kt_cr(0.4);
+    TemporalDelta temporalDelta = createTemporalDeltaKernel(&cfg);
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &Kt_cr/*, &staticNonlinearity*/);
+    GanglionCell ganglion(&integrator, &dog, &temporalDelta);
 
-    vector<Neuron *> neurons;
-    neurons.push_back(&ganglion);
+
 
     //Compute:-----------------------------------------------------------------
     S->computeSpatiotemporal();
@@ -56,17 +54,15 @@ int main(int argc, char* argv[])
     io.writeStimulus(S.get());
     S->clearSpatioTemporal();
 
-    for(Neuron* neuron : neurons){
 
-        neuron->computeResponse(S.get());
-        io.writeResponse(neuron);
-        neuron->clearResponse();
+    ganglion.computeResponse(S.get());
+    io.writeResponse(&ganglion);
+    ganglion.clearResponse();
 
-        neuron->computeImpulseResponse();
-        io.writeImpulseResponse(neuron);
-        neuron->clearImpulseResponse();
+    ganglion.computeImpulseResponse();
+    io.writeImpulseResponse(&ganglion);
+    ganglion.clearImpulseResponse();
 
-    }
 
     t = clock() - t;
     printf ("%f seconds.\n",((float)t)/CLOCKS_PER_SEC);

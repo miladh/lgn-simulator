@@ -187,15 +187,16 @@ if __name__ == "__main__":
     import Simulation as sim
 
 
-    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/apps/default/data/*.h5"
-    # outputFilePath = "/home/milad/kurs/*.h5"
+    # outputFilePath="/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/apps/default/data/*.h5"
+    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/DATA/spatialSummation/tmp/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
 
     # spikeTrain = exp.spikeTrain("ganglion", 64, 64, num_trails = 1)
     # spikeTrain2 = exp.spikeTrain("relay", 64, 64, num_trails = 1)
-
+    print exp.ganglion["impulseResponse"]["spatioTemporal"].min()
+    print exp.ganglion["impulseResponse"]["spatioTemporal"].max()
     data = [
      [exp.stimulus["spatioTemporal"], "Stimulus"]
     ,[exp.ganglion["response"]["spatioTemporal"], "Ganglion cell response"]

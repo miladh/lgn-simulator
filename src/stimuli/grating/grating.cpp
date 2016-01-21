@@ -61,8 +61,8 @@ unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const YAML::No
 
     vec k = integrator->spatialFreqVec();
     vec w = integrator->temporalFreqVec();
-    double wd = w(1);
-    double kx = k(10);
+    double wd = w(0);
+    double kx = k(0);
     double ky = k(0);
 
     if(mask == "none"){
