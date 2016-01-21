@@ -38,12 +38,3 @@ class Cell:
                             values[i,:,:] /= abs(values[i,:,:]).max()
 
                 setattr(self, attr, property_dict)
-
-# temp =  getattr(self, cell)
-# for attr in temp.keys():
-#     for i in range(temp[attr]["spatioTemporal"].shape[0]):
-#         if not abs(temp[attr]["spatioTemporal"][i,:,:]).max()==0:
-#             temp[attr]["spatioTemporal"][i,:,:]/= \
-#             abs(temp[attr]["spatioTemporal"][i,:,:]).max()
-#         # temp[attr]["spatioTemporal"][i,:,:]+=1
-#     setattr(self, cell,temp)
