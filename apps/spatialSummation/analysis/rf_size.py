@@ -29,8 +29,8 @@ for exp in sims:
     print np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy))
     responses.append(np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy)))
 
-mplt.plot(responses)
 fig = mplt.figure(figsize=(16,12))
+mplt.plot(responses)
 # set_xlabel("t[s]", fontsize= 16)
 # set_ylabel("Response",fontsize= 16)
 # mplt.tight_layout()
