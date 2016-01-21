@@ -9,7 +9,7 @@ lib_path = os.path.abspath(os.path.join(current_path,"..", "..","..","tools"))
 sys.path.append(lib_path)
 import Simulation
 import get_simulations
-import PlottingTools as plt
+import plotting_tools as plt
 
 parser = ArgumentParser()
 parser.add_argument("config_file", default=None)

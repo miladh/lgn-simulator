@@ -16,7 +16,7 @@ class Simulation:
         self.ds = h5_file.attrs["ds"]
         self.time_vec = np.arange(0, self.num_steps*self.dt, self.dt )
 
-        self.cellTypes = []
+        self.cell_types = []
 
         ########################## Read file ###################################
         for item in h5_file.keys():
@@ -27,38 +27,22 @@ class Simulation:
             else:
                 cell_group = h5_file.get("/" + str(item))
                 setattr(self, item, Cell.Cell(cell_group))
+                self.cell_types.append(item)
         ########################################################################
-        self.numCellTypes  = len(self.cellTypes)
+        self.num_cell_types  = len(self.cell_types)
         self.normalize()
 
-    def normalize(self, cellType=None):
-        if cellType == None:
-            for cell in self.cellTypes:
-                temp =  getattr(self, cell)
-                for attr in temp.keys():
-                    for i in range(temp[attr]["spatioTemporal"].shape[0]):
-                        if not abs(temp[attr]["spatioTemporal"][i,:,:]).max()==0:
-                            temp[attr]["spatioTemporal"][i,:,:]/= \
-                            abs(temp[attr]["spatioTemporal"][i,:,:]).max()
-                        # temp[attr]["spatioTemporal"][i,:,:]+=1
-                    setattr(self, cell,temp)
-        else:
-            temp =  getattr(self, cellType)
-            for attr in temp.keys():
-                for i in range(temp[attr]["spatioTemporal"].shape[0]):
-                    if not abs(temp[attr]["spatioTemporal"][i,:,:]).max()==0:
-                        temp[attr]["spatioTemporal"][i,:,:]/= \
-                        abs(temp[attr]["spatioTemporal"][i,:,:]).max()
-                        # temp[attr]["spatioTemporal"][i,:,:] +=1
-                setattr(self, cellType,temp)
-
+    def normalize(self):
+        for cell in self.cell_types:
+            cell_type = getattr(self, cell)
+            cell_type.normalize()
 
     def singleCellTemporalResponse(self, cellType, idx=0 , idy=0):
-        response = getattr(self, cellType)["response"]["spatioTemporal"][:,idx, idy]
+        response = getattr(self, cellType).response["spatioTemporal"][:,idx, idy]
         return response
 
     def singleCellFreqResponse(self, cellType, idx=0 , idy=0):
-        FreqResponse = getattr(self, cellType)["response"]["fourierTransform"][:,idx, idy]
+        FreqResponse = getattr(self, cellType).response["fourierTransform"][:,idx, idy]
         return FreqResponse
 
     def spikeTrain(self, cellType, idx=0 , idy=0, num_trails=2):
@@ -73,13 +57,9 @@ class Simulation:
         return spike_times
 
 if __name__ == "__main__":
-    import h5py
     from glob import glob
-    from pylab import*
 
     outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/DATA/spatialSummation/tmp/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     sim = Simulation(f)
-    # print sim.ganglion["response"].keys()
-    # print sim.maskSize
