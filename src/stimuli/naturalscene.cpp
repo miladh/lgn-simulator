@@ -6,10 +6,12 @@ using namespace edog;
 NaturalScene::NaturalScene(Integrator *integrator, string sceneFilename)
     : Stimulus(integrator)
     , m_sceneFilename(sceneFilename)
+
 {
     m_scene = zeros<cx_mat>(m_integrator->nPointsSpatial(), m_integrator->nPointsSpatial());
     m_sceneFourierTransform = zeros<cx_mat>(m_integrator->nPointsSpatial(),
                                             m_integrator->nPointsSpatial());
+    m_type =  "naturalScene";
     readScene();
 }
 

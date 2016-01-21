@@ -11,13 +11,6 @@ C: 1.0
 mask: "circle" # none/circle/gauss
 maskSize: 0.05
 
-# NaturalScene:
-sceneFilename: "../../../stimuli/lena.png"
-
-# NaturalSceneVideo:
-videoFilename: "../../../stimuli/minions.mp4"
-
-
 #------------spatialKernelSettings-----------------#
 # DOG
 A: 1.0
@@ -25,36 +18,10 @@ a: 0.06
 B: 0.8
 b: 0.12
 
-# EllipticGaussian
-weight_elliptic: 2.3
-angle: -45.0
-widthLong: 0.1
-widthNarrow: 0.001
-
 
 #------------temporalKernelSettings-----------------#
-# Damped oscillator:
-phaseDuration: 0.425
-weight: 0.5
-
-# DecayingExponential:
-delay: 0.0         #s
-tau  : 0.42        #s
-
-# TemporallyConstant:
-constant: 1.0
-
-
-
-#------------Static nonlinearity settings-----------------#
-# Threshold function:
-threshold: 0.0
-weight: 1.0
-
-# Sigmoidal:
-maxValue: 1.
-halfMaxValue: 3.0
-exponent: 2.0
+# Temporal delta:
+delay: 0.0 #s
 
 
 #------------File manager settings-----------------#

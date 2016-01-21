@@ -25,8 +25,7 @@ public:
     void clearSpatioTemporal();
     void clearFourierTransform();
 
-
-
+    string type() const;
 
 protected:
     cube m_spatioTemporal;
@@ -39,6 +38,10 @@ protected:
     vec m_temporalFreqs;
 
     Integrator *m_integrator;
+
+    string m_type;
+
+
 };
 }
 #endif // STIMULI_H

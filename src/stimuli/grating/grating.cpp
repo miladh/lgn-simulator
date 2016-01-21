@@ -15,6 +15,7 @@ Grating::Grating(Integrator *integrator,
     , m_contrast(contrast)
     , m_maskSize(maskSize * m_coordinateVec.max() * 2)
 {
+    m_type = "grating";
 }
 
 Grating::~Grating()

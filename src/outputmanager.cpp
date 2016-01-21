@@ -102,19 +102,21 @@ void OutputManager::writeStimulus(const Stimulus* stimuli)
     // Write stimuli
     Group stim = m_output->createGroup("/stimulus");
 
-    double C = (*m_cfg)["C"].as<double>();
-    string mask = (*m_cfg)["mask"].as<string>();
-    double maskSize =(*m_cfg)["maskSize"].as<double>();
+    if(stimuli->type() == "grating"){
+        double C = (*m_cfg)["C"].as<double>();
+        string mask = (*m_cfg)["mask"].as<string>();
+        double maskSize =(*m_cfg)["maskSize"].as<double>();
 
 
-    Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute mask_a(stim.createAttribute("mask", StrType(PredType::C_S1, 64), H5S_SCALAR));
-    Attribute maskSize_a(stim.createAttribute("maskSize",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute mask_a(stim.createAttribute("mask", StrType(PredType::C_S1, 64), H5S_SCALAR));
+        Attribute maskSize_a(stim.createAttribute("maskSize",PredType::NATIVE_DOUBLE, H5S_SCALAR));
 
 
-    C_a.write(PredType::NATIVE_DOUBLE, &C);
-    mask_a.write( StrType(PredType::C_S1, 64), (&mask)->c_str());
-    maskSize_a.write(PredType::NATIVE_DOUBLE, &maskSize);
+        C_a.write(PredType::NATIVE_DOUBLE, &C);
+        mask_a.write( StrType(PredType::C_S1, 64), (&mask)->c_str());
+        maskSize_a.write(PredType::NATIVE_DOUBLE, &maskSize);
+    }
 
 
     cube realStim = stimuli->spatioTemporal();

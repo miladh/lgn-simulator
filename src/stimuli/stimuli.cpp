@@ -50,3 +50,8 @@ void Stimulus::clearFourierTransform()
     m_fourierTransform.clear();
 
 }
+
+string Stimulus::type() const
+{
+    return m_type;
+}

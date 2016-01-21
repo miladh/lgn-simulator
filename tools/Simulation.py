@@ -17,10 +17,14 @@ class Simulation:
         ########################## Read file ###################################
         for item in h5_file.keys():
             if(item == "stimulus"):
-                spaces = h5_file.get("/" + str(item)).keys()
+                stim_group = h5_file.get("/" + str(item))
+                for attr in stim_group.attrs.keys():
+                    setattr(self, attr, stim_group.attrs[attr])
+
+                spaces = stim_group.keys()
                 data = {}
                 for space in spaces:
-                    values =h5_file.get("/" + str(item) + "/" + str(space))
+                    values = h5_file.get("/" + str(item) + "/" + str(space))
                     data.update({str(space):  np.array(values)})
                     setattr(self, item, data)
 
@@ -84,15 +88,10 @@ if __name__ == "__main__":
     import h5py
     from glob import glob
     from pylab import*
-    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/DATA/*.h5"
-    # outputFilePath = "/home/milad/kurs/*.h5"
+
+    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/DATA/spatialSummation/tmp/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     sim = Simulation(f)
     print sim.ganglion["response"].keys()
-
-    # spikeTrain = sim.spikeTrain("ganglion", 0,0, num_trails = 2)
-    # plot(sim.singleCellTemporalResponse("ganglion", 64,64),'r')
-    # plot(sim.singleCellTemporalResponse("relay", 64,64),'b')
-    # plot(sim.singleCellTemporalResponse("cortical", 64, 64),'g')
-    show()
+    print sim.maskSize

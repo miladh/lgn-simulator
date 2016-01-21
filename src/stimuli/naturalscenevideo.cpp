@@ -6,11 +6,13 @@ using namespace edog;
 NaturalSceneVideo::NaturalSceneVideo(Integrator *integrator, string sceneFilename)
     : Stimulus(integrator)
     , m_sceneFilename(sceneFilename)
+
 {
     m_scene = zeros<cx_cube>(m_integrator->nPointsSpatial(),
                             m_integrator->nPointsSpatial(),
                             m_integrator->nPointsTemporal());
 
+    m_type = "naturalSceneVideo";
     readScene();
 
 }
