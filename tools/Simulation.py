@@ -2,7 +2,7 @@ import numpy as np
 import h5py
 
 import Stimulus
-
+import Cell
 
 class Simulation:
     """
@@ -25,16 +25,8 @@ class Simulation:
                 self.stimulus = Stimulus.Stimulus(stim_group)
 
             else:
-                self.cellTypes.append(item)
-                cellAttr = h5_file.get("/" + str(item)).keys()
-                data = {}
-                for attr in cellAttr:
-                    spaces = h5_file.get("/"+str(item)+"/" +str(attr)).keys()
-                    data[attr] = {}
-                    for space in spaces[0:]:
-                        values = np.array(h5_file.get("/"+str(item)+"/"+str(attr)+"/"+str(space)))
-                        data[attr].update({str(space): np.array(values)})
-                setattr(self, item, data)
+                cell_group = h5_file.get("/" + str(item))
+                setattr(self, item, Cell.Cell(cell_group))
         ########################################################################
         self.numCellTypes  = len(self.cellTypes)
         self.normalize()
