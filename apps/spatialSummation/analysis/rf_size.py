@@ -17,23 +17,29 @@ args = parser.parse_args()
 config_file = args.config_file
 
 
-sims, output_dir = get_simulations.get_simulation_environment(config_file, record=False)
+sims, output_dir=get_simulations.get_simulation_environment(config_file, record=False)
 
 
 # Analysis: --------------------------------------------------------------------
-# exp = sims[0]
+cell_pos_x = np.linspace(0.5,0.7,5)
+cell_pos_y = cell_pos_x
 
-responses = []
-for exp in sims:
-    idx = exp.num_points * 0.5
-    idy = idx
-    t = exp.time_vec
-    responses.append(np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy)))
-
+responses = np.zeros([len(cell_pos_x), len(sims)])
 fig = mplt.figure(figsize=(8,6))
-mplt.plot(responses)
-# set_xlabel("t[s]", fontsize= 16)
-# set_ylabel("Response",fontsize= 16)
-# mplt.tight_layout()
+for i, (x, y) in enumerate(zip(cell_pos_x, cell_pos_y)):
+    for j, exp in enumerate(sims):
+        idx = exp.num_points * x
+        idy = exp.num_points * y
+        t = exp.time_vec
+        responses[i,j] = np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy))
+
+    label = "{0:.2f}".format(cell_pos_x[i]) + "," + "{0:.2f}".format(cell_pos_y[i])
+    mplt.plot(responses[i], "o-", label = label)
+
+
+mplt.xlabel("Spot diameter", fontsize= 16)
+mplt.ylabel("Response",fontsize= 16)
+mplt.tight_layout()
+mplt.legend(loc=4)
 mplt.show()
 fig.savefig(os.path.join(output_dir, "rat_cellResponse.png"))
