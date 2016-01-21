@@ -23,7 +23,7 @@ sims, output_dir = get_simulations.get_simulation_environment(config_file, recor
 
 responses = []
 for exp in sims:
-    idx = exp.num_points * 0.55
+    idx = exp.num_points * 0.4
     idy = idx
     t = exp.time_vec
     print np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy))

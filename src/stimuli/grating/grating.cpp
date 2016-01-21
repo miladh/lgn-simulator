@@ -51,6 +51,16 @@ void Grating::computeFourierTransform()
     }
 }
 
+double Grating::w() const
+{
+    return m_w;
+}
+
+vec2 Grating::k() const
+{
+    return m_k;
+}
+
 
 
 unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const YAML::Node *cfg)

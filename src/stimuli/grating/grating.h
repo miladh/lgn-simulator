@@ -22,6 +22,9 @@ public:
     virtual void computeFourierTransform();
 
 
+    double w() const;
+    vec2 k() const;
+
 protected:
     vec2 m_k = {0,0};
     double m_w = 0;
