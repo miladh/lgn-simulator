@@ -69,12 +69,49 @@ unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const YAML::No
     string mask = (*cfg)["mask"].as<string>();
     double maskSize = (*cfg)["maskSize"].as<double>();
     double contrast = (*cfg)["C"].as<double>();
+    int kxId = (*cfg)["kxId"].as<int>();
+    int kyId = (*cfg)["kyId"].as<int>();
+    int wId = (*cfg)["wId"].as<int>();
 
     vec k = integrator->spatialFreqVec();
     vec w = integrator->temporalFreqVec();
-    double wd = w(0);
-    double kx = k(0);
-    double ky = k(0);
+
+
+    if((kxId  < -int(k.n_elem)/2) || (kxId  > int(k.n_elem)/2-1)){
+        cerr << "Too high index, kxId: " << kxId << endl
+             << "kxId range: [" << -int(k.n_elem)/2 << "," << k.n_elem/2-1 <<"]" <<endl;
+        return 0;
+
+    }if(kxId  < 0){
+        kxId+= k.n_elem;
+    }
+
+    if((kyId  < -int(k.n_elem)/2) || (kyId  > int(k.n_elem)/2-1)){
+        cerr << "Too high index, kyId: " << kyId << endl
+             << "kyId range: [" << -int(k.n_elem)/2 << "," << k.n_elem/2-1 <<"]" <<endl;
+        return 0;
+
+    }if(kyId  < 0){
+        kyId+= k.n_elem;
+    }
+
+    if((wId  < -int(w.n_elem)/2) || (wId  > int(w.n_elem)/2-1)){
+        cerr << "Too high index, wId: " << wId << endl
+             << "wId range: [" << -int(w.n_elem)/2 << "," << w.n_elem/2-1 <<"]" <<endl;
+        return 0;
+
+    }if(wId  < 0){
+        wId+= w.n_elem;
+    }
+
+    double wd = w(wId);
+    double kx = k(kxId);
+    double ky = k(kyId);
+
+    cout << "Stimulus: Grating with " << mask << " mask" << endl
+         << "kx=" << kx << ", ky=" << ky << ", w=" << wd << endl;
+
+
 
     if(mask == "none"){
         return unique_ptr<FullFieldGrating>(new FullFieldGrating(integrator, {kx, ky}, wd, contrast));

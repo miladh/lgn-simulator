@@ -1,8 +1,8 @@
 description: "Default config file"
 
 #------------Integrator settings-----------------#
-ns: 8
-nt: 4
+ns: 4
+nt: 3
 dt: 0.1
 
 #------------Stimulus settings-----------------#
@@ -10,6 +10,9 @@ dt: 0.1
 C: 1.
 mask: "circle" # none/circle/gauss
 maskSize: 0.8
+kxId:  7        #[-ns/2, ns/2 - 1]
+kyId: -3        #[-ns/2, ns/2 - 1]
+wId:   3        #[-nt/2, nt/2 - 1]
 
 # NaturalScene:
 sceneFilename: "../../../stimuli/lena.png"

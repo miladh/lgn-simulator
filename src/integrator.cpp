@@ -16,11 +16,7 @@ Integrator::Integrator(int nt, double dt, int ns)
     m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt)*2*PI;
 
     //Spatial Grid
-    m_coordinateVec = linspace(-0.5, 0.5-m_ds,
-                               m_nPointsSpatial);
-
-
-
+    m_coordinateVec = linspace(-0.5, 0.5-m_ds,m_nPointsSpatial);
     m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds)*2*PI;
 
 
