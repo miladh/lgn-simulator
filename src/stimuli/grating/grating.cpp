@@ -13,7 +13,7 @@ Grating::Grating(Integrator *integrator,
     , m_k(kd)
     , m_w(wd)
     , m_contrast(contrast)
-    , m_maskSize(maskSize * m_coordinateVec.max() * 2)
+    , m_maskSize(maskSize * (m_coordinateVec.max()-m_coordinateVec.min()))
 {
     m_type = "grating";
 }
@@ -60,6 +60,21 @@ double Grating::w() const
 vec2 Grating::k() const
 {
     return m_k;
+}
+
+string Grating::mask() const
+{
+    return m_mask;
+}
+
+double Grating::contrast() const
+{
+    return m_contrast;
+}
+
+double Grating::maskSize() const
+{
+    return m_maskSize;
 }
 
 

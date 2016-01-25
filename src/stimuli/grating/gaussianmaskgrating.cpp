@@ -9,6 +9,7 @@ GaussianMaskGrating::GaussianMaskGrating(Integrator *integrator,
     : Grating(integrator, kd, wd, contrast, maskSize)
     , m_dog(new DOG(1,maskSize, 0, 1))
 {
+    m_mask = "gauss";
 }
 
 GaussianMaskGrating::~GaussianMaskGrating()

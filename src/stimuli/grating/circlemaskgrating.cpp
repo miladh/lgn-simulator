@@ -7,6 +7,7 @@ CircleMaskGrating::CircleMaskGrating(Integrator *integrator,
                            vec2 kd, double wd, double contrast, double maskSize)
     : Grating(integrator, kd, wd, contrast, maskSize)
 {
+        m_mask= "circle";
 }
 
 CircleMaskGrating::~CircleMaskGrating()
@@ -16,8 +17,12 @@ CircleMaskGrating::~CircleMaskGrating()
 
 double CircleMaskGrating::valueAtPoint(vec2 rVec, double t)
 {
+//    double ds = m_coordinateVec[1] - m_coordinateVec[0];
+//    rVec +=vec2{ds/2, ds/2};
+
     double r = sqrt(dot(rVec, rVec));
-    double s = m_contrast * (1 - Functions::heaviside(r - m_maskSize * 0.5))
+
+    double s = m_contrast * (1 - Functions::heaviside(r  - m_maskSize * 0.5))
             * cos(dot(m_k, rVec) - m_w * t);
 
     return s;

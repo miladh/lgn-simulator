@@ -112,9 +112,9 @@ void OutputManager::writeStimulus(const Stimulus* stimulus)
 
 
     if (const  Grating * gratingStimulus = dynamic_cast<const Grating*>(stimulus) ) {
-        double C = (*m_cfg)["C"].as<double>();
-        double maskSize =(*m_cfg)["maskSize"].as<double>();
-        string mask = (*m_cfg)["mask"].as<string>();
+        double C = gratingStimulus->contrast();
+        double maskSize = gratingStimulus->maskSize();
+        string mask = gratingStimulus->mask();
         vec2 k = gratingStimulus->k();
         double w = gratingStimulus->w();
 

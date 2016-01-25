@@ -22,14 +22,20 @@ public:
     virtual void computeFourierTransform();
 
 
+    double contrast() const;
+    double maskSize() const;
     double w() const;
     vec2 k() const;
+    string mask() const;
+
+
 
 protected:
     vec2 m_k = {0,0};
     double m_w = 0;
     double m_contrast = 0.0;
     double m_maskSize = 0.0;
+    string m_mask;
 
     virtual double valueAtPoint(vec2 rVec, double t) = 0;
     virtual double fourierTransformAtFrequency(vec2 k, double w) = 0;
