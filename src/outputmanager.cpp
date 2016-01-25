@@ -108,6 +108,7 @@ void OutputManager::writeStimulus(const Stimulus* stimuli)
         double maskSize =(*m_cfg)["maskSize"].as<double>();
 
 
+
         Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute mask_a(stim.createAttribute("mask", StrType(PredType::C_S1, 64), H5S_SCALAR));
         Attribute maskSize_a(stim.createAttribute("maskSize",PredType::NATIVE_DOUBLE, H5S_SCALAR));
