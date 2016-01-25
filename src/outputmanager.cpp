@@ -1,6 +1,10 @@
 #include "outputmanager.h"
 #include <unistd.h>
 
+#include "stimuli/grating/grating.h"
+#include "stimuli/naturalscene.h"
+#include "stimuli/naturalscenevideo.h"
+
 using namespace edog;
 
 
@@ -61,7 +65,7 @@ void OutputManager::writeResponse(const Neuron* neuron)
     status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
 
     if (!status == 0){
-//        cout << "writeResponse: Cell group doesn't exist.....creating group" << endl;
+        //        cout << "writeResponse: Cell group doesn't exist.....creating group" << endl;
         Group cellGroup = m_output->createGroup(cellGroupName);
     }
 
@@ -84,7 +88,7 @@ void OutputManager::writeImpulseResponse(const Neuron* neuron)
     status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
 
     if (!status == 0){
-//        cout << "writeResponse: Cell group doesn't exist.....creating group" << endl;
+        //        cout << "writeResponse: Cell group doesn't exist.....creating group" << endl;
         Group cellGroup = m_output->createGroup(cellGroupName);
     }
 
@@ -96,32 +100,45 @@ void OutputManager::writeImpulseResponse(const Neuron* neuron)
 }
 
 
-void OutputManager::writeStimulus(const Stimulus* stimuli)
+void OutputManager::writeStimulus(const Stimulus* stimulus)
 {
 
     // Write stimuli
     Group stim = m_output->createGroup("/stimulus");
+    string type = stimulus->type();
 
-    if(stimuli->type() == "grating"){
+    Attribute type_a(stim.createAttribute("type", StrType(PredType::C_S1, 64), H5S_SCALAR));
+    type_a.write( StrType(PredType::C_S1, 64), (&type)->c_str());
+
+
+    if (const  Grating * gratingStimulus = dynamic_cast<const Grating*>(stimulus) ) {
         double C = (*m_cfg)["C"].as<double>();
-        string mask = (*m_cfg)["mask"].as<string>();
         double maskSize =(*m_cfg)["maskSize"].as<double>();
-
+        string mask = (*m_cfg)["mask"].as<string>();
+        vec2 k = gratingStimulus->k();
+        double w = gratingStimulus->w();
 
 
         Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute mask_a(stim.createAttribute("mask", StrType(PredType::C_S1, 64), H5S_SCALAR));
         Attribute maskSize_a(stim.createAttribute("maskSize",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute kx_a(stim.createAttribute("kx",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute ky_a(stim.createAttribute("ky",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute w_a(stim.createAttribute("w",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+
 
 
         C_a.write(PredType::NATIVE_DOUBLE, &C);
         mask_a.write( StrType(PredType::C_S1, 64), (&mask)->c_str());
         maskSize_a.write(PredType::NATIVE_DOUBLE, &maskSize);
+        kx_a.write(PredType::NATIVE_DOUBLE, &k(0));
+        ky_a.write(PredType::NATIVE_DOUBLE, &k(1));
+        w_a.write(PredType::NATIVE_DOUBLE, &w);
     }
 
 
-    cube realStim = stimuli->spatioTemporal();
-    cube complexStim = real(stimuli->fourierTransform());
+    cube realStim = stimulus->spatioTemporal();
+    cube complexStim = real(stimulus->fourierTransform());
     writeDataSet(realStim, &stim, "spatioTemporal");
     writeDataSet(complexStim, &stim, "fourierTransform");
 

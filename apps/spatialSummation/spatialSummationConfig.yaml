@@ -30,4 +30,3 @@ delay: 0.0 #s
 #------------File manager settings-----------------#
 outputFile: "../../../DATA/spatialSummation/tmp/spatialSummation.h5"
 
-
