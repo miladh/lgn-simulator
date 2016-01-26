@@ -1,3 +1,10 @@
+/**********************************************************************
+ *  Test: various mathematical helper functions
+ *
+ *  Analytic source: by hand and Python
+ *
+ * ********************************************************************/
+
 #include <unittest++/UnitTest++.h>
 #include "spatialKernels/dog.h"
 

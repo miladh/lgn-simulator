@@ -22,7 +22,6 @@ SOURCES += main.cpp \
     fftIntegrator/integratortest_dog.cpp \
     fftIntegrator/integratortest_grating.cpp \
     fftIntegrator/integratortest_cosine.cpp \
-    fftIntegrator/integratortest_patchgrating.cpp \
     fftIntegrator/integratortest_constant.cpp \
     fftIntegrator/integratortest_exponential.cpp \
     systemTests/systemtest_gr.cpp \
@@ -30,7 +29,8 @@ SOURCES += main.cpp \
     systemTests/kernelsettings.cpp \
     systemTests/systemtest_grc.cpp \
     systemTests/systemtest_gric.cpp \
-    systemTests/systemtest_gi.cpp
+    systemTests/systemtest_gi.cpp \
+    systemTests/systemtest_spot.cpp
 
 
 

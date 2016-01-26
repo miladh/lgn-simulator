@@ -1,3 +1,10 @@
+/**********************************************************************
+ *  Test: 2d inverse fourier transform of difference of gaussian
+ *
+ *  Analytic source: by hand
+ *
+ * ********************************************************************/
+
 #include <unittest++/UnitTest++.h>
 #include <armadillo>
 #include <iostream>

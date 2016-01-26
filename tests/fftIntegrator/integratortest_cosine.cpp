@@ -1,3 +1,10 @@
+/**********************************************************************
+ *  Test: inverse fourier transform of cosine waves
+ *
+ *  Analytic source: by hand
+ *
+ * ********************************************************************/
+
 #include <unittest++/UnitTest++.h>
 #include <armadillo>
 #include <iostream>

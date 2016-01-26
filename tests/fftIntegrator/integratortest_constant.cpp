@@ -1,3 +1,10 @@
+/**********************************************************************
+ *  Test: 3d inverse fourier transform of constant functions
+ *
+ *  Analytic source: by hand
+ *
+ * ********************************************************************/
+
 #include <unittest++/UnitTest++.h>
 #include <armadillo>
 #include <iostream>
