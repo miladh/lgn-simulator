@@ -4,7 +4,6 @@
  *
  *  Analytic source: Einevoll et. al (2000)
  *
- *
  * ********************************************************************/
 
 #include <unittest++/UnitTest++.h>

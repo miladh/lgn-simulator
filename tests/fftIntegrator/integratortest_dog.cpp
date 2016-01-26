@@ -1,7 +1,8 @@
 /**********************************************************************
  *  Test: 2d inverse fourier transform of difference of gaussian
  *
- *  Analytic source: by hand
+ *  Analytic source: implementation of the spatial dog function
+ *                   in DOG class
  *
  * ********************************************************************/
 
