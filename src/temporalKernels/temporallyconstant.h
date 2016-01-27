@@ -22,6 +22,6 @@ private:
 
 }
 
-edog::TemporallyConstant createTemporallyConstantTemporalKernel(const YAML::Node *cfg);
+edog::TemporallyConstant createTemporallyConstantKernel(const YAML::Node *cfg);
 
 #endif // TEMPORALLYCONSTANT_H

@@ -22,6 +22,6 @@ private:
 
 }
 
-edog::SpatiallyConstant createSpatiallyConstantSpatialKernel(const YAML::Node *cfg);
+edog::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node *cfg);
 
 #endif // SPATIALLYCONSTANT_H

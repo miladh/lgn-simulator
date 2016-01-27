@@ -23,6 +23,6 @@ private:
 
 }
 
-edog::SpatialDelta createSpatialDeltaSpatialKernel(const YAML::Node *cfg);
+edog::SpatialDelta createSpatialDeltaKernel(const YAML::Node *cfg);
 
 #endif // SPATIALDELTA_H

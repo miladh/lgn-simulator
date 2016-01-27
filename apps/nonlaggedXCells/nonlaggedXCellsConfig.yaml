@@ -1,8 +1,8 @@
 description: "Nonlagged X-cells config file"
 
 #------------Integrator settings-----------------#
-ns: 5
-nt: 4
+ns: 8
+nt: 3
 dt: 0.1
 
 #------------Stimulus settings-----------------#
@@ -14,22 +14,44 @@ kxId:  0        #[-ns/2, ns/2 - 1]
 kyId:  0        #[-ns/2, ns/2 - 1]
 wId:   0        #[-nt/2, nt/2 - 1]
 
-#------------spatialKernelSettings-----------------#
-# DOG
-A: 1.0
-a: 0.06
-B: 0.8
-b: 0.12
 
-weight_delta: 1.0
-constant_spatiallyDelta: 1.0
+#----------Ganglion Impulse response--------------#
+ganglionImpRes:
+# DOG
+    A: 1.0
+    a: 0.062
+    B: 0.85
+    b: 0.126
+
+# TemporalDelta
+    delay: 0.0
+
+
+#------------spatialKernelSettings-----------------#
+spatialKernels:
+# DOG
+    A: 1.0
+    a: 0.08
+    B: 0.0
+    b: 0.1
+
+# SpatialDelta
+    weight: 0.81
+
+# SpatiallyConstant
+    constant: -0.56
 
 
 #------------temporalKernelSettings-----------------#
-# Temporal delta:
-delay: 0.0 #s
+temporalKernels:
 
+# TemporalDelta:
+    delay: 0.0 #s
+
+
+# TemporallyConstant
+    constant: 1.0
 
 #------------File manager settings-----------------#
-outputFile: "../../../DATA/spatialSummation/tmp/spatialSummation.h5"
+outputFile: "../../../DATA/tmp/nonlaggedXCells.h5"
 

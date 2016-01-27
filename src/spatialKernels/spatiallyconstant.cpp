@@ -21,9 +21,9 @@ complex<double> edog::SpatiallyConstant::fourierTransform(vec2 kVec)
 
 
 
-edog::SpatiallyConstant createSpatiallyConstantSpatialKernel(const YAML::Node *cfg)
+edog::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node *cfg)
 {
-    double constant = (*cfg)["constant_spatiallyDelta"].as<double>();
+    double constant = (*cfg)["constant"].as<double>();
 
     return SpatiallyConstant(constant);
 

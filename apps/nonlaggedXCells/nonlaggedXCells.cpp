@@ -22,7 +22,9 @@ int main(int argc, char* argv[])
 
     //read config file-------------------------------------------------------
     YAML::Node cfg = YAML::LoadFile(argv[1]);
-
+    const YAML::Node& ganglionImpRes = cfg["ganglionImpRes"];
+    const YAML::Node& spatialKernelSettings = cfg["spatialKernels"];
+    const YAML::Node& temporalKernelSettings = cfg["temporalKernels"];
 
     //Output manager:---------------------------------------------------------
     OutputManager io(&cfg);
@@ -35,19 +37,19 @@ int main(int argc, char* argv[])
 
 
     //Spatial kernels:---------------------------------------------------------
-    SpatialDelta Ks_rg = createSpatialDeltaSpatialKernel(&cfg);
-    SpatiallyConstant Ks_ri = createSpatiallyConstantSpatialKernel(&cfg);
-    DOG Ks_ig = createDOGSpatialKernel(&cfg);
+    SpatialDelta Ks_rg = createSpatialDeltaKernel(&spatialKernelSettings);
+    SpatiallyConstant Ks_ri = createSpatiallyConstantKernel(&spatialKernelSettings);
+    DOG Ks_ig = createDOGSpatialKernel(&spatialKernelSettings);
 
     //Temporal kernels:--------------------------------------------------------
-    TemporalDelta Kt_rg = createTemporalDeltaKernel(&cfg);
-    TemporalDelta Kt_ri = createTemporalDeltaKernel(&cfg);
-    TemporalDelta Kt_ig = createTemporalDeltaKernel(&cfg);
+    TemporallyConstant Kt_rg = createTemporallyConstantKernel(&temporalKernelSettings);
+    TemporallyConstant Kt_ri = createTemporallyConstantKernel(&temporalKernelSettings);
+    TemporallyConstant Kt_ig = createTemporallyConstantKernel(&temporalKernelSettings);
 
 
     //Ganglion cell:-----------------------------------------------------------
-    DOG Wg_s = createDOGSpatialKernel(&cfg);
-    TemporalDelta Wg_t = createTemporalDeltaKernel(&cfg);
+    DOG Wg_s = createDOGSpatialKernel(&ganglionImpRes);
+    TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
     GanglionCell ganglion(&integrator, &Wg_s, &Wg_t);
 
     //Relay cell: -------------------------------------------------------------
@@ -76,11 +78,16 @@ int main(int argc, char* argv[])
     for(Neuron* neuron : neurons){
 
         neuron->computeResponse(S.get());
-        io.writeResponse(neuron);
+
+        if(neuron->cellType()=="relay"){
+            io.writeResponse(neuron);
+        }
         neuron->clearResponse();
 
         neuron->computeImpulseResponse();
-        io.writeImpulseResponse(neuron);
+        if(neuron->cellType()=="relay"){
+            io.writeImpulseResponse(neuron);
+        }
         neuron->clearImpulseResponse();
 
     }
