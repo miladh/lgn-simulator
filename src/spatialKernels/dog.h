@@ -15,7 +15,7 @@ public:
 
     // SpatialKernel interface
     double spatial(vec2 r);
-    double fourierTransform(vec2 k);
+    complex<double> fourierTransform(vec2 k);
 
 
 private:

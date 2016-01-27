@@ -14,7 +14,7 @@ public:
         // Grating interface
 private:
     virtual double valueAtPoint(vec2 rVec, double t);
-    virtual double fourierTransformAtFrequency(vec2 kVec, double w);
+    virtual complex<double> fourierTransformAtFrequency(vec2 kVec, double w);
 
 };
 

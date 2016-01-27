@@ -1,3 +1,4 @@
 TEMPLATE = subdirs
 
-SUBDIRS += default spatialSummation
+SUBDIRS += default spatialSummation \
+    nonlaggedXCells

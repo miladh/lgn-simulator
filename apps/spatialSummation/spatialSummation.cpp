@@ -15,8 +15,6 @@ int main(int argc, char* argv[])
     clock_t t;
     t = clock();
 
-
-//    string outputPath = "../../../eDOG/apps/spatialSummation/spatialSummationConfig.yaml";
     if(argc < 2) {
         cerr << "Too few arguments." << endl;
         return 1;

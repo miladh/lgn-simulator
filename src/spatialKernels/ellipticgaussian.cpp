@@ -29,7 +29,7 @@ double EllipticGaussian::spatial(vec2 rVec)
     return m_weight/PI/m_widthNarrow/m_widthLong * exp(-exp1*exp1 - exp2*exp2);
 }
 
-double EllipticGaussian::fourierTransform(vec2 kVec)
+complex<double> EllipticGaussian::fourierTransform(vec2 kVec)
 {
     double exp1 = (kVec[0] * m_cosTheta + kVec[1] * m_sinTheta)*m_widthLong/2;
     double exp2 = (kVec[1] * m_cosTheta - kVec[0] * m_sinTheta)*m_widthNarrow/2;

@@ -14,6 +14,9 @@
 #include "../src/neurons/corticalcell.h"
 
 #include "../src/spatialKernels/dog.h"
+#include "../src/spatialKernels/dog.h"
+#include "../src/spatialKernels/spatialdelta.h"
+#include "../src/spatialKernels/spatiallyconstant.h"
 #include "../src/spatialKernels/ellipticgaussian.h"
 
 #include "../src/temporalKernels/decayingexponential.h"

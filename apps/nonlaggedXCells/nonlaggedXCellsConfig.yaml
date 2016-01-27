@@ -1,0 +1,35 @@
+description: "Nonlagged X-cells config file"
+
+#------------Integrator settings-----------------#
+ns: 5
+nt: 4
+dt: 0.1
+
+#------------Stimulus settings-----------------#
+# Grating:
+C: 1.0
+mask: "circle" # none/circle/gauss
+maskSize: 0.5
+kxId:  0        #[-ns/2, ns/2 - 1]
+kyId:  0        #[-ns/2, ns/2 - 1]
+wId:   0        #[-nt/2, nt/2 - 1]
+
+#------------spatialKernelSettings-----------------#
+# DOG
+A: 1.0
+a: 0.06
+B: 0.8
+b: 0.12
+
+weight_delta: 1.0
+constant_spatiallyDelta: 1.0
+
+
+#------------temporalKernelSettings-----------------#
+# Temporal delta:
+delay: 0.0 #s
+
+
+#------------File manager settings-----------------#
+outputFile: "../../../DATA/spatialSummation/tmp/spatialSummation.h5"
+

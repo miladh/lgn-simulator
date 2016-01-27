@@ -22,7 +22,7 @@ double FullFieldGrating::valueAtPoint(vec2 rVec, double t)
     return s;
 }
 
-double FullFieldGrating::fourierTransformAtFrequency(vec2 k, double w)
+complex<double> FullFieldGrating::fourierTransformAtFrequency(vec2 k, double w)
 {
     double s = Functions::delta(k[0], m_k[0])
             * Functions::delta(k[1], m_k[1])

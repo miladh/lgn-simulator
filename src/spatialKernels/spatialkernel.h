@@ -17,7 +17,7 @@ public:
     ~SpatialKernel();
 
     virtual double spatial(vec2 rVec) = 0;
-    virtual double fourierTransform(vec2 kVec) = 0;
+    virtual complex<double> fourierTransform(vec2 kVec) = 0;
 
 };
 }

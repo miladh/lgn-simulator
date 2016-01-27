@@ -33,7 +33,9 @@ SOURCES += \
     staticNonlinearity/staticnonlinearity.cpp \
     staticNonlinearity/thresholdnonlinearity.cpp \
     staticNonlinearity/heavisidenonlinearity.cpp \
-    staticNonlinearity/sigmoidalnonlinearity.cpp
+    staticNonlinearity/sigmoidalnonlinearity.cpp \
+    spatialKernels/spatialdelta.cpp \
+    spatialKernels/spatiallyconstant.cpp
 
 HEADERS += \
     integrator.h \
@@ -64,7 +66,9 @@ HEADERS += \
     staticNonlinearity/staticnonlinearity.h \
     staticNonlinearity/thresholdnonlinearity.h \
     staticNonlinearity/heavisidenonlinearity.h \
-    staticNonlinearity/sigmoidalnonlinearity.h
+    staticNonlinearity/sigmoidalnonlinearity.h \
+    spatialKernels/spatialdelta.h \
+    spatialKernels/spatiallyconstant.h
 
 OTHER_FILES += ../include/edog.h
 

@@ -49,6 +49,8 @@ cx_cube Integrator::backwardFFT(cx_cube data)
     return fftData;
 }
 
+
+
 cx_cube Integrator::forwardFFT(cx_cube data)
 {
     //fftShift
@@ -68,11 +70,6 @@ cx_cube Integrator::forwardFFT(cx_cube data)
     return ifftData;
 
 }
-
-
-
-
-
 
 
 cx_mat Integrator::backwardFFT(cx_mat data)

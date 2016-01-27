@@ -38,7 +38,7 @@ protected:
     string m_mask;
 
     virtual double valueAtPoint(vec2 rVec, double t) = 0;
-    virtual double fourierTransformAtFrequency(vec2 k, double w) = 0;
+    virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) = 0;
 
 };
 

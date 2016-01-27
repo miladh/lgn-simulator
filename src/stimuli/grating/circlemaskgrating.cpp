@@ -27,7 +27,7 @@ double CircleMaskGrating::valueAtPoint(vec2 rVec, double t)
 
 
 
-double CircleMaskGrating::fourierTransformAtFrequency(vec2 kVec, double w)
+complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 kVec, double w)
 {
     if(!Functions::delta(w, -m_w)){
         return 0;

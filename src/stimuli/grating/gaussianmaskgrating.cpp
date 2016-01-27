@@ -25,9 +25,9 @@ double GaussianMaskGrating::valueAtPoint(vec2 rVec, double t)
     return s;
 }
 
-double GaussianMaskGrating::fourierTransformAtFrequency(vec2 k, double w)
+complex<double> GaussianMaskGrating::fourierTransformAtFrequency(vec2 k, double w)
 {
-    double s = m_dog->fourierTransform(k)
+    complex<double> s = m_dog->fourierTransform(k)
             * Functions::delta(k[0], m_k[0])
             * Functions::delta(k[1], m_k[1])
             * Functions::delta(-w, m_w)
