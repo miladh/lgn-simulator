@@ -1,5 +1,5 @@
 /**********************************************************************
- *  Test: inverse fourier transform of cosine waves
+ *  Test: 3d inverse fourier transform of cosine waves
  *
  *  Analytic source: by hand
  *
