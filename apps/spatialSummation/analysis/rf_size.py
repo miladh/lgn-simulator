@@ -21,7 +21,7 @@ sims, output_dir=get_simulations.get_simulation_environment(config_file, record=
 
 
 # Analysis: --------------------------------------------------------------------
-cell_pos_x = np.linspace(0.5,0.7,5)
+cell_pos_x = np.linspace(0.55,0.7,5)
 cell_pos_y = cell_pos_x
 
 responses = np.zeros([len(cell_pos_x), len(sims)])
