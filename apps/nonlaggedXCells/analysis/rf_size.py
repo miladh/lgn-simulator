@@ -17,11 +17,11 @@ args = parser.parse_args()
 config_file = args.config_file
 
 
-sims, output_dir=get_simulations.get_simulation_environment(config_file, record=True)
+sims, output_dir=get_simulations.get_simulation_environment(config_file, record=False)
 
 
 # Analysis: --------------------------------------------------------------------
-cell_pos_x = np.linspace(0.5,0.7,5)
+cell_pos_x = np.linspace(0.5,0.5,1)
 cell_pos_y = cell_pos_x
 
 responses = np.zeros([len(cell_pos_x), len(sims)])
@@ -33,7 +33,7 @@ for i, (x, y) in enumerate(zip(cell_pos_x, cell_pos_y)):
         idx = exp.num_points * x
         idy = exp.num_points * y
         spot_diameter[j] = exp.stimulus.maskSize
-        responses[i,j] = np.mean(exp.singleCellTemporalResponse("Relay", idx, idy))
+        responses[i,j] = np.mean(exp.singleCellTemporalResponse("relay", idx, idy))
 
     label = "{0:.2f}".format(cell_pos_x[i]) + "," + "{0:.2f}".format(cell_pos_y[i])
     mplt.plot(spot_diameter, responses[i], "o-", label = label)

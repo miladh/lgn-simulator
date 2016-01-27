@@ -21,3 +21,5 @@
 
 
 *.pro.user
+
+*_ids.yaml
