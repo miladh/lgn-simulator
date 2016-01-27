@@ -30,7 +30,7 @@ class Simulation:
                 self.cell_types.append(item)
         ########################################################################
         self.num_cell_types  = len(self.cell_types)
-        self.normalize()
+        # self.normalize()
 
     def normalize(self):
         for cell in self.cell_types:
