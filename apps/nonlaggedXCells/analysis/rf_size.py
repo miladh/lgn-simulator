@@ -21,27 +21,27 @@ sims, output_dir=get_simulations.get_simulation_environment(config_file, record=
 
 
 # Analysis: --------------------------------------------------------------------
-cell_pos_x = np.linspace(0.5,0.5,1)
+cell_pos_x = 0.5
 cell_pos_y = cell_pos_x
 
-responses = np.zeros([len(cell_pos_x), len(sims)])
+types = ["ganglion", "relay"]
+responses = np.zeros([len(types), len(sims)])
 spot_diameter = np.zeros(len(sims))
 
 fig = mplt.figure(figsize=(8,6))
-for i, (x, y) in enumerate(zip(cell_pos_x, cell_pos_y)):
+for i, t in enumerate(types):
     for j, exp in enumerate(sims):
-        idx = exp.num_points * x
-        idy = exp.num_points * y
+        idx = exp.num_points * cell_pos_x
+        idy = exp.num_points * cell_pos_y
         spot_diameter[j] = exp.stimulus.maskSize
-        responses[i,j] = np.mean(exp.singleCellTemporalResponse("relay", idx, idy))
+        responses[i,j] = np.mean(exp.singleCellTemporalResponse(t, idx, idy))
 
-    label = "{0:.2f}".format(cell_pos_x[i]) + "," + "{0:.2f}".format(cell_pos_y[i])
-    mplt.plot(spot_diameter, responses[i], "o-", label = label)
+    mplt.plot(spot_diameter, responses[i], "o-", label = t)
 
-
+mplt.xlim(0., 1.)
 mplt.xlabel("Spot diameter", fontsize= 16)
 mplt.ylabel("Response",fontsize= 16)
 mplt.tight_layout()
-mplt.legend(loc=4)
+mplt.legend(loc=1)
 mplt.show()
 fig.savefig(os.path.join(output_dir, "nonlaggedXCells.png"))
