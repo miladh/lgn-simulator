@@ -13,13 +13,11 @@ import plotting_tools as plt
 
 parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
-parser.add_argument("record", default=False)
 args = parser.parse_args()
 config_file = args.config_file
-record = args.record
 
 
-sims, output_dir=get_simulations.get_simulation_environment(config_file, record=record)
+sims, output_dir=get_simulations.get_simulation_environment(config_file, record=True)
 
 
 # Analysis: --------------------------------------------------------------------
