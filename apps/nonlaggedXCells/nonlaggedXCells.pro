@@ -9,3 +9,5 @@ OTHER_FILES += ./nonlaggedXCellsConfig.yaml
 
 DISTFILES += \
     nonlaggedXCellsConfig.yaml
+
+

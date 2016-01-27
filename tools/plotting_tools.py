@@ -188,7 +188,7 @@ if __name__ == "__main__":
 
 
     # outputFilePath="/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/apps/default/data/*.h5"
-    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/DATA/spatialSummation/tmp/*.h5"
+    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/DATA/tmp/*.h5"
     # outputFilePath ="/home/milad/Dropbox/projects/edog/extendedDOG/DATA/spatialSummation/20160121-104849/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
@@ -202,8 +202,8 @@ if __name__ == "__main__":
      [exp.stimulus.spatioTemporal, "Stimulus"]
     ,[exp.ganglion.response["spatioTemporal"], "Ganglion cell response"]
     ,[exp.ganglion.impulseResponse["spatioTemporal"], "Ganglion cell impulse response"]
-    ,[exp.interneuron.response["spatioTemporal"], "Interneuron"]
-    ,[exp.interneuron.impulseResponse["spatioTemporal"], "Interneuron"]
+    # ,[exp.interneuron.response["spatioTemporal"], "Interneuron"]
+    # ,[exp.interneuron.impulseResponse["spatioTemporal"], "Interneuron"]
     ,[exp.relay.response["spatioTemporal"], "Relay cell response"]
     ,[exp.relay.impulseResponse["spatioTemporal"], "Relay cell impulse response"]
     # ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]

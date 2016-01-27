@@ -38,31 +38,25 @@ int main(int argc, char* argv[])
 
     //Spatial kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(&spatialKernelSettings);
-    SpatiallyConstant Ks_ri = createSpatiallyConstantKernel(&spatialKernelSettings);
-    DOG Ks_ig = createDOGSpatialKernel(&spatialKernelSettings);
+    DOG Ks_rig = createDOGSpatialKernel(&spatialKernelSettings);
 
     //Temporal kernels:--------------------------------------------------------
     TemporallyConstant Kt_rg = createTemporallyConstantKernel(&temporalKernelSettings);
-    TemporallyConstant Kt_ri = createTemporallyConstantKernel(&temporalKernelSettings);
-    TemporallyConstant Kt_ig = createTemporallyConstantKernel(&temporalKernelSettings);
+    TemporallyConstant Kt_rig = createTemporallyConstantKernel(&temporalKernelSettings);
 
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createDOGSpatialKernel(&ganglionImpRes);
-    TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
+//    TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
+    TemporallyConstant Wg_t = createTemporallyConstantKernel(&ganglionImpRes);
     GanglionCell ganglion(&integrator, &Wg_s, &Wg_t);
 
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(&integrator);
 
-    //Interneuron:-------------------------------------------------------------
-    Interneuron interneuron(&integrator);
-
-
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, &Ks_rg, &Kt_rg);
-    relay.addInterNeuron(&interneuron, &Ks_ri, &Kt_ri);
-    interneuron.addGanglionCell(&ganglion, &Ks_ig, &Kt_ig);
+    relay.addGanglionCell(&ganglion, &Ks_rig, &Kt_rig);
 
     //Compute:-----------------------------------------------------------------
     S->computeSpatiotemporal();
@@ -73,21 +67,20 @@ int main(int argc, char* argv[])
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
     neurons.push_back(&relay);
-    neurons.push_back(&interneuron);
 
     for(Neuron* neuron : neurons){
 
         neuron->computeResponse(S.get());
 
-        if(neuron->cellType()=="relay"){
+//        if(neuron->cellType()=="relay"){
             io.writeResponse(neuron);
-        }
+//        }
         neuron->clearResponse();
 
         neuron->computeImpulseResponse();
-        if(neuron->cellType()=="relay"){
+//        if(neuron->cellType()=="relay"){
             io.writeImpulseResponse(neuron);
-        }
+//        }
         neuron->clearImpulseResponse();
 
     }

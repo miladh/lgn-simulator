@@ -26,20 +26,20 @@ ganglionImpRes:
 # TemporalDelta
     delay: 0.0
 
+# TemporallyConstant
+    constant: 1.0
 
 #------------spatialKernelSettings-----------------#
 spatialKernels:
 # DOG
-    A: 1.0
-    a: 0.08
-    B: 0.0
-    b: 0.1
+    A: 0.0
+    a: 0.1
+    B: 0.56
+    b: 0.088
 
 # SpatialDelta
     weight: 0.81
 
-# SpatiallyConstant
-    constant: -0.56
 
 
 #------------temporalKernelSettings-----------------#
