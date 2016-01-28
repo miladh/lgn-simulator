@@ -50,12 +50,12 @@ for cell in data:
 
 
 # Rescale
-data["ganglion"]["spot_diameter"] *= 10
-data["ganglion"]["responses"] *= 121
+data["ganglion"]["spot_diameter"] *= 13.5
+data["ganglion"]["responses"] *= 125
 data["ganglion"]["responses"] += 39
 
-data["relay"]["spot_diameter"] *= 10
-data["relay"]["responses"] *= 121
+data["relay"]["spot_diameter"] *= 13.5
+data["relay"]["responses"] *= 118
 data["relay"]["responses"] += 4
 
 
