@@ -18,7 +18,7 @@ args = parser.parse_args()
 config_file = args.config_file
 
 
-sims, output_dir=get_simulations.get_simulation_environment(config_file, record=True)
+sims, output_dir=get_simulations.get_simulation_environment(config_file, record=False)
 
 
 # Get experimental data: -------------------------------------------------------
@@ -39,7 +39,7 @@ data = {"ganglion": {"spot_diameter": np.zeros(len(sims)),
                     "responses": np.zeros(len(sims)) }
         ,"relay":   {"spot_diameter": np.zeros(len(sims)),
                             "responses": np.zeros(len(sims)) }}
-
+fig = mplt.figure(figsize=(8,6))
 for cell in data:
     for j, exp in enumerate(sims):
         idx = exp.num_points * cell_pos_x
