@@ -51,12 +51,12 @@ for cell in data:
 
 # Rescale
 data["ganglion"]["spot_diameter"] *= 13.5
-data["ganglion"]["responses"] *= 125
-data["ganglion"]["responses"] += 39
+data["ganglion"]["responses"] *= 128
+data["ganglion"]["responses"] += 36
 
 data["relay"]["spot_diameter"] *= 13.5
-data["relay"]["responses"] *= 118
-data["relay"]["responses"] += 4
+data["relay"]["responses"] *= 110
+data["relay"]["responses"] += 6
 
 
 # Plot:
@@ -64,14 +64,14 @@ mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "r-"
 mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"], "b-", label = "relay")
 
 # Plot experimental data:
-mplt.plot(ganglion_exp[0], ganglion_exp[1], "rv")
-mplt.plot(relay_exp[0], relay_exp[1], "bv")
+mplt.plot(ganglion_exp[0], ganglion_exp[1], "ro", markersize=8)
+mplt.plot(relay_exp[0], relay_exp[1], "bo", markersize=8)
 
 
 
 # mplt.xlim(0., 1.)
-mplt.xlabel("Spot diameter", fontsize= 16)
-mplt.ylabel("Response",fontsize= 16)
+mplt.xlabel(r"Spot diameter [deg]", fontsize= 16)
+mplt.ylabel("Response [spikes/s]",fontsize= 16)
 mplt.tight_layout()
 mplt.legend(loc=1)
 mplt.show()
