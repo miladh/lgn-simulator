@@ -207,11 +207,11 @@ if __name__ == "__main__":
     # ,[exp.interneuron.impulseResponse["spatioTemporal"], "Interneuron"]
     ,[exp.relay.response["spatioTemporal"], "Relay cell response"]
     ,[exp.relay.impulseResponse["spatioTemporal"], "Relay cell impulse response"]
-    ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
-    ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
+    # ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
+    # ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
     ]
 
-    print (exp.cortical.response["spatioTemporal"] - exp.relay.response["spatioTemporal"]).max()
+    # print (exp.cortical.response["spatioTemporal"] - exp.relay.response["spatioTemporal"]).max()
 
     # print exp.ganglion["impulseResponse"]["spatioTemporal"][0,:,:].max()
 
