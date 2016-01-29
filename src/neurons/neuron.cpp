@@ -2,6 +2,13 @@
 
 using namespace edog;
 
+/*!
+ * \class Neuron
+ * \inmodule edog
+ * \brief Virtual class for neurons.
+ *
+ */
+
 
 Neuron::Neuron(Integrator *integrator, StaticNonlinearity *staticNonlinearity)
     : m_integrator(integrator)
