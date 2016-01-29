@@ -194,10 +194,11 @@ if __name__ == "__main__":
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
 
-    # spikeTrain = exp.spikeTrain("ganglion", 64, 64, num_trails = 1)
-    # spikeTrain2 = exp.spikeTrain("relay", 64, 64, num_trails = 1)
-    print exp.ganglion.impulseResponse["spatioTemporal"].min()
-    print exp.ganglion.impulseResponse["spatioTemporal"].max()
+    # response = exp.singleCellTemporalResponse("relay", 15, 15)
+    # plt.plot(response)
+
+    # print exp.ganglion.impulseResponse["spatioTemporal"].min()
+    # print exp.ganglion.impulseResponse["spatioTemporal"].max()
     data = [
      [exp.stimulus.spatioTemporal, "Stimulus"]
     ,[exp.ganglion.response["spatioTemporal"], "Ganglion cell response"]
@@ -206,9 +207,11 @@ if __name__ == "__main__":
     # ,[exp.interneuron.impulseResponse["spatioTemporal"], "Interneuron"]
     ,[exp.relay.response["spatioTemporal"], "Relay cell response"]
     ,[exp.relay.impulseResponse["spatioTemporal"], "Relay cell impulse response"]
-    # ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
-    # ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
+    ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
+    ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
     ]
+
+    print (exp.cortical.response["spatioTemporal"] - exp.relay.response["spatioTemporal"]).max()
 
     # print exp.ganglion["impulseResponse"]["spatioTemporal"][0,:,:].max()
 

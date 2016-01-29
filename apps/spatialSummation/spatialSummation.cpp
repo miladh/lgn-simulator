@@ -39,7 +39,8 @@ int main(int argc, char* argv[])
 
 
     //Temporal kernels:-------------------------------------------------------
-    TemporalDelta temporalDelta = createTemporalDeltaKernel(&cfg);
+//    TemporalDelta temporalDelta = createTemporalDeltaKernel(&cfg);
+    TemporallyConstant temporalDelta = createTemporallyConstantKernel(&cfg);
 
     //Neurons:-----------------------------------------------------------------
     GanglionCell ganglion(&integrator, &dog, &temporalDelta);

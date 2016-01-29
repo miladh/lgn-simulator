@@ -1,15 +1,15 @@
 description: "Default config file"
 
 #------------Integrator settings-----------------#
-ns: 9
-nt: 4
+ns: 5
+nt: 8
 dt: 0.1
 
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0
 mask: "circle" # none/circle/gauss
-maskSize: 1.
+maskSize: 0.5
 kxId:  0        #[-ns/2, ns/2 - 1]
 kyId:  0        #[-ns/2, ns/2 - 1]
 wId:   0        #[-nt/2, nt/2 - 1]
@@ -26,7 +26,10 @@ b: 0.12
 # Temporal delta:
 delay: 0.0 #s
 
+# Temporal constant:
+constant: 2.0 #s
+
 
 #------------File manager settings-----------------#
-outputFile: "../../../DATA/spatialSummation/tmp/spatialSummation.h5"
+outputFile: "../../../DATA/tmp/spatialSummation.h5"
 

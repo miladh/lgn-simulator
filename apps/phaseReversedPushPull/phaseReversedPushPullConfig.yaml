@@ -1,0 +1,89 @@
+description: "Phase-reversed push-pull config file"
+
+#------------Integrator settings-----------------#
+ns: 6
+nt: 4
+dt: 0.1
+
+#------------Stimulus settings-----------------#
+# Grating:
+C: 1.0
+mask: "circle" # none/circle/gauss
+maskSize: 0.5
+kxId:  0        #[-ns/2, ns/2 - 1]
+kyId:  0        #[-ns/2, ns/2 - 1]
+wId:   0        #[-nt/2, nt/2 - 1]
+
+
+#----------Ganglion Impulse response--------------#
+ganglionImpRes:
+# DOG
+    A: 1.0
+    a: 0.044
+    B: 0.85
+    b: 0.09
+
+# TemporallyConstant
+    constant: 1.0
+
+#------------spatialKernelSettings-----------------#
+spatialKernels:
+    Krg:
+    # SpatialDelta
+        weight: 2.0
+
+    Krc:
+    # DOG
+        A: 0.56
+        a: 0.063
+        B: 0.0
+        b: 0.001
+
+    Kcr:
+    # SpatialDelta
+        weight: 0.0
+
+#------------temporalKernelSettings-----------------#
+temporalKernels:
+    Krg:
+    # TemporallyConstant
+        constant: 1.0
+
+    Kcr:
+    # TemporallyConstant
+        constant: 1.0
+
+    Krc:
+    # TemporalDelta
+        delay: 0.1
+
+
+#------------File manager settings-----------------#
+outputFile: "../../../DATA/tmp/phaseReversedPushPull.h5"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

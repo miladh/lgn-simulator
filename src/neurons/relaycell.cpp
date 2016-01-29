@@ -125,6 +125,10 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
         throw overflow_error("Divide by zero exception in relay feedback contribution");
     }
 
+
+//    cout << idx << "  " << jdx << "   " << kdx << endl;
+//    cout << G << "  " << Iff << "   " << Ifb << "   " << C << endl;
+//    cout << endl;
     complex<double> Gr = (G + Iff)/(complex<double>(1.0, 0.0) - Ifb - C);
 
     return Gr;
