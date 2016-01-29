@@ -18,7 +18,7 @@ args = parser.parse_args()
 config_file = args.config_file
 
 
-sims, output_dir=get_simulations.get_simulation_environment(config_file, record=True)
+sims, output_dir=get_simulations.get_simulation_environment(config_file, record=False)
 
 
 # Get experimental data: -------------------------------------------------------
