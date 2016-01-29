@@ -19,12 +19,9 @@ wId:   0        #[-nt/2, nt/2 - 1]
 ganglionImpRes:
 # DOG
     A: 1.0
-    a: 0.044 #0.062
+    a: 0.044
     B: 0.85
-    b: 0.09 #0.126
-
-# TemporalDelta
-    delay: 0.0
+    b: 0.09
 
 # TemporallyConstant
     constant: 1.0
@@ -35,23 +32,44 @@ spatialKernels:
     A: 0.0
     a: 0.1
     B: 0.56
-    b: 0.063 #0.088
+    b: 0.063
 
 # SpatialDelta
     weight: 0.81
 
 
-
 #------------temporalKernelSettings-----------------#
 temporalKernels:
-
-# TemporalDelta:
-    delay: 0.0 #s
-
 
 # TemporallyConstant
     constant: 1.0
 
 #------------File manager settings-----------------#
 outputFile: "../../../DATA/tmp/nonlaggedXCells.h5"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

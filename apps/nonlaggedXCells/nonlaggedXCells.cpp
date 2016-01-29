@@ -47,7 +47,6 @@ int main(int argc, char* argv[])
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createDOGSpatialKernel(&ganglionImpRes);
-//    TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
     TemporallyConstant Wg_t = createTemporallyConstantKernel(&ganglionImpRes);
     GanglionCell ganglion(&integrator, &Wg_s, &Wg_t);
 
@@ -71,16 +70,11 @@ int main(int argc, char* argv[])
     for(Neuron* neuron : neurons){
 
         neuron->computeResponse(S.get());
-
-//        if(neuron->cellType()=="relay"){
-            io.writeResponse(neuron);
-//        }
+        io.writeResponse(neuron);
         neuron->clearResponse();
 
         neuron->computeImpulseResponse();
-//        if(neuron->cellType()=="relay"){
-            io.writeImpulseResponse(neuron);
-//        }
+        io.writeImpulseResponse(neuron);
         neuron->clearImpulseResponse();
 
     }
