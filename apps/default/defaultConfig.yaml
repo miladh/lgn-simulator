@@ -61,4 +61,4 @@ exponent: 2.0
 
 
 #------------File manager settings-----------------#
-outputFile: "../../../eDOG/apps/default/data/default.h5"
+outputFile: "../../../edog/apps/default/data/default.h5"

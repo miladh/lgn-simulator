@@ -59,7 +59,7 @@ class Simulation:
 if __name__ == "__main__":
     from glob import glob
 
-    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/DATA/spatialSummation/tmp/*.h5"
+    outputFilePath = "/home/milad/Dropbox/projects/edog/code/DATA/spatialSummation/tmp/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     sim = Simulation(f)

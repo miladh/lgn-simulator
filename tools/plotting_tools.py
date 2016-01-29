@@ -187,9 +187,9 @@ if __name__ == "__main__":
     import Simulation as sim
 
 
-    # outputFilePath="/home/milad/Dropbox/projects/edog/extendedDOG/eDOG/apps/default/data/*.h5"
-    outputFilePath = "/home/milad/Dropbox/projects/edog/extendedDOG/DATA/tmp/*.h5"
-    # outputFilePath ="/home/milad/Dropbox/projects/edog/extendedDOG/DATA/spatialSummation/20160121-104849/*.h5"
+    # outputFilePath="/home/milad/Dropbox/projects/edog/code/eDOG/apps/default/data/*.h5"
+    outputFilePath = "/home/milad/Dropbox/projects/edog/code/DATA/tmp/*.h5"
+    # outputFilePath ="/home/milad/Dropbox/projects/edog/code/DATA/spatialSummation/20160121-104849/*.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
