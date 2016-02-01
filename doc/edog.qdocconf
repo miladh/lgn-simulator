@@ -13,7 +13,7 @@ HTML.extraimages += template/images/ico_out.png \
                     template/images/bullet_sq.png \
                     template/images/bgrContent.png
 
-project = ExtendedDoG
+project = extendedDOG
 description = documentation
 
 outputformats = HTML
