@@ -1,12 +1,21 @@
 /*!
     \page index.html
 
-    \title Extended DoG documentation
+    \title ExtendedDoG documentation
     Firing-rate-based model of spatiotemporal LGN and V1 cell responses to visual stimuli incorporating cortical feedback.
 
-    \section1 Theory behind
+    \section1 Theory
 
-Different neurons in visual system respond to light falling within different more-or-less well-defined areas of the retina, and have a distinguished point where the response sensitivity is greatest. This area is called the receptive field of the neuron, and the point of peak sensitivity is called the receptive field center. It is often convenient to label a neuron by the location of its receptive field center, say  \\(r_c = (x_c, y_x)\\), and then to define its activity as a function of the receptive field center  \\(R(x_c, y_x)\\). The spike train in response to a given visual stimulus is a stochastic point process, meaning that both the total number of spikes and the arrival times of these spikes vary from stimulus presentation to stimulus presentation. Stochastic information processing is therefore a key element in the visual system, where the rate of firing is used as a measure of response. In experiments the firing rate is usually obtained by presenting the same stimulus repeatably and collecting spikes that are put into bins phased to the stimulus cycle. The rate is then given by dividing the average total number of spikes in each bin by the total time represented by each bin.
+        \list
+        \li \l{Receptive fields}
+        \li \l{Linear information processing}
+        \li \l{Impulse response function}
+        \li \l{Spatio-Temporal summation}
+        \li \l{Descriptive model}
+        \li \l{Mechanistic model}
+        \li \l{The dLGN circuit}
+        \endlist
+
 
 
     \section1 Systems
@@ -14,6 +23,5 @@ Different neurons in visual system respond to light falling within different mor
         \li \l{Phase-reversed push-pull}
         \li \l{nonlagged X-cells}
         \endlist
-
 
 */

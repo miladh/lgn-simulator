@@ -1,0 +1,81 @@
+/*!
+    \page impResFunc.html
+
+    \title Impulse response function
+    \inmodule theory
+
+
+So far, we have considered a single neuron together with its receptive field. We now
+turn to the case where the retina projects to an entire layer of neurons each of which has its own receptive field.
+Assume that we have a uniform layer of neurons with identical but space-shifted receptive fields.
+If a point stimulus is delivered to this layer, and we measure how this affects the activity of the cells in the layer, we will get a distribution of activity denoted as
+\\( \resp ( \\mathbf{r}_{c} ) \\), where \\( \\mathbf{r}_{c} \\) is
+the location of a neuron and \\( \resp(\\mathbf{r}_{c}) \\) its activity.
+For general images composed of many point stimuli, we obtain:
+
+\\(
+\resp(\xc, \yc) =
+\resp_{0}(\xc, \yc)
++\\displaystyle\\sum_i\\sum_jW(x_{c} - x_i,y_{c} - y_j) \stim(x_i, y_j),
+\\)
+
+or, in the infinitesimal formulation
+
+\\(
+\resp(\\mathbf{r}_{c}) =
+\resp_{0}(\\mathbf{r}_{c})
++\\displaystyle \\iint_\\mathbf{r}
+W(\\mathbf{r}_{c} - \\mathbf{r}) \stim(\\mathbf{r}) \\; \\mathrm{d}^2\\mathbf{r},
+\\)
+
+where \\(W\\) is the weighting function describing the strength, or weight, with which a stimulus delivered at
+retinal position \\(r\\) influences the output at \\( \\mathbf{r}_{c} \\).
+
+The weighting function can in principle be obtained by measuring the response to briefly flicking test spots
+positioned at different positions \\(\\mathbf{r}_\\mathrm{s}\\) which are very small
+(\\(\\sim \\delta(\\mathbf{r} - \\mathbf{r}_\\mathrm{s})\\)).
+Mathematically this corresponds to a stimulus function given by
+
+\\(
+\stim(\\mathbf{r}, t) = L_s \\delta(\\mathbf{r} - \\mathbf{r}_s),
+\\)
+
+where \\(L_s\\) is the luminance of the test spot.
+Inserting this into the equation we obtain the response
+
+\\(
+    \resp(\\mathbf{r}_{c}) = L_s W(\\mathbf{r}_{c} - \\mathbf{r}_s).
+\\)
+
+The weighting function is thus in principle given by the measured firing rates of identical neurons located at
+various positions \\(\\mathbf{r}_{c} \\) in the visual field following a \\( \\delta \\)-pulse at position \\( \\mathbf{r}_s \\). Because of
+this interpretation, the weighting factor is often referred to as the impulse-response function.
+
+\section1 Relation to receptive field function
+
+Assuming again a uniform layer of neurons with identical but space-shifted receptive fields, we obtain that a neuron at location \\((\xc, \yc) \\) will have a receptive field \\(\recep(\\mathbf{r}-\\mathbf{r}_{c} ) \\).
+The response can then be written as
+
+\\(
+    \resp(\\\rc) =
+    \resp_{0}(\\\rc)
+    +\\displaystyle \\iint_\\mathbf{r}
+    \recep(\\mathbf{r}- \\\rc ) \stim(\\mathbf{r}) \\; \\mathrm{d}^2\\mathbf{r}.
+\\)
+
+By comparing this with the corrosponding equation expressed in terms of the impulse response function for all possible stimulus \\(\stim \\), we find that
+
+\\(
+ \recep(\\mathbf{r})  =  W(-\\mathbf{r})
+\\)
+
+i.e. the impulse response function and the receptive field function are mirrored versions
+of each other, for translation-invariant systems.
+
+
+
+
+
+
+
+*/

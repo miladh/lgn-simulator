@@ -1,0 +1,42 @@
+macro.shortcutBegin.HTML = "<kbd>"
+macro.shortcutEnd.HTML = "</kbd>"
+macro.shortcut = "\\shortcutBegin\1\\shortcutEnd"
+macro.key.HTML = "<kbd>\1</kbd>"
+macro.math.HTML = "\\(\1\\)"
+macro.m = "\\\\("
+macro.me = "\\\\)"
+macro.eq = "\\[*\\]"
+macro.raisedaster.HTML = "<sup>*</sup>"
+
+
+
+macro.rc = "mathbf{r}_{c}"
+macro.xc = "x_{c}"
+macro.yc = "y_{c}"
+
+macro.delay = "tau"
+
+macro.resp = "R"
+macro.I = "I"
+
+macro.stim = "S"
+macro.stimft = "widetilde{S}"
+
+macro.recep = "F"
+
+macro.impres = "W"
+macro.impresft = "widetilde{W}"
+
+macro.kernel = "K"
+macro.kernelft = "widetilde{K}"
+
+macro.mn = "alpha"
+macro.ff = "beta"
+macro.fb = "gamma"
+
+macro.gang = "mathrm{G}"
+macro.cor = "mathrm{C}"
+macro.rel = "mathrm{R}"
+macro.inter = "mathrm{I}"
+
+

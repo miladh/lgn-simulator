@@ -1,0 +1,53 @@
+/*!
+    \page linearInfromationTheory.html
+
+    \title Linear information processing
+    \inmodule theory
+
+
+A neuron is regarded as a linear system when it respond linearly to visual stimuli.
+In these neurons the response \\( R \\) to a linear combination of two stimuli is equal to the linear combination of the responses to each of the component stimuli.
+This can be expressed mathematically as
+
+\\(
+\resp(a \stim_1 + b \stim_2) =  a \resp( \stim_1) + b \resp( \stim_1),
+\\)
+
+for any constant \\( a \\) and \\(b\\) and for any stimuli \\( \stim_1\\) and \\(\stim_2\\).
+The response, i.e. the firing rate, of linear cells evoked by a stimulus \\(S\\), is usually expressed as a weighted sum of the stimulus.
+To do this we make the reasonable assumption that the retinal area can be subdivided into small pixels.
+At each pixel location
+\\((x_i, y_j)\\)
+the value of a (stationary) stimuli is given by \\( \stim(x_i, y_j)\\), which is
+weighted by a weighting factor \\(\recep (x_i, y_j)\\).
+Then, by the linear superposition principle, we can construct the response of a cell with
+its center at
+\\(( \xc, \yc ) = (0,0)\\)
+as the sum over the contributions of the individual pixels and obtain
+
+\\(
+\resp = \resp_{0} +\\displaystyle\\sum_i\\sum_j \recep(x_i, y_j) \stim(x_i, y_j),
+\\)
+
+where the term \\( \resp_0\\) accounts for any background firing that may occur when there is no stimuli.
+Assuming that the number of pixel is large, we may write
+
+
+\\(
+\resp = \resp_{0} +\\displaystyle \\iint_\\mathbf{r}
+\recep(\\mathbf{r}) \stim(\\mathbf{r}) \; \\mathrm{d}^2 \\mathbf{r},
+\\)
+
+where the integral is taken over the entire visual field.
+
+The weighting function \\(\recep \\) is the receptive field function of the neuron, and can be considered as a template for a particular sub-pattern or "image feature" for which the neuron is a detector.
+This becomes obvious by noticing that the integral in the equation above measures the mismatches between the stimulus and the receptive field function.
+When these two functions overlap fully, the value of the integral increases and thereby also
+the response of the cell.
+This suggest a close relationship between the weighting factor and the optimal stimulus, and in fact it can be shown that the receptive field function is proportional to the stimuli that evoke maximal response.
+
+\inlineimage images/linearEstimate.png
+
+
+
+*/

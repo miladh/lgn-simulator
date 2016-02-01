@@ -1,0 +1,93 @@
+/*!
+    \page dlgnCircuit.html
+
+    \title The dLGN circuit
+    \inmodule theory
+
+
+Our strategy for the mechanistic modeling is to construct the relay cell impulse-response
+function based on current knowledge about the pattern of functional neuronal couplings in dLGN.
+Relay cells receive excitatory input from retinal ganglion cells as well as feedforward inhibition from
+intrageniculate
+interneurons both via dendro-dendritic structures (triads) and (possibly) axonal output.
+The interneurons in turn receive excitation from a few retinal ganglion cells.
+In addition, the relay cells receive inhibitory feedback from the TRN and excitatory feedback from the striate cortex.
+The intrageniculate interneurons and TRN cells also receive excitatory feedback from cortex.
+All these feedforward and feedback connections will eventually be included in our present mathematical treatment.
+
+
+\image images/edogCircuit.png
+
+The firing-rate responses of the various cells in the early visual pathway are assumed to be governed by the following set of equations:
+
+\\begin{align}
+    \resp_\\\gang(\\mathbf{r},t) &= \impres_{\\\gang}(\\mathbf{r},t) \\otimes L(I(\\mathbf{r},t)),
+\\\\
+    \resp_\\\cor(\\mathbf{r},t) &=
+    \kernel_{\\\cor \\\rel}(\\mathbf{r},t) \\otimes \resp_{\\\rel}(\\mathbf{r},t),
+\\\\
+    \resp_\\\inter(\\mathbf{r},t)\\; &=
+    \\sum_{k} \kernel_{\\\inter\\\gang_k}(\\mathbf{r},t) \\otimes \resp_{\\\gang_k}(\\mathbf{r},t) \\\\
+    &+\\sum_{k} \kernel_{\\\inter\\\cor_k}(\\mathbf{r},t) \\otimes \resp_{\\\cor_k}(\\mathbf{r},t),
+\\\\
+    \resp_\\\rel(\\mathbf{r},t) &=
+    \\sum_{k} \kernel_{\\\rel\\\gang_k}(\\mathbf{r},t) \\otimes \resp_{\\\gang_k}(\\mathbf{r},t) \\\\
+    &+\\sum_{k} \kernel_{\\\rel \\\inter_k}(\\mathbf{r},t) \\otimes \resp_{\\\inter_k}(\\mathbf{r},t) \\\\
+    &+\\sum_{k}\kernel_{\\\rel \\\cor_k}(\\mathbf{r},t) \\otimes \resp_{\\\cor_k}(\\mathbf{r},t).
+\\end{align}
+
+
+Using the results from {eq:impresFF,eq:impresFB} we can write the impulse response function for various cells:
+
+
+\\begin{align}
+\\\impresft_{\\\cor_i}(\\mathbf{k}, \\omega) &=
+\\\kernelft_{{\\\cor_i} \\\rel}\\\impresft_{\\\rel}
+ \\\\
+\\\impresft_{\\\inter_i}(\\mathbf{k}, \\omega)\\; &=
+\\sum_j \\\kernelft_{{\\\inter_i} \\\gang_j}\\\impresft_{\\\gang_j}
++ \\sum_j \\\kernelft_{{\\\inter_i} \\\cor_j} \\\impresft_{\\\cor_j}
+ \\\\
+&=\\sum_j \\\kernelft_{{\\\inter_i} \\\gang_j}\\\impresft_{\\\gang_j}
++ \\sum_j \\\kernelft_{{\\\inter_i} \\\cor_j}
+\\\kernelft_{\\\cor_j \\\rel} \\\impresft_{\\\rel}
+\\\\
+\\\impresft_{\\\rel}(\\mathbf{k}, \\omega) &=
+\\sum_j \\\kernelft_{{\\\rel} \\\gang_j}\\\impresft_{\\\gang_j}
++\\sum_j \\\kernelft_{{\\\rel} \\\inter_j}\\\impresft_{\\\inter_j}
++\\sum_j \\\kernelft_{{\\\rel} \\\cor_j} \\\impresft_{\\\cor_j}
+ \\\\
+&=
+\\sum_j \\\kernelft_{{\\\rel} \\\gang_j}\\\impresft_{\\\gang_j}
++\\sum_j \\\kernelft_{{\\\rel} \\\inter_j}
+\\bigg(
+\\sum_k \\\kernelft_{{\\\inter_j} \\\gang_k}\\\impresft_{\\\gang_k}
++ \\sum_k \\\kernelft_{{\\\inter_j} \\\cor_k}
+\\\kernelft_{\\\cor_k \\\rel} \\\impresft_{\\\rel}
+\\bigg)
++\\sum_j \\\kernelft_{{\\\rel} \\\cor_j}
+\\bigg(
+\\\kernelft_{{\\\cor_j} \\\rel}\\\impresft_{\\\rel}
+\\bigg)
+ \\\\
+&=\\frac{
+\\displaystyle\\sum_j \\\kernelft_{{\\\rel} \\\gang_j}\\\impresft_{\\\gang_j}
++\\sum_j \\\kernelft_{{\\\rel} \\\inter_j}
+\\sum_k \\\kernelft_{{\\\inter_j} \\\gang_k}\\\impresft_{\\\gang_k}
+}
+{
+1 -
+\\displaystyle\\sum_j \\\kernelft_{{\\\rel} \\\inter_j}
+\\sum_k \\\kernelft_{{\\\inter_j} \\\cor_k}
+\\\kernelft_{\\\cor_k \\\rel}
+-
+\\sum_j \\\kernelft_{{\\\rel} \\\cor_j}
+\\\kernelft_{{\\\cor_j} \\\rel}
+}
+\\end{align}
+
+
+
+
+
+*/
