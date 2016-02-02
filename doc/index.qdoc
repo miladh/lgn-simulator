@@ -4,6 +4,12 @@
     \title About
 
     Visual Stimulus-Driven neural network is a firing-rate based model of spatiotemporal cell responses to visual stimuli in the early visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex.
+\div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
+\image images/main.png
+    \div {style="align: left; text-align:center"}
+        \caption dLGN circuit.
+    \enddiv
+\enddiv
 This linear mechanistic model incorporates the influence of thalamocortical loops, in addition to the feedforward responses and can be used to study the characteristics of cortical feedback such as strength, spatial spread and temporal properties.
 
 \list
