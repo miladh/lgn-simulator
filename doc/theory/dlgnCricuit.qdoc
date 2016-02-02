@@ -43,7 +43,7 @@ The firing-rate responses of the various cells in the early visual pathway are a
 \\end{align}
 
 
-Using the results from {eq:impresFF,eq:impresFB} we can write the impulse response function for various cells:
+Using the results from previous section we can write the impulse response function for various cells:
 
 
 \\begin{align}

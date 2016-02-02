@@ -78,9 +78,18 @@ The response of the input cell corresponds here to the stimulus and coupling fun
 \enddiv
 
 
-Assuming input from population of cells with different coupling function (see
-{fig:\\\\ffKernelPopulations}) and inserting {eq:stResponse}
-into {eq:coupledCells}, we get
+Assume that the output cell recives input from population of cells with different coupling function
+
+\div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
+ \inlineimage images/kernelpopulations.png
+     \div {style="align: left; text-align:center"}
+         \caption A feedforward circuit, where two different populations of
+      densely and evenly distributed cells inputs a single output cell.
+      \enddiv
+\enddiv
+
+
+Inserting the descriptive model for the response of input cells, gives us
 
 
 \\begin{align}
@@ -117,22 +126,22 @@ into {eq:coupledCells}, we get
     \\mathrm{d}^2\\mathbf{k}\\mathrm{d}\\omega
 \\\\
     &= \resp_{0,\\\mn}(\\mathbf{r}_\\\mn)
-    + \\frac{1}{(2\\pi)^2}\\sum_k
+    + \\frac{1}{(2\\pi)^2}
      \\displaystyle\\iint_\\mathbf{r}\\int_\\\delay
     \\bigg(
+    \\sum_k
     \kernel_{\\\mn k}(\\mathbf{r}_\\\mn- \\mathbf{r}, \\\delay)
      {\impres_k}(\\mathbf{r}_\\\mn- \\mathbf{r}, \\\delay)
     \\bigg)
     \stim (\\mathbf{r}, t-\\\delay)
-    \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay
+    \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay,
 \\end{align}
 
 where \\(\kernel_{\\\mn k}(\\mathbf{r}_\\\mn- \\mathbf{r}, \\\delay) \\) is the
 spatio-temporal coupling function between cell \\(\\\mn\\) at \\(\\mathbf{r}_\\\mn\\) and
 a cell at \\(\\mathbf{r}\\) from population \\(k\\).
 The expression for the response of the output cell is obtained from a mechanistic model.
-However, we could also describe the response of the output cell with a descriptive model as the one in
-{eq:stResponse}.
+However, we could also describe the response of the output cell with a descriptive model.
 By comparing the expression for the response of these two model we can identify the following relationship
 
 \\begin{equation}
@@ -144,19 +153,9 @@ By comparing the expression for the response of these two model we can identify 
 An important observation is that impulse-response function of the output cell
 \\(\\\mn\\) is independent of the response of the
 input cells.
-This applies to arbitrarily complex model circuits as long as the coupling functions are linear and spatially
-homogeneous.
+This applies to arbitrarily complex model circuits as long as the coupling functions are linear and spatially homogeneous.
 
 
-
-
-\div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
- \inlineimage images/kernelpopulations.png
-     \div {style="align: left; text-align:center"}
-         \caption A feedforward circuit, where two different populations of
-      densely and evenly distributed cells inputs a single output cell.
-      \enddiv
-\enddiv
 
 
 \section1 Feedback model
@@ -170,31 +169,40 @@ homogeneous.
 \enddiv
 
 
-Consider the circuit shown in {fig:\\\\ffCircuit}, where di\\\\fferent population
+Consider the circuit shown in the figure above, where different population
 of cells inputs output cells and also receive feedback from them.
 The response of an output cell can in this case be written as
 
 
 \\begin{align}
-    \resp_\\\mn (\\mathbf{r}_\\\mn,t) &=
-    \resp_{0,\\\mn}(\\mathbf{r}_\\\mn) +L(I_0)\\sum_k\\\kernelft_{\\\mn k}(\\mathbf{0}, 0)
-    \\\impresft_k(\\mathbf{0}, 0)
-    +L'(I_0) I_0 m \\;
-    \\Re\\left\\{\\sum_k\\\kernelft_{\\\mn k}(\\mathbf{k}, \\omega) \\\impresft_k(\\mathbf{k},
-    \\omega)\\;e^{i(\\mathbf{k\\cdot \\mathbf{r}_\\\mn} -
-    \\omega t)}\\right\\}
+\resp_\\\mn(\\mathbf{r}_\\\mn,t) &=
+\resp_{0,\\\mn}(\\mathbf{r}_\\\mn)
++ \\frac{1}{(2\\pi)^2}
+ \\displaystyle\\iint_\\mathbf{k}\\int_\\omega
+ e^{i(\\mathbf{k\\cdot \\mathbf{r}} - \\omega t)}
+\\bigg(
+\\sum_k
+ \\\kernelft_{\\\mn k}(\\mathbf{k}, \\omega)
+ {\\\impresft_k}(\\mathbf{k}, \\omega)
+ \\bigg)
+\\\stimft (\\mathbf{k}, \\omega)
+\\mathrm{d}^2\\mathbf{k}\\mathrm{d}\\omega
 \\\\
-    &=\\; \resp_{0,\\\mn }(\\mathbf{r}_\\\mn)
-    +L(I_0)\\sum_k\\\kernelft_{\\\mn k}(\\mathbf{0}, 0)
-    \\bigg(\\\kernelft_{k\\\mn}(\\mathbf{0}, 0)\\\impresft_\\\mn (\\mathbf{0}, 0) \\bigg)
-\\\\
-    &\\quad \\quad \\quad \\quad +L'(I_0) I_0 m \\;
-    \\Re\\left\\{\\sum_k\\\kernelft_{\\\mn k}(\\mathbf{k}, \\omega)
-    \\bigg( \\\kernelft_{k\\\mn }(\\mathbf{k},
-    \\omega)\\\impresft_\\\mn (\\mathbf{k}, \\omega)\\bigg)
-    \\;e^{i(\\mathbf{k\\cdot \\mathbf{r}_\\\mn} -
-    \\omega t)}\\right\\}   ,
+&=
+\resp_{0,\\\mn}(\\mathbf{r}_\\\mn)
++ \\frac{1}{(2\\pi)^2}
+ \\displaystyle\\iint_\\mathbf{k}\\int_\\omega
+ e^{i(\\mathbf{k\\cdot \\mathbf{r}} - \\omega t)}
+\\bigg(
+\\sum_k
+ \\\kernelft_{\\\mn k}(\\mathbf{k}, \\omega)
+ \\\kernelft_{k \\\mn }(\\mathbf{k}, \\omega)
+ {\\\impresft_\\\mn}(\\mathbf{k}, \\omega)
+ \\bigg)
+\\\stimft (\\mathbf{k}, \\omega)
+\\mathrm{d}^2\\mathbf{k}\\mathrm{d}\\omega,
 \\end{align}
+
 where we have used that
 
 \\begin{equation}
@@ -211,7 +219,6 @@ from the descriptive model, we can identify the following relationship
 \\frac{1}{1 - \\sum_k\\\kernelft_{\\\mn k}(\\mathbf{k}, \\omega)\\\kernelft_{k\\\mn}(\\mathbf{k},
 \\omega) }
 \\end{equation}
-
 
 
 */
@@ -264,6 +271,27 @@ from the descriptive model, we can identify the following relationship
 
 
 
+
+//\\begin{align}
+//    \resp_\\\mn (\\mathbf{r}_\\\mn,t) &=
+//    \resp_{0,\\\mn}(\\mathbf{r}_\\\mn) +L(I_0)\\sum_k\\\kernelft_{\\\mn k}(\\mathbf{0}, 0)
+//    \\\impresft_k(\\mathbf{0}, 0)
+//    +L'(I_0) I_0 m \\;
+//    \\Re\\left\\{\\sum_k\\\kernelft_{\\\mn k}(\\mathbf{k}, \\omega) \\\impresft_k(\\mathbf{k},
+//    \\omega)\\;e^{i(\\mathbf{k\\cdot \\mathbf{r}_\\\mn} -
+//    \\omega t)}\\right\\}
+//\\\\
+//    &=\\; \resp_{0,\\\mn }(\\mathbf{r}_\\\mn)
+//    +L(I_0)\\sum_k\\\kernelft_{\\\mn k}(\\mathbf{0}, 0)
+//    \\bigg(\\\kernelft_{k\\\mn}(\\mathbf{0}, 0)\\\impresft_\\\mn (\\mathbf{0}, 0) \\bigg)
+//\\\\
+//    &\\quad \\quad \\quad \\quad +L'(I_0) I_0 m \\;
+//    \\Re\\left\\{\\sum_k\\\kernelft_{\\\mn k}(\\mathbf{k}, \\omega)
+//    \\bigg( \\\kernelft_{k\\\mn }(\\mathbf{k},
+//    \\omega)\\\impresft_\\\mn (\\mathbf{k}, \\omega)\\bigg)
+//    \\;e^{i(\\mathbf{k\\cdot \\mathbf{r}_\\\mn} -
+//    \\omega t)}\\right\\}   ,
+//\\end{align}
 
 
 
