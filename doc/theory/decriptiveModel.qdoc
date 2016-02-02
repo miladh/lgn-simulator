@@ -1,79 +1,102 @@
 /*!
     \page descriptiveModel.html
 
-    \title Descriptive model
+    \title Descriptive Model
     \inmodule theory
 
+The purpose of descriptive modelling is to summarize experimental data compactly in a mathematical form.
+An example of such model is the Difference-of-Gaussians (DoG) model which is traditionally used for analysing data to study the spatial receptive field organization of retinal and geniculate cells.
+In this model the response of a cell, with its receptive field centre at \\( \\\rc \\), is approximated by
 
-For a cell \\( \\\mn \\) at a position \\( \\mathbf{r}_\\\mn \\) in the visual field the
-response, i.e. the
-firing rate, using an (unspecified) sigmoidal activity function of the luminance  \\( \stim(\\mathbf{r}, t) =
-L(I(\\mathbf{r}, t))\\), can be written as
+\\begin{equation}
+\resp( \\\rc, t) =
+\resp_{0}( \\\rc)
++\\displaystyle \\int_{\\\delay} \\iint_\\mathbf{r}
+\impres ( \\\rc - \\mathbf{r} , \\\delay ) \stim( \\mathbf{r},t- \\\delay )
+\\mathrm{d}^2 \\mathbf{r} \\mathrm{d}\\\delay,
+\\end{equation}
 
-\\(
-    \resp_\\\mn(\\mathbf{r}_\\\mn,t) =
-     R_{0}(\\mathbf{r}_\\\mn) +\\displaystyle\\int_{\\\delay} \\iint_\\mathbf{r}
-    \impres_\\\mn(\\mathbf{r}_\\\mn- \\mathbf{r}, \\\delay) L(I(\\mathbf{r},t-\\\delay))
-    \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay
-\\)
+where the spatial part of the impulse response function, \\( \impres \\), is described by a DoG function
 
-By using the Taylor expansion of the sinusoidal drifting grating given in [], we obtain
+\\begin{equation}
+G(x,y) =
+\\frac{A}{\\pi a^2}e^{-(x^2+y^2)/a^2}
+-\\frac{B}{\\pi b^2}e^{-(x^2+y^2)/b^2},
+\\end{equation}
 
-\\begin{align}
-    \resp_\\\mn(\\mathbf{r}_\\\mn,t) &\\approx
-     R_{0,\\\mn}(\\mathbf{r}_\\\mn) +\\displaystyle\\int_{\\\delay} \\iint_\\mathbf{r}
-    \impres_\\\mn(\\mathbf{r}_\\\mn-\\mathbf{r} , \\\delay)
-    \\left[ L(I_0) + L'(I_0) I_0 m \\cos(\\mathbf{k}\\cdot\\mathbf{r} - \\omega (t-\\\delay) \\right]
-    \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay
-\\\\
-    &=\resp_{0,\\\mn}(\\mathbf{r}_\\\mn) + L(I_0)\\\impresft_\\\mn(\\mathbf{k=0}, \\omega=0)
-    +L'(I_0) I_0 m \\displaystyle\\int_{\\\delay}
-    \\iint_\\mathbf{r}
-    \impres_\\\mn(\\mathbf{r}_\\\mn - \\mathbf{r}, \\\delay)
-    \\Re\\{e^{i\\mathbf{k}\\cdot\\mathbf{r} - i\\omega (t-\\\delay)} \\}
-    \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay
-\\\\
-    &=\\; R_{0,\\\mn}(\\mathbf{r}_\\\mn) + L(I_0)\\\impresft_\\\mn(\\mathbf{0}, 0) +L'(I_0)
-    I_0
-    m \\Re\\left\\{ e^{i(\\mathbf{k\\cdot \\mathbf{r}_\\\mn} - \\omega
-    t)}\\displaystyle\\int_{\\\delay} \\iint_\\mathbf{u}
-    \impres_\\\mn(\\mathbf{u}, \\\delay) e^{-i(\\mathbf{k\\cdot u} - \\omega \\\delay)}
-    \\mathrm{d}^2\\mathbf{u}\\mathrm{d}\\\delay \\right\\}
-\\\\
-    &=\\; R_{0,\\\mn}(\\mathbf{r}_\\\mn) + L(I_0)\\\impresft_\\\mn(\\mathbf{0}, 0)+L'(I_0)
-    I_0
-    m  \\;\\Re\\left\\{\\;\\\impresft_\\\mn(\\mathbf{k}, \\omega) \\;
-    e^{i(\\mathbf{k\\cdot \\mathbf{r}_\\\mn} - \\omega t)}\\right\\},
-\\end{align}
-
-
-where we have used the following identities
-
-
-\\(
-\\mathbf{u} = \\mathbf{r}_\\\mn- \\mathbf{r},
-\\)
-
-\\(
-    \\cos(\\mathbf{k}\\cdot\\mathbf{r} - \\omega t)
-    = \\Re\{e^{i(\\mathbf{k}\\cdot\\mathbf{r} - \\omega t)}\} ,
-\\)
-
-\\(
-    \\\impresft_\\\mn(\\mathbf{k},\\omega) =
-    \\displaystyle\\int_{\\\delay} \\iint_\\mathbf{u}
-    \impres_\\\mn(\\mathbf{u}, \\\delay)
-    e^{-i(\\mathbf{k\\cdot u} - \\omega \\\delay)}
-    \\mathrm{d}^2\\mathbf{u}\\;\\mathrm{d}\\\delay .
-\\)
-
-The model described by [] is a descriptive model to interpret data from visual neurons from
-experiments with drifting sinusoidal gratings used as stimuli.
-Our goal is to develop a mechanistic model for the dLGN circuit only, and therefore a descriptive model for the retinal
-input to dLGN circuit is sufficient.
-
-
-
+with its paramters begin fitted with respect to experimental data.
+This procedure provides estimates for receptive field centre (\\(A\\) ) and surround (\\(B\\) ) weights as well as the corresponding width parameters (\\(a\\)) and (\\(b\\)).
+Although the DoG model is able to fit the experimental data well, no insight is gained regarding what aspects of the retino-geniculate circuitry are responsible for the differences in neuronal responses between the retinal and geniculate level.
+For such insight mechanistic, not descriptive, modelling is needed.
 
 
 */
+
+
+
+//For a cell \\( \\\mn \\) at a position \\( \\mathbf{r}_\\\mn \\) in the visual field the
+//response, i.e. the
+//firing rate, using an (unspecified) sigmoidal activity function of the luminance  \\( \stim(\\mathbf{r}, t) =
+//L(I(\\mathbf{r}, t))\\), can be written as
+
+//\\(
+//    \resp_\\\mn(\\mathbf{r}_\\\mn,t) =
+//     R_{0}(\\mathbf{r}_\\\mn) +\\displaystyle\\int_{\\\delay} \\iint_\\mathbf{r}
+//    \impres_\\\mn(\\mathbf{r}_\\\mn- \\mathbf{r}, \\\delay) L(I(\\mathbf{r},t-\\\delay))
+//    \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay
+//\\)
+
+//By using the Taylor expansion of the sinusoidal drifting grating given in [], we obtain
+
+//\\begin{align}
+//    \resp_\\\mn(\\mathbf{r}_\\\mn,t) &\\approx
+//     R_{0,\\\mn}(\\mathbf{r}_\\\mn) +\\displaystyle\\int_{\\\delay} \\iint_\\mathbf{r}
+//    \impres_\\\mn(\\mathbf{r}_\\\mn-\\mathbf{r} , \\\delay)
+//    \\left[ L(I_0) + L'(I_0) I_0 m \\cos(\\mathbf{k}\\cdot\\mathbf{r} - \\omega (t-\\\delay) \\right]
+//    \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay
+//\\\\
+//    &=\resp_{0,\\\mn}(\\mathbf{r}_\\\mn) + L(I_0)\\\impresft_\\\mn(\\mathbf{k=0}, \\omega=0)
+//    +L'(I_0) I_0 m \\displaystyle\\int_{\\\delay}
+//    \\iint_\\mathbf{r}
+//    \impres_\\\mn(\\mathbf{r}_\\\mn - \\mathbf{r}, \\\delay)
+//    \\Re\\{e^{i\\mathbf{k}\\cdot\\mathbf{r} - i\\omega (t-\\\delay)} \\}
+//    \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay
+//\\\\
+//    &=\\; R_{0,\\\mn}(\\mathbf{r}_\\\mn) + L(I_0)\\\impresft_\\\mn(\\mathbf{0}, 0) +L'(I_0)
+//    I_0
+//    m \\Re\\left\\{ e^{i(\\mathbf{k\\cdot \\mathbf{r}_\\\mn} - \\omega
+//    t)}\\displaystyle\\int_{\\\delay} \\iint_\\mathbf{u}
+//    \impres_\\\mn(\\mathbf{u}, \\\delay) e^{-i(\\mathbf{k\\cdot u} - \\omega \\\delay)}
+//    \\mathrm{d}^2\\mathbf{u}\\mathrm{d}\\\delay \\right\\}
+//\\\\
+//    &=\\; R_{0,\\\mn}(\\mathbf{r}_\\\mn) + L(I_0)\\\impresft_\\\mn(\\mathbf{0}, 0)+L'(I_0)
+//    I_0
+//    m  \\;\\Re\\left\\{\\;\\\impresft_\\\mn(\\mathbf{k}, \\omega) \\;
+//    e^{i(\\mathbf{k\\cdot \\mathbf{r}_\\\mn} - \\omega t)}\\right\\},
+//\\end{align}
+
+
+//where we have used the following identities
+
+
+//\\(
+//\\mathbf{u} = \\mathbf{r}_\\\mn- \\mathbf{r},
+//\\)
+
+//\\(
+//    \\cos(\\mathbf{k}\\cdot\\mathbf{r} - \\omega t)
+//    = \\Re\{e^{i(\\mathbf{k}\\cdot\\mathbf{r} - \\omega t)}\} ,
+//\\)
+
+//\\(
+//    \\\impresft_\\\mn(\\mathbf{k},\\omega) =
+//    \\displaystyle\\int_{\\\delay} \\iint_\\mathbf{u}
+//    \impres_\\\mn(\\mathbf{u}, \\\delay)
+//    e^{-i(\\mathbf{k\\cdot u} - \\omega \\\delay)}
+//    \\mathrm{d}^2\\mathbf{u}\\;\\mathrm{d}\\\delay .
+//\\)
+
+//The model described by [] is a descriptive model to interpret data from visual neurons from
+//experiments with drifting sinusoidal gratings used as stimuli.
+//Our goal is to develop a mechanistic model for the dLGN circuit only, and therefore a descriptive model for the retinal
+//input to dLGN circuit is sufficient.

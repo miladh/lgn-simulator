@@ -16,7 +16,13 @@ The intrageniculate interneurons and TRN cells also receive excitatory feedback 
 All these feedforward and feedback connections will eventually be included in our present mathematical treatment.
 
 
+\div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
 \image images/edogCircuit.png
+    \div {style="align: left; text-align:center"}
+        \caption dLGN circuit.
+    \enddiv
+\enddiv
+
 
 The firing-rate responses of the various cells in the early visual pathway are assumed to be governed by the following set of equations:
 

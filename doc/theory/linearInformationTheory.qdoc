@@ -1,19 +1,19 @@
 /*!
     \page linearInfromationTheory.html
 
-    \title Linear information processing
+    \title Linear Information Processing
     \inmodule theory
 
 
-A neuron is regarded as a linear system when it respond linearly to visual stimuli.
-In these neurons the response \\( R \\) to a linear combination of two stimuli is equal to the linear combination of the responses to each of the component stimuli.
+A neuron is regarded as a linear system when it responds linearly to visual stimuli.
+In these neurons the response \\( R \\) to a linear combination of two stimuli is equal to the linear combination of the responses to each of the component stimulus.
 This can be expressed mathematically as
 
-\\(
+\\begin{equation}
 \resp(a \stim_1 + b \stim_2) =  a \resp( \stim_1) + b \resp( \stim_1),
-\\)
+\\end{equation}
 
-for any constant \\( a \\) and \\(b\\) and for any stimuli \\( \stim_1\\) and \\(\stim_2\\).
+for any constant \\( a \\) and \\(b\\) and for any stimulus \\( \stim_1\\) and \\(\stim_2\\).
 The response, i.e. the firing rate, of linear cells evoked by a stimulus \\(S\\), is usually expressed as a weighted sum of the stimulus.
 To do this we make the reasonable assumption that the retinal area can be subdivided into small pixels.
 At each pixel location
@@ -25,28 +25,34 @@ its center at
 \\(( \xc, \yc ) = (0,0)\\)
 as the sum over the contributions of the individual pixels and obtain
 
-\\(
+\\begin{equation}
 \resp = \resp_{0} +\\displaystyle\\sum_i\\sum_j \recep(x_i, y_j) \stim(x_i, y_j),
-\\)
+\\end{equation}
 
-where the term \\( \resp_0\\) accounts for any background firing that may occur when there is no stimuli.
+where the term \\( \resp_0\\) accounts for any background firing that may occur when there is no stimulus.
 Assuming that the number of pixel is large, we may write
 
 
-\\(
+\\begin{equation}
 \resp = \resp_{0} +\\displaystyle \\iint_\\mathbf{r}
-\recep(\\mathbf{r}) \stim(\\mathbf{r}) \; \\mathrm{d}^2 \\mathbf{r},
-\\)
+\recep(\\mathbf{r}) \stim(\\mathbf{r}) \\; \\mathrm{d}^2 \\mathbf{r},
+\\end{equation}
 
-where the integral is taken over the entire visual field.
+where the integral is taken over the entire visual field. Note that sometimes for mathematical convenience the integral boundaries are set to \\(\\pm \\infty \\), since the receptive fields are effectively localized and different from zero only on a small area of the visual field.
 
-The weighting function \\(\recep \\) is the receptive field function of the neuron, and can be considered as a template for a particular sub-pattern or "image feature" for which the neuron is a detector.
+The weighting function \\(\recep \\) is the receptive field function of the neuron, and can be considered as a pattern for a particular "image feature" for which the neuron is a detector.
 This becomes obvious by noticing that the integral in the equation above measures the mismatches between the stimulus and the receptive field function.
 When these two functions overlap fully, the value of the integral increases and thereby also
 the response of the cell.
-This suggest a close relationship between the weighting factor and the optimal stimulus, and in fact it can be shown that the receptive field function is proportional to the stimuli that evoke maximal response.
+This suggest a close relationship between the weighting factor and the optimal stimulus, and in fact it can be shown that the receptive field function is proportional to the stimulus that evoke maximal response.
 
+
+\div {class="float-right" style="margin: 0 auto"}
 \inlineimage images/linearEstimate.png
+    \div {style="align: left; text-align:center"}
+        \caption Illustration of linear information processing. The stimuli values in each small square is weighted with the corresponding square in the weighting factor. The sum of all these weighted stimuli values gives the  response. Mathematically this corresponds to the sum of elements of the resulting matrix from the entrywise product ( \\(\\circ \\) ) of the stimuli matrix and weighting factor matrix.
+    \enddiv
+\enddiv
 
 
 
