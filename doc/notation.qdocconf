@@ -12,6 +12,7 @@ macro.yc = "y_{c}"
 macro.delay = "tau"
 
 macro.resp = "R"
+macro.respft = "widetilde{R}"
 macro.I = "I"
 
 macro.stim = "S"

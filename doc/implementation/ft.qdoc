@@ -3,12 +3,188 @@
 
     \title Fourier Transform
 
+    The repsponse and impulse response integrals can be evaluated by using Fourier transform. This is much more efficent since complexity of computing is reduced from \\( O(n^2) \\), which arises if one simply applies the definition of discrete Fourier transform, to \\( O(n \\log n) \\), where \\(n \\) is the data size.
+
+    \section1 Continuous Fourier Transform
+
+The Fourier transform of a signal and its inverse Fourier transform are given by
+
+\\begin{equation}
+ \\tilde{y}(k,\\omega) =
+ \\displaystyle\\int_{t} \\int_\\mathbf{x}
+ e^{-i(kx - \\omega t)}y(x, t) \\mathrm{d}x\\;\\mathrm{d}t,
+\\end{equation}
+
+\\begin{equation}
+ y(k,\\omega) = \\frac{1}{(2\\pi)^3}
+ \\displaystyle\\int_{\\omega} \\int_k
+ e^{i(kx - \\omega t)}\\tilde{y}(k, \\omega)
+ \\mathrm{d}k\\;\\mathrm{d}\\omega.
+\\end{equation}
 
 
     \section1 Discrete Fourier Transform
+The discrete Fourier transform is defined as
+
+\\begin{align}
+\\widetilde{Y}_{m'n'} =
+ \\sum_{m,n} Y_{m,n}
+ \\exp \\bigg( -2\\pi i \\bigg( \\frac{m'm}{M} -\\frac{n'n}{N} \\bigg) \\bigg)
+\\end{align}
 
 
-    \section2 Fast Fourier Transform
+
+
+\\begin{align}
+Y_{m,n} &=
+\\sum_{m'n'}
+\\widetilde{Y}_{m'n'}
+ \\exp \\bigg( 2\\pi i \\bigg( \\frac{m'm}{M} -\\frac{n'n}{N} \\bigg) \\bigg)
+\\end{align}
+
+
+    \section2 Relationship between spatiotemporal-Domain and frequency-Domain
+
+\table
+    \header
+        \li
+        \li Spatial
+        \li Time
+    \row
+        \li Number of samples
+        \li \\(M \\)
+        \li \\(N \\)
+    \row
+        \li Resolution
+        \li \\(\\Delta x \\)
+        \li \\(\\Delta t \\)
+    \row
+        \li Max
+        \li  \\(L = M \\Delta x \\)
+        \li  \\(T = N \\Delta t \\)
+    \row
+        \li Sampling frequency
+        \li \\(k_s = \\frac{2\\pi}{\\Delta x} \\)
+        \li \\(\\omega_s = \\frac{2\\pi}{\\Delta t} \\)
+\endtable
+
+
+The accuracy of the discrete Fourier transform is determined by two fundamental numbers
+
+\table
+    \header
+        \li
+        \li Spatial
+        \li Time
+    \row
+        \li Max frequency (Nyquist)
+        \li \\(k_{\\mathrm{max}} = \\frac{k_s}{2} = \\frac{2\\pi}{2\\Delta x} = 2\\pi\\frac{M}{2 L}  \\)
+        \li \\(f_{\\mathrm{max}} = \\frac{f_s}{2} = \\frac{2\\pi}{2\\Delta t} = 2\\pi\\frac{N}{2 T}  \\)
+    \row
+        \li Frequency resolution
+        \li \\(\\Delta k = \\frac{2\\pi}{L} = \\frac{k_s}{M}\\)
+        \li \\(\\Delta \\omega = \\frac{2\\pi}{T} = \\frac{f_s}{N}\\)
+\endtable
+
+From the relations above we also get the important relation between the resolution in time-domain and frequency domain.
+
+\\begin{align}
+\\boxed{
+\\Delta x  \\Delta k = \\frac{2\\pi}{M} \\quad \\quad \\quad
+\\Delta t  \\Delta \\omega = \\frac{2\\pi}{N}
+}
+\\end{align}
+
+
+\section1 Discretized Continuous Fourier transform
+
+Consider an arbitary continuous function \\(y(x,t) \\) sampled in an even numbers \\(M\\) and \\(N\\) of points in spatial and time, respectevly, with a sampling resolution of \\(\\Delta t\\) and \\(\\Delta x\\) .
+The discretized grid is given by
+
+\\begin{align}
+x &= m \\Delta x - \\frac{L}{2}, \\quad m = \\left\\{0, \\dots, M-1 \\right\\} \\\\
+t &= n \\Delta t, \\quad n = \\left\\{0, \\dots, N-1 \\right\\}
+\\end{align}
+
+The corrosponding discrete Fourier transform sample frequencies are
+
+\\begin{align}
+k &= m' \\Delta k, \\quad m' = \\left\\{0, \\dots, M-1 \\right\\}\\\\
+\\omega &= n' \\Delta \\omega, \\quad n' =  \\left\\{0, \\dots, N-1 \\right\\}
+\\end{align}
+
+\section2 Forward Fourier transform
+
+\\begin{align}
+ \\tilde{y}(k,\\omega) &=
+ \\displaystyle\\int_x \\int_{t} e^{-i(kx - \\omega t)} y(x,t) \\mathrm{d}t\\;\\mathrm{d}x
+ \\\\
+ \\tilde{y}(m' \\Delta k, n' \\Delta \\omega) &\\approx
+ \\sum_{m,n} \\Delta x \\Delta t \\;
+y(m \\Delta x - \\frac{L}{2}, n \\Delta t)
+ \\exp \\bigg( -i \\bigg( m' \\Delta k \\; (m \\Delta x - \\frac{L}{2}) - n' \\Delta \\omega \\; n \\Delta t
+\\bigg)\\bigg)
+ \\\\
+&=
+\\Delta x \\Delta t\\exp \\bigg(i m' \\Delta k \\frac{L}{2} \\bigg)
+ \\sum_{m,n} y(m \\Delta x, n \\Delta t)
+ \\exp \\bigg( -2\\pi i \\bigg( \\frac{m'm}{M} -\\frac{n'n}{N} \\bigg) \\bigg)
+ \\\\
+&=
+\\Delta x \\Delta t (-1)^{m'} \\widetilde{Y}_{m'n'}
+\\end{align}
+
+
+\section2 Backward Fourier transform
+
+\\begin{align}
+y(x,t) &=
+\\frac{1}{(2\\pi)^2} \\displaystyle\\int_k \\int_{\\omega} e^{i(kx - \\omega t)}  \\tilde{y}(k,\\omega)  \\mathrm{d}\\omega\\;\\mathrm{d}k
+ \\\\
+y(m \\Delta x - \\frac{L}{2}, n \\Delta t) &\\approx
+ \\frac{1}{(2\\pi)^2}\\sum_{m'n'} \\Delta k \\Delta \\omega \\; \\tilde{y}((m' \\Delta k, n' \\Delta \\omega)
+ \\exp \\bigg( i \\bigg( m' \\Delta k \\; (m \\Delta x - \\frac{L}{2}) - n' \\Delta \\omega \\; n \\Delta t
+\\bigg)\\bigg)
+\\\\
+&=
+ \\frac{\\Delta k \\Delta \\omega }{(2\\pi)^2}\\sum_{m'n'}
+\\tilde{y}(m' \\Delta k, n' \\Delta \\omega)
+ \\exp \\bigg( 2\\pi i \\bigg( \\frac{m'm}{M} -\\frac{n'n}{N} \\bigg) \\bigg)
+\\exp \\bigg(-i m' \\Delta k \\frac{L}{2} \\bigg)
+\\\\
+&=
+ \\frac{\\Delta k \\Delta \\omega }{(2\\pi)^2}\\sum_{m'n'}
+\\tilde{y}(m' \\Delta k, n' \\Delta \\omega)
+ \\exp \\bigg( 2\\pi i \\bigg( \\frac{m'm}{M} -\\frac{n'n}{N} \\bigg) \\bigg)
+(-1)^{m'}
+\\end{align}
+
+
+
+
+
+
 
 
 */
+
+In pervious chapters we show that the response of a cell can be expressed as
+
+\\begin{equation}
+ \resp(\\\rc, t)
+ = \resp_{0}(\\\rc) + \\frac{1}{(2\\pi)^3}
+ \\displaystyle\\iint_\\mathbf{k}\\int_\\omega
+ e^{i(\\mathbf{k\\cdot \\\rc} - \\omega t)}
+ {\\\impresft}(\\mathbf{k}, \\omega)
+\\\stimft (\\mathbf{k}, \\omega)
+ \\mathrm{d}^2\\mathbf{k}.
+\\end{equation}
+
+The integral in the equation is basically the \\( \\\respft \\).
+In this integral the complex Fourier transforms of the impulse-response function \\( \\\impresft \\) is a known continuous function.
+In contrast, the complex Fourier transforms of the stimulus is in general not given as a continuous function, but only sampled in a given number of points (both spatially and temporally).
+
+
+  \\begin{equation}
+  \\left\\{ y(0), y(\\Delta t), y(2\\Delta t), \\dots, y((N-1)\\Delta t)\\right\\}
+  \\end{equation}

@@ -46,7 +46,7 @@ reformulated as an integral over temporal and spatial frequencies:
 
 \\begin{equation}
  \resp(\\\rc, t)
- = \resp_{0}(\\\rc) + \\frac{1}{(2\\pi)^2}
+ = \resp_{0}(\\\rc) + \\frac{1}{(2\\pi)^3}
  \\displaystyle\\iint_\\mathbf{k}\\int_\\omega
  e^{i(\\mathbf{k\\cdot \\\rc} - \\omega t)}
  {\\\impresft}(\\mathbf{k}, \\omega)
