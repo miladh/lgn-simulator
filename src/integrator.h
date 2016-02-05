@@ -18,7 +18,7 @@ namespace edog {
 class Integrator
 {
 public:
-    Integrator(int nt, double dt, int ns);
+    Integrator(int nt, double dt, int ns, double ds);
     ~Integrator();
 
     cx_cube backwardFFT(cx_cube data);
@@ -34,22 +34,29 @@ public:
 
     int nPointsTemporal() const;
     int nPointsSpatial() const;
-
-    double dt() const;
-    double ds() const;
-
     double temporalFreqResolution() const;
     double spatialFreqResolution() const;
+    double timeInterval() const;
+    double lengthInterval() const;
+    double temporalSamplingFreq() const;
+    double spatialSamplingFreq() const;
+    double dt() const;
+    double ds() const;
 
 private:
     int m_nPointsTemporal= 0;
     int m_nPointsSpatial = 0;
-    double m_maxT = 0;
 
     double m_dt = 0;
-    double m_dw = 0;
-
     double m_ds = 0;
+
+    double m_timeInterval = 0;
+    double m_lengthInterval = 0;
+
+    double m_temporalSamplingFreq = 0;
+    double m_spatialSamplingFreq = 0;
+
+    double m_dw = 0;
     double m_dk = 0;
 
     vec m_timeVec;

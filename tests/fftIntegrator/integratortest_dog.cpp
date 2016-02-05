@@ -29,7 +29,9 @@ SUITE(INTEGRATOR){
         double B = 1.0;
         double b = 0.05;
 
-        Integrator integrator(0, 0, ns);
+        double ds = 0.01;
+
+        Integrator integrator(0,0, ns, ds);
 
         int Ns = pow(2,ns);
         cx_mat g = zeros<cx_mat>(Ns, Ns);

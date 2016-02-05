@@ -4,7 +4,7 @@ description: "Nonlagged X-cells config file"
 ns: 8
 nt: 3
 dt: 0.1
-
+ds: 0.01
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0

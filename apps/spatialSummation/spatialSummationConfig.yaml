@@ -4,7 +4,7 @@ description: "Default config file"
 ns: 5
 nt: 8
 dt: 0.1
-
+ds: 0.01
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0

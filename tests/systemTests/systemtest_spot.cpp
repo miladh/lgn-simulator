@@ -32,6 +32,7 @@ SUITE(SYSTEM){
         int ns = 9;
         int nt = 3;
         double dt = 1.2;
+        double ds = 0.01;
 
         double C = 2.0;
         double maskSize = 0.9;
@@ -45,7 +46,7 @@ SUITE(SYSTEM){
         int Ns = pow(2,ns);
 
         //Integrator
-        Integrator integrator(nt, dt, ns);
+        Integrator integrator(nt, dt, ns, ds);
 
         //Stimulus
         CircleMaskGrating S(&integrator, {0, 0}, 0, C, maskSize);

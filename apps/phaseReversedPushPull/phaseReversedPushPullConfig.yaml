@@ -4,7 +4,7 @@ description: "Phase-reversed push-pull config file"
 ns: 6
 nt: 4
 dt: 0.1
-
+ds: 0.01
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0

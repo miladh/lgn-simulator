@@ -15,6 +15,7 @@ SUITE(SYSTEM){
         int nt = 4;
         
         double dt = 0.2;
+        double ds = 0.01;
 
 
         int Ns = pow(2,ns);
@@ -25,8 +26,8 @@ SUITE(SYSTEM){
         cube Ri = zeros<cube>(Ns, Ns, Nt);
         cube Ri_ex = zeros<cube>(Ns, Ns, Nt);
 
-        //Integrator
-        Integrator integrator(nt, dt, ns);
+        //Integrator       
+        Integrator integrator(nt, dt, ns, ds);
         vec s = integrator.coordinateVec();
         vec k = integrator.spatialFreqVec();
         vec t = integrator.timeVec();

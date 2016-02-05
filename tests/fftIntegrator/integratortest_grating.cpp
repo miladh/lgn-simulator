@@ -23,7 +23,9 @@ void runTest(int ns, int nt, double dt, double C, int wdId, int kxId, int kyId)
     int Ns = pow(2,ns);
     int Nt = pow(2,nt);
 
-    Integrator integrator(nt, dt, ns);
+    double ds = 0.01;
+
+    Integrator integrator(nt, dt, ns, ds);
 
     vec k = integrator.spatialFreqVec();
     vec w = integrator.temporalFreqVec();
