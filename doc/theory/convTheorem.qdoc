@@ -1,0 +1,37 @@
+/*!
+    \page convTheorem.html
+
+    \title Convolution theorem
+
+The convolution theorem states that the Fourier transform of a convolution is the pointwise product of Fourier transforms.
+Using the convolution theorem on this convolution
+
+\\begin{align}
+y (x',y',t') &=
+ \\displaystyle \\int_{t}\\int_{y}\\int_{x}
+  f(x,y,t) g(x'- x, y'-y, t'-t)
+ \\mathrm{d}x\\;\\mathrm{d}y\\;\\mathrm{d}t
+ \\\\
+ &= f \\otimes g
+\\end{align}
+
+gives us
+
+\\begin{align}
+\\tilde{y} (k_x,k_y,\\omega) &=
+\\tilde{f} (k_x,k_y,\\omega)
+\\tilde{g} (k_x,k_y,\\omega)
+\\end{align}
+
+where \\(\\tilde{y}, \\tilde{f}\\) and \\(\\tilde{g}\\) are the Fourier transform of \\(y,f\\) and \\(g\\), respectivly.
+
+Note that the convolution is commutative, meaning that
+
+\\begin{align}
+f \\otimes g = g \\otimes f
+\\end{align}
+
+Because of that the convolution theorem is independent of which function is reversed and shifted in the convolution integral.
+
+*/
+
