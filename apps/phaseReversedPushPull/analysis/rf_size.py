@@ -18,7 +18,7 @@ args = parser.parse_args()
 config_file = args.config_file
 
 
-sims, output_dir=get_simulations.get_simulation_environment(config_file, record=True)
+sims, output_dir=get_simulations.get_simulation_environment(config_file, record=False)
 
 
 # Analysis: --------------------------------------------------------------------
@@ -40,15 +40,15 @@ for cell in data:
 
 
 # Rescale
-data["ganglion"]["responses"] *= 128
-data["ganglion"]["responses"] += 36
-
-data["relay"]["responses"] *= 110
-data["relay"]["responses"] += 6
+# data["ganglion"]["responses"] *= 128
+# data["ganglion"]["responses"] += 36
+#
+# data["relay"]["responses"] *= 110
+# data["relay"]["responses"] += 6
 
 
 # Plot:
-mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "r-", label = "ganglion")
+# mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "r-", label = "ganglion")
 mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"], "b-", label = "relay")
 
 
