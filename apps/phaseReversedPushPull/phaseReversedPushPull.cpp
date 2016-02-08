@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createDOGSpatialKernel(&ganglionImpRes);
-    TemporallyConstant Wg_t = createTemporallyConstantKernel(&ganglionImpRes);
+    TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
     GanglionCell ganglion(&integrator, &Wg_s, &Wg_t);
 
     //Relay cell: -------------------------------------------------------------
@@ -55,8 +55,8 @@ int main(int argc, char* argv[])
     DOG Ks_rc = createDOGSpatialKernel(&Ks_rcSettings);
 
     //Temporal kernels:--------------------------------------------------------
-    TemporallyConstant Kt_rg = createTemporallyConstantKernel(&Kt_rgSettings);
-    TemporallyConstant Kt_cr = createTemporallyConstantKernel(&Kt_crSettings);
+    TemporalDelta Kt_rg = createTemporalDeltaKernel(&Kt_rgSettings);
+    TemporalDelta Kt_cr = createTemporalDeltaKernel(&Kt_crSettings);
     TemporalDelta Kt_rc = createTemporalDeltaKernel(&Kt_rcSettings);
 
 

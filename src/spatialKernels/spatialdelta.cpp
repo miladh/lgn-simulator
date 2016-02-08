@@ -17,7 +17,7 @@ double edog::SpatialDelta::spatial(vec2 rVec)
 complex<double> edog::SpatialDelta::fourierTransform(vec2 kVec)
 {
     complex<double> i = complex<double>(0,1);
-    return exp(-i * dot(kVec, m_r0));
+    return m_weight * exp(-i * dot(kVec, m_r0));
 }
 
 

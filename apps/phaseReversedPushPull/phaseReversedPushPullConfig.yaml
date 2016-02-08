@@ -1,8 +1,8 @@
 description: "Phase-reversed push-pull config file"
 
 #------------Integrator settings-----------------#
-ns: 6
-nt: 4
+ns: 9
+nt: 3
 dt: 0.1
 ds: 0.01
 #------------Stimulus settings-----------------#
@@ -19,43 +19,43 @@ wId:   0        #[-nt/2, nt/2 - 1]
 ganglionImpRes:
 # DOG
     A: 1.0
-    a: 0.044
+    a: 0.25
     B: 0.85
-    b: 0.09
+    b: 0.83
 
-# TemporallyConstant
-    constant: 1.0
+# TemporalDelta
+    delay: 0.0
 
 #------------spatialKernelSettings-----------------#
 spatialKernels:
     Krg:
     # SpatialDelta
-        weight: 2.0
+        weight: 1.0
 
     Krc:
-    # DOG
-        A: 0.56
-        a: 0.063
-        B: 0.0
-        b: 0.001
+    # Gauss (DOG)
+        A: 0.0
+        a: 0.001
+        B: 1.5
+        b: 0.83
 
     Kcr:
     # SpatialDelta
-        weight: 0.0
+        weight: 1.0
 
 #------------temporalKernelSettings-----------------#
 temporalKernels:
     Krg:
-    # TemporallyConstant
-        constant: 1.0
+    # TemporalDelta
+        delay: 0.0
 
     Kcr:
-    # TemporallyConstant
-        constant: 1.0
+    # TemporalDelta
+        delay: 0.0
 
     Krc:
     # TemporalDelta
-        delay: 0.1
+        delay: 0.0
 
 
 #------------File manager settings-----------------#
