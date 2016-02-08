@@ -28,7 +28,9 @@ cell_pos_y = cell_pos_x
 data = {"ganglion": {"spot_diameter": np.zeros(len(sims)),
                     "responses": np.zeros(len(sims)) }
         ,"relay":   {"spot_diameter": np.zeros(len(sims)),
-                            "responses": np.zeros(len(sims)) }}
+                            "responses": np.zeros(len(sims))}
+        ,"cortical":   {"spot_diameter": np.zeros(len(sims)),
+                                    "responses": np.zeros(len(sims)) }}
 fig = mplt.figure(figsize=(8,6))
 for cell in data:
     for j, exp in enumerate(sims):
@@ -39,22 +41,14 @@ for cell in data:
         exp.singleCellTemporalResponse(cell, idx, idy))
 
 
-# Rescale
-# data["ganglion"]["responses"] *= 128
-# data["ganglion"]["responses"] += 36
-#
-# data["relay"]["responses"] *= 110
-# data["relay"]["responses"] += 6
-
-
 # Plot:
-# mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "r-", label = "ganglion")
+mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "r-", label = "ganglion")
 mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"], "b-", label = "relay")
+# mplt.plot(data["cortical"]["spot_diameter"], data["cortical"]["responses"], "g--", label = "relay")
 
-
-# mplt.xlim(0., 1.)
+mplt.ylim(0., 1.)
 mplt.xlabel(r"Spot diameter [deg]", fontsize= 16)
-mplt.ylabel("Response [spikes/s]",fontsize= 16)
+mplt.ylabel("Response",fontsize= 16)
 mplt.tight_layout()
 mplt.legend(loc=1)
 mplt.show()
