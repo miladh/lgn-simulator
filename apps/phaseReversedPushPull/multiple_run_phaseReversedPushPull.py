@@ -4,4 +4,4 @@ import numpy as np
 spot_diameters = np.linspace(0, 0.9, 10)
 
 for d in spot_diameters:
-    call(["smt", "run", "phaseReversedPushPull.yaml", "maskSize="+str(d)])
+    call(["smt", "run", "phaseReversedPushPullConfig.yaml", "maskSize="+str(d)])
