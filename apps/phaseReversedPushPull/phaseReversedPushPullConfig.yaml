@@ -43,6 +43,7 @@ spatialKernels:
     # SpatialDelta
         weight: 1.0
 
+
 #------------temporalKernelSettings-----------------#
 temporalKernels:
     Krg:
