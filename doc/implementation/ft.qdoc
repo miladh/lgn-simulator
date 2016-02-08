@@ -7,7 +7,7 @@
 
     \section1 Continuous Fourier Transform
 
-The Fourier transform of a signal and its inverse Fourier transform are given by
+The (continuous) Fourier transform (CFT) of a signal and its inverse Fourier transform are given by
 
 \\begin{equation}
  \\tilde{y}(k,\\omega) =
@@ -24,7 +24,7 @@ The Fourier transform of a signal and its inverse Fourier transform are given by
 
 
     \section1 Discrete Fourier Transform
-The discrete Fourier transform is defined as
+The discrete Fourier transform (DFT) is defined as
 
 \\begin{align}
 \\widetilde{Y}_{m'n'} =
@@ -41,6 +41,8 @@ Y_{m,n} &=
 \\widetilde{Y}_{m'n'}
  \\exp \\bigg( 2\\pi i \\bigg( \\frac{m'm}{M} -\\frac{n'n}{N} \\bigg) \\bigg)
 \\end{align}
+
+There are several techniques for computing the DFT, and these are referred to as \l{https://en.wikipedia.org/wiki/Fast_Fourier_transform}{fast Fourier transform (FFT)} algorithms.
 
 
     \section2 Relationship between spatiotemporal-Domain and frequency-Domain
@@ -161,10 +163,22 @@ y(m \\Delta x - \\frac{L}{2}, n \\Delta t) &\\approx
 
 
 
+\note
+Often in the FFT implementations the resulting values follow so-called "standard" order.
+In the one dimensional case the first element in the resulting array is the zero-frequency term (DC term). Then element (using Python indexing) \\( \\{1, N/2 -1\\} \\) contains the positive-frequency terms, and \\(\\{N/2, N-1\\}\\)  contains the negative-frequency terms, in order of decreasingly negative frequency.
 
 
 
+\section1 Two-Dimensional Frequency Spectrum
+Taking the Fourier transform of an \\(M_x \\times M_y\\) image decompose the image into its sine and cosine components.
+In the figure below the corresponding frequency spectrum is shown.
 
+\div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
+\image images/grid.png
+    \div {style="align: left; text-align:center"}
+        \caption The frequency spectrum.
+    \enddiv
+\enddiv
 
 */
 

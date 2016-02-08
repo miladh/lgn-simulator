@@ -9,7 +9,7 @@ ds: 0.05
 # Grating:
 C: 1.0
 mask: "circle" # none/circle/gauss
-maskSize: 0.5
+maskSize: 0.9
 kxId:  0        #[-ns/2, ns/2 - 1]
 kyId:  0        #[-ns/2, ns/2 - 1]
 wId:   0        #[-nt/2, nt/2 - 1]
