@@ -7,6 +7,7 @@ from sumatra.projects import load_project
 def run_simulator(app_name, config_file):
 
     current_path = os.path.dirname(os.path.realpath(__file__))
+    app_name = load_project().name
     config_file = os.path.abspath(os.path.join(current_path, "../../apps", app_name, config_file))
     print "app_name: ", app_name
     print "config file: ", config_file
@@ -55,11 +56,8 @@ if __name__ == '__main__':
     from argparse import ArgumentParser
     parser = ArgumentParser()
     parser.add_argument("config_file", help="app config file")
-
     args = parser.parse_args()
     config_file = args.config_file
-    app_name = load_project().name
-
 
     print "Running lgn simulator..."
-    run_simulator(app_name, config_file)
+    run_simulator(config_file)
