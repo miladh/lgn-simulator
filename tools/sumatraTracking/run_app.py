@@ -60,6 +60,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
     config_file = args.config_file
     app_name = args.app_name
-    
+
+    print load_project()
+
     print "Running lgn simulator..."
     run_simulator(app_name, config_file)

@@ -1,7 +1,6 @@
 #!/usr/bin/python
 import yaml
-import os
-import os.path
+import os, os.path
 import h5py
 from sumatra.projects import load_project
 import Simulation

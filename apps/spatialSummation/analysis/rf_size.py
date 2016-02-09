@@ -5,19 +5,18 @@ import numpy as np
 import matplotlib.pyplot as mplt
 
 current_path = os.path.dirname(os.path.realpath(__file__))
-lib_path = os.path.abspath(os.path.join(current_path,"..", "..","..","tools"))
+lib_path = os.path.abspath(os.path.join(current_path,"../../../../tools"))
 sys.path.append(lib_path)
 import Simulation
 import get_simulations
 import plotting_tools as plt
 
 parser = ArgumentParser()
-parser.add_argument("config_file", default=None)
+parser.add_argument("sim_ids", help = "simulation ids")
 args = parser.parse_args()
-config_file = args.config_file
+sim_ids = args.sim_ids
 
-
-sims, output_dir=get_simulations.get_simulation_environment(config_file, record=True)
+sims, output_dir=get_simulations.get_simulation_environment(sim_ids, record=True)
 
 
 # Analysis: --------------------------------------------------------------------
