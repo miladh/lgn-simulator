@@ -173,7 +173,7 @@ In the one dimensional case the first element in the resulting array is the zero
 Taking the Fourier transform of an \\(M_x \\times M_y\\) image decompose the image into its sine and cosine components.
 In the figure below the corresponding frequency spectrum is shown.
 
-\div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
+\div {class="float-right" style="height:80%;width:80%;margin: 0 auto"}
 \image images/grid.png
     \div {style="align: left; text-align:center"}
         \caption The frequency spectrum.

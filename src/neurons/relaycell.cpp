@@ -2,6 +2,13 @@
 
 using namespace edog;
 
+/*!
+ * \class RelayCell
+ * \inmodule edog
+ * \ingroup edog-neurons
+ * \brief Relay cell class.
+ *
+ */
 
 RelayCell::RelayCell(Integrator *integrator)
     : Neuron(integrator)

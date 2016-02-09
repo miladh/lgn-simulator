@@ -10,8 +10,6 @@ The linear mechanistic model incorporates the influence of thalamocortical loops
     \li \l{https://github.com/miladh/extendedDOG} {Source code}
 \endlist
 
-\contentspage
-
     \section1 Theory
 
         \list
@@ -37,6 +35,10 @@ The linear mechanistic model incorporates the influence of thalamocortical loops
         \li \l{Phase-reversed push-pull}
         \li \l{nonlagged X-cells}
         \endlist
+
+
+    \annotatedlist edog-neurons
+    \generatelist{classesbymodule edog}
 
 */
 

@@ -5,4 +5,65 @@
     \inmodule systems
 
 
+The system consist of three cell populations: ganglion cells, relay cells and cortical cells.
+
+\list
+\li The spatial part of the reseptive field for the ganglion cell is a DoG function, while the temporal part is a temporal delta function (no memory).
+\li The ganglion cell population is connected to relay cells with a spatiotemporal delta function.
+\li The relay cell population is connected to cortical cells with a spatiotemporal delta function.
+\li The cortical cell population is connected to relay cells with a temporal delta function, while the spatial part is a Gauss function.
+\endlist
+
+
+\section2 Impulse response functions
+
+
+
+\\begin{align}
+\\\impresft_{\\\gang_i}(\\mathbf{k}, \\omega) &=
+\\tilde{f}_{\\mathrm{DoG}}(\\mathbf{k}) \\;
+\\mathcal{F} \[ \\delta(t) \](\\omega)
+= \\tilde{f}_{\\mathrm{DoG}}(\\mathbf{k})
+e^{(-i\\omega\\; 0)}
+= \\tilde{f}_{\\mathrm{DoG}}(\\mathbf{k})
+\\\\
+\\\impresft_{\\\rel}(\\mathbf{k}, \\omega) &=
+\\frac{
+\\\kernelft_{{\\\rel} \\\gang}\\\impresft_{\\\gang}
+}
+{
+1 -
+\\\kernelft_{{\\\rel} \\\cor}
+\\\kernelft_{{\\\cor} \\\rel}
+}
+=
+\\frac{
+\\mathcal{F} \[ \\delta(\\mathbf{r})\\delta(t) \](\\mathbf{k}, \\omega)\\;
+\\tilde{f}_{\\mathrm{DoG}}(\\mathbf{k})
+}
+{
+1 -
+\\mathcal{F} \[ \\delta(\\mathbf{r})\\delta(t) \](\\mathbf{k}, \\omega)\\;
+\\tilde{f}_{\\mathrm{Gauss}}(\\mathbf{k})
+}
+=
+\\frac{
+\\tilde{f}_{\\mathrm{DoG}}(\\mathbf{k})
+}
+{
+1 -
+\\tilde{f}_{\\mathrm{Gauss}}(\\mathbf{k})
+}
+\\\\
+\\\impresft_{\\\cor}(\\mathbf{k}, \\omega) &=
+\\\kernelft_{{\\\cor} \\\rel}\\\impresft_{\\\rel}
+= \\mathcal{F} \[ \\delta(\\mathbf{r})\\delta(t) \](\\mathbf{k}, \\omega)\\;
+\\\impresft_{\\\rel}
+= \\\impresft_{\\\rel}
+\\end{align}
+
+
+
+
+
 */
