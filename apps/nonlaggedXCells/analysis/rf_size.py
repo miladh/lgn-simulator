@@ -58,7 +58,7 @@ data["ganglion"]["responses"] *= 128
 data["ganglion"]["responses"] += 36
 
 # data["relay"]["spot_diameter"] *= 13.5
-data["relay"]["responses"] *= 110
+data["relay"]["responses"] *= 150
 data["relay"]["responses"] += 6
 
 
