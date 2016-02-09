@@ -56,7 +56,10 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("config_file", help="app config file")
     parser.add_argument("app_name", help="app name")
+
     args = parser.parse_args()
     config_file = args.config_file
     app_name = args.app_name
+    
+    print "Running lgn simulator..."
     run_simulator(app_name, config_file)
