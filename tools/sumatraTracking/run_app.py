@@ -4,7 +4,7 @@ import subprocess
 import os, os.path
 from sumatra.projects import load_project
 
-def run_simulator(app_name, config_file):
+def run_simulator(config_file):
 
     current_path = os.path.dirname(os.path.realpath(__file__))
     app_name = load_project().name
