@@ -13,10 +13,12 @@ import plotting_tools as plt
 
 parser = ArgumentParser()
 parser.add_argument("sim_ids", help = "simulation ids")
+parser.add_argument("record", help = "record results")
 args = parser.parse_args()
 sim_ids = args.sim_ids
+record = args.record
 
-sims, output_dir=get_simulations.get_simulation_environment(sim_ids, record=True)
+sims, output_dir=get_simulations.get_simulation_environment(sim_ids, record=record)
 
 
 # Analysis: --------------------------------------------------------------------
