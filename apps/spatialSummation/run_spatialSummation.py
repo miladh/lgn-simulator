@@ -1,4 +1,4 @@
-from subprocess
+import subprocess
 import numpy as np
 
 spot_diameters = np.linspace(0, 0.9, 1)
