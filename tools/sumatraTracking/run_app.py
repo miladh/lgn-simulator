@@ -8,7 +8,8 @@ def run_simulator(app_name, config_file):
 
     current_path = os.path.dirname(os.path.realpath(__file__))
     config_file = os.path.abspath(os.path.join(current_path, "../../apps", app_name, config_file))
-    print "config file:", config_file
+    print "app_name: ", app_name
+    print "config file: ", config_file
 
     with open(config_file, 'r') as stream:
         config_data = yaml.load(stream)
@@ -58,5 +59,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     config_file = args.config_file
     app_name = args.app_name
-    # app_name = os.path.splitext(os.path.basename(os.getcwd()))[0]
     run_simulator(app_name, config_file)
