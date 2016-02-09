@@ -7,7 +7,7 @@ from sumatra.projects import load_project
 def run_simulator(app_name, config_file):
 
     current_path = os.path.dirname(os.path.realpath(__file__))
-    config_file = os.path.abspath(os.path.join(current_path, "../../apps/", app_name, config_file))
+    config_file = os.path.abspath(os.path.join(current_path, "../../apps", app_name, config_file))
     print "config file:", config_file
 
     with open(config_file, 'r') as stream:
