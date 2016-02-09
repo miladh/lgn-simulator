@@ -12,7 +12,7 @@ parser = ArgumentParser()
 parser.add_argument("config_file", default=None)
 args = parser.parse_args()
 
-app_name = "phaseReversedPushPull"
+app_name = os.path.basename(current_path)
 
 # Run edog:
 config_file = args.config_file

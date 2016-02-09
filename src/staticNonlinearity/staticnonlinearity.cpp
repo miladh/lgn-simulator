@@ -1,6 +1,6 @@
 #include "staticnonlinearity.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 StaticNonlinearity::StaticNonlinearity()

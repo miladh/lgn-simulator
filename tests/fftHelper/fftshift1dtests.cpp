@@ -7,7 +7,7 @@
 
 using namespace std;
 using namespace arma;
-using namespace edog;
+using namespace lgnSimulator;
 
 SUITE(fftHelper){
 

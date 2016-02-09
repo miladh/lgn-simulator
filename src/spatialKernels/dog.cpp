@@ -1,6 +1,6 @@
 #include "dog.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 DOG::DOG(double A, double a, double B, double b)

@@ -2,7 +2,7 @@
 #define ELLIPTICGAUSSIAN_H
 
 #include "spatialkernel.h"
-namespace edog {
+namespace lgnSimulator {
 class EllipticGaussian : public SpatialKernel
 {
 public:
@@ -25,6 +25,6 @@ private:
 
 }
 
-edog::EllipticGaussian createEllipticGaussianSpatialKernel(const YAML::Node *cfg);
+lgnSimulator::EllipticGaussian createEllipticGaussianSpatialKernel(const YAML::Node *cfg);
 
 #endif // ELLIPTICGAUSSIAN_H

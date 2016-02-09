@@ -2,7 +2,7 @@
 #define SIGMOIDALNONLINEARITY_H
 
 #include "staticnonlinearity.h"
-namespace edog {
+namespace lgnSimulator {
 class SigmoidalNonlinearity : public StaticNonlinearity
 {
 public:
@@ -20,6 +20,6 @@ private:
 };
 
 }
-edog::SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node *cfg);
+lgnSimulator::SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node *cfg);
 
 #endif // SIGMOIDALNONLINEARITY_H

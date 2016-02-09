@@ -1,6 +1,6 @@
 #include "ellipticgaussian.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 EllipticGaussian::EllipticGaussian(double weight, double angle,

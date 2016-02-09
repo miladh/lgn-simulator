@@ -4,7 +4,7 @@
 #include "temporalKernels/temporalkernel.h"
 
 
-namespace edog {
+namespace lgnSimulator {
 class TemporallyConstant : public TemporalKernel
 {
 public:
@@ -22,6 +22,6 @@ private:
 
 }
 
-edog::TemporallyConstant createTemporallyConstantKernel(const YAML::Node *cfg);
+lgnSimulator::TemporallyConstant createTemporallyConstantKernel(const YAML::Node *cfg);
 
 #endif // TEMPORALLYCONSTANT_H

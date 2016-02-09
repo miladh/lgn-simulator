@@ -9,7 +9,7 @@
 
 using namespace std;
 using namespace arma;
-namespace edog {
+namespace lgnSimulator {
 class Stimulus
 {
 public:

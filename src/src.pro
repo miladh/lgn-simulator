@@ -68,9 +68,10 @@ HEADERS += \
     staticNonlinearity/heavisidenonlinearity.h \
     staticNonlinearity/sigmoidalnonlinearity.h \
     spatialKernels/spatialdelta.h \
-    spatialKernels/spatiallyconstant.h
+    spatialKernels/spatiallyconstant.h \
+    ../include/lgnSimulator.h
 
-OTHER_FILES += ../include/edog.h
+OTHER_FILES +=
 
 !equals(PWD, $${OUT_PWD}) {
     QMAKE_POST_LINK += $(COPY_DIR) $$OUT_PWD/../lib $$PWD/../

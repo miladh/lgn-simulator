@@ -2,7 +2,7 @@
 #define RELAYCELL_H
 
 #include "neuron.h"
-namespace edog {
+namespace lgnSimulator {
 class RelayCell : public Neuron
 {
 public:

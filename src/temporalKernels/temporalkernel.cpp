@@ -1,6 +1,6 @@
 #include "temporalkernel.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 TemporalKernel::TemporalKernel()

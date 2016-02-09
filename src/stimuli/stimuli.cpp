@@ -1,6 +1,6 @@
 #include "stimuli.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 Stimulus::Stimulus(Integrator *integrator)

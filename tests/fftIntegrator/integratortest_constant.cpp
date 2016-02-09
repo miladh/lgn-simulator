@@ -13,7 +13,7 @@
 
 using namespace std;
 using namespace arma;
-using namespace edog;
+using namespace lgnSimulator;
 
 void runTest(int ns, int nt, double dt, double c)
 {

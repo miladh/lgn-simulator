@@ -4,7 +4,7 @@
 #include "spatialkernel.h"
 
 
-namespace edog {
+namespace lgnSimulator {
 
 class SpatialDelta : public SpatialKernel
 {
@@ -23,6 +23,6 @@ private:
 
 }
 
-edog::SpatialDelta createSpatialDeltaKernel(const YAML::Node *cfg);
+lgnSimulator::SpatialDelta createSpatialDeltaKernel(const YAML::Node *cfg);
 
 #endif // SPATIALDELTA_H

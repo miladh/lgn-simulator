@@ -11,7 +11,7 @@
 
 using namespace arma;
 
-namespace edog {
+namespace lgnSimulator {
 class Functions
 {
 public:

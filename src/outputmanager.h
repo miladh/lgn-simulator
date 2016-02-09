@@ -14,7 +14,7 @@ using namespace arma;
 using namespace std;
 using namespace H5;
 
-namespace edog {
+namespace lgnSimulator {
 class OutputManager
 {
 public:

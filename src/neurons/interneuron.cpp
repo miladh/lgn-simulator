@@ -1,7 +1,7 @@
 #include "interneuron.h"
 
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 Interneuron::Interneuron(Integrator *integrator)

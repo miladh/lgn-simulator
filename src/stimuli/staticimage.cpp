@@ -1,6 +1,6 @@
 #include "staticimage.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 StaticImage::StaticImage(Integrator *integrator, string sceneFilename):

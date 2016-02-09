@@ -1,6 +1,6 @@
 #include "integrator.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 Integrator::Integrator(int nt, double dt, int ns, double ds)

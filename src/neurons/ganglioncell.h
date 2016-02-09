@@ -8,7 +8,7 @@
 #include <armadillo>
 
 using namespace arma;
-namespace edog {
+namespace lgnSimulator {
 class GanglionCell : public Neuron
 {
 public:

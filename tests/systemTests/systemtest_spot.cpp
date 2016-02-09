@@ -13,7 +13,7 @@
 #include "temporalKernels/temporallyconstant.h"
 #include "stimuli/grating/circlemaskgrating.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 double response(double d, double s, double A, double a, double B, double b)
 {

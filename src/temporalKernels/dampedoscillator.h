@@ -4,7 +4,7 @@
 
 #include "temporalKernels/temporalkernel.h"
 
-namespace edog {
+namespace lgnSimulator {
 
 class DampedOscillator : public TemporalKernel
 {
@@ -23,6 +23,6 @@ private:
 };
 
 }
-edog::DampedOscillator createDampedOscillatorTemporalKernel(const YAML::Node *cfg);
+lgnSimulator::DampedOscillator createDampedOscillatorTemporalKernel(const YAML::Node *cfg);
 
 #endif // DAMPEDOSCILLATOR_H

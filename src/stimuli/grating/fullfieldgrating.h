@@ -4,7 +4,7 @@
 #include "grating.h"
 
 
-namespace edog {
+namespace lgnSimulator {
 class FullFieldGrating : public Grating
 {
 public:

@@ -1,6 +1,6 @@
 #include "decayingexponential.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 DecayingExponential::DecayingExponential(double tau, double delay)

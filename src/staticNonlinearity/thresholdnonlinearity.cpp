@@ -1,6 +1,6 @@
 #include "thresholdnonlinearity.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 ThresholdNonlinearity::ThresholdNonlinearity(double threshold, double weight)

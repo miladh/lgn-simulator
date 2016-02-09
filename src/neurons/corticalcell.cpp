@@ -1,6 +1,6 @@
 #include "corticalcell.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 CorticalCell::CorticalCell(Integrator* integrator)

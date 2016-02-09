@@ -3,10 +3,10 @@
 #include <unistd.h>
 #include <time.h>
 
-#include <edog.h>
+#include <lgnSimulator.h>
 
 using namespace std;
-using namespace edog;
+using namespace lgnSimulator;
 
 int main()
 {

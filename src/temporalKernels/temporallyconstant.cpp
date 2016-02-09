@@ -1,6 +1,6 @@
 #include "temporallyconstant.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 TemporallyConstant::TemporallyConstant(double constant)

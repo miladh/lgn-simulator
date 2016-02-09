@@ -5,7 +5,7 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/photo/photo.hpp"
 
-namespace edog {
+namespace lgnSimulator {
 class NaturalScene : public Stimulus
 {
 public:

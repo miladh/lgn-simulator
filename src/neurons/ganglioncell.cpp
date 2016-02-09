@@ -1,6 +1,6 @@
 #include "ganglioncell.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 GanglionCell::GanglionCell(Integrator *integrator,

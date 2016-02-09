@@ -1,6 +1,6 @@
 #include "dampedoscillator.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 DampedOscillator::DampedOscillator(double phaseDuration, double weight)

@@ -1,6 +1,6 @@
 #include "ffthelper.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 FFTHelper::FFTHelper()

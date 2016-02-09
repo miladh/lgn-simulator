@@ -3,7 +3,7 @@
 
 #include "neuron.h"
 
-namespace edog {
+namespace lgnSimulator {
 class Interneuron : public Neuron
 {
     friend class RelayCell;

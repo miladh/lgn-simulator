@@ -3,7 +3,7 @@
 
 #include "staticnonlinearity.h"
 #include "math/functions.h"
-namespace edog {
+namespace lgnSimulator {
 class HeavisideNonlinearity : public StaticNonlinearity
 {
 public:

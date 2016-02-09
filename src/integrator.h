@@ -13,7 +13,7 @@
 using namespace std;
 using namespace arma;
 
-namespace edog {
+namespace lgnSimulator {
 
 class Integrator
 {
@@ -67,6 +67,6 @@ private:
 };
 }
 
-edog::Integrator createIntegrator(const YAML::Node *cfg);
+lgnSimulator::Integrator createIntegrator(const YAML::Node *cfg);
 
 #endif // INTEGRATOR_H

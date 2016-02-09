@@ -9,7 +9,7 @@
 #include "spatialKernels/dog.h"
 
 
-using namespace edog;
+using namespace lgnSimulator;
 
 SUITE(SPECIALFUNCTIONS){
 

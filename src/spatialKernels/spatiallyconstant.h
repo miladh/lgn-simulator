@@ -4,7 +4,7 @@
 #include "spatialKernels/spatialkernel.h"
 
 
-namespace edog {
+namespace lgnSimulator {
 class SpatiallyConstant : public SpatialKernel
 {
 public:
@@ -22,6 +22,6 @@ private:
 
 }
 
-edog::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node *cfg);
+lgnSimulator::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node *cfg);
 
 #endif // SPATIALLYCONSTANT_H

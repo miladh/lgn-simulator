@@ -3,7 +3,7 @@
 
 #include "grating.h"
 
-namespace edog {
+namespace lgnSimulator {
 class CircleMaskGrating : public Grating
 {
 public:

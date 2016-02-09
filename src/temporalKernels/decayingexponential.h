@@ -3,7 +3,7 @@
 
 #include "temporalKernels/temporalkernel.h"
 
-namespace edog {
+namespace lgnSimulator {
 
 class DecayingExponential : public TemporalKernel
 {
@@ -22,6 +22,6 @@ private:
 };
 
 }
-edog::DecayingExponential createDecayingExponentialTemporalKernel(const YAML::Node *cfg);
+lgnSimulator::DecayingExponential createDecayingExponentialTemporalKernel(const YAML::Node *cfg);
 
 #endif // DECAYINGEXPONENTIAL_H

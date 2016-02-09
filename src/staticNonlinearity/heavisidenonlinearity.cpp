@@ -1,6 +1,6 @@
 #include "heavisidenonlinearity.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 HeavisideNonlinearity::HeavisideNonlinearity()

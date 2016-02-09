@@ -6,7 +6,7 @@
 using namespace std;
 using namespace arma;
 
-namespace edog {
+namespace lgnSimulator {
 class DOG : public SpatialKernel
 {
 public:
@@ -28,6 +28,6 @@ private:
 };
 }
 
-edog::DOG createDOGSpatialKernel(const YAML::Node *cfg);
+lgnSimulator::DOG createDOGSpatialKernel(const YAML::Node *cfg);
 
 #endif // DOG_H

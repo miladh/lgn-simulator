@@ -1,6 +1,6 @@
 #include "neuron.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 /*!
  * \class Neuron

@@ -4,7 +4,7 @@
 #include "temporalKernels/temporalkernel.h"
 #include "spatialKernels/spatialkernel.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 class KernelSettings
 {

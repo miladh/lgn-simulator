@@ -6,7 +6,7 @@
 
 using namespace std;
 using namespace arma;
-using namespace edog;
+using namespace lgnSimulator;
 
 SUITE(fftHelper){
     TEST(fftshift_3D){

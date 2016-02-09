@@ -11,7 +11,7 @@
 
 using namespace arma;
 using namespace std;
-namespace edog {
+namespace lgnSimulator {
 class Neuron
 {
 public:

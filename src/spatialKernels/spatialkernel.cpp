@@ -1,6 +1,6 @@
 #include "spatialkernel.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 SpatialKernel::SpatialKernel()

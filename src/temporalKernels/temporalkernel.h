@@ -8,7 +8,7 @@
 
 using namespace std;
 using namespace arma;
-namespace edog {
+namespace lgnSimulator {
 class TemporalKernel
 {
 public:

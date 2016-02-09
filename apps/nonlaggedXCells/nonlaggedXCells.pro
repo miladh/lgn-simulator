@@ -1,7 +1,7 @@
 include(../../defaults.pri)
 include(../apps_defaults.pri)
 
-TARGET = edog_nonlaggedXCells
+TARGET = lgnSimulator_nonlaggedXCells
 
 SOURCES = nonlaggedXCells.cpp
 

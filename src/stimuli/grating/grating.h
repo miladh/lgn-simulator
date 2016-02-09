@@ -8,7 +8,7 @@
 #include <memory>
 #include <type_traits>
 #include <utility>
-namespace edog {
+namespace lgnSimulator {
 class Grating : public Stimulus
 {
 public:
@@ -43,6 +43,6 @@ protected:
 };
 
 }
-std::unique_ptr<edog::Grating> createGratingStimulus(edog::Integrator *integrator, const YAML::Node* cfg);
+std::unique_ptr<lgnSimulator::Grating> createGratingStimulus(lgnSimulator::Integrator *integrator, const YAML::Node* cfg);
 
 #endif // GRATING_H

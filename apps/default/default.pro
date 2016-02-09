@@ -1,7 +1,7 @@
 include(../../defaults.pri)
 include(../apps_defaults.pri)
 
-TARGET = edog_default
+TARGET = lgnSimulator_default
 
 SOURCES = defaultmain.cpp
 

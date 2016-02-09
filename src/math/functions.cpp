@@ -1,6 +1,6 @@
 #include "functions.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 Functions::Functions()

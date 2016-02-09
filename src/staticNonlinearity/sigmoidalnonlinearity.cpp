@@ -1,6 +1,6 @@
 #include "sigmoidalnonlinearity.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 SigmoidalNonlinearity::SigmoidalNonlinearity(double maxValue, double halfMaxValue, double exponent)

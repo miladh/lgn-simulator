@@ -6,7 +6,7 @@
 #include "opencv2/core/core.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/photo/photo.hpp"
-namespace edog {
+namespace lgnSimulator {
 class NaturalSceneVideo : public Stimulus
 {
 public:
@@ -26,6 +26,6 @@ private:
 };
 
 }
-unique_ptr<edog::NaturalSceneVideo> createNaturalSceneVideoStimulus(edog::Integrator *integrator,
+unique_ptr<lgnSimulator::NaturalSceneVideo> createNaturalSceneVideoStimulus(lgnSimulator::Integrator *integrator,
                                                   const YAML::Node *cfg);
 #endif // NATURALSCENEVIDEO_H

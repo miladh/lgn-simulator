@@ -1,6 +1,6 @@
 #include "fullfieldgrating.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 FullFieldGrating::FullFieldGrating(Integrator *integrator,

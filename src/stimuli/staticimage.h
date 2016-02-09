@@ -4,7 +4,7 @@
 #include "stimuli/naturalscene.h"
 
 
-namespace edog {
+namespace lgnSimulator {
 class StaticImage : public NaturalScene
 {
 public:
@@ -18,6 +18,6 @@ private:
 };
 
 }
-unique_ptr<edog::StaticImage> createStaticImageStimulus(edog::Integrator *integrator, const YAML::Node *cfg);
+unique_ptr<lgnSimulator::StaticImage> createStaticImageStimulus(lgnSimulator::Integrator *integrator, const YAML::Node *cfg);
 
 #endif // STATICIMAGE_H

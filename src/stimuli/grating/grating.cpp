@@ -4,7 +4,7 @@
 #include "circlemaskgrating.h"
 #include "gaussianmaskgrating.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 Grating::Grating(Integrator *integrator,

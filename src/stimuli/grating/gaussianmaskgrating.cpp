@@ -1,6 +1,6 @@
 #include "gaussianmaskgrating.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 GaussianMaskGrating::GaussianMaskGrating(Integrator *integrator,

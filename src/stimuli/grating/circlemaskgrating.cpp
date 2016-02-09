@@ -1,6 +1,6 @@
 #include "circlemaskgrating.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 CircleMaskGrating::CircleMaskGrating(Integrator *integrator,

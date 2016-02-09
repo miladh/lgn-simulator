@@ -5,7 +5,7 @@
 #include "stimuli/naturalscene.h"
 #include "stimuli/naturalscenevideo.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 OutputManager::OutputManager(const YAML::Node *cfg)

@@ -13,7 +13,7 @@
 
 using namespace std;
 using namespace arma;
-using namespace edog;
+using namespace lgnSimulator;
 
 double exponential(double a, double t){
 

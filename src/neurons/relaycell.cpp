@@ -1,6 +1,6 @@
 #include "relaycell.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 /*!
  * \class RelayCell

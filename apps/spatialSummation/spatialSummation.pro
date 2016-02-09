@@ -1,7 +1,7 @@
 include(../../defaults.pri)
 include(../apps_defaults.pri)
 
-TARGET = edog_spatialSummation
+TARGET = lgnSimulator_spatialSummation
 
 SOURCES = spatialSummation.cpp
 

@@ -3,7 +3,7 @@
 
 #include "staticnonlinearity.h"
 #include "math/functions.h"
-namespace edog {
+namespace lgnSimulator {
 class ThresholdNonlinearity : public StaticNonlinearity
 {
 public:
@@ -21,6 +21,6 @@ private:
 };
 }
 
-edog::ThresholdNonlinearity createThresholdNonlinearity(const YAML::Node *cfg);
+lgnSimulator::ThresholdNonlinearity createThresholdNonlinearity(const YAML::Node *cfg);
 
 #endif // THRESHOLDNONLINEARITY_H

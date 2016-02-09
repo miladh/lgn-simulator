@@ -1,4 +1,4 @@
-Extended Difference-of-Gaussians
+LGN Simulator
 ===========================
 
 Firing-rate-based model of spatiotemporal LGN relay-cell responses to visual stimuli incorporating cortical feedback.

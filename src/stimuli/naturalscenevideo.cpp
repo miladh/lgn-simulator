@@ -1,6 +1,6 @@
 #include "naturalscenevideo.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 NaturalSceneVideo::NaturalSceneVideo(Integrator *integrator, string sceneFilename)

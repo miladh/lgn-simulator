@@ -4,7 +4,7 @@
 #include "grating.h"
 #include "spatialKernels/dog.h"
 
-namespace edog {
+namespace lgnSimulator {
 class GaussianMaskGrating : public Grating
 {
 public:

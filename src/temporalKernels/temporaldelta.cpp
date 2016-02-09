@@ -1,6 +1,6 @@
 #include "temporaldelta.h"
 
-using namespace edog;
+using namespace lgnSimulator;
 
 
 TemporalDelta::TemporalDelta(double delay)
