@@ -14,6 +14,6 @@ args = parser.parse_args()
 
 app_name = os.path.basename(current_path)
 
-# Run edog:
+# Run lgnSimulator:
 config_file = args.config_file
 run_id = lgnSimulator_runner.run_lgnSimulator(app_name, config_file)
