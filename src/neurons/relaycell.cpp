@@ -4,8 +4,8 @@ using namespace lgnSimulator;
 
 /*!
  * \class RelayCell
- * \inmodule edog
- * \ingroup edog-neurons
+ * \inmodule lgnSimulator
+ * \ingroup lgnSimulator-neurons
  * \brief Relay cell class.
  *
  */

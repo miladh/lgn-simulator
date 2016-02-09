@@ -37,8 +37,8 @@ The linear mechanistic model incorporates the influence of thalamocortical loops
         \endlist
 
 
-    \annotatedlist edog-neurons
-    \generatelist{classesbymodule edog}
+    \annotatedlist lgnSimulator-neurons
+    \generatelist{classesbymodule lgnSimulator}
 
 */
 
