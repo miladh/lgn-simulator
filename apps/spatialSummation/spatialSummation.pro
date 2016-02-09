@@ -5,4 +5,4 @@ TARGET = lgnSimulator_spatialSummation
 
 SOURCES = spatialSummation.cpp
 
-OTHER_FILES += ./spatialSummationConfig.yaml
+OTHER_FILES += ./spatialSummation.yaml
