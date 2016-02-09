@@ -15,16 +15,17 @@ import plotting_tools as plt
 
 parser = ArgumentParser()
 parser.add_argument("sim_ids", help = "simulation ids")
+parser.add_argument("exp_data_path", help = "experimental datapath")
 parser.add_argument("record", help = "record results", type = int)
 args = parser.parse_args()
 sim_ids = args.sim_ids
+exp_data_path = args.exp_data_path
 record = args.record
 
 sims, output_dir=get_simulations.get_simulation_environment(sim_ids, record=record)
 
 
 # Get experimental data: -------------------------------------------------------
-exp_data_path = os.path.abspath(os.path.join(current_path,"../../../.." ,"expDATA"))
 exp_data_filename = "nonLaggedXCells.mat"
 exp_data = io.loadmat(os.path.join(exp_data_path, exp_data_filename ))
 relay_exp = [np.array(exp_data["xrelay_data"]).transpose()[0]*2.0,
