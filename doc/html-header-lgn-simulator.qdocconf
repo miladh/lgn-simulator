@@ -1,6 +1,6 @@
 # HTML Header with qt.io branding and online links
 
-HTML.stylesheets = template/style/online-edog.css \
+HTML.stylesheets = template/style/online-lgn-simulator.css \
                    template/style/gsc.css \
                    template/style/list_arrow.png \
                    template/style/icomoon.eot \
@@ -10,7 +10,7 @@ HTML.stylesheets = template/style/online-edog.css \
                    template/style/doc_search.png
 
 #for including files into the qch file. Relative to the outputdir of a QDoc build.
-qhp.extraFiles += style/online-edog.css \
+qhp.extraFiles += style/online-lgn-simulator.css \
                   style/gsc.css \
                   style/list_arrow.png \
                   style/icomoon.eot \
@@ -19,7 +19,7 @@ qhp.extraFiles += style/online-edog.css \
                   style/icomoon.woff
 
 HTML.headerstyles = \
-    "  <link rel=\"stylesheet\" type=\"text/css\" href=\"style/online-edog.css\" />\n" \
+    "  <link rel=\"stylesheet\" type=\"text/css\" href=\"style/online-lgn-simulator.css\" />\n" \
     "  <link rel=\"shortcut icon\" href=\"//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip\" />\n"
 
 HTML.headerscripts = \

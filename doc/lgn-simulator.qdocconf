@@ -1,6 +1,6 @@
 include(html-config.qdocconf)
-include(html-header-edog.qdocconf)
-include(html-footer-edog.qdocconf)
+include(html-header-lgn-simulator.qdocconf)
+include(html-footer-lgn-simulator.qdocconf)
 include(notation.qdocconf)
 
 
@@ -13,11 +13,11 @@ HTML.extraimages += template/images/ico_out.png \
                     template/images/bullet_sq.png \
                     template/images/bgrContent.png
 
-project = extendedDOG
+project = lgn-simulator
 description = documentation
 
 outputformats = HTML
-outputdir   = ../../edog-docs/doc
+outputdir   = ../../lgn-simulator-docs/doc
 headerdirs  = ..
 sourcedirs  = ..
 exampledirs = ..
