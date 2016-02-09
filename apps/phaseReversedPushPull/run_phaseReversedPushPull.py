@@ -1,19 +1,7 @@
-#!/usr/bin/python
-import os, sys
-from sys import argv
-from argparse import ArgumentParser
-current_path = os.path.dirname(os.path.realpath(__file__))
-lib_path = os.path.abspath(os.path.join(current_path, "..","..","tools"))
-sys.path.append(lib_path)
+from subprocess import call
+import numpy as np
 
-import lgnSimulator_runner
+spot_diameters = np.linspace(0, 0.9, 30)
 
-parser = ArgumentParser()
-parser.add_argument("config_file", default=None)
-args = parser.parse_args()
-
-app_name = "phaseReversedPushPull"
-
-# Run lgnSimulator:
-config_file = args.config_file
-run_id = lgnSimulator_runner.run_lgnSimulator(app_name, config_file)
+for d in spot_diameters:
+    call(["smt", "run", "phaseReversedPushPull.yaml", "maskSize="+str(d)])

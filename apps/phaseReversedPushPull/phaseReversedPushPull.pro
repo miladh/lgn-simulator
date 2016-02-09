@@ -3,7 +3,7 @@ include(../apps_defaults.pri)
 
 TARGET = lgnSimulator_phaseReversedPushPull
 SOURCES = phaseReversedPushPull.cpp
-OTHER_FILES += ./phaseReversedPushPullConfig.yaml
+OTHER_FILES += ./phaseReversedPushPull.yaml
 
 
 
