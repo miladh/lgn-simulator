@@ -4,7 +4,7 @@ using namespace lgnSimulator;
 
 /*!
  * \class Neuron
- * \inmodule edog
+ * \inmodule lgnSimulator
  * \brief Virtual class for neurons.
  *
  */
