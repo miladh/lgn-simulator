@@ -5,15 +5,16 @@ import numpy as np
 import matplotlib.pyplot as mplt
 
 current_path = os.path.dirname(os.path.realpath(__file__))
-lib_path = os.path.abspath(os.path.join(current_path,"../../../tools"))
-sys.path.append(lib_path)
+lib_path = [os.path.abspath(os.path.join(current_path,"../../../tools/sumatraTracking")),
+           os.path.abspath(os.path.join(current_path,"../../../tools/analysis"))]
+[sys.path.append(path) for path in lib_path]
 import Simulation
 import get_simulations
 import plotting_tools as plt
 
 parser = ArgumentParser()
 parser.add_argument("sim_ids", help = "simulation ids")
-parser.add_argument("record", help = "record results")
+parser.add_argument("--record",'-r', help = "record results", type = int, required=True)
 args = parser.parse_args()
 sim_ids = args.sim_ids
 record = args.record
