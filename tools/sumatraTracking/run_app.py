@@ -64,4 +64,4 @@ if __name__ == '__main__':
     print load_project()
 
     print "Running lgn simulator..."
-    run_simulator(app_name, config_file)
+    # run_simulator(app_name, config_file)
