@@ -17,7 +17,7 @@ int main()
 
 
     //read config file-------------------------------------------------------
-    YAML::Node cfg = YAML::LoadFile("../../../edog/apps/default/defaultConfig.yaml");
+    YAML::Node cfg = YAML::LoadFile("../../../lgn-simulator/apps/default/defaultConfig.yaml");
 
     //Output manager:----------------------------------------------------------
     OutputManager io(&cfg);

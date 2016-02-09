@@ -60,7 +60,7 @@ temporalKernels:
 
 
 #------------File manager settings-----------------#
-outputFile: "../../../DATA/tmp/phaseReversedPushPull.h5"
+outputFile: "/media/milad/scratch/lgn-simulator/simulations/tmp/phaseReversedPushPull.h5"
 
 
 

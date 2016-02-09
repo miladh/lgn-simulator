@@ -45,7 +45,7 @@ temporalKernels:
     constant: 1.0
 
 #------------File manager settings-----------------#
-outputFile: "../../../DATA/tmp/nonlaggedXCells.h5"
+outputFile:  "/media/milad/scratch/lgn-simulator/simulations/tmp/nonlaggedXCells.h5"
 
 
 

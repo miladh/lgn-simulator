@@ -62,4 +62,4 @@ exponent: 2.0
 
 
 #------------File manager settings-----------------#
-outputFile: "../../../DATA/tmp/default.h5"
+outputFile: "/media/milad/scratch/lgn-simulator/simulations/tmp/default.h5"

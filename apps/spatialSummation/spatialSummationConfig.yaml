@@ -31,5 +31,5 @@ constant: 2.0 #s
 
 
 #------------File manager settings-----------------#
-outputFile: "../../../DATA/tmp/spatialSummation.h5"
+outputFile:  "/media/milad/scratch/lgn-simulator/simulations/tmp/spatialSummation.h5"
 
