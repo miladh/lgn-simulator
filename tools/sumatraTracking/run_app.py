@@ -54,7 +54,9 @@ if __name__ == '__main__':
     from argparse import ArgumentParser
     parser = ArgumentParser()
     parser.add_argument("config_file", help="app config file")
+    parser.add_argument("app_name", help="app name")
     args = parser.parse_args()
     config_file = args.config_file
-    app_name = os.path.splitext(os.path.basename(os.getcwd()))[0]
+    app_name = args.app_name
+    # app_name = os.path.splitext(os.path.basename(os.getcwd()))[0]
     run_simulator(app_name, config_file)

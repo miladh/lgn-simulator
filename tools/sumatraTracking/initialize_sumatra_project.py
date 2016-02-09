@@ -1,6 +1,5 @@
 from subprocess import call
-import os
-import os.path
+import os, os.path
 from argparse import ArgumentParser
 
 parser = ArgumentParser()
