@@ -57,6 +57,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     config_file = args.config_file
     app_name = os.path.splitext(config_file)[0]
-    print os.path.getcwd()
+    print os.getcwd()
 
     #run_simulator(app_name, config_file)
