@@ -27,7 +27,7 @@ def run_simulator(config_file):
     with open(config_file, 'w') as stream:
         yaml.dump(config_data, stream)
 
-    build_path = os.path.abspath(os.path.join(current_path, "../../.." , "build"))
+    build_path = os.path.abspath(os.path.join(current_path, "../../../build"))
     project_path = os.path.abspath(os.path.join(current_path, "../.."))
 
     print "Building in:\n", build_path
