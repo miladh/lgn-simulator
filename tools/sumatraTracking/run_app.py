@@ -60,4 +60,5 @@ if __name__ == '__main__':
     config_file = args.config_file
 
     print "Running lgn simulator..."
-    run_simulator(config_file)
+    run_id = run_simulator(config_file)
+    print run_id
