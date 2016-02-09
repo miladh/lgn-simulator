@@ -8,6 +8,6 @@ SOURCES = nonlaggedXCells.cpp
 OTHER_FILES += ./nonlaggedXCellsConfig.yaml
 
 DISTFILES += \
-    nonlaggedXCellsConfig.yaml
+    nonlaggedXCells.yaml
 
 
