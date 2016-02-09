@@ -71,10 +71,10 @@ HTML.postheader = \
     "<div class=\"main-rounded\">\n" \
     "<div class=\"navigationbar\">\n" \
     "    <div id=\"main_title_bar\">\n" \
-    "        <h1>LGN Network Simulator Documentation</h1>\n" \
+    "        <h1>LGN Simulator Documentation</h1>\n" \
     "    </div>\n" \
     "    <ul>\n" \
-    "       <li class=\"first\"><a href=\"index.html\">LGN Network Simulator</a></li>\n"
+    "       <li class=\"first\"><a href=\"index.html\">LGN Simulator</a></li>\n"
 
 HTML.postpostheader = \
     "    </ul>\n" \
