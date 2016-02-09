@@ -5,7 +5,7 @@ import os
 import os.path
 from sumatra.projects import load_project
 
-def run_edog(app_name, config_file):
+def run_lgn_simulator(app_name, config_file):
 
     current_path = os.path.dirname(os.path.realpath(__file__))
     config_file = os.path.abspath(os.path.join(current_path, "../apps/", app_name, config_file))
@@ -42,7 +42,7 @@ def run_edog(app_name, config_file):
     env = dict(os.environ)
     env['LD_LIBRARY_PATH'] = lib_path
 
-    run_argument = ["./edog_"+ app_name, config_file, output_dir]
+    run_argument = ["./lgnSimulator"+ app_name, config_file, output_dir]
     print " ".join(run_argument)
     proc = subprocess.call(run_argument, cwd=app_path, env=env)
 
