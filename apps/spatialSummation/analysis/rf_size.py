@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as mplt
 
 current_path = os.path.dirname(os.path.realpath(__file__))
-lib_path = os.path.abspath(os.path.join(current_path,"../../../../tools"))
+lib_path = os.path.abspath(os.path.join(current_path,"../../../tools"))
 sys.path.append(lib_path)
 import Simulation
 import get_simulations
