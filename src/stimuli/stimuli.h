@@ -31,7 +31,7 @@ protected:
     cube m_spatioTemporal;
     cx_cube m_fourierTransform;
 
-    vec m_coordinateVec;
+    vec m_spatialVec;
     vec m_spatialFreqs;
 
     vec m_timeVec;

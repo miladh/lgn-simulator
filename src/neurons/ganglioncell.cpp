@@ -47,7 +47,7 @@ void GanglionCell::computeImpulseResponse()
             for(int j = 0; j < int(m_impulseResponse.n_cols); j++){
                 m_impulseResponse(i, j, k) =
                         impulseResponseValueAtPoint(
-                {m_coordinateVec[i], m_coordinateVec[j]}, m_timeVec[k]);
+                {m_spatialVec[i], m_spatialVec[j]}, m_timeVec[k]);
             }
         }
     }

@@ -17,7 +17,7 @@ Stimulus::Stimulus(Integrator *integrator)
     m_temporalFreqs = integrator->temporalFreqVec();
 
     //Spatial Mesh
-    m_coordinateVec = integrator->coordinateVec();
+    m_spatialVec = integrator->spatialVec();
     m_spatialFreqs = integrator->spatialFreqVec();
 
 

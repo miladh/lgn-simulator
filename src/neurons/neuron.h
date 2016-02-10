@@ -85,7 +85,7 @@ protected:
     cx_cube m_responseFT;
     cx_cube m_impulseResponseFT;
 
-    vec m_coordinateVec;
+    vec m_spatialVec;
     vec m_spatialFreqs;
 
     vec m_timeVec;

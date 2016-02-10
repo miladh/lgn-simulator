@@ -2,19 +2,20 @@ import numpy as np
 import h5py
 
 import Stimulus
+import Integrator
 import Cell
 
 class Simulation:
     """
-    Class for a single eDOG simulation
+    Class for a single simulation
 
     """
     def __init__(self, h5_file):
-        self.num_steps = h5_file.attrs["nSteps"]
-        self.num_points = h5_file.attrs["nPoints"]
-        self.dt = h5_file.attrs["dt"]
-        self.ds = h5_file.attrs["ds"]
-        self.time_vec = np.arange(0, self.num_steps*self.dt, self.dt )
+        # self.num_steps = h5_file.attrs["nSteps"]
+        # self.num_points = h5_file.attrs["nPoints"]
+        # self.dt = h5_file.attrs["dt"]
+        # self.ds = h5_file.attrs["ds"]
+        # self.time_vec = np.arange(0, self.num_steps*self.dt, self.dt )
 
         self.cell_types = []
 
@@ -23,7 +24,9 @@ class Simulation:
             if(item == "stimulus"):
                 stim_group = h5_file.get("/" + str(item))
                 self.stimulus = Stimulus.Stimulus(stim_group)
-
+            elif(item == "integrator"):
+                integrator_group = h5_file.get("/" + str(item))
+                self.integrator = Integrator.Integrator(integrator_group)
             else:
                 cell_group = h5_file.get("/" + str(item))
                 setattr(self, item, Cell.Cell(cell_group))
@@ -57,9 +60,4 @@ class Simulation:
         return spike_times
 
 if __name__ == "__main__":
-    from glob import glob
-
-    outputFilePath = "/home/milad/Dropbox/projects/edog/code/DATA/spatialSummation/tmp/*.h5"
-    outputFile = glob(outputFilePath)[0]
-    f = h5py.File(outputFile, "r")
-    sim = Simulation(f)
+    print "---Class for single lgn-simulator experiments---"

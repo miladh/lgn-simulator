@@ -192,11 +192,6 @@ if __name__ == "__main__":
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
 
-    # response = exp.singleCellTemporalResponse("relay", 15, 15)
-    # plt.plot(response)
-
-    # print exp.ganglion.impulseResponse["spatioTemporal"].min()
-    # print exp.ganglion.impulseResponse["spatioTemporal"].max()
     data = [
      [exp.stimulus.spatioTemporal, "Stimulus"]
     ,[exp.ganglion.response["spatioTemporal"], "Ganglion cell response"]
@@ -209,20 +204,6 @@ if __name__ == "__main__":
     # ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
     ]
 
-    print exp.ganglion.response["spatioTemporal"][0,255,255]
-    print exp.ganglion.response["spatioTemporal"][0,125,125]
-    # print exp.relay.response["spatioTemporal"][0,255,255]
-    # print exp.relay.response["spatioTemporal"][0,125,125]
-    # print exp.cortical.response["spatioTemporal"][0,255,255]
-    # print exp.cortical.response["spatioTemporal"][0,125,125]
-
-
-    # print "Ganglion: ", (exp.ganglion.response["spatioTemporal"] - exp.relay.response["spatioTemporal"]).max()
-    # print "Cortex: ", (exp.cortical.response["spatioTemporal"] - exp.relay.response["spatioTemporal"]).max()
-
-    # print exp.ganglion["impulseResponse"]["spatioTemporal"][0,:,:].max()
-
-    # raster([[spikeTrain, "Ganglion"], [spikeTrain2, "Relay"]] )
-    animateImshowPlots(data,exp.dt, colorbar = True, save_animation = False, animation_name = "rat")
+    animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True, save_animation = False, animation_name = "rat")
     # animate3dPlots(data, resolution = 3)
     plt.show()

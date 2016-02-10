@@ -13,7 +13,7 @@ Grating::Grating(Integrator *integrator,
     , m_k(kd)
     , m_w(wd)
     , m_contrast(contrast)
-    , m_maskSize(maskSize * (m_coordinateVec.max()-m_coordinateVec.min()))
+    , m_maskSize(maskSize * (m_spatialVec.max()-m_spatialVec.min()))
 {
     m_type = "grating";
 }
@@ -28,8 +28,8 @@ void Grating::computeSpatiotemporal()
     for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
         for(int i = 0; i < int(m_spatioTemporal.n_rows); i++){
             for(int j = 0; j < int(m_spatioTemporal.n_cols); j++){
-                m_spatioTemporal(i,j,k) = valueAtPoint({m_coordinateVec[i],
-                                                        m_coordinateVec[j]},
+                m_spatioTemporal(i,j,k) = valueAtPoint({m_spatialVec[i],
+                                                        m_spatialVec[j]},
                                                        m_timeVec[k]);
             }
         }

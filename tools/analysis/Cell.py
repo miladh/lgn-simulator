@@ -3,7 +3,7 @@ import h5py
 
 class Cell:
     """
-    Class for neurons used in eDOG simulations
+    Class for neurons used in simulations
 
     """
 

@@ -8,48 +8,87 @@
 using namespace lgnSimulator;
 
 
-OutputManager::OutputManager(const YAML::Node *cfg)
-    : m_cfg(cfg)
+OutputManager::OutputManager(const string* filename)
 {
-
-    string outputFile = (*m_cfg)["outputFile"].as<std::string>();
-    m_output = new H5File (outputFile, H5F_ACC_TRUNC);
-
-    initialize();
-
+    m_output = new H5File (*filename, H5F_ACC_TRUNC);
 }
 OutputManager::~OutputManager()
 {
     delete m_output;
 }
 
-void OutputManager::initialize()
+void OutputManager::writeIntegratorProperties(const Integrator *integrator)
 {
-    Group rootGroup = m_output->openGroup("/");
-    double dt = (*m_cfg)["dt"].as<double>();
-    int nSteps = (*m_cfg)["nt"].as<int>();
-    int nPoints =(*m_cfg)["ns"].as<int>();
+    // Write stimuli
+    Group integratorGroup = m_output->createGroup("/integrator");
+    vector <DataSet *>dataset;
+
+    int Nt = integrator->nPointsTemporal();
+    int Ns = integrator->nPointsSpatial();
+    double dt = integrator->temporalResolution();
+    double ds = integrator->spatialResolution();
+    double dw = integrator->temporalFreqResolution();
+    double dk = integrator->spatialFreqResolution();
+    double ws = integrator->temporalSamplingFreq();
+    double ks = integrator->spatialSamplingFreq();
+    double T = integrator->timeInterval();
+    double L = integrator->lengthInterval();
+
+    vec timeVec = integrator->timeVec();
+    vec spatialVec = integrator->spatialVec();
+    vec temporalFreqVec = integrator->temporalFreqVec();
+    vec spatialFreqVec = integrator->spatialFreqVec();
 
 
-    double ds = 1.0/nPoints;
-    nSteps = pow(2, nSteps);
-    nPoints = pow(2, nPoints);
+    Attribute Nt_a(integratorGroup.createAttribute("nPointsTemporal",PredType::NATIVE_INT, H5S_SCALAR));
+    Attribute Ns_a(integratorGroup.createAttribute("nPointsSpatial",PredType::NATIVE_INT, H5S_SCALAR));
+    Attribute dt_a(integratorGroup.createAttribute("temporalResolution",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute ds_a(integratorGroup.createAttribute("spatialResolution",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute dw_a(integratorGroup.createAttribute("temporalFreqResolution",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute dk_a(integratorGroup.createAttribute("spatialFreqResolution",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute ws_a(integratorGroup.createAttribute("temporalSamplingFreq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute ks_a(integratorGroup.createAttribute("spatialSamplingFreq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute T_a(integratorGroup.createAttribute("timeInterval",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute L_a(integratorGroup.createAttribute("lengthInterval",PredType::NATIVE_DOUBLE, H5S_SCALAR));
 
-    Attribute dt_a(rootGroup.createAttribute("dt",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute ds_a(rootGroup.createAttribute("ds",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute nSteps_a(rootGroup.createAttribute("nSteps",PredType::NATIVE_INT, H5S_SCALAR));
-    Attribute nPoints_a(rootGroup.createAttribute("nPoints",PredType::NATIVE_INT, H5S_SCALAR));
-
-
+    Nt_a.write(PredType::NATIVE_INT, &Nt);
+    Ns_a.write(PredType::NATIVE_INT, &Ns);
     dt_a.write(PredType::NATIVE_DOUBLE, &dt);
     ds_a.write(PredType::NATIVE_DOUBLE, &ds);
-    nSteps_a.write(PredType::NATIVE_INT, &nSteps);
-    nPoints_a.write(PredType::NATIVE_INT, &nPoints);
+    dw_a.write(PredType::NATIVE_DOUBLE, &dw);
+    dk_a.write(PredType::NATIVE_DOUBLE, &dk);
+    ws_a.write(PredType::NATIVE_DOUBLE, &ws);
+    ks_a.write(PredType::NATIVE_DOUBLE, &ks);
+    T_a.write(PredType::NATIVE_DOUBLE, &T);
+    L_a.write(PredType::NATIVE_DOUBLE, &L);
 
-    m_dataset.reserve(dt);
-    m_dataset.reserve(ds);
-    m_dataset.reserve(nSteps);
-    m_dataset.reserve(nPoints);
+    dataset.reserve(Nt);
+    dataset.reserve(Ns);
+    dataset.reserve(dt);
+    dataset.reserve(ds);
+    dataset.reserve(dw);
+    dataset.reserve(dk);
+    dataset.reserve(ws);
+    dataset.reserve(ks);
+    dataset.reserve(T);
+    dataset.reserve(L);
+
+    hsize_t dim_t[1] = {timeVec.n_elem};
+    hsize_t dim_s[1] = {spatialVec.n_elem};
+
+    DataSpace space_t(1, dim_t);
+    DataSpace space_s(1, dim_s);
+
+    DataSet timeVec_ds(integratorGroup.createDataSet("timeVec", PredType::NATIVE_DOUBLE, space_t));
+    DataSet temporalFreqVec_ds(integratorGroup.createDataSet("temporalFreqVec", PredType::NATIVE_DOUBLE, space_t));
+
+    DataSet spatialVec_ds(integratorGroup.createDataSet("spatialVec", PredType::NATIVE_DOUBLE, space_s));
+    DataSet spatialFreqVec_ds(integratorGroup.createDataSet("spatialFreqVec", PredType::NATIVE_DOUBLE, space_s));
+
+    timeVec_ds.write(timeVec.memptr(), PredType::NATIVE_DOUBLE);
+    temporalFreqVec_ds.write(temporalFreqVec.memptr(), PredType::NATIVE_DOUBLE);
+    spatialVec_ds.write(spatialVec.memptr(), PredType::NATIVE_DOUBLE);
+    spatialFreqVec_ds.write(spatialFreqVec.memptr(), PredType::NATIVE_DOUBLE);
 }
 
 
@@ -145,49 +184,7 @@ void OutputManager::writeStimulus(const Stimulus* stimulus)
 
 
 
-void OutputManager::writeResponse(const vector<Neuron*> &neurons,
-                                  const Stimulus &stimuli){
 
-
-
-    // Write stimuli
-    Group stim = m_output->createGroup("/stimulus");
-    cube realStim = stimuli.spatioTemporal();
-    cube complexStim = real(stimuli.fourierTransform());
-
-    writeDataSet(realStim, &stim, "spatioTemporal");
-    writeDataSet(complexStim, &stim, "fourierTransform");
-
-
-
-    // Write neurons
-    for(const Neuron *neuron : neurons){
-
-        cube realResponse = neuron->response();
-        cube complexResponse = real(neuron->responseFT());
-
-        cube realImpulseResponse = neuron->impulseResponse();
-        cube complexImpulseResponse = real(neuron->impulseResponseFourierTransform());
-
-        string cellGroupName = neuron->cellType();
-        Group cellGroup = m_output->createGroup(cellGroupName);
-
-
-        //write response:
-        Group res = m_output->createGroup(cellGroupName+"/response");
-
-        writeDataSet(realResponse, &res, "spatioTemporal");
-        writeDataSet(complexResponse, &res, "fourierTransform");
-
-        //write impulse response:
-        Group impRes = m_output->createGroup(cellGroupName+"/impulseResponse");
-        writeDataSet(realImpulseResponse, &impRes, "spatioTemporal");
-        writeDataSet(complexImpulseResponse, &impRes, "fourierTransform");
-
-    }
-
-
-}
 
 void OutputManager::writeDataSet(const cube data, Group* group, string name)
 {

@@ -43,7 +43,7 @@ SUITE(INTEGRATOR){
 
         Integrator integrator(nt, dt, ns, ds);
 
-        vec s = integrator.coordinateVec();
+        vec s = integrator.spatialVec();
         vec k = integrator.spatialFreqVec();
         vec t = integrator.timeVec();
         vec w = integrator.temporalFreqVec();

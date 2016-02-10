@@ -18,7 +18,7 @@ namespace lgnSimulator {
 class Integrator
 {
 public:
-    Integrator(int nt, double dt, int ns, double ds);
+    Integrator(int nt, double temporalResolution, int ns, double spatialResolution);
     ~Integrator();
 
     cx_cube backwardFFT(cx_cube data);
@@ -28,7 +28,7 @@ public:
     cx_mat forwardFFT(cx_mat data);
 
     vec timeVec() const;
-    vec coordinateVec() const;
+    vec spatialVec() const;
     vec temporalFreqVec() const;
     vec spatialFreqVec() const;
 
@@ -40,8 +40,8 @@ public:
     double lengthInterval() const;
     double temporalSamplingFreq() const;
     double spatialSamplingFreq() const;
-    double dt() const;
-    double ds() const;
+    double temporalResolution() const;
+    double spatialResolution() const;
 
 private:
     int m_nPointsTemporal= 0;
@@ -60,7 +60,7 @@ private:
     double m_dk = 0;
 
     vec m_timeVec;
-    vec m_coordinateVec;
+    vec m_spatialVec;
     vec m_temporalFreqs;
     vec m_spatialFreqs;
 

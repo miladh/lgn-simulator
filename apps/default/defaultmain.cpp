@@ -20,7 +20,8 @@ int main()
     YAML::Node cfg = YAML::LoadFile("../../../lgn-simulator/apps/default/defaultConfig.yaml");
 
     //Output manager:----------------------------------------------------------
-    OutputManager io(&cfg);
+    string outputFilename = cfg["outputFile"].as<std::string>();
+    OutputManager io(&outputFilename);
 
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);
@@ -82,6 +83,7 @@ int main()
     io.writeStimulus(S.get());
     S->clearSpatioTemporal();
 
+    io.writeIntegratorProperties(&integrator);
     for(Neuron* neuron : neurons){
 
         neuron->computeResponse(S.get());

@@ -3,7 +3,7 @@ import h5py
 
 class Stimulus:
     """
-    Class for stimulus used i a single eDOG simulation
+    # Class for stimulus used in a single simulation
 
     """
 

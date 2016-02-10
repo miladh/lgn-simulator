@@ -38,7 +38,7 @@ SUITE(INTEGRATOR){
         cx_mat G = zeros<cx_mat>(Ns, Ns);
         cx_mat f = zeros<cx_mat>(Ns, Ns);
 
-        vec s = integrator.coordinateVec();
+        vec s = integrator.spatialVec();
         vec k = integrator.spatialFreqVec();
 
         DOG dog(A, a, B, b);

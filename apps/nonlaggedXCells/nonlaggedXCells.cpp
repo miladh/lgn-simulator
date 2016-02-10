@@ -25,9 +25,10 @@ int main(int argc, char* argv[])
     const YAML::Node& ganglionImpRes = cfg["ganglionImpRes"];
     const YAML::Node& spatialKernelSettings = cfg["spatialKernels"];
     const YAML::Node& temporalKernelSettings = cfg["temporalKernels"];
+    string outputFilename = cfg["outputFile"].as<std::string>();
 
     //Output manager:---------------------------------------------------------
-    OutputManager io(&cfg);
+    OutputManager io(&outputFilename);
 
     //Integrator--------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);
@@ -66,6 +67,8 @@ int main(int argc, char* argv[])
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
     neurons.push_back(&relay);
+
+    io.writeIntegratorProperties(&integrator);
 
     for(Neuron* neuron : neurons){
 

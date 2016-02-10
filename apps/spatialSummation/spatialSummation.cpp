@@ -22,10 +22,11 @@ int main(int argc, char* argv[])
 
     //read config file-------------------------------------------------------
     YAML::Node cfg = YAML::LoadFile(argv[1]);
+    string outputFilename = cfg["outputFile"].as<std::string>();
 
 
     //Output manager:----------------------------------------------------------
-    OutputManager io(&cfg);
+    OutputManager io(&outputFilename);
 
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);
@@ -52,7 +53,6 @@ int main(int argc, char* argv[])
     io.writeStimulus(S.get());
     S->clearSpatioTemporal();
 
-
     ganglion.computeResponse(S.get());
     io.writeResponse(&ganglion);
     ganglion.clearResponse();
@@ -61,6 +61,7 @@ int main(int argc, char* argv[])
     io.writeImpulseResponse(&ganglion);
     ganglion.clearImpulseResponse();
 
+    io.writeIntegratorProperties(&integrator);
 
     t = clock() - t;
     printf ("%f seconds.\n",((float)t)/CLOCKS_PER_SEC);

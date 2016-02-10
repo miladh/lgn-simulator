@@ -31,8 +31,10 @@ int main(int argc, char* argv[])
     const YAML::Node& Kt_rcSettings = cfg["temporalKernels"]["Krc"];
     const YAML::Node& Kt_crSettings = cfg["temporalKernels"]["Kcr"];
 
+    string outputFilename = cfg["outputFile"].as<std::string>();
+
     //Output manager:---------------------------------------------------------
-    OutputManager io(&cfg);
+    OutputManager io(&outputFilename);
 
     //Integrator--------------------------------------------------------------
     Integrator integrator = createIntegrator(&cfg);
@@ -77,6 +79,7 @@ int main(int argc, char* argv[])
     neurons.push_back(&relay);
     neurons.push_back(&cortical);
 
+    io.writeIntegratorProperties(&integrator);
     for(Neuron* neuron : neurons){
 
         neuron->computeResponse(S.get());
