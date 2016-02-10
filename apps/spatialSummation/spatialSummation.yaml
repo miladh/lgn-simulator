@@ -17,17 +17,14 @@ wId:   0        #[-nt/2, nt/2 - 1]
 #------------spatialKernelSettings-----------------#
 # DOG
 A: 1.0
-a: 0.06
+a: 0.6
 B: 0.8
-b: 0.12
+b: 1.2
 
 
 #------------temporalKernelSettings-----------------#
 # Temporal delta:
 delay: 0.0 #s
-
-# Temporal constant:
-constant: 2.0 #s
 
 
 #------------File manager settings-----------------#

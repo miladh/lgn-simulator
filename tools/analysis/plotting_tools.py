@@ -203,22 +203,22 @@ if __name__ == "__main__":
     ,[exp.ganglion.impulseResponse["spatioTemporal"], "Ganglion cell impulse response"]
     # ,[exp.interneuron.response["spatioTemporal"], "Interneuron"]
     # ,[exp.interneuron.impulseResponse["spatioTemporal"], "Interneuron"]
-    ,[exp.relay.response["spatioTemporal"], "Relay cell response"]
-    ,[exp.relay.impulseResponse["spatioTemporal"], "Relay cell impulse response"]
-    ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
-    ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
+    # ,[exp.relay.response["spatioTemporal"], "Relay cell response"]
+    # ,[exp.relay.impulseResponse["spatioTemporal"], "Relay cell impulse response"]
+    # ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
+    # ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
     ]
 
     print exp.ganglion.response["spatioTemporal"][0,255,255]
     print exp.ganglion.response["spatioTemporal"][0,125,125]
-    print exp.relay.response["spatioTemporal"][0,255,255]
-    print exp.relay.response["spatioTemporal"][0,125,125]
-    print exp.cortical.response["spatioTemporal"][0,255,255]
-    print exp.cortical.response["spatioTemporal"][0,125,125]
+    # print exp.relay.response["spatioTemporal"][0,255,255]
+    # print exp.relay.response["spatioTemporal"][0,125,125]
+    # print exp.cortical.response["spatioTemporal"][0,255,255]
+    # print exp.cortical.response["spatioTemporal"][0,125,125]
 
 
-    print "Ganglion: ", (exp.ganglion.response["spatioTemporal"] - exp.relay.response["spatioTemporal"]).max()
-    print "Cortex: ", (exp.cortical.response["spatioTemporal"] - exp.relay.response["spatioTemporal"]).max()
+    # print "Ganglion: ", (exp.ganglion.response["spatioTemporal"] - exp.relay.response["spatioTemporal"]).max()
+    # print "Cortex: ", (exp.cortical.response["spatioTemporal"] - exp.relay.response["spatioTemporal"]).max()
 
     # print exp.ganglion["impulseResponse"]["spatioTemporal"][0,:,:].max()
 
