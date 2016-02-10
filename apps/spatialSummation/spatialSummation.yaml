@@ -1,10 +1,10 @@
 description: "Default config file"
 
 #------------Integrator settings-----------------#
-ns: 5
-nt: 8
+ns: 8
+nt: 3
 dt: 0.1
-ds: 0.01
+ds: 0.05
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0

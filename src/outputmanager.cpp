@@ -65,7 +65,6 @@ void OutputManager::writeResponse(const Neuron* neuron)
     status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
 
     if (!status == 0){
-        //        cout << "writeResponse: Cell group doesn't exist.....creating group" << endl;
         Group cellGroup = m_output->createGroup(cellGroupName);
     }
 
@@ -88,7 +87,6 @@ void OutputManager::writeImpulseResponse(const Neuron* neuron)
     status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
 
     if (!status == 0){
-        //        cout << "writeResponse: Cell group doesn't exist.....creating group" << endl;
         Group cellGroup = m_output->createGroup(cellGroupName);
     }
 
