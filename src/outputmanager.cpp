@@ -96,8 +96,8 @@ void OutputManager::writeIntegratorProperties(const Integrator *integrator)
 void OutputManager::writeResponse(const Neuron* neuron)
 {
 
-    cube realResponse = neuron->response();
-    cube complexResponse = real(neuron->responseFT());
+    cube response = neuron->response();
+    cube responseFT = real(neuron->responseFT());
 
     string cellGroupName = neuron->cellType();
     herr_t status = H5Eset_auto1(NULL, NULL);
@@ -110,16 +110,16 @@ void OutputManager::writeResponse(const Neuron* neuron)
     //write response:
     Group res = m_output->createGroup(cellGroupName+"/response");
 
-    writeDataSet(realResponse, &res, "spatioTemporal");
-    writeDataSet(complexResponse, &res, "fourierTransform");
+    writeDataSet(response, &res, "spatioTemporal");
+    writeDataSet(responseFT, &res, "fourierTransform");
 
 }
 
 void OutputManager::writeImpulseResponse(const Neuron* neuron)
 {
 
-    cube realImpulseResponse = neuron->impulseResponse();
-    cube complexImpulseResponse = real(neuron->impulseResponseFourierTransform());
+    cube impulseResponse = neuron->impulseResponse();
+    cube impulseResponseFT = real(neuron->impulseResponseFourierTransform());
 
     string cellGroupName = neuron->cellType();
     herr_t status = H5Eset_auto1(NULL, NULL);
@@ -131,8 +131,8 @@ void OutputManager::writeImpulseResponse(const Neuron* neuron)
 
     //write impulse response:
     Group impRes = m_output->createGroup(cellGroupName+"/impulseResponse");
-    writeDataSet(realImpulseResponse, &impRes, "spatioTemporal");
-    writeDataSet(complexImpulseResponse, &impRes, "fourierTransform");
+    writeDataSet(impulseResponse, &impRes, "spatioTemporal");
+    writeDataSet(impulseResponseFT, &impRes, "fourierTransform");
 
 }
 
