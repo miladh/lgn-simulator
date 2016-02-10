@@ -4,11 +4,6 @@
     \title Mechanistic Model
     \inmodule theory
 
-In mechanistic modelling one attempts to account for nervous system activity on the basis of neuronal morphology, physiology and circuitry.
-This corresponds to the traditional physics approach to mathematical modelling of natural systems.
-
-
-\section1 Feedforward model
 Consider a feedforward input-output system, consisting of three identical input
 cells, with theirs center at
 \\( \\mathbf{r}_{\\\ff_1}, \\mathbf{r}_{\\\ff_2}\\) and \\(\\mathbf{r}_{\\\ff_3}\\), and one
@@ -78,6 +73,7 @@ The response of the input cell corresponds here to the stimulus and coupling fun
 \enddiv
 
 
+\section1 Feedforward model
 Assume that the output cell recives input from population of cells with different coupling function
 
 \div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
@@ -211,7 +207,7 @@ where we have used that
 \\end{equation}
 
 since the populations are driven by the output cells.
-By comparing the obtained expression with the corresponding result expression
+By comparing the obtained expression with the corresponding expression
 from the descriptive model, we can identify the following relationship
 
 \\begin{equation}

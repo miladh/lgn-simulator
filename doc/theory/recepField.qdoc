@@ -6,15 +6,15 @@
 
 Different neurons in the visual system respond to light falling within different more-or-less well-defined areas of the retina, and have a distinguished point where the response sensitivity is greatest. This area is called the receptive field of the neuron, and the point of peak sensitivity is called the receptive field center. It is often convenient to label a neuron by the location of its receptive field center, say
 \\( \\\rc = (\xc , \yc) \\),
-and then to define its activity as a function of the receptive field center
+and then define its activity as a function of the receptive field center
 \\( \resp (\xc , \yc) \\).
 
-\section1 Center-Surround receptive fields
+\section1 Center-surround receptive fields
 The response properties of visually responsive neurons are closely related to their receptive fields.
 The spatial shape of the receptive fields varies a lot among the visual neurons.
 Retinal cells commonly have center-surround receptive fields, consisting of a central disk, the "center", and a concentric ring, the "surround", each region responding oppositely to light.
 For example, if light in the centre increases the firing of the cell, light in the surround will decrease the firing of that cell.
-Depending on whether the activity increases or decreases with light in the center, the cell is said to have an on-center or off-center receptive field, respectevly.
+Depending on whether the activity increases or decreases with light in the center, the cell is said to have an on-center or off-center receptive field, respectively.
 
 
 \div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
@@ -52,9 +52,7 @@ A e^{-a^2(k_x^2+k_y^2)/4}
 \section1 Direction & orientation selective receptive fields
 Direction and orientation selective cells respond differentially to the orientation and direction of a visual stimulus.
 Orientation selective cells respond strongly to lines, bars, or edges of a particular orientation but not to the orthogonal orientation, while direction selective cells respond strongly to oriented lines, bars or edges moving in a preferred direction but not at all in the opposite direction.
-For example, a neuron may respond to a vertical line moving rightwards but not moving leftwards.
-This direction in which a set of neurons respond most strongly to is their "preferred direction".
-In contrast, they do not respond at all to the opposite direction, "null direction."
+For example, a neuron may respond to a vertical line moving rightwards (preferred direction) but not moving leftwards (null direction).
 
 The spatial profile of direction and orientation selective cells are described by Gabor functions:
 
@@ -71,8 +69,8 @@ x' = x \\cos\\theta + y \\sin\\theta , \\\\
 y' = -x \\sin\\theta + y \\cos\\theta.
 \\end{align}
 
-\div {class="float-right" style="height:60%;width:60%;margin: 0 auto"}
- \inlineimage images/gabor_im.png
+\div {class="float-right" style="height:80%;width:80%;margin: 0 auto"}
+ \inlineimage images/gabor_im3d.png
     \div {style="align: left; text-align:center"}
       \caption Gabor function.
     \enddiv

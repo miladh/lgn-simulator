@@ -4,7 +4,7 @@
     \title Convolution theorem
 
 The convolution theorem states that the Fourier transform of a convolution is the pointwise product of Fourier transforms.
-Using the convolution theorem on this convolution
+For a convolution given by
 
 \\begin{align}
 y (x',y',t') &=
@@ -15,7 +15,7 @@ y (x',y',t') &=
  &= f \\otimes g
 \\end{align}
 
-gives us
+we can write
 
 \\begin{align}
 \\tilde{y} (k_x,k_y,\\omega) &=

@@ -179,7 +179,6 @@ void OutputManager::writeStimulus(const Stimulus* stimulus)
     writeDataSet(realStim, &stim, "spatioTemporal");
     writeDataSet(complexStim, &stim, "fourierTransform");
 
-
 }
 
 
@@ -188,7 +187,6 @@ void OutputManager::writeStimulus(const Stimulus* stimulus)
 
 void OutputManager::writeDataSet(const cube data, Group* group, string name)
 {
-
 
     hsize_t dim[3] = {data.n_slices, data.n_rows, data.n_cols};
     DataSpace space(3, dim);

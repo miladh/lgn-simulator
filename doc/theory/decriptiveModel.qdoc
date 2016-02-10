@@ -24,7 +24,7 @@ G(x,y) =
 -\\frac{B}{\\pi b^2}e^{-(x^2+y^2)/b^2},
 \\end{equation}
 
-with its paramters begin fitted with respect to experimental data.
+with its parameters being fitted with respect to experimental data.
 This procedure provides estimates for receptive field centre (\\(A\\) ) and surround (\\(B\\) ) weights as well as the corresponding width parameters (\\(a\\)) and (\\(b\\)).
 Although the DoG model is able to fit the experimental data well, no insight is gained regarding what aspects of the retino-geniculate circuitry are responsible for the differences in neuronal responses between the retinal and geniculate level.
 For such insight mechanistic, not descriptive, modelling is needed.

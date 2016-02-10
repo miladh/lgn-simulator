@@ -45,7 +45,7 @@ Y_{m,n} &=
 There are several techniques for computing the DFT, and these are referred to as \l{https://en.wikipedia.org/wiki/Fast_Fourier_transform}{fast Fourier transform (FFT)} algorithms.
 
 
-    \section2 Relationship between spatiotemporal-Domain and frequency-Domain
+    \section2 Relationship between spatiotemporal-domain and frequency-domain
 
 \table
     \header
@@ -71,7 +71,7 @@ There are several techniques for computing the DFT, and these are referred to as
 \endtable
 
 
-The accuracy of the discrete Fourier transform is determined by two fundamental numbers
+The accuracy of DFT is determined by two fundamental numbers
 
 \table
     \header
@@ -100,7 +100,7 @@ From the relations above we also get the important relation between the resoluti
 
 \section1 Discretized Continuous Fourier transform
 
-Consider an arbitary continuous function \\(y(x,t) \\) sampled in an even numbers \\(M\\) and \\(N\\) of points in spatial and time, respectevly, with a sampling resolution of \\(\\Delta t\\) and \\(\\Delta x\\) .
+Consider an arbitary continuous function \\(y(x,t) \\) sampled in an even numbers \\(M\\) and \\(N\\) of points in spatial and time, respectively, with a sampling resolution of \\(\\Delta t\\) and \\(\\Delta x\\) .
 The discretized grid is given by
 
 \\begin{align}
@@ -108,7 +108,7 @@ x &= m \\Delta x - \\frac{L}{2}, \\quad m = \\left\\{0, \\dots, M-1 \\right\\} \
 t &= n \\Delta t, \\quad n = \\left\\{0, \\dots, N-1 \\right\\}
 \\end{align}
 
-The corrosponding discrete Fourier transform sample frequencies are
+The corrosponding DFT sample frequencies are
 
 \\begin{align}
 k &= m' \\Delta k, \\quad m' = \\left\\{0, \\dots, M-1 \\right\\}\\\\
@@ -164,7 +164,7 @@ y(m \\Delta x - \\frac{L}{2}, n \\Delta t) &\\approx
 
 
 \note
-Often in the FFT implementations the resulting values follow so-called "standard" order.
+Often in the FFT implementations the resulting values follow the so-called "standard" order.
 In the one dimensional case the first element in the resulting array is the zero-frequency term (DC term). Then element (using Python indexing) \\( \\{1, N/2 -1\\} \\) contains the positive-frequency terms, and \\(\\{N/2, N-1\\}\\)  contains the negative-frequency terms, in order of decreasingly negative frequency.
 
 
