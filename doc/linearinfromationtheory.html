@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- linearInformationTheory.qdoc -->
+  <title>Linear Information Processing | lgn-simulator </title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>Linear Information Processing</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar"><div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Linear Information Processing</h1>
+<span class="subtitle"></span>
+<!-- $$$linearInfromationTheory.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>A neuron is regarded as a linear system when it responds linearly to visual stimuli. In these neurons the response \( R \) to a linear combination of two stimuli is equal to the linear combination of the responses to each of the component stimulus. This can be expressed mathematically as</p>
+<p>\begin{equation} R(a S_1 + b S_2) = a R( S_1) + b R( S_1), \end{equation}</p>
+<p>for any constant \( a \) and \(b\) and for any stimulus \( S_1\) and \(S_2\). The response, i.e&#x2e; the firing rate, of linear cells evoked by a stimulus \(S\), is usually expressed as a weighted sum of the stimulus. To do this we make the reasonable assumption that the retinal area can be subdivided into small pixels. At each pixel location \((x_i, y_j)\) the value of a (stationary) stimuli is given by \( S(x_i, y_j)\), which is weighted by a weighting factor \(F (x_i, y_j)\). Then, by the linear superposition principle, we can construct the response of a cell with its center at \(( x_{c}, y_{c} ) = (0,0)\) as the sum over the contributions of the individual pixels and obtain</p>
+<p>\begin{equation} R = R_{0} +\displaystyle\sum_i\sum_j F(x_i, y_j) S(x_i, y_j), \end{equation}</p>
+<p>where the term \( R_0\) accounts for any background firing that may occur when there is no stimulus. Assuming that the number of pixel is large, we may write</p>
+<p>\begin{equation} R = R_{0} +\displaystyle \iint_\mathbf{r} F(\mathbf{r}) S(\mathbf{r}) \; \mathrm{d}^2 \mathbf{r}, \end{equation}</p>
+<p>where the integral is taken over the entire visual field. Note that sometimes for mathematical convenience the integral boundaries are set to \(\pm \infty \), since the receptive fields are effectively localized and different from zero only on a small area of the visual field.</p>
+<p>The weighting function \(F \) is the receptive field function of the neuron, and can be considered as a pattern for a particular &quot;image feature&quot; for which the neuron is a detector. This becomes obvious by noticing that the integral in the equation above measures the mismatches between the stimulus and the receptive field function. When these two functions overlap fully, the value of the integral increases and thereby also the response of the cell. This suggest a close relationship between the weighting factor and the optimal stimulus, and in fact it can be shown that the receptive field function is proportional to the stimulus that evoke maximal response.</p>
+<div class="float-right" style="margin: 0 auto"><p><img src="images/linearEstimate.png" alt="" /></p>
+<div style="align: left; text-align:center"><p class="figCaption">Illustration of linear information processing. The stimuli values in each small square is weighted with the corresponding square in the weighting factor. The sum of all these weighted stimuli values gives the response. Mathematically this corresponds to the sum of elements of the resulting matrix from the entrywise product ( \(\circ \) ) of the stimuli matrix and weighting factor matrix.</p>
+</div></div></div>
+<!-- @@@linearInfromationTheory.html -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

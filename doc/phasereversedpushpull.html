@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- phaseReversedPushPull.qdoc -->
+  <title>Phase-reversed push-pull | lgn-simulator </title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>Phase-reversed push-pull</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level2"><a href="#impulse-response-functions">Impulse response functions</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Phase-reversed push-pull</h1>
+<span class="subtitle"></span>
+<!-- $$$phaseReversedPushPull.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The system consist of three cell populations: ganglion cells, relay cells and cortical cells.</p>
+<ul>
+<li>The spatial part of the reseptive field for the ganglion cell is a DoG function, while the temporal part is a temporal delta function (no memory).</li>
+<li>The ganglion cell population is connected to relay cells with a spatiotemporal delta function.</li>
+<li>The relay cell population is connected to cortical cells with a spatiotemporal delta function.</li>
+<li>The cortical cell population is connected to relay cells with a temporal delta function, while the spatial part is a Gauss function.</li>
+</ul>
+<a name="impulse-response-functions"></a>
+<h3 >Impulse response functions</h3>
+<p>\begin{align} \widetilde{W}_{\mathrm{G}_i}(\mathbf{k}, \omega) &amp;= \tilde{f}_{\mathrm{DoG}}(\mathbf{k}) \; \mathcal{F} [ \delta(t) ](\omega) = \tilde{f}_{\mathrm{DoG}}(\mathbf{k}) e^{(-i\omega\; 0)} = \tilde{f}_{\mathrm{DoG}}(\mathbf{k}) \\ \widetilde{W}_{\mathrm{R}}(\mathbf{k}, \omega) &amp;= \frac{ \widetilde{K}_{{\mathrm{R}} \mathrm{G}}\widetilde{W}_{\mathrm{G}} } { 1 - \widetilde{K}_{{\mathrm{R}} \mathrm{C}} \widetilde{K}_{{\mathrm{C}} \mathrm{R}} } = \frac{ \mathcal{F} [ \delta(\mathbf{r})\delta(t) ](\mathbf{k}, \omega)\; \tilde{f}_{\mathrm{DoG}}(\mathbf{k}) } { 1 - \mathcal{F} [ \delta(\mathbf{r})\delta(t) ](\mathbf{k}, \omega)\; \tilde{f}_{\mathrm{Gauss}}(\mathbf{k}) } = \frac{ \tilde{f}_{\mathrm{DoG}}(\mathbf{k}) } { 1 - \tilde{f}_{\mathrm{Gauss}}(\mathbf{k}) } \\ \widetilde{W}_{\mathrm{C}}(\mathbf{k}, \omega) &amp;= \widetilde{K}_{{\mathrm{C}} \mathrm{R}}\widetilde{W}_{\mathrm{R}} = \mathcal{F} [ \delta(\mathbf{r})\delta(t) ](\mathbf{k}, \omega)\; \widetilde{W}_{\mathrm{R}} = \widetilde{W}_{\mathrm{R}} \end{align}</p>
+</div>
+<!-- @@@phaseReversedPushPull.html -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

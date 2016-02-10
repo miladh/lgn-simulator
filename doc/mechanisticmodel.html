@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mechanisticModel.qdoc -->
+  <title>Mechanistic Model | lgn-simulator </title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>Mechanistic Model</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#feedforward-model">Feedforward model</a></li>
+<li class="level1"><a href="#feedback-model">Feedback model</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Mechanistic Model</h1>
+<span class="subtitle"></span>
+<!-- $$$mechanisticModel.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>Consider a feedforward input-output system, consisting of three identical input cells, with theirs center at \( \mathbf{r}_{\beta_1}, \mathbf{r}_{\beta_2}\) and \(\mathbf{r}_{\beta_3}\), and one output cell at \(\mathbf{r}_{\alpha}\).</p>
+<div class="float-right" style="height:50%;width:50%;margin: 0 auto"><p><img src="images/kernelFunctionDis.png" alt="" /></p>
+<div style="align: left; text-align:center"><p class="figCaption">Feedforward circuits where several cells inputs one output cell with a finite number of input cells the coupling function is a discrete spatial function.</p>
+</div></div><p>It is clear that the activity of the output cell will depend on the activity of the input cells. By using the linear descriptive model as inspiration we can relate the response of the output cell to that of the input cells:</p>
+<p>\begin{align} R_\alpha(\mathbf{r}_\alpha,t) = R_{0,\alpha}(\mathbf{r}_\alpha) + \sum_j \int_\tau K_{\alpha \beta}(\mathbf{r}_{\alpha} - \mathbf{r}_{\beta_j}, \tau) R_\beta(\mathbf{r}_{\beta_j},t - \tau) \mathrm{d}\tau, \end{align}</p>
+<p>where the sum goes over all input cells and \(R_{0,\alpha}(\mathbf{r}_\alpha)\) accounts for any background firing that may occur when there is no input. The couplings function \(K_{\alpha\beta}(\mathbf{r}_{\alpha} - \mathbf{r}_{\beta}, \tau)\) denotes the sign and strength with which the response of the input cell \(\beta\), at a distance \(\mathbf{r}_{\alpha} - \mathbf{r}_\beta\) from the output cell \(\alpha\), at time \(t-\tau\) influences the response of the output cell at time \(t\). Note that \(K_{\alpha\beta}(\mathbf{r}_{\alpha} - \mathbf{r}_{\beta}, \tau) = 0\) for all values \(\tau &lt; 0\), so that the integral may be taken from \(-\infty\) to \(+\infty\).</p>
+<p>If one hypothetically considers a large number of densely and evenly distributed cell inputs (from identical cells) to the output cell, the spatial discrete coupling function can as an approximation be replaced with a spatial continuous coupling function (see figure below).</p>
+<p>\begin{equation} R_\alpha(\mathbf{r}_\alpha,t) = R_{0,\alpha}(\mathbf{r}_\alpha)+ \displaystyle\int_{\tau} \iint_\mathbf{r} K_{\alpha\beta}(\mathbf{r}_{\alpha} - \mathbf{r},\tau) R_\beta(\mathbf{r},t - \tau) \mathrm{d}^2\mathbf{r}\mathrm{d}\tau, \end{equation}</p>
+<p>An essential assumption underlying equation above is that the couplings function only depends on the relative distance between the cells. This assumption is inspired from the form of the impulse-response function in the descriptive model equation, which is analogous to the equation above. The response of the input cell corresponds here to the stimulus and coupling function corresponds to the impulse-response function.</p>
+<div class="float-right" style="height:50%;width:50%;margin: 0 auto"><p><img src="images/kernelFunctionCon.png" alt="" /></p>
+<div style="align: left; text-align:center"><p class="figCaption">Feedforward circuits where several cells inputs one output cell, with a large number of densely and evenly distributed cell inputs, the coupling function can be replaced with a spatial continuous function.</p>
+</div></div><a name="feedforward-model"></a>
+<h2 id="feedforward-model">Feedforward model</h2>
+<p>Assume that the output cell recives input from population of cells with different coupling function</p>
+<div class="float-right" style="height:50%;width:50%;margin: 0 auto"><p><img src="images/kernelpopulations.png" alt="" /></p>
+<div style="align: left; text-align:center"><p class="figCaption">A feedforward circuit, where two different populations of densely and evenly distributed cells inputs a single output cell.</p>
+</div></div><p>Inserting the descriptive model for the response of input cells, gives us</p>
+<p>\begin{align} R_\alpha(\mathbf{r}_\alpha,t) &amp;= R_{0,\alpha}(\mathbf{r}_\alpha) +\sum_k\displaystyle\int_{\tau} \iint_\mathbf{r} K_{\alpha k}(\mathbf{r}_\alpha- \mathbf{r}, \tau) R_k(\mathbf{r},t-\tau) \mathrm{d}^2\mathbf{r}\mathrm{d}\tau \\ &amp;= R_{0,\alpha}(\mathbf{r}_\alpha) + \sum_k\displaystyle\int_{\tau} \iint_\mathbf{r} K_{\alpha k}(\mathbf{r}_\alpha- \mathbf{r}, \tau) \bigg( \frac{1}{(2\pi)^3} \displaystyle\iint_\mathbf{k}\int_\omega e^{i(\mathbf{k\cdot \mathbf{r}} - \omega (t-\tau))} {\widetilde{W}_k}(\mathbf{k}, \omega) \widetilde{S} (\mathbf{k}, \omega) \mathrm{d}^2\mathbf{k} \bigg) \mathrm{d}^2\mathbf{r}\mathrm{d}\tau \\ &amp;= R_{0,\alpha}(\mathbf{r}_\alpha) + \frac{1}{(2\pi)^3} \displaystyle\iint_\mathbf{k}\int_\omega e^{i(\mathbf{k\cdot} \mathbf{r}_\alpha - \omega t)} \bigg( \sum_k \widetilde{K}_{\alpha k}(\mathbf{k}, \omega) {\widetilde{W}_k}(\mathbf{k}, \omega) \bigg) \widetilde{S} (\mathbf{k}, \omega) \mathrm{d}^2\mathbf{k}\mathrm{d}\omega \\ &amp;= R_{0,\alpha}(\mathbf{r}_\alpha) + \frac{1}{(2\pi)^3} \displaystyle\iint_\mathbf{r}\int_\tau \bigg( \sum_k K_{\alpha k}(\mathbf{r}_\alpha- \mathbf{r}, \tau) {W_k}(\mathbf{r}_\alpha- \mathbf{r}, \tau) \bigg) S (\mathbf{r}, t-\tau) \mathrm{d}^2\mathbf{r}\mathrm{d}\tau, \end{align}</p>
+<p>where \(K_{\alpha k}(\mathbf{r}_\alpha- \mathbf{r}, \tau) \) is the spatio-temporal coupling function between cell \(\alpha\) at \(\mathbf{r}_\alpha\) and a cell at \(\mathbf{r}\) from population \(k\). The expression for the response of the output cell is obtained from a mechanistic model. However, we could also describe the response of the output cell with a descriptive model. By comparing the expression for the response of these two model we can identify the following relationship</p>
+<p>\begin{equation} \widetilde{W}_\alpha(\mathbf{k}, \omega) = \sum_k \widetilde{K}_{\alpha k}(\mathbf{k}, \omega) \widetilde{W}_{k}(\mathbf{k}, \omega) \end{equation}</p>
+<p>An important observation is that impulse-response function of the output cell \(\alpha\) is independent of the response of the input cells. This applies to arbitrarily complex model circuits as long as the coupling functions are linear and spatially homogeneous.</p>
+<a name="feedback-model"></a>
+<h2 id="feedback-model">Feedback model</h2>
+<div class="float-right" style="height:40%;width:40%;margin: 0 auto"><p><img src="images/kernelFeedback1.png" alt="" /></p>
+<div style="align: left; text-align:center"><p class="figCaption">A feedback circuit where different populations of cells inputs output cell, which have a feedback coupling back to the populations.</p>
+</div></div><p>Consider the circuit shown in the figure above, where different population of cells inputs output cells and also receive feedback from them. The response of an output cell can in this case be written as</p>
+<p>\begin{align} R_\alpha(\mathbf{r}_\alpha,t) &amp;= R_{0,\alpha}(\mathbf{r}_\alpha) + \frac{1}{(2\pi)^3} \displaystyle\iint_\mathbf{k}\int_\omega e^{i(\mathbf{k\cdot}\mathbf{r}_\alpha - \omega t)} \bigg( \sum_k \widetilde{K}_{\alpha k}(\mathbf{k}, \omega) {\widetilde{W}_k}(\mathbf{k}, \omega) \bigg) \widetilde{S} (\mathbf{k}, \omega) \mathrm{d}^2\mathbf{k}\mathrm{d}\omega \\ &amp;= R_{0,\alpha}(\mathbf{r}_\alpha) + \frac{1}{(2\pi)^3} \displaystyle\iint_\mathbf{k}\int_\omega e^{i(\mathbf{k\cdot} \mathbf{r}_\alpha - \omega t)} \bigg( \sum_k \widetilde{K}_{\alpha k}(\mathbf{k}, \omega) \widetilde{K}_{k \alpha }(\mathbf{k}, \omega) {\widetilde{W}_\alpha}(\mathbf{k}, \omega) \bigg) \widetilde{S} (\mathbf{k}, \omega) \mathrm{d}^2\mathbf{k}\mathrm{d}\omega, \end{align}</p>
+<p>where we have used that</p>
+<p>\begin{equation} \widetilde{W}_k(\mathbf{k}, \omega) = \widetilde{K}_{k\alpha }(\mathbf{k}, \omega)\widetilde{W}_\alpha (\mathbf{k}, \omega), \end{equation}</p>
+<p>since the populations are driven by the output cells. By comparing the obtained expression with the corresponding expression from the descriptive model, we can identify the following relationship</p>
+<p>\begin{equation} \widetilde{W}_\alpha(\mathbf{k}, \omega) = \frac{1}{1 - \sum_k\widetilde{K}_{\alpha k}(\mathbf{k}, \omega)\widetilde{K}_{k\alpha}(\mathbf{k}, \omega) } \end{equation}</p>
+</div>
+<!-- @@@mechanisticModel.html -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

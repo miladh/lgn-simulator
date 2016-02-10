@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- dlgnCricuit.qdoc -->
+  <title>The dLGN Circuit | lgn-simulator </title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>The dLGN Circuit</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar"><div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">The dLGN Circuit</h1>
+<span class="subtitle"></span>
+<!-- $$$dlgnCircuit.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>In LGN, relay cells receive excitatory input from retinal ganglion cells as well as feedforward inhibition from intrageniculate interneurons both via dendro-dendritic structures (triads) and (possibly) axonal output. The interneurons in turn receive excitation from a few retinal ganglion cells. In addition, the relay cells receive inhibitory feedback from the TRN and excitatory feedback from the striate cortex. The intrageniculate interneurons and TRN cells also receive excitatory feedback from cortex. All these feedforward and feedback connections will eventually be included in our present mathematical treatment.</p>
+<div class="float-right" style="height:50%;width:50%;margin: 0 auto"><p class="centerAlign"><img src="images/edogCircuit.png" alt="" /></p><div style="align: left; text-align:center"><p class="figCaption">dLGN circuit.</p>
+</div></div><p>The firing-rate responses of the various cells in the early visual pathway are assumed to be governed by the following set of equations:</p>
+<p>\begin{align} R_\mathrm{G}(\mathbf{r},t) &amp;= W_{\mathrm{G}}(\mathbf{r},t) \otimes S(\mathbf{r},t), \\ R_\mathrm{C}(\mathbf{r},t) &amp;= K_{\mathrm{C} \mathrm{R}}(\mathbf{r},t) \otimes R_{\mathrm{R}}(\mathbf{r},t), \\ R_\mathrm{I}(\mathbf{r},t)\; &amp;= \sum_{k} K_{\mathrm{I}\mathrm{G}_k}(\mathbf{r},t) \otimes R_{\mathrm{G}_k}(\mathbf{r},t) \\ &amp;+\sum_{k} K_{\mathrm{I}\mathrm{C}_k}(\mathbf{r},t) \otimes R_{\mathrm{C}_k}(\mathbf{r},t), \\ R_\mathrm{R}(\mathbf{r},t) &amp;= \sum_{k} K_{\mathrm{R}\mathrm{G}_k}(\mathbf{r},t) \otimes R_{\mathrm{G}_k}(\mathbf{r},t) \\ &amp;+\sum_{k} K_{\mathrm{R} \mathrm{I}_k}(\mathbf{r},t) \otimes R_{\mathrm{I}_k}(\mathbf{r},t) \\ &amp;+\sum_{k}K_{\mathrm{R} \mathrm{C}_k}(\mathbf{r},t) \otimes R_{\mathrm{C}_k}(\mathbf{r},t), \end{align}</p>
+<p>where the sums run over different populations (e.g&#x2e; on-centre and off-centre ganglion cell populations) of specific cell types (ganglion cells, interneurons, etc.)&#x2e; Using the results from previous section we can write the impulse response function for various cells:</p>
+<p>\begin{align} \widetilde{W}_{\mathrm{C}_i}(\mathbf{k}, \omega) &amp;= \widetilde{K}_{{\mathrm{C}_i} \mathrm{R}}\widetilde{W}_{\mathrm{R}} \\ \widetilde{W}_{\mathrm{I}_i}(\mathbf{k}, \omega)\; &amp;= \sum_j \widetilde{K}_{{\mathrm{I}_i} \mathrm{G}_j}\widetilde{W}_{\mathrm{G}_j} + \sum_j \widetilde{K}_{{\mathrm{I}_i} \mathrm{C}_j} \widetilde{W}_{\mathrm{C}_j} \\ &amp;=\sum_j \widetilde{K}_{{\mathrm{I}_i} \mathrm{G}_j}\widetilde{W}_{\mathrm{G}_j} + \sum_j \widetilde{K}_{{\mathrm{I}_i} \mathrm{C}_j} \widetilde{K}_{\mathrm{C}_j \mathrm{R}} \widetilde{W}_{\mathrm{R}} \\ \widetilde{W}_{\mathrm{R}}(\mathbf{k}, \omega) &amp;= \sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{G}_j}\widetilde{W}_{\mathrm{G}_j} +\sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{I}_j}\widetilde{W}_{\mathrm{I}_j} +\sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{C}_j} \widetilde{W}_{\mathrm{C}_j} \\ &amp;= \sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{G}_j}\widetilde{W}_{\mathrm{G}_j} +\sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{I}_j} \bigg( \sum_k \widetilde{K}_{{\mathrm{I}_j} \mathrm{G}_k}\widetilde{W}_{\mathrm{G}_k} + \sum_k \widetilde{K}_{{\mathrm{I}_j} \mathrm{C}_k} \widetilde{K}_{\mathrm{C}_k \mathrm{R}} \widetilde{W}_{\mathrm{R}} \bigg) +\sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{C}_j} \bigg( \widetilde{K}_{{\mathrm{C}_j} \mathrm{R}}\widetilde{W}_{\mathrm{R}} \bigg) \\ &amp;=\frac{ \displaystyle\sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{G}_j}\widetilde{W}_{\mathrm{G}_j} +\sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{I}_j} \sum_k \widetilde{K}_{{\mathrm{I}_j} \mathrm{G}_k}\widetilde{W}_{\mathrm{G}_k} } { 1 - \displaystyle\sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{I}_j} \sum_k \widetilde{K}_{{\mathrm{I}_j} \mathrm{C}_k} \widetilde{K}_{\mathrm{C}_k \mathrm{R}} - \sum_j \widetilde{K}_{{\mathrm{R}} \mathrm{C}_j} \widetilde{K}_{{\mathrm{C}_j} \mathrm{R}} } \end{align}</p>
+</div>
+<!-- @@@dlgnCircuit.html -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

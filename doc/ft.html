@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ft.qdoc -->
+  <title>Fourier Transform | lgn-simulator </title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>Fourier Transform</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#continuous-fourier-transform">Continuous Fourier Transform</a></li>
+<li class="level1"><a href="#discrete-fourier-transform">Discrete Fourier Transform</a></li>
+<li class="level2"><a href="#relationship-between-spatiotemporal-domain-and-frequency-domain">Relationship between spatiotemporal-domain and frequency-domain</a></li>
+<li class="level1"><a href="#discretized-continuous-fourier-transform">Discretized Continuous Fourier transform</a></li>
+<li class="level2"><a href="#forward-fourier-transform">Forward Fourier transform</a></li>
+<li class="level2"><a href="#backward-fourier-transform">Backward Fourier transform</a></li>
+<li class="level1"><a href="#two-dimensional-frequency-spectrum">Two-Dimensional Frequency Spectrum</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Fourier Transform</h1>
+<span class="subtitle"></span>
+<!-- $$$ft.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The repsponse and impulse response integrals can be evaluated by using Fourier transform. This is much more efficent since complexity of computing is reduced from \( O(n^2) \), which arises if one simply applies the definition of discrete Fourier transform, to \( O(n \log n) \), where \(n \) is the data size.</p>
+<a name="continuous-fourier-transform"></a>
+<h2 id="continuous-fourier-transform">Continuous Fourier Transform</h2>
+<p>The (continuous) Fourier transform (CFT) of a signal and its inverse Fourier transform are given by</p>
+<p>\begin{equation} \tilde{y}(k,\omega) = \displaystyle\int_{t} \int_\mathbf{x} e^{-i(kx - \omega t)}y(x, t) \mathrm{d}x\;\mathrm{d}t, \end{equation}</p>
+<p>\begin{equation} y(k,\omega) = \frac{1}{(2\pi)^3} \displaystyle\int_{\omega} \int_k e^{i(kx - \omega t)}\tilde{y}(k, \omega) \mathrm{d}k\;\mathrm{d}\omega. \end{equation}</p>
+<a name="discrete-fourier-transform"></a>
+<h2 id="discrete-fourier-transform">Discrete Fourier Transform</h2>
+<p>The discrete Fourier transform (DFT) is defined as</p>
+<p>\begin{align} \widetilde{Y}_{m'n'} = \sum_{m,n} Y_{m,n} \exp \bigg( -2\pi i \bigg( \frac{m'm}{M} -\frac{n'n}{N} \bigg) \bigg) \end{align}</p>
+<p>\begin{align} Y_{m,n} &amp;= \sum_{m'n'} \widetilde{Y}_{m'n'} \exp \bigg( 2\pi i \bigg( \frac{m'm}{M} -\frac{n'n}{N} \bigg) \bigg) \end{align}</p>
+<p>There are several techniques for computing the DFT, and these are referred to as <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">fast Fourier transform (FFT)</a> algorithms.</p>
+<a name="relationship-between-spatiotemporal-domain-and-frequency-domain"></a>
+<h3 >Relationship between spatiotemporal-domain and frequency-domain</h3>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th ></th><th >Spatial</th><th >Time</th></tr></thead>
+<tr valign="top" class="odd"><td >Number of samples</td><td >\(M \)</td><td >\(N \)</td></tr>
+<tr valign="top" class="even"><td >Resolution</td><td >\(\Delta x \)</td><td >\(\Delta t \)</td></tr>
+<tr valign="top" class="odd"><td >Max</td><td >\(L = M \Delta x \)</td><td >\(T = N \Delta t \)</td></tr>
+<tr valign="top" class="even"><td >Sampling frequency</td><td >\(k_s = \frac{2\pi}{\Delta x} \)</td><td >\(\omega_s = \frac{2\pi}{\Delta t} \)</td></tr>
+</table></div>
+<p>The accuracy of DFT is determined by two fundamental numbers</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th ></th><th >Spatial</th><th >Time</th></tr></thead>
+<tr valign="top" class="odd"><td >Max frequency (Nyquist)</td><td >\(k_{\mathrm{max}} = \frac{k_s}{2} = \frac{2\pi}{2\Delta x} = 2\pi\frac{M}{2 L} \)</td><td >\(f_{\mathrm{max}} = \frac{f_s}{2} = \frac{2\pi}{2\Delta t} = 2\pi\frac{N}{2 T} \)</td></tr>
+<tr valign="top" class="even"><td >Frequency resolution</td><td >\(\Delta k = \frac{2\pi}{L} = \frac{k_s}{M}\)</td><td >\(\Delta \omega = \frac{2\pi}{T} = \frac{f_s}{N}\)</td></tr>
+</table></div>
+<p>From the relations above we also get the important relation between the resolution in time-domain and frequency domain.</p>
+<p>\begin{align} \boxed{ \Delta x \Delta k = \frac{2\pi}{M} \quad \quad \quad \Delta t \Delta \omega = \frac{2\pi}{N} } \end{align}</p>
+<a name="discretized-continuous-fourier-transform"></a>
+<h2 id="discretized-continuous-fourier-transform">Discretized Continuous Fourier transform</h2>
+<p>Consider an arbitary continuous function \(y(x,t) \) sampled in an even numbers \(M\) and \(N\) of points in spatial and time, respectively, with a sampling resolution of \(\Delta t\) and \(\Delta x\) . The discretized grid is given by</p>
+<p>\begin{align} x &amp;= m \Delta x - \frac{L}{2}, \quad m = \left\{0, \dots, M-1 \right\} \\ t &amp;= n \Delta t, \quad n = \left\{0, \dots, N-1 \right\} \end{align}</p>
+<p>The corrosponding DFT sample frequencies are</p>
+<p>\begin{align} k &amp;= m' \Delta k, \quad m' = \left\{0, \dots, M-1 \right\}\\ \omega &amp;= n' \Delta \omega, \quad n' = \left\{0, \dots, N-1 \right\} \end{align}</p>
+<a name="forward-fourier-transform"></a>
+<h3 >Forward Fourier transform</h3>
+<p>\begin{align} \tilde{y}(k,\omega) &amp;= \displaystyle\int_x \int_{t} e^{-i(kx - \omega t)} y(x,t) \mathrm{d}t\;\mathrm{d}x \\ \tilde{y}(m' \Delta k, n' \Delta \omega) &amp;\approx \sum_{m,n} \Delta x \Delta t \; y(m \Delta x - \frac{L}{2}, n \Delta t) \exp \bigg( -i \bigg( m' \Delta k \; (m \Delta x - \frac{L}{2}) - n' \Delta \omega \; n \Delta t \bigg)\bigg) \\ &amp;= \Delta x \Delta t\exp \bigg(i m' \Delta k \frac{L}{2} \bigg) \sum_{m,n} y(m \Delta x, n \Delta t) \exp \bigg( -2\pi i \bigg( \frac{m'm}{M} -\frac{n'n}{N} \bigg) \bigg) \\ &amp;= \Delta x \Delta t (-1)^{m'} \widetilde{Y}_{m'n'} \end{align}</p>
+<a name="backward-fourier-transform"></a>
+<h3 >Backward Fourier transform</h3>
+<p>\begin{align} y(x,t) &amp;= \frac{1}{(2\pi)^2} \displaystyle\int_k \int_{\omega} e^{i(kx - \omega t)} \tilde{y}(k,\omega) \mathrm{d}\omega\;\mathrm{d}k \\ y(m \Delta x - \frac{L}{2}, n \Delta t) &amp;\approx \frac{1}{(2\pi)^2}\sum_{m'n'} \Delta k \Delta \omega \; \tilde{y}((m' \Delta k, n' \Delta \omega) \exp \bigg( i \bigg( m' \Delta k \; (m \Delta x - \frac{L}{2}) - n' \Delta \omega \; n \Delta t \bigg)\bigg) \\ &amp;= \frac{\Delta k \Delta \omega }{(2\pi)^2}\sum_{m'n'} \tilde{y}(m' \Delta k, n' \Delta \omega) \exp \bigg( 2\pi i \bigg( \frac{m'm}{M} -\frac{n'n}{N} \bigg) \bigg) \exp \bigg(-i m' \Delta k \frac{L}{2} \bigg) \\ &amp;= \frac{\Delta k \Delta \omega }{(2\pi)^2}\sum_{m'n'} \tilde{y}(m' \Delta k, n' \Delta \omega) \exp \bigg( 2\pi i \bigg( \frac{m'm}{M} -\frac{n'n}{N} \bigg) \bigg) (-1)^{m'} \end{align}</p>
+<p><b>Note: </b>Often in the FFT implementations the resulting values follow the so-called &quot;standard&quot; order. In the one dimensional case the first element in the resulting array is the zero-frequency term (DC term). Then element (using Python indexing) \( \{1, N/2 -1\} \) contains the positive-frequency terms, and \(\{N/2, N-1\}\) contains the negative-frequency terms, in order of decreasingly negative frequency.</p><a name="two-dimensional-frequency-spectrum"></a>
+<h2 id="two-dimensional-frequency-spectrum">Two-Dimensional Frequency Spectrum</h2>
+<p>Taking the Fourier transform of an \(M_x \times M_y\) image decompose the image into its sine and cosine components. In the figure below the corresponding frequency spectrum is shown.</p>
+<div class="float-right" style="height:80%;width:80%;margin: 0 auto"><p class="centerAlign"><img src="images/grid.png" alt="" /></p><div style="align: left; text-align:center"><p class="figCaption">The frequency spectrum.</p>
+</div></div></div>
+<!-- @@@ft.html -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
