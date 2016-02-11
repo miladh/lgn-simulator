@@ -17,7 +17,7 @@ double TemporalGaussian::temporal(double t)
 
 complex<double> TemporalGaussian::fourierTransform(double w)
 {
-    return m_A * exp(-w*w * m_a*m_a / 4.) * exp(-complex<double>(0,1) * m_delay * w) ;
+    return m_A * exp(-w*w * m_a*m_a / 4.) * exp(complex<double>(0,1) * m_delay * w) ;
 }
 
 

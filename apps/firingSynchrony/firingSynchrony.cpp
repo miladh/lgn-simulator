@@ -8,8 +8,7 @@
 using namespace std;
 using namespace lgnSimulator;
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]){
 
     cout << "========= LGN Simulator: Firing Synchrony =========" << endl;
     clock_t t;
