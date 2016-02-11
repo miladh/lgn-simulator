@@ -11,8 +11,8 @@ public:
     SpatiallyConstant(double constant);
 
     // SpatialKernel interface
-    virtual double spatial(vec2 rVec);
-    virtual complex<double> fourierTransform(vec2 kVec);
+    virtual double spatial(vec2 r);
+    virtual complex<double> fourierTransform(vec2 k);
 
 
 private:

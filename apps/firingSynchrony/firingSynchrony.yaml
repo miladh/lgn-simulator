@@ -2,13 +2,13 @@ description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
 ns: 7
-nt: 8
-dt: 0.01
+nt: 9
+dt: 0.1
 ds: 0.01
 
 #------------Stimulus settings-----------------#
 # Grating:
-C: 1.0
+C: 10.0
 mask: "circle" # none/circle/gauss
 maskSize: 0.5
 kxId:  0        #[-ns/2, ns/2 - 1]
@@ -34,7 +34,7 @@ spatialKernels:
         weight: 1.0
 
     Krc:
-        weight: -0.5
+        #weight: -0.5
     # Gauss (DOG)
         A: 0.0
         a: 0.001
@@ -54,11 +54,11 @@ temporalKernels:
 
     Kcr:
     # TemporalDelta
-        delay: 1.0
+        delay: 5.0
 
     Krc:
     # TemporalDelta
-        delay: 1.0
+        delay: 5.0
 
 
 #------------File manager settings-----------------#

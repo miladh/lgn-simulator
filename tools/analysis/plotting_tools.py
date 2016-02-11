@@ -214,8 +214,18 @@ if __name__ == "__main__":
     # print exp.singleCellTemporalResponse("cortical",idx, idy)[0]/exp.singleCellTemporalResponse("relay",idx, idy)[0]
 
     plt.figure()
-    res = exp.temporalImpulseResponse("relay", idx, idy)
-    plt.plot(res)
+    impresC = exp.temporalImpulseResponse("cortical", idx, idy)
+    impresR = exp.temporalImpulseResponse("relay", idx, idy)
+    plt.plot(exp.integrator.timeVec, impresR, '-r', label="Relay")
+    plt.plot( exp.integrator.timeVec, impresC, '-b', label="cortical")
+    plt.legend()
+
+    # plt.figure()
+    # resC = exp.singleCellTemporalResponse("cortical", idx, idy)
+    # resR = exp.singleCellTemporalResponse("relay", idx, idy)
+    # plt.plot(exp.integrator.timeVec, resR, '-r', label="Relay")
+    # plt.plot( exp.integrator.timeVec, resC, '-b', label="cortical")
+    # plt.legend()
 
     print (exp.cortical.impulseResponse["spatioTemporal"]).max() -(exp.relay.impulseResponse["spatioTemporal"]).max()
     print (exp.cortical.impulseResponse["spatioTemporal"]).min() - (exp.relay.impulseResponse["spatioTemporal"]).min()

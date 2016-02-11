@@ -135,7 +135,7 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
 
 
     if((1 - interneuronFB.real()  - corticalFB.real() )== 0){
-        cout << "Ifb: " << interneuronFB << " C: " << corticalFB << endl;
+        cerr << "interneuronFB: " << interneuronFB << " corticalFB: " << corticalFB << endl;
         throw overflow_error("Divide by zero exception in relay feedback contribution");
     }
 

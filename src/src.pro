@@ -35,7 +35,8 @@ SOURCES += \
     staticNonlinearity/heavisidenonlinearity.cpp \
     staticNonlinearity/sigmoidalnonlinearity.cpp \
     spatialKernels/spatialdelta.cpp \
-    spatialKernels/spatiallyconstant.cpp
+    spatialKernels/spatiallyconstant.cpp \
+    spatialKernels/gaussian.cpp
 
 HEADERS += \
     integrator.h \
@@ -69,7 +70,8 @@ HEADERS += \
     staticNonlinearity/sigmoidalnonlinearity.h \
     spatialKernels/spatialdelta.h \
     spatialKernels/spatiallyconstant.h \
-    ../include/lgnSimulator.h
+    ../include/lgnSimulator.h \
+    spatialKernels/gaussian.h
 
 OTHER_FILES +=
 

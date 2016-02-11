@@ -2,6 +2,7 @@
 #define DOG_H
 
 #include "spatialkernel.h"
+#include "gaussian.h"
 
 using namespace std;
 using namespace arma;
@@ -19,10 +20,8 @@ public:
 
 
 private:
-    double m_A = 0.0;
-    double m_a = 0.0;
-    double m_B = 0.0;
-    double m_b = 0.0;
+    Gaussian *m_centre;
+    Gaussian *m_surround;
 
 
 };

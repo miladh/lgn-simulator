@@ -54,8 +54,8 @@ int main(int argc, char* argv[])
     //Spatial kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(&Ks_rgSettings);
     SpatialDelta Ks_cr = createSpatialDeltaKernel(&Ks_crSettings);
-    SpatialDelta Ks_rc = createSpatialDeltaKernel(&Ks_rcSettings);
-//    DOG Ks_rc = createDOGSpatialKernel(&Ks_rcSettings);
+//    SpatialDelta Ks_rc = createSpatialDeltaKernel(&Ks_rcSettings);
+    DOG Ks_rc = createDOGSpatialKernel(&Ks_rcSettings);
 
     //Temporal kernels:--------------------------------------------------------
     TemporalDelta Kt_rg = createTemporalDeltaKernel(&Kt_rgSettings);
