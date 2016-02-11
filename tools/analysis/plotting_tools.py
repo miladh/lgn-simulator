@@ -201,15 +201,28 @@ if __name__ == "__main__":
     # ,[exp.interneuron.impulseResponse["spatioTemporal"], "Interneuron"]
     ,[exp.relay.response["spatioTemporal"], "Relay cell response"]
     ,[exp.relay.impulseResponse["spatioTemporal"], "Relay cell impulse response"]
-    # ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
-    # ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
+    ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
+    ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
     ]
 
-    res = exp.temporalImpulseResponse("relay",exp.integrator.nPointsSpatial/2,
-    exp.integrator.nPointsSpatial/2)
-    plt.plot(res)
-    print max(res)
+    idx = exp.integrator.nPointsSpatial/2
+    idy = idx
 
+    # plt.plot(exp.integrator.timeVec, exp.singleCellTemporalResponse("relay",idx, idy)
+    # ,exp.integrator.timeVec, exp.singleCellTemporalResponse("cortical",idx, idy))
+
+    # print exp.singleCellTemporalResponse("cortical",idx, idy)[0]/exp.singleCellTemporalResponse("relay",idx, idy)[0]
+
+    plt.figure()
+    res = exp.temporalImpulseResponse("relay", idx, idy)
+    plt.plot(res)
+
+    print (exp.cortical.impulseResponse["spatioTemporal"]).max() -(exp.relay.impulseResponse["spatioTemporal"]).max()
+    print (exp.cortical.impulseResponse["spatioTemporal"]).min() - (exp.relay.impulseResponse["spatioTemporal"]).min()
+
+    # print (exp.cortical.impulseResponse["spatioTemporal"][10,:,:] - exp.relay.impulseResponse["spatioTemporal"][0,:,:]).max()
+    # plt.imshow(exp.cortical.impulseResponse["spatioTemporal"][10,:,:] - exp.relay.impulseResponse["spatioTemporal"][0,:,:])
+    # plt.colorbar()
     animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True, save_animation = False, animation_name = "rat")
     # animate3dPlots(data, resolution = 3)
     plt.show()

@@ -1,9 +1,9 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 8
-nt: 5
-dt: 0.1
+ns: 7
+nt: 8
+dt: 0.01
 ds: 0.01
 
 #------------Stimulus settings-----------------#
@@ -34,6 +34,7 @@ spatialKernels:
         weight: 1.0
 
     Krc:
+        weight: -0.5
     # Gauss (DOG)
         A: 0.0
         a: 0.001
@@ -53,7 +54,7 @@ temporalKernels:
 
     Kcr:
     # TemporalDelta
-        delay: 0.0
+        delay: 1.0
 
     Krc:
     # TemporalDelta

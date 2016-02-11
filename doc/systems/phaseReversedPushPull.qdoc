@@ -43,8 +43,8 @@ e^{(-i\\omega\\; 0)}
 }
 {
 1 -
-\\mathcal{F} \[ \\delta(\\mathbf{r})\\delta(t) \](\\mathbf{k}, \\omega)\\;
-\\tilde{f}_{\\mathrm{Gauss}}(\\mathbf{k})
+\\tilde{f}_{\\mathrm{Gauss}}(\\mathbf{k})\\mathcal{F} \[\\delta(t) \](\\omega)\\;
+\\mathcal{F} \[ \\delta(\\mathbf{r})\\delta(t) \](\\mathbf{k}, \\omega)
 }
 =
 \\frac{

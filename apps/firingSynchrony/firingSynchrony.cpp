@@ -54,7 +54,8 @@ int main(int argc, char* argv[])
     //Spatial kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(&Ks_rgSettings);
     SpatialDelta Ks_cr = createSpatialDeltaKernel(&Ks_crSettings);
-    DOG Ks_rc = createDOGSpatialKernel(&Ks_rcSettings);
+    SpatialDelta Ks_rc = createSpatialDeltaKernel(&Ks_rcSettings);
+//    DOG Ks_rc = createDOGSpatialKernel(&Ks_rcSettings);
 
     //Temporal kernels:--------------------------------------------------------
     TemporalDelta Kt_rg = createTemporalDeltaKernel(&Kt_rgSettings);
@@ -64,8 +65,8 @@ int main(int argc, char* argv[])
 
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, &Ks_rg, &Kt_rg);
-//    relay.addCorticalNeuron(&cortical, &Ks_rc, &Kt_rc);
-//    cortical.addRelayCell(&relay, &Ks_cr, &Kt_cr);
+    relay.addCorticalNeuron(&cortical, &Ks_rc, &Kt_rc);
+    cortical.addRelayCell(&relay, &Ks_cr, &Kt_cr);
 
 
     //Compute:-----------------------------------------------------------------
@@ -77,7 +78,7 @@ int main(int argc, char* argv[])
     vector<Neuron *> neurons;
 //    neurons.push_back(&ganglion);
     neurons.push_back(&relay);
-//    neurons.push_back(&cortical);
+    neurons.push_back(&cortical);
 
     io.writeIntegratorProperties(&integrator);
     for(Neuron* neuron : neurons){
