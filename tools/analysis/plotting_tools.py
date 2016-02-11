@@ -188,21 +188,27 @@ if __name__ == "__main__":
 
 
     outputFilePath = "/media/milad/scratch/lgn-simulator/simulations/tmp/*.h5"
+    outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
 
     data = [
      [exp.stimulus.spatioTemporal, "Stimulus"]
-    ,[exp.ganglion.response["spatioTemporal"], "Ganglion cell response"]
-    ,[exp.ganglion.impulseResponse["spatioTemporal"], "Ganglion cell impulse response"]
+    # ,[exp.ganglion.response["spatioTemporal"], "Ganglion cell response"]
+    # ,[exp.ganglion.impulseResponse["spatioTemporal"], "Ganglion cell impulse response"]
     # ,[exp.interneuron.response["spatioTemporal"], "Interneuron"]
     # ,[exp.interneuron.impulseResponse["spatioTemporal"], "Interneuron"]
-    # ,[exp.relay.response["spatioTemporal"], "Relay cell response"]
-    # ,[exp.relay.impulseResponse["spatioTemporal"], "Relay cell impulse response"]
+    ,[exp.relay.response["spatioTemporal"], "Relay cell response"]
+    ,[exp.relay.impulseResponse["spatioTemporal"], "Relay cell impulse response"]
     # ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
     # ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
     ]
+
+    res = exp.temporalImpulseResponse("relay",exp.integrator.nPointsSpatial/2,
+    exp.integrator.nPointsSpatial/2)
+    plt.plot(res)
+    print max(res)
 
     animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True, save_animation = False, animation_name = "rat")
     # animate3dPlots(data, resolution = 3)

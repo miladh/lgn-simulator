@@ -22,7 +22,9 @@ double TemporalDelta::temporal(double t)
 
 complex<double> TemporalDelta::fourierTransform(double w)
 {
-    return exp(-complex<double>(0,1) * m_delay * w);
+    // Note that we have +i, and not -i due to the definition of
+    // temporal FT.
+    return exp(complex<double>(0,1) * m_delay * w);
 }
 
 

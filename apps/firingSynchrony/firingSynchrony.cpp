@@ -11,7 +11,7 @@ using namespace lgnSimulator;
 int main(int argc, char* argv[])
 {
 
-    cout << "========= LGN Simulator: Phase-reversed push-pull =========" << endl;
+    cout << "========= LGN Simulator: Firing Synchrony =========" << endl;
     clock_t t;
     t = clock();
 
@@ -64,8 +64,8 @@ int main(int argc, char* argv[])
 
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, &Ks_rg, &Kt_rg);
-    relay.addCorticalNeuron(&cortical, &Ks_rc, &Kt_rc);
-    cortical.addRelayCell(&relay, &Ks_cr, &Kt_cr);
+//    relay.addCorticalNeuron(&cortical, &Ks_rc, &Kt_rc);
+//    cortical.addRelayCell(&relay, &Ks_cr, &Kt_cr);
 
 
     //Compute:-----------------------------------------------------------------
@@ -75,9 +75,9 @@ int main(int argc, char* argv[])
     S->clearSpatioTemporal();
 
     vector<Neuron *> neurons;
-    neurons.push_back(&ganglion);
+//    neurons.push_back(&ganglion);
     neurons.push_back(&relay);
-    neurons.push_back(&cortical);
+//    neurons.push_back(&cortical);
 
     io.writeIntegratorProperties(&integrator);
     for(Neuron* neuron : neurons){

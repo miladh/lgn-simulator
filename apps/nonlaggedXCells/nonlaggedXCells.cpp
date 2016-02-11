@@ -11,7 +11,7 @@ using namespace lgnSimulator;
 int main(int argc, char* argv[])
 {
 
-    cout << "========= Extended-DOG: Nonlagged X-Cells =========" << endl;
+    cout << "========= LGN Simulator: Nonlagged X-Cells =========" << endl;
     clock_t t;
     t = clock();
 

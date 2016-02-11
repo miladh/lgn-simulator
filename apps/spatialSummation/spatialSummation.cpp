@@ -11,7 +11,7 @@ using namespace lgnSimulator;
 int main(int argc, char* argv[])
 {
 
-    cout << "=====Extended-DOG Model=====" << endl;
+    cout << "=====LGN Simulator Model=====" << endl;
     clock_t t;
     t = clock();
 

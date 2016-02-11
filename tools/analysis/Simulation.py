@@ -48,6 +48,10 @@ class Simulation:
         FreqResponse = getattr(self, cellType).response["fourierTransform"][:,idx, idy]
         return FreqResponse
 
+    def temporalImpulseResponse(self, cellType, idx=0 , idy=0):
+        impulseResponse = getattr(self, cellType).impulseResponse["spatioTemporal"][:,idx, idy]
+        return impulseResponse
+
     def spikeTrain(self, cellType, idx=0 , idy=0, num_trails=2):
         response = self.singleCellTemporalResponse(cellType, idx , idy)
         spike_times = [[] for i in range(num_trails)]
