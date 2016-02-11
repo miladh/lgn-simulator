@@ -34,12 +34,10 @@ spatialKernels:
         weight: 1.0
 
     Krc:
-        #weight: -0.5
-    # Gauss (DOG)
-        A: 0.0
-        a: 0.001
-        B: 1.5
-        b: 0.83
+        weight: -0.5
+    # Gauss
+        A: -1.5
+        a: 0.83
 
     Kcr:
     # SpatialDelta
@@ -58,7 +56,12 @@ temporalKernels:
 
     Krc:
     # TemporalDelta
-        delay: 5.0
+        #delay: 5.0
+
+    # Gaussian
+        A: 1.0
+        a: 0.1
+        delay: 5
 
 
 #------------File manager settings-----------------#
