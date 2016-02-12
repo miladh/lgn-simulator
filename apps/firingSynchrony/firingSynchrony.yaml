@@ -1,10 +1,10 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 8
+ns: 7
 nt: 8
 dt: 0.2
-ds: 0.1
+ds: 0.02
 
 #------------Stimulus settings-----------------#
 # Grating:
@@ -13,7 +13,7 @@ mask: "none" # none/circle/gauss
 maskSize: 0.5
 kxId:  5        #[-ns/2, ns/2 - 1]
 kyId:  0        #[-ns/2, ns/2 - 1]
-wId:   2        #[-nt/2, nt/2 - 1]
+wId:   10        #[-nt/2, nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
@@ -34,10 +34,10 @@ spatialKernels:
         weight: 1.0
 
     Krc:
-        #weight: 0.5
+        weight: -0.2
     # Gauss
-        A: -1.5
-        a: 0.83
+        #A: -1.5
+        #a: 0.83
 
     Kcr:
     # SpatialDelta
@@ -66,30 +66,6 @@ temporalKernels:
 
 #------------File manager settings-----------------#
 outputFile: "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 
 
     //Spatial kernels:----------------------------------------------------------
-    DOG dog = createDOGSpatialKernel(&cfg);
+    DOG dog = createSpatialDOGKernel(&cfg);
 
 
     //Temporal kernels:-------------------------------------------------------

@@ -27,6 +27,6 @@ private:
 };
 }
 
-lgnSimulator::DOG createDOGSpatialKernel(const YAML::Node *cfg);
+lgnSimulator::DOG createSpatialDOGKernel(const YAML::Node *cfg);
 
 #endif // DOG_H

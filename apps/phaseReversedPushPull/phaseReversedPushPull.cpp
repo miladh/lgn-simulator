@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
     unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
 
     //Ganglion cell:-----------------------------------------------------------
-    DOG Wg_s = createDOGSpatialKernel(&ganglionImpRes);
+    DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
     TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
     GanglionCell ganglion(&integrator, &Wg_s, &Wg_t);
 
@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
     //Spatial kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(&Ks_rgSettings);
     SpatialDelta Ks_cr = createSpatialDeltaKernel(&Ks_crSettings);
-    DOG Ks_rc = createDOGSpatialKernel(&Ks_rcSettings);
+    DOG Ks_rc = createSpatialDOGKernel(&Ks_rcSettings);
 
     //Temporal kernels:--------------------------------------------------------
     TemporalDelta Kt_rg = createTemporalDeltaKernel(&Kt_rgSettings);

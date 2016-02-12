@@ -42,7 +42,7 @@ int main(int argc, char* argv[]){
     unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
 
     //Ganglion cell:-----------------------------------------------------------
-    DOG Wg_s = createDOGSpatialKernel(&ganglionImpRes);
+    DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
     TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
     GanglionCell ganglion(&integrator, &Wg_s, &Wg_t);
 
@@ -54,15 +54,15 @@ int main(int argc, char* argv[]){
     SpatialDelta Ks_rg = createSpatialDeltaKernel(&Ks_rgSettings);
     SpatialDelta Ks_cr = createSpatialDeltaKernel(&Ks_crSettings);
 
-//    SpatialDelta Ks_rc = createSpatialDeltaKernel(&Ks_rcSettings);
-    Gaussian Ks_rc = createGaussianSpatialKernel(&Ks_rcSettings);
+    SpatialDelta Ks_rc = createSpatialDeltaKernel(&Ks_rcSettings);
+//    Gaussian Ks_rc = createSpatialGaussianKernel(&Ks_rcSettings);
 
     //Temporal kernels:--------------------------------------------------------
     TemporalDelta Kt_rg = createTemporalDeltaKernel(&Kt_rgSettings);
     TemporalDelta Kt_cr = createTemporalDeltaKernel(&Kt_crSettings);
 
     TemporalDelta Kt_rc = createTemporalDeltaKernel(&Kt_rcSettings);
-//    TemporalGaussian Kt_rc = createGaussianTemporalKernel(&Kt_rcSettings);
+//    TemporalGaussian Kt_rc = createTemporalGaussianKernel(&Kt_rcSettings);
 
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, &Ks_rg, &Kt_rg);
@@ -97,7 +97,12 @@ int main(int argc, char* argv[]){
 
 
     t = clock() - t;
-    printf ("%f seconds.\n",((float)t)/CLOCKS_PER_SEC);
+    double elapsedTime = ((float)t)/CLOCKS_PER_SEC;
+    if(elapsedTime <= 60){
+        printf ("%f seconds.\n", elapsedTime);
+    }else{
+        printf ("%f minutes.\n", elapsedTime/60);
+    }
 
     return 0;
 }

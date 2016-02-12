@@ -34,7 +34,7 @@ int main()
 
 
     //Spatial kernels:----------------------------------------------------------
-    DOG dog = createDOGSpatialKernel(&cfg);
+    DOG dog = createSpatialDOGKernel(&cfg);
 //    DOG gauss(0.3, 0.05, 0, 1.);
 //    EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
 

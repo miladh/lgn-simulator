@@ -22,6 +22,6 @@ private:
 };
 
 }
-lgnSimulator::DecayingExponential createDecayingExponentialTemporalKernel(const YAML::Node *cfg);
+lgnSimulator::DecayingExponential createTemporalDecayingExponentialKernel(const YAML::Node *cfg);
 
 #endif // DECAYINGEXPONENTIAL_H

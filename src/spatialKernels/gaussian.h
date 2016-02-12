@@ -24,6 +24,6 @@ private:
 };
 }
 
-lgnSimulator::Gaussian createGaussianSpatialKernel(const YAML::Node *cfg);
+lgnSimulator::Gaussian createSpatialGaussianKernel(const YAML::Node *cfg);
 
 #endif // GAUSSIAN_H

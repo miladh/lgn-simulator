@@ -60,8 +60,9 @@ class Simulation:
         for k in range(num_trails):
             for i in range(self.integrator.nPointsTemporal):
                 r = np.random.uniform(0,1)
-                if(response[i] * dt> r):
+                if(response[i] * dt > r):
                     spike_times[k].append(i*dt)
+            spike_times[k]=np.array(spike_times[k])
         return spike_times
 
 if __name__ == "__main__":

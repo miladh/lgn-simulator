@@ -21,7 +21,7 @@ complex<double> TemporalGaussian::fourierTransform(double w)
 }
 
 
-TemporalGaussian createGaussianTemporalKernel(const YAML::Node *cfg)
+TemporalGaussian createTemporalGaussianKernel(const YAML::Node *cfg)
 {
     double A = (*cfg)["A"].as<double>();
     double a = (*cfg)["a"].as<double>();

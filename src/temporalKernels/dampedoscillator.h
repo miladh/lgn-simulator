@@ -23,6 +23,6 @@ private:
 };
 
 }
-lgnSimulator::DampedOscillator createDampedOscillatorTemporalKernel(const YAML::Node *cfg);
+lgnSimulator::DampedOscillator createTemporalDampedOscillatorKernel(const YAML::Node *cfg);
 
 #endif // DAMPEDOSCILLATOR_H

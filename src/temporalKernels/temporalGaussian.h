@@ -22,6 +22,6 @@ private:
 
 }
 
-lgnSimulator::TemporalGaussian createGaussianTemporalKernel(const YAML::Node *cfg);
+lgnSimulator::TemporalGaussian createTemporalGaussianKernel(const YAML::Node *cfg);
 
 #endif // TEMPORALGAUSSIAN_H

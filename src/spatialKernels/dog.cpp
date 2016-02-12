@@ -26,7 +26,7 @@ complex<double> DOG::fourierTransform(vec2 k)
 
 
 
-DOG createDOGSpatialKernel(const YAML::Node *cfg)
+DOG createSpatialDOGKernel(const YAML::Node *cfg)
 {
 
     double A = (*cfg)["A"].as<double>();

@@ -30,7 +30,7 @@ complex<double> DecayingExponential::fourierTransform(double w)
 }
 
 
-DecayingExponential createDecayingExponentialTemporalKernel(const YAML::Node *cfg)
+DecayingExponential createTemporalDecayingExponentialKernel(const YAML::Node *cfg)
 {
 
     double tau = (*cfg)["tau"].as<double>();
