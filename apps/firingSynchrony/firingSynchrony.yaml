@@ -1,19 +1,19 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 7
-nt: 9
-dt: 0.1
-ds: 0.01
+ns: 8
+nt: 8
+dt: 0.2
+ds: 0.1
 
 #------------Stimulus settings-----------------#
 # Grating:
-C: 10.0
-mask: "circle" # none/circle/gauss
+C: 1.0
+mask: "none" # none/circle/gauss
 maskSize: 0.5
-kxId:  0        #[-ns/2, ns/2 - 1]
+kxId:  5        #[-ns/2, ns/2 - 1]
 kyId:  0        #[-ns/2, ns/2 - 1]
-wId:   0        #[-nt/2, nt/2 - 1]
+wId:   2        #[-nt/2, nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
@@ -34,7 +34,7 @@ spatialKernels:
         weight: 1.0
 
     Krc:
-        weight: -0.5
+        #weight: 0.5
     # Gauss
         A: -1.5
         a: 0.83
@@ -52,16 +52,16 @@ temporalKernels:
 
     Kcr:
     # TemporalDelta
-        delay: 0.8
+        delay: 5.0
 
     Krc:
-    # TemporalDelta
-        #delay: 5.0
+     #TemporalDelta
+        delay: 5.0
 
     # Gaussian
-        A: 1.0
-        a: 0.4
-        delay: 0.4
+        #A: 1.0
+        #a: 0.4
+        #delay: 5.0
 
 
 #------------File manager settings-----------------#

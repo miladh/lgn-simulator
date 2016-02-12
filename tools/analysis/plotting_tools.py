@@ -16,7 +16,7 @@ def simpleaxis(ax):
     # ax.get_xaxis().tick_bottom()
 
 
-def raster(spike_times, figsize = (12,8), ax = None, ylabel = "Cell Id"):
+def raster(spike_times, ax = None, figsize = (12,8), ylabel = "Cell Id", title = None):
     """
     Raster plot
     """
@@ -38,15 +38,16 @@ def raster(spike_times, figsize = (12,8), ax = None, ylabel = "Cell Id"):
     yticks = []
     yticks.append("")
     for i in range(num_cells):
-        for t in spike_times[i][0]:
+        for t in spike_times[i][:]:
             ax.vlines(t, i + .9, i + 1.1)
-        yticks.append(spike_times[i][1])
 
-        plt.ylim(0.,num_cells+0.5)
-        plt.xlabel('t [s]', fontsize = 16)
-        plt.ylabel(ylabel, fontsize = 16)
+    plt.ylim(0.8, num_cells+0.2)
+    plt.xlabel('t [s]', fontsize = 16)
+    plt.ylabel(ylabel, fontsize = 16)
+    plt.yticks(range(1,num_cells+1), fontsize = 12)
 
-    plt.yticks(range(num_cells+1), yticks, fontsize = 12)
+    if not title==None:
+        ax.set_title(title)
     plt.tight_layout()
     return ax
 
@@ -216,8 +217,8 @@ if __name__ == "__main__":
     plt.figure()
     impresC = exp.temporalImpulseResponse("cortical", idx, idy)
     impresR = exp.temporalImpulseResponse("relay", idx, idy)
-    plt.plot(exp.integrator.timeVec, impresR, '-r', label="Relay")
-    plt.plot( exp.integrator.timeVec, impresC, '-b', label="cortical")
+    plt.plot(exp.integrator.timeVec, impresR, '-or', label="Relay")
+    plt.plot( exp.integrator.timeVec, impresC, '-ob', label="cortical")
     plt.legend()
 
     # plt.figure()

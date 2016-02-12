@@ -56,11 +56,12 @@ class Simulation:
         response = self.singleCellTemporalResponse(cellType, idx , idy)
         spike_times = [[] for i in range(num_trails)]
 
+        dt = self.integrator.temporalResolution
         for k in range(num_trails):
-            for i in range(self.num_steps):
+            for i in range(self.integrator.nPointsTemporal):
                 r = np.random.uniform(0,1)
-                if(response[i]+1 * self.dt > r):
-                    spike_times[k].append(i*self.dt)
+                if(response[i] * dt> r):
+                    spike_times[k].append(i*dt)
         return spike_times
 
 if __name__ == "__main__":
