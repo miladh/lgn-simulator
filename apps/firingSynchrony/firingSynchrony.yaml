@@ -52,7 +52,7 @@ temporalKernels:
 
     Kcr:
     # TemporalDelta
-        delay: 5.0
+        delay: 0.8
 
     Krc:
     # TemporalDelta
@@ -61,7 +61,7 @@ temporalKernels:
     # Gaussian
         A: 1.0
         a: 0.4
-        delay: 10
+        delay: 0.4
 
 
 #------------File manager settings-----------------#
