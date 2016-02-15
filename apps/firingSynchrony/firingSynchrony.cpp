@@ -32,6 +32,8 @@ int main(int argc, char* argv[]){
 
 
     string outputFilename = cfg["outputFile"].as<std::string>();
+    double Rg_0 = cfg["backgroundResponse"]["Rg_0"].as<double>();
+    double Rr_0 = cfg["backgroundResponse"]["Rr_0"].as<double>();
     double Rc_0 = cfg["backgroundResponse"]["Rc_0"].as<double>();
 
     //Output manager:---------------------------------------------------------
@@ -46,10 +48,10 @@ int main(int argc, char* argv[]){
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
     TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
-    GanglionCell ganglion(&integrator, &Wg_s, &Wg_t);
+    GanglionCell ganglion(&integrator, &Wg_s, &Wg_t, Rg_0);
 
     //Relay cell: -------------------------------------------------------------
-    RelayCell relay(&integrator);
+    RelayCell relay(&integrator, Rr_0);
     CorticalCell cortical(&integrator, Rc_0);
 
     //Spatial kernels:---------------------------------------------------------

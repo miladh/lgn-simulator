@@ -40,8 +40,17 @@ void Neuron::computeResponse(Stimulus *stimulus)
     if(!impulseResponseFourierTransformComputed){
         computeImpulseResponseFourierTransform();
     }
+
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
-    m_response = real(m_integrator->backwardFFT(m_responseFT)) + m_backgroundResponse;
+
+    if(m_backgroundResponse!=0){
+        m_responseFT(0,0,0) +=8*PI*PI*PI*m_backgroundResponse
+            /m_integrator->spatialFreqResolution()
+            /m_integrator->spatialFreqResolution()
+            /m_integrator->temporalFreqResolution();
+    }
+
+    m_response = real(m_integrator->backwardFFT(m_responseFT));
 
     if(m_staticNonlinearity != nullptr){
         m_staticNonlinearity->applyStaticNonlinearity(&m_response);
