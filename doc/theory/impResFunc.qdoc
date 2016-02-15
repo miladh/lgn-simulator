@@ -25,7 +25,7 @@ For general images composed of many point stimuli, we obtain:
 
 \\begin{equation}
 \resp(\xc, \yc) =
-\resp_{0}(\xc, \yc)
+\resp_{0}
 +\\displaystyle\\sum_i\\sum_jW(x_{c} - x_i,y_{c} - y_j) \stim(x_i, y_j),
 \\end{equation}
 
@@ -33,12 +33,12 @@ or, in the infinitesimal formulation
 
 \\begin{equation}
 \resp(\\mathbf{r}_{c}) =
-\resp_{0}(\\mathbf{r}_{c})
+\resp_{0}
 +\\displaystyle \\iint_\\mathbf{r}
 W(\\mathbf{r}_{c} - \\mathbf{r}) \stim(\\mathbf{r}) \\; \\mathrm{d}^2\\mathbf{r},
 \\end{equation}
 
-where \\(W\\) is the weighting function describing the strength, or weight, with which a stimulus delivered at
+where \\( \resp_{0} \\) is the background firing rate and \\(W\\) is the weighting function describing the strength, or weight, with which a stimulus delivered at
 retinal position \\(r\\) influences the output at \\( \\mathbf{r}_{c} \\).
 
 The weighting function can in principle be obtained by measuring the response to briefly flicking test spots
@@ -51,7 +51,7 @@ Mathematically this corresponds to a stimulus function given by
 \\end{equation}
 
 where \\(L_s\\) is the luminance of the test spot.
-Inserting this into the equation we obtain the response
+Inserting this into the equation we obtain the response (assuming zero background firing)
 
 \\begin{equation}
     \resp(\\mathbf{r}_{c}) = L_s W(\\mathbf{r}_{c} - \\mathbf{r}_s).
@@ -68,7 +68,7 @@ The response can then be written as
 
 \\begin{equation}
     \resp(\\\rc) =
-    \resp_{0}(\\\rc)
+    \resp_{0}
     +\\displaystyle \\iint_\\mathbf{r}
     \recep(\\mathbf{r}- \\\rc ) \stim(\\mathbf{r}) \\; \\mathrm{d}^2\\mathbf{r}.
 \\end{equation}

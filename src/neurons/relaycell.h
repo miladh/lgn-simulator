@@ -6,7 +6,7 @@ namespace lgnSimulator {
 class RelayCell : public Neuron
 {
 public:
-    RelayCell(Integrator *integrator);
+    RelayCell(Integrator *integrator, double backgroundResponse= 0);
     ~RelayCell();
 
     // Neuron interface

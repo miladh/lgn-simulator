@@ -6,8 +6,9 @@ using namespace lgnSimulator;
 GanglionCell::GanglionCell(Integrator *integrator,
                            SpatialKernel *spatialKernel,
                            TemporalKernel *temporalKernel,
+                           double backgroundResponse,
                            StaticNonlinearity *staticNonlinearity)
-    : Neuron(integrator, staticNonlinearity)
+    : Neuron(integrator, backgroundResponse, staticNonlinearity)
     , m_spatialKernel(spatialKernel)
     , m_temporalKernel(temporalKernel)
 {

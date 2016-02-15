@@ -10,8 +10,9 @@ using namespace lgnSimulator;
  */
 
 
-Neuron::Neuron(Integrator *integrator, StaticNonlinearity *staticNonlinearity)
+Neuron::Neuron(Integrator *integrator, double backgroundResponse, StaticNonlinearity *staticNonlinearity)
     : m_integrator(integrator)
+    , m_backgroundResponse(backgroundResponse)
     , m_staticNonlinearity(staticNonlinearity)
 {
     int nPointsTemporal = integrator->nPointsTemporal();
@@ -40,7 +41,7 @@ void Neuron::computeResponse(Stimulus *stimulus)
         computeImpulseResponseFourierTransform();
     }
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
-    m_response = real(m_integrator->backwardFFT(m_responseFT));
+    m_response = real(m_integrator->backwardFFT(m_responseFT)) + m_backgroundResponse;
 
     if(m_staticNonlinearity != nullptr){
         m_staticNonlinearity->applyStaticNonlinearity(&m_response);

@@ -49,44 +49,44 @@ mplt.tight_layout()
 
 
 # Response plots------------------------------------------------------------------
-# ds = 10
-# res_r1 = exp.singleCellTemporalResponse("relay", idx, idy)
-# res_r2 = exp.singleCellTemporalResponse("relay", idx+ds, idy+ds)
-# res_g1 = exp.singleCellTemporalResponse("ganglion", idx, idy)
-# res_g2 = exp.singleCellTemporalResponse("ganglion", idx+ds, idy+ds)
-# res_c1 = exp.singleCellTemporalResponse("cortical", idx, idy)
-# res_c2 = exp.singleCellTemporalResponse("cortical", idx+ds, idy+ds)
-#
-# f, ax = mplt.subplots(3, figsize = (8,12))
-# ax[0].set_title("With feedback")
-# ax[0].plot(res_r1, label= str(idx/N) +"," +str(idy/N) )
-# ax[0].plot(res_r2, label= str(idx/N+ds/N) +"," +str(idy/N+ds/N))
-# ax[0].legend()
-#
-# ax[1].set_title("Without feedback")
-# ax[1].plot(res_g1, label= str(idx/N) +"," +str(idy/N))
-# ax[1].plot(res_g2, label= str(idx/N+ds/N) +"," +str(idy/N+ds/N))
-# ax[1].legend()
-#
-# ax[2].set_title("cortical")
-# ax[2].plot(res_c1, label= str(idx/N) +"," +str(idy/N))
-# ax[2].plot(res_c2, label= str(idx/N+ds/N) +"," +str(idy/N+ds/N))
-# ax[2].legend()
-# mplt.tight_layout()
+ds = 10
+res_r1 = exp.singleCellTemporalResponse("relay", idx, idy)
+res_r2 = exp.singleCellTemporalResponse("relay", idx+ds, idy+ds)
+res_g1 = exp.singleCellTemporalResponse("ganglion", idx, idy)
+res_g2 = exp.singleCellTemporalResponse("ganglion", idx+ds, idy+ds)
+res_c1 = exp.singleCellTemporalResponse("cortical", idx, idy)
+res_c2 = exp.singleCellTemporalResponse("cortical", idx+ds, idy+ds)
+
+f, ax = mplt.subplots(3, figsize = (8,12))
+ax[0].set_title("With feedback")
+ax[0].plot(res_r1, label= str(idx/N) +"," +str(idy/N) )
+ax[0].plot(res_r2, label= str(idx/N+ds/N) +"," +str(idy/N+ds/N))
+ax[0].legend()
+
+ax[1].set_title("Without feedback")
+ax[1].plot(res_g1, label= str(idx/N) +"," +str(idy/N))
+ax[1].plot(res_g2, label= str(idx/N+ds/N) +"," +str(idy/N+ds/N))
+ax[1].legend()
+
+ax[2].set_title("cortical")
+ax[2].plot(res_c1, label= str(idx/N) +"," +str(idy/N))
+ax[2].plot(res_c2, label= str(idx/N+ds/N) +"," +str(idy/N+ds/N))
+ax[2].legend()
+mplt.tight_layout()
 
 # Phase plots------------------------------------------------------------------
-# vector_sum_fb = zeros(num_trails)
-# vector_sum_no_fb = zeros(num_trails)
-# dt = exp.integrator.temporalResolution
-# for i in range(num_trails):
-#     vector_sum_fb[i] = sum(cos(2*pi*spike_train_fb[i]/dt)**2 + sin(2*pi*spike_train_fb[i]/dt)**2)
-#     vector_sum_no_fb[i] =sum(cos(2*pi*spike_train_no_fb[i]/dt)**2 + sin(2*pi*spike_train_no_fb[i]/dt)**2)
-#
-# f= mplt.figure(figsize = (8,12))
-# num_bins = 10
-# hist(vector_sum_fb, num_bins, histtype="step", lw=2, color="black", label="With feedback")
-# hist(vector_sum_no_fb, num_bins, histtype="step", lw=2, color="red", label="Without feedback")
-# mplt.legend()
+vector_sum_fb = zeros(num_trails)
+vector_sum_no_fb = zeros(num_trails)
+dt = exp.integrator.temporalResolution
+for i in range(num_trails):
+    vector_sum_fb[i] = sum(cos(2*pi*spike_train_fb[i]/dt)**2 + sin(2*pi*spike_train_fb[i]/dt)**2)
+    vector_sum_no_fb[i] =sum(cos(2*pi*spike_train_no_fb[i]/dt)**2 + sin(2*pi*spike_train_no_fb[i]/dt)**2)
+
+f= mplt.figure(figsize = (8,12))
+num_bins = 10
+hist(vector_sum_fb, num_bins, histtype="step", lw=2, color="black", label="With feedback")
+hist(vector_sum_no_fb, num_bins, histtype="step", lw=2, color="red", label="Without feedback")
+mplt.legend()
 
 # impulse response temporal plots-----------------------------------------------
 mplt.figure()

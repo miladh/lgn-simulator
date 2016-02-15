@@ -16,6 +16,7 @@ class Neuron
 {
 public:
     Neuron(Integrator *integrator,
+           double backgroundResponse = 0,
            StaticNonlinearity *staticNonlinearity = nullptr);
     ~Neuron();
 
@@ -78,6 +79,7 @@ private:
 
 protected:
     bool impulseResponseFourierTransformComputed  = false;
+    double m_backgroundResponse;
     string m_cellType;
 
     cube m_response;

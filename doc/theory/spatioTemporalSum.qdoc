@@ -16,7 +16,7 @@ Assuming (i) linearity, (ii) time invariance, and (iii) local spatial homogeneit
 
 \\begin{equation}
 \resp( \\\rc, t) =
-\resp_{0}( \\\rc)
+\resp_{0}
 +\\displaystyle \\int^{\\\delay = t}_{\\\delay = -\\infty} \\iint_\\mathbf{r}
 \impres ( \\\rc - \\mathbf{r} , \\\delay ) \stim( \\mathbf{r},t- \\\delay )
 \\mathrm{d}^2 \\mathbf{r} \\mathrm{d}\\\delay,
@@ -38,7 +38,7 @@ The integral in above is a convolution between the stimulus and impulse-response
 
 \\begin{equation}
     \resp(\\\rc, t) =
-    \resp_{0}(\\\rc) + {\impres} \\otimes \stim.
+    \resp_{0}+ {\impres} \\otimes \stim.
 \\end{equation}
 
 From the convolution theorem it follows that the integral in equation above can be
@@ -46,7 +46,7 @@ reformulated as an integral over temporal and spatial frequencies:
 
 \\begin{equation}
  \resp(\\\rc, t)
- = \resp_{0}(\\\rc) + \\frac{1}{(2\\pi)^3}
+ = \resp_{0}+ \\frac{1}{(2\\pi)^3}
  \\displaystyle\\iint_\\mathbf{k}\\int_\\omega
  e^{i(\\mathbf{k\\cdot \\\rc} - \\omega t)}
  {\\\impresft}(\\mathbf{k}, \\omega)
@@ -65,7 +65,7 @@ The complex Fourier transform we use, and its inverse, are given by
 \\end{equation}
 
 \\begin{equation}
- y(\\mathbf{k},\\omega) = \\frac{1}{(2\\pi)^3}
+ y(\\mathbf{r}, t) = \\frac{1}{(2\\pi)^3}
  \\displaystyle\\int_{\\omega} \\iint_\\mathbf{k}
  e^{i(\\mathbf{k \\cdot r} - \\omega t)}\\tilde{y}(\\mathbf{k}, \\omega)
  \\mathrm{d}^2\\mathbf{k}\\;\\mathrm{d}\\omega.

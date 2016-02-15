@@ -10,7 +10,7 @@ In this model the response of a cell, with its receptive field centre at \\( \\\
 
 \\begin{equation}
 \resp( \\\rc, t) =
-\resp_{0}( \\\rc)
+\resp_{0}
 +\\displaystyle \\int_{\\\delay} \\iint_\\mathbf{r}
 \impres ( \\\rc - \\mathbf{r} , \\\delay ) \stim( \\mathbf{r},t- \\\delay )
 \\mathrm{d}^2 \\mathbf{r} \\mathrm{d}\\\delay,
@@ -25,7 +25,7 @@ G(x,y) =
 \\end{equation}
 
 with its parameters being fitted with respect to experimental data.
-This procedure provides estimates for receptive field centre (\\(A\\) ) and surround (\\(B\\) ) weights as well as the corresponding width parameters (\\(a\\)) and (\\(b\\)).
+This procedure provides estimates for receptive field centre (\\(A\\)) and surround (\\(B\\)) weights as well as the corresponding width parameters (\\(a\\)) and (\\(b\\)).
 Although the DoG model is able to fit the experimental data well, no insight is gained regarding what aspects of the retino-geniculate circuitry are responsible for the differences in neuronal responses between the retinal and geniculate level.
 For such insight mechanistic, not descriptive, modelling is needed.
 

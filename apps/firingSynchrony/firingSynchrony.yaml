@@ -64,6 +64,11 @@ temporalKernels:
         #delay: 5.0
 
 
+#------------backgroundResponse-----------------#
+backgroundResponse:
+        Rc_0: 0
+
+
 #------------File manager settings-----------------#
 outputFile: "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
 

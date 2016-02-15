@@ -30,7 +30,9 @@ int main(int argc, char* argv[]){
     const YAML::Node& Kt_rcSettings = cfg["temporalKernels"]["Krc"];
     const YAML::Node& Kt_crSettings = cfg["temporalKernels"]["Kcr"];
 
+
     string outputFilename = cfg["outputFile"].as<std::string>();
+    double Rc_0 = cfg["backgroundResponse"]["Rc_0"].as<double>();
 
     //Output manager:---------------------------------------------------------
     OutputManager io(&outputFilename);
@@ -48,7 +50,7 @@ int main(int argc, char* argv[]){
 
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(&integrator);
-    CorticalCell cortical(&integrator);
+    CorticalCell cortical(&integrator, Rc_0);
 
     //Spatial kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(&Ks_rgSettings);

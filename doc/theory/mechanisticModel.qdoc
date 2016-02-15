@@ -23,7 +23,7 @@ By using the linear descriptive model as inspiration we can relate the response 
 
 \\begin{align}
 \resp_\\\mn(\\mathbf{r}_\\\mn,t)
-= \resp_{0,\\\mn}(\\mathbf{r}_\\\mn) + \\sum_j \\int_\\\delay \kernel_{\\\mn
+= \resp_{0,\\\mn} + \\sum_j \\int_\\\delay \kernel_{\\\mn
 \\\ff}(\\mathbf{r}_{\\\mn}
 -
 \\mathbf{r}_{\\\ff_j}, \\\delay)
@@ -32,8 +32,8 @@ By using the linear descriptive model as inspiration we can relate the response 
 \\mathrm{d}\\\delay,
 \\end{align}
 
-where the sum goes over all input cells and \\(\resp_{0,\\\mn}(\\mathbf{r}_\\\mn)\\)
-accounts for any background firing that may occur when there is no input.
+where the sum goes over all input cells and \\(\resp_{0,\\\mn}\\)
+accounts for any background firing that may occur when there is no input (assumed to be stationary).
 The couplings function
 \\(\kernel_{\\\mn\\\ff}(\\mathbf{r}_{\\\mn} - \\mathbf{r}_{\\\ff}, \\\delay)\\)
 denotes the sign and strength with which the response of the input cell \\(\\\ff\\), at a distance
@@ -47,7 +47,7 @@ If one hypothetically considers a large number of densely and evenly distributed
 
 \\begin{equation}
 \resp_\\\mn(\\mathbf{r}_\\\mn,t)  =
-\resp_{0,\\\mn}(\\mathbf{r}_\\\mn)+
+\resp_{0,\\\mn}+
 \\displaystyle\\int_{\\\delay} \\iint_\\mathbf{r}
 \kernel_{\\\mn\\\ff}(\\mathbf{r}_{\\\mn}  - \\mathbf{r},\\\delay) \resp_\\\ff(\\mathbf{r},t -
 \\\delay)
@@ -90,13 +90,13 @@ Inserting the descriptive model for the response of input cells, gives us
 
 \\begin{align}
     \resp_\\\mn(\\mathbf{r}_\\\mn,t) &=
-    \resp_{0,\\\mn}(\\mathbf{r}_\\\mn) +\\sum_k\\displaystyle\\int_{\\\delay}
+    \resp_{0,\\\mn} +\\sum_k\\displaystyle\\int_{\\\delay}
     \\iint_\\mathbf{r}
     \kernel_{\\\mn k}(\\mathbf{r}_\\\mn- \\mathbf{r}, \\\delay)
     \resp_k(\\mathbf{r},t-\\\delay)
     \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay
 \\\\
-    &= \resp_{0,\\\mn}(\\mathbf{r}_\\\mn) + \\sum_k\\displaystyle\\int_{\\\delay}
+    &= \resp_{0,\\\mn} + \\sum_k\\displaystyle\\int_{\\\delay}
     \\iint_\\mathbf{r}
     \kernel_{\\\mn k}(\\mathbf{r}_\\\mn- \\mathbf{r}, \\\delay)
     \\bigg(
@@ -109,7 +109,7 @@ Inserting the descriptive model for the response of input cells, gives us
     \\bigg)
     \\mathrm{d}^2\\mathbf{r}\\mathrm{d}\\\delay
 \\\\
-    &= \resp_{0,\\\mn}(\\mathbf{r}_\\\mn)
+    &= \resp_{0,\\\mn}
     + \\frac{1}{(2\\pi)^3}
      \\displaystyle\\iint_\\mathbf{k}\\int_\\omega
      e^{i(\\mathbf{k\\cdot} \\mathbf{r}_\\\mn - \\omega t)}
@@ -121,7 +121,7 @@ Inserting the descriptive model for the response of input cells, gives us
     \\\stimft (\\mathbf{k}, \\omega)
     \\mathrm{d}^2\\mathbf{k}\\mathrm{d}\\omega
 \\\\
-    &= \resp_{0,\\\mn}(\\mathbf{r}_\\\mn)
+    &= \resp_{0,\\\mn}
     + \\frac{1}{(2\\pi)^3}
      \\displaystyle\\iint_\\mathbf{r}\\int_\\\delay
     \\bigg(
@@ -151,7 +151,7 @@ An important observation is that impulse-response function of the output cell
 input cells.
 This applies to arbitrarily complex model circuits as long as the coupling functions are linear and spatially homogeneous.
 
-
+\note In the derivation above we have assumed that the background firing in different cells is independent of the activity in other cells. The background firing term \\( \resp_{0,k} \\) has therefore been excluded in the response function \\( \resp_k(\\mathbf{r},t-\\\delay) \\) of the input cells.
 
 
 \section1 Feedback model
@@ -172,7 +172,7 @@ The response of an output cell can in this case be written as
 
 \\begin{align}
 \resp_\\\mn(\\mathbf{r}_\\\mn,t) &=
-\resp_{0,\\\mn}(\\mathbf{r}_\\\mn)
+\resp_{0,\\\mn}
 + \\frac{1}{(2\\pi)^3}
  \\displaystyle\\iint_\\mathbf{k}\\int_\\omega
  e^{i(\\mathbf{k\\cdot}\\mathbf{r}_\\\mn - \\omega t)}
@@ -185,7 +185,7 @@ The response of an output cell can in this case be written as
 \\mathrm{d}^2\\mathbf{k}\\mathrm{d}\\omega
 \\\\
 &=
-\resp_{0,\\\mn}(\\mathbf{r}_\\\mn)
+\resp_{0,\\\mn}
 + \\frac{1}{(2\\pi)^3}
  \\displaystyle\\iint_\\mathbf{k}\\int_\\omega
  e^{i(\\mathbf{k\\cdot} \\mathbf{r}_\\\mn - \\omega t)}

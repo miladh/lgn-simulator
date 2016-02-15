@@ -157,7 +157,7 @@ def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.inferno,
             ax.set_title(data[k][1])
 
             imshowPlots.append(ax.imshow(data[k][0][0,:,:], cmap=cmap,
-            interpolation="None", vmax=1))
+            interpolation="None",)) #vmin=0.0, #vmax=-1
 
             if(colorbar):
                 divider = make_axes_locatable(ax)

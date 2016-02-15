@@ -15,6 +15,7 @@ public:
     GanglionCell(Integrator *integrator,
                  SpatialKernel *spatialKernel,
                  TemporalKernel *temporalKernel,
+                 double backgroundResponse= 0,
                  StaticNonlinearity *staticNonlinearity = nullptr);
     ~GanglionCell();
 
