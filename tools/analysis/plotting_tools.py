@@ -1,8 +1,4 @@
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from mpl_toolkits.mplot3d import axes3d
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-import time
 import colormaps as cmaps
 import numpy as np
 
@@ -16,7 +12,11 @@ def simpleaxis(ax):
     # ax.get_xaxis().tick_bottom()
 
 
-def raster(spike_times, ax = None, figsize = (12,8), ylabel = "Cell Id", title = None):
+def raster(spike_times,
+           ax = None,
+           figsize = (12,8),
+           ylabel = "Cell Id",
+           title = None):
     """
     Raster plot
     """
@@ -51,56 +51,22 @@ def raster(spike_times, ax = None, figsize = (12,8), ylabel = "Cell Id", title =
     plt.tight_layout()
     return ax
 
-def animate3dPlots(data, figsize = (8,6), cmap = cmaps.viridis, resolution = 0,
-                        save_animation = False, animation_name = "unnamed" ):
 
-    num_subplots = len(data)
-    imshowPlots = []
-    nStates = data[0].shape[0]
-    nSpatialPoints = data[0].shape[1]
-    resolution = 2**resolution
+def animateImshowPlots(data,
+                       dt = None,
+                       figsize = (8,15),
+                       cmap = cmaps.inferno,
+                       colorbar = False,
+                       save_animation = False,
+                       animation_name = "unnamed" ):
 
-    num_cols = 2 if num_subplots >= 2 else num_subplots
-    num_rows = int(np.ceil(num_subplots/2.))
-
-    plt.ion()
-    fig = plt.figure(figsize=figsize)
-    xs = np.linspace(-1, 1, nSpatialPoints/resolution)
-    ys = np.linspace(-1, 1, nSpatialPoints/resolution)
-    X, Y = np.meshgrid(xs, ys)
-
-
-    iplot = [num_rows, num_cols, 0]
-    axes = []
-    frames = [None]* num_subplots
-    framesOld = [None]* num_subplots
-    for i in range(num_subplots):
-        iplot[2] += 1
-        axes.append(fig.add_subplot(iplot[0], iplot[1], iplot[2], projection='3d'))
-
-
-    tstart = time.time()
-    for i in range(nStates):
-        for j in range(num_subplots):
-            data3d = data[j][i,::resolution,::resolution]
-            framesOld[j] = frames[j]
-            frame = axes[j].plot_surface(X, Y, data3d,
-                rstride=2, cstride=2, alpha = 0.9,
-                linewidth=0.1, antialiased=True, cmap=cmap)
-
-            if framesOld[j] is not None:
-                axes[j].collections.remove(framesOld[j])
-        fig.canvas.draw()
-        plt.pause(0.0001)
-
-    plt.show()
-
-
-
-def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.inferno,
-                        save_animation = False, colorbar = False, animation_name = "unnamed" ):
-
-
+    """
+    Animate imshow plots
+    """
+    import matplotlib.animation as animation
+    from mpl_toolkits.mplot3d import axes3d
+    from mpl_toolkits.axes_grid1 import make_axes_locatable
+    import time
 
     num_subplots = len(data)
     imshowPlots = []
@@ -113,9 +79,6 @@ def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.inferno,
     num_rows = int(np.ceil((num_subplots-1)/2.))+1
 
     fig = plt.figure(figsize=figsize)
-
-    # extent = self.screenSizeX * np.arctan(1./self.screenDist) * 180./np.pi
-
 
     def init():
         for i in range(num_subplots):
@@ -181,14 +144,175 @@ def animateImshowPlots(data, dt = None, figsize = (8,15), cmap = cmaps.inferno,
 
 
 
+def imshowPlotsOfImpulseResponses(data,
+                                  x_imshow=True,
+                                  y_imshow=True,
+                                  idx=0,
+                                  idy=0,
+                                  figsize=(14,8),
+                                  cmap=cmaps.inferno,
+                                  colorbar=True,
+                                  save_figure=False,
+                                  figure_name="unnamed"):
+
+    """
+    Imshow plots of impulse response functions
+    """
+    num_cols = len(data)
+    num_rows = int(x_imshow) + int(y_imshow)
+
+    fig, axarr=plt.subplots(num_rows, num_cols, figsize=figsize, sharex=True, sharey=True)
+
+    for j in range(num_cols):
+        axarr[0,j].set_title(data[j][1])
+        i=0
+        if(x_imshow):
+            axarr[i,j].set_adjustable('box-forced')
+            im = axarr[i,j].imshow(data[j][0][:,idy,:], cmap=cmap, origin="lower")
+            axarr[i,0].set_xlabel(r"$x(\theta)$")
+            axarr[-1,j].set_ylabel(r"$\tau(ms)$")
+            if(colorbar):
+                fig.colorbar(im, ax=axarr[i,j],orientation='horizontal')
+            i+=1
+        if(y_imshow):
+            axarr[i,j].set_adjustable('box-forced')
+            axarr[i,j].imshow(data[j][0][:,:,idx], cmap=cmap, origin="lower")
+            axarr[i,0].set_xlabel(r"$y(\theta)$")
+            axarr[-1,j].set_ylabel(r"$\tau(ms)$")
+            if(colorbar):
+                fig.colorbar(im, ax=axarr[i,j], orientation='horizontal')
+            i+=1
+    if(save_figure):
+        fig.save(animation_name + ".svg")
+    plt.show()
+
+
+
+
+
+
+def plot3dOfImpulseResponses(data,
+                             x_3d=True,
+                             y_3d=True,
+                             idx=0,
+                             idy=0,
+                             figsize=(15,10),
+                             cmap=cmaps.inferno,
+                             colorbar=False,
+                             save_figure=False,
+                             figure_name="unnamed"):
+
+    """
+    3D plots of impulse response functions
+    """
+    from mpl_toolkits.mplot3d import Axes3D
+    num_cols = len(data)
+    num_rows = int(x_3d) + int(y_3d)
+
+    Nt = np.array(data[0][0]).shape[0]
+    Nx = np.array(data[0][0]).shape[1]
+    Ny = np.array(data[0][0]).shape[2]
+
+    X = range(0,Nx)
+    T = range(0,Nt)
+    T,X = np.meshgrid(X, T)
+
+    fig = plt.figure(figsize=figsize)
+    p=2
+    for j in range(num_cols):
+        i=0
+        if(x_3d):
+            ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
+            surf = ax.plot_surface(X[::p,::p],T[::p,::p], data[j][0][::p,Ny/2,::p],
+                                cmap=cmap, edgecolors="k", alpha=0.9,  shade=False,
+                                rstride=1, cstride=1, linewidth=0.0, antialiased=False)
+            ax.set_title(data[j][1])
+            ax.set_ylabel(r"$x(\theta)$")
+            ax.set_xlabel(r"$\tau(ms)$")
+            ax.set_zlabel(r"$W$")
+            ax.view_init(elev=46., azim=130)
+            if(colorbar):
+                cbar = plt.colorbar(surf, ax=ax, orientation='horizontal')
+            i+=1
+        if(y_3d):
+            ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
+            surf = ax.plot_surface(X[::p,::p],T[::p,::p], data[j][0][::p,::p,Nx/2],
+            cmap=cmap, edgecolors="k", alpha=0.9,  shade=False,
+            rstride=1, cstride=1, linewidth=0.0, antialiased=False)
+            ax.set_ylabel(r"$y(\theta)$")
+            ax.set_xlabel(r"$\tau(ms)$")
+            ax.set_zlabel(r"$W$")
+            ax.view_init(elev=46., azim=130)
+            if(colorbar):
+                fig.colorbar(surf, ax=ax, orientation='horizontal')
+            i+=1
+
+
+    fig.tight_layout()
+    if(save_figure):
+        fig.save(animation_name + ".svg")
+    plt.show()
+
+
+
+
+def line3dPlotsOfImpulseResponses(data,
+                                  x_line3d=True,
+                                  y_line3d=False,
+                                  idx=0,
+                                  idy=0,
+                                  figsize = (14,8),
+                                  cmap = cmaps.inferno,
+                                  colorbar = False,
+                                  save_figure = False,
+                                  figure_name = "unnamed"):
+
+    """
+    Imshow plots of impulse response functions
+    """
+    from mpl_toolkits.mplot3d import Axes3D
+    from matplotlib.collections import PolyCollection
+    num_cols = len(data)
+    num_rows = int(x_line3d) + int(y_line3d)
+
+    Nt = np.array(data[0][0]).shape[0]
+    Nx = np.array(data[0][0]).shape[1]
+    Ny = np.array(data[0][0]).shape[2]
+
+    # fig, axarr = plt.subplots(num_rows, num_cols, figsize=figsize)
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+
+    x_vec = np.linspace(-2.56/2, 256/2-1, 128)
+    t_vec = np.linspace(0, 51.2, 256)
+
+    zs = [0]
+    for j in range(num_cols):
+        # axarr[0,j].set_title(data[j][1])
+        i=0
+        if(x_line3d):
+            verts = []
+            verts.append(list(zip(t_vec[::100] , data[j][0][::100,0,idy]  )))
+            # verts.append(list(zip(t_vec[::100] , data[j][0][::100,100,idy]  )))
+            poly = PolyCollection(verts)
+            ax.add_collection3d(poly , zdir='x')
+            ax.set_ylabel(r"$x(\theta)$")
+            ax.set_xlabel(r"$\tau(ms)$")
+
+
+
+    plt.tight_layout()
+    if(save_figure):
+        fig.save(animation_name + ".svg")
+    plt.show()
+
+
 
 if __name__ == "__main__":
     import h5py
     from glob import glob
     import Simulation as sim
 
-
-    outputFilePath = "/media/milad/scratch/lgn-simulator/simulations/tmp/*.h5"
     outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
@@ -209,31 +333,18 @@ if __name__ == "__main__":
     idx = exp.integrator.nPointsSpatial/2
     idy = idx
 
-    # plt.plot(exp.integrator.timeVec, exp.singleCellTemporalResponse("relay",idx, idy)
-    # ,exp.integrator.timeVec, exp.singleCellTemporalResponse("cortical",idx, idy))
-
-    # print exp.singleCellTemporalResponse("cortical",idx, idy)[0]/exp.singleCellTemporalResponse("relay",idx, idy)[0]
-
-    plt.figure()
-    impresC = exp.temporalImpulseResponse("cortical", idx, idy)
-    impresR = exp.temporalImpulseResponse("relay", idx, idy)
-    plt.plot(exp.integrator.timeVec, impresR, '-or', label="Relay")
-    plt.plot( exp.integrator.timeVec, impresC, '-ob', label="cortical")
-    plt.legend()
-
-    # plt.figure()
-    # resC = exp.singleCellTemporalResponse("cortical", idx, idy)
-    # resR = exp.singleCellTemporalResponse("relay", idx, idy)
-    # plt.plot(exp.integrator.timeVec, resR, '-r', label="Relay")
-    # plt.plot( exp.integrator.timeVec, resC, '-b', label="cortical")
-    # plt.legend()
-
-    print (exp.cortical.impulseResponse["spatioTemporal"]).max() -(exp.relay.impulseResponse["spatioTemporal"]).max()
-    print (exp.cortical.impulseResponse["spatioTemporal"]).min() - (exp.relay.impulseResponse["spatioTemporal"]).min()
-
-    # print (exp.cortical.impulseResponse["spatioTemporal"][10,:,:] - exp.relay.impulseResponse["spatioTemporal"][0,:,:]).max()
-    # plt.imshow(exp.cortical.impulseResponse["spatioTemporal"][10,:,:] - exp.relay.impulseResponse["spatioTemporal"][0,:,:])
-    # plt.colorbar()
-    animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True, save_animation = False, animation_name = "rat")
+    # animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True, save_animation = False, animation_name = "rat")
     # animate3dPlots(data, resolution = 3)
+
+    data = [
+    [exp.ganglion.response["spatioTemporal"], "Ganglion"]
+    ,[exp.relay.response["spatioTemporal"], "Relay"]
+    ,[exp.cortical.response["spatioTemporal"], "Cortical"]
+    ]
+
+
+    imshowPlotsOfImpulseResponses(data)
+    # line3dPlotsOfImpulseResponses(data)
+    # plot3dOfImpulseResponses(data, colorbar=True)
+
     plt.show()

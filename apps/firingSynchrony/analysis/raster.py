@@ -34,8 +34,7 @@ data = [
 N = float(exp.integrator.nPointsSpatial)
 idx = exp.integrator.nPointsSpatial/2
 idy = idx
-print exp.ganglion.response["spatioTemporal"].max()
-print exp.ganglion.response["spatioTemporal"].min()
+
 # Raster plots------------------------------------------------------------------
 # num_trails = 40
 # spike_train_fb = exp.spikeTrain("relay", idx, idy, num_trails = num_trails)
@@ -90,12 +89,12 @@ print exp.ganglion.response["spatioTemporal"].min()
 # mplt.legend()
 
 # impulse response temporal plots-----------------------------------------------
-mplt.figure()
-impresC = exp.temporalImpulseResponse("cortical", idx, idy)
-impresR = exp.temporalImpulseResponse("relay", idx, idy)
-mplt.plot(exp.integrator.timeVec, impresR, '-or', label="Relay")
-mplt.plot( exp.integrator.timeVec, impresC, '-ob', label="cortical")
-mplt.legend()
+# mplt.figure()
+# impresC = exp.temporalImpulseResponse("cortical", idx, idy)
+# impresR = exp.temporalImpulseResponse("relay", idx, idy)
+# mplt.plot(exp.integrator.timeVec, impresR, '-or', label="Relay")
+# mplt.plot( exp.integrator.timeVec, impresC, '-ob', label="cortical")
+# mplt.legend()
 
 # Animation---------------------------------------------------------------------
 plt.animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True,

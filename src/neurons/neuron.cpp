@@ -42,9 +42,8 @@ void Neuron::computeResponse(Stimulus *stimulus)
     }
 
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
-
-    if(m_backgroundResponse!=0){
-        m_responseFT(0,0,0) +=8*PI*PI*PI*m_backgroundResponse
+    if(m_backgroundResponse!=0){ //add DC contribution from bck activity
+        m_responseFT(0,0,0) += 8*PI*PI*PI * m_backgroundResponse
             /m_integrator->spatialFreqResolution()
             /m_integrator->spatialFreqResolution()
             /m_integrator->temporalFreqResolution();
