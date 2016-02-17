@@ -70,10 +70,8 @@ def animateImshowPlots(data,
 
     num_subplots = len(data)
     imshowPlots = []
-    nStates = np.array(data[0][0]).shape[0]
-    Nx = np.array(data[0][0]).shape[1]
-    Ny = np.array(data[0][0]).shape[2]
-    dt = 1 if dt==None else dt
+    nStates = len(data[0]["time_vec"])
+    dt = 1 if dt==None else data[0]["time_vec"][1]-data[0]["time_vec"][0]
 
     num_cols = 2 if num_subplots >= 2 else num_subplots
     num_rows = int(np.ceil((num_subplots-1)/2.))+1
@@ -82,13 +80,13 @@ def animateImshowPlots(data,
 
     def init():
         for i in range(num_subplots):
-            imshowPlots[i].set_data(data[i][0][0,:,:])
+            imshowPlots[i].set_data(data[i]["value"][0,:,:])
         ttl.set_text("")
         return imshowPlots, ttl
 
     def animate(j):
         for i in range(num_subplots):
-            imshowPlots[i].set_data(data[i][0][j,:,:])
+            imshowPlots[i].set_data(data[i]["value"][j,:,:])
             # imshowPlots[i].autoscale()
         t = j*dt
         ttl.set_text("Time = " + str('%.2f' % (t,)) + "s")
@@ -103,8 +101,8 @@ def animateImshowPlots(data,
     colspanStim = 2
     ax = plt.subplot2grid((num_rows, num_cols),(0, 0), colspan = colspanStim)
     simpleaxis(ax)
-    ax.set_title(data[0][1])
-    imshowPlots.append(ax.imshow(data[0][0][0,:,:], cmap="gray", interpolation="None"))
+    ax.set_title(data[0]["type"])
+    imshowPlots.append(ax.imshow(data[0]["value"][0,:,:], cmap="gray", interpolation="None"))
     if(colorbar):
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.05)
@@ -117,9 +115,9 @@ def animateImshowPlots(data,
                 break
             ax = plt.subplot2grid((num_rows, num_cols),(i, j))
             simpleaxis(ax)
-            ax.set_title(data[k][1])
+            ax.set_title(data[k]["type"])
 
-            imshowPlots.append(ax.imshow(data[k][0][0,:,:], cmap=cmap,
+            imshowPlots.append(ax.imshow(data[k]["value"][0,:,:], cmap=cmap,
             interpolation="None",)) #vmin=0.0, #vmax=-1
 
             if(colorbar):
@@ -343,46 +341,53 @@ if __name__ == "__main__":
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
 
-    data = [
-     [exp.stimulus.spatioTemporal, "Stimulus"]
-    # ,[exp.ganglion.response["spatioTemporal"], "Ganglion cell response"]
-    # ,[exp.ganglion.impulseResponse["spatioTemporal"], "Ganglion cell impulse response"]
-    # ,[exp.interneuron.response["spatioTemporal"], "Interneuron"]
-    # ,[exp.interneuron.impulseResponse["spatioTemporal"], "Interneuron"]
-    ,[exp.relay.response["spatioTemporal"], "Relay cell response"]
-    ,[exp.relay.impulseResponse["spatioTemporal"], "Relay cell impulse response"]
-    ,[exp.cortical.response["spatioTemporal"], "Cortical cell response"]
-    ,[exp.cortical.impulseResponse["spatioTemporal"], "Cortical impulse response"]
-    ]
+    S = {"type" : "Stimulus",
+            "value" : exp.stimulus.spatioTemporal,
+            "time_vec" : exp.integrator.timeVec,
+            "spatial_vec" : exp.integrator.spatialVec
+            }
 
-    idx = exp.integrator.nPointsSpatial/2
-    idy = idx
 
-    # animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True, save_animation = False, animation_name = "rat")
-    # animate3dPlots(data, resolution = 3)
-
-    ############################################################################
-    ganglion = {"type" : "Ganglion",
+    Wg = {"type" : "Ganglion",
                 "value" : exp.ganglion.impulseResponse["spatioTemporal"],
                 "time_vec" : exp.integrator.timeVec,
                 "spatial_vec" : exp.integrator.spatialVec
                 }
-    relay = {"type" : "Relay",
+    Wr = {"type" : "Relay",
              "value" : exp.relay.impulseResponse["spatioTemporal"],
              "time_vec" : exp.integrator.timeVec,
              "spatial_vec" : exp.integrator.spatialVec
             }
 
-    cortical = {"type" : "Cortical",
+    Wc = {"type" : "Cortical",
                  "value" : exp.cortical.impulseResponse["spatioTemporal"],
                  "time_vec" : exp.integrator.timeVec,
                  "spatial_vec" : exp.integrator.spatialVec
                 }
-    data = [ganglion, relay, cortical]
 
+    Rg = {"type" : "Ganglion",
+                "value" : exp.ganglion.response["spatioTemporal"],
+                "time_vec" : exp.integrator.timeVec,
+                "spatial_vec" : exp.integrator.spatialVec
+                }
+    Rr = {"type" : "Relay",
+             "value" : exp.relay.response["spatioTemporal"],
+             "time_vec" : exp.integrator.timeVec,
+             "spatial_vec" : exp.integrator.spatialVec
+            }
+    Rc = {"type" : "Cortical",
+                 "value" : exp.cortical.response["spatioTemporal"],
+                 "time_vec" : exp.integrator.timeVec,
+                 "spatial_vec" : exp.integrator.spatialVec
+                }
 
-    # imshowPlotsOfImpulseResponses(data)
-    # line3dPlotsOfImpulseResponses(data)
+    data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
+    # animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True,
+    # save_animation = False, animation_name = "rat")
+
+    data = [Wg, Wr, Wc]
+
+    imshowPlotsOfImpulseResponses(data)
+    line3dPlotsOfImpulseResponses(data)
     plot3dOfImpulseResponses(data, colorbar=True)
-
     plt.show()
