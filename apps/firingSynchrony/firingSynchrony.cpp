@@ -65,8 +65,8 @@ int main(int argc, char* argv[]){
     TemporalDelta Kt_rg = createTemporalDeltaKernel(&Kt_rgSettings);
     TemporalDelta Kt_cr = createTemporalDeltaKernel(&Kt_crSettings);
 
-    TemporalDelta Kt_rc = createTemporalDeltaKernel(&Kt_rcSettings);
-//    TemporalGaussian Kt_rc = createTemporalGaussianKernel(&Kt_rcSettings);
+//    TemporalDelta Kt_rc = createTemporalDeltaKernel(&Kt_rcSettings);
+    TemporalGaussian Kt_rc = createTemporalGaussianKernel(&Kt_rcSettings);
 
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, &Ks_rg, &Kt_rg);
