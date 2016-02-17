@@ -161,7 +161,7 @@ def imshowPlotsOfImpulseResponses(data,
     num_cols = len(data)
     num_rows = int(x_imshow) + int(y_imshow)
 
-    fig, axarr=plt.subplots(num_rows, num_cols, figsize=figsize, sharex=True, sharey=True)
+    fig,axarr=plt.subplots(num_rows, num_cols, figsize=figsize, sharex=True, sharey=True)
 
     for j in range(num_cols):
         axarr[0,j].set_title(data[j]["type"])
@@ -202,6 +202,7 @@ def imshowPlotsOfImpulseResponses(data,
 def plot3dOfImpulseResponses(data,
                              x_3d=True,
                              y_3d=True,
+                             num_skip = 10,
                              idx=0,
                              idy=0,
                              figsize=(15,10),
@@ -217,24 +218,22 @@ def plot3dOfImpulseResponses(data,
     num_cols = len(data)
     num_rows = int(x_3d) + int(y_3d)
 
-    Nt = np.array(data[0][0]).shape[0]
-    Nx = np.array(data[0][0]).shape[1]
-    Ny = np.array(data[0][0]).shape[2]
-
-    X = range(0,Nx)
-    T = range(0,Nt)
-    T,X = np.meshgrid(X, T)
 
     fig = plt.figure(figsize=figsize)
     p=2
     for j in range(num_cols):
+        S = data[j]["spatial_vec"]
+        T = data[j]["time_vec"]
+        T, S = np.meshgrid(S, T)
         i=0
         if(x_3d):
             ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
-            surf = ax.plot_surface(X[::p,::p],T[::p,::p], data[j][0][::p,Ny/2,::p],
-                                cmap=cmap, edgecolors="k", alpha=0.9,  shade=False,
-                                rstride=1, cstride=1, linewidth=0.0, antialiased=False)
-            ax.set_title(data[j][1])
+            surf = ax.plot_surface(S[::num_skip,::num_skip],
+                                   T[::num_skip,::num_skip],
+                                   data[j]["value"][::num_skip, idy, ::num_skip],
+                                   cmap=cmap, edgecolors="k", alpha=0.9, shade=False,
+                                   rstride=1, cstride=1, linewidth=0.0, antialiased=False)
+            ax.set_title(data[j]["type"])
             ax.set_ylabel(r"$x(\theta)$")
             ax.set_xlabel(r"$\tau(ms)$")
             ax.set_zlabel(r"$W$")
@@ -244,9 +243,12 @@ def plot3dOfImpulseResponses(data,
             i+=1
         if(y_3d):
             ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
-            surf = ax.plot_surface(X[::p,::p],T[::p,::p], data[j][0][::p,::p,Nx/2],
-            cmap=cmap, edgecolors="k", alpha=0.9,  shade=False,
-            rstride=1, cstride=1, linewidth=0.0, antialiased=False)
+            surf = ax.plot_surface(S[::num_skip,::num_skip],
+                                   T[::num_skip,::num_skip],
+                                   data[j]["value"][::num_skip, ::num_skip, idx],
+                                   cmap=cmap, edgecolors="k", alpha=0.9, shade=False,
+                                   rstride=1, cstride=1, linewidth=0.0, antialiased=False)
+            ax.set_title(data[j]["type"])
             ax.set_ylabel(r"$y(\theta)$")
             ax.set_xlabel(r"$\tau(ms)$")
             ax.set_zlabel(r"$W$")
