@@ -268,7 +268,7 @@ def line3dPlotsOfImpulseResponses(data,
                                   figure_name = "unnamed"):
 
     """
-    Imshow plots of impulse response functions
+    3D line plot of impulse response functions
     """
     from mpl_toolkits.mplot3d import Axes3D
     from matplotlib.collections import PolyCollection
@@ -279,27 +279,56 @@ def line3dPlotsOfImpulseResponses(data,
     Nx = np.array(data[0][0]).shape[1]
     Ny = np.array(data[0][0]).shape[2]
 
-    # fig, axarr = plt.subplots(num_rows, num_cols, figsize=figsize)
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
+    p=1
+    q = 40
 
-    x_vec = np.linspace(-2.56/2, 256/2-1, 128)
-    t_vec = np.linspace(0, 51.2, 256)
+    x_vec = np.arange(Nx)
+    x_ids = range(0, len(x_vec), q)
+    t_vec = np.arange(Nt)
 
-    zs = [0]
+    X = range(0,Nx)
+    T = range(0,Nt)
+    T,X = np.meshgrid(X, T)
+
+    fig = plt.figure(figsize=figsize)
     for j in range(num_cols):
-        # axarr[0,j].set_title(data[j][1])
         i=0
         if(x_line3d):
             verts = []
-            verts.append(list(zip(t_vec[::100] , data[j][0][::100,0,idy]  )))
-            # verts.append(list(zip(t_vec[::100] , data[j][0][::100,100,idy]  )))
-            poly = PolyCollection(verts)
-            ax.add_collection3d(poly , zdir='x')
-            ax.set_ylabel(r"$x(\theta)$")
+            # ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
+            # ax.plot_wireframe(X[::q,::p], T[::q,::p], data[j][0][::q,idy,::p], cstride=100000000)
+            for x in x_ids:
+                ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
+                verts.append(list(zip(t_vec[::p], data[j][0][::p,idy, x])))
+
+            poly = PolyCollection(verts, facecolors=(1,0,0,0), edgecolors=(1,0,0,0))
+            for path in poly.get_paths() :  # There is the fix :
+                path.codes[-1] = 0        # we have to manually switch the last point in a path to STOP (code = 0)
+
+            poly.set_alpha(0.7)
+            ax.add_collection3d(poly, zs = x_vec[x_ids] ,zdir='y')
+
+            ax.set_title(data[j][1])
             ax.set_xlabel(r"$\tau(ms)$")
+            ax.set_ylabel(r"$x(\theta)$")
+            ax.set_zlabel(r"$W$")
 
+            ax.set_xlim3d(np.min(t_vec), np.max(t_vec))
+            ax.set_ylim3d(np.min(x_vec), np.max(x_vec))
+            ax.set_zlim3d(np.min(data[j][0][:,idy,x_ids]), np.max(data[j][0][:,idy,x_ids]))
 
+        # if(x_line3d):
+        #     ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
+        #     surf = ax.plot_surface(X[::p,::p],T[::p,::p], data[j][0][::p,::p,Nx/2],
+        #     cmap=cmap, edgecolors="k", alpha=0.9,  shade=False,
+        #     rstride=1, cstride=1, linewidth=0.0, antialiased=False)
+        #     ax.set_ylabel(r"$y(\theta)$")
+        #     ax.set_xlabel(r"$\tau(ms)$")
+        #     ax.set_zlabel(r"$W$")
+        #     ax.view_init(elev=46., azim=130)
+        #     if(colorbar):
+        #         fig.colorbar(surf, ax=ax, orientation='horizontal')
+        #     i+=1
 
     plt.tight_layout()
     if(save_figure):
@@ -338,13 +367,13 @@ if __name__ == "__main__":
 
     data = [
     [exp.ganglion.response["spatioTemporal"], "Ganglion"]
-    ,[exp.relay.response["spatioTemporal"], "Relay"]
-    ,[exp.cortical.response["spatioTemporal"], "Cortical"]
+    # ,[exp.relay.response["spatioTemporal"], "Relay"]
+    # ,[exp.cortical.response["spatioTemporal"], "Cortical"]
     ]
 
 
-    imshowPlotsOfImpulseResponses(data)
-    # line3dPlotsOfImpulseResponses(data)
+    # imshowPlotsOfImpulseResponses(data)
+    line3dPlotsOfImpulseResponses(data)
     # plot3dOfImpulseResponses(data, colorbar=True)
 
     plt.show()
