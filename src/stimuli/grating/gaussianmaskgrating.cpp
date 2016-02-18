@@ -28,14 +28,14 @@ double GaussianMaskGrating::valueAtPoint(vec2 rVec, double t) const
 complex<double> GaussianMaskGrating::fourierTransformAtFrequency(vec2 k, double w) const
 {
     complex<double> s = m_dog->fourierTransform(k)
-            * Functions::delta(k[0], m_k[0])
-            * Functions::delta(k[1], m_k[1])
-            * Functions::delta(-w, m_w)
+            * SpecialFunctions::delta(k[0], m_k[0])
+            * SpecialFunctions::delta(k[1], m_k[1])
+            * SpecialFunctions::delta(-w, m_w)
             /m_integrator.spatialFreqResolution()
             /m_integrator.spatialFreqResolution()
             /m_integrator.temporalFreqResolution();
 
-    return 8*PI*PI*PI* m_contrast * s;
+    return 8*core::pi*core::pi*core::pi* m_contrast * s;
 }
 
 

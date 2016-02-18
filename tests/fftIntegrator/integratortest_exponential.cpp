@@ -69,13 +69,13 @@ SUITE(INTEGRATOR){
             for(int i = 0; i < Ns; i++){
                 for(int j = 0; j < Ns; j++){
                     f(i,j,l) = exponentialFT(a, w[l])
-                            * Functions::delta(k[i], 0)
-                            * Functions::delta(k[j], 0);
+                            * SpecialFunctions::delta(k[i], 0)
+                            * SpecialFunctions::delta(k[j], 0);
                 }
             }
         }
 
-        f *= 4.*PI*PI;
+        f *= 4.*core::pi*core::pi;
         f /= integrator.spatialFreqResolution()
                 * integrator.spatialFreqResolution();
 

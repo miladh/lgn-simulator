@@ -13,7 +13,7 @@ Gaussian::Gaussian(double A, double a)
 
 double Gaussian::spatial(vec2 r) const
 {
-    return m_A / (m_a*m_a) / PI * exp(-dot(r,r) / (m_a*m_a));
+    return m_A / (m_a*m_a) / core::pi * exp(-dot(r,r) / (m_a*m_a));
 }
 
 complex<double> Gaussian::fourierTransform(vec2 k) const

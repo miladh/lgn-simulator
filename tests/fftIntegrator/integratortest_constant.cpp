@@ -45,14 +45,14 @@ void runTest(int ns, int nt, double dt, double c)
     for(int l = 0; l < Nt; l++){
         for(int i = 0; i < Ns; i++){
             for(int j = 0; j < Ns; j++){
-                f(i,j,l) = Functions::delta(k[i], 0)
-                        * Functions::delta(k[j], 0)
-                        * Functions::delta(w[l], 0);
+                f(i,j,l) = SpecialFunctions::delta(k[i], 0)
+                        * SpecialFunctions::delta(k[j], 0)
+                        * SpecialFunctions::delta(w[l], 0);
             }
         }
     }
 
-    f *= c*8*PI*PI*PI;
+    f *= c*8*core::pi*core::pi*core::pi;
     f /= integrator.spatialFreqResolution()
             * integrator.spatialFreqResolution()
             * integrator.temporalFreqResolution();

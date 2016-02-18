@@ -16,7 +16,7 @@ double lgnSimulator::SpatiallyConstant::spatial(vec2 r) const
 
 complex<double> lgnSimulator::SpatiallyConstant::fourierTransform(vec2 k) const
 {
-    return m_constant * Functions::delta(k(0),0) * Functions::delta(k(1),0);
+    return m_constant * SpecialFunctions::delta(k(0),0) * SpecialFunctions::delta(k(1),0);
 }
 
 

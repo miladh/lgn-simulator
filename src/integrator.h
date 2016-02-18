@@ -7,8 +7,9 @@
 #include <fftw3.h>
 #include <yaml-cpp/yaml.h>
 
-#include "math/functions.h"
-#include "math/ffthelper.h"
+#include "helper/specialfunctions.h"
+#include "helper/ffthelper.h"
+#include "helper/helperconstants.h"
 
 using namespace std;
 using namespace arma;

@@ -19,7 +19,7 @@ vec FFTHelper::fftFreq(int n, double d){
     double val = 1. / (n*d);
     int N = int((n-1)/2) + 1;
     vec w1 = linspace(0, N-1, N);
-    vec w2 = linspace(-int(n/2), -1, N-Functions::isOdd(n));
+    vec w2 = linspace(-int(n/2), -1, N-SpecialFunctions::isOdd(n));
     vec result = join_cols(w1,w2);
 
     return result * val;

@@ -17,14 +17,14 @@ TemporalDelta::~TemporalDelta()
 
 double TemporalDelta::temporal(double t) const
 {
-    return Functions::delta(t, m_delay);
+    return SpecialFunctions::delta(t, m_delay);
 }
 
 complex<double> TemporalDelta::fourierTransform(double w) const
 {
     // Note that we have +i, and not -i due to the definition of
     // temporal FT.
-    return exp(complex<double>(0,1) * m_delay * w);
+    return exp(core::i * m_delay * w);
 }
 
 

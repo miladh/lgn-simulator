@@ -1,22 +1,18 @@
-#ifndef FUNCTIONS_H
-#define FUNCTIONS_H
-
-#define PI 3.141592653589793
-
+#ifndef SPECIALFUNCTIONS_H
+#define SPECIALFUNCTIONS_H
 
 
 #include <boost/math/special_functions/bessel.hpp>
 #include <armadillo>
 
-
 using namespace arma;
 
 namespace lgnSimulator {
-class Functions
+class SpecialFunctions
 {
 public:
-    Functions();
-    ~Functions();
+    SpecialFunctions();
+    ~SpecialFunctions();
     static double heaviside(double x);
     static double secondKindBesselFunction(double x);
     static double delta(double x, double y);
@@ -24,4 +20,4 @@ public:
 
 };
 }
-#endif // FUNCTIONS_H
+#endif // SPECIALFUNCTIONS_H

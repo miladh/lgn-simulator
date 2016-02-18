@@ -8,12 +8,10 @@ SOURCES += \
     integrator.cpp \
     outputmanager.cpp \
     stimuli/stimuli.cpp \
-    math/functions.cpp \
     neurons/neuron.cpp \
     neurons/corticalcell.cpp \
     neurons/relaycell.cpp \
     neurons/ganglioncell.cpp \
-    math/ffthelper.cpp \
     neurons/interneuron.cpp \
     stimuli/naturalscene.cpp \
     stimuli/staticimage.cpp \
@@ -39,18 +37,18 @@ SOURCES += \
     kernels/temporalKernels/temporaldelta.cpp \
     kernels/temporalKernels/temporalGaussian.cpp \
     kernels/temporalKernels/temporalkernel.cpp \
-    kernels/temporalKernels/temporallyconstant.cpp
+    kernels/temporalKernels/temporallyconstant.cpp \
+    helper/ffthelper.cpp \
+    helper/specialfunctions.cpp
 
 HEADERS += \
     integrator.h \
     outputmanager.h \
     stimuli/stimuli.h \
-    math/functions.h \
     neurons/neuron.h \
     neurons/corticalcell.h \
     neurons/relaycell.h \
     neurons/ganglioncell.h \
-    math/ffthelper.h \
     neurons/interneuron.h \
     stimuli/naturalscene.h \
     stimuli/staticimage.h \
@@ -77,7 +75,10 @@ HEADERS += \
     kernels/spatialKernels/gaussian.h \
     kernels/spatialKernels/spatialdelta.h \
     kernels/spatialKernels/spatialkernel.h \
-    kernels/spatialKernels/spatiallyconstant.h
+    kernels/spatialKernels/spatiallyconstant.h \
+    helper/ffthelper.h \
+    helper/specialfunctions.h \
+    helper/helperconstants.h
 
 OTHER_FILES +=
 

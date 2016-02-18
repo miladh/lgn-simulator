@@ -2,7 +2,7 @@
 #include <unittest++/UnitTest++.h>
 #include <armadillo>
 
-#include "math/ffthelper.h"
+#include "helper/ffthelper.h"
 
 
 using namespace std;

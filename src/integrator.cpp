@@ -14,18 +14,18 @@ Integrator::Integrator(const int nt,
     , m_spatialResolution(spatialResolution)
     , m_timeInterval(m_nPointsTemporal  * m_temporalResolution)
     , m_lengthInterval(m_nPointsSpatial * m_spatialResolution)
-    , m_temporalSamplingFreq(2.* PI / m_temporalResolution)
-    , m_spatialSamplingFreq(2.* PI / m_spatialResolution)
+    , m_temporalSamplingFreq(2.* core::pi / m_temporalResolution)
+    , m_spatialSamplingFreq(2.* core::pi / m_spatialResolution)
     , m_temporalFreqResolution(m_temporalSamplingFreq / m_nPointsSpatial)
     , m_spatialFreqResolution(m_spatialSamplingFreq / m_nPointsSpatial)
 {
     //Temporal Grid
-    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_temporalResolution)*2*PI;
+    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_temporalResolution)*2*core::pi;
     m_timeVec = linspace(0,m_nPointsTemporal-1,m_nPointsTemporal)
                 * m_temporalResolution;
 
     //Spatial Grid
-    m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_spatialResolution)*2*PI;
+    m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_spatialResolution)*2*core::pi;
     m_spatialVec = linspace(-m_nPointsSpatial/2,(m_nPointsSpatial-1)/2, m_nPointsSpatial)
                   * m_spatialResolution;
 
@@ -50,7 +50,7 @@ cx_cube Integrator::backwardFFT(cx_cube data) const
     fftData *= m_temporalFreqResolution
             * m_spatialFreqResolution
             * m_spatialFreqResolution
-            /8./PI/PI/PI;
+            /8./core::pi/core::pi/core::pi;
 
 
     //fftShift
@@ -96,7 +96,7 @@ cx_mat Integrator::backwardFFT(cx_mat data) const
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-    fftData *= m_spatialFreqResolution*m_spatialFreqResolution /4./PI/PI;
+    fftData *= m_spatialFreqResolution*m_spatialFreqResolution /4./core::pi/core::pi;
 
     //fftShift
     fftData = FFTHelper::fftShift(fftData);

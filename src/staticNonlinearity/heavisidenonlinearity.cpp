@@ -16,5 +16,5 @@ HeavisideNonlinearity::~HeavisideNonlinearity()
 
 double HeavisideNonlinearity::advance(const double u) const
 {
-    return Functions::heaviside(u);
+    return SpecialFunctions::heaviside(u);
 }

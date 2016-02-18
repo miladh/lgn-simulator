@@ -2,7 +2,8 @@
 #define HEAVISIDENONLINEARITY_H
 
 #include "staticnonlinearity.h"
-#include "math/functions.h"
+#include "helper/specialfunctions.h"
+
 namespace lgnSimulator {
 class HeavisideNonlinearity : public StaticNonlinearity
 {
