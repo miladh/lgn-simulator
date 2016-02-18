@@ -13,8 +13,8 @@ public:
 
     // TemporalKernel interface
 public:
-    virtual double temporal(double t);
-    virtual complex<double> fourierTransform(double w);
+    virtual double temporal(double t) const;
+    virtual complex<double> fourierTransform(double w) const;
 
 private:
     double m_delay = 0;

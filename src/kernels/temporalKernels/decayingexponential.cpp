@@ -15,14 +15,14 @@ DecayingExponential::~DecayingExponential()
 
 }
 
-double DecayingExponential::temporal(double t)
+double DecayingExponential::temporal(double t) const
 {
 
     return 1./ m_tau * exp(-(t - m_delay)/m_tau)
             * Functions::heaviside(t - m_delay);
 }
 
-complex<double> DecayingExponential::fourierTransform(double w)
+complex<double> DecayingExponential::fourierTransform(double w) const
 {
 //    return cos(w*m_delay)/ (1 + w*w * m_tau*m_tau);
         return exp(-complex<double>(0,1)*w*m_delay)

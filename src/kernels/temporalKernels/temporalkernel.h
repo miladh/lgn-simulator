@@ -15,8 +15,8 @@ public:
     TemporalKernel();
     ~TemporalKernel();
 
-    virtual double temporal(double t) = 0;
-    virtual complex<double> fourierTransform(double w) = 0;
+    virtual double temporal(double t) const = 0;
+    virtual complex<double> fourierTransform(double w) const = 0;
 
 };
 }

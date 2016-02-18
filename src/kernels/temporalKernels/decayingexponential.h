@@ -12,8 +12,8 @@ public:
     ~DecayingExponential();
 
     // TemporalKernel interface
-    double temporal(double t);
-    complex<double> fourierTransform(double w);
+    double temporal(double t) const;
+    complex<double> fourierTransform(double w) const;
 
 
 private:

@@ -10,8 +10,8 @@ class TemporalGaussian : public TemporalKernel
 public:
     TemporalGaussian(double A, double a, double delay);
 
-    virtual double temporal(double t);
-    virtual complex<double> fourierTransform(double w);
+    virtual double temporal(double t) const;
+    virtual complex<double> fourierTransform(double w) const;
 
 
 private:

@@ -15,7 +15,7 @@ DampedOscillator::~DampedOscillator()
 
 }
 
-double DampedOscillator::temporal(double t)
+double DampedOscillator::temporal(double t) const
 {
     if(t>= 0 && t<=m_phaseDuration){
         return sin(PI/m_phaseDuration * t);
@@ -26,7 +26,7 @@ double DampedOscillator::temporal(double t)
     }
 }
 
-complex<double> DampedOscillator::fourierTransform(double w)
+complex<double> DampedOscillator::fourierTransform(double w) const
 {
     double factor = PI*m_phaseDuration/
             (PI*PI - m_phaseDuration * m_phaseDuration * w * w);
