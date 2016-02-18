@@ -13,7 +13,7 @@ public:
     StaticNonlinearity();
     ~StaticNonlinearity();
 
-   void applyStaticNonlinearity(cube* const linearFilter);
+   void applyStaticNonlinearity(cube* const linearFilter) const;
 
 protected:
     virtual double advance(const double u) const = 0;

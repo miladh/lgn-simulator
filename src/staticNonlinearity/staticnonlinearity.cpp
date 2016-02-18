@@ -13,7 +13,7 @@ StaticNonlinearity::~StaticNonlinearity()
 
 }
 
-void StaticNonlinearity::applyStaticNonlinearity(cube * const linearFilter)
+void StaticNonlinearity::applyStaticNonlinearity(cube * const linearFilter) const
 {
     for(int k = 0; k < int(linearFilter->n_slices); k++){
         for(int i = 0; i < int(linearFilter->n_rows); i++){

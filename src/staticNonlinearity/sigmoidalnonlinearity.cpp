@@ -3,7 +3,9 @@
 using namespace lgnSimulator;
 
 
-SigmoidalNonlinearity::SigmoidalNonlinearity(double maxValue, double halfMaxValue, double exponent)
+SigmoidalNonlinearity::SigmoidalNonlinearity(double maxValue,
+                                             double halfMaxValue,
+                                             double exponent)
     : m_maxValue(maxValue)
     , m_halfmaxValue(halfMaxValue)
     , m_exponent(exponent)
