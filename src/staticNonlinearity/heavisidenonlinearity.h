@@ -12,7 +12,7 @@ public:
 
     // StaticNonlinearity interface
 protected:
-    virtual double advance(const double u);
+    virtual double advance(const double u) const;
 };
 }
 #endif // HEAVISIDENONLINEARITY_H

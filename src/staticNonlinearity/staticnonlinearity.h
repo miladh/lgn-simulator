@@ -16,7 +16,7 @@ public:
    void applyStaticNonlinearity(cube* const linearFilter);
 
 protected:
-    virtual double advance(const double u) = 0;
+    virtual double advance(const double u) const = 0;
 };
 }
 #endif // STATICNONLINEARITY_H

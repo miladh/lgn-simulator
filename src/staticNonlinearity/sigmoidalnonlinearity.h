@@ -11,7 +11,7 @@ public:
 
     // StaticNonlinearity interface
 protected:
-    virtual double advance(const double u);
+    virtual double advance(const double u) const;
 
 private:
     double m_maxValue = 0.0;

@@ -12,7 +12,7 @@ public:
 
     // StaticNonlinearity interface
 private:
-    virtual double advance(const double u);
+    virtual double advance(const double u) const;
 
 private:
     double m_threshold = 0.0;

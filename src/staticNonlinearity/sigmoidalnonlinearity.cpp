@@ -17,7 +17,7 @@ SigmoidalNonlinearity::~SigmoidalNonlinearity()
 
 
 
-double SigmoidalNonlinearity::advance(const double u)
+double SigmoidalNonlinearity::advance(const double u) const
 {
     return m_maxValue / (1 + exp(m_exponent * (u - m_halfmaxValue)));
 }

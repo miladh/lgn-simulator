@@ -16,7 +16,7 @@ ThresholdNonlinearity::~ThresholdNonlinearity()
 }
 
 
-double ThresholdNonlinearity::advance(const double u)
+double ThresholdNonlinearity::advance(const double u) const
 {
     double x = u - m_threshold;
     if(Functions::heaviside(x)){
