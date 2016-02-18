@@ -40,13 +40,13 @@ cx_cube Integrator::backwardFFT(cx_cube data) const
     cx_cube fftData = 0 * data;
     int size[3] = {int(data.n_slices), int(data.n_cols), int(data.n_rows)};
 
-    for(int k = 0; k < int(fftData.n_slices); k++){
-        for(int i = 0; i < int(fftData.n_cols); i++){
-            for(int j = 0; j < int(fftData.n_rows); j++){
-                data(i,j,k) *=pow(-1, i+j);
-            }
-        }
-    }
+//    for(int k = 0; k < int(fftData.n_slices); k++){
+//        for(int i = 0; i < int(fftData.n_cols); i++){
+//            for(int j = 0; j < int(fftData.n_rows); j++){
+//                data(i,j,k) *=pow(-1, i+j);
+//            }
+//        }
+//    }
 
 
     fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
@@ -68,11 +68,10 @@ cx_cube Integrator::backwardFFT(cx_cube data) const
 //    }
 
 
-//        //fftShift
-//        for(int i = 0; i < int(fftData.n_slices); i++){
-//            fftData.slice(i) = FFTHelper::fftShift(fftData.slice(i));
-//        }
-
+    //fftShift
+    for(int i = 0; i < int(fftData.n_slices); i++){
+        fftData.slice(i) = FFTHelper::fftShift(fftData.slice(i));
+    }
 
     return fftData;
 }

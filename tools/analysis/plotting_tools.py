@@ -393,9 +393,9 @@ if __name__ == "__main__":
                 }
 
     data = [Wg, Wr, Wc ]
-    # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2)
+    imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2)
     line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=10)
-    # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=False, num_skip=5, idx=Ns/2, idy=Ns/2)
+    plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=False, num_skip=5, idx=Ns/2, idy=Ns/2)
 
     data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
     animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True,
