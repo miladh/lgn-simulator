@@ -21,6 +21,6 @@ private:
 };
 
 }
-lgnSimulator::TemporalDelta createTemporalDeltaKernel(const YAML::Node *cfg);
+lgnSimulator::TemporalDelta createTemporalDeltaKernel(const YAML::Node &cfg);
 
 #endif // TEMPORALDELTA_H

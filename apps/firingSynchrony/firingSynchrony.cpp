@@ -43,11 +43,11 @@ int main(int argc, char* argv[]){
     Integrator integrator = createIntegrator(cfg);
 
     //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, &cfg);
+    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
 
     //Ganglion cell:-----------------------------------------------------------
-    DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
-    TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
+    DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
+    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
     SeparableKernel Wg(&Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, &Wg, Rg_0);
 
@@ -56,19 +56,19 @@ int main(int argc, char* argv[]){
     CorticalCell cortical(integrator, Rc_0);
 
     //Kernels:---------------------------------------------------------
-    SpatialDelta Ks_rg = createSpatialDeltaKernel(&Ks_rgSettings);
-    TemporalDelta Kt_rg = createTemporalDeltaKernel(&Kt_rgSettings);
+    SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
+    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
     SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
 
-    SpatialDelta Ks_cr = createSpatialDeltaKernel(&Ks_crSettings);
-    TemporalDelta Kt_cr = createTemporalDeltaKernel(&Kt_crSettings);
+    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
+    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
     SeparableKernel Kcr(&Ks_cr, &Kt_cr);
 
-//    SpatialDelta Ks_rc = createSpatialDeltaKernel(&Ks_rcSettings);
-    Gaussian Ks_rc = createSpatialGaussianKernel(&Ks_rcSettings);
-    TemporalDelta Kt_rc = createTemporalDeltaKernel(&Kt_rcSettings);
-//    TemporalGaussian Kt_rc = createTemporalGaussianKernel(&Kt_rcSettings);
+//    SpatialDelta Ks_rc = createSpatialDeltaKernel(Ks_rcSettings);
+    Gaussian Ks_rc = createSpatialGaussianKernel(Ks_rcSettings);
+    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
+//    TemporalGaussian Kt_rc = createTemporalGaussianKernel(Kt_rcSettings);
     SeparableKernel Krc(&Ks_rc, &Kt_rc);
 
 

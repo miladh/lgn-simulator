@@ -39,12 +39,12 @@ complex<double> EllipticGaussian::fourierTransform(vec2 k)
 
 
 
-EllipticGaussian createSpatialEllipticGaussianKernel(const YAML::Node *cfg)
+EllipticGaussian createSpatialEllipticGaussianKernel(const YAML::Node &cfg)
 {
-    double weight = (*cfg)["weight_elliptic"].as<double>();
-    double angle = (*cfg)["angle"].as<double>();
-    double widthLong = (*cfg)["widthLong"].as<double>();
-    double widthNarrow = (*cfg)["widthNarrow"].as<double>();
+    double weight = cfg["weight_elliptic"].as<double>();
+    double angle = cfg["angle"].as<double>();
+    double widthLong = cfg["widthLong"].as<double>();
+    double widthNarrow = cfg["widthNarrow"].as<double>();
 
     return EllipticGaussian(weight, angle, widthLong, widthNarrow);
 }

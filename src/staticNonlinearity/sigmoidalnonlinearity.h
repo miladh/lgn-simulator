@@ -20,6 +20,6 @@ private:
 };
 
 }
-lgnSimulator::SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node *cfg);
+lgnSimulator::SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node &cfg);
 
 #endif // SIGMOIDALNONLINEARITY_H

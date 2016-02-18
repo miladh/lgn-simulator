@@ -34,22 +34,22 @@ int main(int argc, char* argv[])
     Integrator integrator = createIntegrator(cfg);
 
     //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, &cfg);
+    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
 
 
     //Kernels:---------------------------------------------------------
-    SpatialDelta Ks_rg = createSpatialDeltaKernel(&spatialKernelSettings);
-    TemporallyConstant Kt_rg = createTemporallyConstantKernel(&temporalKernelSettings);
+    SpatialDelta Ks_rg = createSpatialDeltaKernel(spatialKernelSettings);
+    TemporallyConstant Kt_rg = createTemporallyConstantKernel(temporalKernelSettings);
     SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
-    DOG Ks_rig = createSpatialDOGKernel(&spatialKernelSettings);
-    TemporallyConstant Kt_rig = createTemporallyConstantKernel(&temporalKernelSettings);
+    DOG Ks_rig = createSpatialDOGKernel(spatialKernelSettings);
+    TemporallyConstant Kt_rig = createTemporallyConstantKernel(temporalKernelSettings);
     SeparableKernel Krig(&Ks_rig, &Kt_rig);
 
 
     //Ganglion cell:-----------------------------------------------------------
-    DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
-    TemporallyConstant Wg_t = createTemporallyConstantKernel(&ganglionImpRes);
+    DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
+    TemporallyConstant Wg_t = createTemporallyConstantKernel(ganglionImpRes);
     SeparableKernel Wg(&Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, &Wg);
 

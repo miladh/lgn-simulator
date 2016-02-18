@@ -26,13 +26,13 @@ complex<double> DOG::fourierTransform(vec2 k)
 
 
 
-DOG createSpatialDOGKernel(const YAML::Node *cfg)
+DOG createSpatialDOGKernel(const YAML::Node &cfg)
 {
 
-    double A = (*cfg)["A"].as<double>();
-    double a = (*cfg)["a"].as<double>();
-    double B = (*cfg)["B"].as<double>();
-    double b = (*cfg)["b"].as<double>();
+    double A = cfg["A"].as<double>();
+    double a = cfg["a"].as<double>();
+    double B = cfg["B"].as<double>();
+    double b = cfg["b"].as<double>();
 
     return DOG(A, a, B, b);
 }

@@ -22,6 +22,6 @@ private:
 
 }
 
-lgnSimulator::TemporallyConstant createTemporallyConstantKernel(const YAML::Node *cfg);
+lgnSimulator::TemporallyConstant createTemporallyConstantKernel(const YAML::Node &cfg);
 
 #endif // TEMPORALLYCONSTANT_H

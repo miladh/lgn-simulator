@@ -25,6 +25,6 @@ private:
 
 }
 
-lgnSimulator::EllipticGaussian createSpatialEllipticGaussianKernel(const YAML::Node *cfg);
+lgnSimulator::EllipticGaussian createSpatialEllipticGaussianKernel(const YAML::Node &cfg);
 
 #endif // ELLIPTICGAUSSIAN_H

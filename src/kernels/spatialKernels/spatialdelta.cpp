@@ -22,10 +22,10 @@ complex<double> lgnSimulator::SpatialDelta::fourierTransform(vec2 k)
 
 
 
-SpatialDelta createSpatialDeltaKernel(const YAML::Node *cfg)
+SpatialDelta createSpatialDeltaKernel(const YAML::Node &cfg)
 {
 
-    double weight = (*cfg)["weight"].as<double>();
+    double weight = cfg["weight"].as<double>();
     vec2 r0 = {0,0};
 
     return SpatialDelta(weight, r0);

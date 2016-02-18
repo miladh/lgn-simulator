@@ -21,9 +21,9 @@ complex<double> lgnSimulator::SpatiallyConstant::fourierTransform(vec2 k)
 
 
 
-lgnSimulator::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node *cfg)
+lgnSimulator::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node &cfg)
 {
-    double constant = (*cfg)["constant"].as<double>();
+    double constant = cfg["constant"].as<double>();
 
     return SpatiallyConstant(constant);
 

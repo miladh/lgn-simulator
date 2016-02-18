@@ -29,12 +29,12 @@ int main()
 //    Stim---------------------------------------------------------------------
 //        unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(&integrator,&cfg);
 //        unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator,&cfg);
-        unique_ptr<Grating> S = createGratingStimulus(integrator, &cfg);
+        unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
 
 
 
     //Spatial kernels:----------------------------------------------------------
-    DOG dog = createSpatialDOGKernel(&cfg);
+    DOG dog = createSpatialDOGKernel(cfg);
 //    DOG gauss(0.3, 0.05, 0, 1.);
 //    EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
 

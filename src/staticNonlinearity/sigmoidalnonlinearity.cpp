@@ -22,12 +22,12 @@ double SigmoidalNonlinearity::advance(const double u)
     return m_maxValue / (1 + exp(m_exponent * (u - m_halfmaxValue)));
 }
 
-SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node *cfg)
+SigmoidalNonlinearity createSigmoidalNonlinearity(const YAML::Node &cfg)
 {
 
-    double maxValue = (*cfg)["maxValue"].as<double>();
-    double halfMaxValue = (*cfg)["halfMaxValue"].as<double>();
-    double exponent = (*cfg)["exponent"].as<double>();
+    double maxValue = cfg["maxValue"].as<double>();
+    double halfMaxValue = cfg["halfMaxValue"].as<double>();
+    double exponent = cfg["exponent"].as<double>();
 
     return SigmoidalNonlinearity(maxValue, halfMaxValue, exponent);
 }

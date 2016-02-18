@@ -30,11 +30,11 @@ complex<double> DecayingExponential::fourierTransform(double w)
 }
 
 
-DecayingExponential createTemporalDecayingExponentialKernel(const YAML::Node *cfg)
+DecayingExponential createTemporalDecayingExponentialKernel(const YAML::Node &cfg)
 {
 
-    double tau = (*cfg)["tau"].as<double>();
-    double delay = (*cfg)["delay"].as<double>();
+    double tau = cfg["tau"].as<double>();
+    double delay = cfg["delay"].as<double>();
 
     return DecayingExponential(tau, delay);
 

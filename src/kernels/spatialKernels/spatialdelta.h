@@ -23,6 +23,6 @@ private:
 
 }
 
-lgnSimulator::SpatialDelta createSpatialDeltaKernel(const YAML::Node *cfg);
+lgnSimulator::SpatialDelta createSpatialDeltaKernel(const YAML::Node &cfg);
 
 #endif // SPATIALDELTA_H

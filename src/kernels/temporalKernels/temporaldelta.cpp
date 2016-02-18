@@ -28,9 +28,9 @@ complex<double> TemporalDelta::fourierTransform(double w)
 }
 
 
-TemporalDelta createTemporalDeltaKernel(const YAML::Node *cfg)
+TemporalDelta createTemporalDeltaKernel(const YAML::Node &cfg)
 {
-    double delay = (*cfg)["delay"].as<double>();
+    double delay = cfg["delay"].as<double>();
 
     return TemporalDelta(delay);
 }

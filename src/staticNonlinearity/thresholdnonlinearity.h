@@ -21,6 +21,6 @@ private:
 };
 }
 
-lgnSimulator::ThresholdNonlinearity createThresholdNonlinearity(const YAML::Node *cfg);
+lgnSimulator::ThresholdNonlinearity createThresholdNonlinearity(const YAML::Node &cfg);
 
 #endif // THRESHOLDNONLINEARITY_H

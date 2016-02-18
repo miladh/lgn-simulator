@@ -79,14 +79,14 @@ double Grating::maskSize() const
 
 
 
-unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YAML::Node *cfg)
+unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YAML::Node &cfg)
 {
-    string mask = (*cfg)["mask"].as<string>();
-    double maskSize = (*cfg)["maskSize"].as<double>();
-    double contrast = (*cfg)["C"].as<double>();
-    int kxId = (*cfg)["kxId"].as<int>();
-    int kyId = (*cfg)["kyId"].as<int>();
-    int wId = (*cfg)["wId"].as<int>();
+    string mask = cfg["mask"].as<string>();
+    double maskSize = cfg["maskSize"].as<double>();
+    double contrast = cfg["C"].as<double>();
+    int kxId = cfg["kxId"].as<int>();
+    int kyId = cfg["kyId"].as<int>();
+    int wId = cfg["wId"].as<int>();
 
     vec k = integrator.spatialFreqVec();
     vec w = integrator.temporalFreqVec();

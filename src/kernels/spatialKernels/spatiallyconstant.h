@@ -22,6 +22,6 @@ private:
 
 }
 
-lgnSimulator::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node *cfg);
+lgnSimulator::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node &cfg);
 
 #endif // SPATIALLYCONSTANT_H

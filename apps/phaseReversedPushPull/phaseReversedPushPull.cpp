@@ -40,11 +40,11 @@ int main(int argc, char* argv[])
     Integrator integrator = createIntegrator(cfg);
 
     //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, &cfg);
+    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
 
     //Ganglion cell:-----------------------------------------------------------
-    DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
-    TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
+    DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
+    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
     SeparableKernel Wg(&Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, &Wg);
 
@@ -53,14 +53,14 @@ int main(int argc, char* argv[])
     CorticalCell cortical(integrator);
 
     //Spatial kernels:---------------------------------------------------------
-    SpatialDelta Ks_rg = createSpatialDeltaKernel(&Ks_rgSettings);
-    SpatialDelta Ks_cr = createSpatialDeltaKernel(&Ks_crSettings);
-    DOG Ks_rc = createSpatialDOGKernel(&Ks_rcSettings);
+    SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
+    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
+    DOG Ks_rc = createSpatialDOGKernel(Ks_rcSettings);
 
     //Temporal kernels:--------------------------------------------------------
-    TemporalDelta Kt_rg = createTemporalDeltaKernel(&Kt_rgSettings);
-    TemporalDelta Kt_cr = createTemporalDeltaKernel(&Kt_crSettings);
-    TemporalDelta Kt_rc = createTemporalDeltaKernel(&Kt_rcSettings);
+    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
+    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
+    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
 
     //Kernels:--------------------------------------------------------
     SeparableKernel Krg(&Ks_rg, &Kt_rg);

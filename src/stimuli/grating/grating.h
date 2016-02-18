@@ -43,6 +43,6 @@ protected:
 };
 
 }
-std::unique_ptr<lgnSimulator::Grating> createGratingStimulus(const lgnSimulator::Integrator &integrator, const YAML::Node* cfg);
+std::unique_ptr<lgnSimulator::Grating> createGratingStimulus(const lgnSimulator::Integrator &integrator, const YAML::Node &cfg);
 
 #endif // GRATING_H
