@@ -37,12 +37,14 @@ protected:
     double m_maskSize = 0.0;
     string m_mask;
 
-    virtual double valueAtPoint(vec2 rVec, double t) = 0;
-    virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) = 0;
+    virtual double valueAtPoint(vec2 rVec, double t) const = 0;
+    virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) const= 0;
 
 };
 
 }
-std::unique_ptr<lgnSimulator::Grating> createGratingStimulus(const lgnSimulator::Integrator &integrator, const YAML::Node &cfg);
+std::unique_ptr<lgnSimulator::Grating> createGratingStimulus(
+        const lgnSimulator::Integrator &integrator,
+        const YAML::Node &cfg);
 
 #endif // GRATING_H

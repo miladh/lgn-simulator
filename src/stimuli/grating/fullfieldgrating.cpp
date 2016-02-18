@@ -16,13 +16,13 @@ FullFieldGrating::~FullFieldGrating()
 }
 
 
-double FullFieldGrating::valueAtPoint(vec2 rVec, double t)
+double FullFieldGrating::valueAtPoint(vec2 rVec, double t) const
 {
     double s = m_contrast * cos(dot(m_k, rVec) - m_w * t);
     return s;
 }
 
-complex<double> FullFieldGrating::fourierTransformAtFrequency(vec2 k, double w)
+complex<double> FullFieldGrating::fourierTransformAtFrequency(vec2 k, double w) const
 {
     double s = Functions::delta(k[0], m_k[0])
             * Functions::delta(k[1], m_k[1])

@@ -18,14 +18,14 @@ GaussianMaskGrating::~GaussianMaskGrating()
 }
 
 
-double GaussianMaskGrating::valueAtPoint(vec2 rVec, double t)
+double GaussianMaskGrating::valueAtPoint(vec2 rVec, double t) const
 {
 
     double s = m_contrast * cos(dot(m_k, rVec) - m_w * t) * m_dog->spatial(rVec);
     return s;
 }
 
-complex<double> GaussianMaskGrating::fourierTransformAtFrequency(vec2 k, double w)
+complex<double> GaussianMaskGrating::fourierTransformAtFrequency(vec2 k, double w) const
 {
     complex<double> s = m_dog->fourierTransform(k)
             * Functions::delta(k[0], m_k[0])

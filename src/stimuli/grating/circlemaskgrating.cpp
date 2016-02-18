@@ -15,7 +15,7 @@ CircleMaskGrating::~CircleMaskGrating()
 
 }
 
-double CircleMaskGrating::valueAtPoint(vec2 rVec, double t)
+double CircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
 {
     double r = sqrt(dot(rVec, rVec));
 
@@ -27,7 +27,7 @@ double CircleMaskGrating::valueAtPoint(vec2 rVec, double t)
 
 
 
-complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 kVec, double w)
+complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 kVec, double w) const
 {
     if(!Functions::delta(w, -m_w)){
         return 0;
