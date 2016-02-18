@@ -3,13 +3,13 @@
 using namespace lgnSimulator;
 
 
-Integrator::Integrator(const int nPointsTemporal,
+Integrator::Integrator(const int nt,
                        const double temporalResolution,
-                       const int nPointsSpatial,
+                       const int ns,
                        const double spatialResolution)
 
-    : m_nPointsTemporal(pow(2,nPointsTemporal))
-    , m_nPointsSpatial(pow(2,nPointsSpatial))
+    : m_nPointsTemporal(pow(2,nt))
+    , m_nPointsSpatial(pow(2,ns))
     , m_temporalResolution(temporalResolution)
     , m_spatialResolution(spatialResolution)
     , m_timeInterval(m_nPointsTemporal  * m_temporalResolution)

@@ -18,9 +18,9 @@ namespace lgnSimulator {
 class Integrator
 {
 public:
-    Integrator(const int nPointsTemporal,
+    Integrator(const int nt,
                const double temporalResolution,
-               const int nPointsSpatial,
+               const int ns,
                const double spatialResolution);
     ~Integrator();
 
