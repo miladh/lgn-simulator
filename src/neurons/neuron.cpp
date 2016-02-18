@@ -10,10 +10,11 @@ using namespace lgnSimulator;
  */
 
 
-Neuron::Neuron(Integrator *integrator, double backgroundResponse, StaticNonlinearity *staticNonlinearity)
+Neuron::Neuron(Integrator *integrator, double backgroundResponse,
+               StaticNonlinearity *staticNonlinearity)
     : m_integrator(integrator)
-    , m_backgroundResponse(backgroundResponse)
     , m_staticNonlinearity(staticNonlinearity)
+    , m_backgroundResponse(backgroundResponse)
 {
     int nPointsTemporal = integrator->nPointsTemporal();
     int nPointsSpatial = integrator->nPointsSpatial();
@@ -67,33 +68,25 @@ void Neuron::computeImpulseResponse()
 
 }
 
-void Neuron::addGanglionCell(Neuron *neuron,
-                             SpatialKernel *sKernel,
-                             TemporalKernel *tKernel)
+void Neuron::addGanglionCell(Neuron *neuron, Kernel *kernel)
 {
-    m_ganglionCells.emplace_back(Input{neuron, sKernel, tKernel});
+    m_ganglionCells.emplace_back(Input{neuron, kernel});
 }
 
-void Neuron::addRelayCell(Neuron *neuron,
-                          SpatialKernel *sKernel,
-                          TemporalKernel *tKernel)
+void Neuron::addRelayCell(Neuron *neuron, Kernel *kernel)
 {
 
-    m_relayCells.emplace_back(Input{neuron, sKernel, tKernel});
+    m_relayCells.emplace_back(Input{neuron, kernel});
 }
 
-void Neuron::addInterNeuron(Neuron *neuron,
-                            SpatialKernel *sKernel,
-                            TemporalKernel *tKernel)
+void Neuron::addInterNeuron(Neuron *neuron, Kernel *kernel)
 {
-    m_interNeurons.emplace_back(Input{neuron, sKernel, tKernel});
+    m_interNeurons.emplace_back(Input{neuron, kernel});
 }
 
-void Neuron::addCorticalNeuron(Neuron *neuron,
-                               SpatialKernel *sKernel,
-                               TemporalKernel *tKernel)
+void Neuron::addCorticalNeuron(Neuron *neuron, Kernel *kernel)
 {
-    m_corticalNeurons.emplace_back(Input{neuron, sKernel, tKernel});
+    m_corticalNeurons.emplace_back(Input{neuron, kernel});
 }
 
 

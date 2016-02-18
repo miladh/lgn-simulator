@@ -11,21 +11,13 @@ SOURCES += \
     math/functions.cpp \
     neurons/neuron.cpp \
     neurons/corticalcell.cpp \
-    temporalKernels/temporalkernel.cpp \
-    spatialKernels/spatialkernel.cpp \
     neurons/relaycell.cpp \
-    spatialKernels/dog.cpp \
-    temporalKernels/decayingexponential.cpp \
     neurons/ganglioncell.cpp \
-    spatialKernels/ellipticgaussian.cpp \
-    temporalKernels/dampedoscillator.cpp \
     math/ffthelper.cpp \
     neurons/interneuron.cpp \
-    temporalKernels/temporallyconstant.cpp \
     stimuli/naturalscene.cpp \
     stimuli/staticimage.cpp \
     stimuli/naturalscenevideo.cpp \
-    temporalKernels/temporaldelta.cpp \
     stimuli/grating/grating.cpp \
     stimuli/grating/gaussianmaskgrating.cpp \
     stimuli/grating/circlemaskgrating.cpp \
@@ -34,10 +26,20 @@ SOURCES += \
     staticNonlinearity/thresholdnonlinearity.cpp \
     staticNonlinearity/heavisidenonlinearity.cpp \
     staticNonlinearity/sigmoidalnonlinearity.cpp \
-    spatialKernels/spatialdelta.cpp \
-    spatialKernels/spatiallyconstant.cpp \
-    spatialKernels/gaussian.cpp \
-    temporalKernels/temporalGaussian.cpp
+    kernels/kernel.cpp \
+    kernels/separablekernel.cpp \
+    kernels/spatialKernels/dog.cpp \
+    kernels/spatialKernels/ellipticgaussian.cpp \
+    kernels/spatialKernels/gaussian.cpp \
+    kernels/spatialKernels/spatialdelta.cpp \
+    kernels/spatialKernels/spatialkernel.cpp \
+    kernels/spatialKernels/spatiallyconstant.cpp \
+    kernels/temporalKernels/dampedoscillator.cpp \
+    kernels/temporalKernels/decayingexponential.cpp \
+    kernels/temporalKernels/temporaldelta.cpp \
+    kernels/temporalKernels/temporalGaussian.cpp \
+    kernels/temporalKernels/temporalkernel.cpp \
+    kernels/temporalKernels/temporallyconstant.cpp
 
 HEADERS += \
     integrator.h \
@@ -46,21 +48,13 @@ HEADERS += \
     math/functions.h \
     neurons/neuron.h \
     neurons/corticalcell.h \
-    temporalKernels/temporalkernel.h \
-    spatialKernels/spatialkernel.h \
     neurons/relaycell.h \
-    spatialKernels/dog.h \
-    temporalKernels/decayingexponential.h \
     neurons/ganglioncell.h \
-    spatialKernels/ellipticgaussian.h \
-    temporalKernels/dampedoscillator.h \
     math/ffthelper.h \
     neurons/interneuron.h \
-    temporalKernels/temporallyconstant.h \
     stimuli/naturalscene.h \
     stimuli/staticimage.h \
     stimuli/naturalscenevideo.h \
-    temporalKernels/temporaldelta.h \
     stimuli/grating/grating.h \
     stimuli/grating/gaussianmaskgrating.h \
     stimuli/grating/circlemaskgrating.h \
@@ -69,11 +63,21 @@ HEADERS += \
     staticNonlinearity/thresholdnonlinearity.h \
     staticNonlinearity/heavisidenonlinearity.h \
     staticNonlinearity/sigmoidalnonlinearity.h \
-    spatialKernels/spatialdelta.h \
-    spatialKernels/spatiallyconstant.h \
     ../include/lgnSimulator.h \
-    spatialKernels/gaussian.h \
-    temporalKernels/temporalGaussian.h
+    kernels/kernel.h \
+    kernels/separablekernel.h \
+    kernels/temporalKernels/dampedoscillator.h \
+    kernels/temporalKernels/decayingexponential.h \
+    kernels/temporalKernels/temporaldelta.h \
+    kernels/temporalKernels/temporalGaussian.h \
+    kernels/temporalKernels/temporalkernel.h \
+    kernels/temporalKernels/temporallyconstant.h \
+    kernels/spatialKernels/dog.h \
+    kernels/spatialKernels/ellipticgaussian.h \
+    kernels/spatialKernels/gaussian.h \
+    kernels/spatialKernels/spatialdelta.h \
+    kernels/spatialKernels/spatialkernel.h \
+    kernels/spatialKernels/spatiallyconstant.h
 
 OTHER_FILES +=
 

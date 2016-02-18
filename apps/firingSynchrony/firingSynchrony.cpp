@@ -48,30 +48,34 @@ int main(int argc, char* argv[]){
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
     TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
-    GanglionCell ganglion(&integrator, &Wg_s, &Wg_t, Rg_0);
+    SeparableKernel Wg(&Wg_s, &Wg_t);
+    GanglionCell ganglion(&integrator, &Wg, Rg_0);
 
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(&integrator, Rr_0);
     CorticalCell cortical(&integrator, Rc_0);
 
-    //Spatial kernels:---------------------------------------------------------
+    //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(&Ks_rgSettings);
-    SpatialDelta Ks_cr = createSpatialDeltaKernel(&Ks_crSettings);
-
-    SpatialDelta Ks_rc = createSpatialDeltaKernel(&Ks_rcSettings);
-//    Gaussian Ks_rc = createSpatialGaussianKernel(&Ks_rcSettings);
-
-    //Temporal kernels:--------------------------------------------------------
     TemporalDelta Kt_rg = createTemporalDeltaKernel(&Kt_rgSettings);
-    TemporalDelta Kt_cr = createTemporalDeltaKernel(&Kt_crSettings);
+    SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
-//    TemporalDelta Kt_rc = createTemporalDeltaKernel(&Kt_rcSettings);
-    TemporalGaussian Kt_rc = createTemporalGaussianKernel(&Kt_rcSettings);
+
+    SpatialDelta Ks_cr = createSpatialDeltaKernel(&Ks_crSettings);
+    TemporalDelta Kt_cr = createTemporalDeltaKernel(&Kt_crSettings);
+    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
+
+//    SpatialDelta Ks_rc = createSpatialDeltaKernel(&Ks_rcSettings);
+    Gaussian Ks_rc = createSpatialGaussianKernel(&Ks_rcSettings);
+    TemporalDelta Kt_rc = createTemporalDeltaKernel(&Kt_rcSettings);
+//    TemporalGaussian Kt_rc = createTemporalGaussianKernel(&Kt_rcSettings);
+    SeparableKernel Krc(&Ks_rc, &Kt_rc);
+
 
     //Connect neurons:---------------------------------------------------------
-    relay.addGanglionCell(&ganglion, &Ks_rg, &Kt_rg);
-    relay.addCorticalNeuron(&cortical, &Ks_rc, &Kt_rc);
-    cortical.addRelayCell(&relay, &Ks_cr, &Kt_cr);
+    relay.addGanglionCell(&ganglion, &Krg);
+    relay.addCorticalNeuron(&cortical, &Krc);
+    cortical.addRelayCell(&relay, &Kcr);
 
 
     //Compute:-----------------------------------------------------------------

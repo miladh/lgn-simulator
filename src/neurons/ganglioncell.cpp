@@ -4,13 +4,11 @@ using namespace lgnSimulator;
 
 
 GanglionCell::GanglionCell(Integrator *integrator,
-                           SpatialKernel *spatialKernel,
-                           TemporalKernel *temporalKernel,
+                           Kernel *kernel,
                            double backgroundResponse,
                            StaticNonlinearity *staticNonlinearity)
     : Neuron(integrator, backgroundResponse, staticNonlinearity)
-    , m_spatialKernel(spatialKernel)
-    , m_temporalKernel(temporalKernel)
+    , m_kernel(kernel)
 {
     m_cellType = "ganglion";
 }
@@ -59,12 +57,12 @@ void GanglionCell::computeImpulseResponse()
 
 double GanglionCell::impulseResponseValueAtPoint(vec2 rVec, double t)
 {
-    return m_spatialKernel->spatial(rVec) * m_temporalKernel->temporal(t);
+    return m_kernel->spatiotemporal(rVec,t);
 }
 
-complex<double> GanglionCell::impulseResponseFourierTransformAtFrequency(vec2 kVec, double w)
+complex<double> GanglionCell::impulseResponseFourierTransformAtFrequency(vec2 kVec,
+                                                                         double w)
 {
-    return m_spatialKernel->fourierTransform(kVec)
-            * m_temporalKernel->fourierTransform(w);
+    return m_kernel->fourierTransform(kVec,w);
 }
 

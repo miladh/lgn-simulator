@@ -7,6 +7,7 @@
 #include "integrator.h"
 
 #include "../tests/systemTests/kernelsettings.h"
+#include "kernels/separablekernel.h"
 
 SUITE(SYSTEM){
 
@@ -47,8 +48,9 @@ SUITE(SYSTEM){
 
         for(SpatialKernel* Ks : spatialKernels){
             for(TemporalKernel* Kt : temporalKernels){
+                SeparableKernel K(Ks, Kt);
                 //Cell
-                GanglionCell ganglion(&integrator, Ks, Kt);
+                GanglionCell ganglion(&integrator, &K);
 
                 //Compute analytic:
                 complex<double> W = Ks->fourierTransform({kx, ky}) * Kt->fourierTransform(wd);

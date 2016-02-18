@@ -2,8 +2,6 @@
 #define GANGLIONCELL_H
 
 #include "neuron.h"
-#include "spatialKernels/spatialkernel.h"
-#include "temporalKernels/temporalkernel.h"
 
 #include <armadillo>
 
@@ -13,8 +11,7 @@ class GanglionCell : public Neuron
 {
 public:
     GanglionCell(Integrator *integrator,
-                 SpatialKernel *spatialKernel,
-                 TemporalKernel *temporalKernel,
+                 Kernel *kernel,
                  double backgroundResponse= 0,
                  StaticNonlinearity *staticNonlinearity = nullptr);
     ~GanglionCell();
@@ -23,8 +20,7 @@ public:
     virtual void computeImpulseResponseFourierTransform();
 
 private:
-    SpatialKernel *m_spatialKernel;
-    TemporalKernel *m_temporalKernel;
+    Kernel *m_kernel;
 
     double impulseResponseValueAtPoint(vec2 rVec, double t);
     complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);

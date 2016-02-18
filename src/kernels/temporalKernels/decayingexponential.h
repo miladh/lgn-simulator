@@ -1,7 +1,7 @@
 #ifndef DECAYINGEXPONENTIAL_H
 #define DECAYINGEXPONENTIAL_H
 
-#include "temporalKernels/temporalkernel.h"
+#include "kernels/temporalKernels/temporalkernel.h"
 
 namespace lgnSimulator {
 

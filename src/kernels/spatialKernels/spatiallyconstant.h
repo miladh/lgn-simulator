@@ -1,7 +1,7 @@
 #ifndef SPATIALLYCONSTANT_H
 #define SPATIALLYCONSTANT_H
 
-#include "spatialKernels/spatialkernel.h"
+#include "kernels/spatialKernels/spatialkernel.h"
 
 
 namespace lgnSimulator {

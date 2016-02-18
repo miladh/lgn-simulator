@@ -8,6 +8,7 @@
 #include "integrator.h"
 
 #include "../tests/systemTests/kernelsettings.h"
+#include "kernels/separablekernel.h"
 
 SUITE(SYSTEM){
 
@@ -55,7 +56,8 @@ SUITE(SYSTEM){
             for(TemporalKernel* Ft : temporalKernels){
 
                 //ganglion cell
-                GanglionCell ganglion(&integrator, Fs, Ft);
+                SeparableKernel F(Fs, Ft);
+                GanglionCell ganglion(&integrator,&F);
                 complex<double> Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
 
 
@@ -75,21 +77,23 @@ SUITE(SYSTEM){
 
                 for(SpatialKernel* Ks_rg : spatialKernels){
                     for(TemporalKernel* Kt_rg : temporalKernels){
+                        SeparableKernel K_rg(Ks_rg, Kt_rg);
 
                         complex<double> Krg =  Ks_rg->fourierTransform({kx, ky})
                                 * Kt_rg->fourierTransform(wd);
 
                         for(SpatialKernel* Ks_rc : spatialKernels){
                             for(TemporalKernel* Kt_rc : temporalKernels){
+                                SeparableKernel K_rc(Ks_rc, Kt_rc);
 
                                 //cells
                                 RelayCell relay(&integrator);
                                 CorticalCell cortical(&integrator);
 
                                 //connect cells
-                                relay.addGanglionCell(&ganglion, Ks_rg, Kt_rg);
-                                relay.addCorticalNeuron(&cortical,  Ks_rc, Kt_rc);
-                                cortical.addRelayCell(&relay, Ks_rc, Kt_rc);
+                                relay.addGanglionCell(&ganglion, &K_rg);
+                                relay.addCorticalNeuron(&cortical,  &K_rc);
+                                cortical.addRelayCell(&relay, &K_rc);
 
 
                                 complex<double> Krc =  Ks_rc->fourierTransform({kx, ky})

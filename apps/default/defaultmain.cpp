@@ -53,8 +53,11 @@ int main()
 //    HeavisideNonlinearity staticNonlinearity;
 
 
+    //Kernels:-------------------------------------------------------
+    SeparableKernel Kt(&dog, &Kt_cr);
+
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &Kt_cr/*, &staticNonlinearity*/);
+    GanglionCell ganglion(&integrator, &Kt/*, &staticNonlinearity*/);
     RelayCell relay(&integrator);
 //    CorticalCell cortical(&integrator);
 //    Interneuron interneuron(&integrator);
@@ -66,7 +69,7 @@ int main()
 //    neurons.push_back(&interneuron);
 
     //connect neurons----------------------------------------------------------
-    relay.addGanglionCell(&ganglion, &dog, &Kt_cr);
+    relay.addGanglionCell(&ganglion, &Kt);
 //    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
 //    relay.addInterNeuron(&interneuron,&gauss, &damped);
 

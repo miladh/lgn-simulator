@@ -2,7 +2,7 @@
 #define GAUSSIANMASKGRATING_H
 
 #include "grating.h"
-#include "spatialKernels/dog.h"
+#include "kernels/spatialKernels/dog.h"
 
 namespace lgnSimulator {
 class GaussianMaskGrating : public Grating

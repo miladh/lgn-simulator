@@ -34,6 +34,5 @@ DOG createSpatialDOGKernel(const YAML::Node *cfg)
     double B = (*cfg)["B"].as<double>();
     double b = (*cfg)["b"].as<double>();
 
-
     return DOG(A, a, B, b);
 }

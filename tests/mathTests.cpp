@@ -6,7 +6,7 @@
  * ********************************************************************/
 
 #include <unittest++/UnitTest++.h>
-#include "spatialKernels/dog.h"
+#include "kernels/spatialKernels/dog.h"
 
 
 using namespace lgnSimulator;

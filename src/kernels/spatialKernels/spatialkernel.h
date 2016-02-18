@@ -3,7 +3,6 @@
 
 #include <armadillo>
 #include <yaml-cpp/yaml.h>
-
 #include "math/functions.h"
 
 using namespace std;

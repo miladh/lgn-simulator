@@ -1,8 +1,8 @@
 #ifndef KERNELSETTINGS_H
 #define KERNELSETTINGS_H
 
-#include "temporalKernels/temporalkernel.h"
-#include "spatialKernels/spatialkernel.h"
+#include "kernels/temporalKernels/temporalkernel.h"
+#include "kernels/spatialKernels/spatialkernel.h"
 
 using namespace lgnSimulator;
 

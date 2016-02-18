@@ -24,7 +24,17 @@ class Cell:
                 # print property, space, data[str(space)].shape
             setattr(self, property, data)
 
+    def zeroOutsmallValues(self):
+       for attr in dir(self):
+           if not attr.startswith('__') and not callable(getattr(self,attr)):
+               property_dict = getattr(self, attr)
 
+               for item in property_dict:
+                #    low_values_indices = property_dict[item]< 1.0e-10
+                #    print property_dict[item].shape, low_values_indices.shape, item
+                   property_dict[item][property_dict[item]< 1.0e-10] = 0.0
+
+               setattr(self, attr, property_dict)
 
     def normalize(self):
         for attr in dir(self):

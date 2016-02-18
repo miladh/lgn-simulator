@@ -1,11 +1,12 @@
 #include "kernelsettings.h"
 
-#include "spatialKernels/dog.h"
-#include "spatialKernels/ellipticgaussian.h"
+#include "kernels/separablekernel.h"
+#include "kernels/spatialKernels/dog.h"
+#include "kernels/spatialKernels/ellipticgaussian.h"
 
-#include "temporalKernels/decayingexponential.h"
-#include "temporalKernels/dampedoscillator.h"
-#include "temporalKernels/temporallyconstant.h"
+#include "kernels/temporalKernels/decayingexponential.h"
+#include "kernels/temporalKernels/dampedoscillator.h"
+#include "kernels/temporalKernels/temporallyconstant.h"
 
 KernelSettings::KernelSettings()
 {

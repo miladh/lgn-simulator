@@ -37,26 +37,28 @@ int main(int argc, char* argv[])
     unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
 
 
-    //Spatial kernels:---------------------------------------------------------
+    //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(&spatialKernelSettings);
-    DOG Ks_rig = createSpatialDOGKernel(&spatialKernelSettings);
-
-    //Temporal kernels:--------------------------------------------------------
     TemporallyConstant Kt_rg = createTemporallyConstantKernel(&temporalKernelSettings);
+    SeparableKernel Krg(&Ks_rg, &Kt_rg);
+
+    DOG Ks_rig = createSpatialDOGKernel(&spatialKernelSettings);
     TemporallyConstant Kt_rig = createTemporallyConstantKernel(&temporalKernelSettings);
+    SeparableKernel Krig(&Ks_rig, &Kt_rig);
 
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
     TemporallyConstant Wg_t = createTemporallyConstantKernel(&ganglionImpRes);
-    GanglionCell ganglion(&integrator, &Wg_s, &Wg_t);
+    SeparableKernel Wg(&Wg_s, &Wg_t);
+    GanglionCell ganglion(&integrator, &Wg);
 
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(&integrator);
 
     //Connect neurons:---------------------------------------------------------
-    relay.addGanglionCell(&ganglion, &Ks_rg, &Kt_rg);
-    relay.addGanglionCell(&ganglion, &Ks_rig, &Kt_rig);
+    relay.addGanglionCell(&ganglion, &Krg);
+    relay.addGanglionCell(&ganglion, &Krig);
 
     //Compute:-----------------------------------------------------------------
     S->computeSpatiotemporal();

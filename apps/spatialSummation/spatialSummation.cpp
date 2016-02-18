@@ -35,15 +35,13 @@ int main(int argc, char* argv[])
     unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
 
 
-    //Spatial kernels:----------------------------------------------------------
+    //Kernels:----------------------------------------------------------
     DOG dog = createSpatialDOGKernel(&cfg);
-
-
-    //Temporal kernels:-------------------------------------------------------
     TemporalDelta temporalDelta = createTemporalDeltaKernel(&cfg);
+    SeparableKernel Wg(&dog, &temporalDelta);
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &dog, &temporalDelta);
+    GanglionCell ganglion(&integrator, &Wg);
 
 
 

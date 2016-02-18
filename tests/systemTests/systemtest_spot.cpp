@@ -9,8 +9,9 @@
 #include <unittest++/UnitTest++.h>
 #include "integrator.h"
 #include "neurons/ganglioncell.h"
-#include "spatialKernels/dog.h"
-#include "temporalKernels/temporallyconstant.h"
+#include "kernels/separablekernel.h"
+#include "kernels/spatialKernels/dog.h"
+#include "kernels/temporalKernels/temporallyconstant.h"
 #include "stimuli/grating/circlemaskgrating.h"
 
 using namespace lgnSimulator;
@@ -55,9 +56,10 @@ SUITE(SYSTEM){
         //Kernels
         DOG Ks(A, a, B, b);
         TemporallyConstant Kt(t0);
+        SeparableKernel K(&Ks, &Kt);
 
         //Cell
-        GanglionCell ganglion(&integrator, &Ks, &Kt);
+        GanglionCell ganglion(&integrator, &K);
 
         //Compute analytic:
         double Rg_ex = response(S.maskSize(), t0*C,  A, a, B, b) ;

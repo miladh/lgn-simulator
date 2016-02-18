@@ -45,7 +45,8 @@ int main(int argc, char* argv[])
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
     TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
-    GanglionCell ganglion(&integrator, &Wg_s, &Wg_t);
+    SeparableKernel Wg(&Wg_s, &Wg_t);
+    GanglionCell ganglion(&integrator, &Wg);
 
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(&integrator);
@@ -61,11 +62,15 @@ int main(int argc, char* argv[])
     TemporalDelta Kt_cr = createTemporalDeltaKernel(&Kt_crSettings);
     TemporalDelta Kt_rc = createTemporalDeltaKernel(&Kt_rcSettings);
 
+    //Kernels:--------------------------------------------------------
+    SeparableKernel Krg(&Ks_rg, &Kt_rg);
+    SeparableKernel Krc(&Ks_rc, &Kt_rc);
+    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
 
     //Connect neurons:---------------------------------------------------------
-    relay.addGanglionCell(&ganglion, &Ks_rg, &Kt_rg);
-    relay.addCorticalNeuron(&cortical, &Ks_rc, &Kt_rc);
-    cortical.addRelayCell(&relay, &Ks_cr, &Kt_cr);
+    relay.addGanglionCell(&ganglion, &Krg);
+    relay.addCorticalNeuron(&cortical, &Krc);
+    cortical.addRelayCell(&relay, &Kcr);
 
 
     //Compute:-----------------------------------------------------------------

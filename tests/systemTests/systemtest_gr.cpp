@@ -7,7 +7,7 @@
 #include "integrator.h"
 
 #include "../tests/systemTests/kernelsettings.h"
-
+#include "kernels/separablekernel.h"
 SUITE(SYSTEM){
 
     TEST(ganglion_relay){
@@ -53,7 +53,8 @@ SUITE(SYSTEM){
             for(TemporalKernel* Ft : temporalKernels){
 
                 //ganglion cell
-                GanglionCell ganglion(&integrator, Fs, Ft);
+                SeparableKernel F(Fs, Ft);
+                GanglionCell ganglion(&integrator, &F);
                 complex<double> Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
 
                 for(SpatialKernel* Ks : spatialKernels){
@@ -63,7 +64,8 @@ SUITE(SYSTEM){
                         RelayCell relay(&integrator);
 
                         //connect
-                        relay.addGanglionCell(&ganglion, Ks, Kt);
+                        SeparableKernel K(Ks, Kt);
+                        relay.addGanglionCell(&ganglion, &K);
 
 
                         //Compute analytic:

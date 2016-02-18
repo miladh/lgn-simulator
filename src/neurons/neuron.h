@@ -4,8 +4,7 @@
 
 #include "stimuli/stimuli.h"
 #include "integrator.h"
-#include "temporalKernels/temporalkernel.h"
-#include "spatialKernels/spatialkernel.h"
+#include "kernels/kernel.h"
 #include "staticNonlinearity/staticnonlinearity.h"
 
 
@@ -22,8 +21,7 @@ public:
 
     struct Input {
         Neuron *neuron;
-        SpatialKernel *spatialKernel;
-        TemporalKernel *temporalKernel;
+        Kernel *kernel;
     };
 
 
@@ -36,20 +34,10 @@ public:
 
 
     // Add cell functions
-    void addGanglionCell(Neuron *neuron,
-                         SpatialKernel *sKernel,
-                         TemporalKernel *tKernel);
-
-    void addRelayCell(Neuron *neuron,
-                      SpatialKernel *sKernel,
-                      TemporalKernel *tKernel);
-
-    void addInterNeuron(Neuron *neuron,
-                        SpatialKernel *sKernel,
-                        TemporalKernel *tKernel);
-    void addCorticalNeuron(Neuron *neuron,
-                           SpatialKernel *sKernel,
-                           TemporalKernel *tKernel);
+    void addGanglionCell(Neuron *neuron, Kernel *kernel);
+    void addRelayCell(Neuron *neuron, Kernel *kernel);
+    void addInterNeuron(Neuron *neuron,Kernel *kernel);
+    void addCorticalNeuron(Neuron *neuron, Kernel *kernel);
 
 
     // Getter member functions

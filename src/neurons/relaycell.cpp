@@ -76,8 +76,7 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
     //Feedforward ganglion input
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
-        ganglionFF += g.spatialKernel->fourierTransform(kVec)
-                * g.temporalKernel->fourierTransform(w)
+        ganglionFF += g.kernel->fourierTransform(kVec,w)
                 * ganglionCell->impulseResponseFourierTransform()(idx,jdx,kdx);
     }
 
@@ -86,15 +85,13 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
     //Interneuron input
     for (const Input i : m_interNeurons){
         Neuron *interneuron = i.neuron;
-        complex<double> Kri = i.spatialKernel->fourierTransform(kVec)
-                * i.temporalKernel->fourierTransform(w);
+        complex<double> Kri = i.kernel->fourierTransform(kVec,w);
 
 
         //Feedforward term
         for (const Input g : interneuron->ganglionCells()){
             Neuron *ganglionCell = g.neuron;
-            interneuronFF += g.spatialKernel->fourierTransform(kVec)
-                    * g.temporalKernel->fourierTransform(w)
+            interneuronFF += g.kernel->fourierTransform(kVec,w)
                     * ganglionCell->impulseResponseFourierTransform()(idx,jdx,kdx);
         }
         interneuronFF*= Kri;
@@ -102,13 +99,11 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
         //Feedback term
         for (const Input c : interneuron->corticalNeurons()){
             Neuron *corticalCell = c.neuron;
-            complex<double> Kic = c.spatialKernel->fourierTransform(kVec)
-                    * c.temporalKernel->fourierTransform(w);
+            complex<double> Kic = c.kernel->fourierTransform(kVec,w);
 
             // NOTE: ONLY ONE RELAY CELL!!!
             for (const Input r : corticalCell->relayCells()){
-                complex<double> Kcr = r.spatialKernel->fourierTransform(kVec)
-                        * r.temporalKernel->fourierTransform(w);
+                complex<double> Kcr = r.kernel->fourierTransform(kVec,w);
                 interneuronFB += Kri*Kic*Kcr;
             }
 
@@ -122,13 +117,11 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
     complex<double> Krc = 0.0;
     for (const Input c : m_corticalNeurons){
         Neuron *corticalCell = c.neuron;
-        Krc = c.spatialKernel->fourierTransform(kVec)
-                * c.temporalKernel->fourierTransform(w);
+        Krc = c.kernel->fourierTransform(kVec,w);
 
         // NOTE: ONLY ONE RELAY CELL!!!
         for (const Input r : corticalCell->relayCells()){
-            Kcr = r.spatialKernel->fourierTransform(kVec)
-                    * r.temporalKernel->fourierTransform(w);
+            Kcr = r.kernel->fourierTransform(kVec,w);
         }
         corticalFB += Krc * Kcr;
     }

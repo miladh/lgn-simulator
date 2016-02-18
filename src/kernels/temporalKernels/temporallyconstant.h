@@ -1,7 +1,7 @@
 #ifndef TEMPORALLYCONSTANT_H
 #define TEMPORALLYCONSTANT_H
 
-#include "temporalKernels/temporalkernel.h"
+#include "kernels/temporalKernels/temporalkernel.h"
 
 
 namespace lgnSimulator {

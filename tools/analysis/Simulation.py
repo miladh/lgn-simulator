@@ -11,14 +11,8 @@ class Simulation:
 
     """
     def __init__(self, h5_file):
-        # self.num_steps = h5_file.attrs["nSteps"]
-        # self.num_points = h5_file.attrs["nPoints"]
-        # self.dt = h5_file.attrs["dt"]
-        # self.ds = h5_file.attrs["ds"]
-        # self.time_vec = np.arange(0, self.num_steps*self.dt, self.dt )
-
         self.cell_types = []
-
+        self.simulation_file = h5_file
         ########################## Read file ###################################
         for item in h5_file.keys():
             if(item == "stimulus"):
@@ -33,7 +27,13 @@ class Simulation:
                 self.cell_types.append(item)
         ########################################################################
         self.num_cell_types  = len(self.cell_types)
+        # self.zeroOutsmallValues()
         # self.normalize()
+
+    def zeroOutsmallValues(self):
+        for cell in self.cell_types:
+            cell_type = getattr(self, cell)
+            cell_type.zeroOutsmallValues()
 
     def normalize(self):
         for cell in self.cell_types:

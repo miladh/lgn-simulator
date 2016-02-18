@@ -118,13 +118,14 @@ def animateImshowPlots(data,
             ax.set_title(data[k]["type"])
 
             imshowPlots.append(ax.imshow(data[k]["value"][0,:,:], cmap=cmap,
-            interpolation="None",)) #vmin=0.0, #vmax=-1
+                               interpolation="None",
+                               vmin = (data[k]["value"]).min(),
+                               vmax = (data[k]["value"]).max()))
 
             if(colorbar):
                 divider = make_axes_locatable(ax)
                 cax = divider.append_axes("right", size="5%", pad=0.05)
-                plt.colorbar(imshowPlots[-1], ax=ax, orientation='vertical',
-                cax = cax)
+                plt.colorbar(imshowPlots[-1], ax=ax, orientation='vertical',cax = cax)
 
 
             k+=1
@@ -159,7 +160,7 @@ def imshowPlotsOfImpulseResponses(data,
     num_cols = len(data)
     num_rows = int(x_imshow) + int(y_imshow)
 
-    fig,axarr=plt.subplots(num_rows, num_cols, figsize=figsize, sharex=True, sharey=True)
+    fig,axarr=plt.subplots(num_rows, num_cols, figsize=figsize, sharey=True)
 
     for j in range(num_cols):
         axarr[0,j].set_title(data[j]["type"])
@@ -170,8 +171,8 @@ def imshowPlotsOfImpulseResponses(data,
                     data[j]["time_vec"][0],data[j]["time_vec"][-1]]
             im = axarr[i,j].imshow(data[j]["value"][:,idy,:], extent= extent,
                                    cmap=cmap, origin="lower", aspect="auto")
-            axarr[i,0].set_xlabel(r"$x(\theta)$")
-            axarr[-1,j].set_ylabel(r"$\tau(ms)$")
+            axarr[i,j].set_xlabel(r"$x(\theta)$")
+            axarr[i,0].set_ylabel(r"$\tau(ms)$")
 
             if(colorbar):
                 fig.colorbar(im, ax=axarr[i,j],orientation='horizontal')
@@ -182,8 +183,8 @@ def imshowPlotsOfImpulseResponses(data,
                     data[j]["time_vec"][0],data[j]["time_vec"][-1]]
             im = axarr[i,j].imshow(data[j]["value"][:,:,idx], extent= extent,
                                    cmap=cmap, origin="lower",aspect="auto")
-            axarr[i,0].set_xlabel(r"$y(\theta)$")
-            axarr[-1,j].set_ylabel(r"$\tau(ms)$")
+            axarr[i,j].set_xlabel(r"$y(\theta)$")
+            axarr[i,0].set_ylabel(r"$\tau(ms)$")
 
             if(colorbar):
                 fig.colorbar(im, ax=axarr[i,j], orientation='horizontal')
@@ -200,7 +201,7 @@ def imshowPlotsOfImpulseResponses(data,
 def plot3dOfImpulseResponses(data,
                              x_3d=True,
                              y_3d=True,
-                             num_skip = 10,
+                             num_skip = 2,
                              idx=0,
                              idy=0,
                              figsize=(15,10),
@@ -218,7 +219,6 @@ def plot3dOfImpulseResponses(data,
 
 
     fig = plt.figure(figsize=figsize)
-    p=2
     for j in range(num_cols):
         S = data[j]["spatial_vec"]
         T = data[j]["time_vec"]
@@ -230,11 +230,15 @@ def plot3dOfImpulseResponses(data,
                                    T[::num_skip,::num_skip],
                                    data[j]["value"][::num_skip, idy, ::num_skip],
                                    cmap=cmap, edgecolors="k", alpha=0.9, shade=False,
+                                   vmin = (data[j]["value"]).min(),
+                                   vmax = (data[j]["value"]).max(),
                                    rstride=1, cstride=1, linewidth=0.0, antialiased=False)
             ax.set_title(data[j]["type"])
             ax.set_ylabel(r"$x(\theta)$")
             ax.set_xlabel(r"$\tau(ms)$")
             ax.set_zlabel(r"$W$")
+            ax.set_zlim3d(np.min(data[j]["value"][::num_skip, idy, ::num_skip]),
+                          np.max(data[j]["value"][::num_skip, idy, ::num_skip]))
             ax.view_init(elev=46., azim=130)
             if(colorbar):
                 cbar = plt.colorbar(surf, ax=ax, orientation='horizontal')
@@ -245,11 +249,15 @@ def plot3dOfImpulseResponses(data,
                                    T[::num_skip,::num_skip],
                                    data[j]["value"][::num_skip, ::num_skip, idx],
                                    cmap=cmap, edgecolors="k", alpha=0.9, shade=False,
+                                   vmin = (data[j]["value"]).min(),
+                                   vmax = (data[j]["value"]).max(),
                                    rstride=1, cstride=1, linewidth=0.0, antialiased=False)
             ax.set_title(data[j]["type"])
             ax.set_ylabel(r"$y(\theta)$")
             ax.set_xlabel(r"$\tau(ms)$")
             ax.set_zlabel(r"$W$")
+            ax.set_zlim3d(np.min(data[j]["value"][::num_skip, ::num_skip, idx]),
+                          np.max(data[j]["value"][::num_skip, ::num_skip, idx]))
             ax.view_init(elev=46., azim=130)
             if(colorbar):
                 fig.colorbar(surf, ax=ax, orientation='horizontal')
@@ -267,9 +275,9 @@ def plot3dOfImpulseResponses(data,
 def line3dPlotsOfImpulseResponses(data,
                                   x_line3d=True,
                                   y_line3d=True,
-                                  line_step = 10,
-                                  idx=0,
-                                  idy=0,
+                                  num_skip = 10,
+                                  idx=64,
+                                  idy=64,
                                   figsize = (14,8),
                                   cmap = cmaps.inferno,
                                   colorbar = False,
@@ -285,7 +293,7 @@ def line3dPlotsOfImpulseResponses(data,
 
     fig = plt.figure(figsize=figsize)
     for j in range(num_cols):
-        ids = range(0, len(data[j]["spatial_vec"]), line_step)
+        ids = range(0, len(data[j]["spatial_vec"]), num_skip)
         i=0
         if(x_line3d):
             ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
@@ -298,8 +306,8 @@ def line3dPlotsOfImpulseResponses(data,
             ax.set_title(data[j]["type"])
             ax.set_xlabel(r"$\tau(ms)$")
             ax.set_ylabel(r"$x(\theta)$")
-            ax.set_zlabel(r"$W$")
-
+            ax.set_zlabel(r"$W(x, y_a, \tau)$")
+            # ax.view_init(elev=17., azim=128)
             ax.set_xlim3d(data[j]["time_vec"][0], data[j]["time_vec"][-1])
             ax.set_ylim3d(data[j]["spatial_vec"][0], data[j]["spatial_vec"][-1])
             ax.set_zlim3d(np.min(data[j]["value"][:,idy, ids]),
@@ -316,12 +324,12 @@ def line3dPlotsOfImpulseResponses(data,
             ax.set_title(data[j]["type"])
             ax.set_xlabel(r"$\tau(ms)$")
             ax.set_ylabel(r"$y(\theta)$")
-            ax.set_zlabel(r"$W$")
-
+            ax.set_zlabel(r"$W(x_a, y, \tau)$")
+            # ax.view_init(elev=17., azim=128)
             ax.set_xlim3d(data[j]["time_vec"][0], data[j]["time_vec"][-1])
             ax.set_ylim3d(data[j]["spatial_vec"][0], data[j]["spatial_vec"][-1])
-            ax.set_zlim3d(np.min(data[j]["value"][:,idy, ids]),
-                          np.max(data[j]["value"][:,idy, ids]))
+            ax.set_zlim3d(np.min(data[j]["value"][:,ids, idx]),
+                          np.max(data[j]["value"][:,ids, idx]))
 
             i+=1
     plt.tight_layout()
@@ -340,6 +348,9 @@ if __name__ == "__main__":
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
+
+    Ns = exp.integrator.nPointsSpatial
+    Nt = exp.integrator.nPointsTemporal
 
     S = {"type" : "Stimulus",
             "value" : exp.stimulus.spatioTemporal,
@@ -381,13 +392,13 @@ if __name__ == "__main__":
                  "spatial_vec" : exp.integrator.spatialVec
                 }
 
+    data = [Wg, Wr, Wc ]
+    # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2)
+    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=10)
+    # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=False, num_skip=5, idx=Ns/2, idy=Ns/2)
+
     data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
-    # animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True,
-    # save_animation = False, animation_name = "rat")
+    animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True,
+    save_animation = False, animation_name = "rat")
 
-    data = [Wg, Wr, Wc]
-
-    imshowPlotsOfImpulseResponses(data)
-    line3dPlotsOfImpulseResponses(data)
-    plot3dOfImpulseResponses(data, colorbar=True)
     plt.show()

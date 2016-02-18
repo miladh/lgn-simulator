@@ -9,6 +9,7 @@
 #include "integrator.h"
 
 #include "../tests/systemTests/kernelsettings.h"
+#include "kernels/separablekernel.h"
 
 SUITE(SYSTEM){
 
@@ -61,7 +62,8 @@ SUITE(SYSTEM){
             for(TemporalKernel* Ft : temporalKernels){
 
                 //ganglion cell
-                GanglionCell ganglion(&integrator, Fs, Ft);
+                SeparableKernel F(Fs, Ft);
+                GanglionCell ganglion(&integrator,&F);
                 complex<double> Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
 
 
@@ -82,13 +84,14 @@ SUITE(SYSTEM){
                 //--------Loop G-R connection-----------
                 for(SpatialKernel* Ks_rg : spatialKernels){
                     for(TemporalKernel* Kt_rg : temporalKernels){
-
+                        SeparableKernel K_rg(Ks_rg, Kt_rg);
                         complex<double> Krg =  Ks_rg->fourierTransform({kx, ky})
                                 * Kt_rg->fourierTransform(wd);
 
                         //--------Loop G-I connection-----------
                         for(SpatialKernel* Ks_ig : spatialKernels){
                             for(TemporalKernel* Kt_ig : temporalKernels){
+                                SeparableKernel K_ig(Ks_ig, Kt_ig);
 
                                 complex<double> Kig =  Ks_ig->fourierTransform({kx, ky})
                                         * Kt_ig->fourierTransform(wd);
@@ -96,6 +99,7 @@ SUITE(SYSTEM){
                                 //--------Loop I-R connection-----------
                                 for(SpatialKernel* Ks_ri : spatialKernels){
                                     for(TemporalKernel* Kt_ri : temporalKernels){
+                                        SeparableKernel K_ri(Ks_ri, Kt_ri);
 
                                         complex<double> Kri =  Ks_ri->fourierTransform({kx, ky})
                                                 * Kt_ri->fourierTransform(wd);
@@ -103,6 +107,7 @@ SUITE(SYSTEM){
                                         //--------Loop R-C and C-R connection---------
                                         for(SpatialKernel* Ks_rc : spatialKernels){
                                             for(TemporalKernel* Kt_rc : temporalKernels){
+                                                SeparableKernel K_rc(Ks_rc, Kt_rc);
 
                                                 complex<double> Krc =  Ks_rc->fourierTransform({kx, ky})
                                                         * Kt_rc->fourierTransform(wd);
@@ -112,6 +117,7 @@ SUITE(SYSTEM){
                                                 //--------Loop C-I connection-----------
                                                 for(SpatialKernel* Ks_ic : spatialKernels){
                                                     for(TemporalKernel* Kt_ic : temporalKernels){
+                                                        SeparableKernel K_ic(Ks_ic, Kt_ic);
 
                                                         complex<double> Kic =  Ks_ic->fourierTransform({kx, ky})
                                                                 * Kt_ic->fourierTransform(wd);
@@ -123,14 +129,14 @@ SUITE(SYSTEM){
 
 
                                                         //connect cells
-                                                        relay.addGanglionCell(&ganglion, Ks_rg, Kt_rg);
-                                                        relay.addInterNeuron(&interneuron,  Ks_ri, Kt_ri);
-                                                        relay.addCorticalNeuron(&cortical,  Ks_rc, Kt_rc);
+                                                        relay.addGanglionCell(&ganglion, &K_rg);
+                                                        relay.addInterNeuron(&interneuron,  &K_ri);
+                                                        relay.addCorticalNeuron(&cortical,  &K_rc);
 
-                                                        interneuron.addGanglionCell(&ganglion, Ks_ig, Kt_ig);
-                                                        interneuron.addCorticalNeuron(&cortical,  Ks_ic, Kt_ic);
+                                                        interneuron.addGanglionCell(&ganglion, &K_ig);
+                                                        interneuron.addCorticalNeuron(&cortical,  &K_ic);
 
-                                                        cortical.addRelayCell(&relay, Ks_rc, Kt_rc);
+                                                        cortical.addRelayCell(&relay, &K_rc);
 
 
                                                         //Compute analytic:

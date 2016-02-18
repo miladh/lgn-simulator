@@ -11,7 +11,7 @@
 #include <iostream>
 
 #include "integrator.h"
-#include "spatialKernels/dog.h"
+#include "kernels/spatialKernels/dog.h"
 
 
 using namespace std;
