@@ -50,7 +50,7 @@ SUITE(SYSTEM){
             for(TemporalKernel* Kt : temporalKernels){
                 SeparableKernel K(Ks, Kt);
                 //Cell
-                GanglionCell ganglion(&integrator, &K);
+                GanglionCell ganglion(integrator, &K);
 
                 //Compute analytic:
                 complex<double> W = Ks->fourierTransform({kx, ky}) * Kt->fourierTransform(wd);

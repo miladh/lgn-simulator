@@ -10,24 +10,24 @@ using namespace lgnSimulator;
  */
 
 
-Neuron::Neuron(Integrator *integrator, double backgroundResponse,
+Neuron::Neuron(const Integrator& integrator, double backgroundResponse,
                StaticNonlinearity *staticNonlinearity)
     : m_integrator(integrator)
     , m_staticNonlinearity(staticNonlinearity)
     , m_backgroundResponse(backgroundResponse)
 {
-    int nPointsTemporal = integrator->nPointsTemporal();
-    int nPointsSpatial = integrator->nPointsSpatial();
+    int nPointsTemporal = integrator.nPointsTemporal();
+    int nPointsSpatial = integrator.nPointsSpatial();
 
     m_impulseResponseFT=zeros<cx_cube>(nPointsSpatial,nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
-    m_timeVec = integrator->timeVec();
-    m_temporalFreqs = integrator->temporalFreqVec();
+    m_timeVec = integrator.timeVec();
+    m_temporalFreqs = integrator.temporalFreqVec();
 
     //Spatial Mesh
-    m_spatialVec = integrator->spatialVec();
-    m_spatialFreqs =integrator->spatialFreqVec();
+    m_spatialVec = integrator.spatialVec();
+    m_spatialFreqs =integrator.spatialFreqVec();
 }
 
 Neuron::~Neuron()
@@ -45,12 +45,12 @@ void Neuron::computeResponse(Stimulus *stimulus)
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
     if(m_backgroundResponse!=0){ //add DC contribution from bck activity
         m_responseFT(0,0,0) += 8*PI*PI*PI * m_backgroundResponse
-            /m_integrator->spatialFreqResolution()
-            /m_integrator->spatialFreqResolution()
-            /m_integrator->temporalFreqResolution();
+            /m_integrator.spatialFreqResolution()
+            /m_integrator.spatialFreqResolution()
+            /m_integrator.temporalFreqResolution();
     }
 
-    m_response = real(m_integrator->backwardFFT(m_responseFT));
+    m_response = real(m_integrator.backwardFFT(m_responseFT));
 
     if(m_staticNonlinearity != nullptr){
         m_staticNonlinearity->applyStaticNonlinearity(&m_response);
@@ -64,7 +64,7 @@ void Neuron::computeImpulseResponse()
     if(!impulseResponseFourierTransformComputed){
         computeImpulseResponseFourierTransform();
     }
-    m_impulseResponse = real(m_integrator->backwardFFT(m_impulseResponseFT));
+    m_impulseResponse = real(m_integrator.backwardFFT(m_impulseResponseFT));
 
 }
 

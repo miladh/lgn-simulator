@@ -4,7 +4,7 @@
 using namespace lgnSimulator;
 
 
-Interneuron::Interneuron(Integrator *integrator, double backgroundResponse)
+Interneuron::Interneuron(const Integrator &integrator, double backgroundResponse)
     : Neuron(integrator, backgroundResponse)
 {
     m_cellType = "interneuron";

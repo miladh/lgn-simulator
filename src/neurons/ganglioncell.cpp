@@ -3,7 +3,7 @@
 using namespace lgnSimulator;
 
 
-GanglionCell::GanglionCell(Integrator *integrator,
+GanglionCell::GanglionCell(const Integrator &integrator,
                            Kernel *kernel,
                            double backgroundResponse,
                            StaticNonlinearity *staticNonlinearity)

@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
     OutputManager io(&outputFilename);
 
     //Integrator-------------------------------------------------------------
-    Integrator integrator = createIntegrator(&cfg);
+    Integrator integrator = createIntegrator(cfg);
 
     //Stim---------------------------------------------------------------------
     unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
     SeparableKernel Wg(&dog, &temporalDelta);
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &Wg);
+    GanglionCell ganglion(integrator, &Wg);
 
 
 

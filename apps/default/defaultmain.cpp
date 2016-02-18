@@ -24,7 +24,7 @@ int main()
     OutputManager io(&outputFilename);
 
     //Integrator-------------------------------------------------------------
-    Integrator integrator = createIntegrator(&cfg);
+    Integrator integrator = createIntegrator(cfg);
 
 //    Stim---------------------------------------------------------------------
 //        unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(&integrator,&cfg);
@@ -57,8 +57,8 @@ int main()
     SeparableKernel Kt(&dog, &Kt_cr);
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(&integrator, &Kt/*, &staticNonlinearity*/);
-    RelayCell relay(&integrator);
+    GanglionCell ganglion(integrator, &Kt/*, &staticNonlinearity*/);
+    RelayCell relay(integrator);
 //    CorticalCell cortical(&integrator);
 //    Interneuron interneuron(&integrator);
 

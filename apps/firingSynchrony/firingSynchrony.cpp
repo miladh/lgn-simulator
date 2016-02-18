@@ -40,7 +40,7 @@ int main(int argc, char* argv[]){
     OutputManager io(&outputFilename);
 
     //Integrator--------------------------------------------------------------
-    Integrator integrator = createIntegrator(&cfg);
+    Integrator integrator = createIntegrator(cfg);
 
     //Stim---------------------------------------------------------------------
     unique_ptr<Grating> S = createGratingStimulus(&integrator, &cfg);
@@ -49,11 +49,11 @@ int main(int argc, char* argv[]){
     DOG Wg_s = createSpatialDOGKernel(&ganglionImpRes);
     TemporalDelta Wg_t = createTemporalDeltaKernel(&ganglionImpRes);
     SeparableKernel Wg(&Wg_s, &Wg_t);
-    GanglionCell ganglion(&integrator, &Wg, Rg_0);
+    GanglionCell ganglion(integrator, &Wg, Rg_0);
 
     //Relay cell: -------------------------------------------------------------
-    RelayCell relay(&integrator, Rr_0);
-    CorticalCell cortical(&integrator, Rc_0);
+    RelayCell relay(integrator, Rr_0);
+    CorticalCell cortical(integrator, Rc_0);
 
     //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(&Ks_rgSettings);

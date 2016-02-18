@@ -3,7 +3,7 @@
 using namespace lgnSimulator;
 
 
-CorticalCell::CorticalCell(Integrator* integrator, double backgroundResponse)
+CorticalCell::CorticalCell(const Integrator& integrator, double backgroundResponse)
     : Neuron(integrator, backgroundResponse)
 {
     m_cellType = "cortical";

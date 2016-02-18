@@ -9,7 +9,7 @@ class CorticalCell : public Neuron
     friend class RelayCell;
 
 public:
-    CorticalCell(Integrator *integrator, double backgroundResponse = 0);
+    CorticalCell(const Integrator &integrator, double backgroundResponse = 0);
     ~CorticalCell();
 
     // Neuron interface

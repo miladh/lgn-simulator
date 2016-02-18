@@ -63,7 +63,7 @@ SUITE(SYSTEM){
 
                 //ganglion cell
                 SeparableKernel F(Fs, Ft);
-                GanglionCell ganglion(&integrator,&F);
+                GanglionCell ganglion(integrator,&F);
                 complex<double> Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
 
 
@@ -123,9 +123,9 @@ SUITE(SYSTEM){
                                                                 * Kt_ic->fourierTransform(wd);
 
                                                         //cells
-                                                        RelayCell relay(&integrator);
-                                                        Interneuron interneuron(&integrator);
-                                                        CorticalCell cortical(&integrator);
+                                                        RelayCell relay(integrator);
+                                                        Interneuron interneuron(integrator);
+                                                        CorticalCell cortical(integrator);
 
 
                                                         //connect cells

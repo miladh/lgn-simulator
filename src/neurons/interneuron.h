@@ -9,7 +9,7 @@ class Interneuron : public Neuron
     friend class RelayCell;
 
 public:
-    Interneuron(Integrator *integrator, double backgroundResponse= 0);
+    Interneuron(const Integrator &integrator, double backgroundResponse= 0);
     ~Interneuron();
 
     // Neuron interface

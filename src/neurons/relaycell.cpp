@@ -10,7 +10,7 @@ using namespace lgnSimulator;
  *
  */
 
-RelayCell::RelayCell(Integrator *integrator, double backgroundResponse)
+RelayCell::RelayCell(const Integrator &integrator, double backgroundResponse)
     : Neuron(integrator, backgroundResponse)
 
 {

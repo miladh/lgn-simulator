@@ -21,11 +21,11 @@ public:
     Integrator(int nt, double temporalResolution, int ns, double spatialResolution);
     ~Integrator();
 
-    cx_cube backwardFFT(cx_cube data);
-    cx_mat backwardFFT(cx_mat data);
+    cx_cube backwardFFT(cx_cube data) const;
+    cx_mat backwardFFT(cx_mat data) const;
 
-    cx_cube forwardFFT(cx_cube data);
-    cx_mat forwardFFT(cx_mat data);
+    cx_cube forwardFFT(cx_cube data) const;
+    cx_mat forwardFFT(cx_mat data) const;
 
     vec timeVec() const;
     vec spatialVec() const;
@@ -67,6 +67,6 @@ private:
 };
 }
 
-lgnSimulator::Integrator createIntegrator(const YAML::Node *cfg);
+lgnSimulator::Integrator createIntegrator(const YAML::Node &cfg);
 
 #endif // INTEGRATOR_H

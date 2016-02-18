@@ -20,7 +20,8 @@ Integrator::Integrator(int nt, double dt, int ns, double ds)
     m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt)*2*PI;
 
     //Spatial Grid
-    m_spatialVec = linspace(-m_nPointsSpatial/2 , (m_nPointsSpatial-1)/2, m_nPointsSpatial)*m_ds;
+    m_spatialVec = linspace(-m_nPointsSpatial/2, (m_nPointsSpatial-1)/2,
+                            m_nPointsSpatial)*m_ds;
     m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds)*2*PI;
 
 }
@@ -29,7 +30,7 @@ Integrator::~Integrator()
 {
 }
 
-cx_cube Integrator::backwardFFT(cx_cube data)
+cx_cube Integrator::backwardFFT(cx_cube data) const
 {
     cx_cube fftData = 0 * data;
     int size[3] = {int(data.n_slices), int(data.n_cols), int(data.n_rows)};
@@ -72,7 +73,7 @@ cx_cube Integrator::backwardFFT(cx_cube data)
 
 
 
-cx_cube Integrator::forwardFFT(cx_cube data)
+cx_cube Integrator::forwardFFT(cx_cube data) const
 {
     //fftShift
     for(int i = 0; i < int(data.n_slices); i++){
@@ -93,7 +94,7 @@ cx_cube Integrator::forwardFFT(cx_cube data)
 }
 
 
-cx_mat Integrator::backwardFFT(cx_mat data)
+cx_mat Integrator::backwardFFT(cx_mat data) const
 {
     cx_mat fftData = 0 * data;
     int size[2] = {int(data.n_cols), int(data.n_rows)};
@@ -114,7 +115,7 @@ cx_mat Integrator::backwardFFT(cx_mat data)
 }
 
 
-cx_mat Integrator::forwardFFT(cx_mat data)
+cx_mat Integrator::forwardFFT(cx_mat data) const
 {
     //fftShift
     data = FFTHelper::fftShift(data);
@@ -197,12 +198,12 @@ double Integrator::spatialSamplingFreq() const
 }
 
 
-Integrator createIntegrator(const YAML::Node *cfg)
+Integrator createIntegrator(const YAML::Node &cfg)
 {
-    int nt = (*cfg)["nt"].as<int>();
-    int ns =(*cfg)["ns"].as<int>();
-    double dt = (*cfg)["dt"].as<double>();
-    double ds = (*cfg)["ds"].as<double>();
+    int nt = cfg["nt"].as<int>();
+    int ns = cfg["ns"].as<int>();
+    double dt = cfg["dt"].as<double>();
+    double ds = cfg["ds"].as<double>();
 
     return Integrator(nt, dt, ns, ds);
 

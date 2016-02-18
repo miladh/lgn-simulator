@@ -54,14 +54,14 @@ SUITE(SYSTEM){
 
                 //ganglion cell
                 SeparableKernel F(Fs, Ft);
-                GanglionCell ganglion(&integrator, &F);
+                GanglionCell ganglion(integrator, &F);
                 complex<double> Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
 
                 for(SpatialKernel* Ks : spatialKernels){
                     for(TemporalKernel* Kt : temporalKernels){
 
                         //relay cell
-                        RelayCell relay(&integrator);
+                        RelayCell relay(integrator);
 
                         //connect
                         SeparableKernel K(Ks, Kt);
