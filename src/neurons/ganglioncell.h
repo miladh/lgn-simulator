@@ -11,8 +11,8 @@ class GanglionCell : public Neuron
 {
 public:
     GanglionCell(const Integrator &integrator,
-                 Kernel *kernel,
-                 double backgroundResponse= 0,
+                 const Kernel &kernel,
+                 const double backgroundResponse= 0,
                  StaticNonlinearity *staticNonlinearity = nullptr);
     ~GanglionCell();
 
@@ -20,7 +20,7 @@ public:
     virtual void computeImpulseResponseFourierTransform();
 
 private:
-    Kernel *m_kernel;
+    const Kernel &m_kernel;
 
     double impulseResponseValueAtPoint(vec2 rVec, double t);
     complex<double> impulseResponseFourierTransformAtFrequency(vec2 kVec, double w);

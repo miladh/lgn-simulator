@@ -63,7 +63,7 @@ SUITE(SYSTEM){
 
                 //ganglion cell
                 SeparableKernel F(Fs, Ft);
-                GanglionCell ganglion(integrator,&F);
+                GanglionCell ganglion(integrator,F);
                 complex<double> Wg = Fs->fourierTransform({kx, ky}) * Ft->fourierTransform(wd);
 
 

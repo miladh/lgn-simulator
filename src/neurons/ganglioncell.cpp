@@ -4,8 +4,8 @@ using namespace lgnSimulator;
 
 
 GanglionCell::GanglionCell(const Integrator &integrator,
-                           Kernel *kernel,
-                           double backgroundResponse,
+                           const Kernel &kernel,
+                           const double backgroundResponse,
                            StaticNonlinearity *staticNonlinearity)
     : Neuron(integrator, backgroundResponse, staticNonlinearity)
     , m_kernel(kernel)
@@ -57,12 +57,12 @@ void GanglionCell::computeImpulseResponse()
 
 double GanglionCell::impulseResponseValueAtPoint(vec2 rVec, double t)
 {
-    return m_kernel->spatiotemporal(rVec,t);
+    return m_kernel.spatiotemporal(rVec,t);
 }
 
 complex<double> GanglionCell::impulseResponseFourierTransformAtFrequency(vec2 kVec,
                                                                          double w)
 {
-    return m_kernel->fourierTransform(kVec,w);
+    return m_kernel.fourierTransform(kVec,w);
 }
 

@@ -59,7 +59,7 @@ SUITE(SYSTEM){
         SeparableKernel K(&Ks, &Kt);
 
         //Cell
-        GanglionCell ganglion(integrator, &K);
+        GanglionCell ganglion(integrator, K);
 
         //Compute analytic:
         double Rg_ex = response(S.maskSize(), t0*C,  A, a, B, b) ;

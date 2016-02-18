@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
     TemporallyConstant Wg_t = createTemporallyConstantKernel(ganglionImpRes);
     SeparableKernel Wg(&Wg_s, &Wg_t);
-    GanglionCell ganglion(integrator, &Wg);
+    GanglionCell ganglion(integrator, Wg);
 
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(integrator);

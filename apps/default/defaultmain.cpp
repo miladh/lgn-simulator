@@ -57,7 +57,7 @@ int main()
     SeparableKernel Kt(&dog, &Kt_cr);
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(integrator, &Kt/*, &staticNonlinearity*/);
+    GanglionCell ganglion(integrator, Kt/*, &staticNonlinearity*/);
     RelayCell relay(integrator);
 //    CorticalCell cortical(&integrator);
 //    Interneuron interneuron(&integrator);

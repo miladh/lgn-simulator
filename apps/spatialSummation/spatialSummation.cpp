@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
     SeparableKernel Wg(&dog, &temporalDelta);
 
     //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(integrator, &Wg);
+    GanglionCell ganglion(integrator, Wg);
 
 
 
