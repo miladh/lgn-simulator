@@ -20,14 +20,14 @@ Integrator::Integrator(const int nt,
     , m_spatialFreqResolution(m_spatialSamplingFreq / m_nPointsSpatial)
 {
     //Temporal Grid
-    m_timeVec = linspace(0, m_nPointsTemporal-1,
-                         m_nPointsTemporal)*m_temporalResolution;
     m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_temporalResolution)*2*PI;
+    m_timeVec = linspace(0,m_nPointsTemporal-1,m_nPointsTemporal)
+                * m_temporalResolution;
 
     //Spatial Grid
-    m_spatialVec = linspace(-m_nPointsSpatial/2, (m_nPointsSpatial-1)/2,
-                            m_nPointsSpatial)*m_spatialResolution;
     m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_spatialResolution)*2*PI;
+    m_spatialVec = linspace(-m_nPointsSpatial/2,(m_nPointsSpatial-1)/2, m_nPointsSpatial)
+                  * m_spatialResolution;
 
 }
 
@@ -40,15 +40,6 @@ cx_cube Integrator::backwardFFT(cx_cube data) const
     cx_cube fftData = 0 * data;
     int size[3] = {int(data.n_slices), int(data.n_cols), int(data.n_rows)};
 
-//    for(int k = 0; k < int(fftData.n_slices); k++){
-//        for(int i = 0; i < int(fftData.n_cols); i++){
-//            for(int j = 0; j < int(fftData.n_rows); j++){
-//                data(i,j,k) *=pow(-1, i+j);
-//            }
-//        }
-//    }
-
-
     fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
     fftw_complex* out = reinterpret_cast<fftw_complex*> (fftData.memptr());
     fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
@@ -56,16 +47,10 @@ cx_cube Integrator::backwardFFT(cx_cube data) const
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-    fftData *= m_temporalFreqResolution*m_spatialFreqResolution*m_spatialFreqResolution
+    fftData *= m_temporalFreqResolution
+            * m_spatialFreqResolution
+            * m_spatialFreqResolution
             /8./PI/PI/PI;
-
-//    for(int k = 0; k < int(fftData.n_slices); k++){
-//        for(int i = 0; i < int(fftData.n_cols); i++){
-//            for(int j = 0; j < int(fftData.n_rows); j++){
-//                fftData(i,j,k) *=pow(-1, i+j);
-//            }
-//        }
-//    }
 
 
     //fftShift

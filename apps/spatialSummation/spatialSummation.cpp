@@ -11,7 +11,7 @@ using namespace lgnSimulator;
 int main(int argc, char* argv[])
 {
 
-    cout << "=====LGN Simulator Model=====" << endl;
+    cout << "=====LGN Simulator Model: Spatial summation=====" << endl;
     clock_t t;
     t = clock();
 
@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
 
 
     //Output manager:----------------------------------------------------------
-    OutputManager io(&outputFilename);
+    OutputManager io(outputFilename);
 
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(cfg);
@@ -52,14 +52,14 @@ int main(int argc, char* argv[])
     S->clearSpatioTemporal();
 
     ganglion.computeResponse(S.get());
-    io.writeResponse(&ganglion);
+    io.writeResponse(ganglion);
     ganglion.clearResponse();
 
     ganglion.computeImpulseResponse();
-    io.writeImpulseResponse(&ganglion);
+    io.writeImpulseResponse(ganglion);
     ganglion.clearImpulseResponse();
 
-    io.writeIntegratorProperties(&integrator);
+    io.writeIntegratorProperties(integrator);
 
     t = clock() - t;
     printf ("%f seconds.\n",((float)t)/CLOCKS_PER_SEC);

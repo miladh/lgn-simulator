@@ -8,36 +8,36 @@
 using namespace lgnSimulator;
 
 
-OutputManager::OutputManager(const string* filename)
+OutputManager::OutputManager(const string& filename)
 {
-    m_output = new H5File (*filename, H5F_ACC_TRUNC);
+    m_output = new H5File (filename, H5F_ACC_TRUNC);
 }
 OutputManager::~OutputManager()
 {
     delete m_output;
 }
 
-void OutputManager::writeIntegratorProperties(const Integrator *integrator)
+void OutputManager::writeIntegratorProperties(const Integrator &integrator)
 {
     // Write stimuli
     Group integratorGroup = m_output->createGroup("/integrator");
     vector <DataSet *>dataset;
 
-    int Nt = integrator->nPointsTemporal();
-    int Ns = integrator->nPointsSpatial();
-    double dt = integrator->temporalResolution();
-    double ds = integrator->spatialResolution();
-    double dw = integrator->temporalFreqResolution();
-    double dk = integrator->spatialFreqResolution();
-    double ws = integrator->temporalSamplingFreq();
-    double ks = integrator->spatialSamplingFreq();
-    double T = integrator->timeInterval();
-    double L = integrator->lengthInterval();
+    int Nt = integrator.nPointsTemporal();
+    int Ns = integrator.nPointsSpatial();
+    double dt = integrator.temporalResolution();
+    double ds = integrator.spatialResolution();
+    double dw = integrator.temporalFreqResolution();
+    double dk = integrator.spatialFreqResolution();
+    double ws = integrator.temporalSamplingFreq();
+    double ks = integrator.spatialSamplingFreq();
+    double T = integrator.timeInterval();
+    double L = integrator.lengthInterval();
 
-    vec timeVec = integrator->timeVec();
-    vec spatialVec = integrator->spatialVec();
-    vec temporalFreqVec = integrator->temporalFreqVec();
-    vec spatialFreqVec = integrator->spatialFreqVec();
+    vec timeVec = integrator.timeVec();
+    vec spatialVec = integrator.spatialVec();
+    vec temporalFreqVec = integrator.temporalFreqVec();
+    vec spatialFreqVec = integrator.spatialFreqVec();
 
 
     Attribute Nt_a(integratorGroup.createAttribute("nPointsTemporal",PredType::NATIVE_INT, H5S_SCALAR));
@@ -93,13 +93,13 @@ void OutputManager::writeIntegratorProperties(const Integrator *integrator)
 
 
 
-void OutputManager::writeResponse(const Neuron* neuron)
+void OutputManager::writeResponse(const Neuron& neuron)
 {
 
-    cube response = neuron->response();
-    cube responseFT = real(neuron->responseFT());
+    cube response = neuron.response();
+    cube responseFT = real(neuron.responseFT());
 
-    string cellGroupName = neuron->cellType();
+    string cellGroupName = neuron.cellType();
     herr_t status = H5Eset_auto1(NULL, NULL);
     status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
 
@@ -115,13 +115,13 @@ void OutputManager::writeResponse(const Neuron* neuron)
 
 }
 
-void OutputManager::writeImpulseResponse(const Neuron* neuron)
+void OutputManager::writeImpulseResponse(const Neuron& neuron)
 {
 
-    cube impulseResponse = neuron->impulseResponse();
-    cube impulseResponseFT = real(neuron->impulseResponseFourierTransform());
+    cube impulseResponse = neuron.impulseResponse();
+    cube impulseResponseFT = real(neuron.impulseResponseFourierTransform());
 
-    string cellGroupName = neuron->cellType();
+    string cellGroupName = neuron.cellType();
     herr_t status = H5Eset_auto1(NULL, NULL);
     status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
 

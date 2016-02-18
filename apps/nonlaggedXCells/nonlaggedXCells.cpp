@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
     string outputFilename = cfg["outputFile"].as<std::string>();
 
     //Output manager:---------------------------------------------------------
-    OutputManager io(&outputFilename);
+    OutputManager io(outputFilename);
 
     //Integrator--------------------------------------------------------------
     Integrator integrator = createIntegrator(cfg);
@@ -70,16 +70,16 @@ int main(int argc, char* argv[])
     neurons.push_back(&ganglion);
     neurons.push_back(&relay);
 
-    io.writeIntegratorProperties(&integrator);
+    io.writeIntegratorProperties(integrator);
 
     for(Neuron* neuron : neurons){
 
         neuron->computeResponse(S.get());
-        io.writeResponse(neuron);
+        io.writeResponse(*neuron);
         neuron->clearResponse();
 
         neuron->computeImpulseResponse();
-        io.writeImpulseResponse(neuron);
+        io.writeImpulseResponse(*neuron);
         neuron->clearImpulseResponse();
 
     }

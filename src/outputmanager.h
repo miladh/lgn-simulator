@@ -17,12 +17,12 @@ namespace lgnSimulator {
 class OutputManager
 {
 public:
-    OutputManager(const string *filename);
+    OutputManager(const string &filename);
     ~OutputManager();
 
-    void writeIntegratorProperties(const Integrator *integrator);
-    void writeResponse(const Neuron *neuron);
-    void writeImpulseResponse(const Neuron* neuron);
+    void writeIntegratorProperties(const Integrator &integrator);
+    void writeResponse(const Neuron &neuron);
+    void writeImpulseResponse(const Neuron &neuron);
     void writeStimulus(const Stimulus *stimuli);
 
 private:

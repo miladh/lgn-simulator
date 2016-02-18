@@ -21,7 +21,7 @@ int main()
 
     //Output manager:----------------------------------------------------------
     string outputFilename = cfg["outputFile"].as<std::string>();
-    OutputManager io(&outputFilename);
+    OutputManager io(outputFilename);
 
     //Integrator-------------------------------------------------------------
     Integrator integrator = createIntegrator(cfg);
@@ -86,15 +86,15 @@ int main()
     io.writeStimulus(S.get());
     S->clearSpatioTemporal();
 
-    io.writeIntegratorProperties(&integrator);
+    io.writeIntegratorProperties(integrator);
     for(Neuron* neuron : neurons){
 
         neuron->computeResponse(S.get());
-        io.writeResponse(neuron);
+        io.writeResponse(*neuron);
         neuron->clearResponse();
 
         neuron->computeImpulseResponse();
-        io.writeImpulseResponse(neuron);
+        io.writeImpulseResponse(*neuron);
         neuron->clearImpulseResponse();
 
     }
