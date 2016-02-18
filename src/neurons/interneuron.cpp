@@ -28,14 +28,14 @@ void Interneuron::computeImpulseResponseFourierTransform()
                 vec2 kVec= {m_spatialFreqs[i], m_spatialFreqs[j]};
 
                 for (const Input g : m_ganglionCells){
-                    Neuron *ganglionCell = g.neuron;
+                    Neuron* const ganglionCell = g.neuron;
                     m_impulseResponseFT(i,j,k)
                             += g.kernel.fourierTransform(kVec,w)
                             * ganglionCell->impulseResponseFourierTransform()(i,j,k);
                 }
 
                 for (const Input c : m_corticalNeurons){
-                    Neuron *corticalCell = c.neuron;
+                    Neuron* const corticalCell = c.neuron;
                     m_impulseResponseFT(i,j,k)
                             += c.kernel.fourierTransform(kVec,w)
                             * corticalCell->impulseResponseFourierTransform()(i,j,k);
@@ -48,14 +48,14 @@ void Interneuron::computeImpulseResponseFourierTransform()
 void Interneuron::computeNeededcubes()
 {
     for (const Input g : m_ganglionCells){
-        Neuron *ganglionCell = g.neuron;
+        Neuron* const ganglionCell = g.neuron;
         if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
             ganglionCell->computeImpulseResponseFourierTransform();
         }
     }
 
     for (const Input c : m_corticalNeurons){
-        Neuron *corticalCell = c.neuron;
+        Neuron* const corticalCell = c.neuron;
         if(!corticalCell->isImpulseResponseFourierTransformComputed()){
             corticalCell->computeImpulseResponseFourierTransform();
         }

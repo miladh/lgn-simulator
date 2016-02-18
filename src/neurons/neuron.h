@@ -20,7 +20,7 @@ public:
     ~Neuron();
 
     struct Input {
-        Neuron *neuron;
+        Neuron* const neuron;
         const Kernel &kernel;
     };
 

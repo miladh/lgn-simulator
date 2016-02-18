@@ -102,8 +102,6 @@ int main(int argc, char* argv[]){
 
     }
 
-
-
     t = clock() - t;
     double elapsedTime = ((float)t)/CLOCKS_PER_SEC;
     if(elapsedTime <= 60){

@@ -27,7 +27,7 @@ void CorticalCell::computeImpulseResponseFourierTransform()
                 vec2 kVec= {m_spatialFreqs[i], m_spatialFreqs[j]};
 
                 for (const Input r : m_relayCells){
-                    Neuron *relayCell = r.neuron;
+                    Neuron* const relayCell = r.neuron;
                     m_impulseResponseFT(i,j,k)
                             += r.kernel.fourierTransform(kVec,w)
                             * relayCell->impulseResponseFourierTransform()(i,j,k);
@@ -40,7 +40,7 @@ void CorticalCell::computeImpulseResponseFourierTransform()
 void CorticalCell::computeNeededcubes()
 {
     for (const Input r : m_relayCells){
-        Neuron *relayCell = r.neuron;
+        Neuron* const relayCell = r.neuron;
         if(!relayCell->isImpulseResponseFourierTransformComputed()){
             relayCell->computeImpulseResponseFourierTransform();
         }

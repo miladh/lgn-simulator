@@ -75,7 +75,7 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
 
     //Feedforward ganglion input
     for (const Input g : m_ganglionCells){
-        Neuron *ganglionCell = g.neuron;
+        Neuron* const ganglionCell = g.neuron;
         ganglionFF += g.kernel.fourierTransform(kVec,w)
                 * ganglionCell->impulseResponseFourierTransform()(idx,jdx,kdx);
     }
@@ -84,13 +84,13 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
 
     //Interneuron input
     for (const Input i : m_interNeurons){
-        Neuron *interneuron = i.neuron;
+        Neuron* const interneuron = i.neuron;
         complex<double> Kri = i.kernel.fourierTransform(kVec,w);
 
 
         //Feedforward term
         for (const Input g : interneuron->ganglionCells()){
-            Neuron *ganglionCell = g.neuron;
+            Neuron* const ganglionCell = g.neuron;
             interneuronFF += g.kernel.fourierTransform(kVec,w)
                     * ganglionCell->impulseResponseFourierTransform()(idx,jdx,kdx);
         }
@@ -98,7 +98,7 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
 
         //Feedback term
         for (const Input c : interneuron->corticalNeurons()){
-            Neuron *corticalCell = c.neuron;
+            Neuron* const corticalCell = c.neuron;
             complex<double> Kic = c.kernel.fourierTransform(kVec,w);
 
             // NOTE: ONLY ONE RELAY CELL!!!
