@@ -3,26 +3,31 @@
 using namespace lgnSimulator;
 
 
-Integrator::Integrator(int nt, double dt, int ns, double ds)
-    : m_nPointsTemporal(pow(2,nt))
-    , m_nPointsSpatial(pow(2,ns))
-    , m_dt(dt)
-    , m_ds(ds)
-    , m_timeInterval(m_nPointsTemporal  * m_dt)
-    , m_lengthInterval(m_nPointsSpatial * m_ds)
-    , m_temporalSamplingFreq(2.* PI / m_dt)
-    , m_spatialSamplingFreq(2.* PI / m_ds)
-    , m_dw(m_temporalSamplingFreq / m_nPointsSpatial)
-    , m_dk(m_spatialSamplingFreq / m_nPointsSpatial)
+Integrator::Integrator(const int nPointsTemporal,
+                       const double temporalResolution,
+                       const int nPointsSpatial,
+                       const double spatialResolution)
+
+    : m_nPointsTemporal(pow(2,nPointsTemporal))
+    , m_nPointsSpatial(pow(2,nPointsSpatial))
+    , m_temporalResolution(temporalResolution)
+    , m_spatialResolution(spatialResolution)
+    , m_timeInterval(m_nPointsTemporal  * m_temporalResolution)
+    , m_lengthInterval(m_nPointsSpatial * m_spatialResolution)
+    , m_temporalSamplingFreq(2.* PI / m_temporalResolution)
+    , m_spatialSamplingFreq(2.* PI / m_spatialResolution)
+    , m_temporalFreqResolution(m_temporalSamplingFreq / m_nPointsSpatial)
+    , m_spatialFreqResolution(m_spatialSamplingFreq / m_nPointsSpatial)
 {
     //Temporal Grid
-    m_timeVec = linspace(0, m_nPointsTemporal-1 , m_nPointsTemporal)*m_dt;
-    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_dt)*2*PI;
+    m_timeVec = linspace(0, m_nPointsTemporal-1,
+                         m_nPointsTemporal)*m_temporalResolution;
+    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_temporalResolution)*2*PI;
 
     //Spatial Grid
     m_spatialVec = linspace(-m_nPointsSpatial/2, (m_nPointsSpatial-1)/2,
-                            m_nPointsSpatial)*m_ds;
-    m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_ds)*2*PI;
+                            m_nPointsSpatial)*m_spatialResolution;
+    m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_spatialResolution)*2*PI;
 
 }
 
@@ -51,7 +56,8 @@ cx_cube Integrator::backwardFFT(cx_cube data) const
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-    fftData *= m_dw * m_dk * m_dk /8./PI/PI/PI;
+    fftData *= m_temporalFreqResolution*m_spatialFreqResolution*m_spatialFreqResolution
+            /8./PI/PI/PI;
 
 //    for(int k = 0; k < int(fftData.n_slices); k++){
 //        for(int i = 0; i < int(fftData.n_cols); i++){
@@ -106,7 +112,7 @@ cx_mat Integrator::backwardFFT(cx_mat data) const
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-    fftData *= m_dk * m_dk /4./PI/PI;
+    fftData *= m_spatialFreqResolution*m_spatialFreqResolution /4./PI/PI;
 
     //fftShift
     fftData = FFTHelper::fftShift(fftData);
@@ -162,19 +168,19 @@ int Integrator::nPointsSpatial() const
 }
 double Integrator::temporalResolution() const
 {
-    return m_dt;
+    return m_temporalResolution;
 }
 double Integrator::spatialResolution() const
 {
-    return m_ds;
+    return m_spatialResolution;
 }
 double Integrator::temporalFreqResolution() const
 {
-    return m_dw;
+    return m_temporalFreqResolution;
 }
 double Integrator::spatialFreqResolution() const
 {
-    return m_dk;
+    return m_spatialFreqResolution;
 }
 
 double Integrator::timeInterval() const
