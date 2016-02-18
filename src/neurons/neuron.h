@@ -34,10 +34,10 @@ public:
 
 
     // Add cell functions
-    void addGanglionCell(Neuron *neuron, const Kernel &kernel);
-    void addRelayCell(Neuron *neuron, const Kernel &kernell);
-    void addInterNeuron(Neuron *neuron, const Kernel &kernel);
-    void addCorticalNeuron(Neuron *neuron, const Kernel &kernel);
+    void addGanglionCell(Neuron* const neuron, const Kernel &kernel);
+    void addRelayCell(Neuron* const neuron, const Kernel &kernell);
+    void addInterNeuron(Neuron* const neuron, const Kernel &kernel);
+    void addCorticalNeuron(Neuron* const neuron, const Kernel &kernel);
 
 
     // Getter member functions

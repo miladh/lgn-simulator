@@ -69,23 +69,23 @@ void Neuron::computeImpulseResponse()
 
 }
 
-void Neuron::addGanglionCell(Neuron *neuron, const Kernel &kernel)
+void Neuron::addGanglionCell(Neuron* const neuron, const Kernel &kernel)
 {
     m_ganglionCells.emplace_back(Input{neuron, kernel});
 }
 
-void Neuron::addRelayCell(Neuron *neuron, const Kernel &kernel)
+void Neuron::addRelayCell(Neuron* const neuron, const Kernel &kernel)
 {
 
     m_relayCells.emplace_back(Input{neuron, kernel});
 }
 
-void Neuron::addInterNeuron(Neuron *neuron, const Kernel &kernel)
+void Neuron::addInterNeuron(Neuron* const neuron, const Kernel &kernel)
 {
     m_interNeurons.emplace_back(Input{neuron, kernel});
 }
 
-void Neuron::addCorticalNeuron(Neuron *neuron, const Kernel &kernel)
+void Neuron::addCorticalNeuron(Neuron* const neuron, const Kernel &kernel)
 {
     m_corticalNeurons.emplace_back(Input{neuron, kernel});
 }
