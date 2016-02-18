@@ -129,14 +129,14 @@ SUITE(SYSTEM){
 
 
                                                         //connect cells
-                                                        relay.addGanglionCell(&ganglion, &K_rg);
-                                                        relay.addInterNeuron(&interneuron,  &K_ri);
-                                                        relay.addCorticalNeuron(&cortical,  &K_rc);
+                                                        relay.addGanglionCell(&ganglion, K_rg);
+                                                        relay.addInterNeuron(&interneuron, K_ri);
+                                                        relay.addCorticalNeuron(&cortical,  K_rc);
 
-                                                        interneuron.addGanglionCell(&ganglion, &K_ig);
-                                                        interneuron.addCorticalNeuron(&cortical,  &K_ic);
+                                                        interneuron.addGanglionCell(&ganglion, K_ig);
+                                                        interneuron.addCorticalNeuron(&cortical,  K_ic);
 
-                                                        cortical.addRelayCell(&relay, &K_rc);
+                                                        cortical.addRelayCell(&relay, K_rc);
 
 
                                                         //Compute analytic:

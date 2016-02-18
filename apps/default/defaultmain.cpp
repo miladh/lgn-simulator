@@ -69,7 +69,7 @@ int main()
 //    neurons.push_back(&interneuron);
 
     //connect neurons----------------------------------------------------------
-    relay.addGanglionCell(&ganglion, &Kt);
+    relay.addGanglionCell(&ganglion, Kt);
 //    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
 //    relay.addInterNeuron(&interneuron,&gauss, &damped);
 

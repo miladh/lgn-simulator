@@ -30,14 +30,14 @@ void Interneuron::computeImpulseResponseFourierTransform()
                 for (const Input g : m_ganglionCells){
                     Neuron *ganglionCell = g.neuron;
                     m_impulseResponseFT(i,j,k)
-                            += g.kernel->fourierTransform(kVec,w)
+                            += g.kernel.fourierTransform(kVec,w)
                             * ganglionCell->impulseResponseFourierTransform()(i,j,k);
                 }
 
                 for (const Input c : m_corticalNeurons){
                     Neuron *corticalCell = c.neuron;
                     m_impulseResponseFT(i,j,k)
-                            += c.kernel->fourierTransform(kVec,w)
+                            += c.kernel.fourierTransform(kVec,w)
                             * corticalCell->impulseResponseFourierTransform()(i,j,k);
                 }
             }

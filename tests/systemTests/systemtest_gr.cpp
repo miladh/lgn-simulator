@@ -65,7 +65,7 @@ SUITE(SYSTEM){
 
                         //connect
                         SeparableKernel K(Ks, Kt);
-                        relay.addGanglionCell(&ganglion, &K);
+                        relay.addGanglionCell(&ganglion, K);
 
 
                         //Compute analytic:

@@ -57,8 +57,8 @@ int main(int argc, char* argv[])
     RelayCell relay(integrator);
 
     //Connect neurons:---------------------------------------------------------
-    relay.addGanglionCell(&ganglion, &Krg);
-    relay.addGanglionCell(&ganglion, &Krig);
+    relay.addGanglionCell(&ganglion, Krg);
+    relay.addGanglionCell(&ganglion, Krig);
 
     //Compute:-----------------------------------------------------------------
     S->computeSpatiotemporal();

@@ -21,7 +21,7 @@ public:
 
     struct Input {
         Neuron *neuron;
-        Kernel *kernel;
+        const Kernel &kernel;
     };
 
 
@@ -34,10 +34,10 @@ public:
 
 
     // Add cell functions
-    void addGanglionCell(Neuron *neuron, Kernel *kernel);
-    void addRelayCell(Neuron *neuron, Kernel *kernel);
-    void addInterNeuron(Neuron *neuron,Kernel *kernel);
-    void addCorticalNeuron(Neuron *neuron, Kernel *kernel);
+    void addGanglionCell(Neuron *neuron, const Kernel &kernel);
+    void addRelayCell(Neuron *neuron, const Kernel &kernell);
+    void addInterNeuron(Neuron *neuron, const Kernel &kernel);
+    void addCorticalNeuron(Neuron *neuron, const Kernel &kernel);
 
 
     // Getter member functions

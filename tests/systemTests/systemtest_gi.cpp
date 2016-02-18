@@ -64,7 +64,7 @@ SUITE(SYSTEM){
 
                         //connect
                         SeparableKernel K(Ks, Kt);
-                        interneuron.addGanglionCell(&ganglion, &K);
+                        interneuron.addGanglionCell(&ganglion, K);
 
 
                         //Compute analytic:

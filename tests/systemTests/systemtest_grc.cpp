@@ -91,9 +91,9 @@ SUITE(SYSTEM){
                                 CorticalCell cortical(integrator);
 
                                 //connect cells
-                                relay.addGanglionCell(&ganglion, &K_rg);
-                                relay.addCorticalNeuron(&cortical,  &K_rc);
-                                cortical.addRelayCell(&relay, &K_rc);
+                                relay.addGanglionCell(&ganglion, K_rg);
+                                relay.addCorticalNeuron(&cortical,  K_rc);
+                                cortical.addRelayCell(&relay, K_rc);
 
 
                                 complex<double> Krc =  Ks_rc->fourierTransform({kx, ky})

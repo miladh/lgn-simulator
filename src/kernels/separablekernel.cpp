@@ -11,12 +11,12 @@ SeparableKernel::SeparableKernel(SpatialKernel *spatialKernel,
 
 }
 
-double SeparableKernel::spatiotemporal(vec2 r, double t)
+double SeparableKernel::spatiotemporal(vec2 r, double t) const
 {
     return m_spatialKernel->spatial(r) * m_temporalKernel->temporal(t);
 }
 
-complex<double> SeparableKernel::fourierTransform(vec2 k, double w)
+complex<double> SeparableKernel::fourierTransform(vec2 k, double w) const
 {
     return m_spatialKernel->fourierTransform(k) * m_temporalKernel->fourierTransform(w);
 }

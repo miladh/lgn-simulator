@@ -13,8 +13,8 @@ public:
                     TemporalKernel *temporalKernel);
 
     // Kernel interface
-    virtual double spatiotemporal(vec2 r, double t);
-    virtual complex<double> fourierTransform(vec2 k, double w);
+    virtual double spatiotemporal(vec2 r, double t) const;
+    virtual complex<double> fourierTransform(vec2 k, double w) const;
 
 private:
     SpatialKernel *m_spatialKernel;

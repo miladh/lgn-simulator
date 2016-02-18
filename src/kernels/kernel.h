@@ -14,8 +14,8 @@ class Kernel
 public:
     Kernel();
 
-    virtual double spatiotemporal(vec2 r, double t)=0;
-    virtual complex<double> fourierTransform(vec2 k, double w) = 0;
+    virtual double spatiotemporal(vec2 r, double t) const = 0;
+    virtual complex<double> fourierTransform(vec2 k, double w) const = 0;
 
 };
 
