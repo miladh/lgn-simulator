@@ -3,7 +3,7 @@
 using namespace lgnSimulator;
 
 
-CircleMaskGrating::CircleMaskGrating(Integrator *integrator,
+CircleMaskGrating::CircleMaskGrating(const Integrator &integrator,
                            vec2 kd, double wd, double contrast, double maskSize)
     : Grating(integrator, kd, wd, contrast, maskSize)
 {
@@ -40,5 +40,5 @@ complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 kVec, double
         s *= 2. * Functions::secondKindBesselFunction(arg)/arg;
     }
 
-    return s/m_integrator->temporalFreqResolution();
+    return s/m_integrator.temporalFreqResolution();
 }

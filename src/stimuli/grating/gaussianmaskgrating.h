@@ -8,7 +8,7 @@ namespace lgnSimulator {
 class GaussianMaskGrating : public Grating
 {
 public:
-    GaussianMaskGrating(Integrator *integrator,
+    GaussianMaskGrating(const Integrator &integrator,
                         vec2 kd, double wd, double contrast, double maskSize);
     ~GaussianMaskGrating();
 

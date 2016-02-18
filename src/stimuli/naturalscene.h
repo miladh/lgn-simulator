@@ -9,7 +9,7 @@ namespace lgnSimulator {
 class NaturalScene : public Stimulus
 {
 public:
-    NaturalScene(Integrator *integrator, string scenePath);
+    NaturalScene(const Integrator &integrator, string scenePath);
     ~NaturalScene();
 
 

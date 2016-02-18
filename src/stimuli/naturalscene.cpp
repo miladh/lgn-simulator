@@ -3,14 +3,14 @@
 using namespace lgnSimulator;
 
 
-NaturalScene::NaturalScene(Integrator *integrator, string sceneFilename)
+NaturalScene::NaturalScene(const Integrator &integrator, string sceneFilename)
     : Stimulus(integrator)
     , m_sceneFilename(sceneFilename)
 
 {
-    m_scene = zeros<cx_mat>(m_integrator->nPointsSpatial(), m_integrator->nPointsSpatial());
-    m_sceneFourierTransform = zeros<cx_mat>(m_integrator->nPointsSpatial(),
-                                            m_integrator->nPointsSpatial());
+    m_scene = zeros<cx_mat>(m_integrator.nPointsSpatial(), m_integrator.nPointsSpatial());
+    m_sceneFourierTransform = zeros<cx_mat>(m_integrator.nPointsSpatial(),
+                                            m_integrator.nPointsSpatial());
     m_type =  "naturalScene";
     readScene();
 }
@@ -32,7 +32,7 @@ void NaturalScene::computeSpatiotemporal()
 
 void NaturalScene::computeFourierTransform()
 {
-    m_sceneFourierTransform = m_integrator->forwardFFT(m_scene);
+    m_sceneFourierTransform = m_integrator.forwardFFT(m_scene);
 
     for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
         m_fourierTransform.slice(k) = m_sceneFourierTransform
@@ -52,9 +52,9 @@ void NaturalScene::readScene()
     //    cv::waitKey(0);
 
     //Scaling
-    if(cvMat.rows != m_integrator->nPointsSpatial()
-            || cvMat.cols != m_integrator->nPointsSpatial()){
-        cv::Size size(m_integrator->nPointsSpatial(), m_integrator->nPointsSpatial());
+    if(cvMat.rows != m_integrator.nPointsSpatial()
+            || cvMat.cols != m_integrator.nPointsSpatial()){
+        cv::Size size(m_integrator.nPointsSpatial(), m_integrator.nPointsSpatial());
         cv::resize(cvMat, cvMat, size);
     }
 

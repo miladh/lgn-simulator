@@ -8,7 +8,7 @@ namespace lgnSimulator {
 class StaticImage : public NaturalScene
 {
 public:
-    StaticImage(Integrator *integrator, string sceneFilename);
+    StaticImage(const Integrator &integrator, string sceneFilename);
     ~StaticImage();
 
     // NaturalScene interface
@@ -18,6 +18,6 @@ private:
 };
 
 }
-unique_ptr<lgnSimulator::StaticImage> createStaticImageStimulus(lgnSimulator::Integrator *integrator, const YAML::Node *cfg);
+unique_ptr<lgnSimulator::StaticImage> createStaticImageStimulus(const lgnSimulator::Integrator &integrator, const YAML::Node *cfg);
 
 #endif // STATICIMAGE_H

@@ -42,7 +42,7 @@ SUITE(SYSTEM){
         double wd = w(2);
         double kx = k(3);
         double ky = k(2);
-        FullFieldGrating S(&integrator, {kx, ky}, wd, C);
+        FullFieldGrating S(integrator, {kx, ky}, wd, C);
         S.computeFourierTransform();
 
 

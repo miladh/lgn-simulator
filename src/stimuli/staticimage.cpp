@@ -3,7 +3,7 @@
 using namespace lgnSimulator;
 
 
-StaticImage::StaticImage(Integrator *integrator, string sceneFilename):
+StaticImage::StaticImage(const Integrator &integrator, string sceneFilename):
     NaturalScene(integrator, sceneFilename)
 {
 }
@@ -21,11 +21,11 @@ double StaticImage::temporalValueAtPoint(double t)
 
 double StaticImage::fourierTransformAtTemporalFrequency(double w)
 {
-    return Functions::delta(0, w)/m_integrator->temporalFreqResolution();
+    return Functions::delta(0, w)/m_integrator.temporalFreqResolution();
 }
 
 
-unique_ptr<StaticImage> createStaticImageStimulus(Integrator *integrator, const YAML::Node *cfg)
+unique_ptr<StaticImage> createStaticImageStimulus(const Integrator &integrator, const YAML::Node *cfg)
 {
     //Read file
     string sceneFilename = (*cfg)["sceneFilename"].as<string>();

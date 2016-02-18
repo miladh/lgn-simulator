@@ -7,7 +7,7 @@
 using namespace lgnSimulator;
 
 
-Grating::Grating(Integrator *integrator,
+Grating::Grating(const Integrator &integrator,
                  vec2 kd, double wd, double contrast, double maskSize)
     : Stimulus(integrator)
     , m_k(kd)
@@ -79,7 +79,7 @@ double Grating::maskSize() const
 
 
 
-unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const YAML::Node *cfg)
+unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YAML::Node *cfg)
 {
     string mask = (*cfg)["mask"].as<string>();
     double maskSize = (*cfg)["maskSize"].as<double>();
@@ -88,8 +88,8 @@ unique_ptr<Grating> createGratingStimulus(Integrator *integrator, const YAML::No
     int kyId = (*cfg)["kyId"].as<int>();
     int wId = (*cfg)["wId"].as<int>();
 
-    vec k = integrator->spatialFreqVec();
-    vec w = integrator->temporalFreqVec();
+    vec k = integrator.spatialFreqVec();
+    vec w = integrator.temporalFreqVec();
 
 
     if((kxId  < -int(k.n_elem)/2) || (kxId  > int(k.n_elem)/2-1)){

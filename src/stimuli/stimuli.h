@@ -13,7 +13,7 @@ namespace lgnSimulator {
 class Stimulus
 {
 public:
-    Stimulus(Integrator *integrator);
+    Stimulus(const Integrator &integrator);
     ~Stimulus();
 
     virtual void computeSpatiotemporal() = 0;
@@ -37,7 +37,7 @@ protected:
     vec m_timeVec;
     vec m_temporalFreqs;
 
-    Integrator *m_integrator;
+    const Integrator &m_integrator;
 
     string m_type;
 

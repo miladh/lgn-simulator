@@ -12,7 +12,7 @@ namespace lgnSimulator {
 class Grating : public Stimulus
 {
 public:
-    Grating(Integrator *integrator,
+    Grating(const Integrator &integrator,
             vec2 kd, double wd, double contrast, double maskSize = 0.0);
     ~Grating();
 
@@ -43,6 +43,6 @@ protected:
 };
 
 }
-std::unique_ptr<lgnSimulator::Grating> createGratingStimulus(lgnSimulator::Integrator *integrator, const YAML::Node* cfg);
+std::unique_ptr<lgnSimulator::Grating> createGratingStimulus(const lgnSimulator::Integrator &integrator, const YAML::Node* cfg);
 
 #endif // GRATING_H

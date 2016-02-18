@@ -10,7 +10,7 @@ namespace lgnSimulator {
 class NaturalSceneVideo : public Stimulus
 {
 public:
-    NaturalSceneVideo(Integrator *integrator, string sceneFilename);
+    NaturalSceneVideo(const Integrator &integrator, string sceneFilename);
     ~NaturalSceneVideo();
 
     // Stimulus interface
@@ -26,6 +26,6 @@ private:
 };
 
 }
-unique_ptr<lgnSimulator::NaturalSceneVideo> createNaturalSceneVideoStimulus(lgnSimulator::Integrator *integrator,
-                                                  const YAML::Node *cfg);
+unique_ptr<lgnSimulator::NaturalSceneVideo> createNaturalSceneVideoStimulus(const lgnSimulator::Integrator &integrator,
+                                                  const YAML::Node &cfg);
 #endif // NATURALSCENEVIDEO_H
