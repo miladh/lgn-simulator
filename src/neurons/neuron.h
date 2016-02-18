@@ -15,8 +15,8 @@ class Neuron
 {
 public:
     Neuron(const Integrator &integrator,
-           double backgroundResponse = 0,
-           StaticNonlinearity *staticNonlinearity = nullptr);
+           const double backgroundResponse = 0,
+           StaticNonlinearity *const staticNonlinearity = nullptr);
     ~Neuron();
 
     struct Input {
@@ -61,13 +61,13 @@ public:
 
 private:
     const Integrator& m_integrator;
-    StaticNonlinearity *m_staticNonlinearity;
+    StaticNonlinearity *const m_staticNonlinearity = nullptr;
 
 
 
 protected:
     bool impulseResponseFourierTransformComputed  = false;
-    double m_backgroundResponse;
+    const double m_backgroundResponse;
     string m_cellType;
 
     cube m_response;

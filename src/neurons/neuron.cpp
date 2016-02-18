@@ -10,8 +10,9 @@ using namespace lgnSimulator;
  */
 
 
-Neuron::Neuron(const Integrator& integrator, double backgroundResponse,
-               StaticNonlinearity *staticNonlinearity)
+Neuron::Neuron(const Integrator& integrator,
+               const double backgroundResponse,
+               StaticNonlinearity * const staticNonlinearity)
     : m_integrator(integrator)
     , m_staticNonlinearity(staticNonlinearity)
     , m_backgroundResponse(backgroundResponse)
