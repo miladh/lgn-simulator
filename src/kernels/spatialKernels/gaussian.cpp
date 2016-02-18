@@ -11,12 +11,12 @@ Gaussian::Gaussian(double A, double a)
 }
 
 
-double Gaussian::spatial(vec2 r)
+double Gaussian::spatial(vec2 r) const
 {
     return m_A / (m_a*m_a) / PI * exp(-dot(r,r) / (m_a*m_a));
 }
 
-complex<double> Gaussian::fourierTransform(vec2 k)
+complex<double> Gaussian::fourierTransform(vec2 k) const
 {
 
     return m_A * exp(-dot(k,k) * m_a*m_a / 4.);

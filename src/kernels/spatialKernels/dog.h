@@ -15,8 +15,8 @@ public:
     ~DOG();
 
     // SpatialKernel interface
-    double spatial(vec2 r);
-    complex<double> fourierTransform(vec2 k);
+    double spatial(vec2 r) const;
+    complex<double> fourierTransform(vec2 k) const;
 
 
 private:

@@ -9,12 +9,12 @@ SpatialDelta::SpatialDelta(double weight, vec2 r0)
 }
 
 
-double lgnSimulator::SpatialDelta::spatial(vec2 r)
+double lgnSimulator::SpatialDelta::spatial(vec2 r) const
 {
     return m_weight * Functions::delta(m_r0(0), r(0)) * Functions::delta(m_r0(0), r(1));
 }
 
-complex<double> lgnSimulator::SpatialDelta::fourierTransform(vec2 k)
+complex<double> lgnSimulator::SpatialDelta::fourierTransform(vec2 k) const
 {
     complex<double> i = complex<double>(0,1);
     return m_weight * exp(-i * dot(k, m_r0));

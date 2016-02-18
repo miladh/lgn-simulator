@@ -12,8 +12,8 @@ public:
     SpatialDelta(double weight, vec2 r0);
 
     // SpatialKernel interface
-    virtual double spatial(vec2 r);
-    virtual complex<double> fourierTransform(vec2 k);
+    virtual double spatial(vec2 r) const;
+    virtual complex<double> fourierTransform(vec2 k) const;
 
 
 private:

@@ -14,12 +14,12 @@ DOG::~DOG()
 {
 }
 
-double DOG::spatial(vec2 r)
+double DOG::spatial(vec2 r) const
 {
     return m_centre->spatial(r) - m_surround->spatial(r);
 }
 
-complex<double> DOG::fourierTransform(vec2 k)
+complex<double> DOG::fourierTransform(vec2 k) const
 {
     return m_centre->fourierTransform(k) - m_surround->fourierTransform(k);
 }

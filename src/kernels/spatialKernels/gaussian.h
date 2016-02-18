@@ -14,8 +14,8 @@ public:
     Gaussian(double A, double a);
 
     // SpatialKernel interface
-    virtual double spatial(vec2 r);
-    virtual complex<double> fourierTransform(vec2 k);
+    virtual double spatial(vec2 r) const;
+    virtual complex<double> fourierTransform(vec2 k) const;
 
 
 private:
