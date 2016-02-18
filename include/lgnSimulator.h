@@ -1,19 +1,17 @@
 #pragma once
 
 #include "../src/outputmanager.h"
+#include "../src/integrator.h"
 
 #include "../src/stimuli/grating/grating.h"
 #include "../src/stimuli/staticimage.h"
 #include "../src/stimuli/naturalscenevideo.h"
-
-#include "../src/integrator.h"
 
 #include "../src/neurons/ganglioncell.h"
 #include "../src/neurons/interneuron.h"
 #include "../src/neurons/relaycell.h"
 #include "../src/neurons/corticalcell.h"
 
-#include "../src/kernels/kernel.h"
 #include "../src/kernels/separablekernel.h"
 
 #include "../src/kernels/spatialKernels/dog.h"

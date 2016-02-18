@@ -15,8 +15,6 @@ public:
     // StaticNonlinearity interface
 private:
     virtual double advance(const double u) const;
-
-private:
     double m_threshold = 0.0;
     double m_weight = 0.0;
 
