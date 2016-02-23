@@ -33,7 +33,7 @@ SOURCES += main.cpp \
     test_special.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
     test_kernel.cpp \
-    fftIntegrator/test_integrator_delta.cpp
+    fftIntegrator/test_integrator_convolution.cpp
 
 
 
