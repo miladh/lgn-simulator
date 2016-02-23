@@ -2,14 +2,17 @@
 #include <unittest++/Test.h>
 #include <unittest++/TestReporterStdout.h>
 #include <unittest++/TestRunner.h>
+#include <iostream>
 
-
+using namespace UnitTest;
+using namespace std;
 
 int main()
 {
     int result = 0;
 
-    bool mathTests = 1;
+
+    bool special = 1;
     bool stimTests = 1;
     bool fftHelperTests = 1;
     bool integratorTests = 1;
@@ -17,40 +20,44 @@ int main()
 
     bool dev = 1;
 
+    TestReporterStdout reporter;
+    TestRunner runner(reporter);
 
-    UnitTest::TestReporterStdout reporter;
-    UnitTest::TestRunner runner(reporter);
+    if(special){
+        cout << "Running special tests..." << endl;
+        result += runner.RunTestsIf(Test::GetTestList(), "special", True(), 0);
+        cout << "Special tests completed. " << endl << endl;
+    }
 
     if(stimTests){
-        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "STIMULI", UnitTest::True(), 0);
+        cout << "Running stimulus tests..." << endl;
+        result += runner.RunTestsIf(Test::GetTestList(), "STIMULI", True(), 0);
+        cout << "Stimulus tests completed. " << endl << endl;
     }
 
-    if(mathTests){
-        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "SPECIALFUNCTIONS", UnitTest::True(), 0);
-    }
 
     if(fftHelperTests){
-        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "fftHelper", UnitTest::True(), 0);
+        result += runner.RunTestsIf(Test::GetTestList(), "fftHelper", True(), 0);
     }
 
     if(integratorTests){
-        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "INTEGRATOR", UnitTest::True(), 0);
+        result += runner.RunTestsIf(Test::GetTestList(), "INTEGRATOR", True(), 0);
     }
 
 
 
     if(dev){
-        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "DEVELOPMENT", UnitTest::True(), 0);
+        result += runner.RunTestsIf(Test::GetTestList(), "DEVELOPMENT", True(), 0);
     }
 
 
     if(systemTests){
-        result += runner.RunTestsIf(UnitTest::Test::GetTestList(), "SYSTEM", UnitTest::True(), 0);
+        result += runner.RunTestsIf(Test::GetTestList(), "SYSTEM", True(), 0);
     }
 
 
 
     return result;
 
-    //    return UnitTest::RunAllTests();
+    //    return RunAllTests();
 }

@@ -1,5 +1,5 @@
 /**********************************************************************
- *  Test: various mathematical helper functions
+ *  Test: spcial mathematical functions
  *
  *  Analytic source: by hand and Python
  *
@@ -10,7 +10,7 @@
 
 using namespace lgnSimulator;
 
-SUITE(SPECIALFUNCTIONS){
+SUITE(special){
 
 
     TEST(secondKindBesselFunction) {
@@ -27,6 +27,9 @@ SUITE(SPECIALFUNCTIONS){
         CHECK_EQUAL(Special::heaviside(-1.2), 0);
         CHECK_EQUAL(Special::heaviside(0.0), 1.);
         CHECK_EQUAL(Special::heaviside(2.2), 1.);
+        CHECK_EQUAL(Special::heaviside(-100), 0);
+        CHECK_EQUAL(Special::heaviside(1e-6), 1.);
+        CHECK_EQUAL(Special::heaviside(34), 1.);
     }
 
     TEST(delta) {
