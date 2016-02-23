@@ -13,7 +13,6 @@ INCLUDEPATH += $$TOP_PWD/include
 
 
 SOURCES += main.cpp \
-    mathTests.cpp \
     fftHelper/fftfreqtests.cpp \
     fftHelper/fftshift1dtests.cpp \
     fftHelper/fftshift2dtests.cpp \
@@ -32,7 +31,8 @@ SOURCES += main.cpp \
     systemTests/systemtest_gi.cpp \
     systemTests/systemtest_spot.cpp \
     test_special.cpp \
-    stimulusTests/test_stimulus_fullfieldgrating.cpp
+    stimulusTests/test_stimulus_fullfieldgrating.cpp \
+    test_kernel.cpp
 
 
 
