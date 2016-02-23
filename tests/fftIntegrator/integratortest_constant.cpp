@@ -73,7 +73,7 @@ void runTest(int ns, int nt, double dt, double c)
 
 }
 
-SUITE(INTEGRATOR){
+SUITE(integrator){
 
     TEST(constant_0){
          runTest(2, 1, 0.01, -60.5);

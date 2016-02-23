@@ -65,7 +65,7 @@ void runTest(int ns, int nt, double dt, double C, int wdId, int kxId, int kyId)
 }
 
 
-SUITE(INTEGRATOR){
+SUITE(integrator){
 
 
     TEST(grating_0){

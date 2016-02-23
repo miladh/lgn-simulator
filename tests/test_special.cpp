@@ -1,7 +1,7 @@
 /**********************************************************************
  *  Test: spcial mathematical functions
  *
- *  Analytic source: by hand and Python
+ *  Analytic source: by hand
  *
  * ********************************************************************/
 

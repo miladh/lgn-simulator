@@ -16,7 +16,7 @@ int main()
     bool stimulus = 1;
     bool kernel = 1;
     bool fftHelperTests = 1;
-    bool integratorTests = 1;
+    bool integrator = 1;
     bool systemTests = 1;
 
     bool dev = 1;
@@ -42,13 +42,16 @@ int main()
         cout << "Kernel tests completed. " << endl << endl;
     }
 
+    if(integrator){
+        cout << "Running integrator tests..." << endl;
+        result += runner.RunTestsIf(Test::GetTestList(), "integrator", True(), 0);
+        cout << "Kernel tests completed. " << endl << endl;
+    }
+
     if(fftHelperTests){
         result += runner.RunTestsIf(Test::GetTestList(), "fftHelper", True(), 0);
     }
 
-    if(integratorTests){
-        result += runner.RunTestsIf(Test::GetTestList(), "INTEGRATOR", True(), 0);
-    }
 
     if(dev){
         result += runner.RunTestsIf(Test::GetTestList(), "DEVELOPMENT", True(), 0);

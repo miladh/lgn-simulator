@@ -26,7 +26,7 @@ complex<double> exponentialFT(double a, double w){
 }
 
 
-SUITE(INTEGRATOR){
+SUITE(integrator){
 
     TEST(exponential){
         //Mesh

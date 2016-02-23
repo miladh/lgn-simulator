@@ -18,7 +18,7 @@ using namespace std;
 using namespace arma;
 using namespace lgnSimulator;
 
-SUITE(INTEGRATOR){
+SUITE(integrator){
 
     TEST(dogfft){
         //Mesh

@@ -23,7 +23,7 @@ double TemporalDelta::temporal(double t) const
 complex<double> TemporalDelta::fourierTransform(double w) const
 {
     // Note that we have +i, and not -i due to the definition of
-    // temporal FT.
+    // inverse temporal FT.
     return exp(core::i * m_delay * w);
 }
 

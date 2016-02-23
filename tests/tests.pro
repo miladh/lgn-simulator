@@ -32,7 +32,8 @@ SOURCES += main.cpp \
     systemTests/systemtest_spot.cpp \
     test_special.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
-    test_kernel.cpp
+    test_kernel.cpp \
+    fftIntegrator/test_integrator_delta.cpp
 
 
 

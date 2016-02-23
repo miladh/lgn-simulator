@@ -78,7 +78,7 @@ void runTest(int ns, int nt, double dt, int wdId, int kxId, int kyId)
 
 }
 
-SUITE(INTEGRATOR){
+SUITE(integrator){
 
     TEST(cosine_0){
          runTest(2, 2, 0.01, 0, 1, 1);
