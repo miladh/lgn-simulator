@@ -1,7 +1,7 @@
 #ifndef NATURALSCENEVIDEO_H
 #define NATURALSCENEVIDEO_H
 
-#include "stimuli/stimuli.h"
+#include "stimuli/stimulus.h"
 
 #include "opencv2/core/core.hpp"
 #include "opencv2/highgui/highgui.hpp"

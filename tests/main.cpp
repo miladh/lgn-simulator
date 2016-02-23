@@ -13,7 +13,7 @@ int main()
 
 
     bool special = 1;
-    bool stimTests = 1;
+    bool stimulus = 1;
     bool fftHelperTests = 1;
     bool integratorTests = 1;
     bool systemTests = 1;
@@ -29,9 +29,9 @@ int main()
         cout << "Special tests completed. " << endl << endl;
     }
 
-    if(stimTests){
+    if(stimulus){
         cout << "Running stimulus tests..." << endl;
-        result += runner.RunTestsIf(Test::GetTestList(), "STIMULI", True(), 0);
+        result += runner.RunTestsIf(Test::GetTestList(), "stimulus", True(), 0);
         cout << "Stimulus tests completed. " << endl << endl;
     }
 

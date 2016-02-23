@@ -7,7 +7,6 @@ TARGET = ../lib/lgn-simulator
 SOURCES += \
     integrator.cpp \
     outputmanager.cpp \
-    stimuli/stimuli.cpp \
     neurons/neuron.cpp \
     neurons/corticalcell.cpp \
     neurons/relaycell.cpp \
@@ -39,12 +38,12 @@ SOURCES += \
     kernels/temporalKernels/temporalkernel.cpp \
     kernels/temporalKernels/temporallyconstant.cpp \
     helper/ffthelper.cpp \
-    helper/special.cpp
+    helper/special.cpp \
+    stimuli/stimulus.cpp
 
 HEADERS += \
     integrator.h \
     outputmanager.h \
-    stimuli/stimuli.h \
     neurons/neuron.h \
     neurons/corticalcell.h \
     neurons/relaycell.h \
@@ -78,7 +77,8 @@ HEADERS += \
     kernels/spatialKernels/spatiallyconstant.h \
     helper/ffthelper.h \
     helper/helperconstants.h \
-    helper/special.h
+    helper/special.h \
+    stimuli/stimulus.h
 
 OTHER_FILES +=
 

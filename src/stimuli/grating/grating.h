@@ -1,7 +1,7 @@
 #ifndef GRATING_H
 #define GRATING_H
 
-#include "stimuli/stimuli.h"
+#include "stimuli/stimulus.h"
 #include <memory>
 
 #include <cstddef>

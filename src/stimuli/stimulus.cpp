@@ -1,4 +1,4 @@
-#include "stimuli.h"
+#include "stimulus.h"
 
 using namespace lgnSimulator;
 

@@ -2,7 +2,7 @@
 #define NEURON_H
 
 
-#include "stimuli/stimuli.h"
+#include "stimuli/stimulus.h"
 #include "integrator.h"
 #include "kernels/kernel.h"
 #include "staticNonlinearity/staticnonlinearity.h"

@@ -1,7 +1,7 @@
 #ifndef NATURALSCENE_H
 #define NATURALSCENE_H
 
-#include "stimuli/stimuli.h"
+#include "stimuli/stimulus.h"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/photo/photo.hpp"
 

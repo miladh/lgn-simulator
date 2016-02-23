@@ -5,7 +5,7 @@
 #include <armadillo>
 #include <H5Cpp.h>
 
-#include "stimuli/stimuli.h"
+#include "stimuli/stimulus.h"
 #include "neurons/neuron.h"
 
 
