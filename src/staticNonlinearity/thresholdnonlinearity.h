@@ -2,7 +2,7 @@
 #define THRESHOLDNONLINEARITY_H
 
 #include "staticnonlinearity.h"
-#include "helper/specialfunctions.h"
+#include "helper/special.h"
 
 
 namespace lgnSimulator {

@@ -7,7 +7,7 @@
 #include <fftw3.h>
 #include <yaml-cpp/yaml.h>
 
-#include "helper/specialfunctions.h"
+#include "helper/special.h"
 #include "helper/ffthelper.h"
 #include "helper/helperconstants.h"
 

@@ -34,23 +34,23 @@ void GanglionCell::computeImpulseResponseFourierTransform()
 }
 
 
-void GanglionCell::computeImpulseResponse()
-{
+//void GanglionCell::computeImpulseResponse()
+//{
 
-    m_impulseResponse.set_size(m_impulseResponseFT.n_rows,
-                               m_impulseResponseFT.n_rows,
-                               m_impulseResponseFT.n_slices);
+//    m_impulseResponse.set_size(m_impulseResponseFT.n_rows,
+//                               m_impulseResponseFT.n_rows,
+//                               m_impulseResponseFT.n_slices);
 
-    for(int k = 0; k < int(m_impulseResponse.n_slices); k++){
-        for(int i = 0; i < int(m_impulseResponse.n_rows); i++){
-            for(int j = 0; j < int(m_impulseResponse.n_cols); j++){
-                m_impulseResponse(i, j, k) =
-                        impulseResponseValueAtPoint(
-                {m_spatialVec[i], m_spatialVec[j]}, m_timeVec[k]);
-            }
-        }
-    }
-}
+//    for(int k = 0; k < int(m_impulseResponse.n_slices); k++){
+//        for(int i = 0; i < int(m_impulseResponse.n_rows); i++){
+//            for(int j = 0; j < int(m_impulseResponse.n_cols); j++){
+//                m_impulseResponse(i, j, k) =
+//                        impulseResponseValueAtPoint(
+//                {m_spatialVec[i], m_spatialVec[j]}, m_timeVec[k]);
+//            }
+//        }
+//    }
+//}
 
 
 

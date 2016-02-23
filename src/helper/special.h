@@ -1,5 +1,5 @@
-#ifndef SPECIALFUNCTIONS_H
-#define SPECIALFUNCTIONS_H
+#ifndef SPECIAL_H
+#define SPECIAL_H
 
 
 #include <boost/math/special_functions/bessel.hpp>
@@ -8,11 +8,11 @@
 using namespace arma;
 
 namespace lgnSimulator {
-class SpecialFunctions
+class Special
 {
 public:
-    SpecialFunctions();
-    ~SpecialFunctions();
+    Special();
+    ~Special();
     static double heaviside(double x);
     static double secondKindBesselFunction(double x);
     static double delta(double x, double y);
@@ -20,4 +20,4 @@ public:
 
 };
 }
-#endif // SPECIALFUNCTIONS_H
+#endif // SPECIAL_H

@@ -3,7 +3,7 @@
 using namespace lgnSimulator;
 SpatialDelta::SpatialDelta(double weight, vec2 r0)
     : m_weight(weight)
-    , m_r0(r0)
+    , m_shift(r0)
 {
 
 }
@@ -11,12 +11,13 @@ SpatialDelta::SpatialDelta(double weight, vec2 r0)
 
 double lgnSimulator::SpatialDelta::spatial(vec2 r) const
 {
-    return m_weight * SpecialFunctions::delta(m_r0(0), r(0)) * SpecialFunctions::delta(m_r0(0), r(1));
+    return m_weight * Special::delta(m_shift(0), r(0))
+            * Special::delta(m_shift(1), r(1));
 }
 
 complex<double> lgnSimulator::SpatialDelta::fourierTransform(vec2 k) const
 {
-    return m_weight * exp(-core::i * dot(k, m_r0));
+    return m_weight * exp(-core::i * dot(k, m_shift));
 }
 
 

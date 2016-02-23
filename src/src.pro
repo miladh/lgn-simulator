@@ -1,7 +1,7 @@
 include(../defaults.pri)
 
 TEMPLATE = lib
-TARGET = ../lib/edog
+TARGET = ../lib/lgn-simulator
 
 
 SOURCES += \
@@ -39,7 +39,7 @@ SOURCES += \
     kernels/temporalKernels/temporalkernel.cpp \
     kernels/temporalKernels/temporallyconstant.cpp \
     helper/ffthelper.cpp \
-    helper/specialfunctions.cpp
+    helper/special.cpp
 
 HEADERS += \
     integrator.h \
@@ -77,8 +77,8 @@ HEADERS += \
     kernels/spatialKernels/spatialkernel.h \
     kernels/spatialKernels/spatiallyconstant.h \
     helper/ffthelper.h \
-    helper/specialfunctions.h \
-    helper/helperconstants.h
+    helper/helperconstants.h \
+    helper/special.h
 
 OTHER_FILES +=
 

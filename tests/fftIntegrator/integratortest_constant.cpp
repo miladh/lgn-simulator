@@ -45,9 +45,9 @@ void runTest(int ns, int nt, double dt, double c)
     for(int l = 0; l < Nt; l++){
         for(int i = 0; i < Ns; i++){
             for(int j = 0; j < Ns; j++){
-                f(i,j,l) = SpecialFunctions::delta(k[i], 0)
-                        * SpecialFunctions::delta(k[j], 0)
-                        * SpecialFunctions::delta(w[l], 0);
+                f(i,j,l) = Special::delta(k[i], 0)
+                        * Special::delta(k[j], 0)
+                        * Special::delta(w[l], 0);
             }
         }
     }

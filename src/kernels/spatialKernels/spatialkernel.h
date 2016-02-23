@@ -3,7 +3,7 @@
 
 #include <armadillo>
 #include <yaml-cpp/yaml.h>
-#include "helper/specialfunctions.h"
+#include "helper/special.h"
 #include "helper/helperconstants.h"
 
 using namespace std;

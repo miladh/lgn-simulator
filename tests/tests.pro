@@ -5,9 +5,10 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-TARGET = edog-tests
+TARGET = lgnSimulator_tests
 
-LIBS += -lunittest++ -L$$TOP_OUT_PWD/lib -ledog
+LIBS += -lunittest++
+LIBS += -L$$TOP_OUT_PWD/lib -llgn-simulator
 INCLUDEPATH += $$TOP_PWD/include
 
 
@@ -30,7 +31,8 @@ SOURCES += main.cpp \
     systemTests/systemtest_grc.cpp \
     systemTests/systemtest_gric.cpp \
     systemTests/systemtest_gi.cpp \
-    systemTests/systemtest_spot.cpp
+    systemTests/systemtest_spot.cpp \
+    test_special.cpp
 
 
 

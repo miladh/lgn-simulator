@@ -4,7 +4,7 @@
 #include <armadillo>
 
 #include "integrator.h"
-#include "helper/specialfunctions.h"
+#include "helper/special.h"
 
 using namespace std;
 using namespace arma;

@@ -19,7 +19,7 @@ double DecayingExponential::temporal(double t) const
 {
 
     return 1./ m_tau * exp(-(t - m_delay)/m_tau)
-            * SpecialFunctions::heaviside(t - m_delay);
+            * Special::heaviside(t - m_delay);
 }
 
 complex<double> DecayingExponential::fourierTransform(double w) const

@@ -18,7 +18,7 @@ public:
 
 private:
     double m_weight = 0.0;
-    vec2 m_r0;
+    vec2 m_shift;
 };
 
 }

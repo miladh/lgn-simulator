@@ -69,8 +69,8 @@ SUITE(INTEGRATOR){
             for(int i = 0; i < Ns; i++){
                 for(int j = 0; j < Ns; j++){
                     f(i,j,l) = exponentialFT(a, w[l])
-                            * SpecialFunctions::delta(k[i], 0)
-                            * SpecialFunctions::delta(k[j], 0);
+                            * Special::delta(k[i], 0)
+                            * Special::delta(k[j], 0);
                 }
             }
         }

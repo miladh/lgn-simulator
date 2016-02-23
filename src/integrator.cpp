@@ -16,7 +16,7 @@ Integrator::Integrator(const int nt,
     , m_lengthInterval(m_nPointsSpatial * m_spatialResolution)
     , m_temporalSamplingFreq(2.* core::pi / m_temporalResolution)
     , m_spatialSamplingFreq(2.* core::pi / m_spatialResolution)
-    , m_temporalFreqResolution(m_temporalSamplingFreq / m_nPointsSpatial)
+    , m_temporalFreqResolution(m_temporalSamplingFreq / m_nPointsTemporal)
     , m_spatialFreqResolution(m_spatialSamplingFreq / m_nPointsSpatial)
 {
     //Temporal Grid

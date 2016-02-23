@@ -24,7 +24,7 @@ double TemporallyConstant::temporal(double t) const
 
 complex<double> TemporallyConstant::fourierTransform(double w) const
 {
-    return m_constant * SpecialFunctions::delta(w,0);
+    return m_constant * Special::delta(w,0);
 }
 
 

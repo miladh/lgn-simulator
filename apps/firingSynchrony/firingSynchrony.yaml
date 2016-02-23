@@ -4,16 +4,16 @@ description: "Firing synchrony config file"
 ns: 7
 nt: 7
 dt: 0.01
-ds: 0.02
+ds: 0.1
 
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0
 mask: "none" # none/circle/gauss
 maskSize: 0.5
-kxId:  2        #[-ns/2, ns/2 - 1]
+kxId:  1        #[-ns/2, ns/2 - 1]
 kyId:  0        #[-ns/2, ns/2 - 1]
-wId:  5         #[-nt/2, nt/2 - 1]
+wId:  0         #[-nt/2, nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
@@ -25,7 +25,7 @@ ganglionImpRes:
     b: 0.83
 
 # TemporalDelta
-    delay: 1.0
+    delay: 0.0
 
 #------------spatialKernelSettings-----------------#
 spatialKernels:
@@ -33,35 +33,35 @@ spatialKernels:
     # SpatialDelta
         weight: 1.0
 
-    Krc:
-        #weight: -0.2
-    # Gauss
-        A: -1.5
-        a: 0.83
+    #Krc:
+        ##weight: -0.2
+    ## Gauss
+        #A: -1.5
+        #a: 0.83
 
-    Kcr:
-    # SpatialDelta
-        weight: 1.0
+    #Kcr:
+    ## SpatialDelta
+        #weight: 1.0
 
 
 #------------temporalKernelSettings-----------------#
 temporalKernels:
     Krg:
     # TemporalDelta
-        delay: 1.0
+        delay: 0.0
 
-    Kcr:
-    # TemporalDelta
-        delay: 1.0
+    #Kcr:
+     ##TemporalDelta
+        #delay: 1.0
 
     Krc:
-     #TemporalDelta
-        delay: 1.0
+     ##TemporalDelta
+        #delay: 1.0
 
     # Gaussian
-        #A: 1.0
-        #a: 0.4
-        #delay: 1.0
+        A: 1.0
+        a: 0.2
+        delay: 0.0
 
 
 #------------backgroundResponse-----------------#

@@ -2,7 +2,7 @@
 #define FFTHELPER_H
 
 #include <armadillo>
-#include "specialfunctions.h"
+#include "special.h"
 
 using namespace arma;
 

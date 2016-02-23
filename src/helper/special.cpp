@@ -1,19 +1,19 @@
-#include "specialfunctions.h"
+#include "special.h"
 
 using namespace lgnSimulator;
 
 
-SpecialFunctions::SpecialFunctions()
+Special::Special()
 {
 
 }
 
-SpecialFunctions::~SpecialFunctions()
+Special::~Special()
 {
 
 }
 
-double SpecialFunctions::heaviside(double x)
+double Special::heaviside(double x)
 {
     if (x < 0){
         return 0;
@@ -22,14 +22,14 @@ double SpecialFunctions::heaviside(double x)
     }
 }
 
-double SpecialFunctions::secondKindBesselFunction(double x)
+double Special::secondKindBesselFunction(double x)
 {
     double j =  boost::math::cyl_bessel_j(1, x);
     return j;
 }
 
 
-double SpecialFunctions::delta(double x, double y) {
+double Special::delta(double x, double y) {
     if(x == y){
         return 1;
     }else{
@@ -37,7 +37,7 @@ double SpecialFunctions::delta(double x, double y) {
     }
 }
 
-int SpecialFunctions::isOdd(int num)
+int Special::isOdd(int num)
 {
     if(num % 2){
         return 1;

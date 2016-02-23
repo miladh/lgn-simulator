@@ -17,7 +17,7 @@ TemporalDelta::~TemporalDelta()
 
 double TemporalDelta::temporal(double t) const
 {
-    return SpecialFunctions::delta(t, m_delay);
+    return Special::delta(t, m_delay);
 }
 
 complex<double> TemporalDelta::fourierTransform(double w) const

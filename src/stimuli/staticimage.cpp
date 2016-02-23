@@ -21,7 +21,7 @@ double StaticImage::temporalValueAtPoint(double t)
 
 double StaticImage::fourierTransformAtTemporalFrequency(double w)
 {
-    return SpecialFunctions::delta(0, w)/m_integrator.temporalFreqResolution();
+    return Special::delta(0, w)/m_integrator.temporalFreqResolution();
 }
 
 
