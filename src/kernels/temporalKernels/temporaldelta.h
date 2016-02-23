@@ -8,7 +8,7 @@ namespace lgnSimulator {
 class TemporalDelta : public TemporalKernel
 {
 public:
-    TemporalDelta(double delay);
+    TemporalDelta(double delay, double temporalResolution);
     ~TemporalDelta();
 
     // TemporalKernel interface
@@ -18,6 +18,7 @@ public:
 
 private:
     double m_delay = 0;
+    double m_peak = 1.0;
 };
 
 }

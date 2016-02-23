@@ -16,7 +16,7 @@ public:
                  StaticNonlinearity *staticNonlinearity = nullptr);
     ~GanglionCell();
 
-//    virtual void computeImpulseResponse();
+    virtual void computeImpulseResponse();
     virtual void computeImpulseResponseFourierTransform();
 
 private:

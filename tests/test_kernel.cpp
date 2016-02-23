@@ -15,7 +15,7 @@ SUITE(kernel){
     //TemporalDelta---------------------------------------------------
     TEST(temporalDelta_test_0) {
         double delay = 1.3;
-        TemporalDelta delta(delay);
+        TemporalDelta delta(delay, 1);
         CHECK_CLOSE(delta.temporal(0.5), 0.0, 1e-12);
         CHECK_CLOSE(real(delta.fourierTransform(0.5)),0.796083798549055, 1e-12);
         CHECK_CLOSE(imag(delta.fourierTransform(0.5)),0.605186405736039, 1e-12);
@@ -23,7 +23,7 @@ SUITE(kernel){
     }
     TEST(temporalDelta_test_1) {
         double delay = 0.0;
-        TemporalDelta delta(delay);
+        TemporalDelta delta(delay, 1);
         CHECK_CLOSE(delta.temporal(0.0), 1.0, 1e-12);
         CHECK_CLOSE(real(delta.fourierTransform(0.0)),1.0, 1e-12);
         CHECK_CLOSE(imag(delta.fourierTransform(0.5)),0.0, 1e-12);
@@ -31,7 +31,7 @@ SUITE(kernel){
     }
     TEST(temporalDelta_test_2) {
         double delay = -20.3;
-        TemporalDelta delta(delay);
+        TemporalDelta delta(delay, 1);
         CHECK_CLOSE(delta.temporal(-20.3), 1.0, 1e-12);
         CHECK_CLOSE(real(delta.fourierTransform(2.3)),-0.907337331535000, 1e-12);
         CHECK_CLOSE(imag(delta.fourierTransform(2.3)),-0.420403338239533, 1e-12);
@@ -42,7 +42,7 @@ SUITE(kernel){
     TEST(spatialDelta_test_0) {
         double w = 1.3;
         vec2 shift = {0.0, 0.0};
-        SpatialDelta delta(w, shift);
+        SpatialDelta delta(w, 1, shift);
         CHECK_CLOSE(delta.spatial({0.5, 0.1}), 0.0, 1e-12);
         CHECK_CLOSE(real(delta.fourierTransform({0.5, 0.1})), w, 1e-12);
         CHECK_CLOSE(imag(delta.fourierTransform({0.5, 0.1})), 0.0, 1e-12);
@@ -51,7 +51,7 @@ SUITE(kernel){
     TEST(spatialDelta_test_1) {
         double w = -1.3;
         vec2 shift = {0.5, 0.1};
-        SpatialDelta delta(w, shift);
+        SpatialDelta delta(w,1, shift);
         CHECK_CLOSE(delta.spatial({0.5, 0.1}), w, 1e-12);
         CHECK_CLOSE(real(delta.fourierTransform({2.5, -3.1})),-0.76672443254042, 1e-12);
         CHECK_CLOSE(imag(delta.fourierTransform({2.5, -3.1})), 1.04982553052664, 1e-12);

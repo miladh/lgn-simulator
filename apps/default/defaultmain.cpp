@@ -45,7 +45,7 @@ int main()
 //    DecayingExponential Kt_rc(0.42,0.10);
 //    DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
 //        TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
-    TemporalDelta Kt_cr(0.4);
+    TemporalDelta Kt_cr(0.4, cfg["dt"].as<double>());
 
     //Static nonlinearity-------------------------------------------------------------
 //    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);

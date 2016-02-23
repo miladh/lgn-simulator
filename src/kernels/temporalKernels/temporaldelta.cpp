@@ -3,8 +3,9 @@
 using namespace lgnSimulator;
 
 
-TemporalDelta::TemporalDelta(double delay)
-    :m_delay(delay)
+TemporalDelta::TemporalDelta(double delay, double temporalResolution)
+    : m_delay(delay)
+    , m_peak(1./temporalResolution)
 {
 
 }
@@ -17,20 +18,26 @@ TemporalDelta::~TemporalDelta()
 
 double TemporalDelta::temporal(double t) const
 {
-    return Special::delta(t, m_delay);
+    return m_peak * Special::delta(t, m_delay);
 }
 
 complex<double> TemporalDelta::fourierTransform(double w) const
 {
-    // Note that we have +i, and not -i due to the definition of
-    // inverse temporal FT.
-    return exp(core::i * m_delay * w);
+    // Note the additional -1 factor that accounts for the difference
+    // in definition of temporal and spatial inverse FT.
+    return exp(core::i * m_delay * -w);
 }
 
 
 TemporalDelta createTemporalDeltaKernel(const YAML::Node &cfg)
 {
     double delay = cfg["delay"].as<double>();
+    double dt = 0.1;
 
-    return TemporalDelta(delay);
+//    cout << cfg["peak"]<< endl;
+//    double dt = cfg["peak"].as<double>();
+
+    return TemporalDelta(delay, dt);
+
+
 }

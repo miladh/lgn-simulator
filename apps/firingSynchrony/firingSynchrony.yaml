@@ -3,8 +3,8 @@ description: "Firing synchrony config file"
 #------------Integrator settings-----------------#
 ns: 7
 nt: 7
-dt: 0.1
-ds: 0.02
+dt: &dt_id 0.1
+ds: 0.05
 
 #------------Stimulus settings-----------------#
 # Grating:
@@ -43,12 +43,13 @@ spatialKernels:
     ## SpatialDelta
         #weight: 1.0
 
-
 #------------temporalKernelSettings-----------------#
 temporalKernels:
     Krg:
     # TemporalDelta
         delay: 0.0
+        peak : *dt_id
+
 
     #Kcr:
      ##TemporalDelta

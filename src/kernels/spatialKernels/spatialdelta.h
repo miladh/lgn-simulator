@@ -9,7 +9,7 @@ namespace lgnSimulator {
 class SpatialDelta : public SpatialKernel
 {
 public:
-    SpatialDelta(double weight, vec2 r0);
+    SpatialDelta(double weight, double spatialResolution, vec2 r0);
 
     // SpatialKernel interface
     virtual double spatial(vec2 r) const;
@@ -18,6 +18,7 @@ public:
 
 private:
     double m_weight = 0.0;
+    double m_peak = 1.0;
     vec2 m_shift;
 };
 
