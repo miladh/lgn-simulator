@@ -49,7 +49,6 @@ void runSpatiotemporalDeltaTest(int nt, double dt, int ns, double ds,
         }
     }
 
-
     cx_cube F = integrator.backwardFFT(G);
     cx_cube diff = F - F_e;
 
