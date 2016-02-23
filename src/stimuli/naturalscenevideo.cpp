@@ -24,7 +24,7 @@ NaturalSceneVideo::~NaturalSceneVideo()
 
 void NaturalSceneVideo::computeSpatiotemporal()
 {
-    m_spatioTemporal = real(m_scene);
+    m_spatiotemporal = real(m_scene);
 }
 
 void NaturalSceneVideo::computeFourierTransform()

@@ -35,7 +35,6 @@ int main()
         cout << "Stimulus tests completed. " << endl << endl;
     }
 
-
     if(fftHelperTests){
         result += runner.RunTestsIf(Test::GetTestList(), "fftHelper", True(), 0);
     }
@@ -43,8 +42,6 @@ int main()
     if(integratorTests){
         result += runner.RunTestsIf(Test::GetTestList(), "INTEGRATOR", True(), 0);
     }
-
-
 
     if(dev){
         result += runner.RunTestsIf(Test::GetTestList(), "DEVELOPMENT", True(), 0);

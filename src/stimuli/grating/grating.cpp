@@ -25,10 +25,10 @@ Grating::~Grating()
 
 void Grating::computeSpatiotemporal()
 {
-    for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
-        for(int i = 0; i < int(m_spatioTemporal.n_rows); i++){
-            for(int j = 0; j < int(m_spatioTemporal.n_cols); j++){
-                m_spatioTemporal(i,j,k) = valueAtPoint({m_spatialVec[i],
+    for(int k = 0; k < int(m_spatiotemporal.n_slices); k++){
+        for(int i = 0; i < int(m_spatiotemporal.n_rows); i++){
+            for(int j = 0; j < int(m_spatiotemporal.n_cols); j++){
+                m_spatiotemporal(i,j,k) = valueAtPoint({m_spatialVec[i],
                                                         m_spatialVec[j]},
                                                        m_timeVec[k]);
             }

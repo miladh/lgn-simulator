@@ -32,7 +32,7 @@ SOURCES += main.cpp \
     systemTests/systemtest_gi.cpp \
     systemTests/systemtest_spot.cpp \
     test_special.cpp \
-    test_stimulus.cpp
+    stimulusTests/test_stimulus_fullfieldgrating.cpp
 
 
 

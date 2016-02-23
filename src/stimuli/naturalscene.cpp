@@ -23,8 +23,8 @@ NaturalScene::~NaturalScene()
 void NaturalScene::computeSpatiotemporal()
 {
 
-    for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
-        m_spatioTemporal.slice(k) = real(m_scene)
+    for(int k = 0; k < int(m_spatiotemporal.n_slices); k++){
+        m_spatiotemporal.slice(k) = real(m_scene)
                 * temporalValueAtPoint(m_timeVec[k]);
     }
 
@@ -34,7 +34,7 @@ void NaturalScene::computeFourierTransform()
 {
     m_sceneFourierTransform = m_integrator.forwardFFT(m_scene);
 
-    for(int k = 0; k < int(m_spatioTemporal.n_slices); k++){
+    for(int k = 0; k < int(m_spatiotemporal.n_slices); k++){
         m_fourierTransform.slice(k) = m_sceneFourierTransform
                 * fourierTransformAtTemporalFrequency(m_temporalFreqs[k]);
     }

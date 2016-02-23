@@ -39,13 +39,15 @@ void runTest(int ns, int nt, double dt, double C, int wdId, int kxId, int kyId)
     double ky = k(kyId);
 
     FullFieldGrating S(integrator, {kx, ky}, wd, C);
-    //Spatiotemporal signal
-    S.computeSpatiotemporal();
-    g.set_real(S.spatioTemporal());
-    //fourier signal
 
+    S.computeSpatiotemporal();
     S.computeFourierTransform();
+
+    g.set_real(S.spatioTemporal());
+
+
     f = S.fourierTransform();
+
     // Backward
     G = integrator.backwardFFT(f);
 

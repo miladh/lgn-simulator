@@ -28,7 +28,7 @@ public:
     string type() const;
 
 protected:
-    cube m_spatioTemporal;
+    cube m_spatiotemporal;
     cx_cube m_fourierTransform;
 
     vec m_spatialVec;

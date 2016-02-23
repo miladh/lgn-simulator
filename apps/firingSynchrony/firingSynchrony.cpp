@@ -97,8 +97,8 @@ int main(int argc, char* argv[]){
     for(Neuron* neuron : neurons){
 
         neuron->computeResponse(S.get());
-        cout <<  (neuron->response()).max() << endl;
-        cout <<  (neuron->response()).min() << endl;
+//        cout <<  (neuron->response()).max() << endl;
+//        cout <<  (neuron->response()).min() << endl;
         io.writeResponse(*neuron);
         neuron->clearResponse();
 

@@ -31,5 +31,5 @@ complex<double> FullFieldGrating::fourierTransformAtFrequency(vec2 k, double w) 
             /m_integrator.spatialFreqResolution()
             /m_integrator.temporalFreqResolution();
 
-    return 8*core::pi*core::pi*core::pi* m_contrast * s;
+    return 8*core::pi*core::pi*core::pi * m_contrast * s;
 }

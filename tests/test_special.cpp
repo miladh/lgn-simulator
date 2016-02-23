@@ -41,6 +41,16 @@ SUITE(special){
         CHECK_EQUAL(Special::delta(-1230.,-50.), 0);
     }
 
+    TEST(deltaVec2) {
+        CHECK_EQUAL(Special::delta({0,0},{0,0}), 1);
+        CHECK_EQUAL(Special::delta({-1e6, -1e6}, {-1e6, -1e6}), 1);
+        CHECK_EQUAL(Special::delta({3.456,3.456}, {3.456,3.456}), 1);
+        CHECK_EQUAL(Special::delta({2.1, 10.78},{2.1, 10.78}), 1);
+        CHECK_EQUAL(Special::delta({10.78, 2.1},{2.1, 10.78}), 0);
+        CHECK_EQUAL(Special::delta({-4.5, 900.89},{0.2, 67.6}), 0);
+        CHECK_EQUAL(Special::delta({2, -2},{2.0001, 2}), 0);
+    }
+
     TEST(isOdd) {
         CHECK_EQUAL(Special::isOdd(0), 0);
         CHECK_EQUAL(Special::isOdd(-3),1);

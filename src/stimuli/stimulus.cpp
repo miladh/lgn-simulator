@@ -9,7 +9,7 @@ Stimulus::Stimulus(const Integrator &integrator)
     int nPointsTemporal = integrator.nPointsTemporal();
     int nPointsSpatial = integrator.nPointsSpatial();
 
-    m_spatioTemporal = zeros<cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
+    m_spatiotemporal = zeros<cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
     m_fourierTransform = zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
@@ -29,7 +29,7 @@ Stimulus::~Stimulus()
 
 cube Stimulus::spatioTemporal() const
 {
-    return m_spatioTemporal;
+    return m_spatiotemporal;
 }
 
 cx_cube Stimulus::fourierTransform() const
@@ -40,7 +40,7 @@ cx_cube Stimulus::fourierTransform() const
 
 void Stimulus::clearSpatioTemporal()
 {
-    m_spatioTemporal.clear();
+    m_spatiotemporal.clear();
 }
 
 

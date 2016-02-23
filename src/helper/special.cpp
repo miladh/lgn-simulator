@@ -37,6 +37,10 @@ double Special::delta(double x, double y) {
     }
 }
 
+double Special::delta(vec2 x, vec2 y) {
+       return delta(x(0), y(0)) * delta(x(1), y(1));
+}
+
 int Special::isOdd(int num)
 {
     if(num % 2){

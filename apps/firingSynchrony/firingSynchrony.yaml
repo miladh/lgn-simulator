@@ -3,17 +3,17 @@ description: "Firing synchrony config file"
 #------------Integrator settings-----------------#
 ns: 7
 nt: 7
-dt: 0.01
-ds: 0.1
+dt: 0.1
+ds: 0.02
 
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0
 mask: "none" # none/circle/gauss
 maskSize: 0.5
-kxId:  1        #[-ns/2, ns/2 - 1]
-kyId:  0        #[-ns/2, ns/2 - 1]
-wId:  0         #[-nt/2, nt/2 - 1]
+kxId:  1        #[-2^ns/2, 2^ns/2 - 1]
+kyId:  0        #[-2^ns/2, 2^ns/2 - 1]
+wId:   0        #[-2^nt/2, 2^nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
