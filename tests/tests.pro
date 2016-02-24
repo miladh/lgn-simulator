@@ -19,7 +19,6 @@ SOURCES += main.cpp \
     fftHelper/fftshift3dtests.cpp \
     fftHelper/ifftshift3dtests.cpp \
     fftIntegrator/integratortest_dog.cpp \
-    fftIntegrator/integratortest_cosine.cpp \
     fftIntegrator/integratortest_constant.cpp \
     fftIntegrator/integratortest_exponential.cpp \
     systemTests/systemtest_gr.cpp \

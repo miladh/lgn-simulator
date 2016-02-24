@@ -1,5 +1,5 @@
 /**********************************************************************
- *  Test: 3d inverse fourier transform of full-field grating functions
+ *  Test: 3D inverse fourier transform of full-field grating functions
  *        (cosine waves)
  *
  *  Analytic source: implementation of the spatiotemporal grating

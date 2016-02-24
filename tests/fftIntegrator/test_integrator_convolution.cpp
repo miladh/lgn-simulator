@@ -1,7 +1,9 @@
 /**********************************************************************
- *  Test: spatial and temporal kernel functions
+ *  Test: convolution theorem applied on h = W * K = ifft(fft(W)fft(K)),
+ *        where W = Gauss(r) * delta(t) and
+ *        K = delta(r) * delta(t)
  *
- *  Analytic source: by hand and Python
+ *  Analytic source: closed-form experssion
  *
  * ********************************************************************/
 

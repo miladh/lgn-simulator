@@ -1,366 +1,343 @@
 /**********************************************************************
- *  Test: 3d inverse fourier transform of constant functions
+ *  Test: 3D inverse fourier transform of a constant functions
+ *        F(x,y,t) = C
  *
- *  Analytic source: by hand
+ *  Analytic source: closed-form experssion
  *
  * ********************************************************************/
 
 #include <unittest++/UnitTest++.h>
-#include <armadillo>
-#include <iostream>
+#include <lgnSimulator.h>
 
-#include "integrator.h"
-
-using namespace std;
-using namespace arma;
 using namespace lgnSimulator;
 
-void runTest(int ns, int nt, double dt, double c)
+void runTest(int ns, int nt, double dt, double ds, double C)
 {
-    int Ns = pow(2,ns);
-    int Nt = pow(2,nt);
-
-    double ds = 0.01;
 
     Integrator integrator(nt, dt, ns, ds);
-
     vec k = integrator.spatialFreqVec();
     vec w = integrator.temporalFreqVec();
 
-    cx_cube g = zeros<cx_cube>(Ns, Ns, Nt);
-    cx_cube G = zeros<cx_cube>(Ns, Ns, Nt);
-    cx_cube f = zeros<cx_cube>(Ns, Ns, Nt);
-
-
-    //Spatiotemporal signal
-    for(int l = 0; l < Nt; l++){
-        for(int i = 0; i < Ns; i++){
-            for(int j = 0; j < Ns; j++){
-                g(i,j,l) = c;
-            }
-        }
-    }
+    cube F = ones<cube>(k.n_elem, k.n_elem, w.n_elem) * C;
+    cx_cube G = zeros<cx_cube>(k.n_elem, k.n_elem, w.n_elem);
 
     //fourier signal
-    for(int l = 0; l < Nt; l++){
-        for(int i = 0; i < Ns; i++){
-            for(int j = 0; j < Ns; j++){
-                f(i,j,l) = Special::delta(k[i], 0)
-                        * Special::delta(k[j], 0)
-                        * Special::delta(w[l], 0);
+    for(int l = 0; l < int(w.n_elem); l++){
+        for(int i = 0; i < int(k.n_elem); i++){
+            for(int j = 0; j < int(k.n_elem); j++){
+                G(i,j,l) = Special::delta(k[i], 0)
+                         * Special::delta(k[j], 0)
+                         * Special::delta(w[l], 0);
             }
         }
     }
 
-    f *= c*8*core::pi*core::pi*core::pi;
-    f /= integrator.spatialFreqResolution()
-            * integrator.spatialFreqResolution()
-            * integrator.temporalFreqResolution();
+    G *= C * 8 * core::pi * core::pi * core::pi
+       / integrator.spatialFreqResolution()
+       / integrator.spatialFreqResolution()
+       / integrator.temporalFreqResolution();
 
     // Backward
-    G = integrator.backwardFFT(f);
+    cx_cube F_fft = integrator.backwardFFT(G);
+    cx_cube diff = F - F_fft;
 
+    cube diff_real = abs(real(diff));
+    cube diff_imag = abs(imag(diff));
 
-    // Test
-    for(int l = 0; l < Nt; l++){
-        for(int i = 0; i < Ns; i++){
-            for(int j = 0; j < Ns; j++){
-                CHECK_CLOSE(real(g(i,j,l)),
-                            real(G(i,j,l)), 1e-9);
-            }
-        }
-    }
+    //Test
+    CHECK_CLOSE(diff_real.max(), 0.0, 1e-9);
+    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-9);
 
 }
 
 SUITE(integrator){
 
     TEST(constant_0){
-         runTest(2, 1, 0.01, -60.5);
+         runTest(2, 1, 0.01, 0.355, -60.5);
     }
 
     TEST(constant_1){
-         runTest(2, 1, 0.255, -60.5);
+         runTest(2, 1, 0.255, 0.015, -60.5);
     }
 
     TEST(constant_2){
-         runTest(2, 1, 0.5, -60.5);
+         runTest(2, 1, 0.5, 0.2, -60.5);
     }
 
     TEST(constant_3){
-         runTest(2, 2, 0.01, -60.5);
+         runTest(2, 2, 0.01, 0.355, -60.5);
     }
 
     TEST(constant_4){
-         runTest(2, 2, 0.255, -60.5);
+         runTest(2, 2, 0.255, 0.015, -60.5);
     }
 
     TEST(constant_5){
-         runTest(2, 2, 0.5, -60.5);
+         runTest(2, 2, 0.5, 0.2, -60.5);
     }
 
     TEST(constant_6){
-         runTest(3, 1, 0.01, -60.5);
+         runTest(3, 1, 0.01, 0.355, -60.5);
     }
 
     TEST(constant_7){
-         runTest(3, 1, 0.255, -60.5);
+         runTest(3, 1, 0.255, 0.015, -60.5);
     }
 
     TEST(constant_8){
-         runTest(3, 1, 0.5, -60.5);
+         runTest(3, 1, 0.5, 0.2, -60.5);
     }
 
     TEST(constant_9){
-         runTest(3, 2, 0.01, -60.5);
+         runTest(3, 2, 0.01, 0.355, -60.5);
     }
 
     TEST(constant_10){
-         runTest(3, 2, 0.255, -60.5);
+         runTest(3, 2, 0.255, 0.015, -60.5);
     }
 
     TEST(constant_11){
-         runTest(3, 2, 0.5, -60.5);
+         runTest(3, 2, 0.5, 0.2, -60.5);
     }
 
     TEST(constant_12){
-         runTest(2, 1, 0.01, -0.002);
+         runTest(2, 1, 0.01, 0.355, -0.002);
     }
 
     TEST(constant_13){
-         runTest(2, 1, 0.255, -0.002);
+         runTest(2, 1, 0.255, 0.015, -0.002);
     }
 
     TEST(constant_14){
-         runTest(2, 1, 0.5, -0.002);
+         runTest(2, 1, 0.5, 0.2, -0.002);
     }
 
     TEST(constant_15){
-         runTest(2, 2, 0.01, -0.002);
+         runTest(2, 2, 0.01, 0.355, -0.002);
     }
 
     TEST(constant_16){
-         runTest(2, 2, 0.255, -0.002);
+         runTest(2, 2, 0.255, 0.015, -0.002);
     }
 
     TEST(constant_17){
-         runTest(2, 2, 0.5, -0.002);
+         runTest(2, 2, 0.5, 0.2, -0.002);
     }
 
     TEST(constant_18){
-         runTest(3, 1, 0.01, -0.002);
+         runTest(3, 1, 0.01, 0.355, -0.002);
     }
 
     TEST(constant_19){
-         runTest(3, 1, 0.255, -0.002);
+         runTest(3, 1, 0.255, 0.015, -0.002);
     }
 
     TEST(constant_20){
-         runTest(3, 1, 0.5, -0.002);
+         runTest(3, 1, 0.5, 0.2, -0.002);
     }
 
     TEST(constant_21){
-         runTest(3, 2, 0.01, -0.002);
+         runTest(3, 2, 0.01, 0.355, -0.002);
     }
 
     TEST(constant_22){
-         runTest(3, 2, 0.255, -0.002);
+         runTest(3, 2, 0.255, 0.015, -0.002);
     }
 
     TEST(constant_23){
-         runTest(3, 2, 0.5, -0.002);
+         runTest(3, 2, 0.5, 0.2, -0.002);
     }
 
     TEST(constant_24){
-         runTest(2, 1, 0.01, 0.0);
+         runTest(2, 1, 0.01, 0.355, 0.0);
     }
 
     TEST(constant_25){
-         runTest(2, 1, 0.255, 0.0);
+         runTest(2, 1, 0.255, 0.015, 0.0);
     }
 
     TEST(constant_26){
-         runTest(2, 1, 0.5, 0.0);
+         runTest(2, 1, 0.5, 0.2, 0.0);
     }
 
     TEST(constant_27){
-         runTest(2, 2, 0.01, 0.0);
+         runTest(2, 2, 0.01, 0.355, 0.0);
     }
 
     TEST(constant_28){
-         runTest(2, 2, 0.255, 0.0);
+         runTest(2, 2, 0.255, 0.015, 0.0);
     }
 
     TEST(constant_29){
-         runTest(2, 2, 0.5, 0.0);
+         runTest(2, 2, 0.5, 0.2, 0.0);
     }
 
     TEST(constant_30){
-         runTest(3, 1, 0.01, 0.0);
+         runTest(3, 1, 0.01, 0.355, 0.0);
     }
 
     TEST(constant_31){
-         runTest(3, 1, 0.255, 0.0);
+         runTest(3, 1, 0.255, 0.015, 0.0);
     }
 
     TEST(constant_32){
-         runTest(3, 1, 0.5, 0.0);
+         runTest(3, 1, 0.5, 0.2, 0.0);
     }
 
     TEST(constant_33){
-         runTest(3, 2, 0.01, 0.0);
+         runTest(3, 2, 0.01, 0.355, 0.0);
     }
 
     TEST(constant_34){
-         runTest(3, 2, 0.255, 0.0);
+         runTest(3, 2, 0.255, 0.015, 0.0);
     }
 
     TEST(constant_35){
-         runTest(3, 2, 0.5, 0.0);
+         runTest(3, 2, 0.5, 0.2, 0.0);
     }
 
     TEST(constant_36){
-         runTest(2, 1, 0.01, 4.6);
+         runTest(2, 1, 0.01, 0.355, 4.6);
     }
 
     TEST(constant_37){
-         runTest(2, 1, 0.255, 4.6);
+         runTest(2, 1, 0.255, 0.015, 4.6);
     }
 
     TEST(constant_38){
-         runTest(2, 1, 0.5, 4.6);
+         runTest(2, 1, 0.5, 0.2, 4.6);
     }
 
     TEST(constant_39){
-         runTest(2, 2, 0.01, 4.6);
+         runTest(2, 2, 0.01, 0.355, 4.6);
     }
 
     TEST(constant_40){
-         runTest(2, 2, 0.255, 4.6);
+         runTest(2, 2, 0.255, 0.015, 4.6);
     }
 
     TEST(constant_41){
-         runTest(2, 2, 0.5, 4.6);
+         runTest(2, 2, 0.5, 0.2, 4.6);
     }
 
     TEST(constant_42){
-         runTest(3, 1, 0.01, 4.6);
+         runTest(3, 1, 0.01, 0.355, 4.6);
     }
 
     TEST(constant_43){
-         runTest(3, 1, 0.255, 4.6);
+         runTest(3, 1, 0.255, 0.015, 4.6);
     }
 
     TEST(constant_44){
-         runTest(3, 1, 0.5, 4.6);
+         runTest(3, 1, 0.5, 0.2, 4.6);
     }
 
     TEST(constant_45){
-         runTest(3, 2, 0.01, 4.6);
+         runTest(3, 2, 0.01, 0.355, 4.6);
     }
 
     TEST(constant_46){
-         runTest(3, 2, 0.255, 4.6);
+         runTest(3, 2, 0.255, 0.015, 4.6);
     }
 
     TEST(constant_47){
-         runTest(3, 2, 0.5, 4.6);
+         runTest(3, 2, 0.5, 0.2, 4.6);
     }
 
     TEST(constant_48){
-         runTest(2, 1, 0.01, 32.1);
+         runTest(2, 1, 0.01, 0.355, 32.1);
     }
 
     TEST(constant_49){
-         runTest(2, 1, 0.255, 32.1);
+         runTest(2, 1, 0.255, 0.015, 32.1);
     }
 
     TEST(constant_50){
-         runTest(2, 1, 0.5, 32.1);
+         runTest(2, 1, 0.5, 0.2, 32.1);
     }
 
     TEST(constant_51){
-         runTest(2, 2, 0.01, 32.1);
+         runTest(2, 2, 0.01, 0.355, 32.1);
     }
 
     TEST(constant_52){
-         runTest(2, 2, 0.255, 32.1);
+         runTest(2, 2, 0.255, 0.015, 32.1);
     }
 
     TEST(constant_53){
-         runTest(2, 2, 0.5, 32.1);
+         runTest(2, 2, 0.5, 0.2, 32.1);
     }
 
     TEST(constant_54){
-         runTest(3, 1, 0.01, 32.1);
+         runTest(3, 1, 0.01, 0.355, 32.1);
     }
 
     TEST(constant_55){
-         runTest(3, 1, 0.255, 32.1);
+         runTest(3, 1, 0.255, 0.015, 32.1);
     }
 
     TEST(constant_56){
-         runTest(3, 1, 0.5, 32.1);
+         runTest(3, 1, 0.5, 0.2, 32.1);
     }
 
     TEST(constant_57){
-         runTest(3, 2, 0.01, 32.1);
+         runTest(3, 2, 0.01, 0.355, 32.1);
     }
 
     TEST(constant_58){
-         runTest(3, 2, 0.255, 32.1);
+         runTest(3, 2, 0.255, 0.015, 32.1);
     }
 
     TEST(constant_59){
-         runTest(3, 2, 0.5, 32.1);
+         runTest(3, 2, 0.5, 0.2, 32.1);
     }
 
     TEST(constant_60){
-         runTest(2, 1, 0.01, 1000.5);
+         runTest(2, 1, 0.01, 0.355, 1000.5);
     }
 
     TEST(constant_61){
-         runTest(2, 1, 0.255, 1000.5);
+         runTest(2, 1, 0.255, 0.015, 1000.5);
     }
 
     TEST(constant_62){
-         runTest(2, 1, 0.5, 1000.5);
+         runTest(2, 1, 0.5, 0.2, 1000.5);
     }
 
     TEST(constant_63){
-         runTest(2, 2, 0.01, 1000.5);
+         runTest(2, 2, 0.01, 0.355, 1000.5);
     }
 
     TEST(constant_64){
-         runTest(2, 2, 0.255, 1000.5);
+         runTest(2, 2, 0.255, 0.015, 1000.5);
     }
 
     TEST(constant_65){
-         runTest(2, 2, 0.5, 1000.5);
+         runTest(2, 2, 0.5, 0.2, 1000.5);
     }
 
     TEST(constant_66){
-         runTest(3, 1, 0.01, 1000.5);
+         runTest(3, 1, 0.01, 0.355, 1000.5);
     }
 
     TEST(constant_67){
-         runTest(3, 1, 0.255, 1000.5);
+         runTest(3, 1, 0.255, 0.015, 1000.5);
     }
 
     TEST(constant_68){
-         runTest(3, 1, 0.5, 1000.5);
+         runTest(3, 1, 0.5, 0.2, 1000.5);
     }
 
     TEST(constant_69){
-         runTest(3, 2, 0.01, 1000.5);
+         runTest(3, 2, 0.01, 0.355, 1000.5);
     }
 
     TEST(constant_70){
-         runTest(3, 2, 0.255, 1000.5);
+         runTest(3, 2, 0.255, 0.015, 1000.5);
     }
 
     TEST(constant_71){
-         runTest(3, 2, 0.5, 1000.5);
+         runTest(3, 2, 0.5, 0.2, 1000.5);
     }
 
 
