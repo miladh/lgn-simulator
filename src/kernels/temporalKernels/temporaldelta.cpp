@@ -32,10 +32,7 @@ complex<double> TemporalDelta::fourierTransform(double w) const
 TemporalDelta createTemporalDeltaKernel(const YAML::Node &cfg)
 {
     double delay = cfg["delay"].as<double>();
-    double dt = 0.1;
-
-//    cout << cfg["peak"]<< endl;
-//    double dt = cfg["peak"].as<double>();
+    double dt = cfg["dt"].as<double>();
 
     return TemporalDelta(delay, dt);
 

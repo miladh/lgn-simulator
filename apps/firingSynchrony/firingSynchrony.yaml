@@ -4,7 +4,7 @@ description: "Firing synchrony config file"
 ns: 7
 nt: 7
 dt: &dt_id 0.1
-ds: 0.05
+ds: &ds_id 0.05
 
 #------------Stimulus settings-----------------#
 # Grating:
@@ -26,12 +26,15 @@ ganglionImpRes:
 
 # TemporalDelta
     delay: 0.0
+    dt: *dt_id
 
 #------------spatialKernelSettings-----------------#
 spatialKernels:
     Krg:
     # SpatialDelta
         weight: 1.0
+        ds : *ds_id
+        shift: [0.5, 0.]
 
     #Krc:
         ##weight: -0.2
@@ -48,16 +51,18 @@ temporalKernels:
     Krg:
     # TemporalDelta
         delay: 0.0
-        peak : *dt_id
+        dt: *dt_id
 
 
     #Kcr:
      ##TemporalDelta
         #delay: 1.0
+        #dt: *dt_id
 
     Krc:
      ##TemporalDelta
         #delay: 1.0
+        #dt: *dt_id
 
     # Gaussian
         A: 1.0

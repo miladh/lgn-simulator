@@ -10,8 +10,6 @@
 
 using namespace lgnSimulator;
 
-
-
 void runSpatiotemporalDeltaTest(int nt, double dt, int ns, double ds,
                                 int tau, int delay,
                                 double A, double a, double weight, vec2 shift
