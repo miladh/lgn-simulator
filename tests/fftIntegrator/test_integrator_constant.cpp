@@ -1,6 +1,6 @@
 /**********************************************************************
  *  Test: 3D inverse fourier transform of a constant functions
- *        F(x,y,t) = C
+ *        F(r,t) = F(r) * F(t) = C * C
  *
  *  Analytic source: closed-form experssion
  *
