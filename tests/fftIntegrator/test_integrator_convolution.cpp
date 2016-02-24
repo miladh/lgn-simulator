@@ -10,10 +10,10 @@
 
 using namespace lgnSimulator;
 
-void runSpatiotemporalDeltaTest(int nt, double dt, int ns, double ds,
-                                int tau, int delay,
-                                double A, double a, double weight, vec2 shift
-                                ){
+void runIntegratorConvolutionTest(int nt, double dt, int ns, double ds,
+                                  int tau, int delay,
+                                  double A, double a, double weight, vec2 shift )
+{
 
 
     Integrator integrator(nt, dt, ns, ds);
@@ -53,6 +53,9 @@ void runSpatiotemporalDeltaTest(int nt, double dt, int ns, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
+//    cout <<diff_real.max() << endl;
+//    cout << diff_imag.max()<< endl;
+
     CHECK_CLOSE(diff_real.max(), 0.0, 1e-7);
     CHECK_CLOSE(diff_imag.max(), 0.0, 1e-7);
 
@@ -60,12 +63,12 @@ void runSpatiotemporalDeltaTest(int nt, double dt, int ns, double ds,
 
 SUITE(integrator){
     TEST(spatiotemporalDelta_test_0) {
-        runSpatiotemporalDeltaTest(6, 0.05, 6, 0.05, 0.0, 0.0,
+        runIntegratorConvolutionTest(6, 0.05, 6, 0.05, 0.0, 0.0,
                                    1.0, 0.25, 1.0, vec2{0.0, 0.0});
     }
 
     TEST(spatiotemporalDelta_test_1) {
-        runSpatiotemporalDeltaTest(7, 0.05, 7, 0.05, 0.3, 1.0,
+        runIntegratorConvolutionTest(7, 0.05, 7, 0.05, 0.3, 1.0,
                                    -1.2, 0.25, 1.0, vec2{1.1, -0.3});
     }
 

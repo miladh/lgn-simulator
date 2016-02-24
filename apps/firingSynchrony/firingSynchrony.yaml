@@ -11,9 +11,9 @@ ds: &ds_id 0.05
 C: 1.0
 mask: "none" # none/circle/gauss
 maskSize: 0.5
-kxId:  1        #[-2^ns/2, 2^ns/2 - 1]
-kyId:  0        #[-2^ns/2, 2^ns/2 - 1]
-wId:   0        #[-2^nt/2, 2^nt/2 - 1]
+kxId:  1        #[-Ns/2, Ns/2 - 1]
+kyId:  0        #[-Ns/2, Ns/2 - 1]
+wId:   0        #[-Nt/2, Nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#

@@ -19,7 +19,6 @@ SOURCES += main.cpp \
     fftHelper/fftshift3dtests.cpp \
     fftHelper/ifftshift3dtests.cpp \
     fftIntegrator/integratortest_dog.cpp \
-    fftIntegrator/integratortest_grating.cpp \
     fftIntegrator/integratortest_cosine.cpp \
     fftIntegrator/integratortest_constant.cpp \
     fftIntegrator/integratortest_exponential.cpp \
@@ -33,7 +32,8 @@ SOURCES += main.cpp \
     test_special.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
     test_kernel.cpp \
-    fftIntegrator/test_integrator_convolution.cpp
+    fftIntegrator/test_integrator_convolution.cpp \
+    fftIntegrator/test_integrator_grating.cpp
 
 
 

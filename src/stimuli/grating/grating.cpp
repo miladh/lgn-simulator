@@ -93,7 +93,7 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
 
 
     if((kxId  < -int(k.n_elem)/2) || (kxId  > int(k.n_elem)/2-1)){
-        cerr << "Too high index, kxId: " << kxId << endl
+        cerr << "Too high or low index, kxId: " << kxId << endl
              << "kxId range: [" << -int(k.n_elem)/2 << "," << k.n_elem/2-1 <<"]" <<endl;
         return 0;
 
@@ -102,7 +102,7 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
     }
 
     if((kyId  < -int(k.n_elem)/2) || (kyId  > int(k.n_elem)/2-1)){
-        cerr << "Too high index, kyId: " << kyId << endl
+        cerr << "Too high or low index, kyId: " << kyId << endl
              << "kyId range: [" << -int(k.n_elem)/2 << "," << k.n_elem/2-1 <<"]" <<endl;
         return 0;
 
@@ -111,7 +111,7 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
     }
 
     if((wId  < -int(w.n_elem)/2) || (wId  > int(w.n_elem)/2-1)){
-        cerr << "Too high index, wId: " << wId << endl
+        cerr << "Too high or low index, wId: " << wId << endl
              << "wId range: [" << -int(w.n_elem)/2 << "," << w.n_elem/2-1 <<"]" <<endl;
         return 0;
 

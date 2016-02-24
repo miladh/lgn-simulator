@@ -81,7 +81,7 @@ The accuracy of DFT is determined by two fundamental numbers
     \row
         \li Max frequency (Nyquist)
         \li \\(k_{\\mathrm{max}} = \\frac{k_s}{2} = \\frac{2\\pi}{2\\Delta x} = 2\\pi\\frac{M}{2 L}  \\)
-        \li \\(f_{\\mathrm{max}} = \\frac{f_s}{2} = \\frac{2\\pi}{2\\Delta t} = 2\\pi\\frac{N}{2 T}  \\)
+        \li \\(\\omega_{\\mathrm{max}} = \\frac{f_s}{2} = \\frac{2\\pi}{2\\Delta t} = 2\\pi\\frac{N}{2 T}  \\)
     \row
         \li Frequency resolution
         \li \\(\\Delta k = \\frac{2\\pi}{L} = \\frac{k_s}{M}\\)
