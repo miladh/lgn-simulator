@@ -26,7 +26,7 @@ double response(double d, double s, double A, double a, double B, double b)
     return Rg;
 }
 
-SUITE(SYSTEM){
+SUITE(SYSTEM1){
 
 
     TEST(ganglion_response_spot){
@@ -55,7 +55,7 @@ SUITE(SYSTEM){
 
         //Kernels
         DOG Ks(A, a, B, b);
-        TemporallyConstant Kt(t0);
+        TemporallyConstant Kt(t0, dt);
         SeparableKernel K(&Ks, &Kt);
 
         //Cell

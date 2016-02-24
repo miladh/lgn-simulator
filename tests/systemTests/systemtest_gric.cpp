@@ -54,7 +54,7 @@ SUITE(SYSTEM){
 
 
         //removing some kernels to reduce computation time
-        temporalKernels.erase (temporalKernels.begin()+1, temporalKernels.begin()+3);
+        temporalKernels.erase (temporalKernels.begin()+1, temporalKernels.begin()+2);
 
 
         //--------Loop recpField of ganglion--------

@@ -8,7 +8,7 @@ namespace lgnSimulator {
 class TemporallyConstant : public TemporalKernel
 {
 public:
-    TemporallyConstant(double constant);
+    TemporallyConstant(double constant, double temporalFreqResolution);
     ~TemporallyConstant();
 
     // TemporalKernel interface
@@ -18,6 +18,7 @@ public:
 
 private:
     double m_constant= 0.0;
+    double m_peak = 1.0;
 };
 
 }

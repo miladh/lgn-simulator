@@ -15,27 +15,27 @@ void runTest(int ns, int nt, double dt, double ds, double C)
 {
 
     Integrator integrator(nt, dt, ns, ds);
+    vec r = integrator.spatialVec();
     vec k = integrator.spatialFreqVec();
+    vec t = integrator.timeVec();
     vec w = integrator.temporalFreqVec();
 
-    cube F = ones<cube>(k.n_elem, k.n_elem, w.n_elem) * C;
+    TemporallyConstant Ft(C, integrator.temporalFreqResolution());
+    SpatiallyConstant  Fs(C, integrator.spatialFreqResolution());
+
+    cube F = zeros<cube>(k.n_elem, k.n_elem, w.n_elem);
     cx_cube G = zeros<cx_cube>(k.n_elem, k.n_elem, w.n_elem);
 
-    //fourier signal
     for(int l = 0; l < int(w.n_elem); l++){
         for(int i = 0; i < int(k.n_elem); i++){
             for(int j = 0; j < int(k.n_elem); j++){
-                G(i,j,l) = Special::delta(k[i], 0)
-                         * Special::delta(k[j], 0)
-                         * Special::delta(w[l], 0);
+                F(i,j,l) = Fs.spatial(vec2{r[i], r[j]})
+                         * Ft.temporal(t[l]);
+                G(i,j,l) = Fs.fourierTransform({k[i], k[j]})
+                         * Ft.fourierTransform(w[l]);
             }
         }
     }
-
-    G *= C * 8 * core::pi * core::pi * core::pi
-       / integrator.spatialFreqResolution()
-       / integrator.spatialFreqResolution()
-       / integrator.temporalFreqResolution();
 
     // Backward
     cx_cube F_fft = integrator.backwardFFT(G);
