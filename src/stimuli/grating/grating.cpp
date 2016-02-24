@@ -129,13 +129,17 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
 
 
     if(mask == "none"){
-        return unique_ptr<FullFieldGrating>(new FullFieldGrating(integrator, {kx, ky}, wd, contrast));
+        return unique_ptr<FullFieldGrating>(
+                    new FullFieldGrating(integrator, {kx, ky}, wd, contrast));
 
     }else if(mask == "gauss"){
-        return unique_ptr<GaussianMaskGrating>(new GaussianMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize));
+        return unique_ptr<GaussianMaskGrating>(
+                    new GaussianMaskGrating(integrator, {kx, ky}, wd,
+                                            contrast, maskSize));
 
     }else if(mask == "circle"){
-        return unique_ptr<CircleMaskGrating>(new CircleMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize));
+        return unique_ptr<CircleMaskGrating>(
+                    new CircleMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize));
 
     }else{
         cout << "mask: " << mask << endl;
