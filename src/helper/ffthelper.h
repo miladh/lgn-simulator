@@ -14,7 +14,7 @@ public:
     FFTHelper();
     ~FFTHelper();
 
-    static vec fftFreq(int n, double d = 1.);
+    static vec fftFreq(int windowLength, double sampleSpacing = 1.);
 
     static cx_vec fftShift(cx_vec x);
     static cx_mat fftShift(cx_mat x);

@@ -14,12 +14,12 @@ FFTHelper::~FFTHelper()
 }
 
 
-vec FFTHelper::fftFreq(int n, double d){
+vec FFTHelper::fftFreq(int windowLength, double sampleSpacing){
 
-    double val = 1. / (n*d);
-    int N = int((n-1)/2) + 1;
+    double val = 1. / (windowLength*sampleSpacing);
+    int N = int((windowLength-1)/2) + 1;
     vec w1 = linspace(0, N-1, N);
-    vec w2 = linspace(-int(n/2), -1, N-Special::isOdd(n));
+    vec w2 = linspace(-int(windowLength/2), -1, N-Special::isOdd(windowLength));
     vec result = join_cols(w1,w2);
 
     return result * val;
