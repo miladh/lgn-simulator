@@ -13,11 +13,6 @@ INCLUDEPATH += $$TOP_PWD/include
 
 
 SOURCES += main.cpp \
-    fftHelper/fftfreqtests.cpp \
-    fftHelper/fftshift1dtests.cpp \
-    fftHelper/fftshift2dtests.cpp \
-    fftHelper/fftshift3dtests.cpp \
-    fftHelper/ifftshift3dtests.cpp \
     systemTests/systemtest_gr.cpp \
     systemTests/systemtest_g.cpp \
     systemTests/kernelsettings.cpp \
@@ -31,7 +26,12 @@ SOURCES += main.cpp \
     integratorTests/integratortest_exponential.cpp \
     integratorTests/test_integrator_constant.cpp \
     integratorTests/test_integrator_convolution.cpp \
-    integratorTests/test_integrator_grating.cpp
+    integratorTests/test_integrator_grating.cpp \
+    fftHelperTests/test_helper_fftfreq.cpp \
+    fftHelperTests/test_helper_fftshift1d.cpp \
+    fftHelperTests/test_helper_fftshift2d.cpp \
+    fftHelperTests/test_helper_fftshift3d.cpp \
+    fftHelperTests/test_helper_ifftshift3d.cpp
 
 
 

@@ -42,16 +42,17 @@ int main()
         cout << "Kernel tests completed. " << endl << endl;
     }
 
+    if(fftHelperTests){
+        cout << "Running FFT helper tests..." << endl;
+        result += runner.RunTestsIf(Test::GetTestList(), "fftHelper", True(), 0);
+        cout << "FFt helper tests completed. " << endl << endl;
+    }
+
     if(integrator){
         cout << "Running integrator tests..." << endl;
         result += runner.RunTestsIf(Test::GetTestList(), "integrator", True(), 0);
-        cout << "Kernel tests completed. " << endl << endl;
+        cout << "Integrator tests completed. " << endl << endl;
     }
-
-    if(fftHelperTests){
-        result += runner.RunTestsIf(Test::GetTestList(), "fftHelper", True(), 0);
-    }
-
 
     if(dev){
         result += runner.RunTestsIf(Test::GetTestList(), "DEVELOPMENT", True(), 0);

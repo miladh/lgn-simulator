@@ -47,8 +47,6 @@ vector<TemporalKernel *> KernelSettings::temporalKernelVector()
     double tau = 1.0;
     double delay = 0.0;
 
-    //Temporally constant:
-    double constant = 1.2;
 
     //Damped oscillator
     double phaseDuration = 1.0;

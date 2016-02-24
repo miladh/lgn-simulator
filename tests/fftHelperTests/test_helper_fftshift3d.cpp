@@ -1,12 +1,16 @@
+/**********************************************************************
+ *  Test: fftShift function (3d):
+ *        shift the zero-frequency component to the center of the spectrum.
+ *
+ *  Analytic source: Pyhton's numpy.fft.fftshift
+ *
+ * ********************************************************************/
+
 #include <unittest++/UnitTest++.h>
-#include <armadillo>
+#include <lgnSimulator.h>
 
-#include "helper/ffthelper.h"
-
-
-using namespace std;
-using namespace arma;
 using namespace lgnSimulator;
+
 
 SUITE(fftHelper){
     TEST(fftshift_3D){
