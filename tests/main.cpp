@@ -13,8 +13,8 @@ int main()
 
 
     bool special = 1;
-    bool stimulus =0 ;
-    bool kernel = 0;
+    bool stimulus =1 ;
+    bool kernel = 1;
     bool fftHelperTests = 1;
     bool integrator = 1;
     bool systemTests = 1;
