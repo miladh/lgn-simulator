@@ -21,7 +21,7 @@ void Interneuron::computeImpulseResponseFourierTransform()
     impulseResponseFourierTransformComputed = true;
 
     for(int k = 0; k < int(m_impulseResponseFT.n_slices); k++){
-        double w = -m_temporalFreqs[k];
+        double w = m_temporalFreqs[k];
 
         for(int i = 0; i < int(m_impulseResponseFT.n_rows); i++){
             for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){

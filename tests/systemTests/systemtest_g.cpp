@@ -35,7 +35,7 @@ SUITE(SYSTEM){
 
         //Stimulus
         double C = -2.3;
-        double wd = w(2);
+        double wd = w(0);
         double kx = k(1);
         double ky = k(1);
         FullFieldGrating S(integrator, {kx, ky}, wd, C);
@@ -53,7 +53,8 @@ SUITE(SYSTEM){
                 GanglionCell ganglion(integrator, K);
 
                 //Compute analytic:
-                complex<double> W = Ks->fourierTransform({kx, ky}) * Kt->fourierTransform(wd);
+                complex<double> W = Ks->fourierTransform({kx, ky})
+                        * Kt->fourierTransform(wd);
                 for(int l = 0; l < Nt; l++){
                     for(int i = 0; i < Ns; i++){
                         for(int j = 0; j < Ns; j++){

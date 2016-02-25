@@ -1,9 +1,9 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 8
-nt: 8
-dt: &dt_id 0.1
+ns: 7
+nt: 7
+dt: &dt_id 0.5
 ds: &ds_id 0.05
 
 #------------Stimulus settings-----------------#
@@ -54,7 +54,7 @@ temporalKernels:
         dt: *dt_id
 
     # DecayingExponential
-        delay: 0.0
+        delay: 2.0
         tau: *dt_id
 
 

@@ -27,15 +27,15 @@ cube driftingGrating(double C, double wd, vec2 kd, vec r, vec t){
 cx_cube driftingGratingFourierTransform(double C, double wd, vec2 kd, vec k, vec w){
 
     cx_cube S_ft = zeros<cx_cube>(k.n_elem, k.n_elem, w.n_elem);
-    double dw = w[1] - w[0];
+    double dw = w[0] - w[1];
     double dk = k[1] - k[0];
     for(int l = 0; l < int(w.n_elem); l++){
         for(int i = 0; i < int(k.n_elem); i++){
             for(int j = 0; j < int(k.n_elem); j++){
                 S_ft(i,j,l) = (Special::delta(vec2{k[i], k[j]}, kd)
-                              * Special::delta(w[l], -wd)
+                              * Special::delta(w[l], wd)
                             + Special::delta(vec2{k[i], k[j]}, -kd)
-                               *Special::delta(w[l], wd));
+                               *Special::delta(-w[l], wd));
             }
         }
     }

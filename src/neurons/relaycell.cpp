@@ -65,7 +65,7 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
                                                                       int kdx)
 {
     vec2 kVec= {m_spatialFreqs[idx], m_spatialFreqs[jdx]};
-    double w = -m_temporalFreqs[kdx];
+    double w = m_temporalFreqs[kdx];
 
 
     complex<double> ganglionFF = 0;

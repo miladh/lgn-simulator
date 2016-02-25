@@ -24,7 +24,7 @@ complex<double> TemporalDelta::fourierTransform(double w) const
 {
     // Note the additional -1 factor that accounts for the difference
     // in definition of temporal and spatial inverse FT.
-    return exp(core::i * m_delay * -w);
+    return exp(core::i * m_delay * w);
 }
 
 

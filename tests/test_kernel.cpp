@@ -18,7 +18,7 @@ SUITE(kernel){
         TemporalDelta delta(delay, 1);
         CHECK_CLOSE(delta.temporal(0.5), 0.0, 1e-12);
         CHECK_CLOSE(real(delta.fourierTransform(0.5)),0.796083798549055, 1e-12);
-        CHECK_CLOSE(imag(delta.fourierTransform(0.5)),-0.605186405736039, 1e-12);
+        CHECK_CLOSE(imag(delta.fourierTransform(0.5)),0.605186405736039, 1e-12);
 
     }
     TEST(temporalDelta_test_1) {
@@ -34,7 +34,7 @@ SUITE(kernel){
         TemporalDelta delta(delay, 1);
         CHECK_CLOSE(delta.temporal(-20.3), 1.0, 1e-12);
         CHECK_CLOSE(real(delta.fourierTransform(2.3)),-0.907337331535000, 1e-12);
-        CHECK_CLOSE(imag(delta.fourierTransform(2.3)),0.420403338239533, 1e-12);
+        CHECK_CLOSE(imag(delta.fourierTransform(2.3)),-0.420403338239533, 1e-12);
 
     }
 
