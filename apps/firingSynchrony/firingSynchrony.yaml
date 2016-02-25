@@ -1,8 +1,8 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 7
-nt: 7
+ns: 8
+nt: 8
 dt: &dt_id 0.1
 ds: &ds_id 0.05
 
@@ -11,7 +11,7 @@ ds: &ds_id 0.05
 C: 1.0
 mask: "none" # none/circle/gauss
 maskSize: 0.5
-kxId:  1        #[-Ns/2, Ns/2 - 1]
+kxId:  5        #[-Ns/2, Ns/2 - 1]
 kyId:  0        #[-Ns/2, Ns/2 - 1]
 wId:   2        #[-Nt/2, Nt/2 - 1]
 
@@ -34,10 +34,10 @@ spatialKernels:
     # SpatialDelta
         weight: 1.0
         ds : *ds_id
-        shift: [0.5, 0.]
+        shift: [0.0, 0.]
 
     #Krc:
-        ##weight: -0.2
+        #weight: -0.2
     ## Gauss
         #A: -1.5
         #a: 0.83
@@ -53,21 +53,20 @@ temporalKernels:
         delay: 0.0
         dt: *dt_id
 
+    # DecayingExponential
+        delay: 0.0
+        tau: *dt_id
+
 
     #Kcr:
      ##TemporalDelta
         #delay: 1.0
         #dt: *dt_id
 
-    Krc:
+    #Krc:
      ##TemporalDelta
         #delay: 1.0
         #dt: *dt_id
-
-    # Gaussian
-        A: 1.0
-        a: 0.2
-        delay: 0.0
 
 
 #------------backgroundResponse-----------------#

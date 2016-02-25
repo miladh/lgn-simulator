@@ -18,15 +18,13 @@ DecayingExponential::~DecayingExponential()
 double DecayingExponential::temporal(double t) const
 {
 
-    return 1./ m_tau * exp(-(t - m_delay)/m_tau)
-            * Special::heaviside(t - m_delay);
+    return exp(-(t - m_delay)/m_tau)
+            * Special::heaviside(t - m_delay)/m_tau;
 }
 
 complex<double> DecayingExponential::fourierTransform(double w) const
 {
-//    return cos(w*m_delay)/ (1 + w*w * m_tau*m_tau);
-        return exp(-core::i*w*m_delay)
-                /(complex<double>(1,0) + core::i*w* m_tau);
+        return exp(-core::i*w*m_delay)/(complex<double>(1,0) + core::i*w* m_tau);
 }
 
 

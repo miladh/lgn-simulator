@@ -49,9 +49,6 @@ int main(int argc, char* argv[]){
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
     TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
 
-//    TemporalGaussian Wg_t = createTemporalGaussianKernel(Kt_rcSettings);
-//    SpatialDelta Wg_s = createSpatialDeltaKernel(Ks_rgSettings);
-
     SeparableKernel Wg(&Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg, Rg_0);
 
@@ -61,7 +58,8 @@ int main(int argc, char* argv[]){
 
     //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
-    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
+//    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
+    DecayingExponential Kt_rg = createTemporalDecayingExponentialKernel(Kt_rgSettings);
     SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
 
@@ -70,9 +68,7 @@ int main(int argc, char* argv[]){
 //    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
 
 //    SpatialDelta Ks_rc = createSpatialDeltaKernel(Ks_rcSettings);
-//    Gaussian Ks_rc = createSpatialGaussianKernel(Ks_rcSettings);
 //    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
-//    TemporalGaussian Kt_rc = createTemporalGaussianKernel(Kt_rcSettings);
 //    SeparableKernel Krc(&Ks_rc, &Kt_rc);
 
 
@@ -97,8 +93,6 @@ int main(int argc, char* argv[]){
     for(Neuron* neuron : neurons){
 
         neuron->computeResponse(S.get());
-//        cout <<  (neuron->response()).max() << endl;
-//        cout <<  (neuron->response()).min() << endl;
         io.writeResponse(*neuron);
         neuron->clearResponse();
 

@@ -393,7 +393,7 @@ if __name__ == "__main__":
     #             }
 
     data = [Wg, Wr ]
-    # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=10)
+    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=10)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True, num_skip=5, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2)
     # data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
