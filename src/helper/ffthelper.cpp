@@ -96,7 +96,8 @@ cx_cube FFTHelper::ifftShift(cx_cube x)
 
 
     for(int i = 0; i < int(x.n_slices); i++){
-        shifted.slice(i) = join_vert(x.slice(i).rows(n2, n-1), x.slice(i).rows(0,n2-1));
+        shifted.slice(i) = join_vert(x.slice(i).rows(n2, n-1),
+                                     x.slice(i).rows(0,n2-1));
         shifted.slice(i) = join_horiz(
                     shifted.slice(i).cols(m2, m-1),
                     shifted.slice(i).cols(0,m2-1));

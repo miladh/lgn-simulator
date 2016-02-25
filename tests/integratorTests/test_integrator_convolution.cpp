@@ -1,5 +1,5 @@
 /**********************************************************************
- *  Test: convolution theorem applied on h = W * K = ifft(fft(W)fft(K)),
+ *  Test: convolution theorem applied on F = W * K = ifft(fft(W)fft(K)),
  *        where W = Gauss(r) * delta(t) and
  *        K = delta(r) * delta(t)
  *
@@ -12,9 +12,9 @@
 
 using namespace lgnSimulator;
 
-void runIntegratorConvolutionTest(int nt, double dt, int ns, double ds,
-                                  int tau, int delay,
-                                  double A, double a, double weight, vec2 shift )
+void runDogDeltaConvolutionTest(int nt, double dt, int ns, double ds,
+                                int tau, double A, double a,
+                                int delay, double weight, vec2 shift)
 {
 
 
@@ -30,16 +30,65 @@ void runIntegratorConvolutionTest(int nt, double dt, int ns, double ds,
     SpatialDelta Ks(weight, ds, shift);
     TemporalDelta Kt(t[delay], dt);
 
-
     cube F_e = zeros(r.n_elem, r.n_elem, t.n_elem);
     cx_cube G = zeros<cx_cube>(r.n_elem, r.n_elem, t.n_elem);
-
-    for(int l=0; l < int(k.n_elem); l++){
+    cout << fixed << showpoint;
+    cout << setprecision(16);
+    for(int l=0; l < int(t.n_elem); l++){
         for(int i = 0; i < int(r.n_elem); i++){
             for(int j = 0; j < int(r.n_elem); j++){
                 F_e(i,j,l) = weight
                            * Ws.spatial(vec2{r[i], r[j]} - shift)
                            * Wt.temporal(t[l] - t[delay]);
+                G(i,j,l) = Ws.fourierTransform({k[i], k[j]})
+                         * Wt.fourierTransform(w[l])
+                         * Ks.fourierTransform({k[i], k[j]})
+                         * Kt.fourierTransform(w[l]);
+            }
+        }
+    }
+
+    cx_cube F = integrator.backwardFFT(G);
+    cx_cube diff = F - F_e;
+
+    cube diff_real = abs(real(diff));
+    cube diff_imag = abs(imag(diff));
+
+//    cout << diff_real.max() << endl;
+//    cout << diff_imag.max() << endl;
+
+    CHECK_CLOSE(diff_real.max(), 0.0, 1e-7);
+    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-7);
+
+}
+
+
+void runDogConstConvolutionTest(int nt, double dt, int ns, double ds,
+                                int tau, double A, double a,
+                                double Cs, double Ct)
+{
+
+
+    Integrator integrator(nt, dt, ns, ds);
+    vec r = integrator.spatialVec();
+    vec k = integrator.spatialFreqVec();
+    vec t = integrator.timeVec();
+    vec w = integrator.temporalFreqVec();
+
+    Gaussian Ws(A, a);
+    TemporalDelta Wt(t[tau], dt);
+
+    SpatiallyConstant Ks(Cs, integrator.spatialFreqResolution());
+    TemporallyConstant Kt(Ct, integrator.temporalFreqResolution());
+
+
+    cube F_e = zeros(r.n_elem, r.n_elem, t.n_elem);
+    cx_cube G = zeros<cx_cube>(r.n_elem, r.n_elem, t.n_elem);
+
+    for(int l=0; l < int(t.n_elem); l++){
+        for(int i = 0; i < int(r.n_elem); i++){
+            for(int j = 0; j < int(r.n_elem); j++){
+                F_e(i,j,l) = Cs * Ct * A;
 
                 G(i,j,l) = Ws.fourierTransform({k[i], k[j]})
                          * Wt.fourierTransform(w[l])
@@ -55,7 +104,8 @@ void runIntegratorConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-//    cout <<diff_real.max() << endl;
+
+//    cout << diff_real.max() << endl;
 //    cout << diff_imag.max()<< endl;
 
     CHECK_CLOSE(diff_real.max(), 0.0, 1e-7);
@@ -63,16 +113,34 @@ void runIntegratorConvolutionTest(int nt, double dt, int ns, double ds,
 
 }
 
+
+
 SUITE(integrator){
-    TEST(spatiotemporalDelta_test_0) {
-        runIntegratorConvolutionTest(6, 0.05, 6, 0.05, 0.0, 0.0,
-                                   1.0, 0.25, 1.0, vec2{0.0, 0.0});
+
+    TEST(dogConstConvolutionTest_test_0) {
+        runDogConstConvolutionTest(3, 0.05, 4, 0.05,
+                                   2, 1.0, 0.25,
+                                   1.0, 2.0);
     }
 
-    TEST(spatiotemporalDelta_test_1) {
-        runIntegratorConvolutionTest(7, 0.05, 7, 0.05, 0.3, 1.0,
-                                   -1.2, 0.25, 1.0, vec2{1.1, -0.3});
+    TEST(dogConstConvolutionTest_test_1) {
+        runDogConstConvolutionTest(2, 0.05, 3, 0.05,
+                                   1, -1.0, 0.25,
+                                   1.3, -2000.467);
     }
+
+    TEST(dogDeltaConvolutionTest_test_0) {
+        runDogDeltaConvolutionTest(2, 0.05, 6, 0.05,
+                                   0, 1.0, 0.25,
+                                   0, 1.0, vec2{0.0, 0.0});
+    }
+
+    TEST(dogDeltaConvolutionTest_test_1) {
+        runDogDeltaConvolutionTest(3, 0.1, 7, 0.05,
+                                   1, -1.2, 0.25,
+                                   5, 10.89, vec2{1.1, -0.3});
+    }
+
 
 
 }

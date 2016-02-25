@@ -30,7 +30,7 @@ double Special::secondKindBesselFunction(double x)
 
 
 double Special::delta(double x, double y) {
-    if(x == y){
+    if(fabs(x - y) < core::epsilon){
         return 1;
     }else{
         return 0;

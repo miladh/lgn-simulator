@@ -7,7 +7,6 @@ TemporalDelta::TemporalDelta(double delay, double temporalResolution)
     : m_delay(delay)
     , m_peak(1./temporalResolution)
 {
-
 }
 
 TemporalDelta::~TemporalDelta()

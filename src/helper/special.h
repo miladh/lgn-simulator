@@ -3,6 +3,7 @@
 
 
 #include <boost/math/special_functions/bessel.hpp>
+#include <helper/helperconstants.h>
 #include <armadillo>
 
 using namespace arma;
