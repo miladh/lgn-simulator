@@ -32,8 +32,8 @@ void runDogDeltaConvolutionTest(int nt, double dt, int ns, double ds,
 
     cube F_e = zeros(r.n_elem, r.n_elem, t.n_elem);
     cx_cube G = zeros<cx_cube>(r.n_elem, r.n_elem, t.n_elem);
-    cout << fixed << showpoint;
-    cout << setprecision(16);
+
+
     for(int l=0; l < int(t.n_elem); l++){
         for(int i = 0; i < int(r.n_elem); i++){
             for(int j = 0; j < int(r.n_elem); j++){
@@ -53,9 +53,6 @@ void runDogDeltaConvolutionTest(int nt, double dt, int ns, double ds,
 
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
-
-//    cout << diff_real.max() << endl;
-//    cout << diff_imag.max() << endl;
 
     CHECK_CLOSE(diff_real.max(), 0.0, 1e-7);
     CHECK_CLOSE(diff_imag.max(), 0.0, 1e-7);
@@ -105,9 +102,6 @@ void runDogConstConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_imag = abs(imag(diff));
 
 
-//    cout << diff_real.max() << endl;
-//    cout << diff_imag.max()<< endl;
-
     CHECK_CLOSE(diff_real.max(), 0.0, 1e-7);
     CHECK_CLOSE(diff_imag.max(), 0.0, 1e-7);
 
@@ -125,7 +119,7 @@ SUITE(integrator){
 
     TEST(dogConstConvolutionTest_test_1) {
         runDogConstConvolutionTest(2, 0.05, 3, 0.05,
-                                   1, -1.0, 0.25,
+                                   1, -10.263, 0.25,
                                    1.3, -2000.467);
     }
 
