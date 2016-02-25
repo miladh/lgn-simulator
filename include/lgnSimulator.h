@@ -4,7 +4,6 @@
 #include "../src/integrator.h"
 
 #include "../src/stimuli/grating/fullfieldgrating.h"
-#include "../src/stimuli/grating/gaussianmaskgrating.h"
 #include "../src/stimuli/grating/circlemaskgrating.h"
 #include "../src/stimuli/staticimage.h"
 #include "../src/stimuli/naturalscenevideo.h"

@@ -2,7 +2,6 @@
 
 #include "fullfieldgrating.h"
 #include "circlemaskgrating.h"
-#include "gaussianmaskgrating.h"
 
 using namespace lgnSimulator;
 
@@ -119,7 +118,7 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
         wId+= w.n_elem;
     }
 
-    double wd = w(wId);
+    double wd = -w(wId); // -1 factor due to form of w vector
     double kx = k(kxId);
     double ky = k(kyId);
 
@@ -131,11 +130,6 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
     if(mask == "none"){
         return unique_ptr<FullFieldGrating>(
                     new FullFieldGrating(integrator, {kx, ky}, wd, contrast));
-
-    }else if(mask == "gauss"){
-        return unique_ptr<GaussianMaskGrating>(
-                    new GaussianMaskGrating(integrator, {kx, ky}, wd,
-                                            contrast, maskSize));
 
     }else if(mask == "circle"){
         return unique_ptr<CircleMaskGrating>(

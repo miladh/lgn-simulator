@@ -29,7 +29,7 @@ double CircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
 
 complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 kVec, double w) const
 {
-    if(!Special::delta(w, -m_w)){
+    if(!Special::delta(w, m_w)){
         return 0;
     }
 

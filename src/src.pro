@@ -16,7 +16,6 @@ SOURCES += \
     stimuli/staticimage.cpp \
     stimuli/naturalscenevideo.cpp \
     stimuli/grating/grating.cpp \
-    stimuli/grating/gaussianmaskgrating.cpp \
     stimuli/grating/circlemaskgrating.cpp \
     stimuli/grating/fullfieldgrating.cpp \
     staticNonlinearity/staticnonlinearity.cpp \
@@ -53,7 +52,6 @@ HEADERS += \
     stimuli/staticimage.h \
     stimuli/naturalscenevideo.h \
     stimuli/grating/grating.h \
-    stimuli/grating/gaussianmaskgrating.h \
     stimuli/grating/circlemaskgrating.h \
     stimuli/grating/fullfieldgrating.h \
     staticNonlinearity/staticnonlinearity.h \

@@ -42,7 +42,7 @@ int main()
     if(fftHelperTests){
         cout << "Running FFT helper tests..." << endl;
         result += runner.RunTestsIf(Test::GetTestList(), "fftHelper", True(), 0);
-        cout << "FFt helper tests completed. " << endl << endl;
+        cout << "FFT helper tests completed. " << endl << endl;
     }
 
     if(integrator){
