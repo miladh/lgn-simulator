@@ -48,6 +48,8 @@ int main(int argc, char* argv[]){
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
     TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
+// TwoSidedExponentialDecay Wg_t = createTemporalTwoSidedExponentialDecayKernel(ganglionImpRes);
+//    DampedOscillator Wg_t = createTemporalDampedOscillatorKernel(ganglionImpRes);
 
     SeparableKernel Wg(&Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg, Rg_0);
@@ -58,9 +60,13 @@ int main(int argc, char* argv[]){
 
     //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
-//    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
+    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
+
 //    DecayingExponential Kt_rg = createTemporalDecayingExponentialKernel(Kt_rgSettings);
-     TwoSidedExponentialDecay Kt_rg = createTemporalTwoSidedExponentialDecayKernel(Kt_rgSettings);
+
+//     TwoSidedExponentialDecay Kt_rg = createTemporalTwoSidedExponentialDecayKernel(Kt_rgSettings);
+
+
     SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
 
@@ -98,7 +104,6 @@ int main(int argc, char* argv[]){
         neuron->clearResponse();
 
         neuron->computeImpulseResponse();
-       cout <<  (neuron->impulseResponse()).max() << endl;
         io.writeImpulseResponse(*neuron);
         neuron->clearImpulseResponse();
 

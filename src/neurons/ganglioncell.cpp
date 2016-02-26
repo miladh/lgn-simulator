@@ -27,7 +27,7 @@ void GanglionCell::computeImpulseResponseFourierTransform()
             for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){
                 m_impulseResponseFT(i,j,k) =
                         impulseResponseFourierTransformAtFrequency(
-                {m_spatialFreqs[i], m_spatialFreqs[j]}, -m_temporalFreqs[k]);
+                {m_spatialFreqs[i], m_spatialFreqs[j]}, m_temporalFreqs[k]);
             }
         }
     }

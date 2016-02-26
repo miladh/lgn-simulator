@@ -3,9 +3,10 @@
 using namespace lgnSimulator;
 
 
-DampedOscillator::DampedOscillator(double phaseDuration, double weight)
+DampedOscillator::DampedOscillator(double phaseDuration, double weight, double delay)
     : m_phaseDuration(phaseDuration)
     , m_weight(weight)
+    , m_delay(delay)
 {
 
 }
@@ -17,10 +18,11 @@ DampedOscillator::~DampedOscillator()
 
 double DampedOscillator::temporal(double t) const
 {
-    if(t>= 0 && t<=m_phaseDuration){
-        return sin(core::pi/m_phaseDuration * t);
-    }else if(t > m_phaseDuration && t <= 2*m_phaseDuration){
-        return m_weight * sin(core::pi/m_phaseDuration * t);
+    double tt = t - m_delay;
+    if(tt <= m_phaseDuration){
+        return sin(core::pi/m_phaseDuration * tt) * Special::heaviside(tt);
+    }else if(tt <= 2*m_phaseDuration){
+        return m_weight * sin(core::pi/m_phaseDuration * tt);
     }else{
         return 0.0;
     }
@@ -28,13 +30,13 @@ double DampedOscillator::temporal(double t) const
 
 complex<double> DampedOscillator::fourierTransform(double w) const
 {
-    double factor = core::pi*m_phaseDuration/
+    double factor = core::pi * m_phaseDuration/
             (core::pi*core::pi - m_phaseDuration * m_phaseDuration * w * w);
+    complex<double> expTerm = exp(core::i * m_phaseDuration * w);
+    complex<double> term1 = 1. + (1. - m_weight) * expTerm;
+    complex<double> term2 = m_weight * pow(expTerm, 2);
 
-
-    return -factor*((complex<double>(1,0)+ exp(core::i*m_phaseDuration*w))
-            * (complex<double>(-1,0)
-               + m_weight *exp(core::i*m_phaseDuration*w)));
+    return factor * exp(core::i * m_delay * w) * (term1 - term2);
 }
 
 
@@ -43,7 +45,8 @@ DampedOscillator createTemporalDampedOscillatorKernel(const YAML::Node &cfg)
 {
     double phaseDuration = cfg["phaseDuration"].as<double>();
     double weight = cfg["weight"].as<double>();
+    double delay = cfg["delay"].as<double>();
 
-    return DampedOscillator(phaseDuration, weight);
+    return DampedOscillator(phaseDuration, weight, delay);
 
 }

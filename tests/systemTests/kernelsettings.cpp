@@ -54,7 +54,7 @@ vector<TemporalKernel *> KernelSettings::temporalKernelVector()
 
     vector<TemporalKernel*> temporalKernels = {new DecayingExponential(tau, delay),
                                               new DampedOscillator
-                                              (phaseDuration, weightDampedOsc)};
+                                              (phaseDuration, weightDampedOsc, delay)};
 
     return temporalKernels;
 }

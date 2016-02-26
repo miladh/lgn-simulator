@@ -9,7 +9,7 @@ namespace lgnSimulator {
 class DampedOscillator : public TemporalKernel
 {
 public:
-    DampedOscillator(double phaseDuration, double weight);
+    DampedOscillator(double phaseDuration, double weight, double delay);
     ~DampedOscillator();
 
     // TemporalKernel interface
@@ -18,8 +18,9 @@ public:
 
 
 private:
-    double m_phaseDuration;
-    double m_weight;
+    double m_phaseDuration = 1.0;
+    double m_weight = 0.0;
+    double m_delay = 0.0;
 };
 
 }

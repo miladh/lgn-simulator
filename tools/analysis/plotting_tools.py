@@ -397,8 +397,8 @@ if __name__ == "__main__":
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True, num_skip=5, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2)
     # data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
-    data = [S, Rg,Wg, Rr, Wr]
-    animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True,
-    save_animation = False, animation_name = "rat")
+    # data = [S, Rg,Wg, Rr, Wr]
+    # animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True,
+    # save_animation = False, animation_name = "rat")
 
     plt.show()

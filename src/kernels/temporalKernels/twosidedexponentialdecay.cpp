@@ -17,7 +17,7 @@ double lgnSimulator::TwoSidedExponentialDecay::temporal(double t) const
 
 complex<double> lgnSimulator::TwoSidedExponentialDecay::fourierTransform(double w) const
 {
-    return exp(core::i*w*m_delay)/(complex<double>(1,0) + w*w * m_tau*m_tau);
+    return 2. * exp(core::i*w*m_delay)/(1.0 + w*w * m_tau*m_tau);
 }
 
 

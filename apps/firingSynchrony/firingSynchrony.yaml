@@ -9,7 +9,7 @@ ds: &ds_id 0.05
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0
-mask: "circle" # none/circle
+mask: "none" # none/circle
 maskSize: 0.5
 kxId:  5        #[-Ns/2, Ns/2 - 1]
 kyId:  0        #[-Ns/2, Ns/2 - 1]
@@ -24,8 +24,18 @@ ganglionImpRes:
     B: 0.85
     b: 0.83
 
+## DampedOscillator
+    #phaseDuration: 4.25
+    #weight: 0.38
+    #delay: 6
+
+## DecayingExponential
+    #delay: 10
+    #tau: *dt_id
+
+
 # TemporalDelta
-    delay: 0.0
+    delay: 10
     dt: *dt_id
 
 #------------spatialKernelSettings-----------------#
@@ -50,12 +60,12 @@ spatialKernels:
 temporalKernels:
     Krg:
     # TemporalDelta
-        delay: 6.0
+        delay: 20
         dt: *dt_id
 
-    # DecayingExponential
-        delay: 10.
-        tau: *dt_id
+    ## DecayingExponential
+        #delay: 10
+        #tau: *dt_id
 
 
     #Kcr:
