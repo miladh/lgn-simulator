@@ -22,6 +22,7 @@
 #include "../src/kernels/spatialKernels/ellipticgaussian.h"
 
 #include "../src/kernels/temporalKernels/decayingexponential.h"
+#include "../src/kernels/temporalKernels/twosidedexponentialdecay.h"
 #include "../src/kernels/temporalKernels/dampedoscillator.h"
 #include "../src/kernels/temporalKernels/temporallyconstant.h"
 #include "../src/kernels/temporalKernels/temporaldelta.h"

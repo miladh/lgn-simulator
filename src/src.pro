@@ -38,7 +38,8 @@ SOURCES += \
     kernels/temporalKernels/temporallyconstant.cpp \
     helper/ffthelper.cpp \
     helper/special.cpp \
-    stimuli/stimulus.cpp
+    stimuli/stimulus.cpp \
+    kernels/temporalKernels/twosidedexponentialdecay.cpp
 
 HEADERS += \
     integrator.h \
@@ -76,7 +77,8 @@ HEADERS += \
     helper/ffthelper.h \
     helper/helperconstants.h \
     helper/special.h \
-    stimuli/stimulus.h
+    stimuli/stimulus.h \
+    kernels/temporalKernels/twosidedexponentialdecay.h
 
 OTHER_FILES +=
 
