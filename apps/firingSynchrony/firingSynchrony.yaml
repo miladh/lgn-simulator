@@ -1,7 +1,7 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 7
+ns: 8
 nt: 7
 dt: &dt_id 0.5
 ds: &ds_id 0.05
@@ -15,6 +15,9 @@ kxId:  5        #[-Ns/2, Ns/2 - 1]
 kyId:  0        #[-Ns/2, Ns/2 - 1]
 wId:   6        #[-Nt/2, Nt/2 - 1]
 
+# NaturalSceneVideo:
+videoFilename: "../../../stimuli/minions.mp4"
+
 
 #----------Ganglion Impulse response--------------#
 ganglionImpRes:
@@ -24,19 +27,19 @@ ganglionImpRes:
     B: 0.85
     b: 0.83
 
-## DampedOscillator
-    #phaseDuration: 4.25
-    #weight: 0.38
-    #delay: 6
+# DampedOscillator
+    phaseDuration: 4.25
+    weight: 0.38
+    delay: 4
 
 ## DecayingExponential
     #delay: 10
     #tau: *dt_id
 
 
-# TemporalDelta
-    delay: 10
-    dt: *dt_id
+## TemporalDelta
+    #delay: 10
+    #dt: *dt_id
 
 #------------spatialKernelSettings-----------------#
 spatialKernels:
@@ -59,13 +62,13 @@ spatialKernels:
 #------------temporalKernelSettings-----------------#
 temporalKernels:
     Krg:
-    # TemporalDelta
-        delay: 20
-        dt: *dt_id
+    ## TemporalDelta
+        #delay: 20
+        #dt: *dt_id
 
-    ## DecayingExponential
-        #delay: 10
-        #tau: *dt_id
+    # DecayingExponential
+        delay: 10
+        tau: *dt_id
 
 
     #Kcr:

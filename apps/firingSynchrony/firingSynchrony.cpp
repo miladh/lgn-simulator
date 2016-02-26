@@ -42,14 +42,16 @@ int main(int argc, char* argv[]){
     //Integrator--------------------------------------------------------------
     Integrator integrator = createIntegrator(cfg);
 
-    //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
+//    Stim---------------------------------------------------------------------
+//    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
+    unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(integrator,cfg);
+
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
-    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
+//    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
 // TwoSidedExponentialDecay Wg_t = createTemporalTwoSidedExponentialDecayKernel(ganglionImpRes);
-//    DampedOscillator Wg_t = createTemporalDampedOscillatorKernel(ganglionImpRes);
+    DampedOscillator Wg_t = createTemporalDampedOscillatorKernel(ganglionImpRes);
 
     SeparableKernel Wg(&Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg, Rg_0);
@@ -60,11 +62,11 @@ int main(int argc, char* argv[]){
 
     //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
-    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
+//    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
 
 //    DecayingExponential Kt_rg = createTemporalDecayingExponentialKernel(Kt_rgSettings);
 
-//     TwoSidedExponentialDecay Kt_rg = createTemporalTwoSidedExponentialDecayKernel(Kt_rgSettings);
+     TwoSidedExponentialDecay Kt_rg = createTemporalTwoSidedExponentialDecayKernel(Kt_rgSettings);
 
 
     SeparableKernel Krg(&Ks_rg, &Kt_rg);
