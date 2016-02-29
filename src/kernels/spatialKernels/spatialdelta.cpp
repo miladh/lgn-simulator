@@ -11,7 +11,7 @@ SpatialDelta::SpatialDelta(double weight, double spatialResolution, vec2 shift)
 
 double lgnSimulator::SpatialDelta::spatial(vec2 r) const
 {
-    return m_weight * m_peak* Special::delta(m_shift, r);
+    return m_weight * m_peak * Special::delta(m_shift, r);
 }
 
 complex<double> lgnSimulator::SpatialDelta::fourierTransform(vec2 k) const
