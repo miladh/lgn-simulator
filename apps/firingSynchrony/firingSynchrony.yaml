@@ -1,8 +1,8 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 7
-nt: 8
+ns: 6
+nt: 15
 dt: &dt_id 0.01
 ds: &ds_id 0.05
 
@@ -28,7 +28,7 @@ ganglionImpRes:
     b: 0.83
 
 # DampedOscillator
-    phaseDuration: 4.25
+    phaseDuration: 42.5
     weight: 0.38
     delay: 4
 
