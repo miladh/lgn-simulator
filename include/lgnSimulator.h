@@ -27,6 +27,7 @@
 #include "../src/kernels/temporalKernels/temporallyconstant.h"
 #include "../src/kernels/temporalKernels/temporaldelta.h"
 #include "../src/kernels/temporalKernels/temporalGaussian.h"
+#include "../src/kernels/temporalKernels/combinedrc.h"
 
 #include "../src/staticNonlinearity/thresholdnonlinearity.h"
 #include "../src/staticNonlinearity/heavisidenonlinearity.h"
