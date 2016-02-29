@@ -150,8 +150,8 @@ void runDogdecayingExpConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-    cout << diff_real.max() << endl;
-    cout << diff_imag.max() << endl;
+//    cout << diff_real.max() << endl;
+//    cout << diff_imag.max() << endl;
 
 
 

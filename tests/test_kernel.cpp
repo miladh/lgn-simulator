@@ -12,6 +12,81 @@ using namespace lgnSimulator;
 
 SUITE(kernel){
 
+    //DampedOscillator---------------------------------------------------
+    TEST(dampedOscillator_test_0) {
+        double phaseDuration = 42.5;
+        double weight = 0.38;
+        double delay = 0.;
+        DampedOscillator dampedOsc(phaseDuration, weight, delay);
+        CHECK_CLOSE(dampedOsc.temporal(0.5), 0.0369514993891, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-0.0245436926062)), 22.7988820989, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-0.0245436926062)), -3.1173542118, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(6.0), 0.429120608773, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-0.294524311274)), -1.1286928585, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-0.294524311274)), 0.0062065364, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(11.5), 0.751331889557, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-0.564504929942)), -0.3555288674, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-0.564504929942)), -0.0651266984, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(17.0), 0.951056516295, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-0.83448554861)), -0.0760582312, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-0.83448554861)), -0.0917320759, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(22.5), 0.995734176295, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-1.10446616728)), -0.0021875183, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-1.10446616728)), 0.0152324929, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(28.0), 0.878081248084, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-1.37444678595)), -0.0445794299, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-1.37444678595)), 0.0315679060, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(33.5), 0.61727822129, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-1.64442740461)), -0.0392905913, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-1.64442740461)), 0.0014546807, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(39.0), 0.255842777594, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-1.91440802328)), -0.0259257859, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-1.91440802328)), 0.0006440208, 1e-10);
+
+    }
+
+    TEST(dampedOscillator_test_1) {
+        double phaseDuration = 20.6;
+        double weight = 0.88;
+        double delay = 44.5;
+        DampedOscillator dampedOsc(phaseDuration, weight, delay);
+
+        CHECK_CLOSE(dampedOsc.temporal(45.0), 0.0761783767709, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-2.20893233456)), 0.0355236623, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-2.20893233456)), -0.0472345014, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(50.5), 0.792579042689, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-2.47891295322)), 0.0327956407, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-2.47891295322)), 0.0088992464, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(56.0), 0.983301195364, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-2.74889357189)), 0.0044665680, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-2.74889357189)), 0.0035356123, 1e-10);
+
+
+        CHECK_CLOSE(dampedOsc.temporal(61.5), 0.521848255578, 1e-10);
+        CHECK_CLOSE(real(dampedOsc.fourierTransform(-3.01887419056)), 0.0192555610, 1e-10);
+        CHECK_CLOSE(imag(dampedOsc.fourierTransform(-3.01887419056)), 0.0001958484, 1e-10);
+
+
+    }
+
     //TemporalDelta---------------------------------------------------
     TEST(temporalDelta_test_0) {
         double delay = 1.3;

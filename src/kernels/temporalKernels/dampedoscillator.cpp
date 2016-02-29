@@ -34,7 +34,7 @@ complex<double> DampedOscillator::fourierTransform(double w) const
             (core::pi*core::pi - m_phaseDuration * m_phaseDuration * w * w);
     complex<double> expTerm = exp(core::i * m_phaseDuration * w);
     complex<double> term1 = 1. + (1. - m_weight) * expTerm;
-    complex<double> term2 = m_weight * pow(expTerm, 2);
+    complex<double> term2 = m_weight * exp(core::i * m_phaseDuration * 2.*w);
 
     return factor * exp(core::i * m_delay * w) * (term1 - term2);
 }

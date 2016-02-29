@@ -23,7 +23,6 @@ SOURCES += main.cpp \
     test_special.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
     test_kernel.cpp \
-    integratorTests/integratortest_exponential.cpp \
     integratorTests/test_integrator_constant.cpp \
     integratorTests/test_integrator_convolution.cpp \
     integratorTests/test_integrator_grating.cpp \
