@@ -12,48 +12,164 @@ using namespace lgnSimulator;
 
 SUITE(kernel){
 
+    //TwoSidedExponentialDecay--------------------------------------------
+    TEST(twoSidedExp_test_0) {
+        double tau = 0.5;
+        double delay = 9.6;
+        TwoSidedExponentialDecay decay(tau, delay);
+
+        CHECK_CLOSE(decay.temporal(0.0), 0.000000009174, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-0.0)), 2.0000000000, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-0.0)), 0.0000000000, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(3.3), 0.000006744030, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-1.79987079112)), 0.0000000000, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-1.79987079112)), 1.1050433694, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(6.6), 0.004957504353, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-3.59974158224)), -0.4717498650, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-3.59974158224)), 0.0000000000, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(9.9), 1.097623272188, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-5.39961237336)), 0.0000000000, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-5.39961237336)), -0.2412849841, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(13.2), 0.001493171617, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-7.19948316448)), 0.1432855723, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-7.19948316448)), -0.0000000000, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(16.5), 0.000002031263, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-8.9993539556)), 0.0000000000, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-8.9993539556)), 0.0941305245, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(19.8), 0.000000002763, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(10.1447262772)), -0.0748254664, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(10.1447262772)), 0.0000000000, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(23.1), 0.000000000004, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(8.3448554861)), -0.0000000000, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(8.3448554861)), -0.1086416073, 1e-10);
+
+    }
+
+    TEST(twoSidedExp_test_1) {
+        double tau = 2.24;
+        double delay = 7.5;
+        TwoSidedExponentialDecay decay(tau, delay);
+
+        CHECK_CLOSE(decay.temporal(0.0), 0.015690652100, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-0.0)), 2.0000000000, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-0.0)), 0.0000000000, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(3.3), 0.068462038770, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-1.79987079112)), 0.0690478125, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-1.79987079112)), -0.0931001977, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(6.6), 0.298716122352, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-3.59974158224)), -0.0087940057, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-3.59974158224)), -0.0289899516, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(9.9), 0.152910203167, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-5.39961237336)), -0.0127847095, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-5.39961237336)), -0.0045744422, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(13.2), 0.035045126373, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-7.19948316448)), -0.0063695833, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-7.19948316448)), 0.0042560195, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(16.5), 0.008031909298, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(-8.9993539556)), -0.0002409014, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(-8.9993539556)), 0.0049036610, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(19.8), 0.001840814220, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(10.1447262772)), 0.0029881229, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(10.1447262772)), 0.0024522891, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(23.1), 0.000421891840, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(8.3448554861)), 0.0055365711, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(8.3448554861)), -0.0013868389, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(26.4), 0.000096692389, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(6.54498469498)), 0.0035443816, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(6.54498469498)), -0.0085568942, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(29.7), 0.000022160699, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(4.74511390386)), -0.0090211812, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(4.74511390386)), -0.0150509316, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(33.0), 0.000005078958, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(2.94524311274)), -0.0447023346, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(2.94524311274)), -0.0044027957, 1e-10);
+
+
+        CHECK_CLOSE(decay.temporal(36.3), 0.000001164034, 1e-12);
+        CHECK_CLOSE(real(decay.fourierTransform(1.14537232162)), -0.1771344329, 1e-10);
+        CHECK_CLOSE(imag(decay.fourierTransform(1.14537232162)), 0.1954377296, 1e-10);
+
+
+    }
+
+
+
     //DampedOscillator---------------------------------------------------
     TEST(dampedOscillator_test_0) {
         double phaseDuration = 42.5;
         double weight = 0.38;
         double delay = 0.;
         DampedOscillator dampedOsc(phaseDuration, weight, delay);
-        CHECK_CLOSE(dampedOsc.temporal(0.5), 0.0369514993891, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(0.5), 0.0369514993891, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-0.0245436926062)), 22.7988820989, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-0.0245436926062)), -3.1173542118, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(6.0), 0.429120608773, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(6.0), 0.429120608773, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-0.294524311274)), -1.1286928585, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-0.294524311274)), 0.0062065364, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(11.5), 0.751331889557, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(11.5), 0.751331889557, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-0.564504929942)), -0.3555288674, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-0.564504929942)), -0.0651266984, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(17.0), 0.951056516295, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(17.0), 0.951056516295, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-0.83448554861)), -0.0760582312, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-0.83448554861)), -0.0917320759, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(22.5), 0.995734176295, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(22.5), 0.995734176295, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-1.10446616728)), -0.0021875183, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-1.10446616728)), 0.0152324929, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(28.0), 0.878081248084, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(28.0), 0.878081248084, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-1.37444678595)), -0.0445794299, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-1.37444678595)), 0.0315679060, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(33.5), 0.61727822129, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(33.5), 0.61727822129, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-1.64442740461)), -0.0392905913, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-1.64442740461)), 0.0014546807, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(39.0), 0.255842777594, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(39.0), 0.255842777594, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-1.91440802328)), -0.0259257859, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-1.91440802328)), 0.0006440208, 1e-10);
 
@@ -65,22 +181,22 @@ SUITE(kernel){
         double delay = 44.5;
         DampedOscillator dampedOsc(phaseDuration, weight, delay);
 
-        CHECK_CLOSE(dampedOsc.temporal(45.0), 0.0761783767709, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(45.0), 0.0761783767709, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-2.20893233456)), 0.0355236623, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-2.20893233456)), -0.0472345014, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(50.5), 0.792579042689, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(50.5), 0.792579042689, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-2.47891295322)), 0.0327956407, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-2.47891295322)), 0.0088992464, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(56.0), 0.983301195364, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(56.0), 0.983301195364, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-2.74889357189)), 0.0044665680, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-2.74889357189)), 0.0035356123, 1e-10);
 
 
-        CHECK_CLOSE(dampedOsc.temporal(61.5), 0.521848255578, 1e-10);
+        CHECK_CLOSE(dampedOsc.temporal(61.5), 0.521848255578, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-3.01887419056)), 0.0192555610, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-3.01887419056)), 0.0001958484, 1e-10);
 

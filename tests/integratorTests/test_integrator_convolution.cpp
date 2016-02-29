@@ -164,12 +164,12 @@ void runDogdecayingExpConvolutionTest(int nt, double dt, int ns, double ds,
 
 SUITE(integrator){
 
-    TEST(runDogdecayingExpConvolutionTest_test_0) {
-        runDogdecayingExpConvolutionTest(10, 1.0, 6, 0.05,
-                                         0, 1.0, 0.25,
-                                         0, 0.04, 1.0,
-                                         vec2{0.0, 0.0});
-    }
+//    TEST(runDogdecayingExpConvolutionTest_test_0) {
+//        runDogdecayingExpConvolutionTest(10, 1.0, 6, 0.05,
+//                                         0, 1.0, 0.25,
+//                                         0, 0.04, 1.0,
+//                                         vec2{0.0, 0.0});
+//    }
 
     TEST(dogConstConvolutionTest_test_0) {
         runDogConstConvolutionTest(3, 0.05, 4, 0.05,
