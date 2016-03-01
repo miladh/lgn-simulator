@@ -9,7 +9,7 @@
 #include "../tests/systemTests/kernelsettings.h"
 #include "kernels/separablekernel.h"
 
-SUITE(SYSTEM){
+SUITE(system){
 
 
     TEST(ganglion){

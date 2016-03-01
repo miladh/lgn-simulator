@@ -24,13 +24,16 @@ SOURCES += main.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
     test_kernel.cpp \
     integratorTests/test_integrator_constant.cpp \
-    integratorTests/test_integrator_convolution.cpp \
     integratorTests/test_integrator_grating.cpp \
     fftHelperTests/test_helper_fftfreq.cpp \
     fftHelperTests/test_helper_fftshift1d.cpp \
     fftHelperTests/test_helper_fftshift2d.cpp \
     fftHelperTests/test_helper_fftshift3d.cpp \
-    fftHelperTests/test_helper_ifftshift3d.cpp
+    fftHelperTests/test_helper_ifftshift3d.cpp \
+    integratorTests/convolutionTests/test_conv_gaussdelta.cpp \
+    integratorTests/convolutionTests/test_conv_gaussconstant.cpp \
+    integratorTests/convolutionTests/test_conv_dampedoscdelta.cpp \
+    integratorTests/convolutionTests/test_conv_decayingExpDelta.cpp
 
 
 

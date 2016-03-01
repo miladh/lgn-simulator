@@ -26,7 +26,7 @@ double response(double d, double s, double A, double a, double B, double b)
     return Rg;
 }
 
-SUITE(SYSTEM1){
+SUITE(system1){
 
 
     TEST(ganglion_response_spot){

@@ -10,7 +10,7 @@
 #include "../tests/systemTests/kernelsettings.h"
 #include "kernels/separablekernel.h"
 
-SUITE(SYSTEM){
+SUITE(system){
 
     TEST(ganglion_relay_cortical){
         int ns = 5;
