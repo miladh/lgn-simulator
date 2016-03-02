@@ -12,6 +12,64 @@ using namespace lgnSimulator;
 
 SUITE(kernel){
 
+    //DifferenceOfExponential--------------------------------------
+    TEST(doe_test_0) {
+        double cenLatency = 0.25;
+        double surLatency = 0.125;
+        double delay = 0.0;
+        DOE doe(cenLatency, surLatency, delay);
+
+        CHECK_CLOSE(doe.temporal(-10.24), 0.000000000000000, 1e-14);
+        CHECK_CLOSE(doe.temporal(0.0), 0.000000000000000, 1e-14);
+        CHECK_CLOSE(doe.temporal(1.1), 0.205469573807283, 1e-14);
+        CHECK_CLOSE(doe.temporal(1.8), 0.021437459910709, 1e-14);
+        CHECK_CLOSE(doe.temporal(2.3), 0.003716747228587, 1e-14);
+        CHECK_CLOSE(doe.temporal(100.4), 0.000000000000000, 1e-14);
+
+        CHECK_CLOSE(real(doe.fourierTransform(-0.0)), 0.000000000000000, 1e-14);
+        CHECK_CLOSE(imag(doe.fourierTransform(-0.0)), 0.000000000000000, 1e-14);
+        CHECK_CLOSE(real(doe.fourierTransform(-157.079632679)), 0.001926530044585, 1e-12);
+        CHECK_CLOSE(imag(doe.fourierTransform(-157.079632679)), 0.000229856503266, 1e-12);
+        CHECK_CLOSE(real(doe.fourierTransform(314.159265359)), 0.000485160381154, 1e-14);
+        CHECK_CLOSE(imag(doe.fourierTransform(314.159265359)), -0.000028855923396, 1e-14);
+        CHECK_CLOSE(real(doe.fourierTransform(0.0383495196971)),-0.000206775572248, 1e-14);
+        CHECK_CLOSE(imag(doe.fourierTransform(0.0383495196971)), 0.009584296015202, 1e-14);
+        CHECK_CLOSE(real(doe.fourierTransform(1005.18693069)), 0.000047494619442, 1e-14);
+        CHECK_CLOSE(imag(doe.fourierTransform(1005.18693069)), -0.000000882077205, 1e-14);
+
+    }
+
+
+    TEST(doe_test_1) {
+        double cenLatency = 1.43;
+        double surLatency = 13.78;
+        double delay = 0.4;
+        DOE doe(cenLatency, surLatency, delay);
+
+
+        CHECK_CLOSE(doe.temporal(-10.24), 0.000000000000000, 1e-14);
+        CHECK_CLOSE(doe.temporal(0.0), 0.000000000000000, 1e-14);
+        CHECK_CLOSE(doe.temporal(1.1), 0.206310110952755, 1e-14);
+        CHECK_CLOSE(doe.temporal(1.8), 0.250540440834636, 1e-14);
+        CHECK_CLOSE(doe.temporal(2.3), 0.237346187629152, 1e-14);
+        CHECK_CLOSE(doe.temporal(100.4), -0.000371426190015, 1e-14);
+
+
+        CHECK_CLOSE(real(doe.fourierTransform(-0.0)), 0.000000000000000, 1e-14);
+        CHECK_CLOSE(imag(doe.fourierTransform(-0.0)), 0.000000000000000, 1e-14);
+        CHECK_CLOSE(real(doe.fourierTransform(-157.079632679)), -0.000019604682231, 1e-14);
+        CHECK_CLOSE(imag(doe.fourierTransform(-157.079632679)), -0.000000176262290, 1e-14);
+        CHECK_CLOSE(real(doe.fourierTransform(314.159265359)), -0.000004901391475, 1e-14);
+        CHECK_CLOSE(imag(doe.fourierTransform(314.159265359)), 0.000000022033442, 1e-14);
+        CHECK_CLOSE(real(doe.fourierTransform(0.0383495196971)), 0.558786332919190, 1e-12);
+        CHECK_CLOSE(imag(doe.fourierTransform(0.0383495196971)),-0.528296608623844, 1e-12);
+        CHECK_CLOSE(real(doe.fourierTransform(1005.18693069)), -0.000000478165170, 1e-14);
+        CHECK_CLOSE(imag(doe.fourierTransform(1005.18693069)), 0.000000024164219, 1e-14);
+
+
+    }
+
+
     //TwoSidedExponentialDecay--------------------------------------------
     TEST(twoSidedExp_test_0) {
         double tau = 0.5;

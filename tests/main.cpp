@@ -50,6 +50,7 @@ int main()
         result += runner.RunTestsIf(Test::GetTestList(), "integrator", True(), 0);
         cout << "Integrator tests completed. " << endl << endl;
     }
+
     if(systemTests){
         cout << "Running system tests..." << endl;
         result += runner.RunTestsIf(Test::GetTestList(), "system", True(), 0);

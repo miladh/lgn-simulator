@@ -33,7 +33,8 @@ SOURCES += main.cpp \
     integratorTests/convolutionTests/test_conv_gaussdelta.cpp \
     integratorTests/convolutionTests/test_conv_gaussconstant.cpp \
     integratorTests/convolutionTests/test_conv_dampedoscdelta.cpp \
-    integratorTests/convolutionTests/test_conv_decayingExpDelta.cpp
+    integratorTests/convolutionTests/test_conv_decayingexpdelta.cpp \
+    integratorTests/convolutionTests/test_conv_dampedoscdoe.cpp
 
 
 

@@ -64,7 +64,7 @@ int main(int argc, char* argv[]){
     SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
 //    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
 //    DecayingExponential Kt_rg = createTemporalDecayingExponentialKernel(Kt_rgSettings);
-    CombinedRC Kt_rg = createTemporalCombinedRCKernel(Kt_rgSettings);
+    DOE Kt_rg = createTemporalDOEKernel(Kt_rgSettings);
 
 
 

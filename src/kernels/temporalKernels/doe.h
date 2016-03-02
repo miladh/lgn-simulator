@@ -1,14 +1,14 @@
-#ifndef COMBINEDRC_H
-#define COMBINEDRC_H
+#ifndef DOE_H
+#define DOE_H
 
 #include "temporalkernel.h"
 
 namespace lgnSimulator {
 
-class CombinedRC : public TemporalKernel
+class DOE : public TemporalKernel
 {
 public:
-    CombinedRC(double cenLatency, double surLatency, double delay);
+    DOE(double cenLatency, double surLatency, double delay);
 
     // TemporalKernel interface
     virtual double temporal(double t) const;
@@ -22,5 +22,5 @@ private:
 
 }
 
-lgnSimulator::CombinedRC createTemporalCombinedRCKernel(const YAML::Node &cfg);
-#endif // COMBINEDRC_H
+lgnSimulator::DOE createTemporalDOEKernel(const YAML::Node &cfg);
+#endif // DOE_H

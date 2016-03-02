@@ -40,7 +40,7 @@ SOURCES += \
     helper/special.cpp \
     stimuli/stimulus.cpp \
     kernels/temporalKernels/twosidedexponentialdecay.cpp \
-    kernels/temporalKernels/combinedrc.cpp
+    kernels/temporalKernels/doe.cpp
 
 HEADERS += \
     integrator.h \
@@ -80,7 +80,7 @@ HEADERS += \
     helper/special.h \
     stimuli/stimulus.h \
     kernels/temporalKernels/twosidedexponentialdecay.h \
-    kernels/temporalKernels/combinedrc.h
+    kernels/temporalKernels/doe.h
 
 OTHER_FILES +=
 
