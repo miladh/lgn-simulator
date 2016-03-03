@@ -71,8 +71,8 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-    cout << diff_real.max() << endl;
-    cout << diff_imag.max() << endl;
+//    cout << diff_real.max() << endl;
+//    cout << diff_imag.max() << endl;
 
 //    cout << diff_real << endl;
 //    cout << real(F)/wk/wg*ds*ds << endl;
@@ -86,12 +86,12 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
 SUITE(integrator){
 
 
-    TEST(dampedOscDOEConvolutionTest_test_0) {
-        runDampedOscCombinedRCConvolutionTest(20, 0.001, 2, 0.05,
-                                              42.5, 0.38, 0,
-                                              1., vec2{0.0, 0.0},
-                                              16., 32., 0,
-                                              1.0, vec2{0.0, 0.0});
-    }
+//    TEST(dampedOscDOEConvolutionTest_test_0) {
+//        runDampedOscCombinedRCConvolutionTest(8, 0.001, 2, 0.05,
+//                                              42.5, 0.38, 0,
+//                                              1., vec2{0.0, 0.0},
+//                                              16., 32., 0,
+//                                              1.0, vec2{0.0, 0.0});
+//    }
 
 }

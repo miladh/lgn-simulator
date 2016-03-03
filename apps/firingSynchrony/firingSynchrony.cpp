@@ -43,8 +43,8 @@ int main(int argc, char* argv[]){
     Integrator integrator = createIntegrator(cfg);
 
 //    Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
-//    unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(integrator,cfg);
+//    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
+    unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(integrator,cfg);
 
 
     //Ganglion cell:-----------------------------------------------------------
