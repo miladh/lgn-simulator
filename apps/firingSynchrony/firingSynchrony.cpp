@@ -43,8 +43,8 @@ int main(int argc, char* argv[]){
     Integrator integrator = createIntegrator(cfg);
 
 //    Stim---------------------------------------------------------------------
-//    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
-    unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(integrator,cfg);
+    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
+//    unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(integrator,cfg);
 
 
     //Ganglion cell:-----------------------------------------------------------
@@ -58,7 +58,7 @@ int main(int argc, char* argv[]){
 
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(integrator, Rr_0);
-//    CorticalCell cortical(integrator, Rc_0);
+    CorticalCell cortical(integrator, Rc_0);
 
     //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
@@ -71,19 +71,19 @@ int main(int argc, char* argv[]){
     SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
 
-//    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
-//    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
-//    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
+    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
+    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
+    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
 
-//    SpatialDelta Ks_rc = createSpatialDeltaKernel(Ks_rcSettings);
-//    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
-//    SeparableKernel Krc(&Ks_rc, &Kt_rc);
+    SpatialDelta Ks_rc = createSpatialDeltaKernel(Ks_rcSettings);
+    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
+    SeparableKernel Krc(&Ks_rc, &Kt_rc);
 
 
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, Krg);
-//    relay.addCorticalNeuron(&cortical, Krc);
-//    cortical.addRelayCell(&relay, Kcr);
+    relay.addCorticalNeuron(&cortical, Krc);
+    cortical.addRelayCell(&relay, Kcr);
 
 
     //Compute:-----------------------------------------------------------------
@@ -95,7 +95,7 @@ int main(int argc, char* argv[]){
     vector<Neuron *> neurons;
     neurons.push_back(&ganglion);
     neurons.push_back(&relay);
-//    neurons.push_back(&cortical);
+    neurons.push_back(&cortical);
 
     io.writeIntegratorProperties(integrator);
     for(Neuron* neuron : neurons){
