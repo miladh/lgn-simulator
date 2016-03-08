@@ -56,8 +56,8 @@ void runDampedOscConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-    cout << diff_real.max() << endl;
-    cout << diff_imag.max() << endl;
+//    cout << diff_real.max() << endl;
+//    cout << diff_imag.max() << endl;
 
     CHECK_CLOSE(diff_real.max(), 0.0, 1e-3);
     CHECK_CLOSE(diff_imag.max(), 0.0, 1e-12);
@@ -69,7 +69,7 @@ SUITE(integrator){
 
 
     TEST(runDampedOscConvolutionTest_test_0) {
-        runDampedOscConvolutionTest(15, 0.01, 2, 0.05,
+        runDampedOscConvolutionTest(10, 0.1, 2, 0.05,
                                     42.5, 0.38, 0.0,
                                     1., vec2{0.0, 0.0},
                                     0, 1.0, vec2{0.0, 0.0});
@@ -86,7 +86,7 @@ SUITE(integrator){
         runDampedOscConvolutionTest(10, 0.1, 2, 0.05,
                                     42.5, 0.38, 20,
                                     1., vec2{0.0, 0.0},
-                                    50, 1.0, vec2{0.0, 0.0});
+                                    50, 1.0, vec2{0.05, 0.05});
     }
 
 

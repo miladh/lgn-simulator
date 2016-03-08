@@ -1,7 +1,7 @@
 /**********************************************************************
  *  Test: convolution theorem applied on F = W * K = ifft(fft(W)fft(K)),
  *        where W = delta(r) * dampedOscillator(t) and
- *        K = delta(r) * combinedRC(t)
+ *        K = delta(r) * doe(t)
  *
  *  Analytic source: closed-form experssion
  *
@@ -13,23 +13,66 @@
 using namespace lgnSimulator;
 
 
-double convDampedOscDOE(double phaseDuration, double dampingFactor, int delay_osc,
-                               double cenLatency, double surLatency, int delay_rc,
-                               double t)
+double definiteIntegral(double t, double limit, double A, double a,
+                        double gamma, double delay)
 {
-    double f_result;
-       f_result = pow(phaseDuration, 2)*(pow(core::pi, 4)*dampingFactor*delay_rc*pow(surLatency, 4)*sin(core::pi*t/phaseDuration) - 2*pow(core::pi, 4)*dampingFactor*phaseDuration*pow(surLatency, 4)*sin(core::pi*t/phaseDuration) + 2*pow(core::pi, 3)*dampingFactor*delay_rc*phaseDuration*pow(surLatency, 3)*cos(core::pi*t/phaseDuration) - 4*pow(core::pi, 3)*dampingFactor*pow(phaseDuration, 2)*pow(surLatency, 3)*cos(core::pi*t/phaseDuration) + 2*pow(core::pi, 3)*dampingFactor*phaseDuration*pow(surLatency, 4)*cos(core::pi*t/phaseDuration) - 6*pow(core::pi, 2)*dampingFactor*pow(phaseDuration, 2)*pow(surLatency, 3)*sin(core::pi*t/phaseDuration) + 2*core::pi*dampingFactor*delay_rc*pow(phaseDuration, 3)*surLatency*cos(core::pi*t/phaseDuration) - 4*core::pi*dampingFactor*pow(phaseDuration, 4)*surLatency*cos(core::pi*t/phaseDuration) - 6*core::pi*dampingFactor*pow(phaseDuration, 3)*pow(surLatency, 2)*cos(core::pi*t/phaseDuration) - dampingFactor*delay_rc*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) + 2*dampingFactor*pow(phaseDuration, 5)*sin(core::pi*t/phaseDuration) + 2*dampingFactor*pow(phaseDuration, 4)*surLatency*sin(core::pi*t/phaseDuration) + (-pow(core::pi, 4)*delay_rc*pow(surLatency, 4)*sin(core::pi*t/phaseDuration) - 2*pow(core::pi, 3)*delay_rc*phaseDuration*pow(surLatency, 3)*cos(core::pi*t/phaseDuration) - 2*pow(core::pi, 3)*phaseDuration*pow(surLatency, 4)*cos(core::pi*t/phaseDuration) + 6*pow(core::pi, 2)*pow(phaseDuration, 2)*pow(surLatency, 3)*sin(core::pi*t/phaseDuration) - 2*core::pi*delay_rc*pow(phaseDuration, 3)*surLatency*cos(core::pi*t/phaseDuration) + 6*core::pi*pow(phaseDuration, 3)*pow(surLatency, 2)*cos(core::pi*t/phaseDuration) + delay_rc*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) - 2*pow(phaseDuration, 4)*surLatency*sin(core::pi*t/phaseDuration))*exp(2*phaseDuration/surLatency) + (pow(core::pi, 4)*dampingFactor*delay_rc*pow(surLatency, 4)*sin(core::pi*t/phaseDuration) - pow(core::pi, 4)*dampingFactor*phaseDuration*pow(surLatency, 4)*sin(core::pi*t/phaseDuration) - pow(core::pi, 4)*delay_rc*pow(surLatency, 4)*sin(core::pi*t/phaseDuration) + pow(core::pi, 4)*phaseDuration*pow(surLatency, 4)*sin(core::pi*t/phaseDuration) + 2*pow(core::pi, 3)*dampingFactor*delay_rc*phaseDuration*pow(surLatency, 3)*cos(core::pi*t/phaseDuration) - 2*pow(core::pi, 3)*dampingFactor*pow(phaseDuration, 2)*pow(surLatency, 3)*cos(core::pi*t/phaseDuration) + 2*pow(core::pi, 3)*dampingFactor*phaseDuration*pow(surLatency, 4)*cos(core::pi*t/phaseDuration) - 2*pow(core::pi, 3)*delay_rc*phaseDuration*pow(surLatency, 3)*cos(core::pi*t/phaseDuration) + 2*pow(core::pi, 3)*pow(phaseDuration, 2)*pow(surLatency, 3)*cos(core::pi*t/phaseDuration) - 2*pow(core::pi, 3)*phaseDuration*pow(surLatency, 4)*cos(core::pi*t/phaseDuration) - 6*pow(core::pi, 2)*dampingFactor*pow(phaseDuration, 2)*pow(surLatency, 3)*sin(core::pi*t/phaseDuration) + 6*pow(core::pi, 2)*pow(phaseDuration, 2)*pow(surLatency, 3)*sin(core::pi*t/phaseDuration) + 2*core::pi*dampingFactor*delay_rc*pow(phaseDuration, 3)*surLatency*cos(core::pi*t/phaseDuration) - 2*core::pi*dampingFactor*pow(phaseDuration, 4)*surLatency*cos(core::pi*t/phaseDuration) - 6*core::pi*dampingFactor*pow(phaseDuration, 3)*pow(surLatency, 2)*cos(core::pi*t/phaseDuration) - 2*core::pi*delay_rc*pow(phaseDuration, 3)*surLatency*cos(core::pi*t/phaseDuration) + 2*core::pi*pow(phaseDuration, 4)*surLatency*cos(core::pi*t/phaseDuration) + 6*core::pi*pow(phaseDuration, 3)*pow(surLatency, 2)*cos(core::pi*t/phaseDuration) - dampingFactor*delay_rc*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) + dampingFactor*pow(phaseDuration, 5)*sin(core::pi*t/phaseDuration) + 2*dampingFactor*pow(phaseDuration, 4)*surLatency*sin(core::pi*t/phaseDuration) + delay_rc*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) - pow(phaseDuration, 5)*sin(core::pi*t/phaseDuration) - 2*pow(phaseDuration, 4)*surLatency*sin(core::pi*t/phaseDuration))*exp(phaseDuration/surLatency))*exp(delay_rc/surLatency)*exp(-2*phaseDuration/surLatency)/pow(pow(core::pi, 2)*pow(surLatency, 2) + pow(phaseDuration, 2), 3) - pow(phaseDuration, 2)*(pow(cenLatency, 4)*pow(core::pi, 4)*dampingFactor*delay_rc*sin(core::pi*t/phaseDuration) - 2*pow(cenLatency, 4)*pow(core::pi, 4)*dampingFactor*phaseDuration*sin(core::pi*t/phaseDuration) + 2*pow(cenLatency, 4)*pow(core::pi, 3)*dampingFactor*phaseDuration*cos(core::pi*t/phaseDuration) + 2*pow(cenLatency, 3)*pow(core::pi, 3)*dampingFactor*delay_rc*phaseDuration*cos(core::pi*t/phaseDuration) - 4*pow(cenLatency, 3)*pow(core::pi, 3)*dampingFactor*pow(phaseDuration, 2)*cos(core::pi*t/phaseDuration) - 6*pow(cenLatency, 3)*pow(core::pi, 2)*dampingFactor*pow(phaseDuration, 2)*sin(core::pi*t/phaseDuration) - 6*pow(cenLatency, 2)*core::pi*dampingFactor*pow(phaseDuration, 3)*cos(core::pi*t/phaseDuration) + 2*cenLatency*core::pi*dampingFactor*delay_rc*pow(phaseDuration, 3)*cos(core::pi*t/phaseDuration) - 4*cenLatency*core::pi*dampingFactor*pow(phaseDuration, 4)*cos(core::pi*t/phaseDuration) + 2*cenLatency*dampingFactor*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) - dampingFactor*delay_rc*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) + 2*dampingFactor*pow(phaseDuration, 5)*sin(core::pi*t/phaseDuration) + (-pow(cenLatency, 4)*pow(core::pi, 4)*delay_rc*sin(core::pi*t/phaseDuration) - 2*pow(cenLatency, 4)*pow(core::pi, 3)*phaseDuration*cos(core::pi*t/phaseDuration) - 2*pow(cenLatency, 3)*pow(core::pi, 3)*delay_rc*phaseDuration*cos(core::pi*t/phaseDuration) + 6*pow(cenLatency, 3)*pow(core::pi, 2)*pow(phaseDuration, 2)*sin(core::pi*t/phaseDuration) + 6*pow(cenLatency, 2)*core::pi*pow(phaseDuration, 3)*cos(core::pi*t/phaseDuration) - 2*cenLatency*core::pi*delay_rc*pow(phaseDuration, 3)*cos(core::pi*t/phaseDuration) - 2*cenLatency*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) + delay_rc*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration))*exp(2*phaseDuration/cenLatency) + (pow(cenLatency, 4)*pow(core::pi, 4)*dampingFactor*delay_rc*sin(core::pi*t/phaseDuration) - pow(cenLatency, 4)*pow(core::pi, 4)*dampingFactor*phaseDuration*sin(core::pi*t/phaseDuration) - pow(cenLatency, 4)*pow(core::pi, 4)*delay_rc*sin(core::pi*t/phaseDuration) + pow(cenLatency, 4)*pow(core::pi, 4)*phaseDuration*sin(core::pi*t/phaseDuration) + 2*pow(cenLatency, 4)*pow(core::pi, 3)*dampingFactor*phaseDuration*cos(core::pi*t/phaseDuration) - 2*pow(cenLatency, 4)*pow(core::pi, 3)*phaseDuration*cos(core::pi*t/phaseDuration) + 2*pow(cenLatency, 3)*pow(core::pi, 3)*dampingFactor*delay_rc*phaseDuration*cos(core::pi*t/phaseDuration) - 2*pow(cenLatency, 3)*pow(core::pi, 3)*dampingFactor*pow(phaseDuration, 2)*cos(core::pi*t/phaseDuration) - 2*pow(cenLatency, 3)*pow(core::pi, 3)*delay_rc*phaseDuration*cos(core::pi*t/phaseDuration) + 2*pow(cenLatency, 3)*pow(core::pi, 3)*pow(phaseDuration, 2)*cos(core::pi*t/phaseDuration) - 6*pow(cenLatency, 3)*pow(core::pi, 2)*dampingFactor*pow(phaseDuration, 2)*sin(core::pi*t/phaseDuration) + 6*pow(cenLatency, 3)*pow(core::pi, 2)*pow(phaseDuration, 2)*sin(core::pi*t/phaseDuration) - 6*pow(cenLatency, 2)*core::pi*dampingFactor*pow(phaseDuration, 3)*cos(core::pi*t/phaseDuration) + 6*pow(cenLatency, 2)*core::pi*pow(phaseDuration, 3)*cos(core::pi*t/phaseDuration) + 2*cenLatency*core::pi*dampingFactor*delay_rc*pow(phaseDuration, 3)*cos(core::pi*t/phaseDuration) - 2*cenLatency*core::pi*dampingFactor*pow(phaseDuration, 4)*cos(core::pi*t/phaseDuration) - 2*cenLatency*core::pi*delay_rc*pow(phaseDuration, 3)*cos(core::pi*t/phaseDuration) + 2*cenLatency*core::pi*pow(phaseDuration, 4)*cos(core::pi*t/phaseDuration) + 2*cenLatency*dampingFactor*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) - 2*cenLatency*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) - dampingFactor*delay_rc*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) + dampingFactor*pow(phaseDuration, 5)*sin(core::pi*t/phaseDuration) + delay_rc*pow(phaseDuration, 4)*sin(core::pi*t/phaseDuration) - pow(phaseDuration, 5)*sin(core::pi*t/phaseDuration))*exp(phaseDuration/cenLatency))*exp(delay_rc/cenLatency)*exp(-2*phaseDuration/cenLatency)/pow(pow(cenLatency, 2)*pow(core::pi, 2) + pow(phaseDuration, 2), 3);
-       return f_result;
+    double tau = limit;
+    if(t - delay < 0.0){
+        return 0.0;
+    }else{
+        if(t - delay - limit < 0){
+            tau = t - delay;
+        }
+
+        double factor = A/(a*a + core::pi*core::pi * gamma*gamma)
+                /(a*a + core::pi*core::pi * gamma*gamma);
+        double expTerm = exp((delay-t+tau)/gamma);
+        double trigFactor = (core::pi * tau)/a;
+        double cosTerm = core::pi*a*cos(trigFactor)
+                *(a*a * (-2.*gamma + delay - t + tau)
+                  + core::pi*core::pi * gamma*gamma * (delay-t+tau) );
+        double sinTerm = a*a/gamma * sin(trigFactor)
+                *(a*a *(-gamma + delay - t + tau)
+                  + core::pi*core::pi * gamma*gamma *(gamma + delay - t + tau));
+
+        return factor * expTerm * (cosTerm - sinTerm);
+    }
+}
+
+
+double convDampedOscDOE(double phaseDuration, double dampingFactor,
+                        double cenLatency, double surLatency, double delay,
+                        double t){
+
+    double cenTerm1_1 = definiteIntegral(t, 0, 1, phaseDuration, cenLatency, delay);
+    double cenTerm1_2 = definiteIntegral(t, phaseDuration, 1, phaseDuration, cenLatency, delay);
+    double cenTerm2_1 = definiteIntegral(t, phaseDuration, dampingFactor, phaseDuration, cenLatency,
+                                         delay)*Special::heaviside(t - delay - phaseDuration);
+    double cenTerm2_2 = definiteIntegral(t, 2*phaseDuration,dampingFactor, phaseDuration, cenLatency,
+                                         delay)*Special::heaviside(t - delay - phaseDuration);
+
+    double cenTerm = (cenTerm1_2 - cenTerm1_1) + (cenTerm2_2 - cenTerm2_1);
+
+    double surTerm1_1 = definiteIntegral(t, 0, 1., phaseDuration,  surLatency, delay);
+    double surTerm1_2 = definiteIntegral(t, phaseDuration, 1., phaseDuration, surLatency, delay);
+    double surTerm2_1 = definiteIntegral(t, phaseDuration, dampingFactor, phaseDuration, surLatency,
+                                         delay)*Special::heaviside(t - delay - phaseDuration);
+    double surTerm2_2 = definiteIntegral(t, 2*phaseDuration, dampingFactor, phaseDuration,  surLatency,
+                                         delay)*Special::heaviside(t - delay - phaseDuration);
+
+
+    double surTerm = (surTerm1_2 - surTerm1_1) + (surTerm2_2 - surTerm2_1);
+
+    return cenTerm - surTerm;
 }
 
 void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
                                            double phaseDuration,
                                            double dampingFactor,
-                                           int delay_osc,
                                            double wg, vec2 rg,
                                            double cenLatency,
                                            double surLatency,
-                                           int delay_rc,
+                                           int delay_doe,
                                            double wk, vec2 rk)
 {
 
@@ -40,10 +83,10 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
     vec w = integrator.temporalFreqVec();
 
     SpatialDelta Ws(wg, ds, rg);
-    DampedOscillator Wt(phaseDuration, dampingFactor, t[delay_osc]);
+    DampedOscillator Wt(phaseDuration, dampingFactor, 0);
 
     SpatialDelta Ks(wk, ds, rk);
-    DOE Kt(cenLatency, surLatency, t[delay_rc]);
+    DOE Kt(cenLatency, surLatency, t[delay_doe]);
 
     cube F_e = zeros(r.n_elem, r.n_elem, t.n_elem);
     cx_cube G = zeros<cx_cube>(r.n_elem, r.n_elem, t.n_elem);
@@ -53,9 +96,9 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
             for(int j = 0; j < int(r.n_elem); j++){
                 F_e(i,j,l) = wk
                         * Ws.spatial(vec2{r[i], r[j]} - rk)
-                        * convDampedOscDOE(phaseDuration, dampingFactor,0,
-                                                  cenLatency, surLatency, t[delay_rc],
-                                                  t[l]);
+                        * convDampedOscDOE(phaseDuration, dampingFactor,
+                                           cenLatency, surLatency, t[delay_doe],
+                                           t[l]);
 
                 G(i,j,l) = Ws.fourierTransform({k[i], k[j]})
                         * Wt.fourierTransform(w[l])
@@ -74,8 +117,6 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
 //    cout << diff_real.max() << endl;
 //    cout << diff_imag.max() << endl;
 
-//    cout << diff_real << endl;
-//    cout << real(F)/wk/wg*ds*ds << endl;
 
     CHECK_CLOSE(diff_real.max(), 0.0, 1e-3);
     CHECK_CLOSE(diff_imag.max(), 0.0, 1e-12);
@@ -86,12 +127,22 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
 SUITE(integrator){
 
 
-//    TEST(dampedOscDOEConvolutionTest_test_0) {
-//        runDampedOscCombinedRCConvolutionTest(8, 0.001, 2, 0.05,
-//                                              42.5, 0.38, 0,
-//                                              1., vec2{0.0, 0.0},
-//                                              16., 32., 0,
-//                                              1.0, vec2{0.0, 0.0});
-//    }
+        TEST(dampedOscDOEConvolutionTest_test_0) {
+            runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
+                                                  42.5, 0.38,
+                                                  1., vec2{0.0, 0.0},
+                                                  16., 32., 0,
+                                                  1.0, vec2{0.0, 0.0});
+        }
+
+
+
+        TEST(dampedOscDOEConvolutionTest_test_1) {
+            runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
+                                                  42.5, 0.38,
+                                                  1., vec2{0.0, 0.0},
+                                                  16., 32., 1365,
+                                                  1.0, vec2{0.0, 0.0});
+        }
 
 }
