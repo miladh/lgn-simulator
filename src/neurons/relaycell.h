@@ -32,9 +32,13 @@ private:
     vector<Input> m_interNeurons;
     vector<Input> m_corticalNeurons;
 
-    complex<double> impulseResponseFourierTransformAtFrequency(int idx,
-                                                               int jdx,
-                                                               int kdx);
+    cx_vec interneuronInput(int kxi,int kyi, int wi) const;
+    complex<double> ganglionInput(int kxi,int kyi, int wi) const;
+    complex<double> corticalInput(int kxi,int kyi, int wi) const;
+    complex<double> impulseResponseFourierTransformAtFrequency(int kxi,
+                                                               int kyi,
+                                                               int wi) const;
+
     void computeNeededcubes() const;
 };
 }
