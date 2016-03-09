@@ -14,7 +14,7 @@ RelayCell::RelayCell(const Integrator &integrator, double backgroundResponse)
     : Neuron(integrator, backgroundResponse)
 
 {
-    m_cellType = "relay";
+    m_type = "relay";
 }
 
 RelayCell::~RelayCell()

@@ -10,7 +10,7 @@ GanglionCell::GanglionCell(const Integrator &integrator,
     : Neuron(integrator, backgroundResponse, staticNonlinearity)
     , m_kernel(kernel)
 {
-    m_cellType = "ganglion";
+    m_type = "ganglion";
 }
 
 GanglionCell::~GanglionCell()

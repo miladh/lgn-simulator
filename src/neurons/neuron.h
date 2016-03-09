@@ -1,15 +1,15 @@
 #ifndef NEURON_H
 #define NEURON_H
 
-
 #include "stimuli/stimulus.h"
 #include "integrator.h"
 #include "kernels/kernel.h"
 #include "staticNonlinearity/staticnonlinearity.h"
 
-
 using namespace arma;
 using namespace std;
+
+
 namespace lgnSimulator {
 class Neuron
 {
@@ -35,7 +35,7 @@ public:
 
     // Add cell functions
     void addGanglionCell(Neuron* const neuron, const Kernel &kernel);
-    void addRelayCell(Neuron* const neuron, const Kernel &kernell);
+    void addRelayCell(Neuron*  const neuron, const Kernel &kernell);
     void addInterNeuron(Neuron* const neuron, const Kernel &kernel);
     void addCorticalNeuron(Neuron* const neuron, const Kernel &kernel);
 
@@ -51,7 +51,7 @@ public:
     vector<Input> interNeurons() const;
     vector<Input> corticalNeurons() const;
 
-    string cellType() const;
+    string type() const;
 
 
     void clearResponse();
@@ -68,7 +68,7 @@ private:
 protected:
     bool impulseResponseFourierTransformComputed  = false;
     const double m_backgroundResponse;
-    string m_cellType;
+    string m_type;
 
     cube m_response;
     cube m_impulseResponse;
@@ -82,8 +82,8 @@ protected:
     vec m_temporalFreqs;
 
 
-    vector<Input> m_ganglionCells;
     vector<Input> m_relayCells;
+    vector<Input> m_ganglionCells;
     vector<Input> m_interNeurons;
     vector<Input> m_corticalNeurons;
 

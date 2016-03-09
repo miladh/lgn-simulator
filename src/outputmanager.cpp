@@ -99,7 +99,7 @@ void OutputManager::writeResponse(const Neuron& neuron)
     cube response = neuron.response();
     cube responseFT = real(neuron.responseFT());
 
-    string cellGroupName = neuron.cellType();
+    string cellGroupName = neuron.type();
     herr_t status = H5Eset_auto1(NULL, NULL);
     status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
 
@@ -121,7 +121,7 @@ void OutputManager::writeImpulseResponse(const Neuron& neuron)
     cube impulseResponse = neuron.impulseResponse();
     cube impulseResponseFT = real(neuron.impulseResponseFourierTransform());
 
-    string cellGroupName = neuron.cellType();
+    string cellGroupName = neuron.type();
     herr_t status = H5Eset_auto1(NULL, NULL);
     status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
 

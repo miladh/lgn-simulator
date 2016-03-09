@@ -85,6 +85,8 @@ int main(int argc, char* argv[]){
     relay.addCorticalNeuron(&cortical, Krc);
     cortical.addRelayCell(&relay, Kcr);
 
+    cortical.addGanglionCell(&cortical, Krg);
+
 
     //Compute:-----------------------------------------------------------------
     S->computeSpatiotemporal();

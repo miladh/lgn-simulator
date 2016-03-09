@@ -71,23 +71,40 @@ void Neuron::computeImpulseResponse()
 
 void Neuron::addGanglionCell(Neuron* const neuron, const Kernel &kernel)
 {
-    m_ganglionCells.emplace_back(Input{neuron, kernel});
+    if (neuron->type() == "ganglion") {
+        m_ganglionCells.emplace_back(Input{neuron, kernel});
+    }else{
+throw overflow_error("wrong cell type in addGanglionCell(): " + neuron->type());
+    }
+
 }
 
 void Neuron::addRelayCell(Neuron* const neuron, const Kernel &kernel)
 {
-
-    m_relayCells.emplace_back(Input{neuron, kernel});
+    if (neuron->type() == "relay") {
+        m_relayCells.emplace_back(Input{neuron, kernel});
+    }else{
+        throw overflow_error("wrong cell type in addRelayCell(): " + neuron->type());
+    }
 }
 
 void Neuron::addInterNeuron(Neuron* const neuron, const Kernel &kernel)
 {
-    m_interNeurons.emplace_back(Input{neuron, kernel});
+    if (neuron->type() == "interneuron") {
+        m_interNeurons.emplace_back(Input{neuron, kernel});
+    }else{
+throw overflow_error("wrong cell type in addInterNeuron(): " + neuron->type());
+    }
+
 }
 
 void Neuron::addCorticalNeuron(Neuron* const neuron, const Kernel &kernel)
 {
-    m_corticalNeurons.emplace_back(Input{neuron, kernel});
+    if (neuron->type() == "cortical") {
+        m_corticalNeurons.emplace_back(Input{neuron, kernel});
+    }else{
+        throw overflow_error("wrong cell type in addCorticalNeuron(): " + neuron->type());
+    }
 }
 
 
@@ -120,9 +137,9 @@ vector<Neuron::Input> Neuron::corticalNeurons() const
 }
 
 
-string Neuron::cellType() const
+string Neuron::type() const
 {
-    return m_cellType;
+    return m_type;
 }
 
 
