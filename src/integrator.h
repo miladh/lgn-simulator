@@ -48,20 +48,20 @@ public:
     double spatialResolution() const;
 
 private:
-    int m_nPointsTemporal= 0;
-    int m_nPointsSpatial = 0;
+    const int m_nPointsTemporal= 0;
+    const int m_nPointsSpatial = 0;
 
-    double m_temporalResolution = 0;
-    double m_spatialResolution = 0;
+    const double m_temporalResolution = 0;
+    const double m_spatialResolution = 0;
 
-    double m_timeInterval = 0;
-    double m_lengthInterval = 0;
+    const double m_timeInterval = 0;
+    const double m_lengthInterval = 0;
 
-    double m_temporalSamplingFreq = 0;
-    double m_spatialSamplingFreq = 0;
+    const double m_temporalSamplingFreq = 0;
+    const double m_spatialSamplingFreq = 0;
 
-    double m_temporalFreqResolution = 0;
-    double m_spatialFreqResolution = 0;
+    const double m_temporalFreqResolution = 0;
+    const double m_spatialFreqResolution = 0;
 
     vec m_timeVec;
     vec m_spatialVec;

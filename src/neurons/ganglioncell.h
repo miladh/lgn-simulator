@@ -3,16 +3,13 @@
 
 #include "neuron.h"
 
-#include <armadillo>
-
-using namespace arma;
 namespace lgnSimulator {
 class GanglionCell : public Neuron
 {
 public:
     GanglionCell(const Integrator &integrator,
                  const Kernel &kernel,
-                 const double backgroundResponse= 0,
+                 const double backgroundResponse = 0,
                  StaticNonlinearity *staticNonlinearity = nullptr);
     ~GanglionCell();
 

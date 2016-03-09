@@ -11,10 +11,9 @@ using namespace lgnSimulator;
  */
 
 RelayCell::RelayCell(const Integrator &integrator, double backgroundResponse)
-    : Neuron(integrator, backgroundResponse)
+    : Neuron(integrator, backgroundResponse,  "relay")
 
 {
-    m_type = "relay";
 }
 
 RelayCell::~RelayCell()
@@ -38,7 +37,7 @@ void RelayCell::computeImpulseResponseFourierTransform()
 }
 
 
-void RelayCell::computeNeededcubes()
+void RelayCell::computeNeededcubes() const
 {
     for (const Input g : m_ganglionCells){
         Neuron *ganglionCell = g.neuron;
@@ -48,7 +47,7 @@ void RelayCell::computeNeededcubes()
     }
 
     for (const Input i : m_interNeurons){
-        Neuron *interneuron = i.neuron;
+        Interneuron* const interneuron  = dynamic_cast<Interneuron* const>(i.neuron);
         for (const Input g : interneuron->ganglionCells()){
             Neuron *ganglionCell = g.neuron;
             if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
@@ -81,10 +80,9 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
     }
 
 
-
     //Interneuron input
     for (const Input i : m_interNeurons){
-        Neuron* const interneuron = i.neuron;
+        Interneuron* const interneuron  = dynamic_cast<Interneuron* const>(i.neuron);
         complex<double> Kri = i.kernel.fourierTransform(kVec,w);
 
 
@@ -98,14 +96,13 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
 
         //Feedback term
         for (const Input c : interneuron->corticalNeurons()){
-            Neuron* const corticalCell = c.neuron;
+            CorticalCell* const corticalCell  =
+                    dynamic_cast<CorticalCell* const>(c.neuron);
             complex<double> Kic = c.kernel.fourierTransform(kVec,w);
 
-            // NOTE: ONLY ONE RELAY CELL!!!
-            for (const Input r : corticalCell->relayCells()){
-                complex<double> Kcr = r.kernel.fourierTransform(kVec,w);
-                interneuronFB += Kri*Kic*Kcr;
-            }
+            const Kernel* kernel =  corticalCell->relayInputKernel();
+            complex<double> Kcr = kernel->fourierTransform(kVec,w);
+            interneuronFB += Kri*Kic*Kcr;
 
         }
 
@@ -116,13 +113,12 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
     complex<double> Kcr = 0.0;
     complex<double> Krc = 0.0;
     for (const Input c : m_corticalNeurons){
-        Neuron *corticalCell = c.neuron;
-        Krc = c.kernel.fourierTransform(kVec,w);
+        CorticalCell* const corticalCell  =
+                dynamic_cast<CorticalCell* const>(c.neuron);
 
-        // NOTE: ONLY ONE RELAY CELL!!!
-        for (const Input r : corticalCell->relayCells()){
-            Kcr = r.kernel.fourierTransform(kVec,w);
-        }
+        Krc = c.kernel.fourierTransform(kVec,w);
+        const Kernel* kernel =  corticalCell->relayInputKernel();
+        Kcr = kernel->fourierTransform(kVec,w);
         corticalFB += Krc * Kcr;
     }
 
@@ -133,14 +129,100 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int idx,
     }
 
 
-//    cout << idx << "  " << jdx << "   " << kdx << endl;
-//    cout << ganglionFF << "  " << interneuronFF
-//         << "   " << interneuronFB << "   " << corticalFB << endl;
-//    cout << endl;
+    //    cout << idx << "  " << jdx << "   " << kdx << endl;
+    //    cout << ganglionFF << "  " << interneuronFF
+    //         << "   " << interneuronFB << "   " << corticalFB << endl;
+    //    cout << endl;
 
     complex<double> Wr = (ganglionFF + interneuronFF)
             /(complex<double>(1.0, 0.0) - interneuronFB - corticalFB);
 
     return Wr;
 }
+
+
+
+
+void RelayCell::addGanglionCell(Neuron* const neuron, const Kernel &kernel)
+{
+    if (neuron->type() == "ganglion") {
+        m_ganglionCells.emplace_back(Input{neuron, kernel});
+    }else{
+        throw overflow_error("wrong cell type in addGanglionCell(): " + neuron->type());
+    }
+
+}
+
+
+void RelayCell::addInterNeuron(Neuron* const neuron, const Kernel &kernel)
+{
+    if (neuron->type() == "interneuron") {
+        m_interNeurons.emplace_back(Input{neuron, kernel});
+    }else{
+        throw overflow_error("wrong cell type in addInterNeuron(): " + neuron->type());
+    }
+
+}
+
+void RelayCell::addCorticalNeuron(Neuron* const neuron, const Kernel &kernel)
+{
+    if (neuron->type() == "cortical") {
+        m_corticalNeurons.emplace_back(Input{neuron, kernel});
+    }else{
+        throw overflow_error("wrong cell type in addCorticalNeuron(): " + neuron->type());
+    }
+}
+
+
+vector<Neuron::Input> RelayCell::ganglionCells() const
+{
+    return m_ganglionCells;
+}
+
+
+vector<Neuron::Input> RelayCell::interNeurons() const
+{
+    return m_interNeurons;
+}
+
+vector<Neuron::Input> RelayCell::corticalNeurons() const
+{
+    return m_corticalNeurons;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

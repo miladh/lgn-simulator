@@ -20,8 +20,9 @@ Integrator::Integrator(const int nt,
     , m_spatialFreqResolution(m_spatialSamplingFreq / m_nPointsSpatial)
 {
     //Temporal Grid
-    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal, m_temporalResolution)*-2*core::pi;
-    m_timeVec = linspace(0,m_nPointsTemporal-1,m_nPointsTemporal)
+    m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal,
+                                         m_temporalResolution)*-2*core::pi;
+    m_timeVec = linspace(0,m_nPointsTemporal-1, m_nPointsTemporal)
                 * m_temporalResolution;
 
     //Spatial Grid

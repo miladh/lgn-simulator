@@ -4,10 +4,8 @@ using namespace lgnSimulator;
 
 
 CorticalCell::CorticalCell(const Integrator& integrator, double backgroundResponse)
-    : Neuron(integrator, backgroundResponse)
+    : Neuron(integrator, backgroundResponse, "cortical")
 {
-    m_type = "cortical";
-
 }
 
 CorticalCell::~CorticalCell()
@@ -26,25 +24,35 @@ void CorticalCell::computeImpulseResponseFourierTransform()
             for(int j = 0; j < int(m_impulseResponseFT.n_cols); j++){
                 vec2 kVec= {m_spatialFreqs[i], m_spatialFreqs[j]};
 
-                for (const Input r : m_relayCells){
-                    Neuron* const relayCell = r.neuron;
-                    m_impulseResponseFT(i,j,k)
-                            += r.kernel.fourierTransform(kVec,w)
-                            * relayCell->impulseResponseFourierTransform()(i,j,k);
-                }
+                m_impulseResponseFT(i,j,k)
+                        = m_relayInput->kernel.fourierTransform(kVec,w)
+                        * m_relayInput->
+                        neuron->impulseResponseFourierTransform()(i,j,k);
             }
         }
     }
 }
 
-void CorticalCell::computeNeededcubes()
+void CorticalCell::computeNeededcubes() const
 {
-    for (const Input r : m_relayCells){
-        Neuron* const relayCell = r.neuron;
-        if(!relayCell->isImpulseResponseFourierTransformComputed()){
-            relayCell->computeImpulseResponseFourierTransform();
-        }
+    if(!m_relayInput->neuron->isImpulseResponseFourierTransformComputed()){
+        m_relayInput->neuron->computeImpulseResponseFourierTransform();
     }
 }
 
 
+
+void CorticalCell::addRelayCell(Neuron* const neuron, const Kernel &kernel)
+{
+    if (neuron->type() == "relay") {
+        m_relayInput = new Input{neuron, kernel};
+    }else{
+        throw overflow_error("wrong cell type in addRelayCell(): "
+                             + neuron->type());
+    }
+}
+
+const Kernel* CorticalCell::relayInputKernel() const
+{
+    return &m_relayInput->kernel;
+}

@@ -12,10 +12,12 @@ using namespace lgnSimulator;
 
 Neuron::Neuron(const Integrator& integrator,
                const double backgroundResponse,
+               const string type,
                StaticNonlinearity * const staticNonlinearity)
     : m_integrator(integrator)
     , m_staticNonlinearity(staticNonlinearity)
     , m_backgroundResponse(backgroundResponse)
+    , m_type(type)
 {
     int nPointsTemporal = integrator.nPointsTemporal();
     int nPointsSpatial = integrator.nPointsSpatial();
@@ -44,11 +46,12 @@ void Neuron::computeResponse(Stimulus *stimulus)
     }
 
     m_responseFT = m_impulseResponseFT % stimulus->fourierTransform();
+
     if(m_backgroundResponse!=0){ //add DC contribution from bck activity
         m_responseFT(0,0,0) += 8*core::pi*core::pi*core::pi * m_backgroundResponse
-            /m_integrator.spatialFreqResolution()
-            /m_integrator.spatialFreqResolution()
-            /m_integrator.temporalFreqResolution();
+                /m_integrator.spatialFreqResolution()
+                /m_integrator.spatialFreqResolution()
+                /m_integrator.temporalFreqResolution();
     }
 
     m_response = real(m_integrator.backwardFFT(m_responseFT));
@@ -69,45 +72,6 @@ void Neuron::computeImpulseResponse()
 
 }
 
-void Neuron::addGanglionCell(Neuron* const neuron, const Kernel &kernel)
-{
-    if (neuron->type() == "ganglion") {
-        m_ganglionCells.emplace_back(Input{neuron, kernel});
-    }else{
-throw overflow_error("wrong cell type in addGanglionCell(): " + neuron->type());
-    }
-
-}
-
-void Neuron::addRelayCell(Neuron* const neuron, const Kernel &kernel)
-{
-    if (neuron->type() == "relay") {
-        m_relayCells.emplace_back(Input{neuron, kernel});
-    }else{
-        throw overflow_error("wrong cell type in addRelayCell(): " + neuron->type());
-    }
-}
-
-void Neuron::addInterNeuron(Neuron* const neuron, const Kernel &kernel)
-{
-    if (neuron->type() == "interneuron") {
-        m_interNeurons.emplace_back(Input{neuron, kernel});
-    }else{
-throw overflow_error("wrong cell type in addInterNeuron(): " + neuron->type());
-    }
-
-}
-
-void Neuron::addCorticalNeuron(Neuron* const neuron, const Kernel &kernel)
-{
-    if (neuron->type() == "cortical") {
-        m_corticalNeurons.emplace_back(Input{neuron, kernel});
-    }else{
-        throw overflow_error("wrong cell type in addCorticalNeuron(): " + neuron->type());
-    }
-}
-
-
 
 bool Neuron::isImpulseResponseFourierTransformComputed() const
 {
@@ -115,29 +79,7 @@ bool Neuron::isImpulseResponseFourierTransformComputed() const
 }
 
 
-vector<Neuron::Input> Neuron::ganglionCells() const
-{
-    return m_ganglionCells;
-}
-
-vector<Neuron::Input> Neuron::relayCells() const
-{
-    return m_relayCells;
-}
-
-
-vector<Neuron::Input> Neuron::interNeurons() const
-{
-    return m_interNeurons;
-}
-
-vector<Neuron::Input> Neuron::corticalNeurons() const
-{
-    return m_corticalNeurons;
-}
-
-
-string Neuron::type() const
+const string Neuron::type() const
 {
     return m_type;
 }
