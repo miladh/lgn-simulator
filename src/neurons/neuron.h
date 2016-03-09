@@ -50,7 +50,6 @@ private:
     StaticNonlinearity *const m_staticNonlinearity = nullptr;
 
 
-
 protected:
     bool impulseResponseFourierTransformComputed  = false;
     const double m_backgroundResponse;

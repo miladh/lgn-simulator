@@ -102,7 +102,7 @@ def animateImshowPlots(data,
     ax = plt.subplot2grid((num_rows, num_cols),(0, 0), colspan = colspanStim)
     simpleaxis(ax)
     ax.set_title(data[0]["type"])
-    imshowPlots.append(ax.imshow(data[0]["value"][0,:,:], cmap="gray", interpolation="None"))
+    imshowPlots.append(ax.imshow(data[0]["value"][0,:,:], origin = "lower",cmap="gray", interpolation="None"))
     if(colorbar):
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.05)
@@ -119,6 +119,7 @@ def animateImshowPlots(data,
 
             imshowPlots.append(ax.imshow(data[k]["value"][0,:,:], cmap=cmap,
                                interpolation="None",
+                               origin = "lower",
                                vmin = (data[k]["value"]).min(),
                                vmax = (data[k]["value"]).max()))
 
@@ -160,8 +161,13 @@ def imshowPlotsOfImpulseResponses(data,
     num_cols = len(data)
     num_rows = int(x_imshow) + int(y_imshow)
 
-    fig,axarr=plt.subplots(num_rows, num_cols, figsize=figsize, sharey=True)
+    fig, axarr = plt.subplots(num_rows, num_cols, figsize=figsize, sharey=True)
 
+    if(num_rows == 1):
+        axarr =  np.array(axarr).reshape(1,num_cols)
+    if(num_cols ==1):
+        axarr =  np.array(axarr).reshape(num_rows,1)
+    levels = np.arange(-5., 5., 0.21)
     for j in range(num_cols):
         axarr[0,j].set_title(data[j]["type"])
         i=0
@@ -171,9 +177,9 @@ def imshowPlotsOfImpulseResponses(data,
                     data[j]["time_vec"][0],data[j]["time_vec"][-1]]
             im = axarr[i,j].imshow(data[j]["value"][:,idy,:], extent= extent,
                                    cmap=cmap, origin="lower", aspect="auto")
-
-            # axarr[i,j].contour(data[j]["value"][:,idy,:], hold='on', colors='k',
-            # origin='lower', extent=extent)
+            axarr[i,j].contour(data[j]["value"][:,idy,:],  levels,
+            linestyles='solid', cmap=cmap,
+            extent= extent, aspect="auto")
             axarr[i,j].set_xlabel(r"$x(\theta)$")
             axarr[i,0].set_ylabel(r"$\tau(ms)$")
 
@@ -186,6 +192,10 @@ def imshowPlotsOfImpulseResponses(data,
                     data[j]["time_vec"][0],data[j]["time_vec"][-1]]
             im = axarr[i,j].imshow(data[j]["value"][:,:,idx], extent= extent,
                                    cmap=cmap, origin="lower",aspect="auto")
+
+            axarr[i,j].contour(data[j]["value"][:,:,idx],  levels,
+            linestyles='solid', cmap=cmap,
+            extent= extent,  aspect="auto")
             axarr[i,j].set_xlabel(r"$y(\theta)$")
             axarr[i,0].set_ylabel(r"$\tau(ms)$")
 
@@ -396,11 +406,11 @@ if __name__ == "__main__":
                 }
 
     data = [Wg, Wr, Wc]
-    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=8)
-#    plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True, num_skip=6, idx=Ns/2, idy=Ns/2)
-#    imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2)
     data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
-#     data = [S, Rg,Wg, Rr, Wr]
+    # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=8,y_line3d=True)
+    # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
+    imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
+    # data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
     animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True,
     save_animation = False, animation_name = "newTest")
 

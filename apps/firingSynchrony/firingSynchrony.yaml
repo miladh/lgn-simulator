@@ -11,7 +11,7 @@ ds: &ds_id 0.05
 C: 1.0
 mask: "circle" # none/circle
 maskSize: 0.5
-kxId:  0        #[-Ns/2, Ns/2 - 1]
+kxId:  3        #[-Ns/2, Ns/2 - 1]
 kyId:  5        #[-Ns/2, Ns/2 - 1]
 wId:   6        #[-Nt/2, Nt/2 - 1]
 
