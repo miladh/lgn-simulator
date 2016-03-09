@@ -20,7 +20,8 @@ void runTest(int ns, int nt, double dt, double ds, double C)
     vec t = integrator.timeVec();
     vec w = integrator.temporalFreqVec();
 
-    TemporallyConstant Ft(C, integrator.temporalFreqResolution());
+    TemporallyConstant Ft(integrator.timeInterval(),
+                          integrator.temporalFreqResolution());
     SpatiallyConstant  Fs(C, integrator.spatialFreqResolution());
 
     cube F = zeros<cube>(k.n_elem, k.n_elem, w.n_elem);

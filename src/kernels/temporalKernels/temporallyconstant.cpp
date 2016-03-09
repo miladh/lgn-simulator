@@ -3,8 +3,9 @@
 using namespace lgnSimulator;
 
 
-TemporallyConstant::TemporallyConstant(double constant, double temporalFreqResolution)
-    : m_constant(constant)
+TemporallyConstant::TemporallyConstant(double temporalInterval,
+                                       double temporalFreqResolution)
+    : m_temporalInterval(temporalInterval)
     , m_peak(1./temporalFreqResolution)
 {
 }
@@ -18,22 +19,23 @@ TemporallyConstant::~TemporallyConstant()
 double TemporallyConstant::temporal(double t) const
 {
     (void)t;
-    return m_constant;
+    return 1./m_temporalInterval;
 }
 
 complex<double> TemporallyConstant::fourierTransform(double w) const
 {
-    return m_constant * m_peak * 2. * core::pi * Special::delta(w,0);
+    return 1./m_temporalInterval * m_peak * 2. * core::pi * Special::delta(w,0);
 }
 
 
 TemporallyConstant createTemporallyConstantKernel(const YAML::Node &cfg)
 {
-    double constant = cfg["constant"].as<double>();
     double dt = cfg["dt"].as<double>();
     double nt = cfg["nt"].as<double>();
-    double peak = 2.*core::pi/pow(2,nt)/dt;
 
-    return TemporallyConstant(constant, peak);
+    double temporalInterval = pow(2. ,nt)*dt;
+    double peak = 2.*core::pi/temporalInterval;
+
+    return TemporallyConstant(temporalInterval, peak);
 
 }

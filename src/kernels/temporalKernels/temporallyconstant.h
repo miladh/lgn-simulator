@@ -8,7 +8,7 @@ namespace lgnSimulator {
 class TemporallyConstant : public TemporalKernel
 {
 public:
-    TemporallyConstant(double constant, double temporalFreqResolution);
+    TemporallyConstant(double temporalInterval, double temporalFreqResolution);
     ~TemporallyConstant();
 
     // TemporalKernel interface
@@ -17,7 +17,7 @@ public:
     virtual complex<double> fourierTransform(double w) const;
 
 private:
-    double m_constant= 0.0;
+    double m_temporalInterval= 0.0;
     double m_peak = 1.0;
 };
 
