@@ -31,7 +31,9 @@ TemporallyConstant createTemporallyConstantKernel(const YAML::Node &cfg)
 {
     double constant = cfg["constant"].as<double>();
     double dt = cfg["dt"].as<double>();
+    double nt = cfg["nt"].as<double>();
+    double peak = 2.*core::pi/pow(2,nt)/dt;
 
-    return TemporallyConstant(constant, dt);
+    return TemporallyConstant(constant, peak);
 
 }

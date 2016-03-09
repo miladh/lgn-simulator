@@ -11,7 +11,6 @@ TemporalDelta::TemporalDelta(double delay, double temporalResolution)
 
 TemporalDelta::~TemporalDelta()
 {
-
 }
 
 
@@ -32,6 +31,4 @@ TemporalDelta createTemporalDeltaKernel(const YAML::Node &cfg)
     double dt = cfg["dt"].as<double>();
 
     return TemporalDelta(delay, dt);
-
-
 }

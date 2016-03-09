@@ -27,7 +27,7 @@ void runDampedOscConvolutionTest(int nt, double dt, int ns, double ds,
     vec w = integrator.temporalFreqVec();
 
     SpatialDelta Ws(wg, ds, rg);
-    DampedOscillator Wt(phaseDuration, dampedFactor, t[delay_osc]);
+    Biphasic Wt(phaseDuration, dampedFactor, t[delay_osc]);
 
     SpatialDelta Ks(wk, ds, rk);
     TemporalDelta Kt(t[delay_id], dt);

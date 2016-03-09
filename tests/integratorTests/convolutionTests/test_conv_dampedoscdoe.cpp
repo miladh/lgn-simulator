@@ -83,7 +83,7 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
     vec w = integrator.temporalFreqVec();
 
     SpatialDelta Ws(wg, ds, rg);
-    DampedOscillator Wt(phaseDuration, dampingFactor, 0);
+    Biphasic Wt(phaseDuration, dampingFactor, 0);
 
     SpatialDelta Ks(wk, ds, rk);
     DOE Kt(cenLatency, surLatency, t[delay_doe]);

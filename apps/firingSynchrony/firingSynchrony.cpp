@@ -51,7 +51,7 @@ int main(int argc, char* argv[]){
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
 //    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
 // TwoSidedExponentialDecay Wg_t = createTemporalTwoSidedExponentialDecayKernel(ganglionImpRes);
-    DampedOscillator Wg_t = createTemporalDampedOscillatorKernel(ganglionImpRes);
+    Biphasic Wg_t = createTemporalBiphasicKernel(ganglionImpRes);
 
     SeparableKernel Wg(&Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg, Rg_0);

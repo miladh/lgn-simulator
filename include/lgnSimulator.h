@@ -23,7 +23,7 @@
 
 #include "../src/kernels/temporalKernels/decayingexponential.h"
 #include "../src/kernels/temporalKernels/twosidedexponentialdecay.h"
-#include "../src/kernels/temporalKernels/dampedoscillator.h"
+#include "../src/kernels/temporalKernels/biphasic.h"
 #include "../src/kernels/temporalKernels/temporallyconstant.h"
 #include "../src/kernels/temporalKernels/temporaldelta.h"
 #include "../src/kernels/temporalKernels/temporalGaussian.h"

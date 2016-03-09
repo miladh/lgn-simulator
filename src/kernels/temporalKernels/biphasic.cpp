@@ -1,9 +1,9 @@
-#include "dampedoscillator.h"
+#include "biphasic.h"
 
 using namespace lgnSimulator;
 
 
-DampedOscillator::DampedOscillator(double phaseDuration, double dampingFactor, double delay)
+Biphasic::Biphasic(double phaseDuration, double dampingFactor, double delay)
     : m_phaseDuration(phaseDuration)
     , m_dampingFactor(dampingFactor)
     , m_delay(delay)
@@ -11,12 +11,12 @@ DampedOscillator::DampedOscillator(double phaseDuration, double dampingFactor, d
 
 }
 
-DampedOscillator::~DampedOscillator()
+Biphasic::~Biphasic()
 {
 
 }
 
-double DampedOscillator::temporal(double t) const
+double Biphasic::temporal(double t) const
 {
     double tt = t - m_delay;
     if(tt <= m_phaseDuration){
@@ -28,7 +28,7 @@ double DampedOscillator::temporal(double t) const
     }
 }
 
-complex<double> DampedOscillator::fourierTransform(double w) const
+complex<double> Biphasic::fourierTransform(double w) const
 {
     double factor = core::pi * m_phaseDuration/
             (core::pi*core::pi - m_phaseDuration * m_phaseDuration * w * w);
@@ -41,12 +41,12 @@ complex<double> DampedOscillator::fourierTransform(double w) const
 
 
 
-DampedOscillator createTemporalDampedOscillatorKernel(const YAML::Node &cfg)
+Biphasic createTemporalBiphasicKernel(const YAML::Node &cfg)
 {
     double phaseDuration = cfg["phaseDuration"].as<double>();
     double weight = cfg["weight"].as<double>();
     double delay = cfg["delay"].as<double>();
 
-    return DampedOscillator(phaseDuration, weight, delay);
+    return Biphasic(phaseDuration, weight, delay);
 
 }

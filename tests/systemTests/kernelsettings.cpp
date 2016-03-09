@@ -5,7 +5,7 @@
 #include "kernels/spatialKernels/ellipticgaussian.h"
 
 #include "kernels/temporalKernels/decayingexponential.h"
-#include "kernels/temporalKernels/dampedoscillator.h"
+#include "kernels/temporalKernels/biphasic.h"
 #include "kernels/temporalKernels/temporallyconstant.h"
 
 KernelSettings::KernelSettings()
@@ -53,7 +53,7 @@ vector<TemporalKernel *> KernelSettings::temporalKernelVector()
     double weightDampedOsc = 2.0;
 
     vector<TemporalKernel*> temporalKernels = {new DecayingExponential(tau, delay),
-                                              new DampedOscillator
+                                              new Biphasic
                                               (phaseDuration, weightDampedOsc, delay)};
 
     return temporalKernels;

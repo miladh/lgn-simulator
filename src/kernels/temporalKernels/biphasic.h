@@ -1,16 +1,16 @@
-#ifndef DAMPEDOSCILLATOR_H
-#define DAMPEDOSCILLATOR_H
+#ifndef BIPHASIC_H
+#define BIPHASIC_H
 
 
 #include "kernels/temporalKernels/temporalkernel.h"
 
 namespace lgnSimulator {
 
-class DampedOscillator : public TemporalKernel
+class Biphasic : public TemporalKernel
 {
 public:
-    DampedOscillator(double phaseDuration, double dampingFactor, double delay);
-    ~DampedOscillator();
+    Biphasic(double phaseDuration, double dampingFactor, double delay);
+    ~Biphasic();
 
     // TemporalKernel interface
     double temporal(double t) const;
@@ -24,6 +24,6 @@ private:
 };
 
 }
-lgnSimulator::DampedOscillator createTemporalDampedOscillatorKernel(const YAML::Node &cfg);
+lgnSimulator::Biphasic createTemporalBiphasicKernel(const YAML::Node &cfg);
 
-#endif // DAMPEDOSCILLATOR_H
+#endif // BIPHASIC_H

@@ -30,7 +30,6 @@ SOURCES += \
     kernels/spatialKernels/spatialdelta.cpp \
     kernels/spatialKernels/spatialkernel.cpp \
     kernels/spatialKernels/spatiallyconstant.cpp \
-    kernels/temporalKernels/dampedoscillator.cpp \
     kernels/temporalKernels/decayingexponential.cpp \
     kernels/temporalKernels/temporaldelta.cpp \
     kernels/temporalKernels/temporalGaussian.cpp \
@@ -40,7 +39,8 @@ SOURCES += \
     helper/special.cpp \
     stimuli/stimulus.cpp \
     kernels/temporalKernels/twosidedexponentialdecay.cpp \
-    kernels/temporalKernels/doe.cpp
+    kernels/temporalKernels/doe.cpp \
+    kernels/temporalKernels/biphasic.cpp
 
 HEADERS += \
     integrator.h \
@@ -63,7 +63,6 @@ HEADERS += \
     ../include/lgnSimulator.h \
     kernels/kernel.h \
     kernels/separablekernel.h \
-    kernels/temporalKernels/dampedoscillator.h \
     kernels/temporalKernels/decayingexponential.h \
     kernels/temporalKernels/temporaldelta.h \
     kernels/temporalKernels/temporalGaussian.h \
@@ -80,7 +79,8 @@ HEADERS += \
     helper/special.h \
     stimuli/stimulus.h \
     kernels/temporalKernels/twosidedexponentialdecay.h \
-    kernels/temporalKernels/doe.h
+    kernels/temporalKernels/doe.h \
+    kernels/temporalKernels/biphasic.h
 
 OTHER_FILES +=
 

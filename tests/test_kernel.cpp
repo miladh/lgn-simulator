@@ -191,7 +191,7 @@ SUITE(kernel){
         double phaseDuration = 42.5;
         double weight = 0.38;
         double delay = 0.;
-        DampedOscillator dampedOsc(phaseDuration, weight, delay);
+        Biphasic dampedOsc(phaseDuration, weight, delay);
         CHECK_CLOSE(dampedOsc.temporal(0.5), 0.0369514993891, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-0.0245436926062)), 22.7988820989, 1e-10);
         CHECK_CLOSE(imag(dampedOsc.fourierTransform(-0.0245436926062)), -3.1173542118, 1e-10);
@@ -237,7 +237,7 @@ SUITE(kernel){
         double phaseDuration = 20.6;
         double weight = 0.88;
         double delay = 44.5;
-        DampedOscillator dampedOsc(phaseDuration, weight, delay);
+        Biphasic dampedOsc(phaseDuration, weight, delay);
 
         CHECK_CLOSE(dampedOsc.temporal(45.0), 0.0761783767709, 1e-12);
         CHECK_CLOSE(real(dampedOsc.fourierTransform(-2.20893233456)), 0.0355236623, 1e-10);

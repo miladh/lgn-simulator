@@ -25,7 +25,9 @@ lgnSimulator::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node &
 {
     double constant = cfg["constant"].as<double>();
     double ds = cfg["ds"].as<double>();
+    double ns = cfg["ns"].as<double>();
+    double peak = 2.*core::pi/pow(2,ns)/ds;
 
-    return SpatiallyConstant(constant, ds);
+    return SpatiallyConstant(constant, peak);
 
 }
