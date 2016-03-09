@@ -19,8 +19,12 @@ Biphasic::~Biphasic()
 double Biphasic::temporal(double t) const
 {
     double tt = t - m_delay;
+    if(Special::heaviside(tt) == 0){
+        return 0;
+    }
+
     if(tt <= m_phaseDuration){
-        return sin(core::pi/m_phaseDuration * tt) * Special::heaviside(tt);
+        return sin(core::pi/m_phaseDuration * tt);
     }else if(tt <= 2*m_phaseDuration){
         return m_dampingFactor * sin(core::pi/m_phaseDuration * tt);
     }else{

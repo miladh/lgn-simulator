@@ -49,6 +49,7 @@ void runTest(int ns, int nt, double dt, double ds, double C)
     CHECK_CLOSE(diff_real.max(), 0.0, 1e-9);
     CHECK_CLOSE(diff_imag.max(), 0.0, 1e-9);
 
+
 }
 
 SUITE(integrator){
