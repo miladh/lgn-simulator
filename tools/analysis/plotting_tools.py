@@ -57,6 +57,7 @@ def animateImshowPlots(data,
                        figsize = (8,15),
                        cmap = cmaps.inferno,
                        colorbar = False,
+                       remove_axes = True,
                        save_animation = False,
                        animation_name = "unnamed" ):
 
@@ -95,14 +96,19 @@ def animateImshowPlots(data,
 
 
     ttl = plt.suptitle("",fontsize = 16)
+    extent=[data[0]["spatial_vec"][0],data[0]["spatial_vec"][-1],
+            data[0]["spatial_vec"][0],data[0]["spatial_vec"][-1]]
     # ttl = plt.suptitle("",fontsize = 16, x = 0.45, horizontalalignment = "left")
 
     #Plot stimulus
     colspanStim = 2
     ax = plt.subplot2grid((num_rows, num_cols),(0, 0), colspan = colspanStim)
-    simpleaxis(ax)
+    if remove_axes: simpleaxis(ax)
     ax.set_title(data[0]["type"])
-    imshowPlots.append(ax.imshow(data[0]["value"][0,:,:], origin = "lower",cmap="gray", interpolation="None"))
+    ax.set_xlabel(r"$x(\theta)$")
+    ax.set_ylabel(r"$y(\theta)$")
+    imshowPlots.append(ax.imshow(data[0]["value"][0,:,:],
+    origin = "lower",cmap="gray", interpolation="none", extent = extent))
     if(colorbar):
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.05)
@@ -114,12 +120,14 @@ def animateImshowPlots(data,
             if(k>= num_subplots):
                 break
             ax = plt.subplot2grid((num_rows, num_cols),(i, j))
-            simpleaxis(ax)
+            if remove_axes: simpleaxis(ax)
             ax.set_title(data[k]["type"])
-
+            ax.set_xlabel(r"$x(\theta)$")
+            ax.set_ylabel(r"$y(\theta)$")
             imshowPlots.append(ax.imshow(data[k]["value"][0,:,:], cmap=cmap,
-                               interpolation="None",
+                               interpolation="none",
                                origin = "lower",
+                               extent = extent,
                                vmin = (data[k]["value"]).min(),
                                vmax = (data[k]["value"]).max()))
 
@@ -176,7 +184,8 @@ def imshowPlotsOfImpulseResponses(data,
             extent=[data[j]["spatial_vec"][0],data[j]["spatial_vec"][-1],
                     data[j]["time_vec"][0],data[j]["time_vec"][-1]]
             im = axarr[i,j].imshow(data[j]["value"][:,idy,:], extent= extent,
-                                   cmap=cmap, origin="lower", aspect="auto")
+                                   cmap=cmap, origin="lower", aspect="auto",
+                                   interpolation="gaussian")
             axarr[i,j].contour(data[j]["value"][:,idy,:],  levels,
             linestyles='solid', cmap=cmap,
             extent= extent, aspect="auto")
@@ -191,7 +200,8 @@ def imshowPlotsOfImpulseResponses(data,
             extent=[data[j]["spatial_vec"][0],data[j]["spatial_vec"][-1],
                     data[j]["time_vec"][0],data[j]["time_vec"][-1]]
             im = axarr[i,j].imshow(data[j]["value"][:,:,idx], extent= extent,
-                                   cmap=cmap, origin="lower",aspect="auto")
+                                   cmap=cmap, origin="lower",aspect="auto",
+                                   interpolation="gaussian")
 
             axarr[i,j].contour(data[j]["value"][:,:,idx],  levels,
             linestyles='solid', cmap=cmap,
@@ -406,12 +416,13 @@ if __name__ == "__main__":
                 }
 
     data = [Wg, Wr, Wc]
-    data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
+    # data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
     # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=8,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    # data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
-    animateImshowPlots(data, exp.integrator.temporalResolution, colorbar = True,
+    data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
+    animateImshowPlots(data, exp.integrator.temporalResolution,
+    colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
 
     plt.show()
