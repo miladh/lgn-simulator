@@ -49,8 +49,6 @@ int main(int argc, char* argv[]){
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
-//    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
-// TwoSidedExponentialDecay Wg_t = createTemporalTwoSidedExponentialDecayKernel(ganglionImpRes);
     Biphasic Wg_t = createTemporalBiphasicKernel(ganglionImpRes);
 
     SeparableKernel Wg(&Wg_s, &Wg_t);
@@ -62,12 +60,7 @@ int main(int argc, char* argv[]){
 
     //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
-//    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
-//    DecayingExponential Kt_rg = createTemporalDecayingExponentialKernel(Kt_rgSettings);
     DOE Kt_rg = createTemporalDOEKernel(Kt_rgSettings);
-
-
-
     SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
 
@@ -76,7 +69,7 @@ int main(int argc, char* argv[]){
     SeparableKernel Kcr(&Ks_cr, &Kt_cr);
 
     SpatialDelta Ks_rc = createSpatialDeltaKernel(Ks_rcSettings);
-    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
+    DOE Kt_rc = createTemporalDOEKernel(Kt_rcSettings);
     SeparableKernel Krc(&Ks_rc, &Kt_rc);
 
 

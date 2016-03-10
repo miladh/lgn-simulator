@@ -32,10 +32,10 @@ SOURCES += main.cpp \
     fftHelperTests/test_helper_ifftshift3d.cpp \
     integratorTests/convolutionTests/test_conv_gaussdelta.cpp \
     integratorTests/convolutionTests/test_conv_gaussconstant.cpp \
-    integratorTests/convolutionTests/test_conv_dampedoscdelta.cpp \
     integratorTests/convolutionTests/test_conv_decayingexpdelta.cpp \
-    integratorTests/convolutionTests/test_conv_dampedoscdoe.cpp \
-    integratorTests/convolutionTests/test_conv_deltadelta.cpp
+    integratorTests/convolutionTests/test_conv_deltadelta.cpp \
+    integratorTests/convolutionTests/test_conv_biphasicdelta.cpp \
+    integratorTests/convolutionTests/test_conv_biphasicdoe.cpp
 
 
 

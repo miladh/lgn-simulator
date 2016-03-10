@@ -417,7 +417,7 @@ if __name__ == "__main__":
 
     data = [Wg, Wr, Wc]
     # data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
-    # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=8,y_line3d=True)
+    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=8,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
     data = [S, Wg, Rg, Wr, Rr, Wc, Rc]

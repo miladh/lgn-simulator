@@ -1,9 +1,9 @@
 /**********************************************************************
  *  Test: convolution theorem applied on F = W * K = ifft(fft(W)fft(K)),
- *        where W = delta(r) * dampedOscillator(t) and
- *        K = delta(r) * doe(t)
+ *        where W = delta(r) * doe(t) and
+ *        K = delta(r) * dampedOscillator(t)
  *
- *  Analytic source: closed-form experssion
+ *  Analytic source: closed-form experssion (Sympy)
  *
  * ********************************************************************/
 
@@ -13,7 +13,7 @@
 using namespace lgnSimulator;
 
 
-double definiteIntegral(double t, double limit, double A, double a,
+double definiteIntegral(double t, double limit, double dampingFactor, double phaseDuration,
                         double gamma, double delay)
 {
     double tau = limit;
@@ -24,18 +24,9 @@ double definiteIntegral(double t, double limit, double A, double a,
             tau = t - delay;
         }
 
-        double factor = A/(a*a + core::pi*core::pi * gamma*gamma)
-                /(a*a + core::pi*core::pi * gamma*gamma);
-        double expTerm = exp((delay-t+tau)/gamma);
-        double trigFactor = (core::pi * tau)/a;
-        double cosTerm = core::pi*a*cos(trigFactor)
-                *(a*a * (-2.*gamma + delay - t + tau)
-                  + core::pi*core::pi * gamma*gamma * (delay-t+tau) );
-        double sinTerm = a*a/gamma * sin(trigFactor)
-                *(a*a *(-gamma + delay - t + tau)
-                  + core::pi*core::pi * gamma*gamma *(gamma + delay - t + tau));
-
-        return factor * expTerm * (cosTerm - sinTerm);
+        double f_result;
+        f_result = 1.0*dampingFactor*phaseDuration*(core::pi*gamma*(pow(core::pi, 2)*delay*pow(gamma, 2) - pow(core::pi, 2)*pow(gamma, 2)*t + pow(core::pi, 2)*pow(gamma, 2)*tau + delay*pow(phaseDuration, 2) - 2*gamma*pow(phaseDuration, 2) - pow(phaseDuration, 2)*t + pow(phaseDuration, 2)*tau)*cos(core::pi*tau/phaseDuration) - phaseDuration*(pow(core::pi, 2)*delay*pow(gamma, 2) + pow(core::pi, 2)*pow(gamma, 3) - pow(core::pi, 2)*pow(gamma, 2)*t + pow(core::pi, 2)*pow(gamma, 2)*tau + delay*pow(phaseDuration, 2) - gamma*pow(phaseDuration, 2) - pow(phaseDuration, 2)*t + pow(phaseDuration, 2)*tau)*sin(core::pi*tau/phaseDuration))*exp((delay - t + tau)/gamma)/(gamma*pow(pow(core::pi, 2)*pow(gamma, 2) + pow(phaseDuration, 2), 2));
+        return f_result;
     }
 }
 
@@ -114,8 +105,8 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-//    cout << diff_real.max() << endl;
-//    cout << diff_imag.max() << endl;
+    //    cout << diff_real.max() << endl;
+    //    cout << diff_imag.max() << endl;
 
 
     CHECK_CLOSE(diff_real.max(), 0.0, 1e-3);
@@ -127,22 +118,22 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
 SUITE(integrator){
 
 
-        TEST(dampedOscDOEConvolutionTest_test_0) {
-            runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
-                                                  42.5, 0.38,
-                                                  1., vec2{0.0, 0.0},
-                                                  16., 32., 0,
-                                                  1.0, vec2{0.0, 0.0});
-        }
+    TEST(dampedOscDOEConvolutionTest_test_0) {
+        runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
+                                              42.5, 0.38,
+                                              1., vec2{0.0, 0.0},
+                                              16., 32., 0,
+                                              1.0, vec2{0.0, 0.0});
+    }
 
 
 
-        TEST(dampedOscDOEConvolutionTest_test_1) {
-            runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
-                                                  42.5, 0.38,
-                                                  1., vec2{0.0, 0.0},
-                                                  16., 32., 1365,
-                                                  1.0, vec2{0.0, 0.0});
-        }
+    TEST(dampedOscDOEConvolutionTest_test_1) {
+        runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
+                                              42.5, 0.38,
+                                              1., vec2{0.0, 0.0},
+                                              16., 32., 1365,
+                                              1.0, vec2{0.0, 0.0});
+    }
 
 }

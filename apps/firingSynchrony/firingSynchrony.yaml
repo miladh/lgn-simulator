@@ -27,19 +27,10 @@ ganglionImpRes:
     B: 0.85
     b: 0.83
 
-# DampedOscillator
+# Biphasic
     phaseDuration: 42.5
     weight: 0.38
     delay: 4
-
-## DecayingExponential
-    #delay: 10
-    #tau: *dt_id
-
-
-## TemporalDelta
-    #delay: 10
-    #dt: *dt_id
 
 #------------spatialKernelSettings-----------------#
 spatialKernels:
@@ -50,45 +41,34 @@ spatialKernels:
         shift: [0.0, 0.]
 
     Krc:
-        weight: -0.2
-        ds : *ds_id
-        shift: [0.0, 0.]
-    ## Gauss
-        #A: -1.5
-        #a: 0.83
+    # Gauss
+        A: -1.5
+        a: 0.83
 
     Kcr:
     # SpatialDelta
         weight: 1.0
         ds : *ds_id
-        shift: [0.0, 0.]
+        shift: [0., 0.]
 
 #------------temporalKernelSettings-----------------#
 temporalKernels:
     Krg:
-    # CombinedRC
+    # DoE
         cenLatency: 16
         surLatency: 32
         delay: 40
 
-    ## TemporalDelta
-        #delay: 20
-        #dt: *dt_id
-
-    ## DecayingExponential
-        #delay: 10
-        #tau: *dt_id
-
-
     Kcr:
-     #TemporalDelta
+     #DoE
         delay: 220.0
         dt: *dt_id
 
     Krc:
-     #TemporalDelta
-        delay: 30.0
-        dt: *dt_id
+     #DoE
+         cenLatency: 16
+         surLatency: 32
+         delay: 40
 
 
 #------------backgroundResponse-----------------#
