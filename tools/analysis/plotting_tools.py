@@ -175,7 +175,7 @@ def imshowPlotsOfImpulseResponses(data,
         axarr =  np.array(axarr).reshape(1,num_cols)
     if(num_cols ==1):
         axarr =  np.array(axarr).reshape(num_rows,1)
-    levels = np.arange(-5., 5., 0.21)
+    levels = np.arange(-5., 5., 0.23)
     for j in range(num_cols):
         axarr[0,j].set_title(data[j]["type"])
         i=0
@@ -187,7 +187,7 @@ def imshowPlotsOfImpulseResponses(data,
                                    cmap=cmap, origin="lower", aspect="auto",
                                    interpolation="gaussian")
             axarr[i,j].contour(data[j]["value"][:,idy,:],  levels,
-            linestyles='solid', cmap=cmap,
+            colors='w',linewidths=0.4,
             extent= extent, aspect="auto")
             axarr[i,j].set_xlabel(r"$x(\theta)$")
             axarr[i,0].set_ylabel(r"$\tau(ms)$")
@@ -204,7 +204,7 @@ def imshowPlotsOfImpulseResponses(data,
                                    interpolation="gaussian")
 
             axarr[i,j].contour(data[j]["value"][:,:,idx],  levels,
-            linestyles='solid', cmap=cmap,
+            colors='w',linewidths=0.4,
             extent= extent,  aspect="auto")
             axarr[i,j].set_xlabel(r"$y(\theta)$")
             axarr[i,0].set_ylabel(r"$\tau(ms)$")
