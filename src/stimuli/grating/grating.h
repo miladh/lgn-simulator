@@ -13,7 +13,8 @@ class Grating : public Stimulus
 {
 public:
     Grating(const Integrator &integrator,
-            vec2 kd, double wd, double contrast, double maskSize = 0.0);
+            double spatialFreq, double orientation, double temporalFreq,
+            double contrast, double maskSize = 0.0);
     ~Grating();
 
     // Stimulus interface
@@ -22,16 +23,24 @@ public:
     virtual void computeFourierTransform();
 
 
+
+    double spatialFreq() const;
+    double orientation() const;
     double contrast() const;
     double maskSize() const;
-    double w() const;
-    vec2 k() const;
+    double temporalFreq() const;
+    vec2 kVec() const;
     string mask() const;
 
 
 
+
+
+
 protected:
-    vec2 m_k = {0,0};
+    vec2 m_kVec = {0,0};
+    double m_k = 0.0;
+    double m_orientation = 0.0;
     double m_w = 0;
     double m_contrast = 0.0;
     double m_maskSize = 0.0;
@@ -40,6 +49,9 @@ protected:
     virtual double valueAtPoint(vec2 rVec, double t) const  = 0;
     virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) const= 0;
 
+private:
+    void setSpatialFreq(double spatialFreq);
+    void setOrientation(double orientation);
 };
 
 }

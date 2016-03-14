@@ -13,19 +13,21 @@
 using namespace lgnSimulator;
 
 void runIntegratorGratingTest(int ns, int nt, double dt, double ds,
-                              double C, int wdId, int kxId, int kyId)
+                              double C, int wdId, int kxId, int thetaId)
 {
 
 
     Integrator integrator(nt, dt, ns, ds);
     vec k = integrator.spatialFreqVec();
     vec w = integrator.temporalFreqVec();
+    vec orientations = {0., 30., 45., -60., 90., -120., 180., -330.};
 
 
     double wd = w(wdId);
-    vec2 kd = {k(kxId), k(kyId)};
+    double spatialFreq = k(kxId);
+    double orientation = orientations(thetaId);
 
-    FullFieldGrating grating(integrator, kd, wd, C);
+    FullFieldGrating grating(integrator, spatialFreq, orientation, wd, C);
     grating.computeFourierTransform();
     grating.computeSpatiotemporal();
 

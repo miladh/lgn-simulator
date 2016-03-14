@@ -7,14 +7,23 @@ using namespace lgnSimulator;
 
 
 Grating::Grating(const Integrator &integrator,
-                 vec2 kd, double wd, double contrast, double maskSize)
+                 double spatialFreq, double orientation, double temporalFreq,
+                 double contrast, double maskSize)
     : Stimulus(integrator)
-    , m_k(kd)
-    , m_w(wd)
+    , m_k(spatialFreq)
+    , m_orientation(orientation*core::pi/180.)
+    , m_w(temporalFreq)
     , m_contrast(contrast)
     , m_maskSize(maskSize * (m_spatialVec.max()-m_spatialVec.min()))
 {
     m_type = "grating";
+    m_kVec = {Special::nearestValue(m_spatialFreqs, m_k*cos(m_orientation)),
+             Special::nearestValue(m_spatialFreqs,  m_k*sin(m_orientation))};
+
+    setSpatialFreq(sqrt(dot(m_kVec, m_kVec)));
+    setOrientation(atan2(m_kVec(0), m_kVec(1)));
+
+
 }
 
 Grating::~Grating()
@@ -50,24 +59,44 @@ void Grating::computeFourierTransform()
         }
     }
 
-    //    cx_cube tmp =0*m_fourierTransform;
-    //    tmp.set_real(m_spatiotemporal);
-    //    m_fourierTransform = m_integrator.forwardFFT(tmp);
 }
 
-double Grating::w() const
+
+void Grating::setSpatialFreq(double spatialFreq)
+{
+    m_k = spatialFreq;
+}
+
+void Grating::setOrientation(double orientation)
+{
+    m_orientation = orientation;
+}
+
+
+
+double Grating::temporalFreq() const
 {
     return m_w;
 }
 
-vec2 Grating::k() const
+vec2 Grating::kVec() const
 {
-    return m_k;
+    return m_kVec;
 }
 
 string Grating::mask() const
 {
     return m_mask;
+}
+
+double Grating::spatialFreq() const
+{
+    return m_k;
+}
+
+double Grating::orientation() const
+{
+    return m_orientation;
 }
 
 double Grating::contrast() const
@@ -86,31 +115,22 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
 {
     string mask = cfg["mask"].as<string>();
     double maskSize = cfg["maskSize"].as<double>();
+    double orientation = cfg["orientation"].as<double>();
     double contrast = cfg["C"].as<double>();
-    int kxId = cfg["kxId"].as<int>();
-    int kyId = cfg["kyId"].as<int>();
+    int kId = cfg["kId"].as<int>();
     int wId = cfg["wId"].as<int>();
 
     vec k = integrator.spatialFreqVec();
     vec w = integrator.temporalFreqVec();
 
 
-    if((kxId  < -int(k.n_elem)/2) || (kxId  > int(k.n_elem)/2-1)){
-        cerr << "Too high or low index, kxId: " << kxId << endl
-             << "kxId range: [" << -int(k.n_elem)/2 << "," << k.n_elem/2-1 <<"]" <<endl;
+    if((kId  < -int(k.n_elem)/2) || (kId  > int(k.n_elem)/2-1)){
+        cerr << "Too high or low index, kxId: " << kId << endl
+             << "kId range: [" << -int(k.n_elem)/2 << "," << k.n_elem/2-1 <<"]" <<endl;
         return 0;
 
-    }if(kxId  < 0){
-        kxId+= k.n_elem;
-    }
-
-    if((kyId  < -int(k.n_elem)/2) || (kyId  > int(k.n_elem)/2-1)){
-        cerr << "Too high or low index, kyId: " << kyId << endl
-             << "kyId range: [" << -int(k.n_elem)/2 << "," << k.n_elem/2-1 <<"]" <<endl;
-        return 0;
-
-    }if(kyId  < 0){
-        kyId+= k.n_elem;
+    }if(kId  < 0){
+        kId+= k.n_elem;
     }
 
     if((wId  < -int(w.n_elem)/2) || (wId  > int(w.n_elem)/2-1)){
@@ -122,22 +142,23 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
         wId+= w.n_elem;
     }
 
-    double wd = -w(wId); // -1 factor due to form of w vector
-    double kx = k(kxId);
-    double ky = k(kyId);
+    double temporalFreq = -w(wId); // -1 factor due to form of w vector
+    double spatialFreq = k(kId);
 
     cout << "Stimulus: Grating with " << mask << " mask" << endl
-         << "kx=" << kx << ", ky=" << ky << ", w=" << wd << endl;
+         << "k=" << spatialFreq << ", w=" << temporalFreq << endl;
 
 
 
     if(mask == "none"){
         return unique_ptr<FullFieldGrating>(
-                    new FullFieldGrating(integrator, {kx, ky}, wd, contrast));
+                    new FullFieldGrating(integrator, spatialFreq, orientation,
+                                         temporalFreq, contrast));
 
     }else if(mask == "circle"){
         return unique_ptr<CircleMaskGrating>(
-                    new CircleMaskGrating(integrator, {kx, ky}, wd, contrast, maskSize));
+                    new CircleMaskGrating(integrator, spatialFreq, orientation,
+                                          temporalFreq, contrast, maskSize));
 
     }else{
         cout << "mask: " << mask << endl;

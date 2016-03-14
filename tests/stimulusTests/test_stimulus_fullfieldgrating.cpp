@@ -1,7 +1,7 @@
 /**********************************************************************
  *  Test: Full-field grating
  *
- *  Analytic source: by hand
+ *  Analytic source: closed-form experssion
  *
  * ********************************************************************/
 
@@ -45,7 +45,7 @@ cx_cube driftingGratingFourierTransform(double C, double wd, vec2 kd, vec k, vec
 }
 
 void runStimulusFullFieldGratingTest(int ns, int nt, double dt, double ds,
-                                     double C, int wdId, int kxId, int kyId){
+                                     double C, int wdId, int kxId, int thetaId){
 
 
     Integrator integrator(nt, dt, ns, ds);
@@ -53,17 +53,19 @@ void runStimulusFullFieldGratingTest(int ns, int nt, double dt, double ds,
     vec k = integrator.spatialFreqVec();
     vec t = integrator.timeVec();
     vec w = integrator.temporalFreqVec();
+    vec orientations = {0., 30., 45., -60., 90., -120., 180., -330.};
 
     double wd = w(wdId);
-    vec2 kd = {k(kxId), k(kyId)};
-
-    cube Sdg = driftingGrating(C, wd, kd, r, t);
-    cx_cube Sdg_ft = driftingGratingFourierTransform(C, wd ,kd, k, w);
+    double spatialFreq = k(kxId);
+    double orientation = orientations(thetaId);
 
 
-    FullFieldGrating grating(integrator,kd, wd, C);
+    FullFieldGrating grating(integrator, spatialFreq, orientation, wd, C);
     grating.computeFourierTransform();
     grating.computeSpatiotemporal();
+
+    cube Sdg = driftingGrating(C, wd, grating.kVec(), r, t);
+    cx_cube Sdg_ft = driftingGratingFourierTransform(C, wd ,grating.kVec(), k, w);
 
     cube diff_spatioTemporal = abs(grating.spatioTemporal() - Sdg);
     cx_cube diff_fourierTransform = grating.fourierTransform() - Sdg_ft;

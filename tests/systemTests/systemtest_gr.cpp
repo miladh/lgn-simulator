@@ -37,11 +37,13 @@ SUITE(system){
         //Stimulus
         double C = -2.3;
         double wd = w(2);
-        double kx = k(1);
-        double ky = k(4);
-        FullFieldGrating S(integrator, {kx, ky}, wd, C);
+        double spatialFreq = k(1);
+        double orientation = 112.;
+        FullFieldGrating S(integrator, spatialFreq, orientation, wd, C);
         S.computeFourierTransform();
 
+        double kx = S.kVec()(0);
+        double ky = S.kVec()(1);
 
         //Kernels
         vector<SpatialKernel*> spatialKernels = KernelSettings::spatialKernelVector();

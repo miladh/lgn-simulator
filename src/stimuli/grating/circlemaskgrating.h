@@ -8,7 +8,7 @@ class CircleMaskGrating : public Grating
 {
 public:
     CircleMaskGrating(const Integrator &integrator,
-                 vec2 kd, double wd, double contrast, double maskSize);
+                 double spatialFreq, double orientation, double temporalFreq, double contrast, double maskSize);
     ~CircleMaskGrating();
 
         // Grating interface

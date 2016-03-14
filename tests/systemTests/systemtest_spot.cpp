@@ -50,7 +50,7 @@ SUITE(system1){
         Integrator integrator(nt, dt, ns, ds);
 
         //Stimulus
-        CircleMaskGrating S(integrator, {0, 0}, 0, C, maskSize);
+        CircleMaskGrating S(integrator, 0.0, 0.0, 0, C, maskSize);
         S.computeFourierTransform();
 
         //Kernels

@@ -152,8 +152,8 @@ void OutputManager::writeStimulus(const Stimulus* stimulus)
         double C = gratingStimulus->contrast();
         double maskSize = gratingStimulus->maskSize();
         string mask = gratingStimulus->mask();
-        vec2 k = gratingStimulus->k();
-        double w = gratingStimulus->w();
+        vec2 k = gratingStimulus->kVec();
+        double w = gratingStimulus->temporalFreq();
 
 
         Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
