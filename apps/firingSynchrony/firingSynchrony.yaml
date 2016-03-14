@@ -11,9 +11,9 @@ ds: &ds_id 0.05
 C: 1.0
 mask: "none" # none/circle
 maskSize: 0.5
-kxId:  0        #[-Ns/2, Ns/2 - 1]
-kyId:  10       #[-Ns/2, Ns/2 - 1]
-wId:   6        #[-Nt/2, Nt/2 - 1]
+orientation:  45.  #degrees
+kId:  10           #[-Ns/2, Ns/2 - 1]
+wId:   6           #[-Nt/2, Nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#

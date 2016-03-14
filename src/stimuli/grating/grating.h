@@ -25,7 +25,7 @@ public:
 
 
     double spatialFreq() const;
-    double orientation() const;
+    double orientation(bool inDegrees=false) const;
     double contrast() const;
     double maskSize() const;
     double temporalFreq() const;

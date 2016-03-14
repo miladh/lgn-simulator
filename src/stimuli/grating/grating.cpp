@@ -21,8 +21,7 @@ Grating::Grating(const Integrator &integrator,
              Special::nearestValue(m_spatialFreqs,  m_k*sin(m_orientation))};
 
     setSpatialFreq(sqrt(dot(m_kVec, m_kVec)));
-    setOrientation(atan2(m_kVec(0), m_kVec(1)));
-
+    setOrientation(atan2(m_kVec(1), m_kVec(0)));
 
 }
 
@@ -94,8 +93,11 @@ double Grating::spatialFreq() const
     return m_k;
 }
 
-double Grating::orientation() const
+double Grating::orientation(bool inDegrees) const
 {
+    if(inDegrees){
+        return m_orientation * 180. / core::pi;
+    }
     return m_orientation;
 }
 
@@ -145,10 +147,10 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
     double temporalFreq = -w(wId); // -1 factor due to form of w vector
     double spatialFreq = k(kId);
 
+
+
     cout << "Stimulus: Grating with " << mask << " mask" << endl
          << "k=" << spatialFreq << ", w=" << temporalFreq << endl;
-
-
 
     if(mask == "none"){
         return unique_ptr<FullFieldGrating>(
@@ -164,4 +166,5 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
         cout << "mask: " << mask << endl;
         throw overflow_error("Unknown grating mask");
     }
+
 }
