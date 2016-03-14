@@ -8,10 +8,10 @@ using namespace std;
 using namespace arma;
 
 namespace lgnSimulator {
-class Gaussian : public SpatialKernel
+class SpatialGaussian : public SpatialKernel
 {
 public:
-    Gaussian(double A, double a);
+    SpatialGaussian(double A, double a);
 
     // SpatialKernel interface
     virtual double spatial(vec2 r) const;
@@ -24,6 +24,6 @@ private:
 };
 }
 
-lgnSimulator::Gaussian createSpatialGaussianKernel(const YAML::Node &cfg);
+lgnSimulator::SpatialGaussian createSpatialGaussianKernel(const YAML::Node &cfg);
 
 #endif // GAUSSIAN_H

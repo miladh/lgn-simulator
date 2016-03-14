@@ -80,6 +80,11 @@ cx_cube Integrator::forwardFFT(cx_cube data) const
 
     fftw_execute(plan);
     fftw_destroy_plan(plan);
+
+    ifftData *= m_temporalResolution
+            * m_spatialResolution
+            * m_spatialResolution;
+
     return ifftData;
 
 }

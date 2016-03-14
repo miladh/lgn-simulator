@@ -2,21 +2,18 @@ description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
 ns: 6
-nt: 11
+nt: 9
 dt: &dt_id 0.5
 ds: &ds_id 0.05
 
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0
-mask: "circle" # none/circle
+mask: "none" # none/circle
 maskSize: 0.5
 kxId:  0        #[-Ns/2, Ns/2 - 1]
-kyId:  5        #[-Ns/2, Ns/2 - 1]
+kyId:  10       #[-Ns/2, Ns/2 - 1]
 wId:   6        #[-Nt/2, Nt/2 - 1]
-
-# NaturalSceneVideo:
-#videoFilename: "../../../stimuli/minions.mp4"
 
 
 #----------Ganglion Impulse response--------------#
@@ -30,7 +27,7 @@ ganglionImpRes:
 # Biphasic
     phaseDuration: 42.5
     weight: 0.38
-    delay: 4
+    delay: 10
 
 #------------spatialKernelSettings-----------------#
 spatialKernels:
@@ -40,35 +37,37 @@ spatialKernels:
         ds : *ds_id
         shift: [0.0, 0.]
 
-    Krc:
-    # Gauss
-        A: -1.5
-        a: 0.83
-
     Kcr:
     # SpatialDelta
         weight: 1.0
         ds : *ds_id
         shift: [0., 0.]
 
+    # Gauss
+        A: 1.0
+        a: 0.41
+
+    Krc:
+    # Gauss
+        A: -1.5
+        a: 0.83
 #------------temporalKernelSettings-----------------#
 temporalKernels:
     Krg:
-    # DoE
-        cenLatency: 16
-        surLatency: 32
-        delay: 40
+    # TemporalDelta
+        delay: 38
+        dt: *dt_id
 
     Kcr:
-     #DoE
-        delay: 220.0
+     #TemporalDelta
+        delay: 20.
         dt: *dt_id
 
     Krc:
      #DoE
          cenLatency: 16
-         surLatency: 32
-         delay: 40
+         surLatency: 64
+         delay: 20.
 
 
 #------------backgroundResponse-----------------#

@@ -2,64 +2,91 @@ description: "Default config file"
 
 #------------Integrator settings-----------------#
 ns: 6
-nt: 3
-dt: 0.1
-ds: 0.01
+nt: 7
+dt: &dt_id 0.5
+ds: &ds_id 0.05
 
 #------------Stimulus settings-----------------#
 # Grating:
-C: 1.
-mask: "circle" # none/circle/gauss
-maskSize: 0.8
-kxId:  2        #[-ns/2, ns/2 - 1]
-kyId:  0        #[-ns/2, ns/2 - 1]
-wId:   3        #[-nt/2, nt/2 - 1]
-
-# NaturalScene:
-sceneFilename: "../../../stimuli/lena.png"
+C: 1.0
+mask: "none" # none/circle
+maskSize: 0.5
+kxId:  0        #[-Ns/2, Ns/2 - 1]
+kyId:  1        #[-Ns/2, Ns/2 - 1]
+wId:   3        #[-Nt/2, Nt/2 - 1]
 
 # NaturalSceneVideo:
 videoFilename: "../../../stimuli/minions.mp4"
+#sceneFilename: "../../../stimuli/dog.png"
+
+
+#----------Ganglion Impulse response--------------#
+ganglionImpRes:
+# DOG
+    A: 1.0
+    a: 0.25
+    B: 0.85
+    b: 0.83
+
+## Biphasic
+    #phaseDuration: 42.5
+    #weight: 0.38
+    #delay: 60
+
+# SpatialDelta
+    weight: 1.0
+    ds : *ds_id
+    shift: [0., 0.]
+
+# TemporalDelta
+    delay: 35.
+    dt: *dt_id
 
 
 #------------spatialKernelSettings-----------------#
-# DOG
-A: 1.0
-a: 0.1
-B: 0.5
-b: 0.1
+spatialKernels:
+    Krg:
+    # SpatialDelta
+        weight: 1.0
+        ds : *ds_id
+        shift: [0.0, 0.]
 
-# EllipticGaussian
-weight_elliptic: 2.3
-angle: -45.0
-widthLong: 0.1
-widthNarrow: 0.001
+    Krc:
+    # Gauss
+        A: -1.5
+        a: 0.83
 
+    Kcr:
+    # SpatialDelta
+        weight: 1.0
+        ds : *ds_id
+        shift: [0., 0.]
 
 #------------temporalKernelSettings-----------------#
-# Damped oscillator:
-phaseDuration: 0.425
-weight: 0.5
+temporalKernels:
+    Krg:
+    # DoE
+        cenLatency: 16
+        surLatency: 32
+        delay: 200
 
-# DecayingExponential:
-delay: 1.1         #s
-tau  : 0.42        #s
+    Kcr:
+     #DoE
+        delay: 200.
+        dt: *dt_id
 
-# TemporallyConstant:
-constant: 1.0
+    Krc:
+     #DoE
+         cenLatency: 16
+         surLatency: 32
+         delay: 200.
 
 
-
-#------------Static nonlinearity settings-----------------#
-# Threshold function:
-threshold: 0.0
-weight: 1.0
-
-# Sigmoidal:
-maxValue: 1.
-halfMaxValue: 3.0
-exponent: 2.0
-
+#------------backgroundResponse-----------------#
+backgroundResponse:
+    Rg_0: 0
+    Rr_0: 0
+    Rc_0: 0
 
 #------------File manager settings-----------------#
 outputFile: "/media/milad/scratch/lgn-simulator/simulations/tmp/default.h5"

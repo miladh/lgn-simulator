@@ -24,7 +24,7 @@ void runGaussDeltaConvolutionTest(int nt, double dt, int ns, double ds,
     vec t = integrator.timeVec();
     vec w = integrator.temporalFreqVec();
 
-    Gaussian Ws(A, a);
+    SpatialGaussian Ws(A, a);
     TemporalDelta Wt(t[tau], dt);
 
     SpatialDelta Ks(weight, ds, shift);

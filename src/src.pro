@@ -26,7 +26,6 @@ SOURCES += \
     kernels/separablekernel.cpp \
     kernels/spatialKernels/dog.cpp \
     kernels/spatialKernels/ellipticgaussian.cpp \
-    kernels/spatialKernels/gaussian.cpp \
     kernels/spatialKernels/spatialdelta.cpp \
     kernels/spatialKernels/spatialkernel.cpp \
     kernels/spatialKernels/spatiallyconstant.cpp \
@@ -40,7 +39,8 @@ SOURCES += \
     stimuli/stimulus.cpp \
     kernels/temporalKernels/twosidedexponentialdecay.cpp \
     kernels/temporalKernels/doe.cpp \
-    kernels/temporalKernels/biphasic.cpp
+    kernels/temporalKernels/biphasic.cpp \
+    kernels/spatialKernels/spatialgaussian.cpp
 
 HEADERS += \
     integrator.h \
@@ -70,7 +70,6 @@ HEADERS += \
     kernels/temporalKernels/temporallyconstant.h \
     kernels/spatialKernels/dog.h \
     kernels/spatialKernels/ellipticgaussian.h \
-    kernels/spatialKernels/gaussian.h \
     kernels/spatialKernels/spatialdelta.h \
     kernels/spatialKernels/spatialkernel.h \
     kernels/spatialKernels/spatiallyconstant.h \
@@ -80,7 +79,8 @@ HEADERS += \
     stimuli/stimulus.h \
     kernels/temporalKernels/twosidedexponentialdecay.h \
     kernels/temporalKernels/doe.h \
-    kernels/temporalKernels/biphasic.h
+    kernels/temporalKernels/biphasic.h \
+    kernels/spatialKernels/spatialgaussian.h
 
 OTHER_FILES +=
 

@@ -12,6 +12,27 @@ using namespace lgnSimulator;
 
 SUITE(special){
 
+    TEST(nearestValue) {
+          vec A = {0,1,2,3,4,5};
+          double v_A = 2.3;
+          CHECK_EQUAL(Special::nearestValue(A, v_A), 2);
+
+          vec B = {-2.3, 5.2, 8.2, 1.1, 2.67,-3.2};
+          double v_B = -2.4;
+          CHECK_EQUAL(Special::nearestValue(B, v_B), -2.3);
+
+          vec C = {9.66407446,  7.40204369,  8.47934683,  8.7268378 ,  9.537069  ,
+                   8.94007828,  6.37876932,  7.84503963,  8.70901142};
+          double v_C = 7.5;
+          CHECK_EQUAL(Special::nearestValue(C, v_C), 7.40204369);
+
+
+          vec D = { 4.20844744,  5.44088512, -1.44998235,  1.8764609 , -2.22633141,
+                    0.33623971,  7.23507673};
+          double v_D = 0.0;
+          CHECK_EQUAL(Special::nearestValue(D, v_D), 0.33623971);
+    }
+
 
     TEST(secondKindBesselFunction) {
         CHECK_EQUAL(Special::secondKindBesselFunction(0.0), 0);

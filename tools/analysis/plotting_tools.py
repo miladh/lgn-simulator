@@ -150,6 +150,8 @@ def animateImshowPlots(data,
 
     plt.show()
 
+    return anim
+
 
 
 def imshowPlotsOfImpulseResponses(data,
@@ -158,7 +160,7 @@ def imshowPlotsOfImpulseResponses(data,
                                   idx=0,
                                   idy=0,
                                   figsize=(14,8),
-                                  cmap=cmaps.inferno,
+                                  cmap=cmaps.viridis,
                                   colorbar=True,
                                   save_figure=False,
                                   figure_name="unnamed"):
@@ -415,14 +417,50 @@ if __name__ == "__main__":
                  "spatial_vec" : exp.integrator.spatialVec
                 }
 
-    data = [Wg, Wr, Wc]
-    # data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
-    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=8,y_line3d=True)
-    # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
-    imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
+    # data = [Wg]
     data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
+    # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=2,y_line3d=True)
+    # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
+    # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
+    # data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
+    # plt.imshow(exp.ganglion.response["spatioTemporal"][0,:,:], cmap="gray", origin="lower", interpolation="none")
+    # plt.colorbar()
+
+
+    # data = [S, Wg, Rg]
     animateImshowPlots(data, exp.integrator.temporalResolution,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
 
     plt.show()
+
+
+
+
+
+
+
+        # plt.figure()
+        # plt.imshow(exp.ganglion.response["spatioTemporal"][0,:,:] )
+        # plt.colorbar()
+
+        # delta = 20
+        # points = Nt-delta
+        #
+        # plt.figure()
+        # plt.imshow(exp.ganglion.response["spatioTemporal"][0,:,:] - exp.stimulus.spatioTemporal[Nt-delta])
+        # plt.colorbar()
+        # plt.figure()
+        #
+        #
+        # #
+        # res = exp.singleCellTemporalResponse("ganglion", Ns/2, Ns/2)[:]
+        # stim= exp.stimulus.spatioTemporal[:, Ns/2, Ns/2][::-1][:Nt-delta]
+        # stim_real= exp.stimulus.spatioTemporal[:, Ns/2, Ns/2]
+        #
+        # plt.plot(exp.integrator.timeVec[:], res, '--r', label="res")
+        # plt.plot(exp.integrator.timeVec[:Nt-delta], stim, '--b', label="stim")
+        # plt.plot(exp.integrator.timeVec, stim_real, '--g', label="stim_real")
+        # plt.xlim([0,1200])
+        # plt.legend(loc="center right")
+        # print abs(stim[:points]-res[:points]).max()

@@ -8,75 +8,81 @@
 using namespace std;
 using namespace lgnSimulator;
 
-int main()
+int main(int argc, char* argv[])
 {
 
-    cout << "=====LGN Simulator Model=====" << endl;
+    cout << "=====LGN Simulator Model: default=====" << endl;
     clock_t t;
     t = clock();
 
 
-    //read config file-------------------------------------------------------
-    YAML::Node cfg = YAML::LoadFile("../../../lgn-simulator/apps/default/defaultConfig.yaml");
+    if(argc < 2) {
+        cerr << "Too few arguments." << endl;
+        return 1;
+    }
 
-    //Output manager:----------------------------------------------------------
+    //read config file-------------------------------------------------------
+    YAML::Node cfg = YAML::LoadFile(argv[1]);
+    const YAML::Node& ganglionImpRes = cfg["ganglionImpRes"];
+    const YAML::Node& Ks_rgSettings = cfg["spatialKernels"]["Krg"];
+    const YAML::Node& Ks_rcSettings = cfg["spatialKernels"]["Krc"];
+    const YAML::Node& Ks_crSettings = cfg["spatialKernels"]["Kcr"];
+
+    const YAML::Node& Kt_rgSettings = cfg["temporalKernels"]["Krg"];
+    const YAML::Node& Kt_rcSettings = cfg["temporalKernels"]["Krc"];
+    const YAML::Node& Kt_crSettings = cfg["temporalKernels"]["Kcr"];
+
+
     string outputFilename = cfg["outputFile"].as<std::string>();
+    double Rg_0 = cfg["backgroundResponse"]["Rg_0"].as<double>();
+    double Rr_0 = cfg["backgroundResponse"]["Rr_0"].as<double>();
+    double Rc_0 = cfg["backgroundResponse"]["Rc_0"].as<double>();
+
+    //Output manager:---------------------------------------------------------
     OutputManager io(outputFilename);
 
-    //Integrator-------------------------------------------------------------
+    //Integrator--------------------------------------------------------------
     Integrator integrator = createIntegrator(cfg);
 
 //    Stim---------------------------------------------------------------------
-//        unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(&integrator,&cfg);
-//        unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator,&cfg);
-        unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
+//    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
+//    unique_ptr<StaticImage> S = createStaticImageStimulus(integrator,cfg);
+    unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(integrator,cfg);
 
 
+    //Ganglion cell:-----------------------------------------------------------
+//    DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
+//    Biphasic Wg_t = createTemporalBiphasicKernel(ganglionImpRes);
 
-    //Spatial kernels:----------------------------------------------------------
-    DOG dog = createSpatialDOGKernel(cfg);
-//    DOG gauss(0.3, 0.05, 0, 1.);
-//    EllipticGaussian ellipticGauss = createEllipticGaussianSpatialKernel(&cfg);
+    SpatialDelta Wg_s = createSpatialDeltaKernel(ganglionImpRes);
+    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
+
+    SeparableKernel Wg(&Wg_s, &Wg_t);
+    GanglionCell ganglion(integrator, Wg, Rg_0);
+
+    //Relay cell: -------------------------------------------------------------
+    RelayCell relay(integrator, Rr_0);
+    CorticalCell cortical(integrator, Rc_0);
+
+    //Kernels:---------------------------------------------------------
+    SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
+    DOE Kt_rg = createTemporalDOEKernel(Kt_rgSettings);
+    SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
 
-    //Temporal kernels:-------------------------------------------------------
-//    DecayingExponential Kt_rg(0.21,0);
-//    DecayingExponential Kt_rig(0.30,0);
-//    DecayingExponential Kt_rc(0.42,0.10);
-//    DampedOscillator damped = createDampedOscillatorTemporalKernel(&cfg);
-//        TemporallyConstant tempConst = createTemporallyConstantTemporalKernel(&cfg);
-    TemporalDelta Kt_cr(0.4, cfg["dt"].as<double>());
+    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
+    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
+    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
 
-    //Static nonlinearity-------------------------------------------------------------
-//    ThresholdNonlinearity staticNonlinearity  = createThresholdNonlinearity(&cfg);
-//    SigmoidalNonlinearity staticNonlinearity  = createSigmoidalNonlinearity(&cfg);
-//    HeavisideNonlinearity staticNonlinearity;
+    SpatialGaussian Ks_rc = createSpatialGaussianKernel(Ks_rcSettings);
+    DOE Kt_rc = createTemporalDOEKernel(Kt_rcSettings);
+    SeparableKernel Krc(&Ks_rc, &Kt_rc);
 
 
-    //Kernels:-------------------------------------------------------
-    SeparableKernel Kt(&dog, &Kt_cr);
-
-    //Neurons:-----------------------------------------------------------------
-    GanglionCell ganglion(integrator, Kt/*, &staticNonlinearity*/);
-    RelayCell relay(integrator);
-//    CorticalCell cortical(&integrator);
-//    Interneuron interneuron(&integrator);
-
-    vector<Neuron *> neurons;
-    neurons.push_back(&ganglion);
-    neurons.push_back(&relay);
-//    neurons.push_back(&cortical);
-//    neurons.push_back(&interneuron);
-
-    //connect neurons----------------------------------------------------------
-    relay.addGanglionCell(&ganglion, Kt);
-//    relay.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
-//    relay.addInterNeuron(&interneuron,&gauss, &damped);
-
-//    interneuron.addGanglionCell(&ganglion, &gauss, &Kt_rig);
-//    interneuron.addCorticalNeuron(&cortical, &ellipticGauss, &Kt_rc);
-
-//    cortical.addRelayCell(&relay, &gauss, &Kt_cr);
+    //Connect neurons:---------------------------------------------------------
+//    relay.addGanglionCell(&ganglion, Krg);
+//    relay.addCorticalNeuron(&cortical, Krc);
+//    cortical.addRelayCell(&relay, Kcr);
 
 
 
@@ -85,6 +91,11 @@ int main()
     S->computeFourierTransform();
     io.writeStimulus(S.get());
     S->clearSpatioTemporal();
+
+    vector<Neuron *> neurons;
+    neurons.push_back(&ganglion);
+//    neurons.push_back(&relay);
+//    neurons.push_back(&cortical);
 
     io.writeIntegratorProperties(integrator);
     for(Neuron* neuron : neurons){
@@ -99,9 +110,13 @@ int main()
 
     }
 
-
     t = clock() - t;
-    printf ("%f seconds.\n",((float)t)/CLOCKS_PER_SEC);
+    double elapsedTime = ((float)t)/CLOCKS_PER_SEC;
+    if(elapsedTime <= 60){
+        printf ("%f seconds.\n", elapsedTime);
+    }else{
+        printf ("%f minutes.\n", elapsedTime/60);
+    }
 
     return 0;
 }

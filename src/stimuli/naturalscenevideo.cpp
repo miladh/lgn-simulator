@@ -65,9 +65,11 @@ void NaturalSceneVideo::readScene()
         frame.convertTo(frame, CV_64F);
         mat scene(reinterpret_cast<double*>(frame.data), frame.rows, frame.cols);
         m_scene.slice(i).set_real(scene);
-
+        m_scene.slice(i) = fliplr(m_scene.slice(i));
         i+=1;
     }
+
+
 }
 
 

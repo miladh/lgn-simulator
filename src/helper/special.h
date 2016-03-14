@@ -19,6 +19,7 @@ public:
     static int isOdd(int num);
     static double delta(double x, double y);
     static double delta(vec2 x, vec2 y);
+    static double nearestValue(const vec x, const double value);
 
 };
 }

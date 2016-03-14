@@ -6,8 +6,8 @@ using namespace lgnSimulator;
 
 DOG::DOG(double A, double a, double B, double b)
 {
-    m_centre = new Gaussian(A,a);
-    m_surround = new Gaussian(B,b);
+    m_centre = new SpatialGaussian(A,a);
+    m_surround = new SpatialGaussian(B,b);
 }
 
 DOG::~DOG()

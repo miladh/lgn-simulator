@@ -309,7 +309,7 @@ SUITE(kernel){
 
     //Gauss----------------------------------------------------------
     TEST(gaussKernel_test_0) {
-        Gaussian G(1.0, 0.25);
+        SpatialGaussian G(1.0, 0.25);
         CHECK_CLOSE(G.spatial({0.5, 0.1}), 0.079488639761866486, 1e-12);
         CHECK_CLOSE(G.spatial({1.2, 1.9}), 0, 1e-12);
 
@@ -320,7 +320,7 @@ SUITE(kernel){
         CHECK_EQUAL(imag(G.fourierTransform({1.5, 0.1})), 0.0);
     }
     TEST(gaussKernel_test_1) {
-        Gaussian G(-0.75, 0.25);
+        SpatialGaussian G(-0.75, 0.25);
         CHECK_CLOSE(G.spatial({0.5, 0.1}), -0.059616479821399865, 1e-12);
         CHECK_CLOSE(G.spatial({1.2, 1.9}), 0, 1e-12);
 

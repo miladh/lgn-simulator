@@ -15,6 +15,7 @@ CircleMaskGrating::~CircleMaskGrating()
 
 }
 
+
 double CircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
 {
     double r = sqrt(dot(rVec, rVec));

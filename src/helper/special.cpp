@@ -51,4 +51,18 @@ int Special::isOdd(int num)
 }
 
 
+double Special::nearestValue(const vec x, const double value) {
+
+    double nearestValue;
+    double difference = INFINITY;
+
+    for(double xi: x){
+        double dx = fabs(xi - value);
+        if(fabs(xi - value) < difference){
+            difference = dx;
+            nearestValue = xi;
+        }
+    }
+       return nearestValue;
+}
 

@@ -16,7 +16,7 @@
 #include "../src/kernels/separablekernel.h"
 
 #include "../src/kernels/spatialKernels/dog.h"
-#include "../src/kernels/spatialKernels/gaussian.h"
+#include "../src/kernels/spatialKernels/spatialgaussian.h"
 #include "../src/kernels/spatialKernels/spatialdelta.h"
 #include "../src/kernels/spatialKernels/spatiallyconstant.h"
 #include "../src/kernels/spatialKernels/ellipticgaussian.h"

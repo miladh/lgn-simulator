@@ -21,12 +21,8 @@ f = h5py.File(outputFile, "r")
 exp = sim.Simulation(f)
 
 # Analysis: --------------------------------------------------------------------
-N = float(exp.integrator.nPointsSpatial)
-idx = exp.integrator.nPointsSpatial/2
-idy = idx
 
-#
-# # Raster plots------------------------------------------------------------------
+# Raster plots------------------------------------------------------------------
 # num_trails = 40
 # spike_train_fb = exp.spikeTrain("relay", idx, idy, num_trails = num_trails)
 # spike_train_no_fb = exp.spikeTrain("ganglion", idx, idy, num_trails = num_trails)
@@ -37,9 +33,9 @@ idy = idx
 # plt.raster(spike_train_no_fb, ax = f.add_subplot(3, 1, 2), title="Without feedback")
 # plt.raster(spike_train_cor, ax = f.add_subplot(3, 1, 3), title="Cortical")
 # mplt.tight_layout()
-#
-#
-# # Response plots------------------------------------------------------------------
+
+
+# Response plots------------------------------------------------------------------
 # ds = 10
 # res_r1 = exp.singleCellTemporalResponse("relay", idx, idy)
 # res_r2 = exp.singleCellTemporalResponse("relay", idx+ds, idy+ds)
@@ -64,8 +60,8 @@ idy = idx
 # ax[2].plot(res_c2, label= str(idx/N+ds/N) +"," +str(idy/N+ds/N))
 # ax[2].legend()
 # mplt.tight_layout()
-#
-# # Phase plots------------------------------------------------------------------
+
+# Phase plots------------------------------------------------------------------
 # vector_sum_fb = zeros(num_trails)
 # vector_sum_no_fb = zeros(num_trails)
 # dt = exp.integrator.temporalResolution
@@ -78,13 +74,13 @@ idy = idx
 # hist(vector_sum_fb, num_bins, histtype="step", lw=2, color="black", label="With feedback")
 # hist(vector_sum_no_fb, num_bins, histtype="step", lw=2, color="red", label="Without feedback")
 # mplt.legend()
-#
-# # impulse response temporal plots-----------------------------------------------
+
+# impulse response temporal plots-----------------------------------------------
 # mplt.figure()
 # impresC = exp.temporalImpulseResponse("cortical", idx, idy)
 # impresR = exp.temporalImpulseResponse("relay", idx, idy)
 # mplt.plot(exp.integrator.timeVec, impresR, '-or', label="Relay")
 # mplt.plot( exp.integrator.timeVec, impresC, '-ob', label="cortical")
 # mplt.legend()
-#
-# mplt.show()
+
+mplt.show()

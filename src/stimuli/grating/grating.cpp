@@ -49,6 +49,10 @@ void Grating::computeFourierTransform()
             }
         }
     }
+
+    //    cx_cube tmp =0*m_fourierTransform;
+    //    tmp.set_real(m_spatiotemporal);
+    //    m_fourierTransform = m_integrator.forwardFFT(tmp);
 }
 
 double Grating::w() const

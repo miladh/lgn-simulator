@@ -63,5 +63,6 @@ void NaturalScene::readScene()
     cvMat.convertTo(cvMat, CV_64F);
     mat scene(reinterpret_cast<double*>(cvMat.data), cvMat.rows, cvMat.cols);
     m_scene.set_real(scene);
+    m_scene = normalise(fliplr(m_scene));
 }
 

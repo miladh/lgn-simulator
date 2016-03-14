@@ -42,10 +42,8 @@ int main(int argc, char* argv[]){
     //Integrator--------------------------------------------------------------
     Integrator integrator = createIntegrator(cfg);
 
-//    Stim---------------------------------------------------------------------
+    //Stim---------------------------------------------------------------------
     unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
-//    unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(integrator,cfg);
-
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
@@ -60,15 +58,16 @@ int main(int argc, char* argv[]){
 
     //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
-    DOE Kt_rg = createTemporalDOEKernel(Kt_rgSettings);
+    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
     SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
 
-    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
+//    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
+    SpatialGaussian Ks_cr = createSpatialGaussianKernel(Ks_crSettings);
     TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
     SeparableKernel Kcr(&Ks_cr, &Kt_cr);
 
-    SpatialDelta Ks_rc = createSpatialDeltaKernel(Ks_rcSettings);
+    SpatialGaussian Ks_rc = createSpatialGaussianKernel(Ks_rcSettings);
     DOE Kt_rc = createTemporalDOEKernel(Kt_rcSettings);
     SeparableKernel Krc(&Ks_rc, &Kt_rc);
 

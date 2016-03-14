@@ -2,7 +2,7 @@
 #define DOG_H
 
 #include "spatialkernel.h"
-#include "gaussian.h"
+#include "spatialgaussian.h"
 
 using namespace std;
 using namespace arma;
@@ -20,8 +20,8 @@ public:
 
 
 private:
-    Gaussian *m_centre;
-    Gaussian *m_surround;
+    SpatialGaussian *m_centre;
+    SpatialGaussian *m_surround;
 
 
 };
