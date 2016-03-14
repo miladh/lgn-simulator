@@ -14,6 +14,7 @@
 #include "../src/neurons/corticalcell.h"
 
 #include "../src/kernels/separablekernel.h"
+#include "../src/kernels/nonseparabledog.h"
 
 #include "../src/kernels/spatialKernels/dog.h"
 #include "../src/kernels/spatialKernels/spatialgaussian.h"

@@ -22,13 +22,11 @@ int main(int argc, char* argv[]){
     //read config file-------------------------------------------------------
     YAML::Node cfg = YAML::LoadFile(argv[1]);
     const YAML::Node& ganglionImpRes = cfg["ganglionImpRes"];
-    const YAML::Node& Ks_rgSettings = cfg["spatialKernels"]["Krg"];
-    const YAML::Node& Ks_rcSettings = cfg["spatialKernels"]["Krc"];
-    const YAML::Node& Ks_crSettings = cfg["spatialKernels"]["Kcr"];
-
-    const YAML::Node& Kt_rgSettings = cfg["temporalKernels"]["Krg"];
-    const YAML::Node& Kt_rcSettings = cfg["temporalKernels"]["Krc"];
-    const YAML::Node& Kt_crSettings = cfg["temporalKernels"]["Kcr"];
+    const YAML::Node& Ks_rgSettings = cfg["kernels"]["Krg"]["spatial"];
+    const YAML::Node& Kt_rgSettings = cfg["kernels"]["Krg"]["temporal"];
+    const YAML::Node& Ks_rcSettings = cfg["kernels"]["Krc"]["spatial"];
+    const YAML::Node& Kt_rcSettings = cfg["kernels"]["Krc"]["temporal"];
+    const YAML::Node& K_crSettings = cfg["kernels"]["Kcr"];
 
 
     string outputFilename = cfg["outputFile"].as<std::string>();
@@ -61,23 +59,16 @@ int main(int argc, char* argv[]){
     TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
     SeparableKernel Krg(&Ks_rg, &Kt_rg);
 
-
-//    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
-    SpatialGaussian Ks_cr = createSpatialGaussianKernel(Ks_crSettings);
-    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
-    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
-
     SpatialGaussian Ks_rc = createSpatialGaussianKernel(Ks_rcSettings);
     DOE Kt_rc = createTemporalDOEKernel(Kt_rcSettings);
     SeparableKernel Krc(&Ks_rc, &Kt_rc);
 
+    NonseparableDOG Kcr = createNonseparableDOGKernel(K_crSettings);
 
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, Krg);
     relay.addCorticalNeuron(&cortical, Krc);
     cortical.addRelayCell(&relay, Kcr);
-
-
 
     //Compute:-----------------------------------------------------------------
     S->computeSpatiotemporal();

@@ -40,7 +40,8 @@ SOURCES += \
     kernels/temporalKernels/twosidedexponentialdecay.cpp \
     kernels/temporalKernels/doe.cpp \
     kernels/temporalKernels/biphasic.cpp \
-    kernels/spatialKernels/spatialgaussian.cpp
+    kernels/spatialKernels/spatialgaussian.cpp \
+    kernels/nonseparabledog.cpp
 
 HEADERS += \
     integrator.h \
@@ -80,7 +81,8 @@ HEADERS += \
     kernels/temporalKernels/twosidedexponentialdecay.h \
     kernels/temporalKernels/doe.h \
     kernels/temporalKernels/biphasic.h \
-    kernels/spatialKernels/spatialgaussian.h
+    kernels/spatialKernels/spatialgaussian.h \
+    kernels/nonseparabledog.h
 
 OTHER_FILES +=
 

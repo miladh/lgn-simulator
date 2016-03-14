@@ -18,7 +18,7 @@ Grating::Grating(const Integrator &integrator,
 {
     m_type = "grating";
     m_kVec = {Special::nearestValue(m_spatialFreqs, m_k*cos(m_orientation)),
-             Special::nearestValue(m_spatialFreqs,  m_k*sin(m_orientation))};
+              Special::nearestValue(m_spatialFreqs,  m_k*sin(m_orientation))};
 
     setSpatialFreq(sqrt(dot(m_kVec, m_kVec)));
     setOrientation(atan2(m_kVec(1), m_kVec(0)));
