@@ -150,7 +150,7 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
 
 
     cout << "Stimulus: Grating with " << mask << " mask" << endl
-         << "k=" << spatialFreq << ", w=" << temporalFreq << endl;
+         << "w=" << temporalFreq << endl;
 
     if(mask == "none"){
         return unique_ptr<FullFieldGrating>(
