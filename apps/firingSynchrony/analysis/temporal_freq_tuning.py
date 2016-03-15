@@ -47,8 +47,8 @@ for cell in data:
 
 
 # Plot:
-mplt.plot(data["ganglion"]["K"], data["ganglion"]["responses"], "o--r", label = "ganglion")
-mplt.plot(data["relay"]["K"], data["relay"]["responses"], ",-b", label = "relay")
+mplt.plot(data["ganglion"]["w"], data["ganglion"]["responses"], "o--r", label = "ganglion")
+mplt.plot(data["relay"]["w"], data["relay"]["responses"], ",-b", label = "relay")
 # mplt.plot(data["cortical"]["K"], data["cortical"]["responses"], "g--", label = "cortical")
 
 # mplt.xlim(0., 1.)
