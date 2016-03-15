@@ -42,8 +42,9 @@ for cell in data:
         idx = exp.integrator.nPointsSpatial * cell_pos_x
         idy = exp.integrator.nPointsSpatial * cell_pos_y
         data[cell]["w"][j] = exp.stimulus.temporalFreq
-        data[cell]["responses"][j] = np.mean(
-        exp.singleCellTemporalResponse(cell, idx, idy))
+        # data[cell]["responses"][j] = np.mean(
+        # exp.singleCellTemporalResponse(cell, idx, idy))
+        data[cell]["responses"][j] = exp.singleCellTemporalResponse(cell, idx, idy)[0]
 
 
 # Plot:
