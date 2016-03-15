@@ -88,7 +88,7 @@ complex<double> RelayCell::ganglionInput(int kxi, int kyi, int wi) const
     vec2 kVec= {m_spatialFreqs[kxi], m_spatialFreqs[kyi]};
     double w = m_temporalFreqs[wi];
 
-    complex<double> ganglionFF = 0;
+    complex<double> ganglionFF = complex<double>(0, 0);;
 
     //Feedforward ganglion input
     for (const Input g : m_ganglionCells){
@@ -107,8 +107,8 @@ cx_vec RelayCell::interneuronInput(int kxi, int kyi, int wi) const
     vec2 kVec= {m_spatialFreqs[kxi], m_spatialFreqs[kyi]};
     double w = m_temporalFreqs[wi];
 
-    complex<double> interneuronFF = 0;
-    complex<double> interneuronFB = 0;
+    complex<double> interneuronFF = complex<double>(0, 0);;
+    complex<double> interneuronFB = complex<double>(0, 0);;
 
 
     //Interneuron input
@@ -153,8 +153,9 @@ complex<double> RelayCell::corticalInput(int kxi, int kyi, int wi)const
 
 
     //Feedback cortical input
-    complex<double> Kcr = 0.0;
-    complex<double> Krc = 0.0;
+    complex<double> Kcr = complex<double>(0, 0);
+    complex<double> Krc = complex<double>(0, 0);
+
     for (const Input c : m_corticalNeurons){
         CorticalCell* const corticalCell  =
                 dynamic_cast<CorticalCell* const>(c.neuron);
@@ -165,6 +166,10 @@ complex<double> RelayCell::corticalInput(int kxi, int kyi, int wi)const
         corticalFB += Krc * Kcr;
     }
 
+//    if(fabs(round(corticalFB.real())) > 0.0){
+//        cout << corticalFB << endl;
+//        cout << fabs(corticalFB.real())<< endl << endl;
+//    }
     return corticalFB;
 
 }

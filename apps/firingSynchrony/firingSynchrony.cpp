@@ -65,6 +65,8 @@ int main(int argc, char* argv[]){
 
     NonseparableDOG Kcr = createNonseparableDOGKernel(K_crSettings);
 
+
+
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, Krg);
     relay.addCorticalNeuron(&cortical, Krc);

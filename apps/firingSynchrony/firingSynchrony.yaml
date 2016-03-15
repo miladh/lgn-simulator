@@ -12,8 +12,8 @@ C: 1.0
 mask: "none" # none/circle
 maskSize: 0.5
 orientation: 0.  #degrees
-kId:  10           #[-Ns/2, Ns/2 - 1]
-wId:   6           #[-Nt/2, Nt/2 - 1]
+kId:  0           #[-Ns/2, Ns/2 - 1]
+wId:  0           #[-Nt/2, Nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
@@ -27,7 +27,7 @@ ganglionImpRes:
 # Biphasic
     phaseDuration: 42.5
     weight: 0.38
-    delay: 10
+    delay: 0
 
 #------------kernelSettings-----------------#
 kernels:
@@ -39,7 +39,7 @@ kernels:
             shift: [0.0, 0.]
         temporal:
         # TemporalDelta
-            delay: 38
+            delay: 0
             dt: *dt_id
 
 
@@ -60,7 +60,7 @@ kernels:
         #nonseparableDOG
             A: 1.0
             a: 0.25
-            B: 5.
+            B: 0.85
             b: 0.83
 
             cenLatencyAlpha: 16.
