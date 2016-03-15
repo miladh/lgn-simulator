@@ -370,6 +370,8 @@ if __name__ == "__main__":
     import Simulation as sim
 
     outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
+    outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/firingSynchrony/20160315-095828/20160315-095828.h5"
+
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(f)
