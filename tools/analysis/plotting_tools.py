@@ -91,7 +91,7 @@ def animateImshowPlots(data,
             imshowPlots[i].set_data(data[i]["value"][j,:,:])
             # imshowPlots[i].autoscale()
         t = j*dt
-        ttl.set_text("Time = " + str('%.2f' % (t,)) + "s")
+        ttl.set_text("Time = " + str('%.2f' % (t,)) + "ms")
         return imshowPlots, ttl
 
 
@@ -371,7 +371,7 @@ if __name__ == "__main__":
     import Simulation as sim
 
     outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
-    # outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/firingSynchrony/20160317-091339/20160317-091339.h5"
+    # outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/firingSynchrony/20160317-135052/20160317-135052.h5"
 
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
@@ -425,7 +425,8 @@ if __name__ == "__main__":
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
     data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
-
+    # plt.figure()
+    # plt.plot(exp.integrator.timeVec, exp.stimulus.spatioTemporal[:, Ns/2,Ns/2])
     animateImshowPlots(data, exp.integrator.temporalResolution,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")

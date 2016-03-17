@@ -3,7 +3,7 @@ description: "Firing synchrony config file"
 #------------Integrator settings-----------------#
 ns: 7
 nt: 7
-dt: &dt_id 0.5
+dt: &dt_id 2.0
 ds: &ds_id 0.05
 
 #------------Stimulus settings-----------------#
@@ -11,9 +11,9 @@ ds: &ds_id 0.05
 C: 1.0
 mask: "circle" # none/circle
 maskSize: 0.5
-orientation: 0.  #degrees
+orientation: 0.   #degrees
 kId:  0           #[-Ns/2, Ns/2 - 1]
-wId:  5           #[-Nt/2, Nt/2 - 1]
+wId:  1           #[-Nt/2, Nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
@@ -47,7 +47,7 @@ kernels:
         spatial:
         #Gauss
             A: -1.5
-            a: 0.23
+            a: 0.83
 
         ##EllipticGaussian
             #weight: -1.5
@@ -58,7 +58,7 @@ kernels:
 
         temporal:
         # TemporalDelta
-            delay: 5.
+            delay: 6.
             dt: *dt_id
 
          ##DoE
@@ -70,13 +70,13 @@ kernels:
     Kcr:
         spatial:
         # SpatialDelta
-            weight: 0.3
+            weight: 1.0
             ds : *ds_id
             shift: [0.0, 0.]
 
         temporal:
         # TemporalDelta
-            delay: 5.
+            delay: 6.
             dt: *dt_id
          ##DoE
              #cenLatency: 16
