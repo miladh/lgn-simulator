@@ -25,6 +25,7 @@ sims, output_dir=get_simulations.get_simulation_environment(sim_ids, record=reco
 # Analysis: --------------------------------------------------------------------
 cell_pos_x = 0.5
 cell_pos_y = cell_pos_x
+normalize = True
 
 data = {"ganglion": {"spot_diameter": np.zeros(len(sims)),
                     "responses": np.zeros(len(sims)) }
@@ -42,7 +43,9 @@ for cell in data:
         res = res[np.where(res  >= 0)]
         data[cell]["responses"][j] = np.mean(res)
 
-
+if normalize:
+    for cell in data:
+        data[cell]["responses"] /= (data[cell]["responses"]).max()
 # Plot:
 mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "o--r", label = "ganglion")
 mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"], ">--b", label = "relay")
