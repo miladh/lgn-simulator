@@ -25,7 +25,6 @@ sims, output_dir=get_simulations.get_simulation_environment(sim_ids, record=reco
 # Analysis: --------------------------------------------------------------------
 cell_pos_x = 0.5
 cell_pos_y = cell_pos_x
-normalize = True
 
 data = {"ganglion": {"spot_diameter": np.zeros(len(sims)),
                     "responses": np.zeros(len(sims)) }
@@ -33,7 +32,6 @@ data = {"ganglion": {"spot_diameter": np.zeros(len(sims)),
                             "responses": np.zeros(len(sims))}
         ,"cortical":   {"spot_diameter": np.zeros(len(sims)),
                                     "responses": np.zeros(len(sims)) }}
-fig = mplt.figure(figsize=(8,6))
 for cell in data:
     for j, exp in enumerate(sims):
         idx = exp.integrator.nPointsSpatial * cell_pos_x
@@ -43,10 +41,9 @@ for cell in data:
         res = res[np.where(res  >= 0)]
         data[cell]["responses"][j] = np.mean(res)
 
-if normalize:
-    for cell in data:
-        data[cell]["responses"] /= (data[cell]["responses"]).max()
+
 # Plot:
+fig = mplt.figure(figsize=(8,6))
 mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "o--r", label = "ganglion")
 mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"], ">--b", label = "relay")
 mplt.plot(data["cortical"]["spot_diameter"], data["cortical"]["responses"], "<--g", label = "cortical")
@@ -58,3 +55,16 @@ mplt.tight_layout()
 mplt.legend(loc=1)
 mplt.show()
 fig.savefig(os.path.join(output_dir, "phaseReversedPushPull.png"))
+
+
+fig = mplt.figure(figsize=(8,6))
+mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"]/ (data["ganglion"]["responses"]).max(), "o--r", label = "ganglion")
+mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"]/(data["relay"]["responses"]).max(), ">--b", label = "relay")
+mplt.plot(data["cortical"]["spot_diameter"], data["cortical"]["responses"]/ (data["cortical"]["responses"]).max(), "<--g", label = "cortical")
+
+mplt.xlabel(r"Spot diameter [deg]", fontsize= 16)
+mplt.ylabel("Normalized response",fontsize= 16)
+mplt.tight_layout()
+mplt.legend(loc=1)
+mplt.show()
+fig.savefig(os.path.join(output_dir, "phaseReversedPushPull_normalized.png"))
