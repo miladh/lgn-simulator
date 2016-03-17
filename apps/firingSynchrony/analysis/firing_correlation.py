@@ -71,7 +71,7 @@ for cell in data:
 
 # Plot:
 extent = [corr["ganglion"]["orientation"][0], corr["ganglion"]["orientation"][-1],
-          t_vec[0], t_vec[-1] ]
+          -t_vec[-1]/2.,t_vec[-1]/2. ]
 
 vmin = (corr["ganglion"]["cross_corr"]).min()
 vmax = (corr["ganglion"]["cross_corr"]).max()

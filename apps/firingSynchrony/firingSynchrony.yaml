@@ -1,7 +1,7 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 8
+ns: 7
 nt: 7
 dt: &dt_id 0.5
 ds: &ds_id 0.05
@@ -9,10 +9,10 @@ ds: &ds_id 0.05
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0
-mask: "none" # none/circle
+mask: "circle" # none/circle
 maskSize: 0.5
-orientation: 90.  #degrees
-kId:  4           #[-Ns/2, Ns/2 - 1]
+orientation: 0.  #degrees
+kId:  0           #[-Ns/2, Ns/2 - 1]
 wId:  5           #[-Nt/2, Nt/2 - 1]
 
 
