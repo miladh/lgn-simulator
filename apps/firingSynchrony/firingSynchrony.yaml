@@ -39,7 +39,7 @@ kernels:
 
         temporal:
         # TemporalDelta
-            delay: 5
+            delay: 0
             dt: *dt_id
 
 
@@ -58,7 +58,7 @@ kernels:
 
         temporal:
         # TemporalDelta
-            delay: 8.
+            delay: 5.
             dt: *dt_id
 
          ##DoE
@@ -76,7 +76,7 @@ kernels:
 
         temporal:
         # TemporalDelta
-            delay: 8.
+            delay: 5.
             dt: *dt_id
          ##DoE
              #cenLatency: 16
