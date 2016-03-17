@@ -45,6 +45,7 @@ void runTest(int ns, int nt, double dt, double ds, double C)
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
+
     //Test
     CHECK_CLOSE(diff_real.max(), 0.0, 1e-9);
     CHECK_CLOSE(diff_imag.max(), 0.0, 1e-9);

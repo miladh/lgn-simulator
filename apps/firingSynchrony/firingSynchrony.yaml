@@ -1,8 +1,8 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 6
-nt: 11
+ns: 7
+nt: 7
 dt: &dt_id 0.5
 ds: &ds_id 0.05
 
@@ -11,9 +11,9 @@ ds: &ds_id 0.05
 C: 1.0
 mask: "none" # none/circle
 maskSize: 0.5
-orientation: 0.  #degrees
+orientation: 90.  #degrees
 kId:  2           #[-Ns/2, Ns/2 - 1]
-wId:  0           #[-Nt/2, Nt/2 - 1]
+wId:  5           #[-Nt/2, Nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
@@ -24,10 +24,9 @@ ganglionImpRes:
     B: 0.85
     b: 0.83
 
-# Biphasic
-    phaseDuration: 42.5
-    weight: 0.38
-    delay: 0
+# TemporalDelta
+    delay: 5
+    dt: *dt_id
 
 #------------kernelSettings-----------------#
 kernels:
@@ -37,37 +36,55 @@ kernels:
             weight: 1.0
             ds : *ds_id
             shift: [0.0, 0.]
+
         temporal:
         # TemporalDelta
-            delay: 0
+            delay: 5
             dt: *dt_id
 
 
     Krc:
         spatial:
-        # Gauss
+        #Gauss
             A: -1.5
-            a: 0.83
+            a: 0.23
+
+        ##EllipticGaussian
+            #weight: -1.5
+            #angle: 90.
+            #widthLong: 1.4
+            #widthNarrow: 0.1
+
 
         temporal:
-         #DoE
-             cenLatency: 16
-             surLatency: 64
-             delay: 20.
+        # TemporalDelta
+            delay: 5.0
+            dt: *dt_id
+
+         ##DoE
+             #cenLatency: 16
+             #surLatency: 64
+             #delay: 5.
 
 
     Kcr:
-        #nonseparableDOG
-            A: 1.0
-            a: 0.25
-            B: 0.85
-            b: 0.83
+        spatial:
+        # SpatialDelta
+            weight: 0.3
+            ds : *ds_id
+            shift: [0.0, 0.]
 
-            cenLatencyAlpha: 16.
-            cenLatencyBeta: 64.
-            surLatencyAlpha: 32.
-            surLatencyBeta: 64.
-            delay: 20.
+        temporal:
+        # TemporalDelta
+            delay: 5
+            dt: *dt_id
+         ##DoE
+             #cenLatency: 16
+             #surLatency: 64
+             #delay: 5.
+
+
+
 
 #------------backgroundResponse-----------------#
 backgroundResponse:

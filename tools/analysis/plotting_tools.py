@@ -16,7 +16,8 @@ def raster(spike_times,
            ax = None,
            figsize = (12,8),
            ylabel = "Cell Id",
-           title = None):
+           title = None,
+           color="k"):
     """
     Raster plot
     """
@@ -39,7 +40,7 @@ def raster(spike_times,
     yticks.append("")
     for i in range(num_cells):
         for t in spike_times[i][:]:
-            ax.vlines(t, i + .9, i + 1.1)
+            ax.vlines(t, i + .9, i + 1.1, color=color)
 
     plt.ylim(0.8, num_cells+0.2)
     plt.xlabel('t [s]', fontsize = 16)
@@ -370,7 +371,7 @@ if __name__ == "__main__":
     import Simulation as sim
 
     outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
-    outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/firingSynchrony/20160315-140916/20160315-140916.h5"
+    # outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/firingSynchrony/20160315-140916/20160315-140916.h5"
 
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
@@ -421,14 +422,16 @@ if __name__ == "__main__":
 
     # data = [Wg]
     data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
+
     # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=2,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    # data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
+    data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
     # plt.imshow(exp.ganglion.response["spatioTemporal"][0,:,:], cmap="gray", origin="lower", interpolation="none")
     # plt.colorbar()
 
-
+    plt.imshow(exp.cortical.impulseResponse["spatioTemporal"][0,::], origin="lower")
+    plt.colorbar()
     # data = [S, Wg, Rg]
     animateImshowPlots(data, exp.integrator.temporalResolution,
     colorbar = True, remove_axes = False,

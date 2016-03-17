@@ -75,8 +75,9 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int kxi,
         throw overflow_error("Divide by zero exception in relay feedback contribution");
     }
 
+
     complex<double> Wr = (ganglionFF + interneuronFF)
-            /(1.0 - interneuronFB - corticalFB);
+            /(complex<double>(1.0, 0.0) - interneuronFB - corticalFB);
 
     return Wr;
 }
@@ -88,7 +89,7 @@ complex<double> RelayCell::ganglionInput(int kxi, int kyi, int wi) const
     vec2 kVec= {m_spatialFreqs[kxi], m_spatialFreqs[kyi]};
     double w = m_temporalFreqs[wi];
 
-    complex<double> ganglionFF = complex<double>(0, 0);;
+    complex<double> ganglionFF = complex<double>(0, 0);
 
     //Feedforward ganglion input
     for (const Input g : m_ganglionCells){
@@ -149,27 +150,22 @@ complex<double> RelayCell::corticalInput(int kxi, int kyi, int wi)const
     vec2 kVec= {m_spatialFreqs[kxi], m_spatialFreqs[kyi]};
     double w = m_temporalFreqs[wi];
 
-    complex<double> corticalFB = 0;
-
+    complex<double> corticalFB = complex<double>(0, 0);
 
     //Feedback cortical input
-    complex<double> Kcr = complex<double>(0, 0);
-    complex<double> Krc = complex<double>(0, 0);
-
     for (const Input c : m_corticalNeurons){
         CorticalCell* const corticalCell  =
                 dynamic_cast<CorticalCell* const>(c.neuron);
 
-        Krc = c.kernel.fourierTransform(kVec,w);
+        complex<double> Krc = c.kernel.fourierTransform(kVec,w);
         const Kernel* kernel =  corticalCell->relayInputKernel();
-        Kcr = kernel->fourierTransform(kVec,w);
+        complex<double> Kcr  = kernel->fourierTransform(kVec,w);
+
         corticalFB += Krc * Kcr;
+
     }
 
-//    if(fabs(round(corticalFB.real())) > 0.0){
-//        cout << corticalFB << endl;
-//        cout << fabs(corticalFB.real())<< endl << endl;
-//    }
+
     return corticalFB;
 
 }

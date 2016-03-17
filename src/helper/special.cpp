@@ -53,7 +53,7 @@ int Special::isOdd(int num)
 
 double Special::nearestValue(const vec x, const double value) {
 
-    double nearestValue;
+    double nearestValue=INFINITY;
     double difference = INFINITY;
 
     for(double xi: x){

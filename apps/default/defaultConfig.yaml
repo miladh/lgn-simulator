@@ -2,7 +2,7 @@ description: "Default config file"
 
 #------------Integrator settings-----------------#
 ns: 6
-nt: 7
+nt: 11
 dt: &dt_id 0.5
 ds: &ds_id 0.05
 
@@ -11,13 +11,9 @@ ds: &ds_id 0.05
 C: 1.0
 mask: "none" # none/circle
 maskSize: 0.5
-kxId:  0        #[-Ns/2, Ns/2 - 1]
-kyId:  1        #[-Ns/2, Ns/2 - 1]
-wId:   3        #[-Nt/2, Nt/2 - 1]
-
-# NaturalSceneVideo:
-videoFilename: "../../../stimuli/minions.mp4"
-#sceneFilename: "../../../stimuli/dog.png"
+orientation: 0.  #degrees
+kId:  2           #[-Ns/2, Ns/2 - 1]
+wId:  0           #[-Nt/2, Nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
@@ -28,59 +24,50 @@ ganglionImpRes:
     B: 0.85
     b: 0.83
 
-## Biphasic
-    #phaseDuration: 42.5
-    #weight: 0.38
-    #delay: 60
+# Biphasic
+    phaseDuration: 42.5
+    weight: 0.38
+    delay: 0
 
-# SpatialDelta
-    weight: 1.0
-    ds : *ds_id
-    shift: [0., 0.]
-
-# TemporalDelta
-    delay: 35.
-    dt: *dt_id
-
-
-#------------spatialKernelSettings-----------------#
-spatialKernels:
+#------------kernelSettings-----------------#
+kernels:
     Krg:
-    # SpatialDelta
-        weight: 1.0
-        ds : *ds_id
-        shift: [0.0, 0.]
+        spatial:
+        # SpatialDelta
+            weight: 1.0
+            ds : *ds_id
+            shift: [0.0, 0.]
+        temporal:
+        # TemporalDelta
+            delay: 0
+            dt: *dt_id
+
 
     Krc:
-    # Gauss
-        A: -1.5
-        a: 0.83
+        spatial:
+        # Gauss
+            A: -1.5
+            a: 0.83
+
+        temporal:
+         #DoE
+             cenLatency: 16
+             surLatency: 64
+             delay: 20.
+
 
     Kcr:
-    # SpatialDelta
-        weight: 1.0
-        ds : *ds_id
-        shift: [0., 0.]
+        #nonseparableDOG
+            A: 1.0
+            a: 0.25
+            B: 0.85
+            b: 0.83
 
-#------------temporalKernelSettings-----------------#
-temporalKernels:
-    Krg:
-    # DoE
-        cenLatency: 16
-        surLatency: 32
-        delay: 200
-
-    Kcr:
-     #DoE
-        delay: 200.
-        dt: *dt_id
-
-    Krc:
-     #DoE
-         cenLatency: 16
-         surLatency: 32
-         delay: 200.
-
+            cenLatencyAlpha: 16.
+            cenLatencyBeta: 64.
+            surLatencyAlpha: 32.
+            surLatencyBeta: 64.
+            delay: 20.
 
 #------------backgroundResponse-----------------#
 backgroundResponse:

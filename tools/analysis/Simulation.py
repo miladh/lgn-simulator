@@ -41,15 +41,15 @@ class Simulation:
             cell_type.normalize()
 
     def singleCellTemporalResponse(self, cellType, idx=0 , idy=0):
-        response = getattr(self, cellType).response["spatioTemporal"][:,idx, idy]
+        response = getattr(self, cellType).response["spatioTemporal"][:,idy, idx]
         return response
 
     def singleCellFreqResponse(self, cellType, idx=0 , idy=0):
-        FreqResponse = getattr(self, cellType).response["fourierTransform"][:,idx, idy]
+        FreqResponse = getattr(self, cellType).response["fourierTransform"][:,idy, idx]
         return FreqResponse
 
     def temporalImpulseResponse(self, cellType, idx=0 , idy=0):
-        impulseResponse = getattr(self, cellType).impulseResponse["spatioTemporal"][:,idx, idy]
+        impulseResponse = getattr(self, cellType).impulseResponse["spatioTemporal"][:,idy, idx]
         return impulseResponse
 
     def spikeTrain(self, cellType, idx=0 , idy=0, num_trails=2):
@@ -64,6 +64,17 @@ class Simulation:
                     spike_times[k].append(i*dt)
             spike_times[k]=np.array(spike_times[k])
         return spike_times
+
+
+    def cross_correlogram(self, spike_times_A, spike_times_B):
+        cross_correlogram = []
+        num_trails = min(len(spike_times_A),len(spike_times_B))
+
+        for k in range(num_trails):
+            for ta in spike_times_A[k]:
+                for tb in spike_times_B[k]:
+                    cross_correlogram.append(ta - tb)
+        return cross_correlogram
 
 if __name__ == "__main__":
     print "---Class for single lgn-simulator experiments---"
