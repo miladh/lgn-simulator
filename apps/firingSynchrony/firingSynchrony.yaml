@@ -1,7 +1,7 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 7
+ns: 8
 nt: 7
 dt: &dt_id 0.5
 ds: &ds_id 0.05
@@ -95,6 +95,8 @@ backgroundResponse:
 
 #------------File manager settings-----------------#
 outputFile: "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
+
+
 
 
 
