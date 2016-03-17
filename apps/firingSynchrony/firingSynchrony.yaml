@@ -25,7 +25,7 @@ ganglionImpRes:
     b: 0.83
 
 # TemporalDelta
-    delay: 5
+    delay: 0
     dt: *dt_id
 
 #------------kernelSettings-----------------#
@@ -58,7 +58,7 @@ kernels:
 
         temporal:
         # TemporalDelta
-            delay: 5.0
+            delay: 8.
             dt: *dt_id
 
          ##DoE
@@ -76,7 +76,7 @@ kernels:
 
         temporal:
         # TemporalDelta
-            delay: 5
+            delay: 8.
             dt: *dt_id
          ##DoE
              #cenLatency: 16
