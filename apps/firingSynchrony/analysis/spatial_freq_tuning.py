@@ -42,14 +42,21 @@ for cell in data:
         idx = exp.integrator.nPointsSpatial * cell_pos_x
         idy = exp.integrator.nPointsSpatial * cell_pos_y
         data[cell]["K"][j] = exp.stimulus.spatialFreq
-        data[cell]["responses"][j] = np.mean(
-        exp.singleCellTemporalResponse(cell, idx, idy))
+        data[cell]["responses"][j] = (exp.singleCellTemporalResponse(cell, idx, idy))[0]
 
+
+relay_K_max = data["relay"]["K"][np.argmax(data["relay"]["responses"])]
+ganglion_K_max = data["ganglion"]["K"][np.argmax(data["ganglion"]["responses"])]
+cortical_K_max = data["cortical"]["K"][np.argmax(abs(data["cortical"]["responses"]))]
+
+print "Ganglion max response: ", max(data["ganglion"]["responses"]), ", K=", ganglion_K_max
+print "Relay max response: ", max(data["relay"]["responses"]), ", K=", relay_K_max
+print "Cortical max response: ", max(abs(data["cortical"]["responses"])), ", K=", cortical_K_max
 
 # Plot:
 mplt.plot(data["ganglion"]["K"], data["ganglion"]["responses"], "o--r", label = "ganglion")
-mplt.plot(data["relay"]["K"], data["relay"]["responses"], ",-b", label = "relay")
-# mplt.plot(data["cortical"]["K"], data["cortical"]["responses"], "g--", label = "cortical")
+mplt.plot(data["relay"]["K"], data["relay"]["responses"], ",--b", label = "relay")
+mplt.plot(data["cortical"]["K"], data["cortical"]["responses"], "v--g", label = "cortical")
 
 # mplt.xlim(0., 1.)
 mplt.xlabel("Spatial freq", fontsize= 16)
