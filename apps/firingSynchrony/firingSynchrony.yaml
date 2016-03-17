@@ -3,7 +3,7 @@ description: "Firing synchrony config file"
 #------------Integrator settings-----------------#
 ns: 7
 nt: 7
-dt: &dt_id 2.0
+dt: &dt_id 3.0
 ds: &ds_id 0.05
 
 #------------Stimulus settings-----------------#
@@ -12,7 +12,7 @@ C: 1.0
 mask: "circle" # none/circle
 maskSize: 0.5
 orientation: 0.   #degrees
-kId:  1           #[-Ns/2, Ns/2 - 1]
+kId:  0           #[-Ns/2, Ns/2 - 1]
 wId:  1           #[-Nt/2, Nt/2 - 1]
 
 
@@ -24,9 +24,14 @@ ganglionImpRes:
     B: 0.85
     b: 0.83
 
-# TemporalDelta
+## TemporalDelta
+    #delay: 0
+    #dt: *dt_id
+
+# Biphasic
+    phaseDuration: 42.5
+    weight: 0.38
     delay: 0
-    dt: *dt_id
 
 #------------kernelSettings-----------------#
 kernels:
@@ -57,14 +62,14 @@ kernels:
 
 
         temporal:
-        # TemporalDelta
-            delay: 6.
-            dt: *dt_id
+        ## TemporalDelta
+            #delay: 6.
+            #dt: *dt_id
 
-         ##DoE
-             #cenLatency: 16
-             #surLatency: 64
-             #delay: 5.
+         #DoE
+             cenLatency: 16
+             surLatency: 64
+             delay: 6.
 
 
     Kcr:
@@ -75,13 +80,13 @@ kernels:
             shift: [0.0, 0.]
 
         temporal:
-        # TemporalDelta
-            delay: 6.
-            dt: *dt_id
-         ##DoE
-             #cenLatency: 16
-             #surLatency: 64
-             #delay: 5.
+        ## TemporalDelta
+            #delay: 6.
+            #dt: *dt_id
+         #DoE
+             cenLatency: 16
+             surLatency: 64
+             delay: 6.
 
 
 
