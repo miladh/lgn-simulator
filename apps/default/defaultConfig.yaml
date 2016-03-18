@@ -1,10 +1,10 @@
 description: "Default config file"
 
 #------------Integrator settings-----------------#
-ns: 6
-nt: 11
-dt: &dt_id 0.5
-ds: &ds_id 0.05
+ns: 8
+nt: 7
+dt: &dt_id 3.0
+ds: &ds_id 0.01
 
 #------------Stimulus settings-----------------#
 # Grating:
@@ -12,7 +12,7 @@ C: 1.0
 mask: "none" # none/circle
 maskSize: 0.5
 orientation: 0.  #degrees
-kId:  2           #[-Ns/2, Ns/2 - 1]
+kId:  4           #[-Ns/2, Ns/2 - 1]
 wId:  0           #[-Nt/2, Nt/2 - 1]
 
 

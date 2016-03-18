@@ -65,16 +65,16 @@ int main(int argc, char* argv[]){
 
 //    EllipticGaussian Ks_rc = createSpatialEllipticGaussianKernel(Ks_rcSettings);
     SpatialGaussian Ks_rc = createSpatialGaussianKernel(Ks_rcSettings);
-//    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
-    DOE Kt_rc = createTemporalDOEKernel(Kt_rcSettings);
+    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
+//    DOE Kt_rc = createTemporalDOEKernel(Kt_rcSettings);
 
     SeparableKernel Krc(&Ks_rc, &Kt_rc);
 
 
 
     SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
-//    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
-    DOE Kt_cr = createTemporalDOEKernel(Kt_crSettings);
+    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
+//    DOE Kt_cr = createTemporalDOEKernel(Kt_crSettings);
 
     SeparableKernel Kcr(&Ks_cr, &Kt_cr);
 

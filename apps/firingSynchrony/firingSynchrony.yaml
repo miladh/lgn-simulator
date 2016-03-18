@@ -13,7 +13,7 @@ mask: "circle" # none/circle
 maskSize: 0.5
 orientation: 0.   #degrees
 kId:  1           #[-Ns/2, Ns/2 - 1]
-wId:  1           #[-Nt/2, Nt/2 - 1]
+wId:  2           #[-Nt/2, Nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
@@ -62,14 +62,14 @@ kernels:
 
 
         temporal:
-        ## TemporalDelta
-            #delay: 6.
-            #dt: *dt_id
+        # TemporalDelta
+            delay: 6.
+            dt: *dt_id
 
-         #DoE
-             cenLatency: 16
-             surLatency: 64
-             delay: 6.
+         ##DoE
+             #cenLatency: 16
+             #surLatency: 64
+             #delay: 6.
 
 
     Kcr:
@@ -80,13 +80,13 @@ kernels:
             shift: [0.0, 0.]
 
         temporal:
-        ## TemporalDelta
-            #delay: 6.
-            #dt: *dt_id
-         #DoE
-             cenLatency: 16
-             surLatency: 64
-             delay: 6.
+        # TemporalDelta
+            delay: 6.
+            dt: *dt_id
+         ##DoE
+             #cenLatency: 16
+             #surLatency: 64
+             #delay: 6.
 
 
 
