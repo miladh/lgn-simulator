@@ -47,8 +47,8 @@ int main(int argc, char* argv[]){
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
-//    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
-    Biphasic Wg_t = createTemporalBiphasicKernel(ganglionImpRes);
+    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
+//    Biphasic Wg_t = createTemporalBiphasicKernel(ganglionImpRes);
 
     SeparableKernel Wg(&Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg, Rg_0);

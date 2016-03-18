@@ -425,8 +425,8 @@ if __name__ == "__main__":
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
     data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
-    # plt.figure()
-    # plt.plot(exp.integrator.timeVec, exp.stimulus.spatioTemporal[:, Ns/2,Ns/2])
+    plt.figure()
+    plt.plot(exp.integrator.timeVec, exp.stimulus.spatioTemporal[:, Ns/2,Ns/2])
     animateImshowPlots(data, exp.integrator.temporalResolution,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
