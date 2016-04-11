@@ -93,11 +93,11 @@ void OutputManager::writeIntegratorProperties(const Integrator &integrator)
 
 
 
-void OutputManager::writeResponse(const Neuron& neuron)
+void OutputManager::writeResponse(const Neuron& neuron,
+                                  const bool fourierTransform)
 {
 
     cube response = neuron.response();
-    cube responseFT = real(neuron.responseFT());
 
     string cellGroupName = neuron.type();
     herr_t status = H5Eset_auto1(NULL, NULL);
@@ -111,15 +111,19 @@ void OutputManager::writeResponse(const Neuron& neuron)
     Group res = m_output->createGroup(cellGroupName+"/response");
 
     writeDataSet(response, &res, "spatioTemporal");
-    writeDataSet(responseFT, &res, "fourierTransform");
+
+    if(fourierTransform){
+        cube responseFT = real(neuron.responseFT());
+        writeDataSet(responseFT, &res, "fourierTransform");
+    }
 
 }
 
-void OutputManager::writeImpulseResponse(const Neuron& neuron)
+void OutputManager::writeImpulseResponse(const Neuron& neuron,
+                                         const bool fourierTransform)
 {
 
     cube impulseResponse = neuron.impulseResponse();
-    cube impulseResponseFT = real(neuron.impulseResponseFourierTransform());
 
     string cellGroupName = neuron.type();
     herr_t status = H5Eset_auto1(NULL, NULL);
@@ -132,12 +136,16 @@ void OutputManager::writeImpulseResponse(const Neuron& neuron)
     //write impulse response:
     Group impRes = m_output->createGroup(cellGroupName+"/impulseResponse");
     writeDataSet(impulseResponse, &impRes, "spatioTemporal");
-    writeDataSet(impulseResponseFT, &impRes, "fourierTransform");
+
+    if(fourierTransform){
+        cube impulseResponseFT = real(neuron.impulseResponseFourierTransform());
+        writeDataSet(impulseResponseFT, &impRes, "fourierTransform");
+    }
 
 }
 
 
-void OutputManager::writeStimulus(const Stimulus* stimulus)
+void OutputManager::writeStimulus(const Stimulus* stimulus, const bool fourierTransform)
 {
 
     // Write stimuli
@@ -181,9 +189,12 @@ void OutputManager::writeStimulus(const Stimulus* stimulus)
 
 
     cube realStim = stimulus->spatioTemporal();
-    cube complexStim = real(stimulus->fourierTransform());
     writeDataSet(realStim, &stim, "spatioTemporal");
-    writeDataSet(complexStim, &stim, "fourierTransform");
+
+    if(fourierTransform){
+        cube complexStim = real(stimulus->fourierTransform());
+        writeDataSet(complexStim, &stim, "fourierTransform");
+    }
 
 }
 

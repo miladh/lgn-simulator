@@ -21,9 +21,9 @@ public:
     ~OutputManager();
 
     void writeIntegratorProperties(const Integrator &integrator);
-    void writeResponse(const Neuron &neuron);
-    void writeImpulseResponse(const Neuron &neuron);
-    void writeStimulus(const Stimulus *stimuli);
+    void writeResponse(const Neuron &neuron, const bool fourierTransform = true);
+    void writeImpulseResponse(const Neuron &neuron,const bool fourierTransform = true);
+    void writeStimulus(const Stimulus *stimuli, const bool fourierTransform = true);
 
 private:
     H5File *m_output;

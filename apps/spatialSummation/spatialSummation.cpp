@@ -79,7 +79,7 @@ int main(int argc, char* argv[])
 
     if(cfg["stimulus"]["storeSpatiotemporal"].as<bool>()){
         S->computeSpatiotemporal();
-        io.writeStimulus(S.get());
+        io.writeStimulus(S.get(),cfg["stimulus"]["storeSpatiotemporalFT"].as<bool>());
         S->clearSpatioTemporal();
     }
     S->computeFourierTransform();
@@ -91,38 +91,43 @@ int main(int argc, char* argv[])
 
     if(cfg["ganglion"]["storeResponse"].as<bool>()){
         ganglion.computeResponse(S.get());
-        io.writeResponse(ganglion);
+        io.writeResponse(ganglion, cfg["ganglion"]["storeResponseFT"].as<bool>());
         ganglion.clearResponse();
     }
 
     if( cfg["ganglion"]["storeImpulseResponse"].as<bool>()){
         ganglion.computeImpulseResponse();
-        io.writeImpulseResponse(ganglion);
+        io.writeImpulseResponse(ganglion,
+                                cfg["ganglion"]["storeImpulseResponseFT"].as<bool>());
         ganglion.clearImpulseResponse();
     }
 
     if(cfg["relay"]["storeResponse"].as<bool>()){
         relay.computeResponse(S.get());
-        io.writeResponse(relay);
+        io.writeResponse(relay,
+                         cfg["relay"]["storeResponseFT"].as<bool>());
         relay.clearResponse();
     }
 
     if( cfg["relay"]["storeImpulseResponse"].as<bool>()){
         relay.computeImpulseResponse();
-        io.writeImpulseResponse(relay);
+        io.writeImpulseResponse(relay,
+                                cfg["relay"]["storeImpulseResponseFT"].as<bool>());
         relay.clearImpulseResponse();
     }
 
 
     if(cfg["cortical"]["storeResponse"].as<bool>()){
         cortical.computeResponse(S.get());
-        io.writeResponse(cortical);
+        io.writeResponse(cortical,
+                         cfg["cortical"]["storeResponseFT"].as<bool>());
         cortical.clearResponse();
     }
 
     if( cfg["cortical"]["storeImpulseResponse"].as<bool>()){
         cortical.computeImpulseResponse();
-        io.writeImpulseResponse(cortical);
+        io.writeImpulseResponse(cortical,
+                                cfg["cortical"]["storeImpulseResponseFT"].as<bool>());
         cortical.clearImpulseResponse();
     }
 
