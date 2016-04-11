@@ -9,7 +9,7 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: false
+    storeSpatiotemporal: true
     storeFT: false
 
     # Grating:
@@ -24,7 +24,7 @@ stimulus:
 ganglion:
     R0 : 0
     storeResponse: true
-    storeResponseFT: false
+    storeResponseFT: true
     storeImpulseResponse: true
     storeImpulseResponseFT: false
     Wg:

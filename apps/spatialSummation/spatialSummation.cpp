@@ -79,7 +79,7 @@ int main(int argc, char* argv[])
 
     if(cfg["stimulus"]["storeSpatiotemporal"].as<bool>()){
         S->computeSpatiotemporal();
-        io.writeStimulus(S.get(),cfg["stimulus"]["storeSpatiotemporalFT"].as<bool>());
+        io.writeStimulus(S.get(),cfg["stimulus"]["storeFT"].as<bool>());
         S->clearSpatioTemporal();
     }
     S->computeFourierTransform();
@@ -91,7 +91,8 @@ int main(int argc, char* argv[])
 
     if(cfg["ganglion"]["storeResponse"].as<bool>()){
         ganglion.computeResponse(S.get());
-        io.writeResponse(ganglion, cfg["ganglion"]["storeResponseFT"].as<bool>());
+        io.writeResponse(ganglion,
+                         cfg["ganglion"]["storeResponseFT"].as<bool>());
         ganglion.clearResponse();
     }
 
@@ -130,7 +131,6 @@ int main(int argc, char* argv[])
                                 cfg["cortical"]["storeImpulseResponseFT"].as<bool>());
         cortical.clearImpulseResponse();
     }
-
 
 
     //Finalize:----------------------------------------------------------

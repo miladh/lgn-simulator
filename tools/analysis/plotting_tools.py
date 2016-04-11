@@ -380,11 +380,11 @@ if __name__ == "__main__":
     Ns = exp.integrator.nPointsSpatial
     Nt = exp.integrator.nPointsTemporal
 
-    # S = {"type" : "Stimulus",
-    #         "value" : exp.stimulus.spatioTemporal,
-    #         "time_vec" : exp.integrator.timeVec,
-    #         "spatial_vec" : exp.integrator.spatialVec
-    #         }
+    S = {"type" : "Stimulus",
+            "value" : exp.stimulus.spatioTemporal,
+            "time_vec" : exp.integrator.timeVec,
+            "spatial_vec" : exp.integrator.spatialVec
+            }
 
 
     Wg = {"type" : "Ganglion",
@@ -424,7 +424,7 @@ if __name__ == "__main__":
     line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=2,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    data = [ Wg, Rg, Wr, Rr, Wc, Rc]
+    data = [ S, Wg, Rg, Wr, Rr, Wc, Rc]
 #    plt.figure()
 #    plt.plot(exp.integrator.timeVec, exp.stimulus.spatioTemporal[:, Ns/2,Ns/2])
     animateImshowPlots(data, exp.integrator.temporalResolution,

@@ -97,7 +97,7 @@ void OutputManager::writeResponse(const Neuron& neuron,
                                   const bool fourierTransform)
 {
 
-    cube response = neuron.response();
+    fcube response = conv_to<fcube>::from(neuron.response());
 
     string cellGroupName = neuron.type();
     herr_t status = H5Eset_auto1(NULL, NULL);
@@ -113,7 +113,7 @@ void OutputManager::writeResponse(const Neuron& neuron,
     writeDataSet(response, &res, "spatioTemporal");
 
     if(fourierTransform){
-        cube responseFT = real(neuron.responseFT());
+        fcube responseFT = conv_to<fcube>::from(real(neuron.responseFT()));
         writeDataSet(responseFT, &res, "fourierTransform");
     }
 
@@ -123,7 +123,7 @@ void OutputManager::writeImpulseResponse(const Neuron& neuron,
                                          const bool fourierTransform)
 {
 
-    cube impulseResponse = neuron.impulseResponse();
+    fcube impulseResponse = conv_to<fcube>::from(neuron.impulseResponse());
 
     string cellGroupName = neuron.type();
     herr_t status = H5Eset_auto1(NULL, NULL);
@@ -138,7 +138,8 @@ void OutputManager::writeImpulseResponse(const Neuron& neuron,
     writeDataSet(impulseResponse, &impRes, "spatioTemporal");
 
     if(fourierTransform){
-        cube impulseResponseFT = real(neuron.impulseResponseFourierTransform());
+        fcube impulseResponseFT =
+                conv_to<fcube>::from(real(neuron.impulseResponseFourierTransform()));
         writeDataSet(impulseResponseFT, &impRes, "fourierTransform");
     }
 
@@ -188,11 +189,11 @@ void OutputManager::writeStimulus(const Stimulus* stimulus, const bool fourierTr
     }
 
 
-    cube realStim = stimulus->spatioTemporal();
+    fcube realStim = conv_to<fcube>::from(stimulus->spatioTemporal());
     writeDataSet(realStim, &stim, "spatioTemporal");
 
     if(fourierTransform){
-        cube complexStim = real(stimulus->fourierTransform());
+        fcube complexStim = conv_to<fcube>::from(real(stimulus->fourierTransform()));
         writeDataSet(complexStim, &stim, "fourierTransform");
     }
 
@@ -202,14 +203,14 @@ void OutputManager::writeStimulus(const Stimulus* stimulus, const bool fourierTr
 
 
 
-void OutputManager::writeDataSet(const cube data, Group* group, string name)
+void OutputManager::writeDataSet(const fcube data, Group* group, string name)
 {
 
     hsize_t dim[3] = {data.n_slices, data.n_rows, data.n_cols};
     DataSpace space(3, dim);
-    DataSet dataset(group->createDataSet(name, PredType::NATIVE_DOUBLE, space));
+    DataSet dataset(group->createDataSet(name, PredType::NATIVE_FLOAT, space));
 
-    dataset.write(data.memptr(), PredType::NATIVE_DOUBLE);
+    dataset.write(data.memptr(), PredType::NATIVE_FLOAT);
 
 }
 

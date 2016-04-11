@@ -27,7 +27,7 @@ public:
 
 private:
     H5File *m_output;
-    void writeDataSet(const cube dataset, Group* group, string name);
+    void writeDataSet(const fcube dataset, Group* group, string name);
 
 
 
