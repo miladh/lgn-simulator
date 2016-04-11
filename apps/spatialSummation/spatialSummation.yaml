@@ -24,7 +24,7 @@ stimulus:
 ganglion:
     R0 : 0
     storeResponse: true
-    storeResponseFT: true
+    storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: false
     Wg:

@@ -34,10 +34,10 @@ void OutputManager::writeIntegratorProperties(const Integrator &integrator)
     double T = integrator.timeInterval();
     double L = integrator.lengthInterval();
 
-    vec timeVec = integrator.timeVec();
-    vec spatialVec = integrator.spatialVec();
-    vec temporalFreqVec = integrator.temporalFreqVec();
-    vec spatialFreqVec = integrator.spatialFreqVec();
+    fvec timeVec = conv_to<fvec>::from(integrator.timeVec());
+    fvec spatialVec = conv_to<fvec>::from(integrator.spatialVec());
+    fvec temporalFreqVec = conv_to<fvec>::from(integrator.temporalFreqVec());
+    fvec spatialFreqVec = conv_to<fvec>::from(integrator.spatialFreqVec());
 
 
     Attribute Nt_a(integratorGroup.createAttribute("nPointsTemporal",PredType::NATIVE_INT, H5S_SCALAR));
@@ -79,16 +79,20 @@ void OutputManager::writeIntegratorProperties(const Integrator &integrator)
     DataSpace space_t(1, dim_t);
     DataSpace space_s(1, dim_s);
 
-    DataSet timeVec_ds(integratorGroup.createDataSet("timeVec", PredType::NATIVE_DOUBLE, space_t));
-    DataSet temporalFreqVec_ds(integratorGroup.createDataSet("temporalFreqVec", PredType::NATIVE_DOUBLE, space_t));
+    DataSet timeVec_ds(integratorGroup.createDataSet("timeVec",
+                                                     PredType::NATIVE_FLOAT, space_t));
+    DataSet temporalFreqVec_ds(integratorGroup.createDataSet("temporalFreqVec",
+                                                             PredType::NATIVE_FLOAT, space_t));
 
-    DataSet spatialVec_ds(integratorGroup.createDataSet("spatialVec", PredType::NATIVE_DOUBLE, space_s));
-    DataSet spatialFreqVec_ds(integratorGroup.createDataSet("spatialFreqVec", PredType::NATIVE_DOUBLE, space_s));
+    DataSet spatialVec_ds(integratorGroup.createDataSet("spatialVec",
+                                                        PredType::NATIVE_FLOAT, space_s));
+    DataSet spatialFreqVec_ds(integratorGroup.createDataSet("spatialFreqVec",
+                                                            PredType::NATIVE_FLOAT, space_s));
 
-    timeVec_ds.write(timeVec.memptr(), PredType::NATIVE_DOUBLE);
-    temporalFreqVec_ds.write(temporalFreqVec.memptr(), PredType::NATIVE_DOUBLE);
-    spatialVec_ds.write(spatialVec.memptr(), PredType::NATIVE_DOUBLE);
-    spatialFreqVec_ds.write(spatialFreqVec.memptr(), PredType::NATIVE_DOUBLE);
+    timeVec_ds.write(timeVec.memptr(), PredType::NATIVE_FLOAT);
+    temporalFreqVec_ds.write(temporalFreqVec.memptr(), PredType::NATIVE_FLOAT);
+    spatialVec_ds.write(spatialVec.memptr(), PredType::NATIVE_FLOAT);
+    spatialFreqVec_ds.write(spatialFreqVec.memptr(), PredType::NATIVE_FLOAT);
 }
 
 
