@@ -1,32 +1,116 @@
-description: "Default config file"
+description: "Spatial config file"
 
 #------------Integrator settings-----------------#
-ns: 8
-nt: 3
-dt: 0.1
-ds: 0.05
-#------------Stimulus settings-----------------#
-# Grating:
-C: 1.0
-mask: "circle" # none/circle/gauss
-maskSize: 0.5
-kxId:  0        #[-ns/2, ns/2 - 1]
-kyId:  0        #[-ns/2, ns/2 - 1]
-wId:   0        #[-nt/2, nt/2 - 1]
+grid:
+    ns: 7
+    nt: 7
+    dt: &dt_id 3.0
+    ds: &ds_id 0.05
 
-#------------spatialKernelSettings-----------------#
-# DOG
-A: 1.0
-a: 0.6
-B: 0.8
-b: 1.2
+#------------Stimulus settings-------------------#
+stimulus:
+    storeSpatiotemporal: false
+    storeFT: false
+
+    # Grating:
+    C: 1.0
+    mask: "none" # none/circle
+    maskSize: 0.5
+    orientation: 90.   #degrees
+    kId:  5           #[-Ns/2, Ns/2 - 1]
+    wId:  5           #[-Nt/2, Nt/2 - 1]
+
+#-----------------Neuron settings------------------#
+ganglion:
+    R0 : 0
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: false
+    Wg:
+    # DOG
+        A: 1.0
+        a: 0.25
+        B: 0.85
+        b: 0.83
+    Wt:
+    # Biphasic
+        phaseDuration: 42.5
+        weight: 0.38
+        delay: 5
 
 
-#------------temporalKernelSettings-----------------#
-# Temporal delta:
-delay: 0.0 #s
+relay:
+    R0 : 0
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: false
+
+    #Kernels
+    Krg:
+        spatial:
+        # SpatialDelta
+            weight: 1.0
+            ds : *ds_id
+            shift: [0.0, 0.]
+
+        temporal:
+        # TemporalDelta
+            delay: 5
+            dt: *dt_id
+
+    Krc:
+        spatial:
+        #Gauss
+            A: -1.5
+            a: 0.23
+
+        ##EllipticGaussian
+            #weight: -1.5
+            #angle: 90.
+            #widthLong: 1.4
+            #widthNarrow: 0.1
+
+
+        temporal:
+        # TemporalDelta
+            delay: 3.
+            dt: *dt_id
+
+         ##DoE
+             #cenLatency: 16
+             #surLatency: 64
+             #delay: 6.
+
+
+cortical:
+    R0 : 0
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: false
+
+    #kernels
+    Kcr:
+        spatial:
+        # SpatialDelta
+            weight: 0.3
+            ds : *ds_id
+            shift: [0.0, 0.]
+
+        temporal:
+        # TemporalDelta
+            delay: 3.
+            dt: *dt_id
+         ##DoE
+             #cenLatency: 16
+             #surLatency: 64
+             #delay: 6.
+
 
 
 #------------File manager settings-----------------#
-outputFile:  "/media/milad/scratch/lgn-simulator/simulations/tmp/spatialSummation.h5"
-
+OutputManager:
+    outputFilename:
+    "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"

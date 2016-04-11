@@ -370,7 +370,7 @@ if __name__ == "__main__":
     from glob import glob
     import Simulation as sim
 
-    outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
+    outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
     # outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/firingSynchrony/20160317-135052/20160317-135052.h5"
 
     outputFile = glob(outputFilePath)[0]
@@ -380,11 +380,11 @@ if __name__ == "__main__":
     Ns = exp.integrator.nPointsSpatial
     Nt = exp.integrator.nPointsTemporal
 
-    S = {"type" : "Stimulus",
-            "value" : exp.stimulus.spatioTemporal,
-            "time_vec" : exp.integrator.timeVec,
-            "spatial_vec" : exp.integrator.spatialVec
-            }
+    # S = {"type" : "Stimulus",
+    #         "value" : exp.stimulus.spatioTemporal,
+    #         "time_vec" : exp.integrator.timeVec,
+    #         "spatial_vec" : exp.integrator.spatialVec
+    #         }
 
 
     Wg = {"type" : "Ganglion",
@@ -420,18 +420,18 @@ if __name__ == "__main__":
                  "spatial_vec" : exp.integrator.spatialVec
                 }
 
-    # data = [Wg]
-    # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=2,y_line3d=True)
+    data = [Wg,Wr, Wc]
+    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=2,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    data = [S, Wg, Rg, Wr, Rr, Wc, Rc]
-    plt.figure()
-    plt.plot(exp.integrator.timeVec, exp.stimulus.spatioTemporal[:, Ns/2,Ns/2])
+    data = [ Wg, Rg, Wr, Rr, Wc, Rc]
+#    plt.figure()
+#    plt.plot(exp.integrator.timeVec, exp.stimulus.spatioTemporal[:, Ns/2,Ns/2])
     animateImshowPlots(data, exp.integrator.temporalResolution,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
 
-    plt.show()
+#    plt.show()
 
 
 

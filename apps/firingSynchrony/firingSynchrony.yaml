@@ -9,11 +9,11 @@ ds: &ds_id 0.05
 #------------Stimulus settings-----------------#
 # Grating:
 C: 1.0
-mask: "circle" # none/circle
+mask: "none" # none/circle
 maskSize: 0.5
-orientation: 0.   #degrees
-kId:  2           #[-Ns/2, Ns/2 - 1]
-wId:  1           #[-Nt/2, Nt/2 - 1]
+orientation: 90.   #degrees
+kId:  5           #[-Ns/2, Ns/2 - 1]
+wId:  5           #[-Nt/2, Nt/2 - 1]
 
 
 #----------Ganglion Impulse response--------------#
@@ -52,7 +52,7 @@ kernels:
         spatial:
         #Gauss
             A: -1.5
-            a: 0.83
+            a: 0.15
 
         ##EllipticGaussian
             #weight: -1.5
@@ -81,7 +81,7 @@ kernels:
 
         temporal:
         # TemporalDelta
-            delay: 6.
+            delay: 0.
             dt: *dt_id
          ##DoE
              #cenLatency: 16
@@ -95,7 +95,7 @@ kernels:
 backgroundResponse:
     Rg_0: 0
     Rr_0: 0
-    Rc_0: 0
+    Rc_0: 0.0
 
 
 #------------File manager settings-----------------#
