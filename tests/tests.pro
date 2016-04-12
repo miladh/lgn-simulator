@@ -14,11 +14,9 @@ INCLUDEPATH += $$TOP_PWD/include
 
 SOURCES += main.cpp \
     systemTests/systemtest_gr.cpp \
-    systemTests/systemtest_g.cpp \
     systemTests/kernelsettings.cpp \
     systemTests/systemtest_grc.cpp \
     systemTests/systemtest_gric.cpp \
-    systemTests/systemtest_gi.cpp \
     systemTests/systemtest_spot.cpp \
     test_special.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
@@ -35,7 +33,9 @@ SOURCES += main.cpp \
     integratorTests/convolutionTests/test_conv_decayingexpdelta.cpp \
     integratorTests/convolutionTests/test_conv_deltadelta.cpp \
     integratorTests/convolutionTests/test_conv_biphasicdelta.cpp \
-    integratorTests/convolutionTests/test_conv_biphasicdoe.cpp
+    integratorTests/convolutionTests/test_conv_biphasicdoe.cpp \
+    systemTests/test_system_g.cpp \
+    systemTests/test_system_gi.cpp
 
 
 
