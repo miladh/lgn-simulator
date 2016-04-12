@@ -39,5 +39,4 @@ SOURCES += main.cpp \
 
 
 
-HEADERS += \
-    systemTests/kernelsettings.h
+HEADERS +=
