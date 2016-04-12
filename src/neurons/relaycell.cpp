@@ -193,7 +193,7 @@ void RelayCell::addInterNeuron(Neuron* const neuron, const Kernel &kernel)
 
 }
 
-void RelayCell::addCorticalNeuron(Neuron* const neuron, const Kernel &kernel)
+void RelayCell::addCorticalCell(Neuron* const neuron, const Kernel &kernel)
 {
     if (neuron->type() == "cortical") {
         m_corticalNeurons.emplace_back(Input{neuron, kernel});

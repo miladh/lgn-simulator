@@ -1,8 +1,8 @@
 /**********************************************************************
- *  Test: response of ganglion cell and interneuron with full-field
+ *  Test: response of ganglion cell and relay with full-field
  *        grating stimulus:
  *               Rg(r,t) = W(r,t) * S(r,t)
- *               Ri(r,t) = [W(r,t)K(r,t)] * S(r,t)
+ *               Rr(r,t) = [W(r,t)K(r,t)] * S(r,t)
  *
  *  Analytic source: closed-form experssion
  *
@@ -13,7 +13,7 @@
 
 using namespace lgnSimulator;
 
-void runSystemTest_GI(int nt, double dt, int ns, double ds,
+void runSystemTest_GR(int nt, double dt, int ns, double ds,
                     double C, int wdId, int kxId, int thetaId,
                     const Kernel &W, const Kernel &K)
 {
@@ -39,13 +39,15 @@ void runSystemTest_GI(int nt, double dt, int ns, double ds,
     GanglionCell ganglion(integrator, W);
     ganglion.computeResponse(&grating);
 
-    //interneuron cell
-    Interneuron interneuron(integrator);
-    interneuron.addGanglionCell(&ganglion, K);
-    interneuron.computeResponse(&grating);
+    //relayCell cell
+    double R0 = 10.6;
+    RelayCell relayCell(integrator, R0);
+    relayCell.addGanglionCell(&ganglion, K);
+    relayCell.computeResponse(&grating);
+
 
     cube Rg_e = zeros(r.n_elem, r.n_elem, t.n_elem);
-    cube Ri_e = zeros(r.n_elem, r.n_elem, t.n_elem);
+    cube Rr_e = zeros(r.n_elem, r.n_elem, t.n_elem);
 
     double kx = spatialFreq*cos(orientation*core::pi/180.);
     double ky = spatialFreq*sin(orientation*core::pi/180.);
@@ -55,7 +57,7 @@ void runSystemTest_GI(int nt, double dt, int ns, double ds,
     for(int l=0; l < int(t.n_elem); l++){
         for(int i = 0; i < int(r.n_elem); i++){
             for(int j = 0; j < int(r.n_elem); j++){
-                Ri_e(i,j,l) = C * abs(Kijl)
+                Rr_e(i,j,l) = R0 + C * abs(Kijl)
                         * cos(kx*r[i] + ky*r[j] - wd * t[l] + arg(Kijl));
                 Rg_e(i,j,l) = C * abs(Wijl)
                         * cos(kx*r[i] + ky*r[j] - wd * t[l] + arg(Wijl));
@@ -64,27 +66,28 @@ void runSystemTest_GI(int nt, double dt, int ns, double ds,
     }
 
     cube diff_g = abs(Rg_e - ganglion.response());
-    cube diff_i = abs(Ri_e - interneuron.response());
+    cube diff_r = abs(Rr_e - relayCell.response());
     CHECK_CLOSE(diff_g.max(), 0.0, 1e-10);
-    CHECK_CLOSE(diff_i.max(), 0.0, 1e-10);
+    CHECK_CLOSE(diff_r.max(), 0.0, 1e-10);
 
 
 }
 
+
 SUITE(system){
 
-    TEST(runSystemTest_GI_0){
+    TEST(runSystemTest_GR_0){
         double dt = 0.1;
         SpatialGaussian Ws(1, 0.25);
         TemporalDelta Wt(0, dt);
         SeparableKernel W(&Ws, &Wt);
 
-        runSystemTest_GI(2, dt, 2, 0.1,
+        runSystemTest_GR(2, dt, 2, 0.1,
                          -1, 0, 1, 0, W, W);
     }
 
 
-    TEST(runSystemTest_GI_1){
+    TEST(runSystemTest_GR_1){
         double dt = 0.1;
         SpatialGaussian Ws(1, 0.25);
         TemporalDelta Wt(1*dt, dt);
@@ -94,10 +97,10 @@ SUITE(system){
         TemporalDelta Kt(2*dt, dt);
         SeparableKernel K(&Ws, &Wt);
 
-         runSystemTest_GI(3, dt, 2, 0.1,
+         runSystemTest_GR(3, dt, 2, 0.1,
                          -1, 3, 1, 4, W, K);
     }
-}
 
+}
 
 

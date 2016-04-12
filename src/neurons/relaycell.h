@@ -18,7 +18,7 @@ public:
 
     void addGanglionCell(Neuron* const neuron, const Kernel &kernel);
     void addInterNeuron(Neuron* const neuron, const Kernel &kernel);
-    void addCorticalNeuron(Neuron* const neuron, const Kernel &kernel);
+    void addCorticalCell(Neuron* const neuron, const Kernel &kernel);
 
     vector<Input> ganglionCells() const;
     vector<Input> interNeurons() const;
