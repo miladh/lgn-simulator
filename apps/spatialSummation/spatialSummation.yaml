@@ -16,8 +16,8 @@ stimulus:
     C: 1.0
     mask: "none" # none/circle
     maskSize: 0.5
-    orientation: 90.   #degrees
-    kId:  5           #[-Ns/2, Ns/2 - 1]
+    orientation: 45.   #degrees
+    kId:  1           #[-Ns/2, Ns/2 - 1]
     wId:  5           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
@@ -37,7 +37,7 @@ ganglion:
     # Biphasic
         phaseDuration: 42.5
         weight: 0.38
-        delay: 5
+        delay: 0
 
 
 relay:
@@ -50,20 +50,30 @@ relay:
     #Kernels
     Krg:
         spatial:
-        # SpatialDelta
-            weight: 1.0
-            ds : *ds_id
-            shift: [0.0, 0.]
+        # Gaussian
+            A: 0.5
+            a: 0.23
+
 
         temporal:
         # TemporalDelta
-            delay: 5
+            delay: 4
+            dt: *dt_id
+    Kri:
+        spatial:
+        # Gaussian
+            A: -0.8
+            a: 0.23
+
+        temporal:
+        # TemporalDelta
+            delay: 2
             dt: *dt_id
 
     Krc:
         spatial:
         #Gauss
-            A: -1.5
+            A: 0.5
             a: 0.23
 
         ##EllipticGaussian
@@ -75,7 +85,7 @@ relay:
 
         temporal:
         # TemporalDelta
-            delay: 3.
+            delay: 4.
             dt: *dt_id
 
          ##DoE
@@ -83,6 +93,38 @@ relay:
              #surLatency: 64
              #delay: 6.
 
+
+interneuron:
+    R0 : 0
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: false
+
+    #Kernels
+    Kig:
+        spatial:
+        # Gaussian
+            A: 0.5
+            a: 0.23
+
+
+        temporal:
+        # TemporalDelta
+            delay: 4
+            dt: *dt_id
+
+
+    Kic:
+        spatial:
+        #Gauss
+            A: 0.5
+            a: 0.23
+
+        temporal:
+        # TemporalDelta
+            delay: 4.
+            dt: *dt_id
 
 cortical:
     R0 : 0
@@ -94,10 +136,9 @@ cortical:
     #kernels
     Kcr:
         spatial:
-        # SpatialDelta
-            weight: 0.3
-            ds : *ds_id
-            shift: [0.0, 0.]
+        #Gauss
+            A: 0.5
+            a: 0.23
 
         temporal:
         # TemporalDelta

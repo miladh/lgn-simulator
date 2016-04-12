@@ -59,7 +59,7 @@ void runSystemTest_GRIC(int nt, double dt, int ns, double ds,
     relay.addCorticalCell(&cortical, Krc);
     relay.addInterNeuron(&interneuron, Kri);
     interneuron.addGanglionCell(&ganglion, Kig);
-    interneuron.addCorticalNeuron(&cortical, Kic);
+    interneuron.addCorticalCell(&cortical, Kic);
     cortical.addRelayCell(&relay, Kcr);
 
     //Compute

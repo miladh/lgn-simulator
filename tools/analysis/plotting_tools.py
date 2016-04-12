@@ -398,6 +398,12 @@ if __name__ == "__main__":
              "spatial_vec" : exp.integrator.spatialVec
             }
 
+    Wi = {"type" : "Interneuron",
+                 "value" : exp.interneuron.impulseResponse["spatioTemporal"],
+                 "time_vec" : exp.integrator.timeVec,
+                 "spatial_vec" : exp.integrator.spatialVec
+                }
+
     Wc = {"type" : "Cortical",
                  "value" : exp.cortical.impulseResponse["spatioTemporal"],
                  "time_vec" : exp.integrator.timeVec,
@@ -414,22 +420,28 @@ if __name__ == "__main__":
              "time_vec" : exp.integrator.timeVec,
              "spatial_vec" : exp.integrator.spatialVec
             }
+
+    Ri = {"type" : "Interneuron",
+             "value" : exp.interneuron.response["spatioTemporal"],
+             "time_vec" : exp.integrator.timeVec,
+             "spatial_vec" : exp.integrator.spatialVec
+            }
     Rc = {"type" : "Cortical",
                  "value" : exp.cortical.response["spatioTemporal"],
                  "time_vec" : exp.integrator.timeVec,
                  "spatial_vec" : exp.integrator.spatialVec
                 }
 
-    data = [Wg,Wr, Wc]
-    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=2,y_line3d=True)
+    data = [Wg,Wr,Wi,Wc]
+    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=10,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
-    # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    data = [ S, Wg, Rg, Wr, Rr, Wc, Rc]
+    imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
+    data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
 #    plt.figure()
 #    plt.plot(exp.integrator.timeVec, exp.stimulus.spatioTemporal[:, Ns/2,Ns/2])
-    animateImshowPlots(data, exp.integrator.temporalResolution,
-    colorbar = True, remove_axes = False,
-    save_animation = False, animation_name = "newTest")
+    # animateImshowPlots(data, exp.integrator.temporalResolution,
+    # colorbar = True, remove_axes = False,
+    # save_animation = False, animation_name = "newTest")
 
 #    plt.show()
 

@@ -77,7 +77,7 @@ void Interneuron::addGanglionCell(Neuron* const neuron, const Kernel &kernel)
 }
 
 
-void Interneuron::addCorticalNeuron(Neuron* const neuron, const Kernel &kernel)
+void Interneuron::addCorticalCell(Neuron* const neuron, const Kernel &kernel)
 {
     if (neuron->type() == "cortical") {
         m_corticalNeurons.emplace_back(Input{neuron, kernel});
