@@ -13,7 +13,6 @@ INCLUDEPATH += $$TOP_PWD/include
 
 
 SOURCES += main.cpp \
-    systemTests/kernelsettings.cpp \
     test_special.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
     test_kernel.cpp \
