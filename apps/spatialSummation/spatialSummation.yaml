@@ -138,5 +138,4 @@ cortical:
 
 #------------File manager settings-----------------#
 OutputManager:
-    outputFilename:
-    "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
+    outputFilename: "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
