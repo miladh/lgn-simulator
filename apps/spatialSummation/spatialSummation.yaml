@@ -1,6 +1,6 @@
 description: "Spatial config file"
 
-#inhibitionWeight: &w_id 1.
+inhibitionWeight: &w_id 1.
 
 #------------Integrator settings-----------------#
 grid:
@@ -107,7 +107,7 @@ interneuron:
     Kic:
         spatial:
         #Gauss
-            A: 1
+            A: *w_id
             a: 0.83
 
         temporal:
