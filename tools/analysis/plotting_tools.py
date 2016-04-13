@@ -369,6 +369,7 @@ if __name__ == "__main__":
     import h5py
     from glob import glob
     import Simulation as sim
+    plt.close("all")
 
     outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
     # outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/firingSynchrony/20160317-135052/20160317-135052.h5"
@@ -433,17 +434,21 @@ if __name__ == "__main__":
                 }
 
     data = [Wg,Wr,Wi,Wc]
-    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=10,y_line3d=True)
+    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=2,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
-    imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
+    # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
     data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
-#    plt.figure()
-#    plt.plot(exp.integrator.timeVec, exp.stimulus.spatioTemporal[:, Ns/2,Ns/2])
-    # animateImshowPlots(data, exp.integrator.temporalResolution,
-    # colorbar = True, remove_axes = False,
-    # save_animation = False, animation_name = "newTest")
+    # plt.figure()
+    # plt.plot(exp.integrator.timeVec, exp.ganglion.response["spatioTemporal"][:, Ns/2,Ns/2], label = "G")
+    # plt.plot(exp.integrator.timeVec, exp.relay.response["spatioTemporal"][:, Ns/2,Ns/2], label = "R")
+    # plt.plot(exp.integrator.timeVec, exp.interneuron.response["spatioTemporal"][:, Ns/2,Ns/2], label = "I")
+    # plt.plot(exp.integrator.timeVec, exp.cortical.response["spatioTemporal"][:, Ns/2,Ns/2], label = "C")
+    # plt.legend()
+    animateImshowPlots(data, exp.integrator.temporalResolution,
+    colorbar = True, remove_axes = False,
+    save_animation = False, animation_name = "newTest")
 
-#    plt.show()
+    # plt.show()
 
 
 

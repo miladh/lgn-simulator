@@ -26,7 +26,7 @@ public:
     };
 
     // Compute functions
-    void computeResponse(Stimulus *stimulus);
+    void computeResponse(const Stimulus *const stimulus);
 
     //Virtual function:
     virtual void computeImpulseResponse();

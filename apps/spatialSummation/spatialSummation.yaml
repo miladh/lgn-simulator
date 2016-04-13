@@ -1,10 +1,12 @@
 description: "Spatial config file"
 
+inhibitionWeight: &w_id 1.
+
 #------------Integrator settings-----------------#
 grid:
     ns: 7
-    nt: 7
-    dt: &dt_id 3.0
+    nt: 5
+    dt: &dt_id 0.01
     ds: &ds_id 0.05
 
 #------------Stimulus settings-------------------#
@@ -14,11 +16,11 @@ stimulus:
 
     # Grating:
     C: 1.0
-    mask: "none" # none/circle
+    mask: "circle" # none/circle
     maskSize: 0.5
-    orientation: 45.   #degrees
-    kId:  1           #[-Ns/2, Ns/2 - 1]
-    wId:  5           #[-Nt/2, Nt/2 - 1]
+    orientation: 0.   #degrees
+    kId:  0           #[-Ns/2, Ns/2 - 1]
+    wId:  0           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
 ganglion:
@@ -34,11 +36,9 @@ ganglion:
         B: 0.85
         b: 0.83
     Wt:
-    # Biphasic
-        phaseDuration: 42.5
-        weight: 0.38
-        delay: 0
-
+    # TemporalDelta
+        delay: 0.05
+        dt: *dt_id
 
 relay:
     R0 : 0
@@ -50,49 +50,38 @@ relay:
     #Kernels
     Krg:
         spatial:
-        # Gaussian
-            A: 0.5
-            a: 0.23
+        # SpatialDelta
+            weight: 1.0
+            ds : *ds_id
+            shift: [0.0, 0.]
 
 
         temporal:
         # TemporalDelta
-            delay: 4
+            delay: 0
             dt: *dt_id
     Kri:
         spatial:
-        # Gaussian
-            A: -0.8
-            a: 0.23
+        # SpatialDelta
+            weight: -1.0
+            ds : *ds_id
+            shift: [0.0, 0.0]
 
         temporal:
         # TemporalDelta
-            delay: 2
+            delay: 0
             dt: *dt_id
 
     Krc:
         spatial:
         #Gauss
-            A: 0.5
-            a: 0.23
-
-        ##EllipticGaussian
-            #weight: -1.5
-            #angle: 90.
-            #widthLong: 1.4
-            #widthNarrow: 0.1
-
+            A: 1.0
+            a: 0.83
 
         temporal:
         # TemporalDelta
-            delay: 4.
+            delay: 0.
             dt: *dt_id
-
-         ##DoE
-             #cenLatency: 16
-             #surLatency: 64
-             #delay: 6.
-
 
 interneuron:
     R0 : 0
@@ -105,25 +94,25 @@ interneuron:
     Kig:
         spatial:
         # Gaussian
-            A: 0.5
-            a: 0.23
+            A: 1.0
+            a: 0.05
 
 
         temporal:
         # TemporalDelta
-            delay: 4
+            delay: 0
             dt: *dt_id
 
 
     Kic:
         spatial:
         #Gauss
-            A: 0.5
-            a: 0.23
+            A: *w_id
+            a: 0.83
 
         temporal:
         # TemporalDelta
-            delay: 4.
+            delay: 0.
             dt: *dt_id
 
 cortical:
@@ -136,19 +125,15 @@ cortical:
     #kernels
     Kcr:
         spatial:
-        #Gauss
-            A: 0.5
-            a: 0.23
+        # SpatialDelta
+            weight: 1.0
+            ds : *ds_id
+            shift: [0.0, 0.]
 
         temporal:
         # TemporalDelta
-            delay: 3.
+            delay: 0.
             dt: *dt_id
-         ##DoE
-             #cenLatency: 16
-             #surLatency: 64
-             #delay: 6.
-
 
 
 #------------File manager settings-----------------#

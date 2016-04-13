@@ -39,7 +39,7 @@ Neuron::~Neuron()
 }
 
 
-void Neuron::computeResponse(Stimulus *stimulus)
+void Neuron::computeResponse(const Stimulus *const stimulus)
 {
     if(!impulseResponseFourierTransformComputed){
         computeImpulseResponseFourierTransform();
