@@ -53,6 +53,7 @@ def run_simulator(config_file):
 
 
 if __name__ == '__main__':
+    print 222222
     from argparse import ArgumentParser
     parser = ArgumentParser()
     # parser.add_argument("config_file", help="app config file")
