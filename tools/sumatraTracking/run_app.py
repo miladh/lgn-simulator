@@ -23,7 +23,7 @@ def run_simulator(config_file):
     output_file = os.path.join(output_dir, run_id + ".h5")
     print "output_file: ", output_file
 
-    config_data["outputFile"] = str(output_file)
+    config_data["OutputManager"]["outputFilename"] = str(output_file)
     with open(config_file, 'w') as stream:
         yaml.dump(config_data, stream)
 
@@ -53,11 +53,11 @@ def run_simulator(config_file):
 
 
 if __name__ == '__main__':
-    from argparse import ArgumentParser
-    parser = ArgumentParser()
-    parser.add_argument("config_file", help="app config file")
-    args = parser.parse_args()
-    config_file = args.config_file
+    # from argparse import ArgumentParser
+    # parser = ArgumentParser()
+    # parser.add_argument("config_file", help="app config file")
+    # args = parser.parse_args()
+    # config_file = args.config_file
 
-    print "Running lgn simulator..."
-    run_id = run_simulator(config_file)
+    # print "Running lgn simulator..."
+    # run_id = run_simulator(config_file)
