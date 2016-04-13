@@ -53,12 +53,11 @@ def run_simulator(config_file):
 
 
 if __name__ == '__main__':
-    print 222222
     from argparse import ArgumentParser
     parser = ArgumentParser()
-    # parser.add_argument("config_file", help="app config file")
-    # args = parser.parse_args()
-    # config_file = args.config_file
-    #
-    # print "Running lgn simulator..."
-    # run_id = run_simulator(config_file)
+    parser.add_argument("config_file", help="app config file")
+    args = parser.parse_args()
+    config_file = args.config_file
+
+    print "Running lgn simulator..."
+    run_id = run_simulator(config_file)
