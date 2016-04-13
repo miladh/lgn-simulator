@@ -6,4 +6,5 @@ weights = np.linspace(0.1, 2, 5)
 
 for w in weights:
     for d in spot_diameters:
-        call(["smt", "run", "spatialSummation.yaml", "inhibitionWeight="+str(w), "maskSize="+str(d)])
+        call(["smt", "run", "spatialSummation.yaml", "-t w= " + str(w),
+        "inhibitionWeight="+str(w), "maskSize="+str(d)])
