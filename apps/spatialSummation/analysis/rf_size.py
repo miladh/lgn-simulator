@@ -12,8 +12,10 @@ import sumatraTracking.get_simulations as smt
 
 parser = ArgumentParser()
 parser.add_argument("sim_ids", help = "simulation ids")
+parser.add_argument("record", help = "record results", type = int)
 args = parser.parse_args()
 sim_ids = args.sim_ids
+record = args.record
 
 sims = smt.get_simulations(sim_ids)
 
