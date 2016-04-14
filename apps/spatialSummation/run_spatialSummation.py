@@ -36,4 +36,4 @@ if __name__ == "__main__":
 
             call(["smt", "run", os.path.basename(config_file), "-r "+ reason, "-t" +tag])
 
-    # os.remove(config_file)
+    os.remove(config_file)
