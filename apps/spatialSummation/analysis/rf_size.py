@@ -3,12 +3,12 @@ import os, sys
 from argparse import ArgumentParser
 import numpy as np
 import matplotlib.pyplot as mplt
-from scipy import io
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
-
 import sumatraTracking.get_simulations as smt
+
+
 
 parser = ArgumentParser()
 parser.add_argument("sim_ids", help = "simulation ids")
@@ -19,7 +19,6 @@ record = args.record
 
 sims = smt.get_simulations(sim_ids)
 
-record = True
 output_dir = None
 if(record):
     output_dir = smt.get_output_dir(sim_ids)
@@ -39,7 +38,6 @@ for cell in data:
         idx = exp.integrator.nPointsSpatial * cell_pos_x
         idy = exp.integrator.nPointsSpatial * cell_pos_y
         data[cell]["spot_diameter"][j] = exp.stimulus.maskSize
-        print exp.stimulus.maskSize
         res = exp.singleCellTemporalResponse(cell, idx, idy)
         res = res[np.where(res  >= 0)]
         data[cell]["responses"][j] = np.mean(res)
