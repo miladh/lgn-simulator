@@ -29,7 +29,9 @@ def get_simulations(config_file):
         data_path = config_data["data_path"]
         data_ids  = config_data["simulation_ids"]
 
-    print "Reading simulation_ids: ", data_ids
+    print "Data path: ", data_path
+    print "Reading simulation_ids:\n", data_ids
+
     sims=[]
     for data_id in data_ids:
         data_file = os.path.join(data_path, data_id, data_id +".h5")

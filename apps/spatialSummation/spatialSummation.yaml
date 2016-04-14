@@ -1,7 +1,5 @@
 description: "Spatial config file"
 
-inhibitionWeight: &w_id 1.
-maskSize: &d_id 0.1
 
 #------------Integrator settings-----------------#
 grid:
@@ -18,7 +16,7 @@ stimulus:
     # Grating:
     C: 1.0
     mask: "circle" # none/circle
-    maskSize: *d_id
+    maskSize: 0.5
     orientation: 0.   #degrees
     kId:  0           #[-Ns/2, Ns/2 - 1]
     wId:  0           #[-Nt/2, Nt/2 - 1]
@@ -108,7 +106,7 @@ interneuron:
     Kic:
         spatial:
         #Gauss
-            A: *w_id
+            A: 1.
             a: 0.83
 
         temporal:
