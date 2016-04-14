@@ -16,10 +16,10 @@ with open(config_file, 'r') as stream:
 
 
 def modify_diameter(d):
-    config_data["stimulus"]["maskSize"] = d
+    config_data["stimulus"]["maskSize"] = str(d)
 
 def modify_inhibition_weight(w):
-    config_data["interneuron"]["Kic"]["spatial"]["A"] = w
+    config_data["interneuron"]["Kic"]["spatial"]["A"] = str(w)
 
 
 
@@ -34,9 +34,9 @@ if __name__ == "__main__":
     reason = "Test the effect inhibition weight on area summation curves"
 
     for w in weights:
-        # modify_inhibition_weight(w)
+        modify_inhibition_weight(w)
         for d in spot_diameters:
-            # modify_diameter(2)
+            modify_diameter(d)
 
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
