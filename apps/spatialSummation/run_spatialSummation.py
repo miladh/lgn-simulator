@@ -32,7 +32,7 @@ if __name__ == "__main__":
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
-            tag = "d="+str(d)+ ", w_inhib="+str(2)
+            tag = "d="+str(d)+ ", w_inhib="+str(w)
 
             call(["smt", "run", os.path.basename(config_file), "-r "+ reason, "-t" +tag])
 
