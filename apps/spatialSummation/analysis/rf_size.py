@@ -3,47 +3,69 @@ import os, sys
 from argparse import ArgumentParser
 import numpy as np
 import matplotlib.pyplot as mplt
+from scipy import io
 
 current_path = os.path.dirname(os.path.realpath(__file__))
-lib_path = [os.path.abspath(os.path.join(current_path,"../../../tools/sumatraTracking")),
-           os.path.abspath(os.path.join(current_path,"../../../tools/analysis"))]
-[sys.path.append(path) for path in lib_path]
-import Simulation
-import get_simulations
-import plotting_tools as plt
+sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
+
+import sumatraTracking.get_simulations as smt
 
 parser = ArgumentParser()
 parser.add_argument("sim_ids", help = "simulation ids")
-parser.add_argument("record", help = "record results", type = int)
 args = parser.parse_args()
 sim_ids = args.sim_ids
-record = args.record
 
-sims, output_dir=get_simulations.get_simulation_environment(sim_ids, record=record)
+sims = smt.get_simulations(sim_ids)
 
+record = True
+output_dir = None
+if(record):
+    output_dir = smt.get_output_dir(sim_ids)
 
 # Analysis: --------------------------------------------------------------------
-cell_pos_x = np.linspace(0.5,0.7,5)
+cell_pos_x = 0.5
 cell_pos_y = cell_pos_x
 
-responses = np.zeros([len(cell_pos_x), len(sims)])
-spot_diameter = np.zeros(len(sims))
-
-fig = mplt.figure(figsize=(8,6))
-for i, (x, y) in enumerate(zip(cell_pos_x, cell_pos_y)):
+data = {"ganglion": {"spot_diameter": np.zeros(len(sims)),
+                    "responses": np.zeros(len(sims)) }
+        ,"relay":   {"spot_diameter": np.zeros(len(sims)),
+                            "responses": np.zeros(len(sims))}
+        ,"cortical":   {"spot_diameter": np.zeros(len(sims)),
+                                    "responses": np.zeros(len(sims)) }}
+for cell in data:
     for j, exp in enumerate(sims):
-        idx = exp.num_points * x
-        idy = exp.num_points * y
-        spot_diameter[j] = exp.stimulus.maskSize
-        responses[i,j] = np.mean(exp.singleCellTemporalResponse("ganglion", idx, idy))
+        idx = exp.integrator.nPointsSpatial * cell_pos_x
+        idy = exp.integrator.nPointsSpatial * cell_pos_y
+        data[cell]["spot_diameter"][j] = exp.stimulus.maskSize
+        print exp.stimulus.maskSize
+        res = exp.singleCellTemporalResponse(cell, idx, idy)
+        res = res[np.where(res  >= 0)]
+        data[cell]["responses"][j] = np.mean(res)
 
-    label = "{0:.2f}".format(cell_pos_x[i]) + "," + "{0:.2f}".format(cell_pos_y[i])
-    mplt.plot(spot_diameter, responses[i], "o-", label = label)
 
+# Plot:
+fig = mplt.figure(figsize=(8,6))
+mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "o--r", label = "ganglion")
+mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"], ">--b", label = "relay")
+mplt.plot(data["cortical"]["spot_diameter"], data["cortical"]["responses"], "<--g", label = "cortical")
 
-mplt.xlabel("Spot diameter", fontsize= 16)
+# mplt.ylim(0., 1.)
+mplt.xlabel(r"Spot diameter [deg]", fontsize= 16)
 mplt.ylabel("Response",fontsize= 16)
 mplt.tight_layout()
-mplt.legend(loc=4)
+mplt.legend(loc=1)
 mplt.show()
-fig.savefig(os.path.join(output_dir, "rat_cellResponse.png"))
+if record : fig.savefig(os.path.join(output_dir, "area_response.png"))
+
+
+fig = mplt.figure(figsize=(8,6))
+mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"]/ (data["ganglion"]["responses"]).max(), "o--r", label = "ganglion")
+mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"]/(data["relay"]["responses"]).max(), ">--b", label = "relay")
+mplt.plot(data["cortical"]["spot_diameter"], data["cortical"]["responses"]/ (data["cortical"]["responses"]).max(), "<--g", label = "cortical")
+
+mplt.xlabel(r"Spot diameter [deg]", fontsize= 16)
+mplt.ylabel("Normalized response",fontsize= 16)
+mplt.tight_layout()
+mplt.legend(loc=1)
+mplt.show()
+if record : fig.savefig(os.path.join(output_dir, "area_response_normalized.png"))
