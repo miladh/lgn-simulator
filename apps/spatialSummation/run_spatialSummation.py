@@ -36,13 +36,13 @@ if __name__ == "__main__":
     for w in weights:
         modify_inhibition_weight(w)
         for d in spot_diameters:
-            modify_diameter(d)
+            modify_diameter(2)
 
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
-            tag = "d="+str(d)+ ", w_inhib="+str(w)
+            tag = "d="+str(d)+ ", w_inhib="+str(2)
 
             call(["smt", "run", os.path.basename(config_file), "-r "+ reason, "-t" +tag])
 
-    os.remove(config_file)
+    # os.remove(config_file)
