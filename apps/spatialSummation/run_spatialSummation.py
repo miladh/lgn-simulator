@@ -19,8 +19,8 @@ def modify_inhibition_weight(w):
     config_data["interneuron"]["Kic"]["spatial"]["A"] = str(w)
 
 if __name__ == "__main__":
-    spot_diameters = np.linspace(0, 0.9, 1)
-    weights = np.linspace(0.1, 2, 1)
+    spot_diameters = np.linspace(0, 0.9, 30)
+    weights = np.linspace(0.1, 2, 5)
 
     reason = "Test the effect inhibition weight on area summation curves"
 
