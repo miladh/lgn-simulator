@@ -12,20 +12,11 @@ config_file = os.path.abspath(os.path.join(current_path,"tmp.yaml"))
 with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
-
-
-
 def modify_diameter(d):
     config_data["stimulus"]["maskSize"] = str(d)
 
 def modify_inhibition_weight(w):
     config_data["interneuron"]["Kic"]["spatial"]["A"] = str(w)
-
-
-
-
-
-
 
 if __name__ == "__main__":
     spot_diameters = np.linspace(0, 0.9, 1)
@@ -45,4 +36,4 @@ if __name__ == "__main__":
 
             call(["smt", "run", os.path.basename(config_file), "-r "+ reason, "-t" +tag])
 
-    # os.remove(config_file)
+    os.remove(config_file)
