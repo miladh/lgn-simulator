@@ -34,9 +34,9 @@ if __name__ == "__main__":
     reason = "Test the effect inhibition weight on area summation curves"
 
     for w in weights:
-        modify_inhibition_weight(w)
+        # modify_inhibition_weight(w)
         for d in spot_diameters:
-            modify_diameter(2)
+            # modify_diameter(2)
 
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
