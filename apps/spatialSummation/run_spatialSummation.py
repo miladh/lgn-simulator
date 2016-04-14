@@ -27,19 +27,22 @@ def modify_inhibition_weight(w):
 
 
 
-# if __name__ == "__main__":
-spot_diameters = np.linspace(0, 0.9, 2)
-weights = np.linspace(0.1, 2, 2)
+if __name__ == "__main__":
+    spot_diameters = np.linspace(0, 0.9, 2)
+    weights = np.linspace(0.1, 2, 2)
 
-for w in weights:
-    modify_inhibition_weight(w)
-    for d in spot_diameters:
-        modify_diameter(d)
+    reason = "Test the effect inhibition weight on area summation curves"
 
-        with open(config_file, 'w') as stream:
-            yaml.dump(config_data, stream)
-        print os.path.basename(config_file)
-        call(["smt", "run", os.path.basename(config_file), "-t w= " + str(w),
-        "inhibitionWeight="+str(w), "maskSize="+str(d)])
+    for w in weights:
+        modify_inhibition_weight(w)
+        for d in spot_diameters:
+            modify_diameter(d)
 
-os.remove(config_file)
+            with open(config_file, 'w') as stream:
+                yaml.dump(config_data, stream)
+
+            tag = ["d="+str(d), "w_inhib="+str(w)]
+            call(["smt", "run", os.path.basename(config_file),
+            "-r ", reason, "-t ", tag])
+
+    os.remove(config_file)
