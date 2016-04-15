@@ -64,7 +64,7 @@ imshow(G, extent = extent, origin="upper", interpolation=internpolation, aspect=
 xlabel(r"Spot diameter [deg]", fontsize= 16)
 ylabel(r"$\frac{w_{ic}}{w_{rc}}$",fontsize= 25)
 colorbar()
-if record : fig.savefig(os.path.join(output_dir, "w_vs_d_ganglion.png"))
+if record : savefig(os.path.join(output_dir, "w_vs_d_ganglion.png"))
 
 figure()
 title("Interneuron")
@@ -72,7 +72,7 @@ imshow(I, extent = extent, origin="upper", interpolation=internpolation,aspect='
 xlabel(r"Spot diameter [deg]", fontsize= 16)
 ylabel(r"$\frac{w_{ic}}{w_{rc}}$",fontsize= 25)
 colorbar()
-if record : fig.savefig(os.path.join(output_dir, "w_vs_d_interneuron.png"))
+if record : savefig(os.path.join(output_dir, "w_vs_d_interneuron.png"))
 
 figure()
 title("Relay")
@@ -80,7 +80,7 @@ imshow(R, extent = extent, origin="upper", interpolation=internpolation,aspect='
 xlabel(r"Spot diameter [deg]", fontsize= 16)
 ylabel(r"$\frac{w_{ic}}{w_{rc}}$",fontsize= 25)
 colorbar()
-if record : fig.savefig(os.path.join(output_dir, "w_vs_d_relay.png"))
+if record : savefig(os.path.join(output_dir, "w_vs_d_relay.png"))
 
 
 figure()
@@ -90,7 +90,7 @@ legend()
 title("Ganglion")
 xlabel(r"Spot diameter [deg]", fontsize= 16)
 ylabel("response",fontsize= 16)
-if record : fig.savefig(os.path.join(output_dir, "area_response_ganglion.png"))
+if record : savefig(os.path.join(output_dir, "area_response_ganglion.png"))
 
 figure()
 for i in range(1,len(weights),7):
@@ -99,7 +99,7 @@ legend()
 title("Interneuron")
 xlabel(r"Spot diameter [deg]", fontsize= 16)
 ylabel("response",fontsize= 16)
-if record : fig.savefig(os.path.join(output_dir, "area_response_interneuron.png"))
+if record : savefig(os.path.join(output_dir, "area_response_interneuron.png"))
 
 
 figure()
@@ -109,4 +109,4 @@ legend()
 title("Relay")
 xlabel(r"Spot diameter [deg]", fontsize= 16)
 ylabel("response",fontsize= 16)
-if record : fig.savefig(os.path.join(output_dir, "area_response_relay.png"))
+if record : savefig(os.path.join(output_dir, "area_response_relay.png"))
