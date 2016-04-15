@@ -16,3 +16,6 @@ class Stimulus:
             values = stim_group[str(space)]
             data = np.array(values)
             setattr(self, space, data)
+
+    def __getitem__(self, key):
+        return self[key]

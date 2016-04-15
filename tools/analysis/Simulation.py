@@ -30,6 +30,9 @@ class Simulation:
         # self.zeroOutsmallValues()
         # self.normalize()
 
+    def __getitem__(self, key):
+        return self[key]
+
     def zeroOutsmallValues(self):
         for cell in self.cell_types:
             cell_type = getattr(self, cell)

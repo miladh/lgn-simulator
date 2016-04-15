@@ -29,6 +29,8 @@ data = {"ganglion": {"spot_diameter": np.zeros(len(sims)),
                     "responses": np.zeros(len(sims)) }
         ,"relay":   {"spot_diameter": np.zeros(len(sims)),
                             "responses": np.zeros(len(sims))}
+        ,"interneuron":   {"spot_diameter": np.zeros(len(sims)),
+                            "responses": np.zeros(len(sims))}
         ,"cortical":   {"spot_diameter": np.zeros(len(sims)),
                                     "responses": np.zeros(len(sims)) }}
 for cell in data:
@@ -37,13 +39,14 @@ for cell in data:
         idy = exp.integrator.nPointsSpatial * cell_pos_y
         data[cell]["spot_diameter"][j] = exp.stimulus.maskSize
         res = exp.singleCellTemporalResponse(cell, idx, idy)
-        res = res[np.where(res  >= 0)]
+        # res = res[np.where(res  >= 0)]
         data[cell]["responses"][j] = np.mean(res)
 
 
 # Plot:
 fig = mplt.figure(figsize=(8,6))
 mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "o--r", label = "ganglion")
+mplt.plot(data["interneuron"]["spot_diameter"], data["interneuron"]["responses"], "^--m", label = "interneuron")
 mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"], ">--b", label = "relay")
 mplt.plot(data["cortical"]["spot_diameter"], data["cortical"]["responses"], "<--g", label = "cortical")
 
@@ -58,6 +61,7 @@ if record : fig.savefig(os.path.join(output_dir, "area_response.png"))
 
 fig = mplt.figure(figsize=(8,6))
 mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"]/ (data["ganglion"]["responses"]).max(), "o--r", label = "ganglion")
+mplt.plot(data["interneuron"]["spot_diameter"], data["interneuron"]["responses"]/(data["interneuron"]["responses"]).max(), "^--m", label = "interneuron")
 mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"]/(data["relay"]["responses"]).max(), ">--b", label = "relay")
 mplt.plot(data["cortical"]["spot_diameter"], data["cortical"]["responses"]/ (data["cortical"]["responses"]).max(), "<--g", label = "cortical")
 

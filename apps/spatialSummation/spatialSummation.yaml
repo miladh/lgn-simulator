@@ -93,8 +93,8 @@ interneuron:
     Kig:
         spatial:
         # Gaussian
-            A: 1.0
-            a: 0.05
+            A: 0.5
+            a: 0.1
 
 
         temporal:
@@ -106,7 +106,7 @@ interneuron:
     Kic:
         spatial:
         #Gauss
-            A: 1.
+            A: 1.0
             a: 0.83
 
         temporal:

@@ -448,7 +448,7 @@ if __name__ == "__main__":
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
 
-    # plt.show()
+    plt.show()
 
 
 
