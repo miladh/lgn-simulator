@@ -18,8 +18,8 @@ stimulus:
     mask: "circle" # none/circle
     maskSize: 0.5
     orientation: 0.   #degrees
-    kId:  5           #[-Ns/2, Ns/2 - 1]
-    wId:  2           #[-Nt/2, Nt/2 - 1]
+    kId:  0           #[-Ns/2, Ns/2 - 1]
+    wId:  0           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
 ganglion:
@@ -57,7 +57,7 @@ relay:
 
         temporal:
         # TemporalDelta
-            delay: 0.05
+            delay: 0
             dt: *dt_id
     Kri:
         spatial:
@@ -68,7 +68,7 @@ relay:
 
         temporal:
         # TemporalDelta
-            delay: 0.05
+            delay: 0
             dt: *dt_id
 
     Krc:
@@ -79,7 +79,7 @@ relay:
 
         temporal:
         # TemporalDelta
-            delay: 0.1
+            delay: 0.
             dt: *dt_id
 
 interneuron:
@@ -99,7 +99,7 @@ interneuron:
 
         temporal:
         # TemporalDelta
-            delay: 0.05
+            delay: 0
             dt: *dt_id
 
 
@@ -111,7 +111,7 @@ interneuron:
 
         temporal:
         # TemporalDelta
-            delay: 0.1
+            delay: 0.
             dt: *dt_id
 
 cortical:
@@ -131,7 +131,7 @@ cortical:
 
         temporal:
         # TemporalDelta
-            delay: 0.1
+            delay: 0.
             dt: *dt_id
 
 
