@@ -125,7 +125,7 @@ cortical:
     Kcr:
         spatial:
         # SpatialDelta
-            weight: 1.0001
+            weight: 0.99
             ds : *ds_id
             shift: [0.0, 0.]
 
