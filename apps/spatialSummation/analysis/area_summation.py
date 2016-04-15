@@ -45,8 +45,8 @@ for cell in data:
 
 # Plot:
 fig = mplt.figure(figsize=(8,6))
-# mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "o--r", label = "ganglion")
-# mplt.plot(data["interneuron"]["spot_diameter"], data["interneuron"]["responses"], "^--m", label = "interneuron")
+mplt.plot(data["ganglion"]["spot_diameter"], data["ganglion"]["responses"], "o--r", label = "ganglion")
+mplt.plot(data["interneuron"]["spot_diameter"], data["interneuron"]["responses"], "^--m", label = "interneuron")
 mplt.plot(data["relay"]["spot_diameter"], data["relay"]["responses"], ">--b", label = "relay")
 mplt.plot(data["cortical"]["spot_diameter"], data["cortical"]["responses"], "<--g", label = "cortical")
 
