@@ -18,21 +18,25 @@ def modify_diameter(d):
 def modify_inhibition_weight(w):
     config_data["interneuron"]["Kic"]["spatial"]["A"] = str(w)
 
-if __name__ == "__main__":
-    spot_diameters = np.linspace(0, 0.9, 10)
-    weights = np.linspace(0.0, 1, 1)
+def modify_fb_weight(w):
+    config_data["relay"]["Krc"]["spatial"]["A"] = str(w)
 
-    reason = "Test the effect inhibition weight when 0 on area summation curves"
+if __name__ == "__main__":
+    spot_diameters = np.linspace(0, 0.9, 20)
+    weights = np.linspace(0.1, 2, 20)
+
+    reason = "Test the effect feedback weight on area summation curves"
 
     for w in weights:
         modify_inhibition_weight(w)
+        modify_fb_weight(w)
         for d in spot_diameters:
             modify_diameter(d)
 
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
-            tag = "w_inhib-to-0"
+            tag = "w_c_vs_d"
 
             call(["smt", "run", os.path.basename(config_file), "-r "+ reason, "-t" +tag])
 
