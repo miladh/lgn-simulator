@@ -106,7 +106,7 @@ interneuron:
     Kic:
         spatial:
         #Gauss
-            A: 1.0
+            A: 0.0
             a: 0.83
 
         temporal:
@@ -125,7 +125,7 @@ cortical:
     Kcr:
         spatial:
         # SpatialDelta
-            weight: 1.0
+            weight: 1.0001
             ds : *ds_id
             shift: [0.0, 0.]
 
