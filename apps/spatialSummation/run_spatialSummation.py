@@ -22,7 +22,7 @@ def modify_fb_weight(w):
     config_data["relay"]["Krc"]["spatial"]["A"] = str(w)
 
 def modify_Kri(w):
-    config_data["relay"]["Kri"]["weight"]["A"] = str(w)
+    config_data["relay"]["Kri"]["weight"]["A"] = str(-w)
 
 if __name__ == "__main__":
     spot_diameters = np.linspace(0, 0.9, 20)
