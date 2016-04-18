@@ -25,10 +25,10 @@ def modify_Kri(w):
     config_data["relay"]["Kri"]["spatial"]["weight"]= str(-w)
 
 if __name__ == "__main__":
-    spot_diameters = np.linspace(0, 0.9, 10)
-    weights = np.linspace(0.1, 2, 10)
+    spot_diameters = np.linspace(0, 0.9, 20)
+    weights = np.linspace(0.1, 2, 20)
 
-    reason = "Test the effect of Kri on area summation curves"
+    reason = "Test the effect of Kri on area summation curves with delay"
 
     for w in weights:
         # modify_inhibition_weight(w)
@@ -40,7 +40,7 @@ if __name__ == "__main__":
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
-            tag = "Kri_vs_d"
+            tag = "Kri_vs_d_with_delay"
 
             call(["smt", "run", os.path.basename(config_file), "-i"+config_file, "-r "+ reason, "-t" +tag])
 
