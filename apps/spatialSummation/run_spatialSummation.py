@@ -22,11 +22,11 @@ def modify_fb_weight(w):
     config_data["relay"]["Krc"]["spatial"]["A"] = str(w)
 
 def modify_Kri(w):
-    config_data["relay"]["Kri"]["weight"]= str(-w)
+    config_data["relay"]["Kri"]["spatial"]["weight"]= str(-w)
 
 if __name__ == "__main__":
-    spot_diameters = np.linspace(0, 0.9, 20)
-    weights = np.linspace(0.1, 2, 20)
+    spot_diameters = np.linspace(0, 0.9, 4)
+    weights = np.linspace(0.1, 2, 4)
 
     reason = "Test the effect of Kri on area summation curves"
 
