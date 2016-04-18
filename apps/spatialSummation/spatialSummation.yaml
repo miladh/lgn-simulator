@@ -62,7 +62,7 @@ relay:
     Kri:
         spatial:
         # SpatialDelta
-            weight: -1.1
+            weight: -1.0
             ds : *ds_id
             shift: [0.0, 0.0]
 
