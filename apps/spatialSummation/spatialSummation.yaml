@@ -26,7 +26,7 @@ ganglion:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
+    storeImpulseResponse: false
     storeImpulseResponseFT: false
     Wg:
     # DOG
@@ -43,7 +43,7 @@ relay:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
+    storeImpulseResponse: false
     storeImpulseResponseFT: false
 
     #Kernels
@@ -62,7 +62,7 @@ relay:
     Kri:
         spatial:
         # SpatialDelta
-            weight: -1.0
+            weight: -1.1
             ds : *ds_id
             shift: [0.0, 0.0]
 
@@ -86,7 +86,7 @@ interneuron:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
+    storeImpulseResponse: false
     storeImpulseResponseFT: false
 
     #Kernels
@@ -118,7 +118,7 @@ cortical:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
+    storeImpulseResponse: false
     storeImpulseResponseFT: false
 
     #kernels
