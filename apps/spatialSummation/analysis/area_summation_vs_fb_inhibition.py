@@ -84,7 +84,7 @@ if record : savefig(os.path.join(output_dir, "w_vs_d_relay.png"))
 
 
 figure()
-for i in range(1,len(weights),7):
+for i in range(0,len(weights),1):
     plot(d,G[i,:], label=r"$K_{ri}=$"+'{0:.2f}'.format(weights[i]))
 legend()
 title("Ganglion")
@@ -93,7 +93,7 @@ ylabel("response",fontsize= 16)
 if record : savefig(os.path.join(output_dir, "area_response_ganglion.png"))
 
 figure()
-for i in range(1,len(weights),7):
+for i in range(0,len(weights),1):
     plot(d,I[i,:], label=r"$K_{ri}=$"+'{0:.2f}'.format(weights[i]))
 legend()
 title("Interneuron")
@@ -103,7 +103,7 @@ if record : savefig(os.path.join(output_dir, "area_response_interneuron.png"))
 
 
 figure()
-for i in range(1,len(weights),7):
+for i in range(0,len(weights),1):
     plot(d, R[i,:], label=r"$K_{ri}=$"+'{0:.2f}'.format(weights[i]))
 legend()
 title("Relay")
