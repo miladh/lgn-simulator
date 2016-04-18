@@ -38,6 +38,6 @@ if __name__ == "__main__":
 
             tag = "w_c_vs_d"
 
-            call(["smt", "run", os.path.basename(config_file), "-r "+ reason, "-t" +tag])
+            call(["smt", "run", os.path.basename(config_file), "-i"+config_file, "-r "+ reason, "-t" +tag])
 
     os.remove(config_file)
