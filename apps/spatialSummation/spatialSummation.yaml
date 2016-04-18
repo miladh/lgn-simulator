@@ -106,7 +106,7 @@ interneuron:
     Kic:
         spatial:
         #Gauss
-            A: 0.1
+            A: 1.0
             a: 0.83
 
         temporal:
