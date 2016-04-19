@@ -4,6 +4,7 @@
 #include <iostream>
 #include <armadillo>
 #include <H5Cpp.h>
+#include <boost/filesystem.hpp>
 
 #include "stimuli/stimulus.h"
 #include "neurons/neuron.h"
@@ -24,6 +25,7 @@ public:
     void writeResponse(const Neuron &neuron, const bool fourierTransform = true);
     void writeImpulseResponse(const Neuron &neuron,const bool fourierTransform = true);
     void writeStimulus(const Stimulus *stimuli, const bool fourierTransform = true);
+    void copyConfigFile(const string &configFilename);
 
 private:
     H5File *m_output;

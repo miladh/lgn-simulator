@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
 
     //Output manager:---------------------------------------------------------
     OutputManager io(cfg["OutputManager"]["outputFilename"].as<std::string>());
-
+    io.copyConfigFile(argv[1]);
     //Integrator--------------------------------------------------------------
     Integrator integrator = createIntegrator(cfg["grid"]);
     io.writeIntegratorProperties(integrator);

@@ -2,7 +2,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 LIBS += -llapack -larmadillo -lhdf5 -lhdf5_cpp -lfftw3 -lfftw3_omp -lfftw3_threads
-LIBS += -lyaml-cpp
+LIBS += -lyaml-cpp -lboost_system -lboost_filesystem
 LIBS += -L/usr/local/lib -lopencv_core -lopencv_highgui
 LIBS += -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lhdf5 -lhdf5_cpp
 

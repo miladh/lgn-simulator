@@ -11,11 +11,30 @@ using namespace lgnSimulator;
 OutputManager::OutputManager(const string& filename)
 {
     m_output = new H5File (filename, H5F_ACC_TRUNC);
+
 }
 OutputManager::~OutputManager()
 {
     delete m_output;
 }
+
+void OutputManager::copyConfigFile(const string& configFilename)
+{
+
+    boost::filesystem::path cfgPath(configFilename);
+    boost::filesystem::path p(m_output->getFileName());
+    boost::filesystem::path outputDir = p.parent_path();
+
+    string copiedFilePath;
+    copiedFilePath  = outputDir.string() + "/_" + cfgPath.filename().string();
+
+    boost::filesystem::copy_file(boost::filesystem::path(configFilename),
+                                 boost::filesystem::path(copiedFilePath),
+                                 boost::filesystem::copy_option::fail_if_exists);
+
+}
+
+
 
 void OutputManager::writeIntegratorProperties(const Integrator &integrator)
 {
@@ -201,8 +220,6 @@ void OutputManager::writeStimulus(const Stimulus* stimulus, const bool fourierTr
     }
 
 }
-
-
 
 
 
