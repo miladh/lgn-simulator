@@ -53,8 +53,8 @@ G = area_summation(data, "ganglion")
 C = area_summation(data, "cortical")
 
 d = sorted(data.keys())
-weights = np.linspace(2, 0.1, 10)
-internpolation = "none"
+weights = np.linspace(2, 0.1, 20)
+internpolation = "gaussian"
 cmap =cmaps.viridis
 
 extent = [min(d), max(d), min(weights), max(weights)]
