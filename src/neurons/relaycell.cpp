@@ -68,16 +68,15 @@ complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int kxi,
     complex<double> interneuronFB = interneuron(1);
     complex<double> corticalFB = corticalInput(kxi, kyi, wi);
 
-
-    if((1. - interneuronFB  - corticalFB )== complex<double>(0.0, 0.0)){
+    complex<double> fb = 1. - interneuronFB  - corticalFB;
+    if(fabs(fb.real()) < 1.e-10 && fabs(fb.imag()) < 1.e-10){
         cerr << "interneuronFB: " << interneuronFB
              << " corticalFB: "   << corticalFB   << endl;
         throw overflow_error("Divide by zero exception in relay feedback contribution");
     }
 
 
-    complex<double> Wr = (ganglionFF + interneuronFF)
-            /(complex<double>(1.0, 0.0) - interneuronFB - corticalFB);
+    complex<double> Wr = (ganglionFF + interneuronFF)/fb;
 
     return Wr;
 }

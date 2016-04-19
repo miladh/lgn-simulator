@@ -15,10 +15,10 @@ with open(config_file, 'r') as stream:
 def modify_diameter(d):
     config_data["stimulus"]["maskSize"] = str(d)
 
-def modify_inhibition_weight(w):
+def modify_Kic(w):
     config_data["interneuron"]["Kic"]["spatial"]["A"] = str(w)
 
-def modify_fb_weight(w):
+def modify_Krc(w):
     config_data["relay"]["Krc"]["spatial"]["A"] = str(w)
 
 def modify_Kri(w):
@@ -26,21 +26,21 @@ def modify_Kri(w):
 
 if __name__ == "__main__":
     spot_diameters = np.linspace(0, 0.9, 20)
-    weights = np.linspace(0.1, 2, 20)
+    weights = np.linspace(0.1, 1.8, 20)
 
-    reason = "Test the effect of Kri on area summation curves with delay"
+    reason = "Test the effect of Kic on area summation curves with delay"
 
     for w in weights:
-        # modify_inhibition_weight(w)
-        # modify_fb_weight(w)
-        modify_Kri(w)
+        modify_Kic(w)
+        # modify_Krc(w)
+        # modify_Kri(w)
         for d in spot_diameters:
             modify_diameter(d)
 
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
-            tag = "Kri_vs_d_with_delay"
+            tag = "Kic_vs_d_with_delay"
 
             call(["smt", "run", os.path.basename(config_file), "-i"+config_file, "-r "+ reason, "-t" +tag])
 
