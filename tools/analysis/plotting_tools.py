@@ -438,12 +438,13 @@ if __name__ == "__main__":
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
     data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
-    # plt.figure()
-    # plt.plot(exp.integrator.timeVec, exp.ganglion.response["spatioTemporal"][:, Ns/2,Ns/2], label = "G")
-    # plt.plot(exp.integrator.timeVec, exp.relay.response["spatioTemporal"][:, Ns/2,Ns/2], label = "R")
-    # plt.plot(exp.integrator.timeVec, exp.interneuron.response["spatioTemporal"][:, Ns/2,Ns/2], label = "I")
-    # plt.plot(exp.integrator.timeVec, exp.cortical.response["spatioTemporal"][:, Ns/2,Ns/2], label = "C")
-    # plt.legend()
+    # data = [ S, Rg, Rr, Ri, Rc]
+    plt.figure()
+    plt.plot(exp.integrator.timeVec, exp.ganglion.response["spatioTemporal"][:, Ns/2,Ns/2], label = "G")
+    plt.plot(exp.integrator.timeVec, exp.relay.response["spatioTemporal"][:, Ns/2,Ns/2], label = "R")
+    plt.plot(exp.integrator.timeVec, exp.interneuron.response["spatioTemporal"][:, Ns/2,Ns/2], label = "I")
+    plt.plot(exp.integrator.timeVec, exp.cortical.response["spatioTemporal"][:, Ns/2,Ns/2], label = "C")
+    plt.legend()
     animateImshowPlots(data, exp.integrator.temporalResolution,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
