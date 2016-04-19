@@ -53,7 +53,7 @@ G = area_summation(data, "ganglion")
 C = area_summation(data, "cortical")
 
 d = sorted(data.keys())
-weights = np.linspace(2, 0.1, 20)
+weights = np.linspace(1.8, 0.1, 20)
 internpolation = "gaussian"
 cmap =cmaps.viridis
 
@@ -62,7 +62,7 @@ figure()
 title("Ganglion")
 imshow(G, extent = extent, origin="upper", interpolation=internpolation, aspect='auto', cmap =cmap)
 xlabel(r"Spot diameter [deg]", fontsize= 16)
-ylabel(r"$K_{ri}$",fontsize= 25)
+ylabel(r"$K_{ic}$",fontsize= 25)
 colorbar()
 if record : savefig(os.path.join(output_dir, "w_vs_d_ganglion.png"))
 
@@ -70,7 +70,7 @@ figure()
 title("Interneuron")
 imshow(I, extent = extent, origin="upper", interpolation=internpolation,aspect='auto', cmap =cmap)
 xlabel(r"Spot diameter [deg]", fontsize= 16)
-ylabel(r"$K_{ri}$",fontsize= 25)
+ylabel(r"$K_{ic}$",fontsize= 25)
 colorbar()
 if record : savefig(os.path.join(output_dir, "w_vs_d_interneuron.png"))
 
@@ -78,14 +78,14 @@ figure()
 title("Relay")
 imshow(R, extent = extent, origin="upper", interpolation=internpolation,aspect='auto', cmap =cmap)
 xlabel(r"Spot diameter [deg]", fontsize= 16)
-ylabel(r"$K_{ri}$",fontsize= 25)
+ylabel(r"$K_{ic}$",fontsize= 25)
 colorbar()
 if record : savefig(os.path.join(output_dir, "w_vs_d_relay.png"))
 
 
 figure()
 for i in range(1,len(weights),3):
-    plot(d,G[i,:], label=r"$K_{ri}=$"+'{0:.2f}'.format(weights[i]))
+    plot(d,G[i,:], label=r"$K_{ic}=$"+'{0:.2f}'.format(weights[i]))
 legend()
 title("Ganglion")
 xlabel(r"Spot diameter [deg]", fontsize= 16)
@@ -94,7 +94,7 @@ if record : savefig(os.path.join(output_dir, "area_response_ganglion.png"))
 
 figure()
 for i in range(1,len(weights),3):
-    plot(d,I[i,:], label=r"$K_{ri}=$"+'{0:.2f}'.format(weights[i]))
+    plot(d,I[i,:], label=r"$K_{ic}=$"+'{0:.2f}'.format(weights[i]))
 legend()
 title("Interneuron")
 xlabel(r"Spot diameter [deg]", fontsize= 16)
@@ -104,7 +104,7 @@ if record : savefig(os.path.join(output_dir, "area_response_interneuron.png"))
 
 figure()
 for i in range(1,len(weights),3):
-    plot(d, R[i,:], label=r"$K_{ri}=$"+'{0:.2f}'.format(weights[i]))
+    plot(d, R[i,:], label=r"$K_{ic}=$"+'{0:.2f}'.format(weights[i]))
 legend()
 title("Relay")
 xlabel(r"Spot diameter [deg]", fontsize= 16)
