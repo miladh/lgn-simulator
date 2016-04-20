@@ -13,16 +13,16 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 def modify_diameter(d):
-    config_data["stimulus"]["maskSize"] = d
+    config_data["stimulus"]["maskSize"] = float(d)
 
 def modify_Kic(w):
-    config_data["interneuron"]["Kic"]["spatial"]["A"] = w
+    config_data["interneuron"]["Kic"]["spatial"]["A"] = float(w)
 
 def modify_Krc(w):
-    config_data["relay"]["Krc"]["spatial"]["A"] = w
+    config_data["relay"]["Krc"]["spatial"]["A"] = float(w)
 
 def modify_Kri(w):
-    config_data["relay"]["Kri"]["spatial"]["weight"]= -w
+    config_data["relay"]["Kri"]["spatial"]["weight"]= float(-w)
 
 if __name__ == "__main__":
     spot_diameters = np.linspace(0, 0.9, 20)
