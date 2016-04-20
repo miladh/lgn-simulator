@@ -23,7 +23,7 @@ def run_simulator(config_file):
     output_file = os.path.join(output_dir, run_id + ".h5")
     print "output_file: ", output_file
 
-    config_data["OutputManager"]["outputFilename"] = unicode(output_file)
+    config_data["OutputManager"]["outputFilename"] = output_file
     with open(config_file, 'w') as stream:
         yaml.dump(config_data, stream,default_flow_style=False, encoding='utf-8', allow_unicode=True)
 
