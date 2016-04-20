@@ -13,16 +13,16 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 def modify_diameter(d):
-    config_data["stimulus"]["maskSize"] = str(d)
+    config_data["stimulus"]["maskSize"] = d
 
 def modify_Kic(w):
-    config_data["interneuron"]["Kic"]["spatial"]["A"] = str(w)
+    config_data["interneuron"]["Kic"]["spatial"]["A"] = w
 
 def modify_Krc(w):
-    config_data["relay"]["Krc"]["spatial"]["A"] = str(w)
+    config_data["relay"]["Krc"]["spatial"]["A"] = w
 
 def modify_Kri(w):
-    config_data["relay"]["Kri"]["spatial"]["weight"]= str(-w)
+    config_data["relay"]["Kri"]["spatial"]["weight"]= -w
 
 if __name__ == "__main__":
     spot_diameters = np.linspace(0, 0.9, 20)
@@ -38,7 +38,7 @@ if __name__ == "__main__":
             modify_diameter(d)
 
             with open(config_file, 'w') as stream:
-                yaml.dump(config_data, stream)
+                yaml.safe_dump(config_data, stream)
 
             tag = "Kc_vs_d_with_delay"
 
