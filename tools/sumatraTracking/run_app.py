@@ -25,7 +25,7 @@ def run_simulator(config_file):
 
     config_data["OutputManager"]["outputFilename"] = str(output_file)
     with open(config_file, 'w') as stream:
-        yaml.safe_dump(config_data, stream)
+        yaml.dump(config_data, stream)
 
     build_path = os.path.abspath(os.path.join(current_path, "../../../build"))
     project_path = os.path.abspath(os.path.join(current_path, "../.."))
