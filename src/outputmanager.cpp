@@ -30,7 +30,7 @@ void OutputManager::copyConfigFile(const string& configFilename)
 
     boost::filesystem::copy_file(boost::filesystem::path(configFilename),
                                  boost::filesystem::path(copiedFilePath),
-                                 boost::filesystem::copy_option::fail_if_exists);
+                                 boost::filesystem::copy_option::overwrite_if_exists);
 
 }
 
