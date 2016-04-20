@@ -23,9 +23,9 @@ def run_simulator(config_file):
     output_file = os.path.join(output_dir, run_id + ".h5")
     print "output_file: ", output_file
 
-    config_data["OutputManager"]["outputFilename"] = unicode(output_file)
+    config_data["OutputManager"]["outputFilename"] = str(output_file)
     with open(config_file, 'w') as stream:
-        yaml.dump(config_data, stream)
+        yaml.safe_dump(config_data, stream)
 
     build_path = os.path.abspath(os.path.join(current_path, "../../../build"))
     project_path = os.path.abspath(os.path.join(current_path, "../.."))
