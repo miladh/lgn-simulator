@@ -25,8 +25,7 @@ def run_simulator(config_file):
 
     config_data["OutputManager"]["outputFilename"] = unicode(output_file)
     with open(config_file, 'w') as stream:
-        print yaml.safe_dump(config_data, stream, encoding='utf-8', allow_unicode=True)
-        yaml.safe_dump(config_data, stream, encoding='utf-8', allow_unicode=True)
+        yaml.dump(config_data, stream,default_flow_style=False, encoding='utf-8', allow_unicode=True)
 
     build_path = os.path.abspath(os.path.join(current_path, "../../../build"))
     project_path = os.path.abspath(os.path.join(current_path, "../.."))
