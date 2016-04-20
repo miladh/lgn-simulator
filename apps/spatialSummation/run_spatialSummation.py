@@ -38,7 +38,7 @@ if __name__ == "__main__":
             modify_diameter(d)
 
             with open(config_file, 'w') as stream:
-                yaml.dump(config_data, stream)
+                yaml.safe_dump(config_data, stream)
 
             tag = "Kc_vs_d_with_delay"
 
