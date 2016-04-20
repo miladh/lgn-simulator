@@ -23,6 +23,9 @@ def run_simulator(config_file):
     output_file = os.path.join(output_dir, run_id + ".h5")
     print "output_file: ", output_file
 
+    for a in config_data:
+        config_data[a] = str(config_data[a])
+
     config_data["OutputManager"]["outputFilename"] = str(output_file)
     with open(config_file, 'w') as stream:
         yaml.safe_dump(config_data, stream,default_flow_style=False)
