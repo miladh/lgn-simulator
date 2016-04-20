@@ -14,6 +14,7 @@ def run_simulator(config_file):
 
     with open(config_file, 'r') as stream:
         config_data = yaml.load(stream)
+        config_data["sumatra_label"] = str(config_data["sumatra_label"])
         run_id = config_data["sumatra_label"]
 
     output_dir = os.path.join(os.path.abspath(load_project().data_store.root), run_id)
@@ -22,9 +23,6 @@ def run_simulator(config_file):
 
     output_file = os.path.join(output_dir, run_id + ".h5")
     print "output_file: ", output_file
-
-    for a in config_data:
-        config_data[a] = str(config_data[a])
 
     config_data["OutputManager"]["outputFilename"] = str(output_file)
     with open(config_file, 'w') as stream:
