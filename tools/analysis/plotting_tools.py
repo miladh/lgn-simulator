@@ -371,10 +371,11 @@ if __name__ == "__main__":
     import Simulation as sim
     plt.close("all")
 
-    outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
-    outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/spatialSummation/20160506-110047/20160506-110047.h5"
+    # outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
+    outputFile =  "/media/milad/scratch/lgn-simulator/simulations/spatialSummation/20160506-114119/20160506-114119.h5"
 
-    outputFile = glob(outputFilePath)[0]
+    # outputFile = glob(outputFilePath)[0]
+    # print outputFile
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(None, f)
 
