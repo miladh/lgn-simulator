@@ -116,6 +116,73 @@ void OutputManager::writeIntegratorProperties(const Integrator &integrator)
 
 
 
+void OutputManager::writeStimulusProperties(const Stimulus* stimulus)
+{
+
+    // Write stimuli
+    Group stim = m_output->createGroup("/stimulus");
+    string type = stimulus->type();
+
+    Attribute type_a(stim.createAttribute("type", StrType(PredType::C_S1, 64), H5S_SCALAR));
+    type_a.write( StrType(PredType::C_S1, 64), (&type)->c_str());
+
+
+    if (const  Grating * gratingStimulus = dynamic_cast<const Grating*>(stimulus) ) {
+        double C = gratingStimulus->contrast();
+        double maskSize = gratingStimulus->maskSize();
+        string mask = gratingStimulus->mask();
+        vec2 k = gratingStimulus->kVec();
+        double orientation = gratingStimulus->orientation(true);
+        double spatialFreq = gratingStimulus->spatialFreq();
+        double w = gratingStimulus->temporalFreq();
+
+        Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute mask_a(stim.createAttribute("mask", StrType(PredType::C_S1, 64), H5S_SCALAR));
+        Attribute maskSize_a(stim.createAttribute("mask_size",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute k_a(stim.createAttribute("spatial_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute orientation_a(stim.createAttribute("orientation",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute kx_a(stim.createAttribute("kx",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute ky_a(stim.createAttribute("ky",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute w_a(stim.createAttribute("temporal_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+
+
+
+        C_a.write(PredType::NATIVE_DOUBLE, &C);
+        mask_a.write( StrType(PredType::C_S1, 64), (&mask)->c_str());
+        maskSize_a.write(PredType::NATIVE_DOUBLE, &maskSize);
+        k_a.write(PredType::NATIVE_DOUBLE, &spatialFreq);
+        orientation_a.write(PredType::NATIVE_DOUBLE, &orientation);
+        kx_a.write(PredType::NATIVE_DOUBLE, &k(0));
+        ky_a.write(PredType::NATIVE_DOUBLE, &k(1));
+        w_a.write(PredType::NATIVE_DOUBLE, &w);
+    }
+}
+
+void OutputManager::writeStimulus(const Stimulus* stimulus,
+                                  const bool fourierTransform)
+{
+
+    herr_t status = H5Eset_auto1(NULL, NULL);
+    status = H5Gget_objinfo (m_output->getId(), "/stimulus", 0, NULL);
+
+    if (!status == 0){
+        writeStimulusProperties(stimulus);
+    }
+
+    // Write stimuli
+    Group stim = m_output->openGroup("/stimulus");
+
+    fcube realStim = conv_to<fcube>::from(stimulus->spatioTemporal());
+    writeDataSet(realStim, &stim, "spatio_temporal");
+
+    if(fourierTransform){
+        fcube complexStim = conv_to<fcube>::from(real(stimulus->fourierTransform()));
+        writeDataSet(complexStim, &stim, "fourier_transform");
+    }
+
+}
+
+
 void OutputManager::writeResponse(const Neuron& neuron,
                                   const bool fourierTransform)
 {
@@ -164,59 +231,6 @@ void OutputManager::writeImpulseResponse(const Neuron& neuron,
         fcube impulseResponseFT =
                 conv_to<fcube>::from(real(neuron.impulseResponseFourierTransform()));
         writeDataSet(impulseResponseFT, &impRes, "fourier_transform");
-    }
-
-}
-
-
-void OutputManager::writeStimulus(const Stimulus* stimulus, const bool fourierTransform)
-{
-
-    // Write stimuli
-    Group stim = m_output->createGroup("/stimulus");
-    string type = stimulus->type();
-
-    Attribute type_a(stim.createAttribute("type", StrType(PredType::C_S1, 64), H5S_SCALAR));
-    type_a.write( StrType(PredType::C_S1, 64), (&type)->c_str());
-
-
-    if (const  Grating * gratingStimulus = dynamic_cast<const Grating*>(stimulus) ) {
-        double C = gratingStimulus->contrast();
-        double maskSize = gratingStimulus->maskSize();
-        string mask = gratingStimulus->mask();
-        vec2 k = gratingStimulus->kVec();
-        double orientation = gratingStimulus->orientation(true);
-        double spatialFreq = gratingStimulus->spatialFreq();
-        double w = gratingStimulus->temporalFreq();
-
-        Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute mask_a(stim.createAttribute("mask", StrType(PredType::C_S1, 64), H5S_SCALAR));
-        Attribute maskSize_a(stim.createAttribute("mask_size",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute k_a(stim.createAttribute("spatial_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute orientation_a(stim.createAttribute("orientation",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute kx_a(stim.createAttribute("kx",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute ky_a(stim.createAttribute("ky",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute w_a(stim.createAttribute("temporal_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-
-
-
-        C_a.write(PredType::NATIVE_DOUBLE, &C);
-        mask_a.write( StrType(PredType::C_S1, 64), (&mask)->c_str());
-        maskSize_a.write(PredType::NATIVE_DOUBLE, &maskSize);
-        k_a.write(PredType::NATIVE_DOUBLE, &spatialFreq);
-        orientation_a.write(PredType::NATIVE_DOUBLE, &orientation);
-        kx_a.write(PredType::NATIVE_DOUBLE, &k(0));
-        ky_a.write(PredType::NATIVE_DOUBLE, &k(1));
-        w_a.write(PredType::NATIVE_DOUBLE, &w);
-    }
-
-
-    fcube realStim = conv_to<fcube>::from(stimulus->spatioTemporal());
-    writeDataSet(realStim, &stim, "spatio_temporal");
-
-    if(fourierTransform){
-        fcube complexStim = conv_to<fcube>::from(real(stimulus->fourierTransform()));
-        writeDataSet(complexStim, &stim, "fourier_transform");
     }
 
 }

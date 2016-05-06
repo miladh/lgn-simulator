@@ -10,13 +10,13 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: false
+    storeSpatiotemporal: true
     storeFT: false
 
     # Grating:
     C: 1.0
     mask: "circle" # none/circle
-    maskSize: 0.5
+    maskSize: 0.9
     orientation: 0.   #degrees
     kId:  0           #[-Ns/2, Ns/2 - 1]
     wId:  0           #[-Nt/2, Nt/2 - 1]

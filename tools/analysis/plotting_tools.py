@@ -371,8 +371,8 @@ if __name__ == "__main__":
     import Simulation as sim
     plt.close("all")
 
-    # outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
-    outputFile =  "/media/milad/scratch/lgn-simulator/simulations/spatialSummation/20160506-114119/20160506-114119.h5"
+    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
+    # outputFile =  "/media/milad/scratch/lgn-simulator/simulations/spatialSummation/20160506-120202/20160506-120202.h5"
 
     # outputFile = glob(outputFilePath)[0]
     # print outputFile
@@ -382,11 +382,11 @@ if __name__ == "__main__":
     Ns = exp.integrator.Ns
     Nt = exp.integrator.Nt
 
-    # S = {"type" : "Stimulus",
-    #         "value" : exp.stimulus.spatio_temporal,
-    #         "t_points" : exp.integrator.t_points,
-    #         "spatial_vec" : exp.integrator.s_points
-    #         }
+    S = {"type" : "Stimulus",
+            "value" : exp.stimulus.spatio_temporal,
+            "t_points" : exp.integrator.t_points,
+            "spatial_vec" : exp.integrator.s_points
+            }
 
     #
     # Wg = {"type" : "Ganglion",
@@ -439,7 +439,7 @@ if __name__ == "__main__":
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
     # data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
-    data = [ Rg, Rr, Ri, Rc]
+    data = [ S,Rg, Rr, Ri, Rc]
     plt.figure()
     plt.plot(exp.integrator.t_points, exp.ganglion.response["spatio_temporal"][:, Ns/2,Ns/2], label = "G")
     plt.plot(exp.integrator.t_points, exp.relay.response["spatio_temporal"][:, Ns/2,Ns/2], label = "R")

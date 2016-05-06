@@ -22,9 +22,14 @@ public:
     ~OutputManager();
 
     void writeIntegratorProperties(const Integrator &integrator);
+
     void writeResponse(const Neuron &neuron, const bool fourierTransform = true);
+
     void writeImpulseResponse(const Neuron &neuron,const bool fourierTransform = true);
+
+    void writeStimulusProperties(const Stimulus *stimulus);
     void writeStimulus(const Stimulus *stimuli, const bool fourierTransform = true);
+
     void copyConfigFile(const string &configFilename);
 
 private:
