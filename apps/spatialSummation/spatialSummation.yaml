@@ -26,7 +26,7 @@ ganglion:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: false
     Wg:
     # DOG
@@ -43,7 +43,7 @@ relay:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: false
 
     #Kernels
@@ -86,7 +86,7 @@ interneuron:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: false
 
     #Kernels
@@ -118,7 +118,7 @@ cortical:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: false
 
     #kernels

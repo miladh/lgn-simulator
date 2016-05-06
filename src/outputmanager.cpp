@@ -59,16 +59,16 @@ void OutputManager::writeIntegratorProperties(const Integrator &integrator)
     fvec spatialFreqVec = conv_to<fvec>::from(integrator.spatialFreqVec());
 
 
-    Attribute Nt_a(integratorGroup.createAttribute("nPointsTemporal",PredType::NATIVE_INT, H5S_SCALAR));
-    Attribute Ns_a(integratorGroup.createAttribute("nPointsSpatial",PredType::NATIVE_INT, H5S_SCALAR));
-    Attribute dt_a(integratorGroup.createAttribute("temporalResolution",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute ds_a(integratorGroup.createAttribute("spatialResolution",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute dw_a(integratorGroup.createAttribute("temporalFreqResolution",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute dk_a(integratorGroup.createAttribute("spatialFreqResolution",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute ws_a(integratorGroup.createAttribute("temporalSamplingFreq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute ks_a(integratorGroup.createAttribute("spatialSamplingFreq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute T_a(integratorGroup.createAttribute("timeInterval",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-    Attribute L_a(integratorGroup.createAttribute("lengthInterval",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute Nt_a(integratorGroup.createAttribute("Nt",PredType::NATIVE_INT, H5S_SCALAR));
+    Attribute Ns_a(integratorGroup.createAttribute("Ns",PredType::NATIVE_INT, H5S_SCALAR));
+    Attribute dt_a(integratorGroup.createAttribute("dt",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute ds_a(integratorGroup.createAttribute("ds",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute dw_a(integratorGroup.createAttribute("dw",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute dk_a(integratorGroup.createAttribute("dk",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute ws_a(integratorGroup.createAttribute("ws",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute ks_a(integratorGroup.createAttribute("ks",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute T_a(integratorGroup.createAttribute("T",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+    Attribute L_a(integratorGroup.createAttribute("L",PredType::NATIVE_DOUBLE, H5S_SCALAR));
 
     Nt_a.write(PredType::NATIVE_INT, &Nt);
     Ns_a.write(PredType::NATIVE_INT, &Ns);
@@ -98,14 +98,14 @@ void OutputManager::writeIntegratorProperties(const Integrator &integrator)
     DataSpace space_t(1, dim_t);
     DataSpace space_s(1, dim_s);
 
-    DataSet timeVec_ds(integratorGroup.createDataSet("timeVec",
+    DataSet timeVec_ds(integratorGroup.createDataSet("t_points",
                                                      PredType::NATIVE_FLOAT, space_t));
-    DataSet temporalFreqVec_ds(integratorGroup.createDataSet("temporalFreqVec",
+    DataSet temporalFreqVec_ds(integratorGroup.createDataSet("w_points",
                                                              PredType::NATIVE_FLOAT, space_t));
 
-    DataSet spatialVec_ds(integratorGroup.createDataSet("spatialVec",
+    DataSet spatialVec_ds(integratorGroup.createDataSet("s_points",
                                                         PredType::NATIVE_FLOAT, space_s));
-    DataSet spatialFreqVec_ds(integratorGroup.createDataSet("spatialFreqVec",
+    DataSet spatialFreqVec_ds(integratorGroup.createDataSet("k_points",
                                                             PredType::NATIVE_FLOAT, space_s));
 
     timeVec_ds.write(timeVec.memptr(), PredType::NATIVE_FLOAT);
@@ -133,11 +133,11 @@ void OutputManager::writeResponse(const Neuron& neuron,
     //write response:
     Group res = m_output->createGroup(cellGroupName+"/response");
 
-    writeDataSet(response, &res, "spatioTemporal");
+    writeDataSet(response, &res, "spatio_temporal");
 
     if(fourierTransform){
         fcube responseFT = conv_to<fcube>::from(real(neuron.responseFT()));
-        writeDataSet(responseFT, &res, "fourierTransform");
+        writeDataSet(responseFT, &res, "fourier_transform");
     }
 
 }
@@ -157,13 +157,13 @@ void OutputManager::writeImpulseResponse(const Neuron& neuron,
     }
 
     //write impulse response:
-    Group impRes = m_output->createGroup(cellGroupName+"/impulseResponse");
-    writeDataSet(impulseResponse, &impRes, "spatioTemporal");
+    Group impRes = m_output->createGroup(cellGroupName+"/impulse_response");
+    writeDataSet(impulseResponse, &impRes, "spatio_temporal");
 
     if(fourierTransform){
         fcube impulseResponseFT =
                 conv_to<fcube>::from(real(neuron.impulseResponseFourierTransform()));
-        writeDataSet(impulseResponseFT, &impRes, "fourierTransform");
+        writeDataSet(impulseResponseFT, &impRes, "fourier_transform");
     }
 
 }
@@ -191,12 +191,12 @@ void OutputManager::writeStimulus(const Stimulus* stimulus, const bool fourierTr
 
         Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute mask_a(stim.createAttribute("mask", StrType(PredType::C_S1, 64), H5S_SCALAR));
-        Attribute maskSize_a(stim.createAttribute("maskSize",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute k_a(stim.createAttribute("spatialFreq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute maskSize_a(stim.createAttribute("mask_size",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute k_a(stim.createAttribute("spatial_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute orientation_a(stim.createAttribute("orientation",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute kx_a(stim.createAttribute("kx",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute ky_a(stim.createAttribute("ky",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute w_a(stim.createAttribute("temporalFreq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute w_a(stim.createAttribute("temporal_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
 
 
 
@@ -212,11 +212,11 @@ void OutputManager::writeStimulus(const Stimulus* stimulus, const bool fourierTr
 
 
     fcube realStim = conv_to<fcube>::from(stimulus->spatioTemporal());
-    writeDataSet(realStim, &stim, "spatioTemporal");
+    writeDataSet(realStim, &stim, "spatio_temporal");
 
     if(fourierTransform){
         fcube complexStim = conv_to<fcube>::from(real(stimulus->fourierTransform()));
-        writeDataSet(complexStim, &stim, "fourierTransform");
+        writeDataSet(complexStim, &stim, "fourier_transform");
     }
 
 }

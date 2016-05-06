@@ -1,5 +1,6 @@
 import numpy as np
 import h5py
+import yaml
 
 import Stimulus
 import Integrator
@@ -10,8 +11,9 @@ class Simulation:
     Class for a single simulation
 
     """
-    def __init__(self, h5_file):
+    def __init__(self, config_file, h5_file):
         self.cell_types = []
+        self.config_file = config_file
         self.simulation_file = h5_file
         ########################## Read file ###################################
         for item in h5_file.keys():
@@ -33,35 +35,60 @@ class Simulation:
     def __getitem__(self, key):
         return self[key]
 
-    def zeroOutsmallValues(self):
+    def get_setting(self, path):
+        setting_path = path.split('.')
+
+        with open(self.config_file, 'r') as f:
+            config_data = yaml.load(f)
+            key =  config_data[setting_path[0]]
+            for node in setting_path[1:]:
+                key =  key[node]
+            return key
+
+    def zero_out_small_values(self):
         for cell in self.cell_types:
             cell_type = getattr(self, cell)
-            cell_type.zeroOutsmallValues()
+            cell_type.zero_out_small_values()
 
     def normalize(self):
         for cell in self.cell_types:
             cell_type = getattr(self, cell)
             cell_type.normalize()
 
-    def singleCellTemporalResponse(self, cellType, idx=0 , idy=0):
-        response = getattr(self, cellType).response["spatioTemporal"][:,idy, idx]
+
+    def get_rf_center_indices(self, rc=[0.5, 0.5]):
+        """
+        Return the rf-center indices in s_points,
+        given the normalized spatial grid points.
+        """
+        idx =  int(round(self.integrator.Ns * rc[0]))
+        idy =  int(round(self.integrator.Ns * rc[1]))
+        return idx, idy
+
+
+    def single_cell_temporal_response(self, cell_type, rc=[0.5, 0.5]):
+        idx, idy = self.get_rf_center_indices(rc)
+        response = getattr(self, cell_type).response["spatio_temporal"][:,idy, idx]
         return response
 
-    def singleCellFreqResponse(self, cellType, idx=0 , idy=0):
-        FreqResponse = getattr(self, cellType).response["fourierTransform"][:,idy, idx]
-        return FreqResponse
+    def single_cell_freq_response(self, cell_type, rc=[0.5, 0.5]):
+        idx, idy = self.get_rf_center_indices(rc)
+        freq_response = getattr(self, cell_type).response["fourier_transform"][:,idy, idx]
+        return freq_response
 
-    def temporalImpulseResponse(self, cellType, idx=0 , idy=0):
-        impulseResponse = getattr(self, cellType).impulseResponse["spatioTemporal"][:,idy, idx]
-        return impulseResponse
+    def single_cell_temporal_impulse_response(self, cell_type, rc=[0.5, 0.5]):
+        idx, idy = self.get_rf_center_indices(rc)
+        impulse_response = getattr(self, cell_type).impulse_response["spatio_temporal"][:,idy, idx]
+        return impulse_response
 
-    def spikeTrain(self, cellType, idx=0 , idy=0, num_trails=2):
-        response = self.singleCellTemporalResponse(cellType, idx , idy)
+    def spike_train(self, cell_type, rc=[0.5, 0.5], num_trails=2):
+        idx, idy = self.get_rf_center_indices(rc)
+        response = self.single_cell_temporal_response(cell_type, idx , idy)
         spike_times = [[] for i in range(num_trails)]
 
-        dt = self.integrator.temporalResolution
+        dt = self.integrator.dt
         for k in range(num_trails):
-            for i in range(self.integrator.nPointsTemporal):
+            for i in range(self.integrator.Nt):
                 r = np.random.uniform(0,1)
                 if(response[i] * dt > r):
                     spike_times[k].append(i*dt)

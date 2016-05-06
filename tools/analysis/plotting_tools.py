@@ -72,8 +72,8 @@ def animateImshowPlots(data,
 
     num_subplots = len(data)
     imshowPlots = []
-    nStates = len(data[0]["time_vec"])
-    dt = 1 if dt==None else data[0]["time_vec"][1]-data[0]["time_vec"][0]
+    nStates = len(data[0]["t_points"])
+    dt = 1 if dt==None else data[0]["t_points"][1]-data[0]["t_points"][0]
 
     num_cols = 2 if num_subplots >= 2 else num_subplots
     num_rows = int(np.ceil((num_subplots-1)/2.))+1
@@ -185,7 +185,7 @@ def imshowPlotsOfImpulseResponses(data,
         if(x_imshow):
             axarr[i,j].set_adjustable('box-forced')
             extent=[data[j]["spatial_vec"][0],data[j]["spatial_vec"][-1],
-                    data[j]["time_vec"][0],data[j]["time_vec"][-1]]
+                    data[j]["t_points"][0],data[j]["t_points"][-1]]
             im = axarr[i,j].imshow(data[j]["value"][:,idy,:], extent= extent,
                                    cmap=cmap, origin="lower", aspect="auto",
                                    interpolation="gaussian")
@@ -201,7 +201,7 @@ def imshowPlotsOfImpulseResponses(data,
         if(y_imshow):
             axarr[i,j].set_adjustable('box-forced')
             extent=[data[j]["spatial_vec"][0],data[j]["spatial_vec"][-1],
-                    data[j]["time_vec"][0],data[j]["time_vec"][-1]]
+                    data[j]["t_points"][0],data[j]["t_points"][-1]]
             im = axarr[i,j].imshow(data[j]["value"][:,:,idx], extent= extent,
                                    cmap=cmap, origin="lower",aspect="auto",
                                    interpolation="gaussian")
@@ -247,7 +247,7 @@ def plot3dOfImpulseResponses(data,
     fig = plt.figure(figsize=figsize)
     for j in range(num_cols):
         S = data[j]["spatial_vec"]
-        T = data[j]["time_vec"]
+        T = data[j]["t_points"]
         T, S = np.meshgrid(S, T)
         i=0
         if(x_3d):
@@ -324,8 +324,8 @@ def line3dPlotsOfImpulseResponses(data,
         if(x_line3d):
             ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
             for x in ids:
-                ax.plot(data[j]["time_vec"],
-                data[j]["spatial_vec"][x]*np.ones(len(data[j]["time_vec"])),
+                ax.plot(data[j]["t_points"],
+                data[j]["spatial_vec"][x]*np.ones(len(data[j]["t_points"])),
                 data[j]["value"][:,idy, x],
                 "-b", linewidth=1.0)
 
@@ -334,7 +334,7 @@ def line3dPlotsOfImpulseResponses(data,
             ax.set_ylabel(r"$x(\theta)$")
             ax.set_zlabel(r"$W(x, y_a, \tau)$")
             # ax.view_init(elev=17., azim=128)
-            ax.set_xlim3d(data[j]["time_vec"][0], data[j]["time_vec"][-1])
+            ax.set_xlim3d(data[j]["t_points"][0], data[j]["t_points"][-1])
             ax.set_ylim3d(data[j]["spatial_vec"][0], data[j]["spatial_vec"][-1])
             ax.set_zlim3d(np.min(data[j]["value"][:,idy, ids]),
                           np.max(data[j]["value"][:,idy, ids]))
@@ -342,8 +342,8 @@ def line3dPlotsOfImpulseResponses(data,
         if(y_line3d):
             ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
             for y in ids:
-                ax.plot(data[j]["time_vec"],
-                data[j]["spatial_vec"][y]*np.ones(len(data[j]["time_vec"])),
+                ax.plot(data[j]["t_points"],
+                data[j]["spatial_vec"][y]*np.ones(len(data[j]["t_points"])),
                 data[j]["value"][:,y, idx],
                 "-b", linewidth=1.0)
 
@@ -352,7 +352,7 @@ def line3dPlotsOfImpulseResponses(data,
             ax.set_ylabel(r"$y(\theta)$")
             ax.set_zlabel(r"$W(x_a, y, \tau)$")
             # ax.view_init(elev=17., azim=128)
-            ax.set_xlim3d(data[j]["time_vec"][0], data[j]["time_vec"][-1])
+            ax.set_xlim3d(data[j]["t_points"][0], data[j]["t_points"][-1])
             ax.set_ylim3d(data[j]["spatial_vec"][0], data[j]["spatial_vec"][-1])
             ax.set_zlim3d(np.min(data[j]["value"][:,ids, idx]),
                           np.max(data[j]["value"][:,ids, idx]))
@@ -376,76 +376,76 @@ if __name__ == "__main__":
 
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
-    exp = sim.Simulation(f)
+    exp = sim.Simulation(None, f)
 
-    Ns = exp.integrator.nPointsSpatial
-    Nt = exp.integrator.nPointsTemporal
+    Ns = exp.integrator.Ns
+    Nt = exp.integrator.Nt
 
     S = {"type" : "Stimulus",
-            "value" : exp.stimulus.spatioTemporal,
-            "time_vec" : exp.integrator.timeVec,
-            "spatial_vec" : exp.integrator.spatialVec
+            "value" : exp.stimulus.spatio_temporal,
+            "t_points" : exp.integrator.t_points,
+            "spatial_vec" : exp.integrator.s_points
             }
 
 
     Wg = {"type" : "Ganglion",
-                "value" : exp.ganglion.impulseResponse["spatioTemporal"],
-                "time_vec" : exp.integrator.timeVec,
-                "spatial_vec" : exp.integrator.spatialVec
+                "value" : exp.ganglion.impulse_response["spatio_temporal"],
+                "t_points" : exp.integrator.t_points,
+                "spatial_vec" : exp.integrator.s_points
                 }
     Wr = {"type" : "Relay",
-             "value" : exp.relay.impulseResponse["spatioTemporal"],
-             "time_vec" : exp.integrator.timeVec,
-             "spatial_vec" : exp.integrator.spatialVec
+             "value" : exp.relay.impulse_response["spatio_temporal"],
+             "t_points" : exp.integrator.t_points,
+             "spatial_vec" : exp.integrator.s_points
             }
 
     Wi = {"type" : "Interneuron",
-                 "value" : exp.interneuron.impulseResponse["spatioTemporal"],
-                 "time_vec" : exp.integrator.timeVec,
-                 "spatial_vec" : exp.integrator.spatialVec
+                 "value" : exp.interneuron.impulse_response["spatio_temporal"],
+                 "t_points" : exp.integrator.t_points,
+                 "spatial_vec" : exp.integrator.s_points
                 }
 
     Wc = {"type" : "Cortical",
-                 "value" : exp.cortical.impulseResponse["spatioTemporal"],
-                 "time_vec" : exp.integrator.timeVec,
-                 "spatial_vec" : exp.integrator.spatialVec
+                 "value" : exp.cortical.impulse_response["spatio_temporal"],
+                 "t_points" : exp.integrator.t_points,
+                 "spatial_vec" : exp.integrator.s_points
                 }
 
     Rg = {"type" : "Ganglion",
-                "value" : exp.ganglion.response["spatioTemporal"],
-                "time_vec" : exp.integrator.timeVec,
-                "spatial_vec" : exp.integrator.spatialVec
+                "value" : exp.ganglion.response["spatio_temporal"],
+                "t_points" : exp.integrator.t_points,
+                "spatial_vec" : exp.integrator.s_points
                 }
     Rr = {"type" : "Relay",
-             "value" : exp.relay.response["spatioTemporal"],
-             "time_vec" : exp.integrator.timeVec,
-             "spatial_vec" : exp.integrator.spatialVec
+             "value" : exp.relay.response["spatio_temporal"],
+             "t_points" : exp.integrator.t_points,
+             "spatial_vec" : exp.integrator.s_points
             }
 
     Ri = {"type" : "Interneuron",
-             "value" : exp.interneuron.response["spatioTemporal"],
-             "time_vec" : exp.integrator.timeVec,
-             "spatial_vec" : exp.integrator.spatialVec
+             "value" : exp.interneuron.response["spatio_temporal"],
+             "t_points" : exp.integrator.t_points,
+             "spatial_vec" : exp.integrator.s_points
             }
     Rc = {"type" : "Cortical",
-                 "value" : exp.cortical.response["spatioTemporal"],
-                 "time_vec" : exp.integrator.timeVec,
-                 "spatial_vec" : exp.integrator.spatialVec
+                 "value" : exp.cortical.response["spatio_temporal"],
+                 "t_points" : exp.integrator.t_points,
+                 "spatial_vec" : exp.integrator.s_points
                 }
 
     data = [Wg,Wr,Wi,Wc]
     line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
-    # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
-    # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
+    plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
+    imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
     data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
     # data = [ S, Rg, Rr, Ri, Rc]
     plt.figure()
-    plt.plot(exp.integrator.timeVec, exp.ganglion.response["spatioTemporal"][:, Ns/2,Ns/2], label = "G")
-    plt.plot(exp.integrator.timeVec, exp.relay.response["spatioTemporal"][:, Ns/2,Ns/2], label = "R")
-    plt.plot(exp.integrator.timeVec, exp.interneuron.response["spatioTemporal"][:, Ns/2,Ns/2], label = "I")
-    plt.plot(exp.integrator.timeVec, exp.cortical.response["spatioTemporal"][:, Ns/2,Ns/2], label = "C")
+    plt.plot(exp.integrator.t_points, exp.ganglion.response["spatio_temporal"][:, Ns/2,Ns/2], label = "G")
+    plt.plot(exp.integrator.t_points, exp.relay.response["spatio_temporal"][:, Ns/2,Ns/2], label = "R")
+    plt.plot(exp.integrator.t_points, exp.interneuron.response["spatio_temporal"][:, Ns/2,Ns/2], label = "I")
+    plt.plot(exp.integrator.t_points, exp.cortical.response["spatio_temporal"][:, Ns/2,Ns/2], label = "C")
     plt.legend()
-    animateImshowPlots(data, exp.integrator.temporalResolution,
+    animateImshowPlots(data, exp.integrator.dt,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
 
