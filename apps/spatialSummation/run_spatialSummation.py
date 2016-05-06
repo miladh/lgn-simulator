@@ -25,8 +25,8 @@ def modify_Kri(w):
     config_data["relay"]["Kri"]["spatial"]["weight"]= float(-w)
 
 if __name__ == "__main__":
-    spot_diameters = np.linspace(0, 0.9, 20)
-    weights = np.linspace(0.1, 2.0, 20)
+    spot_diameters = np.linspace(0, 0.9, 4)
+    weights = np.linspace(0.1, 2.0, 4)
 
     reason = "Test the effect of w=Kic=Krc on area summation curves with delay"
 
