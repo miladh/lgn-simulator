@@ -34,8 +34,9 @@ def get_simulations(config_file):
 
     sims=[]
     for data_id in data_ids:
+        setting_file = os.path.join(data_path, data_id,"_"+data_id +".yaml")
         data_file = os.path.join(data_path, data_id, data_id +".h5")
         f = h5py.File(data_file, "r")
-        sims.append(Simulation(f))
+        sims.append(Simulation(setting_file, f))
 
     return sims

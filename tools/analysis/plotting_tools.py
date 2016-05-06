@@ -372,7 +372,7 @@ if __name__ == "__main__":
     plt.close("all")
 
     outputFilePath =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
-    # outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/firingSynchrony/20160317-135052/20160317-135052.h5"
+    outputFilePath =  "/media/milad/scratch/lgn-simulator/simulations/spatialSummation/20160506-110047/20160506-110047.h5"
 
     outputFile = glob(outputFilePath)[0]
     f = h5py.File(outputFile, "r")
@@ -381,35 +381,35 @@ if __name__ == "__main__":
     Ns = exp.integrator.Ns
     Nt = exp.integrator.Nt
 
-    S = {"type" : "Stimulus",
-            "value" : exp.stimulus.spatio_temporal,
-            "t_points" : exp.integrator.t_points,
-            "spatial_vec" : exp.integrator.s_points
-            }
+    # S = {"type" : "Stimulus",
+    #         "value" : exp.stimulus.spatio_temporal,
+    #         "t_points" : exp.integrator.t_points,
+    #         "spatial_vec" : exp.integrator.s_points
+    #         }
 
-
-    Wg = {"type" : "Ganglion",
-                "value" : exp.ganglion.impulse_response["spatio_temporal"],
-                "t_points" : exp.integrator.t_points,
-                "spatial_vec" : exp.integrator.s_points
-                }
-    Wr = {"type" : "Relay",
-             "value" : exp.relay.impulse_response["spatio_temporal"],
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-            }
-
-    Wi = {"type" : "Interneuron",
-                 "value" : exp.interneuron.impulse_response["spatio_temporal"],
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
-
-    Wc = {"type" : "Cortical",
-                 "value" : exp.cortical.impulse_response["spatio_temporal"],
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
+    #
+    # Wg = {"type" : "Ganglion",
+    #             "value" : exp.ganglion.impulse_response["spatio_temporal"],
+    #             "t_points" : exp.integrator.t_points,
+    #             "spatial_vec" : exp.integrator.s_points
+    #             }
+    # Wr = {"type" : "Relay",
+    #          "value" : exp.relay.impulse_response["spatio_temporal"],
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #         }
+    #
+    # Wi = {"type" : "Interneuron",
+    #              "value" : exp.interneuron.impulse_response["spatio_temporal"],
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
+    #
+    # Wc = {"type" : "Cortical",
+    #              "value" : exp.cortical.impulse_response["spatio_temporal"],
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
 
     Rg = {"type" : "Ganglion",
                 "value" : exp.ganglion.response["spatio_temporal"],
@@ -433,12 +433,12 @@ if __name__ == "__main__":
                  "spatial_vec" : exp.integrator.s_points
                 }
 
-    data = [Wg,Wr,Wi,Wc]
-    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
-    plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
-    imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
-    # data = [ S, Rg, Rr, Ri, Rc]
+    # data = [Wg,Wr,Wi,Wc]
+    # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
+    # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
+    # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
+    # data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
+    data = [ Rg, Rr, Ri, Rc]
     plt.figure()
     plt.plot(exp.integrator.t_points, exp.ganglion.response["spatio_temporal"][:, Ns/2,Ns/2], label = "G")
     plt.plot(exp.integrator.t_points, exp.relay.response["spatio_temporal"][:, Ns/2,Ns/2], label = "R")
