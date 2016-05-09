@@ -37,3 +37,20 @@ def average_response_vs_attr(sims, attr, rc=[0.5, 0.5]):
             responses[str(cell_type)].append(mean_resp)
 
     return responses
+
+
+def average_response_vs_attrA_vs_attrB(sims, cell_type, attrA, attrB, rc=[0.5, 0.5]):
+    import data_extractor as de
+    attrA_vec = de.extract_unique_simulation_attrs(sims, attrA)
+    attrB_vec = de.extract_unique_simulation_attrs(sims, attrB)
+
+    response = np.zeros([len(attrA_vec), len(attrB_vec)])
+
+    for i, a in enumerate(attrA_vec):
+        sims_ext = de.simulation_extractor(sims, attrA, a)
+        data = average_response_vs_attr(sims_ext, attrB)
+
+        sorted_indices = np.argsort(data[attrB])
+        response[i,:] = np.array(data[cell_type])[sorted_indices]
+
+    return attrA_vec, attrB_vec, response
