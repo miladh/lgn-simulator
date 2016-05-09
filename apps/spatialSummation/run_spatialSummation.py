@@ -25,8 +25,8 @@ def modify_Kri(w):
     config_data["relay"]["Kri"]["spatial"]["weight"]= float(-w)
 
 if __name__ == "__main__":
-    spot_diameters = np.linspace(0, 0.9, 10)
-    weights = np.linspace(0.1, 2.0, 10)
+    spot_diameters = np.linspace(0, 0.9, 4)
+    weights = np.linspace(0.1, 2.0, 4)
 
     reason = "Test run with new setup"
 
@@ -41,7 +41,7 @@ if __name__ == "__main__":
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
-            tag = "test_run_2"
+            tag = "test_run_3"
 
             call(["smt", "run", os.path.basename(config_file), "-i"+config_file, "-r "+ reason, "-t" +tag])
 
