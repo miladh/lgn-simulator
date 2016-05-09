@@ -41,7 +41,7 @@ if __name__ == "__main__":
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
-            tag = "test_run_1"
+            tag = "test_run_2"
 
             call(["smt", "run", os.path.basename(config_file), "-i"+config_file, "-r "+ reason, "-t" +tag])
 
