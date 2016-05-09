@@ -18,25 +18,3 @@ def get_output_dir(config_file):
         os.makedirs(output_dir)
 
     return output_dir
-
-
-def get_simulations(config_file):
-    import h5py
-    from analysis.Simulation import Simulation
-
-    with open(config_file, 'r') as stream:
-        config_data = yaml.load(stream)
-        data_path = config_data["data_path"]
-        data_ids  = config_data["simulation_ids"]
-
-    print "Data path: ", data_path
-    print "Reading simulation_ids:\n", data_ids
-
-    sims=[]
-    for data_id in data_ids:
-        setting_file = os.path.join(data_path, data_id,"_"+data_id +".yaml")
-        data_file = os.path.join(data_path, data_id, data_id +".h5")
-        f = h5py.File(data_file, "r")
-        sims.append(Simulation(setting_file, f))
-
-    return sims

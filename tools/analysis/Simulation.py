@@ -45,13 +45,15 @@ class Simulation:
 
     def get_setting(self, path):
         setting_path = path.split('.')
-
-        with open(self.config_file, 'r') as f:
-            config_data = yaml.load(f)
-            key =  config_data[setting_path[0]]
-            for node in setting_path[1:]:
-                key =  key[node]
-            return key
+        try:
+            with open(self.config_file, 'r') as f:
+                config_data = yaml.load(f)
+                key =  config_data[setting_path[0]]
+                for node in setting_path[1:]:
+                    key =  key[node]
+                return key
+        except KeyError:
+            raise KeyError("key not found: " + path + ", options: " + str(key))
 
     def zero_out_small_values(self):
         for cell in self.cell_types:

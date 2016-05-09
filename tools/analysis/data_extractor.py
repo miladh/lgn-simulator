@@ -1,4 +1,6 @@
 import numpy as np
+import yaml
+import os, os.path
 
 def simulation_extractor(sims, key, value):
     """
