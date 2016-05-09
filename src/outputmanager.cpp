@@ -182,7 +182,6 @@ void OutputManager::writeStimulus(const Stimulus* stimulus,
 
 }
 
-
 void OutputManager::writeResponse(const Neuron& neuron,
                                   const bool fourierTransform)
 {
@@ -195,6 +194,9 @@ void OutputManager::writeResponse(const Neuron& neuron,
 
     if (!status == 0){
         Group cellGroup = m_output->createGroup(cellGroupName);
+        string type = neuron.type();
+        Attribute type_a(cellGroup.createAttribute("type",StrType(PredType::C_S1,64), H5S_SCALAR));
+        type_a.write( StrType(PredType::C_S1, 64), (&type)->c_str());
     }
 
     //write response:
@@ -221,6 +223,9 @@ void OutputManager::writeImpulseResponse(const Neuron& neuron,
 
     if (!status == 0){
         Group cellGroup = m_output->createGroup(cellGroupName);
+        string type = neuron.type();
+        Attribute type_a(cellGroup.createAttribute("type",StrType(PredType::C_S1,64), H5S_SCALAR));
+        type_a.write( StrType(PredType::C_S1, 64), (&type)->c_str());
     }
 
     //write impulse response:

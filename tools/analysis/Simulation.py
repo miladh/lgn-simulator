@@ -35,6 +35,14 @@ class Simulation:
     def __getitem__(self, key):
         return self[key]
 
+
+    def get_attribute(self, key):
+        from operator import attrgetter
+        try:
+            return attrgetter(key)(self)
+        except AttributeError:
+            return self.get_setting(key)
+
     def get_setting(self, path):
         setting_path = path.split('.')
 
