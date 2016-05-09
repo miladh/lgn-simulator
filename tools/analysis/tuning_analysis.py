@@ -40,6 +40,31 @@ def average_response_vs_attr(sims, attr, rc=[0.5, 0.5]):
 
 
 def average_response_vs_attrA_vs_attrB(sims, cell_type, attrA, attrB, rc=[0.5, 0.5]):
+    """
+    returns the mean response with respect to
+    attributes attrA and attrB.
+
+    Parameters
+    ----------
+    sims : list
+        list of Simulation objects
+    cell_type: str
+        cell type
+    attrA: str
+        name of the attribute A
+    attrB: str
+        name of the attribute B
+    rc: array_like, optional
+        normalized receptive field center position.
+
+    Returns
+    -------
+    dict
+        array with attrA values,
+        array with attrB values,
+        2d response array.
+
+    """
     import data_extractor as de
     attrA_vec = de.extract_unique_simulation_attrs(sims, attrA)
     attrB_vec = de.extract_unique_simulation_attrs(sims, attrB)

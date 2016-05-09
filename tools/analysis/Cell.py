@@ -10,7 +10,7 @@ class Cell:
     def __init__(self, cell_group):
         for attr in cell_group.attrs.keys():
             setattr(self, attr, cell_group.attrs[attr])
-            print attr, cell_group.attrs[attr]
+            # print attr, cell_group.attrs[attr]
 
         cell_properties = cell_group.keys()
 
