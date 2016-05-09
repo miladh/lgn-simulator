@@ -71,6 +71,7 @@ def average_response_vs_attrA_vs_attrB(sims, cell_type, attrA, attrB, rc=[0.5, 0
 
     response = np.zeros([len(attrA_vec), len(attrB_vec)])
 
+    print attrA, attrB
     for i, a in enumerate(attrA_vec):
         sims_ext = de.simulation_extractor(sims, attrA, a)
         data = average_response_vs_attr(sims_ext, attrB)

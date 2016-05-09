@@ -31,9 +31,10 @@ if __name__ == "__main__":
     reason = "Test run with new setup"
 
     for w in weights:
-        # modify_Kic(w)
+        modify_Kic(w)
         modify_Krc(w)
-        modify_Kri(w)
+
+        # modify_Kri(w)
         for d in spot_diameters:
             modify_diameter(d)
 
