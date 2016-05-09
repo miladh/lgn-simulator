@@ -28,7 +28,7 @@ if __name__ == "__main__":
     spot_diameters = np.linspace(0, 0.9, 10)
     weights = np.linspace(0.0, 2.0, 10)
 
-    reason = "Test run with new setup"
+    reason = "Kc effect, with different width for I and R"
 
     for w in weights:
         modify_Kic(w)
@@ -41,7 +41,7 @@ if __name__ == "__main__":
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
-            tag = "test_run_3"
+            tag = "Kc_different_width"
 
             call(["smt", "run", os.path.basename(config_file), "-i"+config_file, "-r "+ reason, "-t" +tag])
 
