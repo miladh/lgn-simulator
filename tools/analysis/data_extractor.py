@@ -2,27 +2,30 @@ import numpy as np
 import yaml
 import os, os.path
 
-def simulation_extractor(sims, key, value):
+from analysis.Simulation import Simulation
+
+def simulation_extractor(sims, attr, value):
     """
-    extracts simulations with a specific run setting parameter
+    extracts simulations where attribute
+    attr=value
 
     Parameters
     ----------
     sims : list
         list of Simulation objects
-    key: str
-        attribute/setting which the extraction is based on
+    attr: str
+        name of the attribute
 
     Returns
     -------
     list
-        list of Simulation objects with specific run attribute/setting parameter
+        list of Simulation objects where attribute
+        attr=value
 
     """
-    from analysis.Simulation import Simulation
     extracted_sims = []
     for sim in sims:
-        p = sim.get_attribute(key)
+        p = sim.get_attribute(attr)
         if(p==value):
             extracted_sims.append(sim)
 
@@ -31,29 +34,30 @@ def simulation_extractor(sims, key, value):
 
 
 
-def extract_unique_simulation_param(sims, key):
+def extract_unique_simulation_attrs(sims, attr):
     """
-    extracts simulations with a specific run setting parameter
+    extracts unique values for attribute attr
+    from a list of simulations
 
     Parameters
     ----------
     sims : list
         list of Simulation objects
-    key: str
-        name of the attribute/setting parameter
+    attr: str
+        name of the attribute
 
     Returns
     -------
     array
-        array of unique instances of the given paramter
+        array of unique attr values in the sims
 
     """
-    from analysis.Simulation import Simulation
-    key_values = set()
-    for sim in sims:
-        key_values.add(sim.get_attribute(key))
 
-    return np.array(sorted(list(key_values)))
+    attr_values = set()
+    for sim in sims:
+        attr_values.add(sim.get_attribute(attr))
+
+    return np.array(sorted(list(attr_values)))
 
 
 
@@ -73,7 +77,6 @@ def get_simulations(config_file):
 
     """
     import h5py
-    from analysis.Simulation import Simulation
 
     with open(config_file, 'r') as stream:
         config_data = yaml.load(stream)
