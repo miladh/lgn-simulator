@@ -16,7 +16,7 @@ stimulus:
     # Grating:
     C: 1.0
     mask: "circle" # none/circle
-    maskSize: 0.9
+    maskSize: 0.5
     orientation: 0.   #degrees
     kId:  0           #[-Ns/2, Ns/2 - 1]
     wId:  0           #[-Nt/2, Nt/2 - 1]
@@ -74,8 +74,8 @@ relay:
     Krc:
         spatial:
         #Gauss
-            A: 2.0
-            a: 0.83
+            A: 1.0
+            a: 0.64
 
         temporal:
         # TemporalDelta
@@ -106,7 +106,7 @@ interneuron:
     Kic:
         spatial:
         #Gauss
-            A: 2.0
+            A: 1.0
             a: 0.83
 
         temporal:
