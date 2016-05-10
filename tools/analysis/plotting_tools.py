@@ -441,11 +441,14 @@ if __name__ == "__main__":
     # data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
     data = [ S,Rg, Rr, Ri, Rc]
     plt.figure()
-    plt.plot(exp.integrator.t_points, exp.ganglion.response["spatio_temporal"][:, Ns/2,Ns/2], label = "G")
-    plt.plot(exp.integrator.t_points, exp.relay.response["spatio_temporal"][:, Ns/2,Ns/2], label = "R")
-    plt.plot(exp.integrator.t_points, exp.interneuron.response["spatio_temporal"][:, Ns/2,Ns/2], label = "I")
-    plt.plot(exp.integrator.t_points, exp.cortical.response["spatio_temporal"][:, Ns/2,Ns/2], label = "C")
-    plt.legend()
+    # plt.plot(exp.integrator.s_points, exp.stimulus.spatio_temporal[0, Ns/2,:], label = "S")
+    plt.plot(exp.integrator.t_points, exp.stimulus.spatio_temporal[:, Ns/2,Ns/2], label = "S")
+
+    # plt.plot(exp.integrator.t_points, exp.ganglion.response["spatio_temporal"][:, Ns/2,Ns/2], label = "G")
+    # plt.plot(exp.integrator.t_points, exp.relay.response["spatio_temporal"][:, Ns/2,Ns/2], label = "R")
+    # plt.plot(exp.integrator.t_points, exp.interneuron.response["spatio_temporal"][:, Ns/2,Ns/2], label = "I")
+    # plt.plot(exp.integrator.t_points, exp.cortical.response["spatio_temporal"][:, Ns/2,Ns/2], label = "C")
+    # plt.legend()
     animateImshowPlots(data, exp.integrator.dt,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
