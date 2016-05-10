@@ -5,7 +5,7 @@ import yaml
 import numpy as np
 
 current_path = os.path.dirname(os.path.realpath(__file__))
-copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
+copyfile(os.path.abspath(os.path.join(current_path,"phaseReversedPushPull.yaml")),
          os.path.abspath(os.path.join(current_path,"tmp.yaml")))
 config_file = os.path.abspath(os.path.join(current_path,"tmp.yaml"))
 
