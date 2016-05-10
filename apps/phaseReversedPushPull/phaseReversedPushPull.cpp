@@ -11,7 +11,7 @@ using namespace lgnSimulator;
 int main(int argc, char* argv[])
 {
 
-    cout << "========= LGN Simulator: Phase-reversed push-pull =========" << endl;
+    cout << "=====LGN Simulator Model: Phase reversed push pull =====" << endl;
     clock_t t;
     t = clock();
 
@@ -22,85 +22,61 @@ int main(int argc, char* argv[])
 
     //read config file-------------------------------------------------------
     YAML::Node cfg = YAML::LoadFile(argv[1]);
-    const YAML::Node& ganglionImpRes = cfg["ganglionImpRes"];
-    const YAML::Node& Ks_rgSettings = cfg["spatialKernels"]["Krg"];
-    const YAML::Node& Ks_rcSettings = cfg["spatialKernels"]["Krc"];
-    const YAML::Node& Ks_crSettings = cfg["spatialKernels"]["Kcr"];
-
-    const YAML::Node& Kt_rgSettings = cfg["temporalKernels"]["Krg"];
-    const YAML::Node& Kt_rcSettings = cfg["temporalKernels"]["Krc"];
-    const YAML::Node& Kt_crSettings = cfg["temporalKernels"]["Kcr"];
-
-    string outputFilename = cfg["outputFile"].as<std::string>();
 
     //Output manager:---------------------------------------------------------
-    OutputManager io(outputFilename);
-
+    OutputManager io(cfg["OutputManager"]["outputFilename"].as<std::string>());
+    io.copyConfigFile(argv[1]);
     //Integrator--------------------------------------------------------------
-    Integrator integrator = createIntegrator(cfg);
+    Integrator integrator = createIntegrator(cfg["grid"]);
+    io.writeIntegratorProperties(integrator);
 
     //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
+    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg["stimulus"]);
 
     //Ganglion cell:-----------------------------------------------------------
-    DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
-    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
+    DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
+    DOE Wg_t = createTemporalDOEKernel(cfg["ganglion"]["Wt"]);
+
     SeparableKernel Wg(&Wg_s, &Wg_t);
-    GanglionCell ganglion(integrator, Wg);
-
-    //Relay cell: -------------------------------------------------------------
-    RelayCell relay(integrator);
-    CorticalCell cortical(integrator);
-
-    //Spatial kernels:---------------------------------------------------------
-    SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
-    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
-    DOG Ks_rc = createSpatialDOGKernel(Ks_rcSettings);
-
-    //Temporal kernels:--------------------------------------------------------
-    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
-    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
-    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
-
-    //Kernels:--------------------------------------------------------
-    SeparableKernel Krg(&Ks_rg, &Kt_rg);
-    SeparableKernel Krc(&Ks_rc, &Kt_rc);
-    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
-
-    //Connect neurons:---------------------------------------------------------
-    relay.addGanglionCell(&ganglion, Krg);
-    relay.addCorticalCell(&cortical, Krc);
-    cortical.addRelayCell(&relay, Kcr);
-
+    GanglionCell ganglion(integrator, Wg, cfg["ganglion"]["R0"].as<double>());
 
     //Compute:-----------------------------------------------------------------
-    S->computeSpatiotemporal();
+    io.writeStimulusProperties(S.get());
+
+    if(cfg["stimulus"]["storeSpatiotemporal"].as<bool>()){
+        S->computeSpatiotemporal();
+        io.writeStimulus(S.get(), cfg["stimulus"]["storeFT"].as<bool>());
+        S->clearSpatioTemporal();
+    }
     S->computeFourierTransform();
-    io.writeStimulus(S.get());
-    S->clearSpatioTemporal();
+    ganglion.computeImpulseResponseFourierTransform();
 
-    vector<Neuron *> neurons;
-    neurons.push_back(&ganglion);
-    neurons.push_back(&relay);
-    neurons.push_back(&cortical);
 
-    io.writeIntegratorProperties(integrator);
-    for(Neuron* neuron : neurons){
+    if(cfg["ganglion"]["storeResponse"].as<bool>()){
+        ganglion.computeResponse(S.get());
+        io.writeResponse(ganglion,
+                         cfg["ganglion"]["storeResponseFT"].as<bool>());
+        ganglion.clearResponse();
+    }
 
-        neuron->computeResponse(S.get());
-        io.writeResponse(*neuron);
-        neuron->clearResponse();
-
-        neuron->computeImpulseResponse();
-        io.writeImpulseResponse(*neuron);
-        neuron->clearImpulseResponse();
-
+    if( cfg["ganglion"]["storeImpulseResponse"].as<bool>()){
+        ganglion.computeImpulseResponse();
+        io.writeImpulseResponse(ganglion,
+                                cfg["ganglion"]["storeImpulseResponseFT"].as<bool>());
+        ganglion.clearImpulseResponse();
     }
 
 
 
+    //Finalize:----------------------------------------------------------
     t = clock() - t;
-    printf ("%f seconds.\n",((float)t)/CLOCKS_PER_SEC);
+    double elapsedTime = ((float)t)/CLOCKS_PER_SEC;
+    if(elapsedTime <= 60){
+        printf ("%f seconds.\n", elapsedTime);
+    }else{
+        printf ("%f minutes.\n", elapsedTime/60);
+    }
+
 
     return 0;
 }

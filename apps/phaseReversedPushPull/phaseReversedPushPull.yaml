@@ -1,90 +1,47 @@
-description: "Phase-reversed push-pull config file"
+description: "config file"
+
 
 #------------Integrator settings-----------------#
-ns: 9
-nt: 3
-dt: 0.1
-ds: 0.01
-#------------Stimulus settings-----------------#
-# Grating:
-C: 1.0
-mask: "circle" # none/circle/gauss
-maskSize: 0.5
-kxId:  0        #[-ns/2, ns/2 - 1]
-kyId:  0        #[-ns/2, ns/2 - 1]
-wId:   0        #[-nt/2, nt/2 - 1]
+grid:
+    ns: 7
+    nt: 8
+    dt: &dt_id 2.0
+    ds: &ds_id 0.2
 
+#------------Stimulus settings-------------------#
+stimulus:
+    storeSpatiotemporal: true
+    storeFT: false
 
-#----------Ganglion Impulse response--------------#
-ganglionImpRes:
-# DOG
-    A: 1.0
-    a: 0.25
-    B: 0.85
-    b: 0.83
+    # Grating:
+    C: 0.7
+    mask: "circle" # none/circle
+    maskSize: 0.07874015748031496
+    orientation: 0.   #degrees
+    kId:  3           #[-Ns/2, Ns/2 - 1]
+    wId:  1           #[-Nt/2, Nt/2 - 1]
 
-# TemporalDelta
-    delay: 0.0
-
-#------------spatialKernelSettings-----------------#
-spatialKernels:
-    Krg:
-    # SpatialDelta
-        weight: 1.0
-
-    Krc:
-    # Gauss (DOG)
-        A: 0.0
-        a: 0.001
-        B: 1.5
-        b: 0.83
-
-    Kcr:
-    # SpatialDelta
-        weight: 1.0
-
-
-#------------temporalKernelSettings-----------------#
-temporalKernels:
-    Krg:
-    # TemporalDelta
-        delay: 0.0
-
-    Kcr:
-    # TemporalDelta
-        delay: 0.0
-
-    Krc:
-    # TemporalDelta
-        delay: 0.0
-
+#-----------------Neuron settings------------------#
+ganglion:
+    R0 : 0
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: false
+    Wg:
+    # DOG
+        A: 1.0
+        a: 0.62
+        B: 0.85
+        b: 1.26
+    Wt:
+    #DoE
+        cenLatency: 10
+        surLatency: 22
+        delay: 6.
 
 #------------File manager settings-----------------#
-outputFile: "/media/milad/scratch/lgn-simulator/simulations/tmp/phaseReversedPushPull.h5"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+OutputManager:
+    outputFilename: "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/phaseReversedPushPull/phaseReversedPushPull.h5"
 
 
