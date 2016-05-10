@@ -376,7 +376,7 @@ if __name__ == "__main__":
     outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/phaseReversedPushPull/phaseReversedPushPull.h5"
 
 
-    # outputFile =  "/media/milad/scratch/lgn-simulator/simulations/spatialSummation/20160506-120202/20160506-120202.h5"
+    outputFile =  "/media/milad/scratch/lgn-simulator/simulations/phaseReversedPushPull/20160510-173414/20160510-173414.h5"
 
     # outputFile = glob(outputFilePath)[0]
     # print outputFile
@@ -440,17 +440,17 @@ if __name__ == "__main__":
 
     # data = [Wg,Wr,Wi,Wc]
     data = [Wg]
-    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
+    # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
     # data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
     # data = [ S,Rg, Rr, Ri, Rc]
     data = [ S,Rg]
-    plt.figure()
+    # plt.figure()
     # plt.plot(exp.integrator.s_points, exp.stimulus.spatio_temporal[0, Ns/2,:], label = "S")
     # plt.plot(exp.integrator.t_points, exp.stimulus.spatio_temporal[:, Ns/2,Ns/2], label = "S")
-
-    plt.plot(exp.integrator.t_points, exp.ganglion.response["spatio_temporal"][:, Ns/2,Ns/2], label = "G")
+    # plt.figure()
+    # plt.plot(exp.integrator.t_points, exp.ganglion.response["spatio_temporal"][:, Ns/2,Ns/2], label = "G")
     # plt.plot(exp.integrator.t_points, exp.relay.response["spatio_temporal"][:, Ns/2,Ns/2], label = "R")
     # plt.plot(exp.integrator.t_points, exp.interneuron.response["spatio_temporal"][:, Ns/2,Ns/2], label = "I")
     # plt.plot(exp.integrator.t_points, exp.cortical.response["spatio_temporal"][:, Ns/2,Ns/2], label = "C")

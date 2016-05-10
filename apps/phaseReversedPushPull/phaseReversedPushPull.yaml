@@ -38,7 +38,7 @@ ganglion:
     #DoE
         cenLatency: 10
         surLatency: 22
-        delay: 6.
+        delay: 0.
 
 #------------File manager settings-----------------#
 OutputManager:
