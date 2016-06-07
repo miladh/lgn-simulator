@@ -3,8 +3,7 @@
 using namespace lgnSimulator;
 
 
-EllipticGaussian::EllipticGaussian(double angle,
-                                   double widthLong, double widthNarrow)
+EllipticGaussian::EllipticGaussian(double angle, double widthLong, double widthNarrow)
     :m_angle(angle*core::pi/180.)
     , m_widthLong(widthLong)
     , m_widthNarrow(widthNarrow)

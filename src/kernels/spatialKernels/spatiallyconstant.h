@@ -8,7 +8,7 @@ namespace lgnSimulator {
 class SpatiallyConstant : public SpatialKernel
 {
 public:
-    SpatiallyConstant(double constant, double spatialFreqResolution);
+    SpatiallyConstant(double lengthInterval, double spatialFreqResolution);
 
     // SpatialKernel interface
     virtual double spatial(vec2 r) const;
@@ -16,7 +16,7 @@ public:
 
 
 private:
-    double m_constant= 0.0;
+    double m_lengthInterval= 0.0;
     double m_peak  = 1.0;
 
 };

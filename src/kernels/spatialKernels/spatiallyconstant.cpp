@@ -2,8 +2,9 @@
 
 using namespace lgnSimulator;
 
-SpatiallyConstant::SpatiallyConstant(double constant, double spatialFreqResolution)
-    : m_constant(constant)
+
+SpatiallyConstant::SpatiallyConstant(double lengthInterval, double spatialFreqResolution)
+    : m_lengthInterval(lengthInterval)
     , m_peak(1./spatialFreqResolution/spatialFreqResolution)
 {
 
@@ -12,22 +13,24 @@ SpatiallyConstant::SpatiallyConstant(double constant, double spatialFreqResoluti
 double lgnSimulator::SpatiallyConstant::spatial(vec2 r) const
 {
     (void)r;
-    return m_constant;
+    return 1./m_lengthInterval/m_lengthInterval;
 }
 
 complex<double> lgnSimulator::SpatiallyConstant::fourierTransform(vec2 k) const
 {
-    return 4.*core::pi*core::pi * m_constant * m_peak * Special::delta(k, vec2{0,0});
+    return 4.*core::pi*core::pi * m_peak / m_lengthInterval / m_lengthInterval
+            * Special::delta(k, vec2{0,0});
 }
 
 
 lgnSimulator::SpatiallyConstant createSpatiallyConstantKernel(const YAML::Node &cfg)
 {
-    double constant = cfg["constant"].as<double>();
     double ds = cfg["ds"].as<double>();
     double ns = cfg["ns"].as<double>();
-    double peak = 2.*core::pi/pow(2,ns)/ds;
 
-    return SpatiallyConstant(constant, peak);
+    double lengthInterval =pow(2,ns)*ds;
+    double peak = 2.*core::pi/lengthInterval;
+
+    return SpatiallyConstant(lengthInterval, peak);
 
 }
