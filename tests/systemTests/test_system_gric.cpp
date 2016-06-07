@@ -122,6 +122,68 @@ void runSystemTest_GRIC(int nt, double dt, int ns, double ds,
 
 SUITE(system){
 
+    TEST(runSystemTest_GRIC_2){
+        int ns = 6;
+        int nt = 4;
+        double dt = 5;
+        double ds = 0.1;
+
+
+        double w_w = 1.0;
+        double w_cr = 1.0;
+        double w_rg = 1.0;
+        double w_rc = 1.0;
+        double w_ri = -1.0;
+        double w_ig = 0.5;
+        double w_ic = 1.0;
+
+        double C = 1.0;
+        double orientation = 0.;
+        double kId = 3.;
+        double wId = 2.;
+
+
+        DOG Ws(0.25, 0.83, 0.85);
+        TemporalDelta Wt(0, dt);
+        SeparableKernel W(w_w, &Ws, &Wt);
+
+        SpatialDelta Kcr_s(ds,{0,0});
+        TemporalDelta Kcr_t(0, dt);
+        SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
+
+        SpatialDelta Krg_s( ds, {0,0});
+        TemporalDelta Krg_t(0, dt);
+        SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
+
+        SpatialGaussian Krc_s(0.64);
+        TemporalDelta Krc_t(0, dt);
+        SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
+
+        SpatialDelta Kri_s(ds,{0,0});
+        TemporalDelta Kri_t(0, dt);
+        SeparableKernel Kri(w_ri, &Kri_s, &Kri_t);
+
+        SpatialGaussian Kig_s(0.5);
+        TemporalDelta Kig_t(0, dt);
+        SeparableKernel Kig(w_ig, &Kig_s, &Kig_t);
+
+        SpatialGaussian Kic_s(0.83);
+        TemporalDelta Kic_t(0, dt);
+        SeparableKernel Kic(w_ic, &Kic_s, &Kic_t);
+
+        runSystemTest_GRIC(nt, dt, ns, ds,
+                           C, wId, kId, orientation,
+                           W, Kcr,
+                           Krg, Kri, Krc,
+                           Kig, Kic);
+    }
+
+
+
+
+
+
+//*****************************************************************************************
     TEST(runSystemTest_GRIC_0){
         double dt = 0.1;
         double ds = 0.1;
