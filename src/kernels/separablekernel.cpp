@@ -2,9 +2,11 @@
 
 using namespace lgnSimulator;
 
-SeparableKernel::SeparableKernel(SpatialKernel *spatialKernel,
+SeparableKernel::SeparableKernel(double weight,
+                                 SpatialKernel *spatialKernel,
                                  TemporalKernel *temporalKernel)
-    : m_spatialKernel(spatialKernel)
+    : Kernel(weight)
+    , m_spatialKernel(spatialKernel)
     , m_temporalKernel(temporalKernel)
 
 {

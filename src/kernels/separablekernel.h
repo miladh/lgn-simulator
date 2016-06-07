@@ -9,7 +9,8 @@ namespace lgnSimulator {
 class SeparableKernel : public Kernel
 {
 public:
-    SeparableKernel(SpatialKernel *spatialKernel,
+    SeparableKernel(double weight,
+                    SpatialKernel *spatialKernel,
                     TemporalKernel *temporalKernel);
 
     // Kernel interface

@@ -40,17 +40,17 @@ int main(int argc, char* argv[])
     //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(spatialKernelSettings);
     TemporallyConstant Kt_rg = createTemporallyConstantKernel(temporalKernelSettings);
-    SeparableKernel Krg(&Ks_rg, &Kt_rg);
+    SeparableKernel Krg(1, &Ks_rg, &Kt_rg);
 
     DOG Ks_rig = createSpatialDOGKernel(spatialKernelSettings);
     TemporallyConstant Kt_rig = createTemporallyConstantKernel(temporalKernelSettings);
-    SeparableKernel Krig(&Ks_rig, &Kt_rig);
+    SeparableKernel Krig(1, &Ks_rig, &Kt_rig);
 
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
     TemporallyConstant Wg_t = createTemporallyConstantKernel(ganglionImpRes);
-    SeparableKernel Wg(&Wg_s, &Wg_t);
+    SeparableKernel Wg(1, &Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg);
 
     //Relay cell: -------------------------------------------------------------

@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
     DOE Wg_t = createTemporalDOEKernel(cfg["ganglion"]["Wt"]);
 
-    SeparableKernel Wg(&Wg_s, &Wg_t);
+    SeparableKernel Wg(cfg["ganglion"]["w"].as<double>() , &Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg, cfg["ganglion"]["R0"].as<double>());
 
     //Compute:-----------------------------------------------------------------

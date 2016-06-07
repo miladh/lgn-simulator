@@ -12,11 +12,13 @@ namespace lgnSimulator {
 class Kernel
 {
 public:
-    Kernel();
+    Kernel(double weight);
 
     virtual double spatiotemporal(vec2 r, double t) const = 0;
     virtual complex<double> fourierTransform(vec2 k, double w) const = 0;
 
+protected:
+    double m_weight = 0.0;
 };
 
 }

@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
     TemporalDelta Wg_t = createTemporalDeltaKernel(cfg["ganglion"]["Wt"]);
     
-    SeparableKernel Wg(&Wg_s, &Wg_t);
+    SeparableKernel Wg(cfg["ganglion"]["w"].as<double>(), &Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg, cfg["ganglion"]["R0"].as<double>());
     
     
@@ -48,18 +48,18 @@ int main(int argc, char* argv[])
     // G -> R
     SpatialDelta Ks_rg = createSpatialDeltaKernel(cfg["relay"]["Krg"]["spatial"]);
     TemporalDelta Kt_rg = createTemporalDeltaKernel(cfg["relay"]["Krg"]["temporal"]);
-    SeparableKernel Krg(&Ks_rg, &Kt_rg);
+    SeparableKernel Krg(cfg["relay"]["Krg"]["w"].as<double>(), &Ks_rg, &Kt_rg);
     
     
     // I -> R
     SpatialDelta Ks_ri = createSpatialDeltaKernel(cfg["relay"]["Kri"]["spatial"]);
     TemporalDelta Kt_ri = createTemporalDeltaKernel(cfg["relay"]["Kri"]["temporal"]);
-    SeparableKernel Kri(&Ks_ri, &Kt_ri);
+    SeparableKernel Kri(cfg["relay"]["Kri"]["w"].as<double>(), &Ks_ri, &Kt_ri);
     
     // C -> R
     SpatialGaussian Ks_rc = createSpatialGaussianKernel(cfg["relay"]["Krc"]["spatial"]);
     TemporalDelta Kt_rc = createTemporalDeltaKernel(cfg["relay"]["Krc"]["temporal"]);
-    SeparableKernel Krc(&Ks_rc, &Kt_rc);
+    SeparableKernel Krc(cfg["relay"]["Krc"]["w"].as<double>(), &Ks_rc, &Kt_rc);
     
     //Relay cell: -------------------------------------------------------------
     Interneuron interneuron(integrator, cfg["interneuron"]["R0"].as<double>());
@@ -67,12 +67,12 @@ int main(int argc, char* argv[])
     // G -> I
     SpatialGaussian Ks_ig = createSpatialGaussianKernel(cfg["interneuron"]["Kig"]["spatial"]);
     TemporalDelta Kt_ig = createTemporalDeltaKernel(cfg["interneuron"]["Kig"]["temporal"]);
-    SeparableKernel Kig(&Ks_ig, &Kt_ig);
+    SeparableKernel Kig(cfg["interneuron"]["Kig"]["w"].as<double>(), &Ks_ig, &Kt_ig);
     
     // C -> I
     SpatialGaussian Ks_ic = createSpatialGaussianKernel(cfg["interneuron"]["Kic"]["spatial"]);
     TemporalDelta Kt_ic = createTemporalDeltaKernel(cfg["interneuron"]["Kic"]["temporal"]);
-    SeparableKernel Kic(&Ks_ic, &Kt_ic);
+    SeparableKernel Kic(cfg["interneuron"]["Kic"]["w"].as<double>(), &Ks_ic, &Kt_ic);
     
     //Cortical cell: -------------------------------------------------------------
     CorticalCell cortical(integrator, cfg["cortical"]["R0"].as<double>());
@@ -80,7 +80,7 @@ int main(int argc, char* argv[])
     // R -> G
     SpatialDelta Ks_cr = createSpatialDeltaKernel(cfg["cortical"]["Kcr"]["spatial"]);
     TemporalDelta Kt_cr = createTemporalDeltaKernel(cfg["cortical"]["Kcr"]["temporal"]);
-    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
+    SeparableKernel Kcr(cfg["cortical"]["Kcr"]["w"].as<double>(), &Ks_cr, &Kt_cr);
     
     
     //Connect neurons:---------------------------------------------------------

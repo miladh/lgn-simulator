@@ -78,9 +78,10 @@ SUITE(system){
 
     TEST(runSystemTest_GR_0){
         double dt = 0.1;
+        double weight = 1;
         SpatialGaussian Ws(1, 0.25);
         TemporalDelta Wt(0, dt);
-        SeparableKernel W(&Ws, &Wt);
+        SeparableKernel W(weight, &Ws, &Wt);
 
         runSystemTest_GR(2, dt, 2, 0.1,
                          -1, 0, 1, 0, W, W);
@@ -89,13 +90,15 @@ SUITE(system){
 
     TEST(runSystemTest_GR_1){
         double dt = 0.1;
+        double weight_w = 1;
         SpatialGaussian Ws(1, 0.25);
         TemporalDelta Wt(1*dt, dt);
-        SeparableKernel W(&Ws, &Wt);
+        SeparableKernel W(weight_w, &Ws, &Wt);
 
+        double weight_k = -1;
         SpatialGaussian Ks(-1, 0.55);
         TemporalDelta Kt(2*dt, dt);
-        SeparableKernel K(&Ws, &Wt);
+        SeparableKernel K(weight_k, &Ws, &Wt);
 
          runSystemTest_GR(3, dt, 2, 0.1,
                          -1, 3, 1, 4, W, K);

@@ -2,10 +2,12 @@
 
 using namespace lgnSimulator;
 
-NonseparableDOG::NonseparableDOG(double A, double a, double B, double b,
+NonseparableDOG::NonseparableDOG(double weight,
+                                 double A, double a, double B, double b,
                                  double cenLatencyAlpha, double cenLatencyBeta,
                                  double surLatencyAlpha, double surLatencyBeta,
-                                 double delay)
+                                 double delay):
+    Kernel(weight)
 {
     m_spatialCentre = new SpatialGaussian(A,a);
     m_spatialSurround = new SpatialGaussian(B,b);
@@ -31,6 +33,8 @@ complex<double> lgnSimulator::NonseparableDOG::fourierTransform(vec2 k, double w
 NonseparableDOG createNonseparableDOGKernel(const YAML::Node &cfg)
 {
 
+    double weight = cfg["weight"].as<double>();
+
     double cenLatencyAlpha = cfg["cenLatencyAlpha"].as<double>();
     double cenLatencyBeta  = cfg["cenLatencyBeta"].as<double>();
     double surLatencyAlpha = cfg["surLatencyAlpha"].as<double>();
@@ -43,7 +47,7 @@ NonseparableDOG createNonseparableDOGKernel(const YAML::Node &cfg)
     double b = cfg["b"].as<double>();
 
 
-    return NonseparableDOG(A, a, B, b,
+    return NonseparableDOG(weight, A, a, B, b,
                            cenLatencyAlpha, cenLatencyBeta,
                            surLatencyAlpha, surLatencyBeta,
                            delay);

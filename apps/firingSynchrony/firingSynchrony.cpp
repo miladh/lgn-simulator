@@ -50,7 +50,7 @@ int main(int argc, char* argv[]){
     TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
 //    Biphasic Wg_t = createTemporalBiphasicKernel(ganglionImpRes);
 
-    SeparableKernel Wg(&Wg_s, &Wg_t);
+    SeparableKernel Wg(1, &Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg, Rg_0);
 
     //Relay cell: -------------------------------------------------------------
@@ -60,7 +60,7 @@ int main(int argc, char* argv[]){
     //Kernels:---------------------------------------------------------
     SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
     TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
-    SeparableKernel Krg(&Ks_rg, &Kt_rg);
+    SeparableKernel Krg(1, &Ks_rg, &Kt_rg);
 
 
 //    EllipticGaussian Ks_rc = createSpatialEllipticGaussianKernel(Ks_rcSettings);
@@ -68,7 +68,7 @@ int main(int argc, char* argv[]){
     TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
 //    DOE Kt_rc = createTemporalDOEKernel(Kt_rcSettings);
 
-    SeparableKernel Krc(&Ks_rc, &Kt_rc);
+    SeparableKernel Krc(1, &Ks_rc, &Kt_rc);
 
 
 
@@ -76,7 +76,7 @@ int main(int argc, char* argv[]){
     TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
 //    DOE Kt_cr = createTemporalDOEKernel(Kt_crSettings);
 
-    SeparableKernel Kcr(&Ks_cr, &Kt_cr);
+    SeparableKernel Kcr(1, &Ks_cr, &Kt_cr);
 
 
     //Connect neurons:---------------------------------------------------------

@@ -28,6 +28,7 @@ ganglion:
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: false
+    w : 1.0
     Wg:
     # DOG
         A: 1.0
@@ -48,6 +49,7 @@ relay:
 
     #Kernels
     Krg:
+        w : 1.0
         spatial:
         # SpatialDelta
             weight: 1.0
@@ -60,6 +62,7 @@ relay:
             delay: 5
             dt: *dt_id
     Kri:
+        w : -1.0
         spatial:
         # SpatialDelta
             weight: -1.0
@@ -72,6 +75,7 @@ relay:
             dt: *dt_id
 
     Krc:
+        w : 1.0
         spatial:
         #Gauss
             A: 1.0
@@ -91,6 +95,7 @@ interneuron:
 
     #Kernels
     Kig:
+        w : 0.5
         spatial:
         # Gaussian
             A: 0.5
@@ -104,6 +109,7 @@ interneuron:
 
 
     Kic:
+        w : 1.0
         spatial:
         #Gauss
             A: 1.0
@@ -123,6 +129,7 @@ cortical:
 
     #kernels
     Kcr:
+        w : 1.0
         spatial:
         # SpatialDelta
             weight: 1.0

@@ -1,7 +1,9 @@
 #include "kernel.h"
 
 using namespace lgnSimulator;
-Kernel::Kernel()
+Kernel::Kernel(double weight):
+    m_weight(weight)
+
 {
 
 }
