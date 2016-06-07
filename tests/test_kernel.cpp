@@ -297,7 +297,6 @@ SUITE(kernel){
 
     }
     TEST(spatialDelta_test_1) {
-        //w = -1.3
         vec2 shift = {0.5, 0.1};
         SpatialDelta delta(1, shift);
         CHECK_CLOSE(delta.spatial({0.5, 0.1}), 1, 1e-12);
@@ -314,17 +313,6 @@ SUITE(kernel){
 
         CHECK_CLOSE(real(G.fourierTransform({0.5, 1.1})), 0.9774457376685004, 1e-12);
         CHECK_CLOSE(real(G.fourierTransform({1.5, 0.1})), 0.96530371170877705, 1e-12);
-
-        CHECK_EQUAL(imag(G.fourierTransform({0.5, 1.1})), 0.0);
-        CHECK_EQUAL(imag(G.fourierTransform({1.5, 0.1})), 0.0);
-    }
-    TEST(gaussKernel_test_1) {
-        SpatialGaussian G(0.25);
-        CHECK_CLOSE(G.spatial({0.5, 0.1}),0.07948863976186649, 1e-12);
-        CHECK_CLOSE(G.spatial({1.2, 1.9}), 0, 1e-12);
-
-        CHECK_CLOSE(real(G.fourierTransform({0.5, 1.1})),0.9774457376685004, 1e-12);
-        CHECK_CLOSE(real(G.fourierTransform({1.5, 0.1})),0.9653037117087772, 1e-12);
 
         CHECK_EQUAL(imag(G.fourierTransform({0.5, 1.1})), 0.0);
         CHECK_EQUAL(imag(G.fourierTransform({1.5, 0.1})), 0.0);

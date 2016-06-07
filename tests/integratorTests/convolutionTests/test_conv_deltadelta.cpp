@@ -69,13 +69,13 @@ SUITE(integrator){
     TEST(deltaConvolutionTest_test_0) {
         runDeltaConvolutionTest(2, 0.05, 6, 0.05,
                                0,  vec2{0.0, 0.0},
-                               0,  vec2{0.0, 0.0});
+                               0,  vec2{0.2, 0.0});
     }
 
     TEST(deltaConvolutionTest_test_1) {
         runDeltaConvolutionTest(3, 0.1, 7, 0.05,
-                                0, vec2{0.0, 0.0},
-                                0, vec2{0.0, 0.0});
+                                0, vec2{0.3, 0.0},
+                                0, vec2{0.0, .2});
     }
 
 

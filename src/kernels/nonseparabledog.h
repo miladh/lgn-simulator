@@ -21,7 +21,8 @@ public:
 
 
 private:
-    SpatialGaussian *m_spatialCentre;
+    double m_relativeStrength = 0.0;
+    SpatialGaussian *m_spatialCenter;
     SpatialGaussian *m_spatialSurround;
     DOE *m_temporalCenter;
     DOE *m_temporalSurround;

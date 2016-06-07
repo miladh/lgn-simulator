@@ -12,12 +12,10 @@
 
 using namespace lgnSimulator;
 
-double response(double d, double s, double A, double a, double B, double b)
+double response(double d, double s, double a, double b, double c)
 {
-    double l = A * s;
-    double w = B/A;
 
-    double Rg = l * (  1 - exp(-d*d / (4*a*a)) - w * (1. -  exp(-d*d / (4*b*b) ) ) );
+    double Rg = s * (  1 - exp(-d*d / (4*a*a)) - c * (1. -  exp(-d*d / (4*b*b) ) ) );
 
     return Special::heaviside(Rg) * Rg;
 }
@@ -47,7 +45,7 @@ void runSystemTest_G_spot(int nt, double dt, int ns, double ds,
 
 
     //Compute analytic:
-    double Rg_ex = response(spot.maskSize(), C,  1.0, a, c, b);
+    double Rg_ex = response(spot.maskSize(), C, a, b, c);
 
     //Compute numerical
     ganglion.computeResponse(&spot);
