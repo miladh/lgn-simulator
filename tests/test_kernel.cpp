@@ -289,27 +289,26 @@ SUITE(kernel){
 
     //SpatialDelta---------------------------------------------------
     TEST(spatialDelta_test_0) {
-        double w = 1.3;
         vec2 shift = {0.0, 0.0};
-        SpatialDelta delta(w, 1, shift);
+        SpatialDelta delta(1, shift);
         CHECK_CLOSE(delta.spatial({0.5, 0.1}), 0.0, 1e-12);
-        CHECK_CLOSE(real(delta.fourierTransform({0.5, 0.1})), w, 1e-12);
+        CHECK_CLOSE(real(delta.fourierTransform({0.5, 0.1})), 1.0, 1e-12);
         CHECK_CLOSE(imag(delta.fourierTransform({0.5, 0.1})), 0.0, 1e-12);
 
     }
     TEST(spatialDelta_test_1) {
-        double w = -1.3;
+        //w = -1.3
         vec2 shift = {0.5, 0.1};
-        SpatialDelta delta(w,1, shift);
-        CHECK_CLOSE(delta.spatial({0.5, 0.1}), w, 1e-12);
-        CHECK_CLOSE(real(delta.fourierTransform({2.5, -3.1})),-0.76672443254042, 1e-12);
-        CHECK_CLOSE(imag(delta.fourierTransform({2.5, -3.1})), 1.04982553052664, 1e-12);
+        SpatialDelta delta(1, shift);
+        CHECK_CLOSE(delta.spatial({0.5, 0.1}), 1, 1e-12);
+        CHECK_CLOSE(real(delta.fourierTransform({2.5, -3.1})),0.5897880250310923, 1e-12);
+        CHECK_CLOSE(imag(delta.fourierTransform({2.5, -3.1})), -0.8075581004051077,1e-12);
 
     }
 
     //Gauss----------------------------------------------------------
     TEST(gaussKernel_test_0) {
-        SpatialGaussian G(1.0, 0.25);
+        SpatialGaussian G(0.25);
         CHECK_CLOSE(G.spatial({0.5, 0.1}), 0.079488639761866486, 1e-12);
         CHECK_CLOSE(G.spatial({1.2, 1.9}), 0, 1e-12);
 
@@ -320,12 +319,12 @@ SUITE(kernel){
         CHECK_EQUAL(imag(G.fourierTransform({1.5, 0.1})), 0.0);
     }
     TEST(gaussKernel_test_1) {
-        SpatialGaussian G(-0.75, 0.25);
-        CHECK_CLOSE(G.spatial({0.5, 0.1}), -0.059616479821399865, 1e-12);
+        SpatialGaussian G(0.25);
+        CHECK_CLOSE(G.spatial({0.5, 0.1}),0.07948863976186649, 1e-12);
         CHECK_CLOSE(G.spatial({1.2, 1.9}), 0, 1e-12);
 
-        CHECK_CLOSE(real(G.fourierTransform({0.5, 1.1})), -0.7330843032513753, 1e-12);
-        CHECK_CLOSE(real(G.fourierTransform({1.5, 0.1})), -0.72397778378158284, 1e-12);
+        CHECK_CLOSE(real(G.fourierTransform({0.5, 1.1})),0.9774457376685004, 1e-12);
+        CHECK_CLOSE(real(G.fourierTransform({1.5, 0.1})),0.9653037117087772, 1e-12);
 
         CHECK_EQUAL(imag(G.fourierTransform({0.5, 1.1})), 0.0);
         CHECK_EQUAL(imag(G.fourierTransform({1.5, 0.1})), 0.0);
@@ -333,7 +332,7 @@ SUITE(kernel){
 
     //DoG------------------------------------------------------------
     TEST(dogKernel) {
-        DOG dog(1.0, 0.25, 0.85, 0.83);
+        DOG dog(0.25, 0.83, 0.85);
         CHECK_CLOSE(dog.spatial({0.5, 0.1}), -0.189791527743, 1e-12);
         CHECK_CLOSE(dog.spatial({1.2, 1.9}), -0.00025733892027, 1e-12);
 

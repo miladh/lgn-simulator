@@ -7,3 +7,8 @@ Kernel::Kernel(double weight):
 {
 
 }
+
+double Kernel::weight() const
+{
+    return m_weight;
+}

@@ -14,9 +14,9 @@ using namespace lgnSimulator;
 
 
 void runDogdecayingExpConvolutionTest(int nt, double dt, int ns, double ds,
-                                      int tau, double A, double a,
+                                      int tau, double a,
                                       int delay, double timeConstant,
-                                      double weight, vec2 shift)
+                                      vec2 shift)
 {
 
 
@@ -26,10 +26,10 @@ void runDogdecayingExpConvolutionTest(int nt, double dt, int ns, double ds,
     vec t = integrator.timeVec();
     vec w = integrator.temporalFreqVec();
 
-    SpatialGaussian Ws(A, a);
+    SpatialGaussian Ws( a);
     TemporalDelta Wt(t[tau], dt);
 
-    SpatialDelta Ks(weight, ds, shift);
+    SpatialDelta Ks( ds, shift);
     DecayingExponential Kt(timeConstant, t[delay]);
 
     cube F_e = zeros(r.n_elem, r.n_elem, t.n_elem);
@@ -38,8 +38,7 @@ void runDogdecayingExpConvolutionTest(int nt, double dt, int ns, double ds,
     for(int l=0; l < int(t.n_elem); l++){
         for(int i = 0; i < int(r.n_elem); i++){
             for(int j = 0; j < int(r.n_elem); j++){
-                F_e(i,j,l) = weight
-                        * Ws.spatial(vec2{r[i], r[j]} - shift)
+                F_e(i,j,l) =  Ws.spatial(vec2{r[i], r[j]} - shift)
                         * Wt.temporal(t[l] - t[delay]);
 
                 G(i,j,l) = Ws.fourierTransform({k[i], k[j]})

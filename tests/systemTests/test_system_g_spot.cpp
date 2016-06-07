@@ -25,7 +25,7 @@ double response(double d, double s, double A, double a, double B, double b)
 
 void runSystemTest_G_spot(int nt, double dt, int ns, double ds,
                           double C, double maskSize, int delayId,
-                          double A, double a, double B, double b,
+                          double a, double b, double c,
                           double weight)
 {
 
@@ -38,7 +38,7 @@ void runSystemTest_G_spot(int nt, double dt, int ns, double ds,
     spot.computeFourierTransform();
 
     //ganglion cell
-    DOG Ws(A, a, B, b);
+    DOG Ws(a, b, c);
     TemporalDelta Wt(t[delayId], dt);
     SeparableKernel W(weight, &Ws, &Wt);
 
@@ -47,7 +47,7 @@ void runSystemTest_G_spot(int nt, double dt, int ns, double ds,
 
 
     //Compute analytic:
-    double Rg_ex = response(spot.maskSize(), C,  A, a, B, b);
+    double Rg_ex = response(spot.maskSize(), C,  1.0, a, c, b);
 
     //Compute numerical
     ganglion.computeResponse(&spot);
@@ -65,14 +65,14 @@ SUITE(system){
     TEST(runTest_G_spot_0){
         runSystemTest_G_spot(3, 0.5, 6, 0.01,
                             0.1, 0.5, 0,
-                            1, 0.06, 0.8, 0.12,
+                            0.06, 0.12, 0.8,
                              1);
     }
 
     TEST(runTest_G_spot_1){
         runSystemTest_G_spot(3, 0.5, 8, 0.1,
                             2.5, 0.8, 4,
-                            1, 0.25, 0.8, 0.83,
+                            0.25, 0.83, 0.8,
                             1);
     }
 }

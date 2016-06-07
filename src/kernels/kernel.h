@@ -17,6 +17,8 @@ public:
     virtual double spatiotemporal(vec2 r, double t) const = 0;
     virtual complex<double> fourierTransform(vec2 k, double w) const = 0;
 
+    double weight() const;
+
 protected:
     double m_weight = 0.0;
 };

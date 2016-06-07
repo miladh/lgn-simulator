@@ -11,7 +11,7 @@ namespace lgnSimulator {
 class SpatialGaussian : public SpatialKernel
 {
 public:
-    SpatialGaussian(double A, double a);
+    SpatialGaussian(double a);
 
     // SpatialKernel interface
     virtual double spatial(vec2 r) const;
@@ -19,7 +19,6 @@ public:
 
 
 private:
-    double m_A = 0.0;
     double m_a = 0.0;
 };
 }

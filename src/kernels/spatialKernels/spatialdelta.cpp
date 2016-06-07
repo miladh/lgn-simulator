@@ -1,9 +1,8 @@
 #include "spatialdelta.h"
 
 using namespace lgnSimulator;
-SpatialDelta::SpatialDelta(double weight, double spatialResolution, vec2 shift)
-    : m_weight(weight)
-    , m_peak(1./spatialResolution/spatialResolution)
+SpatialDelta::SpatialDelta(double spatialResolution, vec2 shift)
+    : m_peak(1./spatialResolution/spatialResolution)
     , m_shift(shift)
 {
 }
@@ -11,12 +10,12 @@ SpatialDelta::SpatialDelta(double weight, double spatialResolution, vec2 shift)
 
 double lgnSimulator::SpatialDelta::spatial(vec2 r) const
 {
-    return m_weight * m_peak * Special::delta(m_shift, r);
+    return m_peak * Special::delta(m_shift, r);
 }
 
 complex<double> lgnSimulator::SpatialDelta::fourierTransform(vec2 k) const
 {
-    return m_weight * exp(-core::i * dot(k, m_shift));
+    return exp(-core::i * dot(k, m_shift));
 }
 
 
@@ -24,11 +23,10 @@ complex<double> lgnSimulator::SpatialDelta::fourierTransform(vec2 k) const
 SpatialDelta createSpatialDeltaKernel(const YAML::Node &cfg)
 {
 
-    double weight = cfg["weight"].as<double>();
     double ds = cfg["ds"].as<double>();
     vec2 shift = {cfg["shift"][0].as<double>(),
                   cfg["shift"][1].as<double>()};
 
 
-    return SpatialDelta(weight, ds, shift);
+    return SpatialDelta(ds, shift);
 }

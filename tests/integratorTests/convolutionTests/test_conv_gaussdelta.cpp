@@ -13,8 +13,8 @@
 using namespace lgnSimulator;
 
 void runGaussDeltaConvolutionTest(int nt, double dt, int ns, double ds,
-                                int tau, double A, double a,
-                                int delay, double weight, vec2 shift)
+                                int tau, double a,
+                                int delay,  vec2 shift)
 {
 
 
@@ -24,10 +24,10 @@ void runGaussDeltaConvolutionTest(int nt, double dt, int ns, double ds,
     vec t = integrator.timeVec();
     vec w = integrator.temporalFreqVec();
 
-    SpatialGaussian Ws(A, a);
+    SpatialGaussian Ws( a);
     TemporalDelta Wt(t[tau], dt);
 
-    SpatialDelta Ks(weight, ds, shift);
+    SpatialDelta Ks(ds, shift);
     TemporalDelta Kt(t[delay], dt);
 
     cube F_e = zeros(r.n_elem, r.n_elem, t.n_elem);
@@ -37,8 +37,7 @@ void runGaussDeltaConvolutionTest(int nt, double dt, int ns, double ds,
     for(int l=0; l < int(t.n_elem); l++){
         for(int i = 0; i < int(r.n_elem); i++){
             for(int j = 0; j < int(r.n_elem); j++){
-                F_e(i,j,l) = weight
-                           * Ws.spatial(vec2{r[i], r[j]} - shift)
+                F_e(i,j,l) = Ws.spatial(vec2{r[i], r[j]} - shift)
                            * Wt.temporal(t[l] - t[delay]);
                 G(i,j,l) = Ws.fourierTransform({k[i], k[j]})
                          * Wt.fourierTransform(w[l])
@@ -65,14 +64,14 @@ SUITE(integrator){
 
     TEST(gaussDeltaConvolutionTest_test_0) {
         runGaussDeltaConvolutionTest(2, 0.05, 6, 0.05,
-                                   0, 1.0, 0.25,
-                                   0, 1.0, vec2{0.0, 0.0});
+                                   0,  0.25,
+                                   0,  vec2{0.0, 0.0});
     }
 
     TEST(gaussDeltaConvolutionTest_test_1) {
         runGaussDeltaConvolutionTest(3, 0.1, 7, 0.05,
-                                   1, -1.2, 0.25,
-                                   5, 10.89, vec2{1.1, -0.3});
+                                   1,  0.25,
+                                   5,  vec2{1.1, -0.3});
     }
 
 

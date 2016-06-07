@@ -28,12 +28,12 @@ ganglion:
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: false
+    w : 1.0
     Wg:
     # DOG
-        A: 1.0
         a: 0.62
-        B: 0.85
         b: 1.26
+        c: 0.85
     Wt:
     #DoE
         cenLatency: 10

@@ -10,8 +10,7 @@ namespace lgnSimulator{
 class NonseparableDOG : public Kernel
 {
 public:
-    NonseparableDOG(double weight,
-                    double A, double a, double B, double b,
+    NonseparableDOG(double weight, double a, double b, double c,
                     double cenLatencyAlpha, double cenLatencyBeta,
                     double surLatencyAlpha, double surLatencyBeta,
                     double delay);

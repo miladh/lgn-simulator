@@ -107,19 +107,19 @@ SUITE(system){
         double w_cr = -1.5;
 
 
-        SpatialGaussian Ws(1, 0.25);
+        SpatialGaussian Ws( 0.25);
         TemporalDelta Wt(0, dt);
         SeparableKernel W(w_w, &Ws, &Wt);
 
-        SpatialDelta Krg_s(0.5, ds, {0,0,});
+        SpatialDelta Krg_s(ds, {0,0,});
         TemporalDelta Krg_t(2*dt, dt);
         SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
 
-        SpatialDelta Krc_s(0.5, ds, {0,0,});
+        SpatialDelta Krc_s( ds, {0,0,});
         TemporalDelta Krc_t(0, dt);
         SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
 
-        SpatialGaussian Kcr_s(-1.5, 0.23);
+        SpatialGaussian Kcr_s( 0.23);
         TemporalDelta Kcr_t(0, dt);
         SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
 
@@ -137,19 +137,19 @@ SUITE(system){
         double w_rc = 0.5;
         double w_cr = -1.0;
 
-        SpatialGaussian Ws(1, 0.25);
+        SpatialGaussian Ws(0.25);
         TemporalDelta Wt(0, dt);
         SeparableKernel W(w_w,&Ws, &Wt);
 
-        SpatialDelta Krg_s(0.5, ds, {0,0,});
+        SpatialDelta Krg_s( ds, {0,0,});
         TemporalDelta Krg_t(2*dt, dt);
         SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
 
-        SpatialDelta Krc_s(0.5, ds, {0,0,});
+        SpatialDelta Krc_s(ds, {0,0,});
         TemporalDelta Krc_t(0, dt);
         SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
 
-        SpatialGaussian Kcr_s(-1.0, 0.55);
+        SpatialGaussian Kcr_s( 0.55);
         TemporalDelta Kcr_t(3*dt, dt);
         SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
 

@@ -11,7 +11,7 @@ namespace lgnSimulator {
 class DOG : public SpatialKernel
 {
 public:
-    DOG(double A, double a, double B, double b);
+    DOG(double a, double b, double c);
     ~DOG();
 
     // SpatialKernel interface
@@ -20,8 +20,10 @@ public:
 
 
 private:
+    double m_relativeStrength = 1.0;
     SpatialGaussian *m_centre;
     SpatialGaussian *m_surround;
+
 
 
 };

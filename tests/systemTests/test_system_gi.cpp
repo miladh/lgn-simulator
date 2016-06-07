@@ -76,7 +76,7 @@ SUITE(system){
     TEST(runSystemTest_GI_0){
         double dt = 0.1;
         double weight = 1;
-        SpatialGaussian Ws(1, 0.25);
+        SpatialGaussian Ws( 0.25);
         TemporalDelta Wt(0, dt);
         SeparableKernel W(weight, &Ws, &Wt);
 
@@ -88,12 +88,12 @@ SUITE(system){
     TEST(runSystemTest_GI_1){
         double dt = 0.1;
         double weight_w = 1;
-        SpatialGaussian Ws(1, 0.25);
+        SpatialGaussian Ws(0.25);
         TemporalDelta Wt(1*dt, dt);
         SeparableKernel W(weight_w, &Ws, &Wt);
 
         double weight_k = -1;
-        SpatialGaussian Ks(1, 0.55);
+        SpatialGaussian Ks(0.55);
         TemporalDelta Kt(2*dt, dt);
         SeparableKernel K(weight_k, &Ws, &Wt);
 

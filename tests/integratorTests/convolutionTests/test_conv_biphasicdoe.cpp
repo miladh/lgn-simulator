@@ -60,11 +60,11 @@ double convDampedOscDOE(double phaseDuration, double dampingFactor,
 void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
                                            double phaseDuration,
                                            double dampingFactor,
-                                           double wg, vec2 rg,
+                                           vec2 rg,
                                            double cenLatency,
                                            double surLatency,
                                            int delay_doe,
-                                           double wk, vec2 rk)
+                                           vec2 rk)
 {
 
     Integrator integrator(nt, dt, ns, ds);
@@ -73,10 +73,10 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
     vec t = integrator.timeVec();
     vec w = integrator.temporalFreqVec();
 
-    SpatialDelta Ws(wg, ds, rg);
+    SpatialDelta Ws(ds, rg);
     Biphasic Wt(phaseDuration, dampingFactor, 0);
 
-    SpatialDelta Ks(wk, ds, rk);
+    SpatialDelta Ks(ds, rk);
     DOE Kt(cenLatency, surLatency, t[delay_doe]);
 
     cube F_e = zeros(r.n_elem, r.n_elem, t.n_elem);
@@ -85,8 +85,7 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
     for(int l=0; l < int(t.n_elem); l++){
         for(int i = 0; i < int(r.n_elem); i++){
             for(int j = 0; j < int(r.n_elem); j++){
-                F_e(i,j,l) = wk
-                        * Ws.spatial(vec2{r[i], r[j]} - rk)
+                F_e(i,j,l) = Ws.spatial(vec2{r[i], r[j]} - rk)
                         * convDampedOscDOE(phaseDuration, dampingFactor,
                                            cenLatency, surLatency, t[delay_doe],
                                            t[l]);
@@ -100,7 +99,7 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
     }
 
     cx_cube F = integrator.backwardFFT(G);
-    cx_cube diff = (F_e-F)/wk/wg*ds*ds; // divide by the contributions from spatial part
+    cx_cube diff = (F_e-F)*ds*ds; // divide by the contributions from spatial part
 
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
@@ -121,9 +120,9 @@ SUITE(integrator){
     TEST(dampedOscDOEConvolutionTest_test_0) {
         runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
                                               42.5, 0.38,
-                                              1., vec2{0.0, 0.0},
+                                               vec2{0.0, 0.0},
                                               16., 32., 0,
-                                              1.0, vec2{0.0, 0.0});
+                                              vec2{0.0, 0.0});
     }
 
 
@@ -131,9 +130,9 @@ SUITE(integrator){
     TEST(dampedOscDOEConvolutionTest_test_1) {
         runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
                                               42.5, 0.38,
-                                              1., vec2{0.0, 0.0},
+                                              vec2{0.0, 0.0},
                                               16., 32., 1365,
-                                              1.0, vec2{0.0, 0.0});
+                                              vec2{0.0, 0.0});
     }
 
 }

@@ -6,8 +6,7 @@ namespace lgnSimulator {
 class EllipticGaussian : public SpatialKernel
 {
 public:
-    EllipticGaussian(double weight, double angle,
-                     double widthLong, double widthNarrow);
+    EllipticGaussian(double angle,double widthLong, double widthNarrow);
     ~EllipticGaussian();
 
     // SpatialKernel interface
@@ -15,7 +14,6 @@ public:
     complex<double> fourierTransform(vec2 k) const;
 
 private:
-    double m_weight = 0.0;
     double m_angle = 0.0;
     double m_widthLong = 0.0;
     double m_widthNarrow = 0.0;
