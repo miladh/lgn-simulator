@@ -14,7 +14,7 @@ stimulus:
     storeFT: false
 
     # Grating:
-    C: 2.0
+    C: 1.0
     mask: "none" #none/circle/gaussian
     maskSize: 0.5
     orientation: 0.   #degrees

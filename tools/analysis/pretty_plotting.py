@@ -1,6 +1,4 @@
 import matplotlib.pyplot as plt
-import colormaps as cmaps
-import numpy as np
 
 def set_grid(ax, bgcolor="#EAEAF2" , linecolor="w", linestyle="-", linewidth=1.3):
     """
@@ -75,16 +73,16 @@ def set_font():
          u'Liberation Sans',
          u'Bitstream Vera Sans',
          u'sans-serif'],
-        'font.size': 12,
-        'axes.titlesize': 16,
-        'axes.labelsize': 14,
+        'font.size': 14,
+        'axes.titlesize': 18,
+        'axes.labelsize': 16,
         'lines.linewidth':2,
     }
     plt.rcParams.update(params)
 
 def set_legend():
     """
-    font options
+    legend options
     """
     params = {
         'legend.fontsize' : 'medium',
@@ -118,25 +116,28 @@ def colormap(color=0):
 
 #########################################################################################
 if __name__ == "__main__":
+    import colormaps as cmaps
+    import numpy as np
+
     t = np.linspace(0,100,1000)
     fig = plt.figure()
     ax = fig.add_subplot(111)
 
+
     spines_edge_color(ax)
     remove_ticks(ax)
     set_grid(ax)
+
     set_font()
     set_legend()
 
     # import seaborn as sns
     # sns.xkcd_rgb["pale red"]
 
-    ax.plot(t, color=colormap(0), label="test A")
-    ax.plot(t**2, color=colormap(6), label="test B")
+    ax.plot(np.sin(0.1*t), color=colormap(0), label="test A")
+    ax.plot(np.cos(0.1*t), color=colormap(6), label="test B")
     ax.set_xlabel("time")
     ax.set_title("Test")
 
-    plt.legend(loc=2)
-
-
+    plt.legend(loc=1)
     plt.show()

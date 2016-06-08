@@ -59,6 +59,11 @@ def animateImshowPlots(data,
     from mpl_toolkits.axes_grid1 import make_axes_locatable
     import time
 
+
+    # import seaborn as sns
+    # sns.set(style="dark")
+    # cmap = sns.cubehelix_palette( start = 2, light=1, as_cmap=True)
+
     num_subplots = len(data)
     imshowPlots = []
     nStates = len(data[0]["t_points"])
@@ -163,11 +168,22 @@ def imshowPlotsOfImpulseResponses(data,
 
     fig, axarr = plt.subplots(num_rows, num_cols, figsize=figsize, sharey=True)
 
+    # pp.set_font()
+    # for j in range(num_cols):
+    #     for i in range(num_rows):
+    #         ax = axarr[i,j]
+    #         pp.spines_edge_color(ax)
+    #         pp.remove_ticks(ax)
+
+
     if(num_rows == 1):
         axarr =  np.array(axarr).reshape(1,num_cols)
     if(num_cols ==1):
         axarr =  np.array(axarr).reshape(num_rows,1)
     levels = np.arange(-5., 5., 0.23)
+
+
+
     for j in range(num_cols):
         axarr[0,j].set_title(data[j]["type"])
         i=0
@@ -432,7 +448,7 @@ if __name__ == "__main__":
     # data = [ S,Rg, Rr, Ri, Rc]
     # plt.figure()
     # plt.plot(exp.integrator.s_points, exp.stimulus.spatio_temporal[0, Ns/2,:], label = "S")
-    raster(exp.spike_train("relay",  num_trails=50))
+    # raster(exp.spike_train("relay",  num_trails=50))
     animateImshowPlots(data, exp.integrator.dt,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
