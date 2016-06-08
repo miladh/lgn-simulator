@@ -2,6 +2,7 @@
 
 #include "fullfieldgrating.h"
 #include "circlemaskgrating.h"
+#include "gaussianmaskgrating.h"
 
 using namespace lgnSimulator;
 
@@ -161,6 +162,10 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
                     new CircleMaskGrating(integrator, spatialFreq, orientation,
                                           temporalFreq, contrast, maskSize));
 
+    }else if(mask == "gaussian"){
+        return unique_ptr<GaussianMaskGrating>(
+                    new GaussianMaskGrating(integrator, spatialFreq, orientation,
+                                          temporalFreq, contrast, maskSize));
     }else{
         cout << "mask: " << mask << endl;
         throw overflow_error("Unknown grating mask");

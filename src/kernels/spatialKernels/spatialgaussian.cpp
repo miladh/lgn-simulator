@@ -21,6 +21,11 @@ complex<double> SpatialGaussian::fourierTransform(vec2 k) const
     return exp(-dot(k,k) * m_a*m_a / 4.);
 }
 
+double SpatialGaussian::a() const
+{
+    return m_a;
+}
+
 SpatialGaussian createSpatialGaussianKernel(const YAML::Node &cfg)
 {
     double a = cfg["a"].as<double>();

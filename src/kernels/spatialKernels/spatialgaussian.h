@@ -18,6 +18,8 @@ public:
     virtual complex<double> fourierTransform(vec2 k) const;
 
 
+    double a() const;
+
 private:
     double m_a = 0.0;
 };

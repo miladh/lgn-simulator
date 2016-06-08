@@ -20,10 +20,10 @@ FullFieldGrating::~FullFieldGrating()
 {
 }
 
-double FullFieldGrating::valueAtPoint(vec2 rVec, double t) const
+double FullFieldGrating::valueAtPoint(vec2 r, double t) const
 {
 
-    double s = m_contrast * cos(dot(m_kVec, rVec) - m_w * t);
+    double s = m_contrast * cos(dot(m_kVec, r) - m_w * t);
     return s;
 }
 

@@ -15,10 +15,10 @@ stimulus:
 
     # Grating:
     C: 1.0
-    mask: "none" #none/circle
-    maskSize: 0.5
+    mask: "gaussian" #none/circle/gaussian
+    maskSize: 0.9
     orientation: 0.   #degrees
-    kId:  3           #[-Ns/2, Ns/2 - 1]
+    kId:  8           #[-Ns/2, Ns/2 - 1]
     wId:  2           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
