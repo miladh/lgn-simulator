@@ -1,9 +1,9 @@
 /**********************************************************************
- *  Test: 3D inverse fourier transform of full-field grating functions
- *        (cosine waves)
+ *  Test: 3D inverse fourier transform of gaussian patch grating f
+ *        unctions
  *
  *  Analytic source: implementation of the spatiotemporal grating
- *                   function in FullFieldGrating class
+ *                   function in GaussianMaskGrating class
  *
  * ********************************************************************/
 
@@ -40,24 +40,12 @@ void runIntegratorGaussianGratingTest(int ns, int nt, double dt, double ds,
     cube diff_imag = abs(imag(diff));
 
 
-    uword  idx, idy, idz;
-    double maxId = diff_real.max(idx, idy, idz);
-
-    cout << "index: " << idx <<"  "<<  idy << "  "<< idz << endl;
-
-    cout << diff_real.max() << endl;
-    cout << diff_imag.max() << endl;
-
-    double idc = integrator.nPointsSpatial()/2;
-    cout << "error center: "<<
-            grating.spatioTemporal()(idc,idc,0) - real(grating_fft(idc,idc,0))<<endl;
-
-//    cout << grating.spatioTemporal() - real(grating_fft)<<endl;
-
+//    cout << diff_real.max() << endl;
+//    cout << diff_imag.max() << endl;
 
     //Test
-    CHECK_CLOSE(diff_real.max(), 0.0, 1e-9);
-    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-9);
+    CHECK_CLOSE(diff_real.max(), 0.0, 1e-5);
+    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-5);
 
 }
 
@@ -65,8 +53,108 @@ void runIntegratorGaussianGratingTest(int ns, int nt, double dt, double ds,
 SUITE(integrator){
 
     TEST(gaussian_grating_test_0){
-        runIntegratorGaussianGratingTest(7, 2, 1, 0.1,
-                                         1.0, 0, 0, 0, 0.25);
+        runIntegratorGaussianGratingTest(7, 2, 1, 0.05,
+                                         1.0, 0, 0, 0, 0.2);
+    }
+
+
+    TEST(gaussian_grating_test_1){
+        runIntegratorGaussianGratingTest(6, 2, 1, 0.1,
+                                         1.0, 0, 0, 0, 0.3);
+    }
+
+
+    TEST(gaussian_grating_test_2){
+        runIntegratorGaussianGratingTest(6, 2, 1, 0.1,
+                                         1.0, 0, 0, 0, 0.4);
+    }
+
+
+    TEST(gaussian_grating_test_3){
+        runIntegratorGaussianGratingTest(6, 2, 1, 0.1,
+                                         1.0, 0, 0, 0, 0.5);
+    }
+
+
+    TEST(gaussian_grating_test_4){
+        runIntegratorGaussianGratingTest(6, 2, 1, 0.1,
+                                         1.0, 0, 0, 0, 0.7);
+    }
+
+
+    TEST(gaussian_grating_test_5){
+        runIntegratorGaussianGratingTest(6, 2, 1, 0.1,
+                                         1.0, 0, 0, 0, 0.9);
+    }
+
+
+
+
+    TEST(gaussian_grating_test_6){
+        runIntegratorGaussianGratingTest(7, 2, 1, 0.05,
+                                         1.0, 1, 0, 0, 0.2);
+    }
+
+
+    TEST(gaussian_grating_test_7){
+        runIntegratorGaussianGratingTest(6, 3, 1, 0.1,
+                                         1.0, 2, 0, 0, 0.3);
+    }
+
+
+    TEST(gaussian_grating_test_8){
+        runIntegratorGaussianGratingTest(6, 2, 1, 0.1,
+                                         1.0, 3, 0, 0, 0.4);
+    }
+
+
+    TEST(gaussian_grating_test_9){
+        runIntegratorGaussianGratingTest(6, 2, 1, 0.1,
+                                         1.0, 3, 0, 0, 0.5);
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

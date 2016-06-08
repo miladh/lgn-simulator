@@ -1,7 +1,8 @@
 /**********************************************************************
  *  Test: 3D inverse fourier transform of patch grating functions
  *
- *  Analytic source: closed-form expression
+ *  Analytic source: implementation of the spatiotemporal grating
+ *                   function in circleMaskGrating class
  *
  * ********************************************************************/
 
@@ -35,8 +36,8 @@ void runIntegratorPatchGratingTest(int ns, int nt, double dt, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-    uword  idx, idy, idz;
-    double maxId = diff_real.max(idx, idy, idz);
+//    uword  idx, idy, idz;
+//    double maxId = diff_real.max(idx, idy, idz);
 
 //    cout << "index: " << idx <<"  "<<  idy << "  "<< idz << endl;
 
