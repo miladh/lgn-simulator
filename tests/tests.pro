@@ -29,14 +29,14 @@ SOURCES += main.cpp \
     integratorTests/convolutionTests/test_conv_deltadelta.cpp \
     integratorTests/convolutionTests/test_conv_biphasicdelta.cpp \
     integratorTests/convolutionTests/test_conv_biphasicdoe.cpp \
-    systemTests/test_system_g.cpp \
-    systemTests/test_system_gi.cpp \
-    systemTests/test_system_gr.cpp \
-    systemTests/test_system_grc.cpp \
-    systemTests/test_system_gric.cpp \
     systemTests/test_system_g_spot.cpp \
     integratorTests/test_integrator_patchgrating.cpp \
-    integratorTests/test_integrator_gaussiangrating.cpp
+    integratorTests/test_integrator_gaussiangrating.cpp \
+    systemTests/test_system_g_grating.cpp \
+    systemTests/test_system_gi_grating.cpp \
+    systemTests/test_system_gr_grating.cpp \
+    systemTests/test_system_grc_grating.cpp \
+    systemTests/test_system_gric_grating.cpp
 
 
 

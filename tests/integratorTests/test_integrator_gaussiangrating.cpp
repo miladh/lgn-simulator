@@ -89,7 +89,6 @@ SUITE(integrator){
 
 
 
-
     TEST(gaussian_grating_test_6){
         runIntegratorGaussianGratingTest(7, 2, 1, 0.05,
                                          1.0, 1, 0, 0, 0.2);
