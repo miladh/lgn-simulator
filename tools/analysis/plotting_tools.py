@@ -2,15 +2,7 @@ import matplotlib.pyplot as plt
 import colormaps as cmaps
 import numpy as np
 
-def simpleaxis(ax):
-    """
-    Removes axis lines
-    """
-    # plt.axis('off')
-    ax.set_axis_off()
-    # ax.spines['top'].set_visible(False)
-    # ax.get_xaxis().tick_bottom()
-
+import pretty_plotting as pp
 
 def raster(spike_times,
            ax = None,
@@ -30,22 +22,19 @@ def raster(spike_times,
         f = plt.figure(figsize=figsize)
         ax = f.add_subplot(111)
 
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.get_xaxis().tick_bottom()
-    ax.get_yaxis().tick_left()
-    ax.tick_params(axis='x', labelsize=12)
+    #pretty plot functions
+    pp.spines_edge_color(ax)
+    pp.remove_ticks(ax)
+    pp.set_font()
 
-    yticks = []
-    yticks.append("")
     for i in range(num_cells):
         for t in spike_times[i][:]:
             ax.vlines(t, i + .9, i + 1.1, color=color)
 
     plt.ylim(0.8, num_cells+0.2)
-    plt.xlabel('t [s]', fontsize = 16)
-    plt.ylabel(ylabel, fontsize = 16)
-    plt.yticks(range(1,num_cells+1), fontsize = 12)
+    plt.xlabel('t [s]')
+    plt.ylabel(ylabel)
+    plt.yticks(range(1,num_cells+1))
 
     if not title==None:
         ax.set_title(title)
@@ -443,46 +432,9 @@ if __name__ == "__main__":
     # data = [ S,Rg, Rr, Ri, Rc]
     # plt.figure()
     # plt.plot(exp.integrator.s_points, exp.stimulus.spatio_temporal[0, Ns/2,:], label = "S")
-    # plt.plot(exp.integrator.t_points, exp.stimulus.spatio_temporal[:, Ns/2,Ns/2], label = "S")
-    # plt.figure()
-    # plt.plot(exp.integrator.t_points, exp.ganglion.response["spatio_temporal"][:, Ns/2,Ns/2], label = "G")
-    # plt.plot(exp.integrator.t_points, exp.relay.response["spatio_temporal"][:, Ns/2,Ns/2], label = "R")
-    # plt.plot(exp.integrator.t_points, exp.interneuron.response["spatio_temporal"][:, Ns/2,Ns/2], label = "I")
-    # plt.plot(exp.integrator.t_points, exp.cortical.response["spatio_temporal"][:, Ns/2,Ns/2], label = "C")
-    # plt.legend()
+    raster(exp.spike_train("relay",  num_trails=50))
     animateImshowPlots(data, exp.integrator.dt,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
 
     plt.show()
-
-
-
-
-
-
-
-        # plt.figure()
-        # plt.imshow(exp.ganglion.response["spatioTemporal"][0,:,:] )
-        # plt.colorbar()
-
-        # delta = 20
-        # points = Nt-delta
-        #
-        # plt.figure()
-        # plt.imshow(exp.ganglion.response["spatioTemporal"][0,:,:] - exp.stimulus.spatioTemporal[Nt-delta])
-        # plt.colorbar()
-        # plt.figure()
-        #
-        #
-        # #
-        # res = exp.singleCellTemporalResponse("ganglion", Ns/2, Ns/2)[:]
-        # stim= exp.stimulus.spatioTemporal[:, Ns/2, Ns/2][::-1][:Nt-delta]
-        # stim_real= exp.stimulus.spatioTemporal[:, Ns/2, Ns/2]
-        #
-        # plt.plot(exp.integrator.timeVec[:], res, '--r', label="res")
-        # plt.plot(exp.integrator.timeVec[:Nt-delta], stim, '--b', label="stim")
-        # plt.plot(exp.integrator.timeVec, stim_real, '--g', label="stim_real")
-        # plt.xlim([0,1200])
-        # plt.legend(loc="center right")
-        # print abs(stim[:points]-res[:points]).max()

@@ -93,8 +93,7 @@ class Simulation:
         return impulse_response
 
     def spike_train(self, cell_type, rc=[0.5, 0.5], num_trails=2):
-        idx, idy = self.get_rf_center_indices(rc)
-        response = self.single_cell_temporal_response(cell_type, idx , idy)
+        response = self.single_cell_temporal_response(cell_type, rc)
         spike_times = [[] for i in range(num_trails)]
 
         dt = self.integrator.dt

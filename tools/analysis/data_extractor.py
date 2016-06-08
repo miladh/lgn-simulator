@@ -28,7 +28,7 @@ def simulation_extractor(sims, attr, value):
         p = sim.get_attribute(attr)
         if(p==value):
             extracted_sims.append(sim)
-        
+
     return extracted_sims
 
 
