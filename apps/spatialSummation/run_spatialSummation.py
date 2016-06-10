@@ -10,16 +10,6 @@ sys.path.append(os.path.abspath(os.path.join(current_path,"../../tools")))
 
 import sumatra_tracking.run_app as st
 
-
-current_path = os.path.dirname(os.path.realpath(__file__))
-copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
-         os.path.abspath(os.path.join(current_path,"tmp.yaml")))
-config_file = os.path.abspath(os.path.join(current_path,"tmp.yaml"))
-
-with open(config_file, 'r') as stream:
-    config_data = yaml.load(stream)
-
-
 def modify_diameter(d):
     config_data["stimulus"]["maskSize"] = float(d)
 
@@ -33,11 +23,21 @@ def modify_Kri(w):
     config_data["relay"]["Kri"]["spatial"]["weight"]= float(-w)
 
 if __name__ == "__main__":
+    options = sys.argv[1:]
+    record_label = options[-1]
+
+    current_path = os.path.dirname(os.path.realpath(__file__))
+    copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
+             os.path.abspath(os.path.join(current_path, record_label+".yaml")))
+    config_file = os.path.abspath(os.path.join(current_path, record_label+".yaml"))
+
+    with open(config_file, 'r') as stream:
+        config_data = yaml.load(stream)
+
+
     spot_diameters = np.linspace(0, 0.9, 2)
     weights = np.linspace(0.0, 2.0, 10)
 
-    options = sys.argv[1:]
-    record_label = options[-1]
 
     # for w in weights:
     #     modify_Kic(w)
