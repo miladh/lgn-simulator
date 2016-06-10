@@ -5,6 +5,10 @@ import yaml
 import numpy as np
 import sys
 
+current_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
+from sumatra_tracking import run_app
+
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
@@ -13,6 +17,7 @@ config_file = os.path.abspath(os.path.join(current_path,"tmp.yaml"))
 
 with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
+
 
 def modify_diameter(d):
     config_data["stimulus"]["maskSize"] = float(d)
@@ -31,27 +36,24 @@ if __name__ == "__main__":
     weights = np.linspace(0.0, 2.0, 10)
 
     options = sys.argv[1:]
-    label = options[-1]
-    print label
+    record_label = options[-1]
 
-
-    reason = "Kc effect, with different width for I and R"
-    #
     # for w in weights:
     #     modify_Kic(w)
     #     modify_Krc(w)
 
         # modify_Kri(w)
+
+    counter= 0
     for d in spot_diameters:
         modify_diameter(d)
 
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
 
-        # tag = "Kc_different_width_pg"
-
-        call(["python", "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/tools/sumatra_tracking/run_app.py", "tmp.yaml", label])
-
+        run_id = '{0:03}'.format(counter)
+        run_app(os.path.basename(config_file), record_label, run_id)
+        counter+=1
     os.remove(config_file)
 
 
