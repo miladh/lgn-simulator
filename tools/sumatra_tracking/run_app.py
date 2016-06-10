@@ -17,9 +17,10 @@ def run_simulator(config_file, record_label, run_id):
         # config_data["sumatra_label"] = str(config_data["sumatra_label"])
         # run_id = config_data["sumatra_label"]
 
-    output_dir = os.path.join(os.path.abspath(load_project().data_store.root), record_label)
+    output_dir = os.path.join(os.path.abspath(load_project().data_store.root), record_label+ "_"+run_id)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
+        # os.makedirs(os.path.join(output_dir, record_label+ "_"+run_id))
 
     output_file = os.path.join(output_dir, record_label+ "_"+run_id + ".h5")
     print "output_file: ", output_file
