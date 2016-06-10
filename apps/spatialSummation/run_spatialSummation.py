@@ -10,6 +10,7 @@ sys.path.append(os.path.abspath(os.path.join(current_path,"../../tools")))
 import sumatra_tracking.run_app as st
 
 def modify_diameter(d):
+    stream.write("# variable")
     config_data["stimulus"]["maskSize"] = float(d)
 
 def modify_Kic(w):
