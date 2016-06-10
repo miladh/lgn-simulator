@@ -3,6 +3,8 @@ from shutil import copyfile
 import os, os.path
 import yaml
 import numpy as np
+import sys
+
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
@@ -27,7 +29,9 @@ def modify_Kri(w):
 if __name__ == "__main__":
     spot_diameters = np.linspace(0, 0.9, 2)
     weights = np.linspace(0.0, 2.0, 10)
-    from sumatra.projects import label
+
+    options = sys.argv[1:]
+    label = options[-1]
 
 
     reason = "Kc effect, with different width for I and R"
