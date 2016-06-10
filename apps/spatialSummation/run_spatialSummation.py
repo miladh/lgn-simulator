@@ -7,7 +7,7 @@ import sys
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
-from sumatra_tracking import run_app
+import sumatra_tracking.run_app as st
 
 
 current_path = os.path.dirname(os.path.realpath(__file__))
@@ -52,7 +52,7 @@ if __name__ == "__main__":
             yaml.dump(config_data, stream)
 
         run_id = '{0:03}'.format(counter)
-        run_app(os.path.basename(config_file), record_label, run_id)
+        st.run_app(os.path.basename(config_file), record_label, run_id)
         counter+=1
     os.remove(config_file)
 
