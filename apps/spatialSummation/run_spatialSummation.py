@@ -32,6 +32,7 @@ if __name__ == "__main__":
 
     options = sys.argv[1:]
     label = options[-1]
+    print label
 
 
     reason = "Kc effect, with different width for I and R"
