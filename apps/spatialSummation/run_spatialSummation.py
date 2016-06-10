@@ -6,7 +6,8 @@ import numpy as np
 import sys
 
 current_path = os.path.dirname(os.path.realpath(__file__))
-sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
+sys.path.append(os.path.abspath(os.path.join(current_path,"../../tools")))
+
 import sumatra_tracking.run_app as st
 
 
