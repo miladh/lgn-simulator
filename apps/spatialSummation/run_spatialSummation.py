@@ -53,7 +53,7 @@ if __name__ == "__main__":
             yaml.dump(config_data, stream)
 
         run_id = '{0:03}'.format(counter)
-        st.run_app(os.path.basename(config_file), record_label, run_id)
+        st.run_simulator(os.path.basename(config_file), record_label, run_id)
         counter+=1
     os.remove(config_file)
 
