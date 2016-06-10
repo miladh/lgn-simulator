@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
         # tag = "Kc_different_width_pg"
 
-        call(["python", "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/tools/sumatra_tracking/run_app.py", "tmp.yaml"])
+        call(["python", "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/tools/sumatra_tracking/run_app.py", "tmp.yaml", label])
 
     os.remove(config_file)
 
