@@ -49,7 +49,6 @@ if __name__ == "__main__":
         modify_diameter(d)
 
         with open(config_file, 'w') as stream:
-            stream.write("# variable")
             yaml.dump(config_data, stream)
 
         run_id = '{0:04}'.format(counter)
