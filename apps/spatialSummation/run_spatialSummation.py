@@ -27,6 +27,8 @@ def modify_Kri(w):
 if __name__ == "__main__":
     spot_diameters = np.linspace(0, 0.9, 2)
     weights = np.linspace(0.0, 2.0, 10)
+    from sumatra.projects import label
+
 
     reason = "Kc effect, with different width for I and R"
     #
