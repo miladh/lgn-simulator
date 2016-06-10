@@ -7,7 +7,6 @@ import sys
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../tools")))
-
 import sumatra_tracking.run_app as st
 
 def modify_diameter(d):
@@ -37,6 +36,7 @@ if __name__ == "__main__":
 
     spot_diameters = np.linspace(0, 0.9, 2)
     weights = np.linspace(0.0, 2.0, 10)
+    counter= 0
 
 
     # for w in weights:
@@ -45,16 +45,16 @@ if __name__ == "__main__":
 
         # modify_Kri(w)
 
-    counter= 0
     for d in spot_diameters:
         modify_diameter(d)
 
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
 
-        run_id = '{0:03}'.format(counter)
+        run_id = '{0:04}'.format(counter)
         st.run_simulator(os.path.basename(config_file), record_label, run_id)
         counter+=1
+
     os.remove(config_file)
 
 

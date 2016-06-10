@@ -14,15 +14,12 @@ def run_simulator(config_file, record_label, run_id):
 
     with open(config_file, 'r') as stream:
         config_data = yaml.load(stream)
-        # config_data["sumatra_label"] = str(config_data["sumatra_label"])
-        # run_id = config_data["sumatra_label"]
 
-    output_dir = os.path.join(os.path.abspath(load_project().data_store.root),record_label, record_label+ "_"+run_id)
-    # print output_dir
-    # exit(0)
+    output_dir = os.path.join(os.path.abspath(load_project().data_store.root),
+                              record_label, record_label+ "_"+run_id)
+
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-        # os.makedirs(os.path.join(output_dir, record_label+ "_"+run_id))
 
     output_file = os.path.join(output_dir, record_label+ "_"+run_id + ".h5")
     print "output_file: ", output_file
@@ -54,16 +51,3 @@ def run_simulator(config_file, record_label, run_id):
     print "Results saved to this directory:\n", output_dir + "/*"
 
     return run_id
-
-
-# if __name__ == '__main__':
-#     from argparse import ArgumentParser
-#     parser = ArgumentParser()
-#     parser.add_argument("config_file", help="app config file")
-#     parser.add_argument("label", help="record label")
-#     args = parser.parse_args()
-#     config_file = args.config_file
-#     label = args.label
-#
-#     print "Running lgn simulator..."
-#     run_id = run_simulator(config_file, label)
