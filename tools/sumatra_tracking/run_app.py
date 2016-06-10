@@ -19,7 +19,7 @@ def run_simulator(config_file, record_label, run_id):
 
     output_dir = os.path.join(os.path.abspath(load_project().data_store.root), record_label+ "_"+run_id)
     print output_dir
-    break
+    exit(0)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         # os.makedirs(os.path.join(output_dir, record_label+ "_"+run_id))
