@@ -4,4 +4,5 @@ SUBDIRS += default \
     spatialSummation \
     nonlaggedXCells \
     phaseReversedPushPull \
-    firingSynchrony
+    firingSynchrony \
+    stimuliAnalysis

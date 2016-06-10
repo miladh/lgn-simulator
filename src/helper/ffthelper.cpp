@@ -26,6 +26,7 @@ vec FFTHelper::fftFreq(int windowLength, double sampleSpacing){
 }
 
 
+
 cx_vec FFTHelper::fftShift(cx_vec x)
 {
     int n = x.n_rows;
@@ -35,6 +36,17 @@ cx_vec FFTHelper::fftShift(cx_vec x)
     return shifted;
 
 }
+
+vec FFTHelper::fftShift(vec x)
+{
+    int n = x.n_rows;
+    int n2 = int((n+1)/2);
+    vec shifted = join_vert(x.rows(n2, n-1), x.rows(0,n2-1));
+
+    return shifted;
+
+}
+
 
 
 cx_mat FFTHelper::fftShift(cx_mat x)
@@ -50,6 +62,22 @@ cx_mat FFTHelper::fftShift(cx_mat x)
 
     return shifted;
 }
+
+
+cx_mat FFTHelper::ifftShift(cx_mat x)
+{
+    int n = x.n_rows;
+    int n2 = n-int((n+1)/2);
+
+    int m = x.n_cols;
+    int m2 = m-int((m+1)/2);
+
+    cx_mat shifted = join_vert(x.rows(n2, n-1), x.rows(0,n2-1));
+    shifted = join_horiz(shifted.cols(m2, m-1), shifted.cols(0,m2-1));
+
+    return shifted;
+}
+
 
 cx_cube FFTHelper::fftShift(cx_cube x)
 {

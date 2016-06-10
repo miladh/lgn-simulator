@@ -55,8 +55,8 @@ void OutputManager::writeIntegratorProperties(const Integrator &integrator)
 
     fvec timeVec = conv_to<fvec>::from(integrator.timeVec());
     fvec spatialVec = conv_to<fvec>::from(integrator.spatialVec());
-    fvec temporalFreqVec = conv_to<fvec>::from(integrator.temporalFreqVec());
-    fvec spatialFreqVec = conv_to<fvec>::from(integrator.spatialFreqVec());
+    fvec temporalFreqVec = conv_to<fvec>::from(FFTHelper::fftShift(integrator.temporalFreqVec()));
+    fvec spatialFreqVec = conv_to<fvec>::from(FFTHelper::fftShift(integrator.spatialFreqVec()));
 
 
     Attribute Nt_a(integratorGroup.createAttribute("Nt",PredType::NATIVE_INT, H5S_SCALAR));
@@ -176,7 +176,15 @@ void OutputManager::writeStimulus(const Stimulus* stimulus,
     writeDataSet(realStim, &stim, "spatio_temporal");
 
     if(fourierTransform){
-        fcube complexStim = conv_to<fcube>::from(real(stimulus->fourierTransform()));
+        cx_cube fftShiftedfourierTransform = stimulus->fourierTransform();
+
+        //fftShift
+        for(int i = 0; i < int(fftShiftedfourierTransform.n_slices); i++){
+            fftShiftedfourierTransform.slice(i) =
+                    FFTHelper::fftShift(fftShiftedfourierTransform.slice(i));
+        }
+
+        fcube complexStim = conv_to<fcube>::from(real(fftShiftedfourierTransform));
         writeDataSet(complexStim, &stim, "fourier_transform");
     }
 
@@ -201,11 +209,18 @@ void OutputManager::writeResponse(const Neuron& neuron,
 
     //write response:
     Group res = m_output->createGroup(cellGroupName+"/response");
-
     writeDataSet(response, &res, "spatio_temporal");
 
     if(fourierTransform){
-        fcube responseFT = conv_to<fcube>::from(real(neuron.responseFT()));
+        cx_cube fftShiftedfourierTransform = neuron.responseFourierTransform();
+
+        //fftShift
+        for(int i = 0; i < int(fftShiftedfourierTransform.n_slices); i++){
+            fftShiftedfourierTransform.slice(i) =
+                    FFTHelper::fftShift(fftShiftedfourierTransform.slice(i));
+        }
+
+        fcube responseFT = conv_to<fcube>::from(real(fftShiftedfourierTransform));
         writeDataSet(responseFT, &res, "fourier_transform");
     }
 
@@ -233,8 +248,16 @@ void OutputManager::writeImpulseResponse(const Neuron& neuron,
     writeDataSet(impulseResponse, &impRes, "spatio_temporal");
 
     if(fourierTransform){
+        cx_cube fftShiftedfourierTransform = neuron.impulseResponseFourierTransform();
+
+        //fftShift
+        for(int i = 0; i < int(fftShiftedfourierTransform.n_slices); i++){
+            fftShiftedfourierTransform.slice(i) =
+                    FFTHelper::fftShift(fftShiftedfourierTransform.slice(i));
+        }
+
         fcube impulseResponseFT =
-                conv_to<fcube>::from(real(neuron.impulseResponseFourierTransform()));
+                conv_to<fcube>::from(real(fftShiftedfourierTransform));
         writeDataSet(impulseResponseFT, &impRes, "fourier_transform");
     }
 

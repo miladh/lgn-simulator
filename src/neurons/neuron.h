@@ -35,7 +35,7 @@ public:
     // Getter member functions
     const cube &response() const;
     const cube &impulseResponse() const;
-    const cx_cube &responseFT() const;
+    const cx_cube &responseFourierTransform() const;
     const cx_cube &impulseResponseFourierTransform() const;
 
     const string type() const;

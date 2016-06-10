@@ -47,6 +47,7 @@ def spines_edge_color(ax, edges = {"top": "none", "bottom": "w",
     for edge, color in edges.iteritems():
         ax.spines[edge].set_edgecolor(color)
 
+
 def remove_ticks(ax):
     """
     Removes ticks
@@ -79,6 +80,7 @@ def set_font():
         'lines.linewidth':2,
     }
     plt.rcParams.update(params)
+
 
 def set_legend():
     """

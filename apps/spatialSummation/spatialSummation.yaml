@@ -15,19 +15,19 @@ stimulus:
 
     # Grating:
     C: 1.0
-    mask: "none" #none/circle/gaussian
+    mask: "circle" #none/circle/gaussian
     maskSize: 0.5
     orientation: 0.   #degrees
     kId:  6           #[-Ns/2, Ns/2 - 1]
-    wId:  2           #[-Nt/2, Nt/2 - 1]
+    wId:  0           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
     storeResponse: true
-    storeResponseFT: false
+    storeResponseFT: true
     storeImpulseResponse: true
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
     w: 1.0
     Wg:
     # DOG

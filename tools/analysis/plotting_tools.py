@@ -448,7 +448,7 @@ if __name__ == "__main__":
     # data = [ S,Rg, Rr, Ri, Rc]
     # plt.figure()
     # plt.plot(exp.integrator.s_points, exp.stimulus.spatio_temporal[0, Ns/2,:], label = "S")
-    # raster(exp.spike_train("relay",  num_trails=50))
+    raster(exp.spike_train("relay",  num_trails=50))
     animateImshowPlots(data, exp.integrator.dt,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")

@@ -95,7 +95,7 @@ const cube& Neuron::impulseResponse() const
     return m_impulseResponse;
 }
 
-const cx_cube& Neuron::responseFT() const
+const cx_cube& Neuron::responseFourierTransform() const
 {
     return m_responseFT;
 }
