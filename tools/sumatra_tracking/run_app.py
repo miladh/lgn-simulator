@@ -12,10 +12,10 @@ def run_simulator(config_file, run_id):
     print "app_name: ", app_name
     print "config file: ", config_file
 
-    # with open(config_file, 'r') as stream:
-    #     config_data = yaml.load(stream)
-    #     config_data["sumatra_label"] = str(config_data["sumatra_label"])
-    #     run_id = config_data["sumatra_label"]
+    with open(config_file, 'r') as stream:
+        config_data = yaml.load(stream)
+        # config_data["sumatra_label"] = str(config_data["sumatra_label"])
+        # run_id = config_data["sumatra_label"]
 
     output_dir = os.path.join(os.path.abspath(load_project().data_store.root), run_id)
     if not os.path.exists(output_dir):
