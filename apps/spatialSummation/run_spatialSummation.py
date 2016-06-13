@@ -54,7 +54,7 @@ for d in spot_diameters:
              os.path.abspath(os.path.join(current_path, tmp_config_filename)))
     tmp_config_file = os.path.abspath(os.path.join(current_path, tmp_config_filename))
 
-    st.run_simulator(config_file, record_label, run_id)
+    st.run_simulator(tmp_config_file, record_label, run_id)
     os.remove(tmp_config_file)
 
     counter+=1
