@@ -2,6 +2,7 @@
 import yaml
 import subprocess
 import os, os.path
+from shutil import copyfile
 
 def run_simulator(config_file_base, record_label, run_id):
     """
