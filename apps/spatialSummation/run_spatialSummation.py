@@ -25,9 +25,8 @@ def modify_Kri(w):
 #read config file
 options = sys.argv[1:]
 record_label = options[-1]
-copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
-         os.path.abspath(os.path.join(current_path, record_label+".yaml")))
 config_file = os.path.abspath(os.path.join(current_path, record_label+".yaml"))
+copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")), config_file))
 
 with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)

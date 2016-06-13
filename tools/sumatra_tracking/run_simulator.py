@@ -23,7 +23,6 @@ def run_simulator(config_file_base, record_label, run_id):
     current_path = os.path.dirname(os.path.realpath(__file__))
     app_name = load_project().name
     config_file = os.path.dirname(config_file_base)+"/"+record_label+ "_"+run_id+".yaml"
-    print config_file
     copyfile(config_file_base, config_file)
     # config_file =  os.path.dirname(config_file_base)+"/"+record_label+ "_"+run_id+".yaml"
 
@@ -73,3 +72,4 @@ def run_simulator(config_file_base, record_label, run_id):
     proc = subprocess.call(run_argument, cwd=app_path, env=env)
 
     print "Results saved to this directory:\n", output_dir + "/*"
+    os.remove(config_file)
