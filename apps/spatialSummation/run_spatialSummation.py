@@ -22,7 +22,7 @@ def modify_Krc(w):
 def modify_Kri(w):
     config_data["relay"]["Kri"]["spatial"]["weight"]= float(-w)
 
-#read config file
+#read config file-----------------------------------------------------------------------------
 options = sys.argv[1:]
 record_label = options[-1]
 config_file = os.path.abspath(os.path.join(current_path, record_label+".yaml"))
@@ -31,11 +31,11 @@ copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")), co
 with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
-#parameters
+#parameters-------------------------------------------------------------------------------------
 spot_diameters = np.linspace(0, 0.9, 2)
 weights = np.linspace(0.0, 2.0, 10)
 
-#run simulator
+#run simulator----------------------------------------------------------------------------------
 counter= 0
 # for w in weights:
 #     modify_Kic(w)
