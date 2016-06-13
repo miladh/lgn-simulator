@@ -51,7 +51,7 @@ for cell, attr in cell_types.iteritems():
         ax.plot(mask_size, resp, "-^", color=colormap(n),
                 label=r"$K_{rc}=$"+'{0:.2f}'.format(w))
 
-    ax.set_title(cell_type)
+    ax.set_title(cell)
     ax.set_xlabel("diameter[deg]")
     ax.set_ylabel("response[spikes/sec]")
     if record : fig.savefig(os.path.join(output_dir, "area_response"+"_"+cell+".png"))
