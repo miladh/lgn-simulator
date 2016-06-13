@@ -19,6 +19,7 @@ run_id = options[-1]
 parser = ArgumentParser()
 parser.add_argument("sim_ids", help = "simulation ids")
 parser.add_argument("record", help = "record results", type = int)
+parser.add_argument("sumatra_label", help = "sumatra_label")
 args = parser.parse_args()
 sim_ids = args.sim_ids
 record = args.record
