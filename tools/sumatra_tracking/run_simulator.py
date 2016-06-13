@@ -19,14 +19,11 @@ def run_simulator(config_file_base, record_label, run_id):
     """
     from sumatra.projects import load_project
 
-    #get paths-----------------------------------------------------------------------------------
+    #copy config file-----------------------------------------------------------------------------
     current_path = os.path.dirname(os.path.realpath(__file__))
     app_name = load_project().name
     config_file = os.path.dirname(config_file_base)+"/"+record_label+ "_"+run_id+".yaml"
     copyfile(config_file_base, config_file)
-    # config_file =  os.path.dirname(config_file_base)+"/"+record_label+ "_"+run_id+".yaml"
-
-
     print "app_name: ", app_name
     print "config file: ", config_file
 
