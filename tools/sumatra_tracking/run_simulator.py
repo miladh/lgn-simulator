@@ -22,11 +22,11 @@ def run_simulator(config_file_base, record_label, run_id):
     #get paths-----------------------------------------------------------------------------------
     current_path = os.path.dirname(os.path.realpath(__file__))
     app_name = load_project().name
+    config_file = os.path.dirname(config_file_base)+"/"+record_label+ "_"+run_id+".yaml"
+    copyfile(config_file_base, config_file_name)
+    # config_file =  os.path.dirname(config_file_base)+"/"+record_label+ "_"+run_id+".yaml"
+    # print os.path.dirname(config_file_base)
 
-    copyfile(config_file_base, os.path.dirname(config_file_base)+record_label+ "_"+run_id+".yaml")
-    config_file =  os.path.dirname(config_file_base)+record_label+ "_"+run_id+".yaml"
-    print os.path.dirname(config_file_base)
-    
 
     print "app_name: ", app_name
     print "config file: ", config_file
