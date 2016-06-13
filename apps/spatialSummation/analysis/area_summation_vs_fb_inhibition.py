@@ -17,12 +17,18 @@ options = sys.argv[1:]
 run_id = options[-1]
 record =  int(options[-2])
 
-sim_ids = current_path+"/simulation_ids.yaml"
-sims=get_simulations(sim_ids)
+parser = ArgumentParser()
+parser.add_argument("sim_ids", help = "simulation ids")
+parser.add_argument("record", help = "record results", type = int)
+args = parser.parse_args()
+sim_ids = args.sim_ids
+record = args.record
+
+sims = smt.get_simulations(sim_ids)
 
 output_dir = None
 if(record):
-    output_dir = smt.get_output_dir(sim_ids,run_id)
+    output_dir = smt.get_output_dir(sim_ids)
 
 # Analysis: --------------------------------------------------------------------
 cell_types= {"relay": "relay.Krc.w",
