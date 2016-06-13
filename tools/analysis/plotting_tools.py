@@ -426,28 +426,28 @@ if __name__ == "__main__":
                 }
 
 # Response FT--------------------------------------------------------------------------
-    Rg_ft = {"type" : "Ganglion",
-                "value" : exp.ganglion.response["fourier_transform"],
-                "t_points" : exp.integrator.w_points,
-                "spatial_vec" : exp.integrator.k_points
-                }
-    Rr_ft = {"type" : "Relay",
-             "value" : exp.relay.response["fourier_transform"],
-                "t_points" : exp.integrator.w_points,
-                "spatial_vec" : exp.integrator.k_points
-            }
-
-    Ri_ft = {"type" : "Interneuron",
-                 "value" : exp.interneuron.response["fourier_transform"],
-                "t_points" : exp.integrator.w_points,
-                "spatial_vec" : exp.integrator.k_points
-                }
-
-    Rc_ft = {"type" : "Cortical",
-                 "value" : exp.cortical.response["fourier_transform"],
-                "t_points" : exp.integrator.w_points,
-                "spatial_vec" : exp.integrator.k_points
-                }
+    # Rg_ft = {"type" : "Ganglion",
+    #             "value" : exp.ganglion.response["fourier_transform"],
+    #             "t_points" : exp.integrator.w_points,
+    #             "spatial_vec" : exp.integrator.k_points
+    #             }
+    # Rr_ft = {"type" : "Relay",
+    #          "value" : exp.relay.response["fourier_transform"],
+    #             "t_points" : exp.integrator.w_points,
+    #             "spatial_vec" : exp.integrator.k_points
+    #         }
+    #
+    # Ri_ft = {"type" : "Interneuron",
+    #              "value" : exp.interneuron.response["fourier_transform"],
+    #             "t_points" : exp.integrator.w_points,
+    #             "spatial_vec" : exp.integrator.k_points
+    #             }
+    #
+    # Rc_ft = {"type" : "Cortical",
+    #              "value" : exp.cortical.response["fourier_transform"],
+    #             "t_points" : exp.integrator.w_points,
+    #             "spatial_vec" : exp.integrator.k_points
+    #             }
 # Response --------------------------------------------------------------------------
     Rg = {"type" : "Ganglion",
                 "value" : exp.ganglion.response["spatio_temporal"],
@@ -475,8 +475,8 @@ if __name__ == "__main__":
     line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    # data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
-    data = [ S, Rg_ft, Rg, Rr_ft, Rr, Ri_ft, Ri,  Rc_ft, Rc]
+    data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
+    # data = [ S, Rg_ft, Rg, Rr_ft, Rr, Ri_ft, Ri,  Rc_ft, Rc]
     # data = [ S,Rg, Rr, Ri, Rc]
     # plt.figure()
     # plt.plot(exp.integrator.s_points, exp.stimulus.spatio_temporal[0, Ns/2,:], label = "S")
