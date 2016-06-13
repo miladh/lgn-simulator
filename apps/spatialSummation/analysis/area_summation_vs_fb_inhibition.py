@@ -8,7 +8,10 @@ current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
 
 import sumatra_tracking.io_manager as smt
-from analysis import *
+import analysis.colormaps as cmaps
+from analysis.tuning_analysis import*
+from analysis.data_extractor import*
+from analysis.pretty_plotting import*
 
 options = sys.argv[1:]
 run_id = options[-1]
