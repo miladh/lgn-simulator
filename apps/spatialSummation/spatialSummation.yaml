@@ -1,15 +1,10 @@
-OutputManager:
-  outputFilename: /media/milad/scratch/lgn-simulator/simulations/spatialSummation/20160613-090428/20160613-090428_0001/20160613-090428_0001.h5
+OutputManager: {outputFilename: /media/milad/scratch/lgn-simulator/simulations/spatialSummation/20160613-090428/20160613-090428_0001/20160613-090428_0001.h5}
 cortical:
   Kcr:
     spatial:
       ds: 0.1
-      shift:
-      - 0.0
-      - 0.0
-    temporal:
-      delay: 10.0
-      dt: 5.0
+      shift: [0.0, 0.0]
+    temporal: {delay: 10.0, dt: 5.0}
     w: 1.0
   R0: 0
   storeImpulseResponse: true
@@ -19,37 +14,22 @@ cortical:
 description: Spatial config file
 ganglion:
   R0: 0
-  Wg:
-    a: 0.25
-    b: 0.83
-    c: 0.85
-  Wt:
-    delay: 0.0
-    dt: 5.0
+  Wg: {a: 0.25, b: 0.83, c: 0.85}
+  Wt: {delay: 0.0, dt: 5.0}
   storeImpulseResponse: true
   storeImpulseResponseFT: true
   storeResponse: true
   storeResponseFT: true
   w: 1.0
-grid:
-  ds: 0.1
-  dt: 5.0
-  ns: 6
-  nt: 4
+grid: {ds: 0.1, dt: 5.0, ns: 6, nt: 4}
 interneuron:
   Kic:
-    spatial:
-      a: 0.83
-    temporal:
-      delay: 10.0
-      dt: 5.0
+    spatial: {a: 0.83}
+    temporal: {delay: 10.0, dt: 5.0}
     w: 1.0
   Kig:
-    spatial:
-      a: 0.1
-    temporal:
-      delay: 5
-      dt: 5.0
+    spatial: {a: 0.1}
+    temporal: {delay: 5, dt: 5.0}
     w: 0.5
   R0: 0
   storeImpulseResponse: true
@@ -58,43 +38,25 @@ interneuron:
   storeResponseFT: false
 relay:
   Krc:
-    spatial:
-      a: 0.64
-    temporal:
-      delay: 10.0
-      dt: 5.0
+    spatial: {a: 0.64}
+    temporal: {delay: 10.0, dt: 5.0}
     w: 1.0
   Krg:
     spatial:
       ds: 0.1
-      shift:
-      - 0.0
-      - 0.0
-    temporal:
-      delay: 5
-      dt: 5.0
+      shift: [0.0, 0.0]
+    temporal: {delay: 5, dt: 5.0}
     w: 1.0
   Kri:
     spatial:
       ds: 0.1
-      shift:
-      - 0.0
-      - 0.0
-    temporal:
-      delay: 0.0
-      dt: 5.0
+      shift: [0.0, 0.0]
+    temporal: {delay: 0.0, dt: 5.0}
     w: -1.0
   R0: 0
   storeImpulseResponse: true
   storeImpulseResponseFT: false
   storeResponse: true
   storeResponseFT: false
-stimulus:
-  C: 1.0
-  kId: 6
-  mask: circle
-  maskSize: 0.9
-  orientation: 0.0
-  storeFT: false
-  storeSpatiotemporal: true
-  wId: 0
+stimulus: {C: 1.0, kId: 6, mask: circle, maskSize: 0.9, orientation: 0.0, storeFT: false,
+  storeSpatiotemporal: true, wId: 0}
