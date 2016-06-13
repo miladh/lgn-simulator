@@ -15,7 +15,6 @@ from analysis.pretty_plotting import*
 
 options = sys.argv[1:]
 run_id = options[-1]
-record =  int(options[-2])
 
 parser = ArgumentParser()
 parser.add_argument("sim_ids", help = "simulation ids")
