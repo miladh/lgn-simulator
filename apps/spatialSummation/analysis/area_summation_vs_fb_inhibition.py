@@ -30,6 +30,7 @@ cell_types= {"relay": "relay.Krc.w",
             "coritcla": "relay.Krc.w", }
 
 for cell, attr in cell_types.iteritems():
+    print cell, attr
     weights = extract_unique_simulation_attrs(sims, attr)
 
     fig = plt.figure()
