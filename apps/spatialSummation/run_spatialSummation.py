@@ -14,13 +14,13 @@ def modify_diameter(d):
     config_data["stimulus"]["maskSize"] = float(d)
 
 def modify_Kic(w):
-    config_data["interneuron"]["Kic"]["spatial"]["A"] = float(w)
+    config_data["interneuron"]["Kic"]["w"] = float(w)
 
 def modify_Krc(w):
-    config_data["relay"]["Krc"]["spatial"]["A"] = float(w)
+    config_data["relay"]["Krc"]["w"]= float(w)
 
 def modify_Kri(w):
-    config_data["relay"]["Kri"]["spatial"]["weight"]= float(-w)
+    config_data["relay"]["Kri"]["w"]= float(-w)
 
 #read config file-----------------------------------------------------------------------------
 options = sys.argv[1:]
