@@ -21,8 +21,6 @@ CircleMaskGrating::~CircleMaskGrating()
 double CircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
 {
     double r = sqrt(dot(rVec, rVec));
-
-//    cout << (1 - Special::heaviside(r  - m_maskSize * 0.5)) << endl;
     double s = m_contrast * (1 - Special::heaviside(r  - m_maskSize * 0.5))
             * cos(dot(m_kVec, rVec) - m_w * t);
 
@@ -40,18 +38,17 @@ complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 k, double w)
     double term1 = Special::delta(w, m_w);
     double term2 = Special::delta(w, -m_w);
 
-    if(Special::delta(k, m_kVec) != 1){
+    if(Special::delta(k, m_kVec) != 1 &&  arg1!= 0){
         term1*=2.*Special::secondKindBesselFunction(arg1)/arg1;
     }
-    if(Special::delta(k, -m_kVec)!= 1){
+    if(Special::delta(k, -m_kVec)!= 1 && arg2!= 0){
         term2*=2.*Special::secondKindBesselFunction(arg2)/arg2;
     }
 
     return m_contrast * core::pi * core::pi * m_maskSize * m_maskSize * 0.5
            * 0.5 * (term1 + term2)
             /m_integrator.temporalFreqResolution();
-//            / m_integrator.spatialFreqResolution()
-//            / m_integrator.spatialFreqResolution();
+
 }
 
 
