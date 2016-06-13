@@ -27,7 +27,6 @@ double CircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
     return s;
 }
 
-
 complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 k, double w) const
 {
 
@@ -38,34 +37,14 @@ complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 k, double w)
     double term1 = Special::delta(w, m_w);
     double term2 = Special::delta(w, -m_w);
 
-    if(Special::delta(k, m_kVec) != 1 &&  arg1!= 0){
-        term1*=2.*Special::secondKindBesselFunction(arg1)/arg1;
+    if(arg1!= 0){
+        term1 *= 2*Special::secondKindBesselFunction(arg1)/arg1;
     }
-    if(Special::delta(k, -m_kVec)!= 1 && arg2!= 0){
-        term2*=2.*Special::secondKindBesselFunction(arg2)/arg2;
+    if(arg2!= 0){
+        term2 *= 2*Special::secondKindBesselFunction(arg2)/arg2;
     }
 
-    return m_contrast * core::pi * core::pi * m_maskSize * m_maskSize * 0.5
-           * 0.5 * (term1 + term2)
-            /m_integrator.temporalFreqResolution();
+    return m_contrast * core::pi * core::pi * m_maskSize * m_maskSize * 0.25
+            * (term1 + term2) / m_integrator.temporalFreqResolution();
 
 }
-
-
-//    double s = (Special::delta(k, m_kVec) * Special::delta(w, m_w)
-//                + Special::delta(k, -m_kVec) * Special::delta(w, -m_w));
-
-//    return 4.*core::pi*core::pi*core::pi * m_contrast
-//            / m_integrator.temporalFreqResolution()
-//            / m_integrator.spatialFreqResolution()
-//            / m_integrator.spatialFreqResolution() * s;
-
-//double s = m_contrast * core::pi * core::pi * m_maskSize * m_maskSize * 0.5;
-//double arg = sqrt(dot(k - m_kVec, k - m_kVec)) * m_maskSize * 0.5;
-
-//if(arg != 0){
-//    s *= 2. * Special::secondKindBesselFunction(arg)/arg;
-//}
-
-//retur/*n s/m_integrator.temporalFreqResolution();
-//}*/

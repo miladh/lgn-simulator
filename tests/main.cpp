@@ -16,7 +16,7 @@ int main()
     bool kernel = 1;
     bool fftHelperTests = 1;
     bool integrator = 1;
-    bool systemTests = 0;
+    bool systemTests = 1;
 
     TestReporterStdout reporter;
     TestRunner runner(reporter);

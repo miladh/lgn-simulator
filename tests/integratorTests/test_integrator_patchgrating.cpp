@@ -36,7 +36,7 @@ void runIntegratorPatchGratingTest(int ns, int nt, double dt, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-//    uword  idx, idy, idz;
+    uword  idx, idy, idz;
 //    double maxId = diff_real.max(idx, idy, idz);
 
 //    cout << "index: " << idx <<"  "<<  idy << "  "<< idz << endl;
@@ -44,7 +44,7 @@ void runIntegratorPatchGratingTest(int ns, int nt, double dt, double ds,
 //    cout << diff_real.max() << endl;
 //    cout << diff_imag.max() << endl;
 
-//    double idc = integrator.nPointsSpatial()/2;
+//    int idc = integrator.nPointsSpatial()/2;
 //    cout << "error center: "<<
 //            grating.spatioTemporal()(idc,idc,0) - real(grating_fft(idc,idc,0))<<endl;
 
@@ -60,7 +60,7 @@ SUITE(integrator){
 
     TEST(patchGrating_test_0){
          runIntegratorPatchGratingTest(9, 2, 2, 0.1,
-                                       1.0, 0, 0, 0, 0.9);
+                                       1.0, 0, 0, 0, 0.5);
     }
 
 }

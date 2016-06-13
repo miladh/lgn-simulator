@@ -328,11 +328,13 @@ def line3dPlotsOfImpulseResponses(data,
         i=0
         if(x_line3d):
             ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
+
+
             for x in ids:
                 ax.plot(data[j]["t_points"],
                 data[j]["spatial_vec"][x]*np.ones(len(data[j]["t_points"])),
                 data[j]["value"][:,idy, x],
-                "-b", linewidth=1.0)
+                color=pp.colormap(0), linewidth=1.0)
 
             ax.set_title(data[j]["type"])
             ax.set_xlabel(r"$\tau(ms)$")
@@ -343,6 +345,11 @@ def line3dPlotsOfImpulseResponses(data,
             ax.set_ylim3d(data[j]["spatial_vec"][0], data[j]["spatial_vec"][-1])
             ax.set_zlim3d(np.min(data[j]["value"][:,idy, ids]),
                           np.max(data[j]["value"][:,idy, ids]))
+
+            #pretty plot functions
+            pp.spines_edge_color(ax)
+            pp.remove_ticks(ax)
+            pp.set_font()
             i+=1
         if(y_line3d):
             ax = plt.subplot2grid((num_rows, num_cols),(i,j), projection='3d')
@@ -418,6 +425,30 @@ if __name__ == "__main__":
                  "spatial_vec" : exp.integrator.s_points
                 }
 
+# Response FT--------------------------------------------------------------------------
+    Rg_ft = {"type" : "Ganglion",
+                "value" : exp.ganglion.response["fourier_transform"],
+                "t_points" : exp.integrator.w_points,
+                "spatial_vec" : exp.integrator.k_points
+                }
+    Rr_ft = {"type" : "Relay",
+             "value" : exp.relay.response["fourier_transform"],
+                "t_points" : exp.integrator.w_points,
+                "spatial_vec" : exp.integrator.k_points
+            }
+
+    Ri_ft = {"type" : "Interneuron",
+                 "value" : exp.interneuron.response["fourier_transform"],
+                "t_points" : exp.integrator.w_points,
+                "spatial_vec" : exp.integrator.k_points
+                }
+
+    Rc_ft = {"type" : "Cortical",
+                 "value" : exp.cortical.response["fourier_transform"],
+                "t_points" : exp.integrator.w_points,
+                "spatial_vec" : exp.integrator.k_points
+                }
+# Response --------------------------------------------------------------------------
     Rg = {"type" : "Ganglion",
                 "value" : exp.ganglion.response["spatio_temporal"],
                 "t_points" : exp.integrator.t_points,
@@ -441,10 +472,11 @@ if __name__ == "__main__":
                 }
 
     data = [Wg,Wr,Wi,Wc]
-    # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
+    line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
+    # data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
+    data = [ S, Rg_ft, Rg, Rr_ft, Rr, Ri_ft, Ri,  Rc_ft, Rc]
     # data = [ S,Rg, Rr, Ri, Rc]
     # plt.figure()
     # plt.plot(exp.integrator.s_points, exp.stimulus.spatio_temporal[0, Ns/2,:], label = "S")

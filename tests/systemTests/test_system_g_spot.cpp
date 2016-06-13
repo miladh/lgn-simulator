@@ -56,7 +56,7 @@ void runSystemTest_G_spot(int nt, double dt, int ns, double ds,
 
     //Test
 //    cout << Rg_ex - Rgc << endl;
-    CHECK_CLOSE(Rg_ex, Rgc, 1e-5);
+    CHECK_CLOSE(Rg_ex, Rgc, 1e-9);
 }
 
 SUITE(system){
