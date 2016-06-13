@@ -1,19 +1,14 @@
 #!/usr/bin/python
 import os, sys
 from argparse import ArgumentParser
-import numpy as np
-import matplotlib.pyplot as mplt
-from operator import itemgetter
-import yaml
+from pylab import*
+
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
 
 import sumatra_tracking.io_manager as smt
-import analysis.colormaps as cmaps
-from analysis.tuning_analysis import*
-from analysis.data_extractor import*
-from analysis.pretty_plotting import*
+from analysis import *
 
 options = sys.argv[1:]
 run_id = options[-1]
