@@ -2,111 +2,59 @@
 import os, sys
 from argparse import ArgumentParser
 import numpy as np
-from pylab import*
-import operator
+import matplotlib.pyplot as mplt
+from operator import itemgetter
+import yaml
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
-import sumatraTracking.io_manager as smt
-import analysis.colormaps as cmaps
-parser = ArgumentParser()
-parser.add_argument("sim_ids", help = "simulation ids")
-parser.add_argument("record", help = "record results", type = int)
-args = parser.parse_args()
-sim_ids = args.sim_ids
-record = args.record
 
-sims = smt.get_simulations(sim_ids)
+import sumatra_tracking.io_manager as smt
+import analysis.colormaps as cmaps
+from analysis.tuning_analysis import*
+from analysis.data_extractor import*
+from analysis.pretty_plotting import*
+
+options = sys.argv[1:]
+run_id = options[-1]
+record =  int(options[-2])
+
+sim_ids = current_path+"/simulation_ids.yaml"
+sims=get_simulations(sim_ids)
 
 output_dir = None
 if(record):
-    output_dir = smt.get_output_dir(sim_ids)
-
+    output_dir = smt.get_output_dir(sim_ids,run_id)
 
 # Analysis: --------------------------------------------------------------------
-data = {}
-for sim in sims:
-    d = getattr(getattr(sim, "stimulus"), "maskSize")
-    data.setdefault(d, []).append(sim)
+cell_types= {"relay": "relay.Krc.w",
+            "interneuron": "interneuron.Kic.w",
+            "coritcla": "relay.Krc.w", }
 
+for cell, attr in cell_types.iteritems():
+    weights = extract_unique_simulation_attrs(sims, attr)
 
-def area_summation(sims, cell):
-    cell_pos_x = 0.5
-    cell_pos_y = cell_pos_x
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    spines_edge_color(ax)
+    remove_ticks(ax)
+    set_grid(ax)
+    set_font()
+    set_legend()
 
-    num_w = len(sims[0])
-    num_d = len(sims)
-    data = np.zeros([num_w, num_d])
+    n=0
+    for w in weights:
+        n+=1
+        sims_ext = simulation_extractor(sims, attr, w)
+        data=average_response_vs_attr(sims_ext, "stimulus.mask_size")
+        sorted_indices = argsort(data["stimulus.mask_size"])
+        mask_size = array(data["stimulus.mask_size"])[sorted_indices]
+        resp = array(data[cell])[sorted_indices]
+        ax.plot(mask_size, resp, "-^", color=colormap(n),
+                label=r"$K_{rc}=$"+'{0:.2f}'.format(w))
 
-    for i,d  in enumerate(sorted(sims.keys())):
-        for j, exp in enumerate(sims.get(d)):
-            idx = exp.integrator.nPointsSpatial * cell_pos_x
-            idy = exp.integrator.nPointsSpatial * cell_pos_y
-            res = exp.singleCellTemporalResponse(cell, idx, idy)
-            data[j][i] = np.mean(res)
-
-    return data
-
-R = area_summation(data, "relay")
-I = area_summation(data, "interneuron")
-G = area_summation(data, "ganglion")
-C = area_summation(data, "cortical")
-
-d = sorted(data.keys())
-weights = np.linspace(1.8, 0.1, 20)
-internpolation = "gaussian"
-cmap =cmaps.viridis
-
-extent = [min(d), max(d), min(weights), max(weights)]
-figure()
-title("Ganglion")
-imshow(G, extent = extent, origin="upper", interpolation=internpolation, aspect='auto', cmap =cmap)
-xlabel(r"Spot diameter [deg]", fontsize= 16)
-ylabel(r"$K_{ic}$",fontsize= 25)
-colorbar()
-if record : savefig(os.path.join(output_dir, "w_vs_d_ganglion.png"))
-
-figure()
-title("Interneuron")
-imshow(I, extent = extent, origin="upper", interpolation=internpolation,aspect='auto', cmap =cmap)
-xlabel(r"Spot diameter [deg]", fontsize= 16)
-ylabel(r"$K_{ic}$",fontsize= 25)
-colorbar()
-if record : savefig(os.path.join(output_dir, "w_vs_d_interneuron.png"))
-
-figure()
-title("Relay")
-imshow(R, extent = extent, origin="upper", interpolation=internpolation,aspect='auto', cmap =cmap)
-xlabel(r"Spot diameter [deg]", fontsize= 16)
-ylabel(r"$K_{ic}$",fontsize= 25)
-colorbar()
-if record : savefig(os.path.join(output_dir, "w_vs_d_relay.png"))
-
-
-figure()
-for i in range(1,len(weights),3):
-    plot(d,G[i,:], label=r"$K_{ic}=$"+'{0:.2f}'.format(weights[i]))
-legend()
-title("Ganglion")
-xlabel(r"Spot diameter [deg]", fontsize= 16)
-ylabel("response",fontsize= 16)
-if record : savefig(os.path.join(output_dir, "area_response_ganglion.png"))
-
-figure()
-for i in range(1,len(weights),3):
-    plot(d,I[i,:], label=r"$K_{ic}=$"+'{0:.2f}'.format(weights[i]))
-legend()
-title("Interneuron")
-xlabel(r"Spot diameter [deg]", fontsize= 16)
-ylabel("response",fontsize= 16)
-if record : savefig(os.path.join(output_dir, "area_response_interneuron.png"))
-
-
-figure()
-for i in range(1,len(weights),3):
-    plot(d, R[i,:], label=r"$K_{ic}=$"+'{0:.2f}'.format(weights[i]))
-legend()
-title("Relay")
-xlabel(r"Spot diameter [deg]", fontsize= 16)
-ylabel("response",fontsize= 16)
-if record : savefig(os.path.join(output_dir, "area_response_relay.png"))
+    ax.set_title(cell_type)
+    ax.set_xlabel("diameter[deg]")
+    ax.set_ylabel("response[spikes/sec]")
+    if record : fig.savefig(os.path.join(output_dir, "area_response"+"_"+cell+".png"))
+    legend()
