@@ -26,7 +26,7 @@ if not os.path.exists(data_path):
     os.makedirs(data_path)
 
 current_path = os.path.dirname(os.path.realpath(__file__))
-main_script = os.path.join(current_path, "run_app.py")
+main_script = os.path.join(project_dir, "run_"+project_name+".py")
 
 
 call("cd "+project_dir, shell=True)
@@ -37,6 +37,7 @@ else:
     print "initializing Sumatra project: ", project_name
     print "project directory: ", os.path.realpath(project_dir)
     print "data path: ", data_path
+    print "main script: ", main_script
 
     call(["smt", "init", project_name, "-e", "python", "-m", main_script,
-    "-l", "parameters", "-d", data_path])
+    "-l", "cmdline", "-d", data_path])
