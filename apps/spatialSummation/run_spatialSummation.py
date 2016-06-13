@@ -44,13 +44,13 @@ if __name__ == "__main__":
     for d in spot_diameters:
         modify_diameter(d)
 
+        run_id = '{0:04}'.format(counter)
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
 
         copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
                  os.path.abspath(os.path.join(current_path, record_label+"_"+run_id +".yaml")))
 
-        run_id = '{0:04}'.format(counter)
         st.run_simulator(config_file, record_label, run_id)
         counter+=1
 
