@@ -25,20 +25,19 @@ if __name__ == "__main__":
     options = sys.argv[1:]
     record_label = options[-1]
 
-    current_path = os.path.dirname(os.path.realpath(__file__))
     copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
              os.path.abspath(os.path.join(current_path, record_label+".yaml")))
     config_file = os.path.abspath(os.path.join(current_path, record_label+".yaml"))
+
+    spot_diameters = np.linspace(0, 0.9, 2)
+    weights = np.linspace(0.0, 2.0, 10)
+
 
     with open(config_file, 'r') as stream:
         config_data = yaml.load(stream)
 
 
-    spot_diameters = np.linspace(0, 0.9, 2)
-    weights = np.linspace(0.0, 2.0, 10)
     counter= 0
-
-
     # for w in weights:
     #     modify_Kic(w)
     #     modify_Krc(w)
@@ -52,7 +51,7 @@ if __name__ == "__main__":
             yaml.dump(config_data, stream)
 
         run_id = '{0:04}'.format(counter)
-        st.run_simulator(os.path.basename(config_file), record_label, run_id)
+        st.run_simulator(config_file, record_label, run_id)
         counter+=1
 
     os.remove(config_file)
