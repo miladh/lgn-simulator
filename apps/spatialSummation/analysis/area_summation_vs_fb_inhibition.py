@@ -23,12 +23,12 @@ sim_ids = args.sim_ids
 record = args.record
 run_id = args.run_id
 
-sims = get_simulations(sim_ids)
 
 output_dir = None
 if(record):
     output_dir = smt.get_output_dir(sim_ids, run_id)
 
+    sims = get_simulations(sim_ids)
 # Analysis: --------------------------------------------------------------------
 cell_types= {"relay": "relay.Krc.w",
             "interneuron": "interneuron.Kic.w",
