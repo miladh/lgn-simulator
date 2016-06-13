@@ -52,10 +52,13 @@ for d in spot_diameters:
         yaml.dump(config_data, stream)
 
     run_id = '{0:04}'.format(counter)
-    config_filename = record_label+"_"+run_id +".yaml"
+    tmp_config_filename = record_label+"_"+run_id +".yaml"
 
-    os.rename(config_file, os.path.abspath(os.path.join(current_path, config_filename)))
-    st.run_simulator(config_file, record_label, run_id)
+    copyfile(config_file, os.path.abspath(os.path.join(current_path, tmp_config_filename)))
+    tmp_config_file = os.path.abspath(os.path.join(current_path, tmp_config_filename))
+
+    st.run_simulator(tmp_config_file, record_label, run_id)
+    os.remove(tmp_config_file)
     counter+=1
 
 
