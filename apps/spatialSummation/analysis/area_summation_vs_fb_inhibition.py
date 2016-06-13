@@ -12,23 +12,22 @@ import analysis.colormaps as cmaps
 from analysis.tuning_analysis import*
 from analysis.data_extractor import*
 from analysis.pretty_plotting import*
-
-options = sys.argv[1:]
-run_id = options[-1]
+from analysis.data_extractor import*
 
 parser = ArgumentParser()
 parser.add_argument("sim_ids", help = "simulation ids")
 parser.add_argument("record", help = "record results", type = int)
-parser.add_argument("sumatra_label", help = "sumatra_label")
+parser.add_argument("run_id", help = "sumatra_label")
 args = parser.parse_args()
 sim_ids = args.sim_ids
 record = args.record
+run_id = args.run_id
 
-sims = smt.get_simulations(sim_ids)
+sims = get_simulations(sim_ids)
 
 output_dir = None
 if(record):
-    output_dir = smt.get_output_dir(sim_ids)
+    output_dir = smt.get_output_dir(sim_ids, run_id)
 
 # Analysis: --------------------------------------------------------------------
 cell_types= {"relay": "relay.Krc.w",
