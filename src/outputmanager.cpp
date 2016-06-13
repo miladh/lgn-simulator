@@ -20,7 +20,6 @@ OutputManager::~OutputManager()
 
 void OutputManager::copyConfigFile(const string& configFilename)
 {
-
     boost::filesystem::path cfgPath(configFilename);
     boost::filesystem::path p(m_output->getFileName());
     boost::filesystem::path outputDir = p.parent_path();

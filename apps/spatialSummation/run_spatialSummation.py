@@ -22,16 +22,20 @@ def modify_Krc(w):
 def modify_Kri(w):
     config_data["relay"]["Kri"]["spatial"]["weight"]= float(-w)
 
-
+#read config file
 options = sys.argv[1:]
 record_label = options[-1]
-config_file = os.path.abspath(os.path.join(current_path,"spatialSummation.yaml"))
-
-spot_diameters = np.linspace(0, 0.9, 2)
-weights = np.linspace(0.0, 2.0, 10)
+copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
+         os.path.abspath(os.path.join(current_path, record_label+".yaml")))
+config_file = os.path.abspath(os.path.join(current_path, record_label+".yaml"))
 
 with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
+
+#parameters
+spot_diameters = np.linspace(0, 0.9, 2)
+weights = np.linspace(0.0, 2.0, 10)
+
 
 
 counter= 0
@@ -50,35 +54,10 @@ for d in spot_diameters:
     run_id = '{0:04}'.format(counter)
     tmp_config_filename = record_label+"_"+run_id +".yaml"
 
-    copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")),
-             os.path.abspath(os.path.join(current_path, tmp_config_filename)))
+    copyfile(config_file, os.path.abspath(os.path.join(current_path, tmp_config_filename)))
     tmp_config_file = os.path.abspath(os.path.join(current_path, tmp_config_filename))
 
     st.run_simulator(tmp_config_file, record_label, run_id)
-    os.remove(tmp_config_file)
-
     counter+=1
 
-
-# if __name__ == "__main__":
-#     spot_diameters = np.linspace(0, 0.9, 10)
-#     weights = np.linspace(0.0, 2.0, 10)
-#
-#     reason = "Kc effect, with different width for I and R"
-#
-#     for w in weights:
-#         modify_Kic(w)
-#         modify_Krc(w)
-#
-#         # modify_Kri(w)
-#         for d in spot_diameters:
-#             modify_diameter(d)
-#
-#             with open(config_file, 'w') as stream:
-#                 yaml.dump(config_data, stream)
-#
-#             tag = "Kc_different_width_pg"
-#
-#             call(["smt", "run", os.path.basename(config_file), "-i"+config_file, "-r "+ reason, "-t" +tag])
-#
-#     os.remove(config_file)
+os.remove(config_file)
