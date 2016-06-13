@@ -60,7 +60,6 @@ def extract_unique_simulation_attrs(sims, attr):
     return np.array(sorted(list(attr_values)))
 
 
-
 def get_simulations(config_file):
     """
     returns list of simulations
@@ -88,9 +87,12 @@ def get_simulations(config_file):
 
     sims=[]
     for data_id in data_ids:
-        setting_file = os.path.join(data_path, data_id,"_"+data_id +".yaml")
-        data_file = os.path.join(data_path, data_id, data_id +".h5")
-        f = h5py.File(data_file, "r")
-        sims.append(Simulation(setting_file, f))
-
+        rootpath = os.path.join(data_path, data_id)
+        for root, dirs, files in os.walk(rootpath):
+            for dir in dirs:
+                dir_name = os.path.join(root, dir)
+                setting_file = os.path.join(dir_name, "_"+dir+".yaml")
+                data_file = os.path.join(dir_name, dir+".h5")
+                f = h5py.File(data_file, "r")
+                sims.append(Simulation(setting_file, f))
     return sims
