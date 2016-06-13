@@ -4,6 +4,18 @@ import subprocess
 import os, os.path
 
 def run_simulator(config_file, record_label, run_id):
+    """
+    runs lgn simulator
+
+    Parameters
+    ----------
+    config_file : str
+        path to config file
+    record_label: str
+        sumatra record label
+    run_id: str
+        id for one single run
+    """
     from sumatra.projects import load_project
 
     #set config file path------------------------------------------------------------------------
@@ -54,5 +66,3 @@ def run_simulator(config_file, record_label, run_id):
     proc = subprocess.call(run_argument, cwd=app_path, env=env)
 
     print "Results saved to this directory:\n", output_dir + "/*"
-
-    return run_id

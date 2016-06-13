@@ -7,7 +7,7 @@ import sys
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../tools")))
-import sumatra_tracking.run_app as st
+import sumatra_tracking.run_simulator as st
 
 def modify_diameter(d):
     config_data["stimulus"]["maskSize"] = float(d)
