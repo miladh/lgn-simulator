@@ -27,7 +27,7 @@ if(record):
 # Analysis: --------------------------------------------------------------------
 cell_types= {"relay": "relay.Krc.w",
             "interneuron": "interneuron.Kic.w",
-            "coritcla": "relay.Krc.w", }
+            "cortical": "relay.Krc.w", }
 
 for cell, attr in cell_types.iteritems():
     print cell, attr
