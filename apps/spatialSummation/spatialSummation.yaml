@@ -58,5 +58,5 @@ relay:
   storeImpulseResponseFT: false
   storeResponse: true
   storeResponseFT: false
-stimulus: {C: 1.0, kId: 6, mask: circle, maskSize: 0.0, orientation: 0.0, storeFT: false,
+stimulus: {C: 1.0, kId: 6, mask: circle, maskSize: 0.9, orientation: 0.0, storeFT: false,
   storeSpatiotemporal: true, wId: 0}
