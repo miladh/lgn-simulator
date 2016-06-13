@@ -9,7 +9,6 @@ def run_simulator(config_file, record_label, run_id):
     #set config file path------------------------------------------------------------------------
     current_path = os.path.dirname(os.path.realpath(__file__))
     app_name = load_project().name
-    # config_file = os.path.abspath(os.path.join(current_path, "../../apps", app_name, config_file))
     print "app_name: ", app_name
     print "config file: ", config_file
 
