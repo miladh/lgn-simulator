@@ -26,7 +26,6 @@ void OutputManager::copyConfigFile(const string& configFilename)
 
     string copiedFilePath;
     copiedFilePath  = outputDir.string() + "/_" + cfgPath.filename().string();
-
     boost::filesystem::copy_file(boost::filesystem::path(configFilename),
                                  boost::filesystem::path(copiedFilePath),
                                  boost::filesystem::copy_option::overwrite_if_exists);
