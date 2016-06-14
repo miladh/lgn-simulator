@@ -10,7 +10,7 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: false
+    storeSpatiotemporal: True
     storeFT: false
 
     # Grating:
