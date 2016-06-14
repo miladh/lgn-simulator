@@ -4,8 +4,8 @@ description: "Spatial config file"
 #------------Integrator settings-----------------#
 grid:
     ns: 8
-    nt: 5
-    dt: &dt_id 1.0
+    nt: 6
+    dt: &dt_id 10.0
     ds: &ds_id 0.03
 
 #------------Stimulus settings-------------------#
@@ -57,7 +57,7 @@ relay:
 
         temporal:
         # TemporalDelta
-            delay: 2
+            delay: 0
             dt: *dt_id
     Kri:
         w: -1.0
@@ -68,7 +68,7 @@ relay:
 
         temporal:
         # TemporalDelta
-            delay: 1.
+            delay: 0.
             dt: *dt_id
 
     Krc:
@@ -99,7 +99,7 @@ interneuron:
 
         temporal:
         # TemporalDelta
-            delay: 2
+            delay: 0
             dt: *dt_id
 
 
@@ -131,7 +131,7 @@ cortical:
 
         temporal:
         # TemporalDelta
-            delay: 5.
+            delay: 10.
             dt: *dt_id
 
 
