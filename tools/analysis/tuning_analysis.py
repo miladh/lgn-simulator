@@ -4,7 +4,9 @@ A collection of functions for analyzing tuning properties of the cells.
 
 import numpy as np
 
-def average_response_vs_attr(sims, attr, rc=[0.5, 0.5]):
+def average_response_vs_attr(sims, attr,
+                            indices=None,
+                            rc=[0.5, 0.5],):
     """
     returns the mean response of every cell in
     each simulation with respect to a given simulation
@@ -32,7 +34,10 @@ def average_response_vs_attr(sims, attr, rc=[0.5, 0.5]):
     for sim in sims:
         responses[attr].append(sim.get_attribute(attr))
         for cell_type in sim.cell_types:
-            resp = sim.single_cell_temporal_response(cell_type, rc)
+            if(indices!=None):
+                resp = sim.single_cell_temporal_response(cell_type, rc)[[indices]]
+            else:
+                resp = sim.single_cell_temporal_response(cell_type, rc)
             mean_resp = np.mean(resp)
             responses[str(cell_type)].append(mean_resp)
 

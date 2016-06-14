@@ -107,7 +107,7 @@ interneuron:
         w: 1.
         spatial:
         #Gauss
-            a: 0.64
+            a: 0.83
 
         temporal:
         # TemporalDelta
