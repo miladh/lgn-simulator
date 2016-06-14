@@ -28,8 +28,14 @@ output_dir = None
 if(record):
     output_dir = smt.get_output_dir(sim_ids, run_id)
 
-    sims = get_simulations(sim_ids)
+sims = get_simulations(sim_ids)
 # Analysis: --------------------------------------------------------------------
+Ns=sims[-1].integrator.Ns
+Nt=sims[-1].integrator.Nt
+indices = where( sims[-1].stimulus.spatio_temporal[:, Ns/2, Ns/2]>0)[0]
+print indices
+
+
 cell_types= {"relay": "relay.Krc.w",
             "interneuron": "interneuron.Kic.w",
             "cortical": "relay.Krc.w", }
@@ -50,7 +56,7 @@ for cell, attr in cell_types.iteritems():
     for w in weights:
         n+=1
         sims_ext = simulation_extractor(sims, attr, w)
-        data=average_response_vs_attr(sims_ext, "stimulus.mask_size")
+        data=average_response_vs_attr(sims_ext, "stimulus.mask_size", indices)
         sorted_indices = argsort(data["stimulus.mask_size"])
         mask_size = array(data["stimulus.mask_size"])[sorted_indices]
         resp = array(data[cell])[sorted_indices]
