@@ -103,7 +103,7 @@ def animateImshowPlots(data,
     ax.set_xlabel(r"$x(\theta)$")
     ax.set_ylabel(r"$y(\theta)$")
     imshowPlots.append(ax.imshow(data[0]["value"][0,:,:],
-    origin = "lower",cmap="gray", interpolation="none", extent = extent))
+    origin = "lower",cmap="gray", interpolation="none", extent = extent, vmin=-1, vmax=1))
     if(colorbar):
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.05)
