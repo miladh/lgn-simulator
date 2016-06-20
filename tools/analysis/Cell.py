@@ -1,10 +1,10 @@
 import numpy as np
 import h5py
+import argparse as ap
 
 class Cell:
     """
-    Class for neurons used in simulations
-
+    Class for neurons
     """
 
     def __init__(self, cell_group):
@@ -12,17 +12,18 @@ class Cell:
             setattr(self, attr, cell_group.attrs[attr])
             # print attr, cell_group.attrs[attr]
 
-        cell_properties = cell_group.keys()
 
-
-        for property in cell_properties:
+        for property in cell_group.keys():
             spaces = cell_group[str(property)].keys()
             data = {}
             for space in spaces:
                 values = np.array(cell_group[property][space])
                 data[str(space)] = np.array(values)
-                # print property, space, data[str(space)].shape
-            setattr(self, property, data)
+
+            setattr(self, property, ap.Namespace(**data))
+
+
+
 
     def zero_out_small_values(self):
        for attr in dir(self):

@@ -39,6 +39,8 @@ def average_response_vs_attr(sims, attr,
             else:
                 resp = sim.single_cell_temporal_response(cell_type, rc)
             mean_resp = np.mean(resp)
+            # mean_resp = sim.single_cell_freq_response(cell_type, rc)[[1]]
+
             responses[str(cell_type)].append(mean_resp)
 
     return responses
