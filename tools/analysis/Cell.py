@@ -7,21 +7,42 @@ class Cell:
     Class for neurons
     """
 
-    def __init__(self, cell_group):
-        for attr in cell_group.attrs.keys():
-            setattr(self, attr, cell_group.attrs[attr])
-            # print attr, cell_group.attrs[attr]
+    def __init__(self, h5_group):
+        self.group = h5_group
+        for attr in h5_group.attrs.keys():
+            setattr(self, attr, h5_group.attrs[attr])
+            # print attr, h5_group.attrs[attr]
 
+    def read_property(self, property=None, space=None):
+        if hasattr(self, property) and hasattr(getattr(self, property), str(space)):
+            return 1
 
-        for property in cell_group.keys():
-            spaces = cell_group[str(property)].keys()
-            data = {}
-            for space in spaces:
-                values = np.array(cell_group[property][space])
+        if(property==None and space==None):
+            for prop in self.group.keys():
+                spaces = self.group[str(prop)].keys()
+                data = {}
+                for sp in spaces:
+                    values = np.array(self.group[prop][sp])
+                    data[str(sp)] = np.array(values)
+                if not hasattr(self, prop): setattr(self, prop, ap.Namespace(**data))
+        elif(property==None):
+            for prop in self.group.keys():
+                data = {}
+                values = np.array(self.group[prop][space])
                 data[str(space)] = np.array(values)
-
-            setattr(self, property, ap.Namespace(**data))
-
+                if not hasattr(self, prop): setattr(self, prop, ap.Namespace(**data))
+        elif(space==None):
+            spaces = self.group[str(property)].keys()
+            data = {}
+            for sp in spaces:
+                values = np.array(self.group[property][sp])
+                data[str(sp)] = np.array(values)
+            if not hasattr(self, property): setattr(self, property, ap.Namespace(**data))
+        else:
+            data = {}
+            values = np.array(self.group[property][space])
+            data[str(space)] = np.array(values)
+            if not hasattr(self, property): setattr(self, property, ap.Namespace(**data))
 
 
 

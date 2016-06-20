@@ -78,18 +78,21 @@ class Simulation:
 
     def single_cell_temporal_response(self, cell_type, rc=[0.5, 0.5]):
         idx, idy = self.get_rf_center_indices(rc)
-        response = getattr(self, cell_type).response["spatio_temporal"][:,idy, idx]
+        getattr(self, cell_type).read_property(property="response", space="spatio_temporal")
+        response = getattr(self, cell_type).response.spatio_temporal[:,idy, idx]
         return response
 
     def single_cell_freq_response(self, cell_type, rc=[0.5, 0.5]):
         idx, idy = self.get_rf_center_indices(rc)
         #print idx, idy
-        freq_response = getattr(self, cell_type).response["fourier_transform"][:,idy, idx]
+        getattr(self, cell_type).read_property(property="response", space="fourier_transform")
+        freq_response = getattr(self, cell_type).response.fourier_transform[:,idy, idx]
         return freq_response
 
     def single_cell_temporal_impulse_response(self, cell_type, rc=[0.5, 0.5]):
         idx, idy = self.get_rf_center_indices(rc)
-        impulse_response = getattr(self, cell_type).impulse_response["spatio_temporal"][:,idy, idx]
+        getattr(self, cell_type).read_property(property="impulse_response", space="spatio_temporal")
+        impulse_response = getattr(self, cell_type).impulse_response.spatio_temporal[:,idy, idx]
         return impulse_response
 
     def spike_train(self, cell_type, rc=[0.5, 0.5], num_trails=2):
