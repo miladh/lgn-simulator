@@ -60,7 +60,7 @@ for i, d in enumerate(diameters[2:-1:10]):
     label = label, color=colormap(n[i]))
 
 ax.set_title("$\widetilde{S}(k_x, k_y=0, w=0; d)$")
-ax.set_xlabel("$k$")
+ax.set_xlabel("$k_x$")
 ax.set_ylabel("$\widetilde{S}$")
 ax.set_xlim([-30, 30])
 legend()
