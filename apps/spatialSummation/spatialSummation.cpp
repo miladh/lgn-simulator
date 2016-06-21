@@ -96,12 +96,12 @@ int main(int argc, char* argv[])
     //Compute:-----------------------------------------------------------------
     io.writeStimulusProperties(S.get());
 
+    S->computeFourierTransform();
     if(cfg["stimulus"]["storeSpatiotemporal"].as<bool>()){
         S->computeSpatiotemporal();
         io.writeStimulus(S.get(), cfg["stimulus"]["storeFT"].as<bool>());
         S->clearSpatioTemporal();
     }
-    S->computeFourierTransform();
     ganglion.computeImpulseResponseFourierTransform();
     relay.computeImpulseResponseFourierTransform();
     cortical.computeImpulseResponseFourierTransform();

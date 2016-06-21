@@ -4,30 +4,30 @@ description: "Spatial config file"
 #------------Integrator settings-----------------#
 grid:
     ns: 8
-    nt: 6
+    nt: 2
     dt: &dt_id 10.0
-    ds: &ds_id 0.03
+    ds: &ds_id 0.1
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: True
-    storeFT: false
+    storeSpatiotemporal: true
+    storeFT: true
 
     # Grating:
     C: 1.0
     mask: "circle" #none/circle/gaussian
-    maskSize: 0.5
+    maskSize: 0.02
     orientation: 0.   #degrees
     kId:  0           #[-Ns/2, Ns/2 - 1]
-    wId:  10           #[-Nt/2, Nt/2 - 1]
+    wId:  0           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
     storeResponse: true
     storeResponseFT: true
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
     w: 1.0
     Wg:
     # DOG
@@ -43,8 +43,8 @@ relay:
     R0 : 0
     storeResponse: true
     storeResponseFT: true
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
 
     #Kernels
     Krg:
@@ -79,15 +79,15 @@ relay:
 
         temporal:
         # TemporalDelta
-            delay: 10.
+            delay: 0.
             dt: *dt_id
 
 interneuron:
     R0 : 0
     storeResponse: true
     storeResponseFT: true
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
 
     #Kernels
     Kig:
@@ -111,15 +111,15 @@ interneuron:
 
         temporal:
         # TemporalDelta
-            delay: 10.
+            delay: 0.
             dt: *dt_id
 
 cortical:
     R0 : 0
     storeResponse: true
     storeResponseFT: true
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
 
     #kernels
     Kcr:
@@ -131,7 +131,7 @@ cortical:
 
         temporal:
         # TemporalDelta
-            delay: 10.
+            delay: 0.
             dt: *dt_id
 
 

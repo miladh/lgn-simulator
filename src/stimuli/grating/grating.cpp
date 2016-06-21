@@ -23,6 +23,8 @@ Grating::Grating(const Integrator &integrator,
 
     setSpatialFreq(sqrt(dot(m_kVec, m_kVec)));
     setOrientation(atan2(m_kVec(1), m_kVec(0)));
+
+    cout << "d=" << m_maskSize << endl;
 }
 
 Grating::~Grating()

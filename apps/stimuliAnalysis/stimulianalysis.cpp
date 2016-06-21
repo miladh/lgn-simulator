@@ -35,30 +35,12 @@ int main(int argc, char* argv[])
     unique_ptr<Grating> S = createGratingStimulus(integrator, cfg["stimulus"]);
 
 
-    //Ganglion cell:-----------------------------------------------------------
-//    SpatialDelta Wg_s = createSpatialDeltaKernel(cfg["ganglion"]["Wg"]);
-    SpatialGaussian Wg_s = createSpatialGaussianKernel(cfg["ganglion"]["Wg"]);
-    TemporalDelta Wg_t = createTemporalDeltaKernel(cfg["ganglion"]["Wt"]);
-
-    SeparableKernel Wg(cfg["ganglion"]["w"].as<double>() , &Wg_s, &Wg_t);
-    GanglionCell ganglion(integrator, Wg, cfg["ganglion"]["R0"].as<double>());
-
-
     //Compute:-----------------------------------------------------------------
     io.writeStimulusProperties(S.get());
 
     S->computeFourierTransform();
     S->computeSpatiotemporal();
     io.writeStimulus(S.get());
-
-
-    ganglion.computeResponse(S.get());
-    io.writeResponse(ganglion);
-    ganglion.clearResponse();
-
-    ganglion.computeImpulseResponse();
-    io.writeImpulseResponse(ganglion);
-    ganglion.clearImpulseResponse();
 
 
     //Finalize:----------------------------------------------------------

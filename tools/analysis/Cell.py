@@ -14,7 +14,7 @@ class Cell:
             # print attr, h5_group.attrs[attr]
 
     def read_property(self, property=None, space=None):
-        if hasattr(self, property) and hasattr(getattr(self, property), str(space)):
+        if hasattr(self, str(property)) and hasattr(getattr(self, property), str(space)):
             return 1
 
         if(property==None and space==None):

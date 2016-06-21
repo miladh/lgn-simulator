@@ -38,7 +38,8 @@ def average_response_vs_attr(sims, attr,
                 resp = sim.single_cell_temporal_response(cell_type, rc)[[indices]]
             else:
                 resp = sim.single_cell_temporal_response(cell_type, rc)
-            mean_resp = np.mean(resp)
+            # mean_resp = np.mean(resp/resp.max())
+            mean_resp =  np.absolute(resp).max()
             # mean_resp = sim.single_cell_freq_response(cell_type, rc)[[1]]
 
             responses[str(cell_type)].append(mean_resp)
