@@ -73,7 +73,7 @@ for i, d in enumerate(diameters):
     sim = simulation_extractor(sims, "stimulus.mask_size", d)[0]
     S_ft[i,:] = sim.stimulus.fourier_transform[0, Ns/2]/max(sim.stimulus.fourier_transform[0, Ns/2])
 
-figure()
+fig = plt.figure()
 extent =[k_points.min(), k_points.max(), diameters.min(), diameters.max()]
 internpolation = "gaussian"
 imshow(S_ft, extent=extent, origin="lower", aspect='auto', interpolation=internpolation, cmap =cmaps.viridis )
