@@ -26,6 +26,7 @@ def simulation_extractor(sims, attr, value):
     extracted_sims = []
     for sim in sims:
         p = sim.get_attribute(attr)
+
         if(p==value):
             extracted_sims.append(sim)
 
