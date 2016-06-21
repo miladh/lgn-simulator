@@ -44,11 +44,11 @@ for w in weights:
     # for d in spot_diameters:
         # modify_diameter(d)
 
-        with open(config_file, 'w') as stream:
-            yaml.dump(config_data, stream)
+    with open(config_file, 'w') as stream:
+        yaml.dump(config_data, stream)
 
-        run_id = '{0:04}'.format(counter)
-        st.run_simulator(config_file, record_label, run_id)
-        counter+=1
+    run_id = '{0:04}'.format(counter)
+    st.run_simulator(config_file, record_label, run_id)
+    counter+=1
 
 os.remove(config_file)
