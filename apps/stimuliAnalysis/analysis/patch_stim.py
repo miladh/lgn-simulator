@@ -78,7 +78,7 @@ extent =[k_points.min(), k_points.max(), diameters.min(), diameters.max()]
 internpolation = "gaussian"
 imshow(S_ft, extent=extent, origin="lower", aspect='auto', interpolation=internpolation, cmap =cmaps.viridis )
 title("$\widetilde{S}(k_x, k_y=0, w=0; d)$")
-ylabel(r"Spot diameter [deg]", fontsize= 16)
-xlabel(r"$k_x$",fontsize= 25)
+ylabel("Spot diameter [deg]", fontsize= 16)
+xlabel("$k_x$",fontsize= 25)
 colorbar()
 if record : fig.savefig(os.path.join(output_dir, "stim_ft_vs_d.png"))
