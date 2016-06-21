@@ -30,6 +30,8 @@ if(record):
 
 sims = get_simulations(sim_ids)
 # Analysis: --------------------------------------------------------------------
+Ns=sims[-1].integrator.Ns
+Nt=sims[-1].integrator.Nt
 for sim in sims:
     sim.stimulus.read_property()
 
