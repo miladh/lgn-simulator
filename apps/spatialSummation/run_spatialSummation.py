@@ -32,8 +32,8 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 #parameters-------------------------------------------------------------------------------------
-spot_diameters = np.linspace(0, 0.9, 30)
-weights = np.linspace(0.0, 3.0, 4)
+# spot_diameters = np.linspace(0, 0.9, 30)
+weights = np.linspace(0.0, 3.0, 30)
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
@@ -41,8 +41,8 @@ for w in weights:
     modify_Kic(w)
     modify_Krc(w)
 
-    for d in spot_diameters:
-        modify_diameter(d)
+    # for d in spot_diameters:
+        # modify_diameter(d)
 
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)

@@ -10,13 +10,13 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: true
-    storeFT: true
+    storeSpatiotemporal: false
+    storeFT: false
 
     # Grating:
     C: 1.0
     mask: "circle" #none/circle/gaussian
-    maskSize: 0.001
+    maskSize: 0.1
     orientation: 0.   #degrees
     kId:  0           #[-Ns/2, Ns/2 - 1]
     wId:  0           #[-Nt/2, Nt/2 - 1]
@@ -24,8 +24,8 @@ stimulus:
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: true
-    storeResponseFT: true
+    storeResponse: false
+    storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
     w: 1.0
@@ -41,8 +41,8 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: true
-    storeResponseFT: true
+    storeResponse: false
+    storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
 
@@ -84,8 +84,8 @@ relay:
 
 interneuron:
     R0 : 0
-    storeResponse: true
-    storeResponseFT: true
+    storeResponse: false
+    storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
 
@@ -116,8 +116,8 @@ interneuron:
 
 cortical:
     R0 : 0
-    storeResponse: true
-    storeResponseFT: true
+    storeResponse: false
+    storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
 
