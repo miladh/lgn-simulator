@@ -417,11 +417,11 @@ if __name__ == "__main__":
              "spatial_vec" : exp.integrator.s_points
             }
 
-    # Wi = {"type" : "Interneuron",
-    #              "value" : exp.interneuron.impulse_response.spatio_temporal,
-    #              "t_points" : exp.integrator.t_points,
-    #              "spatial_vec" : exp.integrator.s_points
-    #             }
+    Wi = {"type" : "Interneuron",
+                 "value" : exp.interneuron.impulse_response.spatio_temporal,
+                 "t_points" : exp.integrator.t_points,
+                 "spatial_vec" : exp.integrator.s_points
+                }
 
     Wc = {"type" : "Cortical",
                  "value" : exp.cortical.impulse_response.spatio_temporal,
@@ -463,12 +463,12 @@ if __name__ == "__main__":
              "t_points" : exp.integrator.t_points,
              "spatial_vec" : exp.integrator.s_points
             }
-    #
-    # Ri = {"type" : "Interneuron",
-    #          "value" : exp.interneuron.response.spatio_temporal,
-    #          "t_points" : exp.integrator.t_points,
-    #          "spatial_vec" : exp.integrator.s_points
-    #         }
+
+    Ri = {"type" : "Interneuron",
+             "value" : exp.interneuron.response.spatio_temporal,
+             "t_points" : exp.integrator.t_points,
+             "spatial_vec" : exp.integrator.s_points
+            }
     Rc = {"type" : "Cortical",
                  "value" : exp.cortical.response.spatio_temporal,
                  "t_points" : exp.integrator.t_points,
@@ -479,30 +479,31 @@ if __name__ == "__main__":
     # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    # data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
+    data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
     # data = [ S, Rg_ft, Rg, Rr_ft, Rr, Ri_ft, Ri,  Rc_ft, Rc]
-    data = [ S,Rg, Rr, Rc]
+    # data = [ S,Rg, Rr, Rc]
     # plt.figure()
     # plt.plot(exp.integrator.s_points, exp.stimulus.spatio_temporal[0, Ns/2,:], label = "S")
     # raster(exp.spike_train("relay",  num_trails=50))
     plt.plot(exp.integrator.t_points,exp.stimulus.spatio_temporal[:, Ns/2,Ns/2]/(exp.stimulus.spatio_temporal[:, Ns/2,Ns/2]).max(), label = "S")
 
-    plt.plot(exp.integrator.t_points,exp.relay.response.spatio_temporal[:, Ns/2,Ns/2]/(exp.relay.response.spatio_temporal[:, Ns/2,Ns/2].max()), label = "R")
+    plt.plot(exp.integrator.t_points,exp.relay.response.spatio_temporal[:, Ns/2,Ns/2]/(exp.relay.response.spatio_temporal[:, Ns/2,Ns/2].max()), label = "Rr")
+
+    plt.plot(exp.integrator.t_points,exp.ganglion.response.spatio_temporal[:, Ns/2,Ns/2]/(exp.ganglion.response.spatio_temporal[:, Ns/2,Ns/2].max()),'--', label = "Rg")
     plt.legend()
+
     plt.figure()
-
+    plt.plot(exp.integrator.k_points,
+    exp.relay.impulse_response.fourier_transform[3, Ns/2,:]
+    /np.absolute(exp.relay.impulse_response.fourier_transform[3, Ns/2,:]).max()
+    ,'-^', label = "Wr_ft")
 
     plt.plot(exp.integrator.k_points,
-    exp.relay.impulse_response.fourier_transform[0, Ns/2,:], label = "W_ft")
-
-    # plt.plot(exp.integrator.k_points,
-    # exp.relay.impulse_response.fourier_transform[3, Ns/2,:]/(exp.relay.impulse_response.fourier_transform[3, Ns/2,:]).max(), label = "W_ft")
+    exp.stimulus.fourier_transform[3, Ns/2,:]
+    /np.absolute(exp.stimulus.fourier_transform[3, Ns/2,:]).max(),'-^', label = "S_ft")
 
     plt.plot(exp.integrator.k_points,
-    exp.stimulus.fourier_transform[0, Ns/2,:]/(exp.stimulus.fourier_transform[0, Ns/2,:]).max(), label = "S_ft")
-
-    # plt.plot(exp.integrator.k_points,
-    # exp.relay.response.fourier_transform[0,Ns/2,:]/(exp.relay.response.fourier_transform[0,Ns/2,:]).max(), label = "R_ft")
+    exp.relay.response.fourier_transform[3,Ns/2,:]/(np.absolute(exp.relay.response.fourier_transform[3,Ns/2,:])).max(),'-^', label = "Rr_ft")
 
 
 

@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
     TemporalDelta Kt_rc = createTemporalDeltaKernel(cfg["relay"]["Krc"]["temporal"]);
     SeparableKernel Krc(cfg["relay"]["Krc"]["w"].as<double>(), &Ks_rc, &Kt_rc);
     
-    //Relay cell: -------------------------------------------------------------
+    //Interneuron: -------------------------------------------------------------
     Interneuron interneuron(integrator, cfg["interneuron"]["R0"].as<double>());
     
     // G -> I
