@@ -26,8 +26,8 @@ Grating::Grating(const Integrator &integrator,
 
     cout << "d=" << m_maskSize << endl;
     if(maskSize > m_spatialVec.max()-m_spatialVec.min()){
-        cerr << "mask size larger than grid length: "
-             << maskSize << "  " << m_spatialVec.max()-m_spatialVec.min()
+        cerr << "Warning: mask size (" << maskSize
+             << ") larger than grid length: " << m_spatialVec.max()-m_spatialVec.min()
              << endl;
     }
 }
