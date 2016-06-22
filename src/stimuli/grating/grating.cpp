@@ -15,7 +15,7 @@ Grating::Grating(const Integrator &integrator,
     , m_orientation(orientation*core::pi/180.)
     , m_w(temporalFreq)
     , m_contrast(contrast)
-    , m_maskSize(maskSize * (m_spatialVec.max()-m_spatialVec.min()))
+    , m_maskSize(maskSize)
 {
     m_type = "grating";
     m_kVec = {Special::nearestValue(m_spatialFreqs, m_k*cos(m_orientation)),
@@ -25,6 +25,11 @@ Grating::Grating(const Integrator &integrator,
     setOrientation(atan2(m_kVec(1), m_kVec(0)));
 
     cout << "d=" << m_maskSize << endl;
+    if(maskSize > m_spatialVec.max()-m_spatialVec.min()){
+        cerr << "mask size larger than grid length: "
+             << maskSize << "  " << m_spatialVec.max()-m_spatialVec.min()
+             << endl;
+    }
 }
 
 Grating::~Grating()
