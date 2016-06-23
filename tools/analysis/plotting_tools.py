@@ -508,8 +508,6 @@ if __name__ == "__main__":
     print (exp.relay.resp()).shape
     print (exp.relay.resp_ft()).shape
     print (exp.relay.resp_ft())[3,Ns/2,Ns/2]
-    print (exp.relay.irf_ft())[3,Ns/2,Ns/2]
-
     # animateImshowPlots(data, exp.integrator.dt,
     # colorbar = True, remove_axes = False,
     # save_animation = False, animation_name = "newTest")

@@ -4,11 +4,9 @@ A collection of functions for analyzing tuning properties of the cells.
 
 import numpy as np
 
-def average_response_vs_attr(sims, attr,
-                            indices=None,
-                            rc=[0.5, 0.5],):
+def resp_vs_attr(sims, attr, resp_type = "t_resp", rc=[0.0, 0.0], indices=None):
     """
-    returns the mean response of every cell in
+    returns the max response of every cell in
     each simulation with respect to a given simulation
     attribute (attr).
 
@@ -25,7 +23,7 @@ def average_response_vs_attr(sims, attr,
     Returns
     -------
     dict
-        mean response of all cells with with
+        max response of all cells with with
         respect to attr.
 
     """
@@ -34,18 +32,21 @@ def average_response_vs_attr(sims, attr,
     for sim in sims:
         responses[attr].append(sim.get_attribute(attr))
         for cell_type in sim.cell_types:
+            neuron =  getattr(sim, cell_type)
             if(indices!=None):
-                resp = sim.single_cell_temporal_response(cell_type, rc)[[indices]]
+                resp = getattr(neuron, resp_type)(rc)[[indices]]
             else:
-                resp = sim.single_cell_temporal_response(cell_type, rc)
-                
+                resp = getattr(neuron, resp_type)(rc)
+
             resp =  np.absolute(resp).max()
             responses[str(cell_type)].append(resp)
 
     return responses
 
 
-def average_response_vs_attrA_vs_attrB(sims, cell_type, attrA, attrB, rc=[0.5, 0.5]):
+
+
+def response_vs_attrA_vs_attrB(sims, cell_type, attrA, attrB, rc=[0.0, 0.0]):
     """
     returns the mean response with respect to
     attributes attrA and attrB.
@@ -80,7 +81,7 @@ def average_response_vs_attrA_vs_attrB(sims, cell_type, attrA, attrB, rc=[0.5, 0
     print attrA, attrB
     for i, a in enumerate(attrA_vec):
         sims_ext = de.simulation_extractor(sims, attrA, a)
-        data = average_response_vs_attr(sims_ext, attrB)
+        data = response_vs_attr(sims_ext, attrB)
 
         sorted_indices = np.argsort(data[attrB])
         response[i,:] = np.array(data[cell_type])[sorted_indices]

@@ -3,8 +3,8 @@ description: "Spatial config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 6
-    nt: 4
+    ns: 8
+    nt: 6
     dt: &dt_id 10.0
     ds: &ds_id 0.1
 
@@ -115,7 +115,7 @@ interneuron:
             dt: *dt_id
 
 cortical:
-    R0 : 0
+    R0 : 0.
     storeResponse: true
     storeResponseFT: true
     storeImpulseResponse: true

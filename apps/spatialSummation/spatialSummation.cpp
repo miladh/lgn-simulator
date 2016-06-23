@@ -73,7 +73,8 @@ int main(int argc, char* argv[])
     SeparableKernel Kic(cfg["interneuron"]["Kic"]["w"].as<double>(), &Ks_ic, &Kt_ic);
     
     //Cortical cell: -------------------------------------------------------------
-    CorticalCell cortical(integrator, cfg["cortical"]["R0"].as<double>());
+    HeavisideNonlinearity heavisideNonlinearity;
+    CorticalCell cortical(integrator, cfg["cortical"]["R0"].as<double>(), &heavisideNonlinearity);
     
     // R -> G
     SpatialDelta Ks_cr = createSpatialDeltaKernel(cfg["cortical"]["Kcr"]["spatial"]);

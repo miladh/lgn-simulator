@@ -9,7 +9,6 @@ import Neuron
 class Simulation:
     """
     Class for a single simulation
-
     """
     def __init__(self, config_file, h5_file):
         self.cell_types = []
@@ -30,6 +29,7 @@ class Simulation:
         ########################################################################
         self.num_cell_types  = len(self.cell_types)
 
+
     def get_attribute(self, key):
         from operator import attrgetter
         try:
@@ -49,31 +49,6 @@ class Simulation:
         except KeyError:
             raise KeyError("key not found: " + path + ", options: " + str(key))
 
-
-    def get_rf_center_indices(self, rc=[0.5, 0.5]):
-        """
-        Return the rf-center indices in s_points,
-        given the normalized spatial grid points.
-        """
-        idx =  int(round(self.integrator.Ns * rc[0]))
-        idy =  int(round(self.integrator.Ns * rc[1]))
-        return idx, idy
-
-
-    def single_cell_temporal_response(self, cell_type, rc=[0.5, 0.5]):
-        idx, idy = self.get_rf_center_indices(rc)
-        response = getattr(self, cell_type).resp()[:,idy, idx]
-        return response
-
-    def single_cell_freq_response(self, cell_type, rc=[0.5, 0.5]):
-        idx, idy = self.get_rf_center_indices(rc)
-        freq_response = getattr(self, cell_type).resp_ft()[:,idy, idx]
-        return freq_response
-
-    def single_cell_temporal_impulse_response(self, cell_type, rc=[0.5, 0.5]):
-        idx, idy = self.get_rf_center_indices(rc)
-        impulse_response = getattr(self, cell_type).irf()[:,idy, idx]
-        return impulse_response
 
     def spike_train(self, cell_type, rc=[0.5, 0.5], num_trails=2):
         response = self.single_cell_temporal_response(cell_type, rc)
