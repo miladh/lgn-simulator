@@ -392,42 +392,39 @@ if __name__ == "__main__":
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(None, f)
     exp.stimulus.read_property()
-    for cell in exp.cell_types:
-        c = getattr(exp, cell)
-        c.read_property()
 
     Ns = exp.integrator.Ns
     Nt = exp.integrator.Nt
 
-    S = {"type" : "Stimulus",
-            "value" : exp.stimulus.spatio_temporal,
-            "t_points" : exp.integrator.t_points,
-            "spatial_vec" : exp.integrator.s_points
-            }
-
+    # S = {"type" : "Stimulus",
+    #         "value" : exp.stimulus.spatio_temporal,
+    #         "t_points" : exp.integrator.t_points,
+    #         "spatial_vec" : exp.integrator.s_points
+    #         }
     #
-    Wg = {"type" : "Ganglion",
-                "value" : exp.ganglion.impulse_response.spatio_temporal,
-                "t_points" : exp.integrator.t_points,
-                "spatial_vec" : exp.integrator.s_points
-                }
-    Wr = {"type" : "Relay",
-             "value" : exp.relay.impulse_response.spatio_temporal,
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-            }
-
-    Wi = {"type" : "Interneuron",
-                 "value" : exp.interneuron.impulse_response.spatio_temporal,
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
-
-    Wc = {"type" : "Cortical",
-                 "value" : exp.cortical.impulse_response.spatio_temporal,
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
+    # #
+    # Wg = {"type" : "Ganglion",
+    #             "value" : exp.ganglion.impulse_response.spatio_temporal,
+    #             "t_points" : exp.integrator.t_points,
+    #             "spatial_vec" : exp.integrator.s_points
+    #             }
+    # Wr = {"type" : "Relay",
+    #          "value" : exp.relay.impulse_response.spatio_temporal,
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #         }
+    #
+    # Wi = {"type" : "Interneuron",
+    #              "value" : exp.interneuron.impulse_response.spatio_temporal,
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
+    #
+    # Wc = {"type" : "Cortical",
+    #              "value" : exp.cortical.impulse_response.spatio_temporal,
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
 
 # Response FT--------------------------------------------------------------------------
     # Rg_ft = {"type" : "Ganglion",
@@ -453,33 +450,33 @@ if __name__ == "__main__":
     #             "spatial_vec" : exp.integrator.k_points
     #             }
 # Response --------------------------------------------------------------------------
-    Rg = {"type" : "Ganglion",
-                "value" : exp.ganglion.response.spatio_temporal,
-                "t_points" : exp.integrator.t_points,
-                "spatial_vec" : exp.integrator.s_points
-                }
-    Rr = {"type" : "Relay",
-             "value" : exp.relay.response.spatio_temporal,
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-            }
-
-    Ri = {"type" : "Interneuron",
-             "value" : exp.interneuron.response.spatio_temporal,
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-            }
-    Rc = {"type" : "Cortical",
-                 "value" : exp.cortical.response.spatio_temporal,
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
+    # Rg = {"type" : "Ganglion",
+    #             "value" : exp.ganglion.response.spatio_temporal,
+    #             "t_points" : exp.integrator.t_points,
+    #             "spatial_vec" : exp.integrator.s_points
+    #             }
+    # Rr = {"type" : "Relay",
+    #          "value" : exp.relay.response.spatio_temporal,
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #         }
+    #
+    # Ri = {"type" : "Interneuron",
+    #          "value" : exp.interneuron.response.spatio_temporal,
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #         }
+    # Rc = {"type" : "Cortical",
+    #              "value" : exp.cortical.response.spatio_temporal,
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
 
     # data = [Wg,Wr,Wi,Wc]
     # line3dPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2, num_skip=1,y_line3d=True)
     # plot3dOfImpulseResponses(data[:], colorbar=True, y_3d=True,num_skip=6, idx=Ns/2, idy=Ns/2)
     # imshowPlotsOfImpulseResponses(data, idx=Ns/2, idy=Ns/2,y_imshow=True)
-    data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
+    # data = [ S, Wg, Rg, Wr, Rr, Wi, Ri,  Wc, Rc]
     # data = [ S, Rg_ft, Rg, Rr_ft, Rr, Ri_ft, Ri,  Rc_ft, Rc]
     # data = [ S,Rg, Rr, Rc]
     # plt.figure()
@@ -503,16 +500,20 @@ if __name__ == "__main__":
     # /np.absolute(exp.stimulus.fourier_transform[3, Ns/2,:]).max(),'-^', label = "S_ft")
     #
     # plt.plot(exp.integrator.k_points,
-    # exp.relay.response.fourier_transform[3,Ns/2,:]/(np.absolute(exp.relay.response.fourier_transform[3,Ns/2,:])).max(),'-^', label = "Rr_ft")
+    # exp.relay.response.fourirer_transform[3,Ns/2,:]/(np.absolute(exp.relay.response.fourier_transform[3,Ns/2,:])).max(),'-^', label = "Rr_ft")
     # plt.legend()
     #
     # plt.figure()
     # plt.plot(exp.integrator.s_points, exp.relay.impulse_response.spatio_temporal[0, Ns/2,:])
 
+    print (exp.relay.resp()).shape
+    print (exp.relay.resp_ft()).shape
+    print (exp.relay.resp_ft())[3,Ns/2,Ns/2]
+    print (exp.relay.irf_ft())[3,Ns/2,Ns/2]
 
 
-    animateImshowPlots(data, exp.integrator.dt,
-    colorbar = True, remove_axes = False,
-    save_animation = False, animation_name = "newTest")
+    # animateImshowPlots(data, exp.integrator.dt,
+    # colorbar = True, remove_axes = False,
+    # save_animation = False, animation_name = "newTest")
 
     plt.show()

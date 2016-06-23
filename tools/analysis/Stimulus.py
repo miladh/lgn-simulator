@@ -3,30 +3,25 @@ import h5py
 
 class Stimulus:
     """
-    # Class for stimulus used in a single simulation
+    # Class for stimulus
 
     """
-
     def __init__(self, h5_group):
         self.group = h5_group
+        self.__st = None
+        self.__ft = None
         for attr in h5_group.attrs.keys():
             setattr(self, attr, h5_group.attrs[attr])
 
-    def __getitem__(self, key):
-        return self[key]
+    def spatio_temporal(self):
+        if(self.__st==None):
+            self.__st = np.array(self.group["spatio_temporal"])
 
+        return self.__st
 
-    def read_property(self,  space=None):
-        if hasattr(self, str(space)):
-            return 1
-
-        if(space==None):
-            spaces = self.group.keys()
-            for sp in spaces:
-                values = self.group[str(sp)]
-                data = np.array(values)
-                setattr(self, sp, data)
-        else:
-            values = self.group[space]
-            data = np.array(values)
-            setattr(self, space, data)
+    def fourier_transform(self):
+        if(self.__ft==None):
+            self.__ft = np.array(
+                    np.array(self.group["fourier_transform"]["real"]), dtype=complex)
+            self.__ft.imag =np.array(np.array(self.group["fourier_transform"]["complex"]))
+        return self.__ft

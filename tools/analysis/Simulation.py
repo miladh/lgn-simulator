@@ -4,7 +4,7 @@ import yaml
 
 import Stimulus
 import Integrator
-import Cell
+import Neuron
 
 class Simulation:
     """
@@ -25,16 +25,10 @@ class Simulation:
                 self.integrator = Integrator.Integrator(integrator_group)
             else:
                 cell_group = h5_file.get("/" + str(item))
-                setattr(self, item, Cell.Cell(cell_group))
+                setattr(self, item, Neuron.Neuron(cell_group))
                 self.cell_types.append(item)
         ########################################################################
         self.num_cell_types  = len(self.cell_types)
-        # self.zeroOutsmallValues()
-        # self.normalize()
-
-    def __getitem__(self, key):
-        return self[key]
-
 
     def get_attribute(self, key):
         from operator import attrgetter
@@ -55,16 +49,6 @@ class Simulation:
         except KeyError:
             raise KeyError("key not found: " + path + ", options: " + str(key))
 
-    def zero_out_small_values(self):
-        for cell in self.cell_types:
-            cell_type = getattr(self, cell)
-            cell_type.zero_out_small_values()
-
-    def normalize(self):
-        for cell in self.cell_types:
-            cell_type = getattr(self, cell)
-            cell_type.normalize()
-
 
     def get_rf_center_indices(self, rc=[0.5, 0.5]):
         """
@@ -78,21 +62,17 @@ class Simulation:
 
     def single_cell_temporal_response(self, cell_type, rc=[0.5, 0.5]):
         idx, idy = self.get_rf_center_indices(rc)
-        getattr(self, cell_type).read_property(property="response", space="spatio_temporal")
-        response = getattr(self, cell_type).response.spatio_temporal[:,idy, idx]
+        response = getattr(self, cell_type).resp()[:,idy, idx]
         return response
 
     def single_cell_freq_response(self, cell_type, rc=[0.5, 0.5]):
         idx, idy = self.get_rf_center_indices(rc)
-        #print idx, idy
-        getattr(self, cell_type).read_property(property="response", space="fourier_transform")
-        freq_response = getattr(self, cell_type).response.fourier_transform[:,idy, idx]
+        freq_response = getattr(self, cell_type).resp_ft()[:,idy, idx]
         return freq_response
 
     def single_cell_temporal_impulse_response(self, cell_type, rc=[0.5, 0.5]):
         idx, idy = self.get_rf_center_indices(rc)
-        getattr(self, cell_type).read_property(property="impulse_response", space="spatio_temporal")
-        impulse_response = getattr(self, cell_type).impulse_response.spatio_temporal[:,idy, idx]
+        impulse_response = getattr(self, cell_type).irf()[:,idy, idx]
         return impulse_response
 
     def spike_train(self, cell_type, rc=[0.5, 0.5], num_trails=2):
@@ -118,6 +98,7 @@ class Simulation:
                 for tb in spike_times_B[k]:
                     cross_correlogram.append(ta - tb)
         return cross_correlogram
+
 
 if __name__ == "__main__":
     print "---Class for single lgn-simulator experiments---"
