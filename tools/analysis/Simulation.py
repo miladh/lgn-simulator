@@ -50,8 +50,8 @@ class Simulation:
             raise KeyError("key not found: " + path + ", options: " + str(key))
 
 
-    def spike_train(self, cell_type, rc=[0.5, 0.5], num_trails=2):
-        response = self.single_cell_temporal_response(cell_type, rc)
+    def spike_train(self, cell_type, rc=[0.0, 0.0], num_trails=2):
+        response = getattr(self, cell_type).t_resp(rc)
         spike_times = [[] for i in range(num_trails)]
 
         dt = self.integrator.dt
