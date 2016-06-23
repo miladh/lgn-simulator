@@ -156,109 +156,128 @@ void OutputManager::writeStimulusProperties(const Stimulus* stimulus)
     }
 }
 
-void OutputManager::writeStimulus(const Stimulus* stimulus,
-                                  const bool fourierTransform)
+void OutputManager::writeStimulus(const Stimulus* stimulus)
 {
 
-    herr_t status = H5Eset_auto1(NULL, NULL);
-    status = H5Gget_objinfo (m_output->getId(), "/stimulus", 0, NULL);
-
-    if (!status == 0){
-        writeStimulusProperties(stimulus);
-    }
+    Group group = createGroupIfNotExist("stimulus");
 
     // Write stimuli
-    Group stim = m_output->openGroup("/stimulus");
-
-    fcube realStim = conv_to<fcube>::from(stimulus->spatioTemporal());
-    writeDataSet(realStim, &stim, "spatio_temporal");
-
-    if(fourierTransform){
-        cx_cube fftShiftedfourierTransform = stimulus->fourierTransform();
-
-        //fftShift
-        for(int i = 0; i < int(fftShiftedfourierTransform.n_slices); i++){
-            fftShiftedfourierTransform.slice(i) =
-                    FFTHelper::fftShift(fftShiftedfourierTransform.slice(i));
-        }
-
-        fcube complexStim = conv_to<fcube>::from(real(fftShiftedfourierTransform));
-        writeDataSet(complexStim, &stim, "fourier_transform");
-    }
-
+    fcube stim = conv_to<fcube>::from(stimulus->spatioTemporal());
+    writeDataSet(stim, &group, "spatio_temporal");
 }
 
-void OutputManager::writeResponse(const Neuron& neuron,
-                                  const bool fourierTransform)
-{
 
+void OutputManager::writeStimulusFourierTransform(const Stimulus* stimulus)
+{
+    cx_cube fftShiftedfourierTransform = stimulus->fourierTransform();
+    //fftShift
+    for(int i = 0; i < int(fftShiftedfourierTransform.n_slices); i++){
+        fftShiftedfourierTransform.slice(i) =
+                FFTHelper::fftShift(fftShiftedfourierTransform.slice(i));
+    }
+    cx_fcube stimFT = conv_to<cx_fcube>::from(fftShiftedfourierTransform);
+
+    Group group = createGroupIfNotExist("stimulus/fourier_transform");
+    writeDataSet(real(stimFT), &group, "real");
+    writeDataSet(imag(stimFT), &group, "complex");
+}
+
+
+void OutputManager::writeResponse(const Neuron& neuron)
+{
     fcube response = conv_to<fcube>::from(neuron.response());
 
-    string cellGroupName = neuron.type();
-    herr_t status = H5Eset_auto1(NULL, NULL);
-    status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
-
-    if (!status == 0){
-        Group cellGroup = m_output->createGroup(cellGroupName);
-        string type = neuron.type();
-        Attribute type_a(cellGroup.createAttribute("type",StrType(PredType::C_S1,64), H5S_SCALAR));
-        type_a.write( StrType(PredType::C_S1, 64), (&type)->c_str());
-    }
-
     //write response:
-    Group res = m_output->createGroup(cellGroupName+"/response");
+    Group group = createGroupIfNotExist(neuron.type());
+    if(!group.attrExists("type")){
+        Attribute type(group.createAttribute("type",StrType(PredType::C_S1,64), H5S_SCALAR));
+        type.write( StrType(PredType::C_S1, 64), (neuron.type()).c_str());
+    }
+    Group res = createGroupIfNotExist(neuron.type()+"/response");
     writeDataSet(response, &res, "spatio_temporal");
 
-    if(fourierTransform){
-        cx_cube fftShiftedfourierTransform = neuron.responseFourierTransform();
-
-        //fftShift
-        for(int i = 0; i < int(fftShiftedfourierTransform.n_slices); i++){
-            fftShiftedfourierTransform.slice(i) =
-                    FFTHelper::fftShift(fftShiftedfourierTransform.slice(i));
-        }
-
-        fcube responseFT = conv_to<fcube>::from(real(fftShiftedfourierTransform));
-        writeDataSet(responseFT, &res, "fourier_transform");
-    }
 
 }
 
-void OutputManager::writeImpulseResponse(const Neuron& neuron,
-                                         const bool fourierTransform)
+void OutputManager::writeImpulseResponse(const Neuron& neuron)
 {
 
     fcube impulseResponse = conv_to<fcube>::from(neuron.impulseResponse());
 
-    string cellGroupName = neuron.type();
-    herr_t status = H5Eset_auto1(NULL, NULL);
-    status = H5Gget_objinfo (m_output->getId(), cellGroupName.c_str(), 0, NULL);
-
-    if (!status == 0){
-        Group cellGroup = m_output->createGroup(cellGroupName);
-        string type = neuron.type();
-        Attribute type_a(cellGroup.createAttribute("type",StrType(PredType::C_S1,64), H5S_SCALAR));
-        type_a.write( StrType(PredType::C_S1, 64), (&type)->c_str());
+    //write impulse response:
+    Group group = createGroupIfNotExist(neuron.type());
+    if(!group.attrExists("type")){
+        Attribute type(group.createAttribute("type",StrType(PredType::C_S1,64), H5S_SCALAR));
+        type.write( StrType(PredType::C_S1, 64), (neuron.type()).c_str());
     }
 
-    //write impulse response:
-    Group impRes = m_output->createGroup(cellGroupName+"/impulse_response");
+    Group impRes = createGroupIfNotExist(neuron.type()+"/impulse_response");
     writeDataSet(impulseResponse, &impRes, "spatio_temporal");
 
-    if(fourierTransform){
-        cx_cube fftShiftedfourierTransform = neuron.impulseResponseFourierTransform();
+}
 
-        //fftShift
-        for(int i = 0; i < int(fftShiftedfourierTransform.n_slices); i++){
-            fftShiftedfourierTransform.slice(i) =
-                    FFTHelper::fftShift(fftShiftedfourierTransform.slice(i));
-        }
 
-        fcube impulseResponseFT =
-                conv_to<fcube>::from(real(fftShiftedfourierTransform));
-        writeDataSet(impulseResponseFT, &impRes, "fourier_transform");
+void OutputManager::writeResponseFourierTransform(const Neuron& neuron)
+{
+    cx_cube fftShiftedfourierTransform = neuron.responseFourierTransform();
+    for(int i = 0; i < int(fftShiftedfourierTransform.n_slices); i++){
+        fftShiftedfourierTransform.slice(i) =
+                FFTHelper::fftShift(fftShiftedfourierTransform.slice(i));
+    }
+    cx_fcube responseFT = conv_to<cx_fcube>::from(fftShiftedfourierTransform);
+
+    //write fourier transform of response:
+    Group group = createGroupIfNotExist(neuron.type());
+    if(!group.attrExists("type")){
+        Attribute type(group.createAttribute("type",StrType(PredType::C_S1,64), H5S_SCALAR));
+        type.write( StrType(PredType::C_S1, 64), (neuron.type()).c_str());
     }
 
+    Group res = createGroupIfNotExist(neuron.type()+"/response");
+    res.createGroup("fourier_transform");
+    writeDataSet(real(responseFT), &res, "fourier_transform/real");
+    writeDataSet(imag(responseFT), &res, "fourier_transform/complex");
+}
+
+
+void OutputManager::writeImpulseResponseFourierTransform(const Neuron& neuron)
+{
+    cx_cube fftShiftedfourierTransform = neuron.impulseResponseFourierTransform();
+    for(int i = 0; i < int(fftShiftedfourierTransform.n_slices); i++){
+        fftShiftedfourierTransform.slice(i) =
+                FFTHelper::fftShift(fftShiftedfourierTransform.slice(i));
+    }
+    cx_fcube impulseResponseFT=conv_to<cx_fcube>::from(fftShiftedfourierTransform);
+
+    //write fourier transform of impulse response:
+    Group group = createGroupIfNotExist(neuron.type());
+    if(!group.attrExists("type")){
+        Attribute type(group.createAttribute("type",StrType(PredType::C_S1,64), H5S_SCALAR));
+        type.write( StrType(PredType::C_S1, 64), (neuron.type()).c_str());
+    }
+
+    Group impRes = createGroupIfNotExist(neuron.type()+"/impulse_response");
+    impRes.createGroup("fourier_transform");
+    writeDataSet(real(impulseResponseFT), &impRes, "fourier_transform/real");
+    writeDataSet(imag(impulseResponseFT), &impRes, "fourier_transform/complex");
+}
+
+
+
+
+Group OutputManager::createGroupIfNotExist(const string groupName)
+{
+    herr_t status = H5Eset_auto1(NULL, NULL);
+    status = H5Gget_objinfo (m_output->getId(), groupName.c_str(), 0, NULL);
+
+    Group group;
+    if (!status == 0){
+        group = m_output->createGroup(groupName);
+    }else{
+        group = m_output->openGroup(groupName);
+    }
+
+    return group;
 }
 
 

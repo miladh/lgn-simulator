@@ -21,21 +21,25 @@ public:
     OutputManager(const string &filename);
     ~OutputManager();
 
-    void writeIntegratorProperties(const Integrator &integrator);
-
-    void writeResponse(const Neuron &neuron, const bool fourierTransform = true);
-
-    void writeImpulseResponse(const Neuron &neuron,const bool fourierTransform = true);
-
-    void writeStimulusProperties(const Stimulus *stimulus);
-    void writeStimulus(const Stimulus *stimuli, const bool fourierTransform = true);
-
     void copyConfigFile(const string &configFilename);
+
+    void writeIntegratorProperties(const Integrator &integrator);
+    void writeStimulusProperties(const Stimulus *stimulus);
+
+    void writeStimulus(const Stimulus *stimuli);
+    void writeStimulusFourierTransform(const Stimulus *stimuli);
+
+    void writeResponse(const Neuron &neuron);
+    void writeResponseFourierTransform(const Neuron &neuron);
+
+    void writeImpulseResponse(const Neuron &neuron);
+    void writeImpulseResponseFourierTransform(const Neuron &neuron);
+
 
 private:
     H5File *m_output;
     void writeDataSet(const fcube dataset, Group* group, string name);
-
+    Group createGroupIfNotExist(const string groupName);
 
 
 };

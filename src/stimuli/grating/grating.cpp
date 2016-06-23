@@ -24,7 +24,6 @@ Grating::Grating(const Integrator &integrator,
     setSpatialFreq(sqrt(dot(m_kVec, m_kVec)));
     setOrientation(atan2(m_kVec(1), m_kVec(0)));
 
-    cout << "d=" << m_maskSize << endl;
     if(maskSize > m_spatialVec.max()-m_spatialVec.min()){
         cerr << "Warning: mask size (" << maskSize
              << ") larger than grid length: " << m_spatialVec.max()-m_spatialVec.min()

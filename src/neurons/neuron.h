@@ -27,6 +27,7 @@ public:
 
     // Compute functions
     void computeResponse(const Stimulus *const stimulus);
+    void computeResponseFourierTransform(const Stimulus *const stimulus);
 
     //Virtual function:
     virtual void computeImpulseResponse();
@@ -41,6 +42,7 @@ public:
     const string type() const;
 
     void clearResponse();
+    void clearResponseFourierTransform();
     void clearImpulseResponse();
 
     bool isImpulseResponseFourierTransformComputed() const;
@@ -52,6 +54,7 @@ private:
 
 protected:
     bool impulseResponseFourierTransformComputed  = false;
+    bool responseFourierTransformComputed = false;
     const double m_backgroundResponse;
     const string m_type;
 

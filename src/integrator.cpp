@@ -59,6 +59,11 @@ cx_cube Integrator::backwardFFT(cx_cube data) const
         fftData.slice(i) = FFTHelper::fftShift(fftData.slice(i));
     }
 
+
+//    cube tmp = imag(fftData);
+//    cout << tmp.max() << "   "
+//        <<  tmp.min() << endl;
+
     return fftData;
 }
 

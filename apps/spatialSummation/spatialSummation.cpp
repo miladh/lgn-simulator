@@ -26,14 +26,13 @@ int main(int argc, char* argv[])
     
     //Output manager:---------------------------------------------------------
     OutputManager io(cfg["OutputManager"]["outputFilename"].as<std::string>());
-    io.copyConfigFile(argv[1]);
+
     //Integrator--------------------------------------------------------------
     Integrator integrator = createIntegrator(cfg["grid"]);
-    io.writeIntegratorProperties(integrator);
-    
+
     //Stim---------------------------------------------------------------------
     unique_ptr<Grating> S = createGratingStimulus(integrator, cfg["stimulus"]);
-    
+
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
     TemporalDelta Wg_t = createTemporalDeltaKernel(cfg["ganglion"]["Wt"]);
@@ -49,7 +48,6 @@ int main(int argc, char* argv[])
     SpatialDelta Ks_rg = createSpatialDeltaKernel(cfg["relay"]["Krg"]["spatial"]);
     TemporalDelta Kt_rg = createTemporalDeltaKernel(cfg["relay"]["Krg"]["temporal"]);
     SeparableKernel Krg(cfg["relay"]["Krg"]["w"].as<double>(), &Ks_rg, &Kt_rg);
-    
     
     // I -> R
     SpatialDelta Ks_ri = createSpatialDeltaKernel(cfg["relay"]["Kri"]["spatial"]);
@@ -94,77 +92,108 @@ int main(int argc, char* argv[])
     cortical.addRelayCell(&relay, Kcr);
     
     //Compute:-----------------------------------------------------------------
-    io.writeStimulusProperties(S.get());
-
     S->computeFourierTransform();
-    if(cfg["stimulus"]["storeSpatiotemporal"].as<bool>()){
-        S->computeSpatiotemporal();
-        io.writeStimulus(S.get(), cfg["stimulus"]["storeFT"].as<bool>());
-        S->clearSpatioTemporal();
-    }
     ganglion.computeImpulseResponseFourierTransform();
     relay.computeImpulseResponseFourierTransform();
     cortical.computeImpulseResponseFourierTransform();
     
     
-    
-    if(cfg["ganglion"]["storeResponse"].as<bool>()){
-        ganglion.computeResponse(S.get());
-        io.writeResponse(ganglion,
-                         cfg["ganglion"]["storeResponseFT"].as<bool>());
-        ganglion.clearResponse();
+    //Write:-----------------------------------------------------------------
+    io.copyConfigFile(argv[1]);
+    io.writeIntegratorProperties(integrator);
+    io.writeStimulusProperties(S.get());
+
+    /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["stimulus"]["storeFT"].as<bool>()){
+        io.writeStimulusFourierTransform(S.get());
+    }
+    if(cfg["stimulus"]["storeSpatiotemporal"].as<bool>()){
+        S->computeSpatiotemporal();
+        io.writeStimulus(S.get());
+        S->clearSpatioTemporal();
     }
     
+    /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["ganglion"]["storeResponseFT"].as<bool>()){
+        ganglion.computeResponseFourierTransform(S.get());
+        io.writeResponseFourierTransform(ganglion);
+    }
+    if(cfg["ganglion"]["storeResponse"].as<bool>()){
+        ganglion.computeResponse(S.get());
+        io.writeResponse(ganglion);
+        ganglion.clearResponse();
+    }
+    ganglion.clearResponseFourierTransform();
+    if(cfg["ganglion"]["storeImpulseResponseFT"].as<bool>()){
+        io.writeImpulseResponseFourierTransform(ganglion);
+    }
     if( cfg["ganglion"]["storeImpulseResponse"].as<bool>()){
         ganglion.computeImpulseResponse();
-        io.writeImpulseResponse(ganglion,
-                                cfg["ganglion"]["storeImpulseResponseFT"].as<bool>());
+        io.writeImpulseResponse(ganglion);
         ganglion.clearImpulseResponse();
     }
     
     /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["relay"]["storeResponseFT"].as<bool>()){
+        relay.computeResponseFourierTransform(S.get());
+        io.writeResponseFourierTransform(relay);
+    }
     if(cfg["relay"]["storeResponse"].as<bool>()){
         relay.computeResponse(S.get());
-        io.writeResponse(relay,
-                         cfg["relay"]["storeResponseFT"].as<bool>());
+        io.writeResponse(relay);
         relay.clearResponse();
     }
-    
+    relay.clearResponseFourierTransform();
+
+    if( cfg["relay"]["storeImpulseResponseFT"].as<bool>()){
+        io.writeImpulseResponseFourierTransform(relay);
+    }
     if( cfg["relay"]["storeImpulseResponse"].as<bool>()){
         relay.computeImpulseResponse();
-        io.writeImpulseResponse(relay,
-                                cfg["relay"]["storeImpulseResponseFT"].as<bool>());
+        io.writeImpulseResponse(relay);
         relay.clearImpulseResponse();
     }
     
     
     /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["interneuron"]["storeResponseFT"].as<bool>()){
+        interneuron.computeResponseFourierTransform(S.get());
+        io.writeResponseFourierTransform(interneuron);
+    }
     if(cfg["interneuron"]["storeResponse"].as<bool>()){
         interneuron.computeResponse(S.get());
-        io.writeResponse(interneuron,
-                         cfg["interneuron"]["storeResponseFT"].as<bool>());
+        io.writeResponse(interneuron);
         interneuron.clearResponse();
     }
-    
+    interneuron.clearResponseFourierTransform();
+
+    if( cfg["interneuron"]["storeImpulseResponseFT"].as<bool>()){
+        io.writeImpulseResponseFourierTransform(interneuron);
+    }
     if( cfg["interneuron"]["storeImpulseResponse"].as<bool>()){
         interneuron.computeImpulseResponse();
-        io.writeImpulseResponse(interneuron,
-                                cfg["interneuron"]["storeImpulseResponseFT"].as<bool>());
+        io.writeImpulseResponse(interneuron);
         interneuron.clearImpulseResponse();
     }
     
     /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["cortical"]["storeResponseFT"].as<bool>()){
+        cortical.computeResponseFourierTransform(S.get());
+        io.writeResponseFourierTransform(cortical);
+    }
     if(cfg["cortical"]["storeResponse"].as<bool>()){
         cortical.computeResponse(S.get());
-        io.writeResponse(cortical,
-                         cfg["cortical"]["storeResponseFT"].as<bool>());
+        io.writeResponse(cortical);
         cortical.clearResponse();
     }
-    
+    cortical.clearResponseFourierTransform();
+
+    if( cfg["cortical"]["storeImpulseResponseFT"].as<bool>()){
+        io.writeImpulseResponseFourierTransform(cortical);
+    }
     if( cfg["cortical"]["storeImpulseResponse"].as<bool>()){
         cortical.computeImpulseResponse();
-        io.writeImpulseResponse(cortical,
-                                cfg["cortical"]["storeImpulseResponseFT"].as<bool>());
+        io.writeImpulseResponse(cortical);
         cortical.clearImpulseResponse();
     }
     

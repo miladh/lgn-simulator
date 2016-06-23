@@ -38,9 +38,22 @@ Neuron::~Neuron()
 
 }
 
-
 void Neuron::computeResponse(const Stimulus *const stimulus)
 {
+    if(!responseFourierTransformComputed){
+        computeResponseFourierTransform(stimulus);
+    }
+    m_response = real(m_integrator.backwardFFT(m_responseFT));
+
+    if(m_staticNonlinearity != nullptr){
+        m_staticNonlinearity->applyStaticNonlinearity(&m_response);
+    }
+}
+
+void Neuron::computeResponseFourierTransform(const Stimulus * const stimulus)
+{
+    responseFourierTransformComputed=true;
+
     if(!impulseResponseFourierTransformComputed){
         computeImpulseResponseFourierTransform();
     }
@@ -53,14 +66,6 @@ void Neuron::computeResponse(const Stimulus *const stimulus)
                 /m_integrator.spatialFreqResolution()
                 /m_integrator.temporalFreqResolution();
     }
-
-    m_response = real(m_integrator.backwardFFT(m_responseFT));
-
-    if(m_staticNonlinearity != nullptr){
-        m_staticNonlinearity->applyStaticNonlinearity(&m_response);
-    }
-
-
 }
 
 void Neuron::computeImpulseResponse()
@@ -109,6 +114,11 @@ const cx_cube& Neuron::impulseResponseFourierTransform() const
 void Neuron::clearResponse()
 {
     m_response.clear();
+}
+
+void Neuron::clearResponseFourierTransform()
+{
+    responseFourierTransformComputed=false;
     m_responseFT.clear();
 }
 
