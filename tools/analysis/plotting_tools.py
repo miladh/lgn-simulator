@@ -485,29 +485,31 @@ if __name__ == "__main__":
     # plt.figure()
     # plt.plot(exp.integrator.s_points, exp.stimulus.spatio_temporal[0, Ns/2,:], label = "S")
     # raster(exp.spike_train("relay",  num_trails=50))
-    plt.plot(exp.integrator.t_points,exp.stimulus.spatio_temporal[:, Ns/2,Ns/2]/(exp.stimulus.spatio_temporal[:, Ns/2,Ns/2]).max(), label = "S")
+    # plt.plot(exp.integrator.t_points,exp.stimulus.spatio_temporal[:, Ns/2,Ns/2]/(exp.stimulus.spatio_temporal[:, Ns/2,Ns/2]).max(), label = "S")
+    #
+    # plt.plot(exp.integrator.t_points,exp.relay.response.spatio_temporal[:, Ns/2,Ns/2]/(exp.relay.response.spatio_temporal[:, Ns/2,Ns/2].max()), label = "Rr")
+    #
+    # plt.plot(exp.integrator.t_points,exp.ganglion.response.spatio_temporal[:, Ns/2,Ns/2]/(exp.ganglion.response.spatio_temporal[:, Ns/2,Ns/2].max()),'--', label = "Rg")
+    # plt.legend()
+    #
+    # plt.figure()
+    # plt.plot(exp.integrator.k_points,
+    # exp.relay.impulse_response.fourier_transform[3, Ns/2,:]
+    # /np.absolute(exp.relay.impulse_response.fourier_transform[3, Ns/2,:]).max()
+    # ,'-^', label = "Wr_ft")
+    #
+    # plt.plot(exp.integrator.k_points,
+    # exp.stimulus.fourier_transform[3, Ns/2,:]
+    # /np.absolute(exp.stimulus.fourier_transform[3, Ns/2,:]).max(),'-^', label = "S_ft")
+    #
+    # plt.plot(exp.integrator.k_points,
+    # exp.relay.response.fourier_transform[3,Ns/2,:]/(np.absolute(exp.relay.response.fourier_transform[3,Ns/2,:])).max(),'-^', label = "Rr_ft")
+    # plt.legend()
+    #
+    # plt.figure()
+    # plt.plot(exp.integrator.s_points, exp.relay.impulse_response.spatio_temporal[0, Ns/2,:])
 
-    plt.plot(exp.integrator.t_points,exp.relay.response.spatio_temporal[:, Ns/2,Ns/2]/(exp.relay.response.spatio_temporal[:, Ns/2,Ns/2].max()), label = "Rr")
 
-    plt.plot(exp.integrator.t_points,exp.ganglion.response.spatio_temporal[:, Ns/2,Ns/2]/(exp.ganglion.response.spatio_temporal[:, Ns/2,Ns/2].max()),'--', label = "Rg")
-    plt.legend()
-
-    plt.figure()
-    plt.plot(exp.integrator.k_points,
-    exp.relay.impulse_response.fourier_transform[3, Ns/2,:]
-    /np.absolute(exp.relay.impulse_response.fourier_transform[3, Ns/2,:]).max()
-    ,'-^', label = "Wr_ft")
-
-    plt.plot(exp.integrator.k_points,
-    exp.stimulus.fourier_transform[3, Ns/2,:]
-    /np.absolute(exp.stimulus.fourier_transform[3, Ns/2,:]).max(),'-^', label = "S_ft")
-
-    plt.plot(exp.integrator.k_points,
-    exp.relay.response.fourier_transform[3,Ns/2,:]/(np.absolute(exp.relay.response.fourier_transform[3,Ns/2,:])).max(),'-^', label = "Rr_ft")
-
-
-
-    plt.legend()
 
     animateImshowPlots(data, exp.integrator.dt,
     colorbar = True, remove_axes = False,

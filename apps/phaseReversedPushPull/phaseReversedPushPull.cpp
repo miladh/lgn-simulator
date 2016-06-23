@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 
     if(cfg["stimulus"]["storeSpatiotemporal"].as<bool>()){
         S->computeSpatiotemporal();
-        io.writeStimulus(S.get(), cfg["stimulus"]["storeFT"].as<bool>());
+        io.writeStimulus(S.get());
         S->clearSpatioTemporal();
     }
     S->computeFourierTransform();
