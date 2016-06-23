@@ -391,7 +391,6 @@ if __name__ == "__main__":
     # print outputFile
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(None, f)
-    exp.stimulus.read_property()
 
     Ns = exp.integrator.Ns
     Nt = exp.integrator.Nt
@@ -510,7 +509,6 @@ if __name__ == "__main__":
     print (exp.relay.resp_ft()).shape
     print (exp.relay.resp_ft())[3,Ns/2,Ns/2]
     print (exp.relay.irf_ft())[3,Ns/2,Ns/2]
-
 
     # animateImshowPlots(data, exp.integrator.dt,
     # colorbar = True, remove_axes = False,
