@@ -3,8 +3,9 @@
 using namespace lgnSimulator;
 
 
-CorticalCell::CorticalCell(const Integrator& integrator, double backgroundResponse)
-    : Neuron(integrator, backgroundResponse, "cortical")
+CorticalCell::CorticalCell(const Integrator& integrator, double backgroundResponse,
+                           StaticNonlinearity * const staticNonlinearity)
+    : Neuron(integrator, backgroundResponse, "cortical", staticNonlinearity)
 {
 }
 

@@ -8,7 +8,9 @@ class CorticalCell : public Neuron
 {
 
 public:
-    CorticalCell(const Integrator &integrator, double backgroundResponse = 0);
+    CorticalCell(const Integrator &integrator,
+                 double backgroundResponse = 0,
+                 StaticNonlinearity * const staticNonlinearity = nullptr);
     ~CorticalCell();
 
     void addRelayCell(Neuron* const neuron, const Kernel &kernell);
