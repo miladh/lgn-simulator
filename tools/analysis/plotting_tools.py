@@ -385,8 +385,6 @@ if __name__ == "__main__":
 
     outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
 
-
-
     # outputFile = glob(outputFilePath)[0]
     # print outputFile
     f = h5py.File(outputFile, "r")

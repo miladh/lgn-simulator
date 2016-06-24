@@ -26,13 +26,10 @@ def simulation_extractor(sims, attr, value):
     extracted_sims = []
     for sim in sims:
         p = sim.get_attribute(attr)
-
         if(p==value):
             extracted_sims.append(sim)
 
     return extracted_sims
-
-
 
 
 def extract_unique_simulation_attrs(sims, attr):
@@ -61,7 +58,34 @@ def extract_unique_simulation_attrs(sims, attr):
     return np.array(sorted(list(attr_values)))
 
 
-def get_simulations(config_file):
+def get_simulations(data_path):
+    """
+    returns list of simulations
+
+    Parameters
+    ----------
+    config_file : str
+        data path
+
+    Returns
+    -------
+    list
+        list of Simulation objects.
+
+    """
+    import h5py
+    sims=[]
+    for root, dirs, files in os.walk(data_path):
+        for dir in dirs:
+            dir_name = os.path.join(root, dir)
+            setting_file = os.path.join(dir_name, "_"+dir+".yaml")
+            data_file = os.path.join(dir_name, dir+".h5")
+            f = h5py.File(data_file, "r")
+            sims.append(Simulation(setting_file, f))
+    return sims
+
+#TODO: Remove if not needed
+def get_simulations_from_file(config_file):
     """
     returns list of simulations
 

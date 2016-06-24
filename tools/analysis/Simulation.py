@@ -35,9 +35,9 @@ class Simulation:
         try:
             return attrgetter(key)(self)
         except AttributeError:
-            return self.get_setting(key)
+            return self.__get_setting(key)
 
-    def get_setting(self, path):
+    def __get_setting(self, path):
         setting_path = path.split('.')
         try:
             with open(self.config_file, 'r') as f:

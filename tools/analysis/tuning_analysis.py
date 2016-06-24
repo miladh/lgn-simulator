@@ -46,9 +46,9 @@ def resp_vs_attr(sims, attr, resp_type = "t_resp", rc=[0.0, 0.0], indices=None):
 
 
 
-def response_vs_attrA_vs_attrB(sims, cell_type, attrA, attrB, rc=[0.0, 0.0]):
+def resp_vs_attrA_vs_attrB(sims, attrA, attrB, resp_type = "t_resp", rc=[0.0, 0.0], indices=None):
     """
-    returns the mean response with respect to
+    returns the max response with respect to
     attributes attrA and attrB.
 
     Parameters
@@ -76,14 +76,16 @@ def response_vs_attrA_vs_attrB(sims, cell_type, attrA, attrB, rc=[0.0, 0.0]):
     attrA_vec = de.extract_unique_simulation_attrs(sims, attrA)
     attrB_vec = de.extract_unique_simulation_attrs(sims, attrB)
 
-    response = np.zeros([len(attrA_vec), len(attrB_vec)])
+    response = {}
+    for cell_type in sims[0].cell_types:
+        response[str(cell_type)] = np.zeros([len(attrA_vec), len(attrB_vec)])
 
-    print attrA, attrB
     for i, a in enumerate(attrA_vec):
         sims_ext = de.simulation_extractor(sims, attrA, a)
-        data = response_vs_attr(sims_ext, attrB)
+        data = resp_vs_attr(sims_ext, attrB, resp_type, rc, indices)
 
         sorted_indices = np.argsort(data[attrB])
-        response[i,:] = np.array(data[cell_type])[sorted_indices]
+        for cell_type in sims[0].cell_types:
+            response[str(cell_type)][i,:] = np.array(data[cell_type])[sorted_indices]
 
     return attrA_vec, attrB_vec, response
