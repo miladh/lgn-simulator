@@ -24,9 +24,13 @@ class Neuron:
 
     def resp_ft(self):
         if(self.__resp_ft is None):
-            self.__resp_ft = np.array(
-                    np.array(self.group["response"]["fourier_transform"]["real"]), dtype=complex)
-            self.__resp_ft.imag =np.array(np.array(self.group["response"]["fourier_transform"]["complex"]))
+            if(isinstance(self.group["response"]["fourier_transform"], h5py.Dataset)):
+                self.__resp_ft = np.array(self.group["response"]["fourier_transform"])
+            else:
+                self.__resp_ft = np.array(
+                np.array(self.group["response"]["fourier_transform"]["real"]), dtype=complex)
+                self.__resp_ft.imag =np.array(np.array(self.group["response"]["fourier_transform"]["complex"]))
+
         return self.__resp_ft
 
 
@@ -38,10 +42,14 @@ class Neuron:
 
     def irf_ft(self):
         if(self.__irf_ft is None):
-            self.__irf_ft = np.array(
-                   np.array(self.group["impulse_response"]["fourier_transform"]["real"]),dtype=complex)
-            self.__irf_ft.imag = np.array(
-                   np.array(self.group["impulse_response"]["fourier_transform"]["complex"]))
+            if(isinstance(self.group["impulse_response"]["fourier_transform"], h5py.Dataset)):
+                self.__irf_ft = np.array(self.group["impulse_response"]["fourier_transform"])
+            else:
+                self.__irf_ft = np.array(
+                       np.array(self.group["impulse_response"]["fourier_transform"]["real"]),
+                       dtype=complex)
+                self.__irf_ft.imag = np.array(
+                       np.array(self.group["impulse_response"]["fourier_transform"]["complex"]))
         return self.__irf_ft
 
 

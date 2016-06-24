@@ -115,7 +115,7 @@ interneuron:
             dt: *dt_id
 
 cortical:
-    R0 : 0.
+    R0 : 2.
     storeResponse: true
     storeResponseFT: true
     storeImpulseResponse: true
