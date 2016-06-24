@@ -16,9 +16,12 @@ def resp_vs_attr(sims, attr, resp_type = "t_resp", rc=[0.0, 0.0], indices=None):
         list of Simulation objects
     attr: str
         name of the attribute
-
-    rc: array_like, optional
-        normalized receptive field center position.
+    resp_type: str
+        response type: t_resp, w_resp
+    rc: array_like
+        neuron position indices
+    indices:
+        response indices
 
     Returns
     -------
@@ -55,22 +58,25 @@ def resp_vs_attrA_vs_attrB(sims, attrA, attrB, resp_type = "t_resp", rc=[0.0, 0.
     ----------
     sims : list
         list of Simulation objects
-    cell_type: str
-        cell type
     attrA: str
         name of the attribute A
     attrB: str
         name of the attribute B
-    rc: array_like, optional
-        normalized receptive field center position.
+    resp_type: str
+        response type: t_resp, w_resp
+    rc: array_like
+        neuron position indices
+    indices:
+        response indices
 
     Returns
     -------
-    dict
-        array with attrA values,
-        array with attrB values,
+    response: dict
         2d response array.
-
+    attrA_vec: array
+        array with attrA values
+    attrB_vec:
+        array with attrB values
     """
     import data_extractor as de
     attrA_vec = de.extract_unique_simulation_attrs(sims, attrA)
