@@ -17,13 +17,13 @@ class Neuron:
             setattr(self, attr, h5_group.attrs[attr])
 
     def resp(self):
-        if(self.__resp==None):
+        if(self.__resp is None):
             self.__resp = np.array(self.group["response"]["spatio_temporal"])
 
         return self.__resp
 
     def resp_ft(self):
-        if(self.__resp_ft==None):
+        if(self.__resp_ft is None):
             self.__resp_ft = np.array(
                     np.array(self.group["response"]["fourier_transform"]["real"]), dtype=complex)
             self.__resp_ft.imag =np.array(np.array(self.group["response"]["fourier_transform"]["complex"]))
@@ -31,13 +31,13 @@ class Neuron:
 
 
     def irf(self):
-        if(self.__irf==None):
+        if(self.__irf is None):
             self.__irf = np.array(self.group["impulse_response"]["spatio_temporal"])
 
         return self.__irf
 
     def irf_ft(self):
-        if(self.__irf_ft==None):
+        if(self.__irf_ft is None):
             self.__irf_ft = np.array(
                    np.array(self.group["impulse_response"]["fourier_transform"]["real"]),dtype=complex)
             self.__irf_ft.imag = np.array(

@@ -14,13 +14,13 @@ class Stimulus:
             setattr(self, attr, h5_group.attrs[attr])
 
     def spatio_temporal(self):
-        if(self.__st==None):
+        if(self.__st is None):
             self.__st = np.array(self.group["spatio_temporal"])
 
         return self.__st
 
     def fourier_transform(self):
-        if(self.__ft==None):
+        if(self.__ft is None):
             self.__ft = np.array(
                     np.array(self.group["fourier_transform"]["real"]), dtype=complex)
             self.__ft.imag =np.array(np.array(self.group["fourier_transform"]["complex"]))

@@ -31,21 +31,20 @@ def resp_vs_attr(sims, attr, resp_type = "t_resp", rc=[0.0, 0.0], indices=None):
 
     """
     from collections import defaultdict
-    responses = defaultdict(list)
+    resps = defaultdict(list)
     for sim in sims:
-        responses[attr].append(sim.get_attribute(attr))
+        resps[attr].append(sim.get_attribute(attr))
         for cell_type in sim.cell_types:
             neuron =  getattr(sim, cell_type)
-            if(indices!=None):
+            if(indices is not None):
                 resp = getattr(neuron, resp_type)(rc)[[indices]]
             else:
                 resp = getattr(neuron, resp_type)(rc)
 
             resp =  np.absolute(resp).max()
-            responses[str(cell_type)].append(resp)
+            resps[str(cell_type)].append(resp)
 
-    return responses
-
+    return resps
 
 
 
@@ -71,8 +70,8 @@ def resp_vs_attrA_vs_attrB(sims, attrA, attrB, resp_type = "t_resp", rc=[0.0, 0.
 
     Returns
     -------
-    response: dict
-        2d response array.
+    resp: dict
+        2d response array (attrA x attrB).
     attrA_vec: array
         array with attrA values
     attrB_vec:
@@ -82,9 +81,9 @@ def resp_vs_attrA_vs_attrB(sims, attrA, attrB, resp_type = "t_resp", rc=[0.0, 0.
     attrA_vec = de.extract_unique_simulation_attrs(sims, attrA)
     attrB_vec = de.extract_unique_simulation_attrs(sims, attrB)
 
-    response = {}
+    resp={}
     for cell_type in sims[0].cell_types:
-        response[str(cell_type)] = np.zeros([len(attrA_vec), len(attrB_vec)])
+        resp[str(cell_type)] = np.zeros([len(attrA_vec), len(attrB_vec)])
 
     for i, a in enumerate(attrA_vec):
         sims_ext = de.simulation_extractor(sims, attrA, a)
@@ -92,6 +91,6 @@ def resp_vs_attrA_vs_attrB(sims, attrA, attrB, resp_type = "t_resp", rc=[0.0, 0.
 
         sorted_indices = np.argsort(data[attrB])
         for cell_type in sims[0].cell_types:
-            response[str(cell_type)][i,:] = np.array(data[cell_type])[sorted_indices]
+            resp[str(cell_type)][i,:] = np.array(data[cell_type])[sorted_indices]
 
-    return attrA_vec, attrB_vec, response
+    return attrA_vec, attrB_vec, resp
