@@ -54,25 +54,51 @@ class Neuron:
 
 
     def t_resp(self, rc=[0., 0.]):
-        return self.resp()[:, rc[1], rc[0]]
+        return self.resp()[:,  int(rc[1]), int(rc[0])]
 
     def t_irf(self, rc=[0., 0.]):
-        return self.irf()[:, rc[1], rc[0]]
+        return self.irf()[:,  int(rc[1]), int(rc[0])]
 
-    def w_resp(self, rc=[0., 0.]):
-        return self.resp_ft()[:, rc[1], rc[0]]
+    def w_resp(self, k=[0., 0.]):
+        return self.resp_ft()[:,  int(k[1]), int(k[0])]
 
-    def w_irf(self, rc=[0., 0.]):
-        return self.irf_ft()[:, rc[1], rc[0]]
+    def w_irf(self, k=[0., 0.]):
+        return self.irf_ft()[:,  int(k[1]), int(k[0])]
+
+    def k_resp(self, w=0, k=0, axis=1):
+        if(axis==0):
+            return self.resp_ft()[int(w), :, int(k)]
+        elif(axis==1):
+            return self.resp_ft()[int(w), int(k), :]
+        else:
+            raise IndexError("axis="+str(axis)+" > 1")
+
+    def k_irf(self, w=0, k=0, axis=1):
+        if(axis==0):
+            return self.irf_ft()[int(w), :, int(k)]
+        elif(axis==1):
+            return self.irf_ft()[int(w), int(k), :]
+        else:
+            raise IndexError("axis="+str(axis)+" > 1")
 
     def st_resp(self, rx=0.0):
-        return self.resp()[:, :, rx]
+        return self.resp()[:, :, int(rx)]
 
     def st_irf(self, rx=0.0):
-        return self.irf()[:, :, rx]
+        return self.irf()[:, :, int(rx)]
 
-    def kw_resp(self, rx=0.0):
-        return self.resp_ft()[:, :, rx]
+    def kw_resp(self,, k=0, axis=1):
+        if(axis==0):
+            return self.resp_ft()[:, :, int(k)]
+        elif(axis==1):
+            return self.resp_ft()[:, int(k), :]
+        else:
+            raise IndexError("axis="+str(axis)+" > 1")
 
-    def kw_irf(self, rx=0.0):
-        return self.irf_ft()[:, :, rx]
+    def kw_irf(self,, k=0, axis=1):
+        if(axis==0):
+            return self.irf_ft()[:, :, int(k)]
+        elif(axis==1):
+            return self.irf_ft()[:, int(k), :]
+        else:
+            raise IndexError("axis="+str(axis)+" > 1")
