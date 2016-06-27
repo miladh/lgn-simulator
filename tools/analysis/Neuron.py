@@ -87,7 +87,7 @@ class Neuron:
     def st_irf(self, rx=0.0):
         return self.irf()[:, :, int(rx)]
 
-    def kw_resp(self,, k=0, axis=1):
+    def kw_resp(self, k=0, axis=1):
         if(axis==0):
             return self.resp_ft()[:, :, int(k)]
         elif(axis==1):
@@ -95,7 +95,7 @@ class Neuron:
         else:
             raise IndexError("axis="+str(axis)+" > 1")
 
-    def kw_irf(self,, k=0, axis=1):
+    def kw_irf(self, k=0, axis=1):
         if(axis==0):
             return self.irf_ft()[:, :, int(k)]
         elif(axis==1):

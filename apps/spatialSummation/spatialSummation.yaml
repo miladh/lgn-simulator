@@ -11,7 +11,7 @@ grid:
 #------------Stimulus settings-------------------#
 stimulus:
     storeSpatiotemporal: true
-    storeFT: true
+    storeFT: false
 
     # Grating:
     C: 1.0
@@ -19,15 +19,15 @@ stimulus:
     maskSize: 2.8
     orientation: 0.   #degrees
     kId:  0           #[-Ns/2, Ns/2 - 1]
-    wId:  3           #[-Nt/2, Nt/2 - 1]
+    wId:  1           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
     storeResponse: true
-    storeResponseFT: true
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
     w: 1.0
     Wg:
     # DOG
@@ -42,9 +42,9 @@ ganglion:
 relay:
     R0 : 0
     storeResponse: true
-    storeResponseFT: true
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #Kernels
     Krg:
@@ -72,10 +72,10 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 3.0
+        w: 1.0
         spatial:
         #Gauss
-            a: 0.55
+            a: 0.64
 
         temporal:
         # TemporalDelta
@@ -85,9 +85,9 @@ relay:
 interneuron:
     R0 : 0
     storeResponse: true
-    storeResponseFT: true
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #Kernels
     Kig:
@@ -104,7 +104,7 @@ interneuron:
 
 
     Kic:
-        w: 3.
+        w: 1.
         spatial:
         #Gauss
             a: 0.83
@@ -115,11 +115,11 @@ interneuron:
             dt: *dt_id
 
 cortical:
-    R0 : 2.
+    R0 : 0.
     storeResponse: true
-    storeResponseFT: true
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #kernels
     Kcr:

@@ -41,7 +41,8 @@ def resp_vs_attr(sims, attr, resp_type = "t_resp", rc=[0.0, 0.0], indices=None):
             else:
                 resp = getattr(neuron, resp_type)(rc)
 
-            resp =  np.absolute(resp).max()
+            #resp =  np.absolute(resp).max()
+            resp = max(resp, key=np.absolute)
             resps[str(cell_type)].append(resp)
 
     return resps
