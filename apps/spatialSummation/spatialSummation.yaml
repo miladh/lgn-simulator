@@ -5,7 +5,7 @@ description: "Spatial config file"
 grid:
     ns: 8
     nt: 2
-    dt: &dt_id 100.
+    dt: &dt_id 10.0
     ds: &ds_id 0.1
 
 #------------Stimulus settings-------------------#
@@ -28,7 +28,7 @@ ganglion:
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
-    w: 0.0
+    w: 1.0
     Wg:
     # DOG
         a: 0.25
