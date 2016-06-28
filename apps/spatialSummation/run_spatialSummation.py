@@ -42,9 +42,9 @@ weights = [0, 2, 4]
 #run simulator----------------------------------------------------------------------------------
 counter= 0
 for Krc in weights:
-    modify_Krc(w)
+    modify_Krc(Krc)
     for Kic in weights:
-        modify_Kic(w)
+        modify_Kic(Kic)
         for d in spot_diameters:
             modify_diameter(d)
             for kd in spatial_freqs:
