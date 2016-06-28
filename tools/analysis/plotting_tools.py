@@ -462,6 +462,7 @@ if __name__ == "__main__":
 
     data = [S, Rg, Wg, Rr, Wr, Ri, Wi, Rc, Wc]
     # data = [S, Rg_ft, Rr_ft, Ri_ft, Rc_ft]
+    line3dPlotsOfImpulseResponses([Wg, Wr, Wi, Wc], num_skip = 5, idx=Ns/2, idy=Ns/2,)
 
     animate_imshow_plots(data, exp.integrator.dt,
     colorbar = True, remove_axes = False,

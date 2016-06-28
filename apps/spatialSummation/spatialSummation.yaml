@@ -5,12 +5,12 @@ description: "Spatial config file"
 grid:
     ns: 8
     nt: 2
-    dt: &dt_id 10.0
+    dt: &dt_id 100.
     ds: &ds_id 0.1
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: true
+    storeSpatiotemporal: false
     storeFT: false
 
     # Grating:
@@ -24,11 +24,11 @@ stimulus:
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
-    w: 1.0
+    w: 0.0
     Wg:
     # DOG
         a: 0.25
@@ -50,9 +50,8 @@ relay:
     Krg:
         w: 1.0
         spatial:
-        # SpatialDelta
-            ds : *ds_id
-            shift: [0.0, 0.]
+        # Gaussian
+            a: 0.35
 
 
         temporal:
@@ -62,9 +61,8 @@ relay:
     Kri:
         w: -1.0
         spatial:
-        # SpatialDelta
-            ds : *ds_id
-            shift: [0.0, 0.0]
+        #Gauss
+            a: 1.0
 
         temporal:
         # TemporalDelta
@@ -75,7 +73,7 @@ relay:
         w: 1.0
         spatial:
         #Gauss
-            a: 0.64
+            a: 2.0
 
         temporal:
         # TemporalDelta
@@ -84,7 +82,7 @@ relay:
 
 interneuron:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
@@ -94,7 +92,7 @@ interneuron:
         w: 0.5
         spatial:
         # Gaussian
-            a: 0.1
+            a: 0.7
 
 
         temporal:
@@ -104,10 +102,10 @@ interneuron:
 
 
     Kic:
-        w: 1.
+        w: 1.0
         spatial:
         #Gauss
-            a: 0.83
+            a: 2.0
 
         temporal:
         # TemporalDelta
@@ -116,7 +114,7 @@ interneuron:
 
 cortical:
     R0 : 0.
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
