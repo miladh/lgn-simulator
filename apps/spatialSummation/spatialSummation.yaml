@@ -70,7 +70,7 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 0.5
+        w: 0.1
         spatial:
         #Gauss
             a: 0.5
@@ -89,7 +89,7 @@ interneuron:
 
     #Kernels
     Kig:
-        w: 0.5
+        w: 0.8
         spatial:
         # Gaussian
             a: 0.6
