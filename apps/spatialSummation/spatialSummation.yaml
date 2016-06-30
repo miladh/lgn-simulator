@@ -59,7 +59,7 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -0.6
+        w: -0.8
         spatial:
         #Gauss
             a: 0.1
