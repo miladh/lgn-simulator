@@ -73,7 +73,7 @@ relay:
         w: 0.1
         spatial:
         #Gauss
-            a: 0.5
+            a: 0.3
 
         temporal:
         # TemporalDelta
@@ -102,7 +102,7 @@ interneuron:
 
 
     Kic:
-        w: 0.5
+        w: 0.1
         spatial:
         #Gauss
             a: 0.7
