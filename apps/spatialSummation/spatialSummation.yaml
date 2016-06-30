@@ -16,7 +16,7 @@ stimulus:
     # Grating:
     C: 1.0
     mask: "circle" #none/circle/gaussian
-    maskSize: 2.8
+    maskSize: 2.0
     orientation: 0.   #degrees
     kId:  0           #[-Ns/2, Ns/2 - 1]
     wId:  1           #[-Nt/2, Nt/2 - 1]
