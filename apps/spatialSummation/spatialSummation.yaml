@@ -59,7 +59,7 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -0.3 #fixed
+        w: -0.8 #fixed
         spatial:
         #Gauss
             a: 0.3 #fixed
@@ -121,7 +121,7 @@ cortical:
 
     #kernels
     Kcr:
-        w: 1.0
+        w: 1.5
         spatial:
         # SpatialDelta
             ds : *ds_id
