@@ -31,9 +31,9 @@ ganglion:
     w: 1.0
     Wg:
     # DOG
-        a: 0.62 #fixed
-        b: 1.26 #fixed
-        c: 0.85 #fixed
+        a: 0.62 #fixed!!!
+        b: 1.26 #fixed!!!
+        c: 0.85 #fixed!!!
     Wt:
     # TemporalDelta
         delay: 0
@@ -48,10 +48,10 @@ relay:
 
     #Kernels
     Krg:
-        w: 1.0 #fixed
+        w: 1.0 #fixed!!!
         spatial:
         # Gaussian
-            a: 0.1 #fixed
+            a: 0.1 #fixed!!!
 
 
         temporal:
@@ -89,10 +89,10 @@ interneuron:
 
     #Kernels
     Kig:
-        w: 1.0 #fixed
+        w: 1.0 #fixed!!!
         spatial:
         # Gaussian
-            a: 0.66 #fixed
+            a: 1.0 #fixed
 
 
         temporal:
@@ -121,7 +121,7 @@ cortical:
 
     #kernels
     Kcr:
-        w: 1.5
+        w: 1.0
         spatial:
         # SpatialDelta
             ds : *ds_id
