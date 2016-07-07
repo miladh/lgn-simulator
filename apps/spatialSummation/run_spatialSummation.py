@@ -17,7 +17,7 @@ def modify_diameter(d):
     config_data["stimulus"]["maskSize"] = float(d)
 
 def modify_Kic(w):
-    config_data["interneuron"]["Kic"]["w"] = float(w)
+    config_data["interneuron"]["Kic"]["w"] = float(w+0.2)
 
 def modify_Krc(w):
     config_data["relay"]["Krc"]["w"]= float(w)
