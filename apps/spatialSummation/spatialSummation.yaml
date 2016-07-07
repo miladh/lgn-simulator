@@ -62,7 +62,7 @@ relay:
         w: -0.8 #fixed
         spatial:
         #Gauss
-            a: 0.5 #fixed
+            a: 0.2 #fixed
 
         temporal:
         # TemporalDelta
@@ -92,7 +92,7 @@ interneuron:
         w: 1.0 #fixed!!!
         spatial:
         # Gaussian
-            a: 1.0 #fixed
+            a: 1.0 #fixed!!!
 
 
         temporal:
