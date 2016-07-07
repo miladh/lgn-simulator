@@ -62,7 +62,7 @@ relay:
         w: -0.8 #fixed
         spatial:
         #Gauss
-            a: 1.0 #fixed
+            a: 1.5 #fixed
 
         temporal:
         # TemporalDelta
@@ -92,7 +92,7 @@ interneuron:
         w: 1.0 #fixed!!!
         spatial:
         # Gaussian
-            a: 0.66 #fixed!!!
+            a: 1.0 #fixed!!!
 
 
         temporal:
@@ -121,7 +121,7 @@ cortical:
 
     #kernels
     Kcr:
-        w: 1.5
+        w: 1.0
         spatial:
         # SpatialDelta
             ds : *ds_id
