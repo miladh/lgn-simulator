@@ -18,7 +18,7 @@ stimulus:
     mask: "circle" #none/circle/gaussian
     maskSize: 2.0
     orientation: 0.   #degrees
-    kId:  6           #[-Ns/2, Ns/2 - 1]
+    kId:  3           #[-Ns/2, Ns/2 - 1]
     wId:  0           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
@@ -73,7 +73,7 @@ relay:
         w: 0.5
         spatial:
         #Gauss
-            a: 0.1
+            a: 0.5
 
         temporal:
         # TemporalDelta
@@ -105,7 +105,7 @@ interneuron:
         w: 0.5
         spatial:
         #Gauss
-            a: 0.5
+            a: 1.0
 
         temporal:
         # TemporalDelta
