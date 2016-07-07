@@ -14,7 +14,7 @@ stimulus:
     storeFT: false
 
     # Grating:
-    C: 0.36
+    C: 1.0
     mask: "circle" #none/circle/gaussian
     maskSize: 2.0
     orientation: 0.   #degrees
@@ -51,7 +51,7 @@ relay:
         w: 1.0 #fixed
         spatial:
         # Gaussian
-            a: 4.0 #fixed
+            a: 0.1 #fixed
 
 
         temporal:
@@ -62,7 +62,7 @@ relay:
         w: -0.8 #fixed
         spatial:
         #Gauss
-            a: 5.0 #fixed
+            a: 0.5 #fixed
 
         temporal:
         # TemporalDelta
@@ -73,7 +73,7 @@ relay:
         w: 0.5
         spatial:
         #Gauss
-            a: 2
+            a: 0.1
 
         temporal:
         # TemporalDelta
@@ -92,7 +92,7 @@ interneuron:
         w: 1.0 #fixed
         spatial:
         # Gaussian
-            a: 6. #fixed
+            a: 0.66 #fixed
 
 
         temporal:
@@ -105,7 +105,7 @@ interneuron:
         w: 0.5
         spatial:
         #Gauss
-            a: 3.
+            a: 0.2
 
         temporal:
         # TemporalDelta
