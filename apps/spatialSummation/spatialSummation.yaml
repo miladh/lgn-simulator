@@ -62,7 +62,7 @@ relay:
         w: -0.8 #fixed
         spatial:
         #Gauss
-            a: 0.5 #fixed
+            a: 0.7 #fixed
 
         temporal:
         # TemporalDelta
@@ -70,10 +70,10 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 0.7
+        w: 0.5
         spatial:
         #Gauss
-            a: 0.1#fixed!!!
+            a: 0.1 #fixed!!!
 
         temporal:
         # TemporalDelta
@@ -105,7 +105,7 @@ interneuron:
         w: 0.5
         spatial:
         #Gauss
-            a: 1.0#fixed!!!
+            a: 1.0 #fixed!!!
 
         temporal:
         # TemporalDelta
