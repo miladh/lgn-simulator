@@ -70,14 +70,15 @@ def set_font():
     params = {
         'font.family': [u'sans-serif'],
         'font.sans-serif':
-        [u'Arial',
-         u'Liberation Sans',
-         u'Bitstream Vera Sans',
-         u'sans-serif'],
+        [u'sans-serif',
+        u'Liberation Sans',
+        u'Bitstream Vera Sans'],
         'font.size': 14,
         'axes.titlesize': 18,
         'axes.labelsize': 16,
         'lines.linewidth':2,
+        'xtick.labelsize': 14,
+        'ytick.labelsize': 14,
     }
     plt.rcParams.update(params)
 
