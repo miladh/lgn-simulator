@@ -36,7 +36,7 @@ with open(config_file, 'r') as stream:
 
 #parameters-------------------------------------------------------------------------------------
 spot_diameters = [1.746988, 5.542169, 10]
-spatial_freqs = range(0.0, 90)
+spatial_freqs = range(0, 90)
 #weights = np.linspace(0, 1.0, 6)
 weights = [0.0]
 
