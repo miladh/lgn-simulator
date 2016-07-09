@@ -24,7 +24,7 @@ stimulus:
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
@@ -42,7 +42,7 @@ ganglion:
 relay:
     R0 : 0
     storeResponse: true
-    storeResponseFT: false
+    storeResponseFT: true
     storeImpulseResponse: false
     storeImpulseResponseFT: false
 
@@ -82,7 +82,7 @@ relay:
 
 interneuron:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
@@ -114,7 +114,7 @@ interneuron:
 
 cortical:
     R0 : 0.
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
