@@ -35,10 +35,10 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 #parameters-------------------------------------------------------------------------------------
-spot_diameters = np.concatenate([np.linspace(0., 2.5, 30), np.linspace(2.6, 10., 20)])
+spot_diameters = np.linspace(0., 10, 100)
 # spatial_freqs = np.linspace(0.0, 120, 20)
 #weights = np.arange(0, 1.2, 0.3)
-weights = np.linspace(0, 1.0, 20)
+weights = np.linspace(0, 1.0, 6)
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
