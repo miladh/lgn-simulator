@@ -70,7 +70,7 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 0.5
+        w: 0.0
         spatial:
         #Gauss
             a: 0.1
@@ -102,7 +102,7 @@ interneuron:
 
 
     Kic:
-        w: 0.5
+        w: 0.0
         spatial:
         #Gauss
             a: 1.0
@@ -121,7 +121,7 @@ cortical:
 
     #kernels
     Kcr:
-        w: 2.0
+        w: 1.0
         spatial:
         # SpatialDelta
             ds : *ds_id

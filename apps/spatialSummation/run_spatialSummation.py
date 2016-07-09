@@ -35,16 +35,15 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 #parameters-------------------------------------------------------------------------------------
-spot_diameters = np.linspace(0., 4, 30)
-# spatial_freqs = np.linspace(0.0, 120, 20)
-#weights = np.arange(0, 1.2, 0.3)
-weights = np.linspace(0, 1.0, 6)
+spot_diameters = [1.746988, 5.542169, 10]
+spatial_freqs = np.linspace(0.0, 120, 50)
+#weights = np.linspace(0, 1.0, 6)
+weights = [0.0]
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
-for Kc in weights:
-    modify_Krc(Kc)
-    modify_Kic(Kc)
+for Kd in spatial_freqs:
+    modify_spatial_freq(Kd)
     for d in spot_diameters:
         modify_diameter(d)
         with open(config_file, 'w') as stream:
