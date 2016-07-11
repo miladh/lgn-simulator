@@ -40,8 +40,9 @@ int main(int argc, char* argv[])
 
     S->computeFourierTransform();
     S->computeSpatiotemporal();
-    io.writeStimulus(S.get());
 
+    io.writeStimulusFourierTransform(S.get());
+    io.writeStimulus(S.get());
 
     //Finalize:----------------------------------------------------------
     t = clock() - t;
