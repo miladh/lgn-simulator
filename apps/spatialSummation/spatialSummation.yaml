@@ -10,7 +10,7 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: true
+    storeSpatiotemporal: false
     storeFT: false
 
     # Grating:
@@ -27,7 +27,7 @@ ganglion:
     storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
     w: 1.0
     Wg:
     # DOG
@@ -41,10 +41,10 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: true
-    storeResponseFT: true
+    storeResponse: false
+    storeResponseFT: false
     storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
 
     #Kernels
     Krg:
@@ -85,7 +85,7 @@ interneuron:
     storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
 
     #Kernels
     Kig:
@@ -117,7 +117,7 @@ cortical:
     storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
 
     #kernels
     Kcr:
