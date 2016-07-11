@@ -73,6 +73,20 @@ SUITE(system){
                             0.25, 0.83, 0.8,
                             1);
     }
+
+    TEST(runTest_G_spot_2){
+        runSystemTest_G_spot(1, 1.0, 8, 0.1,
+                            1.0, 14.7, 0,
+                            0.62, 1.26, 0.85,
+                            1);
+    }
+
+    TEST(runTest_G_spot_3){
+        runSystemTest_G_spot(1, 1.0, 8, 0.1,
+                            1.0, 0.01, 0,
+                            0.62, 1.26, 0.85,
+                            1);
+    }
 }
 
 

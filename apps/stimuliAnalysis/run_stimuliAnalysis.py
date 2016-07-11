@@ -23,7 +23,7 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 #parameters----------------------------------------------------------------------------------
-spot_diameters = np.linspace(0.01, 0.4, 30)
+spot_diameters = spot_diameters = np.linspace(0., 15, 10)
 
 #run simulator--------------------------------------------------------------------------------
 counter= 0

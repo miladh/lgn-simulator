@@ -4,8 +4,8 @@ description: "Spatial config file"
 #------------Integrator settings-----------------#
 grid:
     ns: 8
-    nt: 2
-    dt: &dt_id 10.0
+    nt: 1
+    dt: &dt_id 1.
     ds: &ds_id 0.1
 
 #------------Stimulus settings-------------------#
