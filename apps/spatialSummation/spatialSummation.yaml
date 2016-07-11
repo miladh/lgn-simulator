@@ -3,7 +3,7 @@ description: "Spatial config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 9
+    ns: 8
     nt: 1
     dt: &dt_id 10.0
     ds: &ds_id 0.1
@@ -26,7 +26,7 @@ ganglion:
     R0 : 0
     storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: true
     w: 1.0
     Wg:
@@ -43,7 +43,7 @@ relay:
     R0 : 0
     storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: true
 
     #Kernels
@@ -84,7 +84,7 @@ interneuron:
     R0 : 0
     storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: true
 
     #Kernels
@@ -116,7 +116,7 @@ cortical:
     R0 : 0.
     storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: true
 
     #kernels
