@@ -3,7 +3,7 @@ description: "Spatial config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 10
+    ns: 9
     nt: 1
     dt: &dt_id 10.0
     ds: &ds_id 0.1
@@ -41,7 +41,7 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
@@ -59,7 +59,7 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -0.5
+        w: -0.3
         spatial:
         #Gauss
             a: 0.5
