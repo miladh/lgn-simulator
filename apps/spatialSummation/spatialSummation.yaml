@@ -3,7 +3,7 @@ description: "Spatial config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 8
+    ns: 10
     nt: 1
     dt: &dt_id 10.0
     ds: &ds_id 0.1
@@ -59,7 +59,7 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -0.3
+        w: -0.8
         spatial:
         #Gauss
             a: 0.5
@@ -73,7 +73,7 @@ relay:
         w: 0.8
         spatial:
         #Gauss
-            a: 0.01
+            a: 0.1
 
         temporal:
         # TemporalDelta
@@ -105,7 +105,7 @@ interneuron:
         w: 0.8
         spatial:
         #Gauss
-            a: 0.5
+            a: 1.0
 
         temporal:
         # TemporalDelta
