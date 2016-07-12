@@ -82,7 +82,7 @@ relay:
 
 interneuron:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
