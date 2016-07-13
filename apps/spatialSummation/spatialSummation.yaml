@@ -18,13 +18,13 @@ stimulus:
     mask: "circle" #none/circle/gaussian
     maskSize: 2.0
     orientation: 0.   #degrees
-    kId:  0           #[-Ns/2, Ns/2 - 1]
+    kId:  5           #[-Ns/2, Ns/2 - 1]
     wId:  0           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
