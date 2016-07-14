@@ -3,6 +3,7 @@
 #include "fullfieldgrating.h"
 #include "circlemaskgrating.h"
 #include "gaussianmaskgrating.h"
+#include "cscirclemaskgrating.h"
 
 using namespace lgnSimulator;
 
@@ -171,6 +172,10 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
     }else if(mask == "gaussian"){
         return unique_ptr<GaussianMaskGrating>(
                     new GaussianMaskGrating(integrator, spatialFreq, orientation,
+                                          temporalFreq, contrast, maskSize));
+    }else if(mask == "cscircle"){
+        return unique_ptr<CSCircleMaskGrating>(
+                    new CSCircleMaskGrating(integrator, spatialFreq, orientation,
                                           temporalFreq, contrast, maskSize));
     }else{
         cout << "mask: " << mask << endl;
