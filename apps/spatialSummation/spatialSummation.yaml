@@ -3,14 +3,14 @@ description: "Spatial config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 8
+    ns: 9
     nt: 1
     dt: &dt_id 10.0
     ds: &ds_id 0.1
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: true
+    storeSpatiotemporal: false
     storeFT: false
 
     # Grating:
@@ -24,7 +24,7 @@ stimulus:
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
@@ -59,7 +59,7 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -1.0
+        w: -0.3
         spatial:
         #Gauss
             a: 0.5
@@ -114,7 +114,7 @@ interneuron:
 
 cortical:
     R0 : 0.
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
