@@ -43,7 +43,7 @@ weights = np.linspace(0, 1.0, 6)
 #run simulator----------------------------------------------------------------------------------
 counter= 0
 for Kc in weights:
-    modify_Krc(2*Kc)
+    modify_Krc(Kc)
     modify_Kic(Kc)
     for d in spot_diameters:
         modify_diameter(d)
