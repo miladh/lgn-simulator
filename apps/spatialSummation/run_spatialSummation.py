@@ -44,7 +44,7 @@ weights = np.linspace(0, 1.0, 6)
 counter= 0
 for Kc in weights:
     modify_Krc(Kc)
-    modify_Kic(Kc)
+    modify_Kic(20*Kc)
     for d in spot_diameters:
         modify_diameter(d)
         with open(config_file, 'w') as stream:
