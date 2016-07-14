@@ -59,10 +59,10 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -1.0
+        w: -0.3
         spatial:
         #Gauss
-            a: 1.0
+            a: 0.5
 
         temporal:
         # TemporalDelta
