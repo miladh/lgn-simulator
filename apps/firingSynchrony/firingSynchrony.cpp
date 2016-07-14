@@ -8,7 +8,8 @@
 using namespace std;
 using namespace lgnSimulator;
 
-int main(int argc, char* argv[]){
+int main(int argc, char* argv[])
+{
 
     cout << "========= LGN Simulator: Firing Synchrony =========" << endl;
     clock_t t;
@@ -22,92 +23,184 @@ int main(int argc, char* argv[]){
 
     //read config file-------------------------------------------------------
     YAML::Node cfg = YAML::LoadFile(argv[1]);
-    const YAML::Node& ganglionImpRes = cfg["ganglionImpRes"];
-    const YAML::Node& Ks_rgSettings = cfg["kernels"]["Krg"]["spatial"];
-    const YAML::Node& Kt_rgSettings = cfg["kernels"]["Krg"]["temporal"];
-    const YAML::Node& Ks_rcSettings = cfg["kernels"]["Krc"]["spatial"];
-    const YAML::Node& Kt_rcSettings = cfg["kernels"]["Krc"]["temporal"];
-    const YAML::Node& Ks_crSettings = cfg["kernels"]["Kcr"]["spatial"];
-    const YAML::Node& Kt_crSettings = cfg["kernels"]["Kcr"]["temporal"];
-
-
-    string outputFilename = cfg["outputFile"].as<std::string>();
-    double Rg_0 = cfg["backgroundResponse"]["Rg_0"].as<double>();
-    double Rr_0 = cfg["backgroundResponse"]["Rr_0"].as<double>();
-    double Rc_0 = cfg["backgroundResponse"]["Rc_0"].as<double>();
 
     //Output manager:---------------------------------------------------------
-    OutputManager io(outputFilename);
+    OutputManager io(cfg["OutputManager"]["outputFilename"].as<std::string>());
 
     //Integrator--------------------------------------------------------------
-    Integrator integrator = createIntegrator(cfg);
+    Integrator integrator = createIntegrator(cfg["grid"]);
 
     //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
+    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg["stimulus"]);
 
     //Ganglion cell:-----------------------------------------------------------
-    DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
-    TemporalDelta Wg_t = createTemporalDeltaKernel(ganglionImpRes);
-//    Biphasic Wg_t = createTemporalBiphasicKernel(ganglionImpRes);
+    DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
+    Biphasic Wg_t = createTemporalBiphasicKernel(cfg["ganglion"]["Wt"]);
 
-    SeparableKernel Wg(1, &Wg_s, &Wg_t);
-    GanglionCell ganglion(integrator, Wg, Rg_0);
+    SeparableKernel Wg(cfg["ganglion"]["w"].as<double>(), &Wg_s, &Wg_t);
+    GanglionCell ganglion(integrator, Wg, cfg["ganglion"]["R0"].as<double>());
+
 
     //Relay cell: -------------------------------------------------------------
-    RelayCell relay(integrator, Rr_0);
-    CorticalCell cortical(integrator, Rc_0);
+    RelayCell relay(integrator, cfg["relay"]["R0"].as<double>());
 
-    //Kernels:---------------------------------------------------------
-    SpatialDelta Ks_rg = createSpatialDeltaKernel(Ks_rgSettings);
-    TemporalDelta Kt_rg = createTemporalDeltaKernel(Kt_rgSettings);
-    SeparableKernel Krg(1, &Ks_rg, &Kt_rg);
+    // G -> R
+    SpatialGaussian Ks_rg = createSpatialGaussianKernel(cfg["relay"]["Krg"]["spatial"]);
+    TemporalDelta Kt_rg = createTemporalDeltaKernel(cfg["relay"]["Krg"]["temporal"]);
+    SeparableKernel Krg(cfg["relay"]["Krg"]["w"].as<double>(), &Ks_rg, &Kt_rg);
 
+    // I -> R
+    SpatialGaussian Ks_ri = createSpatialGaussianKernel(cfg["relay"]["Kri"]["spatial"]);
+    TemporalDelta Kt_ri = createTemporalDeltaKernel(cfg["relay"]["Kri"]["temporal"]);
+    SeparableKernel Kri(cfg["relay"]["Kri"]["w"].as<double>(), &Ks_ri, &Kt_ri);
 
-//    EllipticGaussian Ks_rc = createSpatialEllipticGaussianKernel(Ks_rcSettings);
-    SpatialGaussian Ks_rc = createSpatialGaussianKernel(Ks_rcSettings);
-    TemporalDelta Kt_rc = createTemporalDeltaKernel(Kt_rcSettings);
-//    DOE Kt_rc = createTemporalDOEKernel(Kt_rcSettings);
+    // C -> R
+    SpatialGaussian Ks_rc = createSpatialGaussianKernel(cfg["relay"]["Krc"]["spatial"]);
+    TemporalDelta Kt_rc = createTemporalDeltaKernel(cfg["relay"]["Krc"]["temporal"]);
+    SeparableKernel Krc(cfg["relay"]["Krc"]["w"].as<double>(), &Ks_rc, &Kt_rc);
 
-    SeparableKernel Krc(1, &Ks_rc, &Kt_rc);
+    //Interneuron: -------------------------------------------------------------
+    Interneuron interneuron(integrator, cfg["interneuron"]["R0"].as<double>());
 
+    // G -> I
+    SpatialGaussian Ks_ig = createSpatialGaussianKernel(cfg["interneuron"]["Kig"]["spatial"]);
+    TemporalDelta Kt_ig = createTemporalDeltaKernel(cfg["interneuron"]["Kig"]["temporal"]);
+    SeparableKernel Kig(cfg["interneuron"]["Kig"]["w"].as<double>(), &Ks_ig, &Kt_ig);
 
+    // C -> I
+    SpatialGaussian Ks_ic = createSpatialGaussianKernel(cfg["interneuron"]["Kic"]["spatial"]);
+    TemporalDelta Kt_ic = createTemporalDeltaKernel(cfg["interneuron"]["Kic"]["temporal"]);
+    SeparableKernel Kic(cfg["interneuron"]["Kic"]["w"].as<double>(), &Ks_ic, &Kt_ic);
 
-    SpatialDelta Ks_cr = createSpatialDeltaKernel(Ks_crSettings);
-    TemporalDelta Kt_cr = createTemporalDeltaKernel(Kt_crSettings);
-//    DOE Kt_cr = createTemporalDOEKernel(Kt_crSettings);
+    //Cortical cell: -------------------------------------------------------------
+    HeavisideNonlinearity heavisideNonlinearity;
+    CorticalCell cortical(integrator, cfg["cortical"]["R0"].as<double>(), &heavisideNonlinearity);
 
-    SeparableKernel Kcr(1, &Ks_cr, &Kt_cr);
+    // R -> G
+    SpatialDelta Ks_cr = createSpatialDeltaKernel(cfg["cortical"]["Kcr"]["spatial"]);
+    TemporalDelta Kt_cr = createTemporalDeltaKernel(cfg["cortical"]["Kcr"]["temporal"]);
+    SeparableKernel Kcr(cfg["cortical"]["Kcr"]["w"].as<double>(), &Ks_cr, &Kt_cr);
 
 
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, Krg);
     relay.addCorticalCell(&cortical, Krc);
+    relay.addInterNeuron(&interneuron, Kri);
+
+    interneuron.addGanglionCell(&ganglion, Kig);
+    interneuron.addCorticalCell(&cortical, Kic);
+
     cortical.addRelayCell(&relay, Kcr);
 
     //Compute:-----------------------------------------------------------------
-    S->computeSpatiotemporal();
     S->computeFourierTransform();
-    io.writeStimulus(S.get());
-    S->clearSpatioTemporal();
+    ganglion.computeImpulseResponseFourierTransform();
+    interneuron.computeImpulseResponseFourierTransform();
+    relay.computeImpulseResponseFourierTransform();
+    cortical.computeImpulseResponseFourierTransform();
 
-    vector<Neuron *> neurons;
-    neurons.push_back(&ganglion);
-    neurons.push_back(&relay);
-    neurons.push_back(&cortical);
 
+    //Write:-----------------------------------------------------------------
+    io.copyConfigFile(argv[1]);
     io.writeIntegratorProperties(integrator);
-    for(Neuron* neuron : neurons){
+    io.writeStimulusProperties(S.get());
 
-        neuron->computeResponse(S.get());
-        io.writeResponse(*neuron);
-        neuron->clearResponse();
-
-        neuron->computeImpulseResponse();
-        io.writeImpulseResponse(*neuron);
-        neuron->clearImpulseResponse();
-
+    /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["stimulus"]["storeFT"].as<bool>()){
+        io.writeStimulusFourierTransform(S.get());
+    }
+    if(cfg["stimulus"]["storeSpatiotemporal"].as<bool>()){
+        S->computeSpatiotemporal();
+        io.writeStimulus(S.get());
+        S->clearSpatioTemporal();
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["ganglion"]["storeResponseFT"].as<bool>()){
+        ganglion.computeResponseFourierTransform(S.get());
+        io.writeResponseFourierTransform(ganglion);
+    }
+    if(cfg["ganglion"]["storeResponse"].as<bool>()){
+        ganglion.computeResponse(S.get());
+        io.writeResponse(ganglion);
+        ganglion.clearResponse();
+    }
+    ganglion.clearResponseFourierTransform();
+    if(cfg["ganglion"]["storeImpulseResponseFT"].as<bool>()){
+        io.writeImpulseResponseFourierTransform(ganglion);
+    }
+    if( cfg["ganglion"]["storeImpulseResponse"].as<bool>()){
+        ganglion.computeImpulseResponse();
+        io.writeImpulseResponse(ganglion);
+        ganglion.clearImpulseResponse();
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["relay"]["storeResponseFT"].as<bool>()){
+        relay.computeResponseFourierTransform(S.get());
+        io.writeResponseFourierTransform(relay);
+    }
+    if(cfg["relay"]["storeResponse"].as<bool>()){
+        relay.computeResponse(S.get());
+        io.writeResponse(relay);
+        relay.clearResponse();
+    }
+    relay.clearResponseFourierTransform();
+
+    if( cfg["relay"]["storeImpulseResponseFT"].as<bool>()){
+        io.writeImpulseResponseFourierTransform(relay);
+    }
+    if( cfg["relay"]["storeImpulseResponse"].as<bool>()){
+        relay.computeImpulseResponse();
+        io.writeImpulseResponse(relay);
+        relay.clearImpulseResponse();
+    }
+
+
+    /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["interneuron"]["storeResponseFT"].as<bool>()){
+        interneuron.computeResponseFourierTransform(S.get());
+        io.writeResponseFourierTransform(interneuron);
+    }
+    if(cfg["interneuron"]["storeResponse"].as<bool>()){
+        interneuron.computeResponse(S.get());
+        io.writeResponse(interneuron);
+        interneuron.clearResponse();
+    }
+    interneuron.clearResponseFourierTransform();
+
+    if( cfg["interneuron"]["storeImpulseResponseFT"].as<bool>()){
+        io.writeImpulseResponseFourierTransform(interneuron);
+    }
+    if( cfg["interneuron"]["storeImpulseResponse"].as<bool>()){
+        interneuron.computeImpulseResponse();
+        io.writeImpulseResponse(interneuron);
+        interneuron.clearImpulseResponse();
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////
+    if(cfg["cortical"]["storeResponseFT"].as<bool>()){
+        cortical.computeResponseFourierTransform(S.get());
+        io.writeResponseFourierTransform(cortical);
+    }
+    if(cfg["cortical"]["storeResponse"].as<bool>()){
+        cortical.computeResponse(S.get());
+        io.writeResponse(cortical);
+        cortical.clearResponse();
+    }
+    cortical.clearResponseFourierTransform();
+
+    if( cfg["cortical"]["storeImpulseResponseFT"].as<bool>()){
+        io.writeImpulseResponseFourierTransform(cortical);
+    }
+    if( cfg["cortical"]["storeImpulseResponse"].as<bool>()){
+        cortical.computeImpulseResponse();
+        io.writeImpulseResponse(cortical);
+        cortical.clearImpulseResponse();
+    }
+
+
+    //Finalize:----------------------------------------------------------
     t = clock() - t;
     double elapsedTime = ((float)t)/CLOCKS_PER_SEC;
     if(elapsedTime <= 60){
@@ -115,8 +208,6 @@ int main(int argc, char* argv[]){
     }else{
         printf ("%f minutes.\n", elapsedTime/60);
     }
-
-
 
 
     return 0;

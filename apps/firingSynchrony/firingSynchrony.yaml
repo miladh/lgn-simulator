@@ -1,46 +1,100 @@
 description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
-ns: 7
-nt: 7
-dt: &dt_id 3.0
-ds: &ds_id 0.05
+grid:
+    ns: 8
+    nt: 6
+    dt: &dt_id 0.05
+    ds: &ds_id 0.1
 
-#------------Stimulus settings-----------------#
-# Grating:
-C: 1.0
-mask: "none" # none/circle
-maskSize: 0.5
-orientation: 90.   #degrees
-kId:  5           #[-Ns/2, Ns/2 - 1]
-wId:  5           #[-Nt/2, Nt/2 - 1]
+#------------Stimulus settings-------------------#
+stimulus:
+    storeSpatiotemporal: true
+    storeFT: false
+
+    # Grating:
+    C: 1.0
+    mask: "circle" #none/circle/gaussian
+    maskSize: 2.0
+    orientation: 0.   #degrees
+    kId:  0           #[-Ns/2, Ns/2 - 1]
+    wId:  1           #[-Nt/2, Nt/2 - 1]
+
+#-----------------Neuron settings------------------#
+ganglion:
+    R0 : 0
+    storeResponse: false
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
+    w: 1.0
+    Wg:
+    # DOG
+        a: 0.62
+        b: 1.26
+        c: 0.85
+    Wt:
+    # Biphasic
+        phaseDuration: 0.425 #ms
+        weight: 0.38
+        delay: 0.
 
 
-#----------Ganglion Impulse response--------------#
-ganglionImpRes:
-# DOG
-    A: 1.0
-    a: 0.25
-    B: 0.85
-    b: 0.83
+relay:
+    R0 : 0
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: false
 
-# TemporalDelta
-    delay: 0
-    dt: *dt_id
-
-## Biphasic
-    #phaseDuration: 42.5
-    #weight: 0.38
-    #delay: 0
-
-#------------kernelSettings-----------------#
-kernels:
+    #Kernels
     Krg:
+        w: 1.0
         spatial:
-        # SpatialDelta
-            weight: 1.0
-            ds : *ds_id
-            shift: [0.0, 0.]
+        # Gaussian
+            a: 0.1
+
+
+        temporal:
+        # TemporalDelta
+            delay: 0
+            dt: *dt_id
+    Kri:
+        w: -0.3
+        spatial:
+        #Gauss
+            a: 0.5
+
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
+
+    Krc:
+        w: 0.5
+        spatial:
+        #Gauss
+            a: 0.1
+
+        temporal:
+        # TemporalDelta
+            delay: 0.005
+            dt: *dt_id
+
+interneuron:
+    R0 : 0
+    storeResponse: false
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
+
+    #Kernels
+    Kig:
+        w: 1.0
+        spatial:
+        # Gaussian
+            a: 1.0
+
 
         temporal:
         # TemporalDelta
@@ -48,58 +102,40 @@ kernels:
             dt: *dt_id
 
 
-    Krc:
+    Kic:
+        w: 0.5
         spatial:
         #Gauss
-            A: -1.5
-            a: 0.15
-
-        ##EllipticGaussian
-            #weight: -1.5
-            #angle: 90.
-            #widthLong: 1.4
-            #widthNarrow: 0.1
-
+            a: 1.0
 
         temporal:
         # TemporalDelta
-            delay: 6.
+            delay: 0.005
             dt: *dt_id
 
-         ##DoE
-             #cenLatency: 16
-             #surLatency: 64
-             #delay: 6.
+cortical:
+    R0 : 0.
+    storeResponse: false
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
-
+    #kernels
     Kcr:
+        w: 1.0
         spatial:
         # SpatialDelta
-            weight: 1.0
             ds : *ds_id
             shift: [0.0, 0.]
 
         temporal:
         # TemporalDelta
-            delay: 0.
+            delay: 0.005
             dt: *dt_id
-         ##DoE
-             #cenLatency: 16
-             #surLatency: 64
-             #delay: 6.
-
-
-
-
-#------------backgroundResponse-----------------#
-backgroundResponse:
-    Rg_0: 0
-    Rr_0: 0
-    Rc_0: 0.0
-
 
 #------------File manager settings-----------------#
-outputFile: "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
+OutputManager:
+    outputFilename: "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
 
 
 
