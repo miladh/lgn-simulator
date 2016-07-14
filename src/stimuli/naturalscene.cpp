@@ -8,7 +8,7 @@ NaturalScene::NaturalScene(const Integrator &integrator, string sceneFilename)
     , m_sceneFilename(sceneFilename)
 
 {
-    m_scene = zeros<cx_mat>(m_integrator.nPointsSpatial(), m_integrator.nPointsSpatial());
+    m_scene = zeros<mat>(m_integrator.nPointsSpatial(), m_integrator.nPointsSpatial());
     m_sceneFourierTransform = zeros<cx_mat>(m_integrator.nPointsSpatial(),
                                             m_integrator.nPointsSpatial());
     m_type =  "naturalScene";

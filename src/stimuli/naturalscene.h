@@ -21,7 +21,7 @@ public:
 
 private:
     string m_sceneFilename;
-    cx_mat m_scene;
+    mat m_scene;
     cx_mat m_sceneFourierTransform;
 
     void readScene();

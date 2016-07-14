@@ -23,12 +23,12 @@ Integrator::Integrator(const int nt,
     m_temporalFreqs = FFTHelper::fftFreq(m_nPointsTemporal,
                                          m_temporalResolution)*-2*core::pi;
     m_timeVec = linspace(0,m_nPointsTemporal-1, m_nPointsTemporal)
-                * m_temporalResolution;
+            * m_temporalResolution;
 
     //Spatial Grid
     m_spatialFreqs = FFTHelper::fftFreq(m_nPointsSpatial, m_spatialResolution)*2*core::pi;
     m_spatialVec = linspace(-m_nPointsSpatial/2, m_nPointsSpatial/2-1, m_nPointsSpatial)
-                  * m_spatialResolution;
+            * m_spatialResolution;
 
 }
 
@@ -60,26 +60,53 @@ cx_cube Integrator::backwardFFT(cx_cube data) const
     }
 
 
-//    cube tmp = imag(fftData);
-//    cout << tmp.max() << "   "
-//        <<  tmp.min() << endl;
+    //    cube tmp = imag(fftData);
+    //    cout << tmp.max() << "   "
+    //        <<  tmp.min() << endl;
 
     return fftData;
 }
 
 
 
-cx_cube Integrator::forwardFFT(cx_cube data) const
+
+//cx_mat Integrator::backwardFFT(cx_mat data) const
+//{
+//    cx_mat fftData = 0 * data;
+//    int size[2] = {int(data.n_cols), int(data.n_rows)};
+
+//    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
+//    fftw_complex* out = reinterpret_cast<fftw_complex*> (fftData.memptr());
+//    fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
+
+//    fftw_execute(plan);
+//    fftw_destroy_plan(plan);
+
+//    fftData *= m_spatialFreqResolution*m_spatialFreqResolution /4./core::pi/core::pi;
+
+//    //fftShift
+//    fftData = FFTHelper::fftShift(fftData);
+
+//    return fftData;
+//}
+
+
+cx_cube Integrator::forwardFFT(cube data) const
 {
     //fftShift
-    for(int i = 0; i < int(data.n_slices); i++){
-        data.slice(i) = FFTHelper::fftShift(data.slice(i));
-    }
+    data =  FFTHelper::ifftShift(data);
 
-    cx_cube ifftData = 0 * data;
+//    for(int i = 0; i < int(data.n_slices); i++){
+//        data.slice(i) = FFTHelper::fftShift(data.slice(i));
+//    }
+
+    cx_cube ifftData =zeros<cx_cube>(int(data.n_cols), int(data.n_rows), int(data.n_slices));
     int size[3] = {int(data.n_slices), int(data.n_cols), int(data.n_rows)};
 
-    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
+    cx_cube inData = 0*ifftData;
+    inData.set_real(data);
+
+    fftw_complex* in = reinterpret_cast<fftw_complex*> (inData.memptr());
     fftw_complex* out = reinterpret_cast<fftw_complex*> (ifftData.memptr());
     fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
 
@@ -95,36 +122,18 @@ cx_cube Integrator::forwardFFT(cx_cube data) const
 }
 
 
-cx_mat Integrator::backwardFFT(cx_mat data) const
-{
-    cx_mat fftData = 0 * data;
-    int size[2] = {int(data.n_cols), int(data.n_rows)};
-
-    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
-    fftw_complex* out = reinterpret_cast<fftw_complex*> (fftData.memptr());
-    fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
-
-    fftw_execute(plan);
-    fftw_destroy_plan(plan);
-
-    fftData *= m_spatialFreqResolution*m_spatialFreqResolution /4./core::pi/core::pi;
-
-    //fftShift
-    fftData = FFTHelper::fftShift(fftData);
-
-    return fftData;
-}
-
-
-cx_mat Integrator::forwardFFT(cx_mat data) const
+cx_mat Integrator::forwardFFT(mat data) const
 {
     //fftShift
     data = FFTHelper::fftShift(data);
 
-    cx_mat ifftData = 0 * data;
+
+    cx_mat ifftData = zeros<cx_mat>(int(data.n_cols), int(data.n_rows));
+    cx_mat inData = 0*ifftData;
+    inData.set_real(data);
     int size[2] = {int(data.n_cols), int(data.n_rows)};
 
-    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
+    fftw_complex* in = reinterpret_cast<fftw_complex*> (inData.memptr());
     fftw_complex* out = reinterpret_cast<fftw_complex*> (ifftData.memptr());
     fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
 

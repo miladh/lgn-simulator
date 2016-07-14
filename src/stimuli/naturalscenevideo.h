@@ -20,7 +20,7 @@ public:
 
 private:
     string m_sceneFilename;
-    cx_cube m_scene;
+    cube m_scene;
 
     void readScene();
 };

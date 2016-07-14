@@ -8,7 +8,7 @@ NaturalSceneVideo::NaturalSceneVideo(const Integrator &integrator, string sceneF
     , m_sceneFilename(sceneFilename)
 
 {
-    m_scene = zeros<cx_cube>(m_integrator.nPointsSpatial(),
+    m_scene = zeros<cube>(m_integrator.nPointsSpatial(),
                             m_integrator.nPointsSpatial(),
                             m_integrator.nPointsTemporal());
 
