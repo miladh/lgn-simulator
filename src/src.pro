@@ -42,7 +42,8 @@ SOURCES += \
     kernels/temporalKernels/biphasic.cpp \
     kernels/spatialKernels/spatialgaussian.cpp \
     kernels/nonseparabledog.cpp \
-    stimuli/grating/gaussianmaskgrating.cpp
+    stimuli/grating/gaussianmaskgrating.cpp \
+    stimuli/grating/cscirclemaskgrating.cpp
 
 HEADERS += \
     integrator.h \
@@ -84,7 +85,8 @@ HEADERS += \
     kernels/temporalKernels/biphasic.h \
     kernels/spatialKernels/spatialgaussian.h \
     kernels/nonseparabledog.h \
-    stimuli/grating/gaussianmaskgrating.h
+    stimuli/grating/gaussianmaskgrating.h \
+    stimuli/grating/cscirclemaskgrating.h
 
 OTHER_FILES +=
 

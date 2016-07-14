@@ -396,11 +396,11 @@ if __name__ == "__main__":
 #                 "t_points" : exp.integrator.t_points,
 #                 "spatial_vec" : exp.integrator.s_points
 #                 }
-    Wr = {"type" : "Relay",
-             "value" : exp.relay.irf(),
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-            }
+    # Wr = {"type" : "Relay",
+    #          "value" : exp.relay.irf(),
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #         }
 #
 #     Wi = {"type" : "Interneuron",
 #                  "value" : exp.interneuron.irf(),
@@ -464,7 +464,7 @@ if __name__ == "__main__":
     data = [S, Rr]
 
     # data = [S, Rg_ft, Rr_ft, Ri_ft, Rc_ft]
-    line3dPlotsOfImpulseResponses([Wr], num_skip = 1, idx=Ns/2, idy=Ns/2,)
+    # line3dPlotsOfImpulseResponses([Wr], num_skip = 1, idx=Ns/2, idy=Ns/2,)
 
     animate_imshow_plots(data, exp.integrator.dt,
     colorbar = True, remove_axes = False,

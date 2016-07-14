@@ -35,7 +35,9 @@ int main(int argc, char* argv[])
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
-    Biphasic Wg_t = createTemporalBiphasicKernel(cfg["ganglion"]["Wt"]);
+//    Biphasic Wg_t = createTemporalBiphasicKernel(cfg["ganglion"]["Wt"]);
+    TemporalDelta Wg_t = createTemporalDeltaKernel(cfg["ganglion"]["Wt"]);
+
 
     SeparableKernel Wg(cfg["ganglion"]["w"].as<double>(), &Wg_s, &Wg_t);
     GanglionCell ganglion(integrator, Wg, cfg["ganglion"]["R0"].as<double>());
