@@ -43,7 +43,7 @@ cx_cube Integrator::backwardFFT(cx_cube data) const
 
     fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
     fftw_complex* out = reinterpret_cast<fftw_complex*> (fftData.memptr());
-    fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
+    fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_BACKWARD, FFTW_MEASURE); //FFTW_ESTIMATE!
 
     fftw_execute(plan);
     fftw_destroy_plan(plan);

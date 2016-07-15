@@ -3,7 +3,7 @@ description: "Firing synchrony config file"
 #------------Integrator settings-----------------#
 grid:
     ns: 8
-    nt: 1
+    nt: 6
     dt: &dt_id 0.05
     ds: &ds_id 0.1
 
@@ -15,10 +15,10 @@ stimulus:
     # Grating:
     C: 1.0
     mask: "cscircle" #none/circle/gaussian
-    maskSize: 10.0
+    maskSize: 4.397590
     orientation: 0.   #degrees
-    kId:  10         #[-Ns/2, Ns/2 - 1]
-    wId:  0           #[-Nt/2, Nt/2 - 1]
+    kId:  5         #[-Ns/2, Ns/2 - 1]
+    wId:  7           #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
 ganglion:
@@ -75,7 +75,7 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 0.5
+        w: 0.8
         spatial:
         #Gauss
             a: 0.1
@@ -107,7 +107,7 @@ interneuron:
 
 
     Kic:
-        w: 0.5
+        w: 0.8
         spatial:
         #Gauss
             a: 1.0

@@ -463,6 +463,8 @@ if __name__ == "__main__":
     # data = [S, Rg, Wg, Rr, Wr, Ri, Wi, Rc, Wc]
     data = [S, Rr]
 
+    plt.plot(exp.relay.t_resp(rc=[Ns/2, Ns/2]))
+
     # data = [S, Rg_ft, Rr_ft, Ri_ft, Rc_ft]
     # line3dPlotsOfImpulseResponses([Wr], num_skip = 1, idx=Ns/2, idy=Ns/2,)
 
