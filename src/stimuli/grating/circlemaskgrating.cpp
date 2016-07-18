@@ -3,7 +3,7 @@
 using namespace lgnSimulator;
 
 
-CircleMaskGrating::CircleMaskGrating(const Integrator &integrator,
+CircleMaskGrating::CircleMaskGrating(Integrator* const integrator,
                                      double spatialFreq, double orientation,
                                      double temporalFreq,double contrast,
                                      double maskSize)
@@ -45,6 +45,6 @@ complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 k, double w)
     }
 
     return m_contrast * core::pi * core::pi * m_maskSize * m_maskSize * 0.25
-            * (term1 + term2) / m_integrator.temporalFreqResolution();
+            * (term1 + term2) / m_integrator->temporalFreqResolution();
 
 }

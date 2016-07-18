@@ -26,12 +26,12 @@ void runIntegratorPatchGratingTest(int ns, int nt, double dt, double ds,
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
 
-    CircleMaskGrating grating(integrator, spatialFreq, orientation, wd, C, maskSize);
+    CircleMaskGrating grating(&integrator, spatialFreq, orientation, wd, C, maskSize);
     grating.computeFourierTransform();
     grating.computeSpatiotemporal();
 
-    cx_cube grating_fft = integrator.backwardFFT(grating.fourierTransform());
-    cx_cube diff = grating.spatioTemporal() - grating_fft;
+    cube grating_fft = integrator.backwardFFT(grating.fourierTransform());
+    cube diff = grating.spatioTemporal() - grating_fft;
 
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));

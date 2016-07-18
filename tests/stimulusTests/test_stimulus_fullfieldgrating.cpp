@@ -60,7 +60,7 @@ void runStimulusFullFieldGratingTest(int ns, int nt, double dt, double ds,
     double orientation = orientations(thetaId);
 
 
-    FullFieldGrating grating(integrator, spatialFreq, orientation, wd, C);
+    FullFieldGrating grating(&integrator, spatialFreq, orientation, wd, C);
     grating.computeFourierTransform();
     grating.computeSpatiotemporal();
 

@@ -35,18 +35,18 @@ void runSystemTest_GRC(int nt, double dt, int ns, double ds,
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
 
-    FullFieldGrating grating(integrator, spatialFreq, orientation, wd, C);
+    FullFieldGrating grating(&integrator, spatialFreq, orientation, wd, C);
     grating.computeFourierTransform();
 
     //ganglion cell
-    GanglionCell ganglion(integrator, W);
+    GanglionCell ganglion(&integrator, W);
 
     //relayCell cell
     double R0 = 0.78;
-    RelayCell relay(integrator, R0);
+    RelayCell relay(&integrator, R0);
 
     //cortical cell
-    CorticalCell cortical(integrator);
+    CorticalCell cortical(&integrator);
 
     //Connect
     relay.addGanglionCell(&ganglion, Krg);

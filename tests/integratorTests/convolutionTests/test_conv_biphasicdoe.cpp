@@ -98,8 +98,8 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
         }
     }
 
-    cx_cube F = integrator.backwardFFT(G);
-    cx_cube diff = (F_e-F)*ds*ds; // divide by the contributions from spatial part
+    cube F = integrator.backwardFFT(G);
+    cube diff = (F_e-F)*ds*ds; // divide by the contributions from spatial part
 
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));

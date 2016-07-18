@@ -9,12 +9,11 @@
 #include <type_traits>
 #include <utility>
 
-
 namespace lgnSimulator {
 class Grating : public Stimulus
 {
 public:
-    Grating(const Integrator &integrator,
+    Grating(Integrator * const integrator,
             double spatialFreq, double orientation, double temporalFreq,
             double contrast, double maskSize = 0.0);
     ~Grating();
@@ -55,7 +54,7 @@ private:
 
 }
 std::unique_ptr<lgnSimulator::Grating> createGratingStimulus(
-        const lgnSimulator::Integrator &integrator,
+        lgnSimulator::Integrator* const integrator,
         const YAML::Node &cfg);
 
 #endif // GRATING_H

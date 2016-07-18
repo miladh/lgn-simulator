@@ -10,7 +10,7 @@ using namespace lgnSimulator;
  */
 
 
-Neuron::Neuron(const Integrator& integrator,
+Neuron::Neuron(Integrator* const integrator,
                const double backgroundResponse,
                const string type,
                StaticNonlinearity * const staticNonlinearity)
@@ -19,18 +19,18 @@ Neuron::Neuron(const Integrator& integrator,
     , m_backgroundResponse(backgroundResponse)
     , m_type(type)
 {
-    int nPointsTemporal = integrator.nPointsTemporal();
-    int nPointsSpatial = integrator.nPointsSpatial();
+    int nPointsTemporal = integrator->nPointsTemporal();
+    int nPointsSpatial = integrator->nPointsSpatial();
 
-    m_impulseResponseFT=zeros<cx_cube>(nPointsSpatial,nPointsSpatial, nPointsTemporal);
+    m_impulseResponseFT=zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
-    m_timeVec = integrator.timeVec();
-    m_temporalFreqs = integrator.temporalFreqVec();
+    m_timeVec = integrator->timeVec();
+    m_temporalFreqs = integrator->temporalFreqVec();
 
     //Spatial Mesh
-    m_spatialVec = integrator.spatialVec();
-    m_spatialFreqs =integrator.spatialFreqVec();
+    m_spatialVec = integrator->spatialVec();
+    m_spatialFreqs =integrator->spatialFreqVec();
 }
 
 Neuron::~Neuron()
@@ -43,7 +43,8 @@ void Neuron::computeResponse(const Stimulus *const stimulus)
     if(!responseFourierTransformComputed){
         computeResponseFourierTransform(stimulus);
     }
-    m_response = real(m_integrator.backwardFFT(m_responseFT));
+
+    m_response = m_integrator->backwardFFT(m_responseFT);
 
     if(m_staticNonlinearity != nullptr){
         m_staticNonlinearity->applyStaticNonlinearity(&m_response);
@@ -62,9 +63,9 @@ void Neuron::computeResponseFourierTransform(const Stimulus * const stimulus)
 
     if(m_backgroundResponse!=0.0){ //add DC contribution from bck activity
         m_responseFT(0,0,0) += 8*core::pi*core::pi*core::pi * m_backgroundResponse
-                /m_integrator.spatialFreqResolution()
-                /m_integrator.spatialFreqResolution()
-                /m_integrator.temporalFreqResolution();
+                /m_integrator->spatialFreqResolution()
+                /m_integrator->spatialFreqResolution()
+                /m_integrator->temporalFreqResolution();
     }
 }
 
@@ -73,7 +74,7 @@ void Neuron::computeImpulseResponse()
     if(!impulseResponseFourierTransformComputed){
         computeImpulseResponseFourierTransform();
     }
-    m_impulseResponse = real(m_integrator.backwardFFT(m_impulseResponseFT));
+    m_impulseResponse = real(m_integrator->backwardFFT(m_impulseResponseFT));
 
 }
 

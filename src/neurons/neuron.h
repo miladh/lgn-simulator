@@ -14,7 +14,7 @@ namespace lgnSimulator {
 class Neuron
 {
 public:
-    Neuron(const Integrator &integrator,
+    Neuron(Integrator* const integrator,
            const double backgroundResponse = 0,
            const string type = "None",
            StaticNonlinearity *const staticNonlinearity = nullptr);
@@ -48,7 +48,7 @@ public:
     bool isImpulseResponseFourierTransformComputed() const;
 
 private:
-    const Integrator& m_integrator;
+    Integrator *const m_integrator;
     StaticNonlinearity *const m_staticNonlinearity = nullptr;
 
 

@@ -32,15 +32,15 @@ void runSystemTest_GI(int nt, double dt, int ns, double ds,
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
 
-    FullFieldGrating grating(integrator, spatialFreq, orientation, wd, C);
+    FullFieldGrating grating(&integrator, spatialFreq, orientation, wd, C);
     grating.computeFourierTransform();
 
     //ganglion cell
-    GanglionCell ganglion(integrator, W);
+    GanglionCell ganglion(&integrator, W);
     ganglion.computeResponse(&grating);
 
     //interneuron cell
-    Interneuron interneuron(integrator);
+    Interneuron interneuron(&integrator);
     interneuron.addGanglionCell(&ganglion, K);
     interneuron.computeResponse(&grating);
 

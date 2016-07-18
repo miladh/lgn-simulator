@@ -31,14 +31,14 @@ int main(int argc, char* argv[])
     io.writeIntegratorProperties(integrator);
 
     //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg["stimulus"]);
+    unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg["stimulus"]);
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
     DOE Wg_t = createTemporalDOEKernel(cfg["ganglion"]["Wt"]);
 
     SeparableKernel Wg(cfg["ganglion"]["w"].as<double>() , &Wg_s, &Wg_t);
-    GanglionCell ganglion(integrator, Wg, cfg["ganglion"]["R0"].as<double>());
+    GanglionCell ganglion(&integrator, Wg, cfg["ganglion"]["R0"].as<double>());
 
     //Compute:-----------------------------------------------------------------
     io.writeStimulusProperties(S.get());

@@ -13,7 +13,7 @@ class CorticalCell;
 class RelayCell : public Neuron
 {
 public:
-    RelayCell(const Integrator &integrator, double backgroundResponse= 0);
+    RelayCell(Integrator* const integrator, double backgroundResponse= 0);
     ~RelayCell();
 
     void addGanglionCell(Neuron* const neuron, const Kernel &kernel);

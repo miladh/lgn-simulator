@@ -8,7 +8,7 @@ class Interneuron : public Neuron
 {
 
 public:
-    Interneuron(const Integrator &integrator, double backgroundResponse= 0);
+    Interneuron(Integrator* const integrator, double backgroundResponse= 0);
     ~Interneuron();
 
     void addGanglionCell(Neuron* const neuron, const Kernel &kernel);

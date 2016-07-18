@@ -32,7 +32,7 @@ void runSystemTest_G_spot(int nt, double dt, int ns, double ds,
     vec t = integrator.timeVec();
 
     //stimulus
-    CircleMaskGrating spot(integrator, 0, 0, 0, C, maskSize);
+    CircleMaskGrating spot(&integrator, 0, 0, 0, C, maskSize);
     spot.computeFourierTransform();
 
     //ganglion cell
@@ -40,7 +40,7 @@ void runSystemTest_G_spot(int nt, double dt, int ns, double ds,
     TemporalDelta Wt(t[delayId], dt);
     SeparableKernel W(weight, &Ws, &Wt);
 
-    GanglionCell ganglion(integrator, W);
+    GanglionCell ganglion(&integrator, W);
     ganglion.computeResponse(&spot);
 
 

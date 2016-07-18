@@ -10,7 +10,7 @@ namespace lgnSimulator {
 class NaturalSceneVideo : public Stimulus
 {
 public:
-    NaturalSceneVideo(const Integrator &integrator, string sceneFilename);
+    NaturalSceneVideo(Integrator* const integrator, string sceneFilename);
     ~NaturalSceneVideo();
 
     // Stimulus interface

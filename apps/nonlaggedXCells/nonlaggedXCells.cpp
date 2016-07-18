@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
     Integrator integrator = createIntegrator(cfg);
 
     //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg);
+    unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg);
 
 
     //Kernels:---------------------------------------------------------
@@ -51,10 +51,10 @@ int main(int argc, char* argv[])
     DOG Wg_s = createSpatialDOGKernel(ganglionImpRes);
     TemporallyConstant Wg_t = createTemporallyConstantKernel(ganglionImpRes);
     SeparableKernel Wg(1, &Wg_s, &Wg_t);
-    GanglionCell ganglion(integrator, Wg);
+    GanglionCell ganglion(&integrator, Wg);
 
     //Relay cell: -------------------------------------------------------------
-    RelayCell relay(integrator);
+    RelayCell relay(&integrator);
 
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, Krg);

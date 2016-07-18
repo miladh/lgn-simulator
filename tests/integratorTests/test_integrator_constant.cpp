@@ -39,8 +39,8 @@ void runTest(int ns, int nt, double dt, double ds)
     }
 
     // Backward
-    cx_cube F_fft = integrator.backwardFFT(G);
-    cx_cube diff = F - F_fft;
+    cube F_fft = integrator.backwardFFT(G);
+    cube diff = F - F_fft;
 
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));

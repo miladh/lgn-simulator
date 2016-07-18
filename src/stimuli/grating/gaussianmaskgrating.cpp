@@ -1,7 +1,7 @@
 #include "gaussianmaskgrating.h"
 
 using namespace lgnSimulator;
-GaussianMaskGrating::GaussianMaskGrating(const Integrator &integrator,
+GaussianMaskGrating::GaussianMaskGrating(Integrator* const integrator,
                                          double spatialFreq, double orientation,
                                          double temporalFreq,double contrast,
                                          double maskSize)
@@ -35,6 +35,6 @@ complex<double> GaussianMaskGrating::fourierTransformAtFrequency(vec2 k, double 
     complex<double> term2 = Special::delta(w, -m_w)
             * m_gaussianMask->fourierTransform(-m_kVec - k);
 
-    return  core::pi * m_contrast * (term1 + term2) / m_integrator.temporalFreqResolution();
+    return  core::pi * m_contrast * (term1 + term2) / m_integrator->temporalFreqResolution();
 
 }

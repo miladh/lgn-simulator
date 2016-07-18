@@ -3,14 +3,14 @@
 using namespace lgnSimulator;
 
 
-NaturalSceneVideo::NaturalSceneVideo(const Integrator &integrator, string sceneFilename)
+NaturalSceneVideo::NaturalSceneVideo(Integrator* const integrator, string sceneFilename)
     : Stimulus(integrator)
     , m_sceneFilename(sceneFilename)
 
 {
-    m_scene = zeros<cube>(m_integrator.nPointsSpatial(),
-                            m_integrator.nPointsSpatial(),
-                            m_integrator.nPointsTemporal());
+    m_scene = zeros<cube>(m_integrator->nPointsSpatial(),
+                            m_integrator->nPointsSpatial(),
+                            m_integrator->nPointsTemporal());
 
     m_type = "naturalSceneVideo";
     readScene();
@@ -29,7 +29,8 @@ void NaturalSceneVideo::computeSpatiotemporal()
 
 void NaturalSceneVideo::computeFourierTransform()
 {
-     m_fourierTransform = m_integrator.forwardFFT(m_scene);
+//    cx_mat tmp = m_integrator->forwardFFT(m_scene);
+//     m_fourierTransform = m_integrator->forwardFFT(m_scene);
 }
 
 void NaturalSceneVideo::readScene()
@@ -49,15 +50,15 @@ void NaturalSceneVideo::readScene()
     for( ; ; )
     {
         capture.read(frame);
-        if(frame.empty() || i > m_integrator.nPointsTemporal() - 1 ){
+        if(frame.empty() || i > m_integrator->nPointsTemporal() - 1 ){
             break;
         }
         cvtColor(frame, frame, CV_BGR2GRAY);
 
         //Scaling
-        if(frame.rows != m_integrator.nPointsSpatial()
-                || frame.cols != m_integrator.nPointsSpatial()){
-            cv::Size size(m_integrator.nPointsSpatial(), m_integrator.nPointsSpatial());
+        if(frame.rows != m_integrator->nPointsSpatial()
+                || frame.cols != m_integrator->nPointsSpatial()){
+            cv::Size size(m_integrator->nPointsSpatial(), m_integrator->nPointsSpatial());
             cv::resize(frame, frame, size);
         }
 
@@ -74,7 +75,7 @@ void NaturalSceneVideo::readScene()
 
 
 
-unique_ptr<NaturalSceneVideo> createNaturalSceneVideoStimulus(const Integrator &integrator, const YAML::Node &cfg)
+unique_ptr<NaturalSceneVideo> createNaturalSceneVideoStimulus(Integrator* const integrator, const YAML::Node &cfg)
 {
     //Read file
     string sceneFilename = cfg["videoFilename"].as<string>();

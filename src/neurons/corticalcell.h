@@ -8,7 +8,7 @@ class CorticalCell : public Neuron
 {
 
 public:
-    CorticalCell(const Integrator &integrator,
+    CorticalCell(Integrator* const integrator,
                  double backgroundResponse = 0,
                  StaticNonlinearity * const staticNonlinearity = nullptr);
     ~CorticalCell();

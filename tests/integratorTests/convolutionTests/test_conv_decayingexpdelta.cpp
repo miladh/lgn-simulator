@@ -49,8 +49,8 @@ void runDogdecayingExpConvolutionTest(int nt, double dt, int ns, double ds,
         }
     }
 
-    cx_cube F = integrator.backwardFFT(G);
-    cx_cube diff = F - F_e;
+    cube F = integrator.backwardFFT(G);
+    cube diff = F - F_e;
 
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));

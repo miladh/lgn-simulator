@@ -3,16 +3,16 @@
 using namespace lgnSimulator;
 
 
-FullFieldGrating::FullFieldGrating(const Integrator &integrator,
+FullFieldGrating::FullFieldGrating(Integrator* const integrator,
                                     double spatialFreq, double orientation,
                                    double  temporalFreq,double contrast)
     : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, 0)
 {
     m_mask = "none";
     m_peak = 1.0
-            / m_integrator.temporalFreqResolution()
-            / m_integrator.spatialFreqResolution()
-            / m_integrator.spatialFreqResolution();
+            / m_integrator->temporalFreqResolution()
+            / m_integrator->spatialFreqResolution()
+            / m_integrator->spatialFreqResolution();
 
 }
 

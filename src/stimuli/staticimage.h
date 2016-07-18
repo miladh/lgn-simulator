@@ -8,7 +8,7 @@ namespace lgnSimulator {
 class StaticImage : public NaturalScene
 {
 public:
-    StaticImage(const Integrator &integrator, string sceneFilename);
+    StaticImage(Integrator* const integrator, string sceneFilename);
     ~StaticImage();
 
     // NaturalScene interface

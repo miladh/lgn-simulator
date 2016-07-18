@@ -27,12 +27,12 @@ void runIntegratorGratingTest(int ns, int nt, double dt, double ds,
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
 
-    FullFieldGrating grating(integrator, spatialFreq, orientation, wd, C);
+    FullFieldGrating grating(&integrator, spatialFreq, orientation, wd, C);
     grating.computeFourierTransform();
     grating.computeSpatiotemporal();
 
-    cx_cube grating_fft = integrator.backwardFFT(grating.fourierTransform());
-    cx_cube diff = grating.spatioTemporal() - grating_fft;
+    cube grating_fft = integrator.backwardFFT(grating.fourierTransform());
+    cube diff = grating.spatioTemporal() - grating_fft;
 
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));

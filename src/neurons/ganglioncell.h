@@ -7,7 +7,7 @@ namespace lgnSimulator {
 class GanglionCell : public Neuron
 {
 public:
-    GanglionCell(const Integrator &integrator,
+    GanglionCell(Integrator* const integrator,
                  const Kernel &kernel,
                  const double backgroundResponse = 0,
                  StaticNonlinearity *staticNonlinearity = nullptr);

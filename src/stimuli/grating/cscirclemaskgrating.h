@@ -7,7 +7,7 @@ namespace lgnSimulator {
 class CSCircleMaskGrating : public Grating
 {
 public:
-    CSCircleMaskGrating(const Integrator &integrator,
+    CSCircleMaskGrating(Integrator* const integrator,
                         double spatialFreq, double orientation, double temporalFreq,
                         double contrast, double surroundSize);
     ~CSCircleMaskGrating();

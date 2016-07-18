@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
     io.writeIntegratorProperties(integrator);
 
     //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg["stimulus"]);
+    unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg["stimulus"]);
 
 
     //Compute:-----------------------------------------------------------------

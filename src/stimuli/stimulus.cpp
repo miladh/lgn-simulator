@@ -3,22 +3,22 @@
 using namespace lgnSimulator;
 
 
-Stimulus::Stimulus(const Integrator &integrator)
+Stimulus::Stimulus(Integrator* const integrator)
     : m_integrator(integrator)
 {
-    int nPointsTemporal = integrator.nPointsTemporal();
-    int nPointsSpatial = integrator.nPointsSpatial();
+    int nPointsTemporal = integrator->nPointsTemporal();
+    int nPointsSpatial = integrator->nPointsSpatial();
 
     m_spatiotemporal = zeros<cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
     m_fourierTransform = zeros<cx_cube>(nPointsSpatial, nPointsSpatial, nPointsTemporal);
 
     //Temporal Mesh
-    m_timeVec = integrator.timeVec();
-    m_temporalFreqs = integrator.temporalFreqVec();
+    m_timeVec = integrator->timeVec();
+    m_temporalFreqs = integrator->temporalFreqVec();
 
     //Spatial Mesh
-    m_spatialVec = integrator.spatialVec();
-    m_spatialFreqs = integrator.spatialFreqVec();
+    m_spatialVec = integrator->spatialVec();
+    m_spatialFreqs = integrator->spatialFreqVec();
 
 
 }

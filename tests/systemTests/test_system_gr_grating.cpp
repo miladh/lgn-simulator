@@ -32,16 +32,16 @@ void runSystemTest_GR(int nt, double dt, int ns, double ds,
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
 
-    FullFieldGrating grating(integrator, spatialFreq, orientation, wd, C);
+    FullFieldGrating grating(&integrator, spatialFreq, orientation, wd, C);
     grating.computeFourierTransform();
 
     //ganglion cell
-    GanglionCell ganglion(integrator, W);
+    GanglionCell ganglion(&integrator, W);
     ganglion.computeResponse(&grating);
 
     //relayCell cell
     double R0 = 10.6;
-    RelayCell relayCell(integrator, R0);
+    RelayCell relayCell(&integrator, R0);
     relayCell.addGanglionCell(&ganglion, K);
     relayCell.computeResponse(&grating);
 

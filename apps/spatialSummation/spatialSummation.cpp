@@ -31,18 +31,18 @@ int main(int argc, char* argv[])
     Integrator integrator = createIntegrator(cfg["grid"]);
 
     //Stim---------------------------------------------------------------------
-    unique_ptr<Grating> S = createGratingStimulus(integrator, cfg["stimulus"]);
+    unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg["stimulus"]);
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
     TemporalDelta Wg_t = createTemporalDeltaKernel(cfg["ganglion"]["Wt"]);
     
     SeparableKernel Wg(cfg["ganglion"]["w"].as<double>(), &Wg_s, &Wg_t);
-    GanglionCell ganglion(integrator, Wg, cfg["ganglion"]["R0"].as<double>());
+    GanglionCell ganglion(&integrator, Wg, cfg["ganglion"]["R0"].as<double>());
     
     
     //Relay cell: -------------------------------------------------------------
-    RelayCell relay(integrator, cfg["relay"]["R0"].as<double>());
+    RelayCell relay(&integrator, cfg["relay"]["R0"].as<double>());
     
     // G -> R
     SpatialGaussian Ks_rg = createSpatialGaussianKernel(cfg["relay"]["Krg"]["spatial"]);
@@ -60,7 +60,7 @@ int main(int argc, char* argv[])
     SeparableKernel Krc(cfg["relay"]["Krc"]["w"].as<double>(), &Ks_rc, &Kt_rc);
     
     //Interneuron: -------------------------------------------------------------
-    Interneuron interneuron(integrator, cfg["interneuron"]["R0"].as<double>());
+    Interneuron interneuron(&integrator, cfg["interneuron"]["R0"].as<double>());
     
     // G -> I
     SpatialGaussian Ks_ig = createSpatialGaussianKernel(cfg["interneuron"]["Kig"]["spatial"]);
@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
     
     //Cortical cell: -------------------------------------------------------------
     HeavisideNonlinearity heavisideNonlinearity;
-    CorticalCell cortical(integrator, cfg["cortical"]["R0"].as<double>(), &heavisideNonlinearity);
+    CorticalCell cortical(&integrator, cfg["cortical"]["R0"].as<double>(), &heavisideNonlinearity);
     
     // R -> G
     SpatialDelta Ks_cr = createSpatialDeltaKernel(cfg["cortical"]["Kcr"]["spatial"]);

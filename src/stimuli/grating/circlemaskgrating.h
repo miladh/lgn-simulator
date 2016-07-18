@@ -7,7 +7,7 @@ namespace lgnSimulator {
 class CircleMaskGrating : public Grating
 {
 public:
-    CircleMaskGrating(const Integrator &integrator,
+    CircleMaskGrating(Integrator* const integrator,
                       double spatialFreq, double orientation, double temporalFreq,
                       double contrast, double maskSize);
     ~CircleMaskGrating();

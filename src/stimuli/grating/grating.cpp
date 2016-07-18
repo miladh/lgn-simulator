@@ -5,10 +5,11 @@
 #include "gaussianmaskgrating.h"
 #include "cscirclemaskgrating.h"
 
+
 using namespace lgnSimulator;
 
 
-Grating::Grating(const Integrator &integrator,
+Grating::Grating(Integrator* const integrator,
                  double spatialFreq, double orientation, double temporalFreq,
                  double contrast, double maskSize)
     : Stimulus(integrator)
@@ -120,7 +121,7 @@ double Grating::maskSize() const
 
 
 
-unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YAML::Node &cfg)
+unique_ptr<Grating> createGratingStimulus(Integrator* const integrator, const YAML::Node &cfg)
 {
     string mask = cfg["mask"].as<string>();
     double maskSize = cfg["maskSize"].as<double>();
@@ -129,8 +130,8 @@ unique_ptr<Grating> createGratingStimulus(const Integrator &integrator, const YA
     int kId = cfg["kId"].as<int>();
     int wId = cfg["wId"].as<int>();
 
-    vec k = integrator.spatialFreqVec();
-    vec w = integrator.temporalFreqVec();
+    vec k = integrator->spatialFreqVec();
+    vec w = integrator->temporalFreqVec();
 
 
     if((kId  < -int(k.n_elem)/2) || (kId  > int(k.n_elem)/2-1)){
