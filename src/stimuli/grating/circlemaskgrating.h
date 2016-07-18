@@ -12,6 +12,7 @@ public:
                       double contrast, double maskSize);
     ~CircleMaskGrating();
 
+//    virtual void computeFourierTransform();
         // Grating interface
 private:
     virtual double valueAtPoint(vec2 rVec, double t) const override;

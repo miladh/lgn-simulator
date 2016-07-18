@@ -17,6 +17,14 @@ CircleMaskGrating::~CircleMaskGrating()
 
 }
 
+//void CircleMaskGrating::computeFourierTransform()
+//{
+//    computeSpatiotemporal();
+//    m_fourierTransform = m_integrator->forwardFFT(m_spatiotemporal);
+
+//}
+
+
 
 double CircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
 {

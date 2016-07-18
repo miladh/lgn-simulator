@@ -25,7 +25,7 @@ public:
                const double spatialResolution);
     ~Integrator();
 
-    cube backwardFFT(cx_cube data);
+    cube backwardFFT(cx_cube in);
 
     cx_cube forwardFFT(cube data);
 //    cx_mat forwardFFT(mat data) const;

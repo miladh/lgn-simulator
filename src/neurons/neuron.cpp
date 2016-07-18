@@ -74,7 +74,7 @@ void Neuron::computeImpulseResponse()
     if(!impulseResponseFourierTransformComputed){
         computeImpulseResponseFourierTransform();
     }
-    m_impulseResponse = real(m_integrator->backwardFFT(m_impulseResponseFT));
+    m_impulseResponse = m_integrator->backwardFFT(m_impulseResponseFT);
 
 }
 

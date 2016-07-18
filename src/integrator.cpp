@@ -45,7 +45,6 @@ Integrator::Integrator(const int nt,
                                       reinterpret_cast<fftw_complex*> (m_real.memptr()),
                                       FFTW_BACKWARD, FFTW_ESTIMATE);
 
-
 }
 
 Integrator::~Integrator()
@@ -53,44 +52,42 @@ Integrator::~Integrator()
 }
 
 
-cube Integrator::backwardFFT(cx_cube data)
+cube Integrator::backwardFFT(cx_cube in)
 {
+    fftw_execute_dft(m_backwardPlan, reinterpret_cast<fftw_complex*>(in.memptr()),
+                     reinterpret_cast<fftw_complex*>(m_real.memptr()));
+
 
     //fftShift
-    fftw_execute_dft(m_backwardPlan, reinterpret_cast<fftw_complex*>(data.memptr()),
-                     reinterpret_cast<fftw_complex*>(m_real.memptr()));
+    //shift output to be symmetric around center
+    for(int i = 0; i < int(m_real.n_slices); i++){
+        m_real.slice(i) = FFTHelper::ifftShift(m_real.slice(i));
+    }
 
     m_real *= m_temporalFreqResolution
             * m_spatialFreqResolution
             * m_spatialFreqResolution
             /8./core::pi/core::pi/core::pi;
 
-    //fftShift
-    for(int i = 0; i < int(m_real.n_slices); i++){
-        m_real.slice(i) = FFTHelper::fftShift(m_real.slice(i));
-    }
-
     return real(m_real);
 }
 
 
-
-
-
-
-cx_cube Integrator::forwardFFT(cube data)
+cx_cube Integrator::forwardFFT(cube in)
 {
     //fftShift
-    data = FFTHelper::ifftShift(data);
+    in = FFTHelper::fftShift(in); //shift input to be symmetric around (0,0)
 
     cx_cube tmp = 0*m_complex;
-    tmp.set_real(data);
+    tmp.set_real(in);
 
     fftw_execute_dft(m_forwardPlan, reinterpret_cast<fftw_complex*>(tmp.memptr()),
                      reinterpret_cast<fftw_complex*> (m_complex.memptr()));
 
     return m_complex * m_temporalResolution * m_spatialResolution * m_spatialResolution;
 }
+
+
 
 
 //cx_cube Integrator::backwardFFT(cx_cube data) const
