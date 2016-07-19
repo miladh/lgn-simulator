@@ -30,9 +30,9 @@ int main(int argc, char* argv[]){
 
 
     string outputFilename = cfg["outputFile"].as<std::string>();
-    double Rg_0 = cfg["backgroundResponse"]["Rg_0"].as<double>();
-    double Rr_0 = cfg["backgroundResponse"]["Rr_0"].as<double>();
-    double Rc_0 = cfg["backgroundResponse"]["Rc_0"].as<double>();
+//    double Rg_0 = cfg["backgroundResponse"]["Rg_0"].as<double>();
+//    double Rr_0 = cfg["backgroundResponse"]["Rr_0"].as<double>();
+//    double Rc_0 = cfg["backgroundResponse"]["Rc_0"].as<double>();
 
     //Output manager:---------------------------------------------------------
     OutputManager io(outputFilename);
@@ -96,13 +96,13 @@ int main(int argc, char* argv[]){
 
 //    }
 
-//    t = clock() - t;
-//    double elapsedTime = ((float)t)/CLOCKS_PER_SEC;
-//    if(elapsedTime <= 60){
-//        printf ("%f seconds.\n", elapsedTime);
-//    }else{
-//        printf ("%f minutes.\n", elapsedTime/60);
-//    }
+    t = clock() - t;
+    double elapsedTime = ((float)t)/CLOCKS_PER_SEC;
+    if(elapsedTime <= 60){
+        printf ("%f seconds.\n", elapsedTime);
+    }else{
+        printf ("%f minutes.\n", elapsedTime/60);
+    }
 
     return 0;
 }

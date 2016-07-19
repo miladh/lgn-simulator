@@ -46,6 +46,9 @@ double CSCircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
 
 complex<double> CSCircleMaskGrating::fourierTransformAtFrequency(vec2 k, double w) const
 {
+    (void) k;
+    (void) w;
+
 
 //    double arg1 = sqrt(dot(k - m_kVec, k - m_kVec))* m_maskSize * 0.5;
 //    double arg2 = sqrt(dot(k + m_kVec, k + m_kVec))* m_maskSize * 0.5;

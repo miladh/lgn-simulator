@@ -27,7 +27,6 @@ SOURCES += main.cpp \
     integratorTests/convolutionTests/test_conv_deltadelta.cpp \
     integratorTests/convolutionTests/test_conv_biphasicdelta.cpp \
     integratorTests/convolutionTests/test_conv_biphasicdoe.cpp \
-    systemTests/test_system_g_spot.cpp \
     integratorTests/test_integrator_patchgrating.cpp \
     integratorTests/test_integrator_gaussiangrating.cpp \
     systemTests/test_system_g_grating.cpp \
@@ -37,6 +36,7 @@ SOURCES += main.cpp \
     systemTests/test_system_gric_grating.cpp \
     stimulusTests/test_stimulus_circlegrating.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
+    systemTests/test_system_g_patchgrating.cpp
 
 
 
