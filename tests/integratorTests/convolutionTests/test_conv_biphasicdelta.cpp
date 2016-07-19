@@ -7,8 +7,9 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
 #include <lgnSimulator.h>
+#include <catch.hpp>
+
 
 using namespace lgnSimulator;
 
@@ -55,38 +56,33 @@ void runDampedOscConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-//    cout << diff_real.max() << endl;
-//    cout << diff_imag.max() << endl;
+    //    cout << diff_real.max() << endl;
+    //    cout << diff_imag.max() << endl;
 
-    CHECK_CLOSE(diff_real.max(), 0.0, 1e-3);
-    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-12);
-
-}
-
-
-SUITE(integrator){
-
-
-    TEST(runDampedOscConvolutionTest_test_0) {
-        runDampedOscConvolutionTest(10, 0.1, 2, 0.05,
-                                    42.5, 0.38, 0.0,
-                                    vec2{0.0, 0.0},
-                                    0,  vec2{0.0, 0.0});
-    }
-
-    TEST(runDampedOscConvolutionTest_test_1) {
-        runDampedOscConvolutionTest(10, 0.1, 2, 0.05,
-                                    42.5, 0.38, 0.0,
-                                    vec2{0.0, 0.0},
-                                    32, vec2{0.0, 0.0});
-    }
-
-    TEST(runDampedOscConvolutionTest_test_2) {
-        runDampedOscConvolutionTest(10, 0.1, 2, 0.05,
-                                    42.5, 0.38, 20,
-                                    vec2{0.0, 0.0},
-                                    50, vec2{0.05, 0.05});
-    }
-
+    REQUIRE(diff_real.max() ==  Approx(0.0).epsilon(1e-3));
+    REQUIRE(diff_imag.max() ==  Approx(0.0).epsilon(1e-12));
 
 }
+
+
+TEST_CASE("runDampedOscConvolutionTest_test_0") {
+    runDampedOscConvolutionTest(10, 0.1, 2, 0.05,
+                                42.5, 0.38, 0.0,
+                                vec2{0.0, 0.0},
+                                0,  vec2{0.0, 0.0});
+}
+
+TEST_CASE("runDampedOscConvolutionTest_test_1") {
+    runDampedOscConvolutionTest(10, 0.1, 2, 0.05,
+                                42.5, 0.38, 0.0,
+                                vec2{0.0, 0.0},
+                                32, vec2{0.0, 0.0});
+}
+
+TEST_CASE("runDampedOscConvolutionTest_test_2") {
+    runDampedOscConvolutionTest(10, 0.1, 2, 0.05,
+                                42.5, 0.38, 20,
+                                vec2{0.0, 0.0},
+                                50, vec2{0.05, 0.05});
+}
+

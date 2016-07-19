@@ -6,10 +6,13 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
+
 #include <lgnSimulator.h>
+#include <catch.hpp>
+
 
 using namespace lgnSimulator;
+
 
 void runIntegratorPatchGratingTest(int ns, int nt, double dt, double ds,
                               double C, int wdId, int kxId, int thetaId, double maskSize)
@@ -39,15 +42,13 @@ void runIntegratorPatchGratingTest(int ns, int nt, double dt, double ds,
             grating.spatioTemporal()(idc,idc,0) - grating_fft(idc,idc,0)<<endl;
 
     //Test
-    CHECK_CLOSE(diff.max(), 0.0, 1e-4);
+    REQUIRE(diff.max() ==Approx(0.0).epsilon(1e-4));
 
 }
 
-SUITE(integrator){
 
-//    TEST(patchGrating_test_0){
-//         runIntegratorPatchGratingTest(9, 1, 1, 0.1,
-//                                       1.0, 0, 0, 0, 14.);
-//    }
 
+TEST_CASE("patchGrating_test_0"){
+//    runIntegratorPatchGratingTest(9, 1, 1, 0.1,
+//                                  1.0, 0, 0, 0, 14.);
 }

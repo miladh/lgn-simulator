@@ -7,10 +7,13 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
+
 #include <lgnSimulator.h>
+#include <catch.hpp>
+
 
 using namespace lgnSimulator;
+
 
 void runGaussDeltaConvolutionTest(int nt, double dt, int ns, double ds,
                                 int tau, double a,
@@ -53,26 +56,21 @@ void runGaussDeltaConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-    CHECK_CLOSE(diff_real.max(), 0.0, 1e-7);
-    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-7);
+    REQUIRE(diff_real.max()==  Approx( 0.0).epsilon(1e-7));
+    REQUIRE(diff_imag.max()==  Approx( 0.0).epsilon(1e-7));
 
 }
 
 
-
-SUITE(integrator){
-
-    TEST(gaussDeltaConvolutionTest_test_0) {
-        runGaussDeltaConvolutionTest(2, 0.05, 6, 0.05,
-                                   0,  0.25,
-                                   0,  vec2{0.0, 0.0});
-    }
-
-    TEST(gaussDeltaConvolutionTest_test_1) {
-        runGaussDeltaConvolutionTest(3, 0.1, 7, 0.05,
-                                   1,  0.25,
-                                   5,  vec2{1.1, -0.3});
-    }
-
-
+TEST_CASE("gaussDeltaConvolutionTest_test_0") {
+    runGaussDeltaConvolutionTest(2, 0.05, 6, 0.05,
+                                 0,  0.25,
+                                 0,  vec2{0.0, 0.0});
 }
+
+TEST_CASE("gaussDeltaConvolutionTest_test_1") {
+    runGaussDeltaConvolutionTest(3, 0.1, 7, 0.05,
+                                 1,  0.25,
+                                 5,  vec2{1.1, -0.3});
+}
+

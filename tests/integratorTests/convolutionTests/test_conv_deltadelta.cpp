@@ -7,10 +7,12 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
 #include <lgnSimulator.h>
+#include <catch.hpp>
+
 
 using namespace lgnSimulator;
+
 
 void runDeltaConvolutionTest(int nt, double dt, int ns, double ds,
                              int delay_w, vec2 shift_w,
@@ -57,26 +59,22 @@ void runDeltaConvolutionTest(int nt, double dt, int ns, double ds,
     //    cout << diff_real.max() << endl;
     //    cout << diff_imag.max() << endl;
 
-    CHECK_CLOSE(diff_real.max(), 0.0, 1e-10);
-    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-10);
+    REQUIRE(diff_real.max() ==  Approx( 0.0).epsilon(1e-10));
+    REQUIRE(diff_imag.max() ==  Approx( 0.0).epsilon(1e-10));
 
 }
 
 
 
-SUITE(integrator){
 
-    TEST(deltaConvolutionTest_test_0) {
-        runDeltaConvolutionTest(2, 0.05, 6, 0.05,
-                               0,  vec2{0.0, 0.0},
-                               0,  vec2{0.2, 0.0});
-    }
+TEST_CASE("deltaConvolutionTest_test_0") {
+    runDeltaConvolutionTest(2, 0.05, 6, 0.05,
+                           0,  vec2{0.0, 0.0},
+                           0,  vec2{0.2, 0.0});
+}
 
-    TEST(deltaConvolutionTest_test_1) {
-        runDeltaConvolutionTest(3, 0.1, 7, 0.05,
-                                0, vec2{0.3, 0.0},
-                                0, vec2{0.0, .2});
-    }
-
-
+TEST_CASE("deltaConvolutionTest_test_1") {
+    runDeltaConvolutionTest(3, 0.1, 7, 0.05,
+                            0, vec2{0.3, 0.0},
+                            0, vec2{0.0, .2});
 }

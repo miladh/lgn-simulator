@@ -7,14 +7,17 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
+
 #include <lgnSimulator.h>
+#include <catch.hpp>
+
 
 using namespace lgnSimulator;
 
 
+
 void runGaussConstConvolutionTest(int nt, double dt, int ns, double ds,
-                                int tau, double a)
+                                  int tau, double a)
 {
 
 
@@ -45,9 +48,9 @@ void runGaussConstConvolutionTest(int nt, double dt, int ns, double ds,
                         /integrator.timeInterval();
 
                 G(i,j,l) = Ws.fourierTransform({k[i], k[j]})
-                         * Wt.fourierTransform(w[l])
-                         * Ks.fourierTransform({k[i], k[j]})
-                         * Kt.fourierTransform(w[l]);
+                        * Wt.fourierTransform(w[l])
+                        * Ks.fourierTransform({k[i], k[j]})
+                        * Kt.fourierTransform(w[l]);
             }
         }
     }
@@ -59,23 +62,18 @@ void runGaussConstConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_imag = abs(imag(diff));
 
 
-    CHECK_CLOSE(diff_real.max(), 0.0, 1e-7);
-    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-7);
+    REQUIRE(diff_real.max() == Approx(0.0).epsilon(1e-7));
+    REQUIRE(diff_imag.max() == Approx(0.0).epsilon(1e-7));
 
 }
 
 
-SUITE(integrator){
+TEST_CASE("gaussConstConvolutionTest_test_0") {
+    runGaussConstConvolutionTest(3, 0.05, 4, 0.05,
+                                 2, 0.25);
+}
 
-    TEST(gaussConstConvolutionTest_test_0) {
-        runGaussConstConvolutionTest(3, 0.05, 4, 0.05,
-                                   2, 0.25);
-    }
-
-    TEST(gaussConstConvolutionTest_test_1) {
-        runGaussConstConvolutionTest(2, 0.05, 3, 0.05,
-                                   1,  0.25);
-    }
-
-
+TEST_CASE("gaussConstConvolutionTest_test_1") {
+    runGaussConstConvolutionTest(2, 0.05, 3, 0.05,
+                                 1,  0.25);
 }

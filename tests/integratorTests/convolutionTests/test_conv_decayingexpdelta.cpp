@@ -7,8 +7,9 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
 #include <lgnSimulator.h>
+#include <catch.hpp>
+
 
 using namespace lgnSimulator;
 
@@ -42,9 +43,9 @@ void runDogdecayingExpConvolutionTest(int nt, double dt, int ns, double ds,
                         * Wt.temporal(t[l] - t[delay]);
 
                 G(i,j,l) = Ws.fourierTransform({k[i], k[j]})
-                         * Wt.fourierTransform(w[l])
-                         * Ks.fourierTransform({k[i], k[j]})
-                         * Kt.fourierTransform(w[l]);
+                        * Wt.fourierTransform(w[l])
+                        * Ks.fourierTransform({k[i], k[j]})
+                        * Kt.fourierTransform(w[l]);
             }
         }
     }
@@ -55,22 +56,21 @@ void runDogdecayingExpConvolutionTest(int nt, double dt, int ns, double ds,
     cube diff_real = abs(real(diff));
     cube diff_imag = abs(imag(diff));
 
-//    cout << diff_real.max() << endl;
-//    cout << diff_imag.max() << endl;
+    //    cout << diff_real.max() << endl;
+    //    cout << diff_imag.max() << endl;
 
-    CHECK_CLOSE(diff_real.max(), 0.0, 1e-7);
-    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-7);
+    REQUIRE(diff_real.max() == Approx(0.0).epsilon(1e-7));
+    REQUIRE(diff_imag.max() == Approx(0.0).epsilon(1e-7));
 
+}
+
+
+
+TEST_CASE("runDogdecayingExpConvolutionTest_test_0") {
+//    runDogdecayingExpConvolutionTest(10, 1.0, 6, 0.05,
+//                                     0, 1.0, 0.25,
+//                                     0, 0.04, 1.0,
+//                                     vec2{0.0, 0.0});
 }
 
 
-SUITE(integrator){
-
-//    TEST(runDogdecayingExpConvolutionTest_test_0) {
-//        runDogdecayingExpConvolutionTest(10, 1.0, 6, 0.05,
-//                                         0, 1.0, 0.25,
-//                                         0, 0.04, 1.0,
-//                                         vec2{0.0, 0.0});
-//    }
-
-}

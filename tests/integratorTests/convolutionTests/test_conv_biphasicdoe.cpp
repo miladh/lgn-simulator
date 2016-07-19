@@ -6,9 +6,9 @@
  *  Analytic source: closed-form experssion (Sympy)
  *
  * ********************************************************************/
-
-#include <unittest++/UnitTest++.h>
 #include <lgnSimulator.h>
+#include <catch.hpp>
+
 
 using namespace lgnSimulator;
 
@@ -108,31 +108,29 @@ void runDampedOscCombinedRCConvolutionTest(int nt, double dt, int ns, double ds,
     //    cout << diff_imag.max() << endl;
 
 
-    CHECK_CLOSE(diff_real.max(), 0.0, 1e-3);
-    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-12);
+    REQUIRE(diff_real.max() == Approx(0.0).epsilon(1e-3));
+    REQUIRE(diff_imag.max() == Approx(0.0).epsilon(1e-12));
 
 }
 
 
-SUITE(integrator){
 
 
-    TEST(dampedOscDOEConvolutionTest_test_0) {
-        runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
-                                              42.5, 0.38,
-                                               vec2{0.0, 0.0},
-                                              16., 32., 0,
-                                              vec2{0.0, 0.0});
-    }
-
-
-
-    TEST(dampedOscDOEConvolutionTest_test_1) {
-        runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
-                                              42.5, 0.38,
-                                              vec2{0.0, 0.0},
-                                              16., 32., 1365,
-                                              vec2{0.0, 0.0});
-    }
-
+TEST_CASE("dampedOscDOEConvolutionTest_test_0") {
+    runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
+                                          42.5, 0.38,
+                                          vec2{0.0, 0.0},
+                                          16., 32., 0,
+                                          vec2{0.0, 0.0});
 }
+
+
+
+TEST_CASE("dampedOscDOEConvolutionTest_test_1") {
+    runDampedOscCombinedRCConvolutionTest(12, 0.1, 2, 0.05,
+                                          42.5, 0.38,
+                                          vec2{0.0, 0.0},
+                                          16., 32., 1365,
+                                          vec2{0.0, 0.0});
+}
+
