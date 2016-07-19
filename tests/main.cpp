@@ -2,7 +2,10 @@
 #include <unittest++/Test.h>
 #include <unittest++/TestReporterStdout.h>
 #include <unittest++/TestRunner.h>
+
+#include <catch.hpp>
 #include <iostream>
+
 
 using namespace UnitTest;
 using namespace std;

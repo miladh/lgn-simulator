@@ -22,10 +22,10 @@ public:
 
 private:
     double m_relativeStrength = 0.0;
-    SpatialGaussian *m_spatialCenter;
-    SpatialGaussian *m_spatialSurround;
-    DOE *m_temporalCenter;
-    DOE *m_temporalSurround;
+    SpatialGaussian *m_spatialCenter = nullptr;
+    SpatialGaussian *m_spatialSurround = nullptr;
+    DOE *m_temporalCenter = nullptr;
+    DOE *m_temporalSurround = nullptr;
 };
 
 }

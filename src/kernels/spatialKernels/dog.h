@@ -11,7 +11,8 @@ namespace lgnSimulator {
 class DOG : public SpatialKernel
 {
 public:
-    DOG(double a, double b, double c);
+    explicit DOG(double a, double b, double c);
+    DOG(const DOG &dog);
     ~DOG();
 
     // SpatialKernel interface
@@ -19,10 +20,12 @@ public:
     complex<double> fourierTransform(vec2 k) const;
 
 
+    double relativeStrength() const;
+
 private:
     double m_relativeStrength = 1.0;
-    SpatialGaussian *m_centre;
-    SpatialGaussian *m_surround;
+    SpatialGaussian* m_center = nullptr;
+    SpatialGaussian* m_surround = nullptr;
 
 
 

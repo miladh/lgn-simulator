@@ -73,8 +73,8 @@ void runSystemTest_G_pg(int nt, double dt, int ns, double ds,
 
 
     //Test
-    cout << kd << endl;
-    cout << Rg_ex - Rgc << endl;
+//    cout << kd << endl;
+//    cout << Rg_ex - Rgc << endl;
     CHECK_CLOSE(Rg_ex, Rgc, 1e-3);
 }
 
@@ -88,7 +88,7 @@ SUITE(system){
     TEST(runTest_G_pg_8){
         double d = 1.5;
         double kId = 6;
-        runSystemTest_G_pg(1, 1.0, 10, 0.1,
+        runSystemTest_G_pg(1, 1.0, 9, 0.25,
                            1.0, d, kId,
                            0.62, 1.26, 0.85,
                            1, 4);
@@ -97,7 +97,7 @@ SUITE(system){
     TEST(runTest_G_pg_9){
         double d = 5.5;
         double kId = 6;
-        runSystemTest_G_pg(1, 1.0, 10, 0.1,
+        runSystemTest_G_pg(1, 1.0, 9, 0.2,
                            1.0, d, kId,
                            0.62, 1.26, 0.85,
                            1, 4);
@@ -116,28 +116,13 @@ SUITE(system){
 
     //Spot---------------------------------------
     TEST(runTest_G_pg_0){
-        double d = 7.0;
-        runSystemTest_G_pg(1, 1.0, 9, 0.1,
-                           1.0, d, 0,
-                           0.62, 1.26, 0.85,
-                           1, 4);
-    }
-
-
-    TEST(runTest_G_pg_1){
-        double d = 0.1;
-        runSystemTest_G_pg(1, 1.0, 9, 0.1,
-                           1.0, d, 0,
-                           0.62, 1.26, 0.85,
-                           1, 4);
-    }
-
-    TEST(runTest_G_pg_2){
-        double d = 10;
-        runSystemTest_G_pg(1, 1.0, 9, 0.1,
-                           1.0, d, 0,
-                           0.62, 1.26, 0.85,
-                           1, 4);
+        vec diameters = linspace(0.0, 10, 11);
+        for(double d : diameters){
+            runSystemTest_G_pg(1, 1.0, 9, 0.1,
+                               1.0, d, 0,
+                               0.62, 1.26, 0.85,
+                               1, 4);
+        }
     }
 
 

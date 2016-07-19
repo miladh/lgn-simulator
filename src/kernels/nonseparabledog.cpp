@@ -11,6 +11,8 @@ NonseparableDOG::NonseparableDOG(double weight,
     : Kernel(weight)
     , m_relativeStrength(c)
 {
+
+    //!! create function points at deleted memory!!!
     m_spatialCenter = new SpatialGaussian(a);
     m_spatialSurround = new SpatialGaussian(b);
     m_temporalCenter = new DOE (cenLatencyAlpha, cenLatencyBeta, delay );

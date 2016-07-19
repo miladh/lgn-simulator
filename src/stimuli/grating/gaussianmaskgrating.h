@@ -20,7 +20,7 @@ protected:
     virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) const override;
 
 private:
-    SpatialGaussian *m_gaussianMask;
+    SpatialGaussian *m_gaussianMask = nullptr;
 };
 }
 

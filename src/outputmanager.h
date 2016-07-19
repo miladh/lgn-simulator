@@ -37,7 +37,7 @@ public:
 
 
 private:
-    H5File *m_output;
+    H5File *m_output=nullptr;
     void writeDataSet(const fcube dataset, Group* group, string name);
     Group createGroupIfNotExist(const string groupName);
 

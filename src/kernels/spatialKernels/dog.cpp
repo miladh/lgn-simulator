@@ -4,26 +4,44 @@
 using namespace lgnSimulator;
 
 
-DOG::DOG(double a, double b, double c):
-    m_relativeStrength(c)
+DOG::DOG(double a, double b, double c)
+    : m_relativeStrength(c)
+    , m_center(new SpatialGaussian(a))
+    , m_surround( new SpatialGaussian(b))
 {
-    m_centre = new SpatialGaussian(a);
-    m_surround = new SpatialGaussian(b);
+}
+
+DOG::DOG(const DOG &dog)
+{
+    m_center = new SpatialGaussian(1);
+    *m_center = *dog.m_center;
+
+    m_surround = new SpatialGaussian(1);
+    *m_surround = *dog.m_surround;
+
+    m_relativeStrength = dog.m_relativeStrength;
 }
 
 DOG::~DOG()
 {
+    delete m_center;
+    delete m_surround;
 }
 
 double DOG::spatial(vec2 r) const
 {
-    return m_centre->spatial(r) - m_relativeStrength * m_surround->spatial(r);
+    return m_center->spatial(r) - m_relativeStrength * m_surround->spatial(r);
 }
 
 complex<double> DOG::fourierTransform(vec2 k) const
 {
-    return m_centre->fourierTransform(k)
+    return m_center->fourierTransform(k)
             - m_relativeStrength * m_surround->fourierTransform(k);
+}
+
+double DOG::relativeStrength() const
+{
+    return m_relativeStrength;
 }
 
 

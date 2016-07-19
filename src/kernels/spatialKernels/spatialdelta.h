@@ -18,7 +18,7 @@ public:
 
 private:
     double m_peak = 1.0;
-    vec2 m_shift;
+    vec2 m_shift = {0,0};
 };
 
 }

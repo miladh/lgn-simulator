@@ -18,8 +18,8 @@ public:
     virtual complex<double> fourierTransform(vec2 k, double w) const;
 
 private:
-    SpatialKernel *m_spatialKernel;
-    TemporalKernel *m_temporalKernel;
+    SpatialKernel *m_spatialKernel = nullptr;
+    TemporalKernel *m_temporalKernel = nullptr;
 };
 
 }
