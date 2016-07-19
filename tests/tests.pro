@@ -7,7 +7,6 @@ CONFIG -= qt
 
 TARGET = lgnSimulator_tests
 
-LIBS += -lunittest++
 LIBS += -L$$TOP_OUT_PWD/lib -llgn-simulator
 INCLUDEPATH += $$TOP_PWD/include
 
