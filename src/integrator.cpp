@@ -58,8 +58,9 @@ cube Integrator::backwardFFT(cx_cube in)
                      reinterpret_cast<fftw_complex*>(m_real.memptr()));
 
 
-    //fftShift
+    //fftShift:
     //shift output to be symmetric around center
+    //only in space since temporal should be centered around (0,0)
     for(int i = 0; i < int(m_real.n_slices); i++){
         m_real.slice(i) = FFTHelper::ifftShift(m_real.slice(i));
     }
@@ -75,10 +76,15 @@ cube Integrator::backwardFFT(cx_cube in)
 
 cx_cube Integrator::forwardFFT(cube in)
 {
-    //fftShift
-    in = FFTHelper::fftShift(in); //shift input to be symmetric around (0,0)
+    //fftShift:
+    //shift input to be symmetric around (0,0)
+    //only in space since temporal is already centered around (0,0)
+    for(int i = 0; i < int(m_real.n_slices); i++){
+        in.slice(i) = FFTHelper::fftShift(in.slice(i));
+    }
 
-    cx_cube tmp = 0*m_complex;
+
+    cx_cube tmp = zeros<cx_cube>(in.n_rows, in.n_rows, in.n_slices);
     tmp.set_real(in);
 
     fftw_execute_dft(m_forwardPlan, reinterpret_cast<fftw_complex*>(tmp.memptr()),
@@ -86,37 +92,6 @@ cx_cube Integrator::forwardFFT(cube in)
 
     return m_complex * m_temporalResolution * m_spatialResolution * m_spatialResolution;
 }
-
-
-
-
-//cx_cube Integrator::backwardFFT(cx_cube data) const
-//{
-//    cx_cube fftData = 0 * data;
-//    int size[3] = {int(data.n_slices), int(data.n_cols), int(data.n_rows)};
-
-//    fftw_complex* in = reinterpret_cast<fftw_complex*> (data.memptr());
-//    fftw_complex* out = reinterpret_cast<fftw_complex*> (fftData.memptr());
-//    fftw_plan plan = fftw_plan_dft(3, size, in, out, FFTW_BACKWARD, FFTW_ESTIMATE); //FFTW_ESTIMATE!
-
-//    fftw_execute(plan);
-//    fftw_destroy_plan(plan);
-
-//    fftData *= m_temporalFreqResolution
-//            * m_spatialFreqResolution
-//            * m_spatialFreqResolution
-//            /8./core::pi/core::pi/core::pi;
-
-
-//    //fftShift
-//    for(int i = 0; i < int(fftData.n_slices); i++){
-//        fftData.slice(i) = FFTHelper::fftShift(fftData.slice(i));
-//    }
-
-//    return fftData;
-//}
-
-
 
 
 //cx_mat Integrator::forwardFFT(mat data) const

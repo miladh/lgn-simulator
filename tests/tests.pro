@@ -14,7 +14,6 @@ INCLUDEPATH += $$TOP_PWD/include
 
 SOURCES += main.cpp \
     test_special.cpp \
-    stimulusTests/test_stimulus_fullfieldgrating.cpp \
     test_kernel.cpp \
     integratorTests/test_integrator_constant.cpp \
     integratorTests/test_integrator_grating.cpp \
@@ -36,7 +35,10 @@ SOURCES += main.cpp \
     systemTests/test_system_gi_grating.cpp \
     systemTests/test_system_gr_grating.cpp \
     systemTests/test_system_grc_grating.cpp \
-    systemTests/test_system_gric_grating.cpp
+    systemTests/test_system_gric_grating.cpp \
+    stimulusTests/test_stimulus_circlegrating.cpp \
+    stimulusTests/test_stimulus_fullfieldgrating.cpp \
+
 
 
 

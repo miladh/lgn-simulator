@@ -31,27 +31,23 @@ void runIntegratorPatchGratingTest(int ns, int nt, double dt, double ds,
     grating.computeSpatiotemporal();
 
     cube grating_fft = integrator.backwardFFT(grating.fourierTransform());
-    cube diff = grating.spatioTemporal() - grating_fft;
-
-    cube diff_real = abs(real(diff));
-    cube diff_imag = abs(imag(diff));
+    cube diff = abs(grating.spatioTemporal() - grating_fft);
 
 
     int idc = integrator.nPointsSpatial()/2;
     cout << "error center: "<<
-            grating.spatioTemporal()(idc,idc,0) - real(grating_fft(idc,idc,0))<<endl;
+            grating.spatioTemporal()(idc,idc,0) - grating_fft(idc,idc,0)<<endl;
 
-//    Test
-    CHECK_CLOSE(diff_real.max(), 0.0, 1e-9);
-    CHECK_CLOSE(diff_imag.max(), 0.0, 1e-9);
+    //Test
+    CHECK_CLOSE(diff.max(), 0.0, 1e-4);
 
 }
 
 SUITE(integrator){
 
 //    TEST(patchGrating_test_0){
-//         runIntegratorPatchGratingTest(9, 2, 2, 0.1,
-//                                       1.0, 0, 0, 0, 3.5);
+//         runIntegratorPatchGratingTest(9, 1, 1, 0.1,
+//                                       1.0, 0, 0, 0, 14.);
 //    }
 
 }

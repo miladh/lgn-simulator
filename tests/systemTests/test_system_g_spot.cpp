@@ -41,8 +41,6 @@ void runSystemTest_G_spot(int nt, double dt, int ns, double ds,
     SeparableKernel W(weight, &Ws, &Wt);
 
     GanglionCell ganglion(&integrator, W);
-    ganglion.computeResponse(&spot);
-
 
     //Compute analytic:
     double Rg_ex = response(spot.maskSize(), C, a, b, c);
@@ -84,6 +82,13 @@ SUITE(system){
     TEST(runTest_G_spot_3){
         runSystemTest_G_spot(1, 1.0, 8, 0.1,
                             1.0, 0.01, 0,
+                            0.62, 1.26, 0.85,
+                            1);
+    }
+
+    TEST(runTest_G_spot_4){
+        runSystemTest_G_spot(1, 1.0, 9, 0.1,
+                            1.0, 7.1, 0,
                             0.62, 1.26, 0.85,
                             1);
     }
