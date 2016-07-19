@@ -25,10 +25,9 @@ public:
                const double spatialResolution);
     ~Integrator();
 
-    cube backwardFFT(cx_cube in);
-
-    cx_cube forwardFFT(cube data);
-//    cx_mat forwardFFT(mat data) const;
+    cube backwardFFT(const cx_cube &in);
+    cx_cube forwardFFT(const cube &in);
+    cx_mat forwardFFT(const mat &in);
 
     vec timeVec() const;
     vec spatialVec() const;
@@ -67,11 +66,15 @@ private:
     vec m_temporalFreqs;
     vec m_spatialFreqs;
 
-    cx_cube m_real;
-    cx_cube m_complex;
+    cx_cube m_in;
+    cx_cube m_out;
 
-    fftw_plan m_forwardPlan;
+    cx_mat m_in_2d;
+    cx_mat m_out_2d;
+
     fftw_plan m_backwardPlan;
+    fftw_plan m_forwardPlan;
+    fftw_plan m_forwardPlan_2d;
 
 };
 }

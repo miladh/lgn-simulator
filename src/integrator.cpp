@@ -31,20 +31,27 @@ Integrator::Integrator(const int nt,
             * m_spatialResolution;
 
 
-    m_real.set_size(m_nPointsSpatial, m_nPointsSpatial, m_nPointsTemporal);
-    m_complex.set_size(m_nPointsSpatial, m_nPointsSpatial, m_nPointsTemporal);
+    m_out = zeros<cx_cube>(m_nPointsSpatial, m_nPointsSpatial, m_nPointsTemporal);
+    m_in  = zeros<cx_cube>(m_nPointsSpatial, m_nPointsSpatial, m_nPointsTemporal);
+    m_in_2d = zeros<cx_mat>(m_nPointsSpatial, m_nPointsSpatial);
+    m_out_2d = zeros<cx_mat>(m_nPointsSpatial, m_nPointsSpatial);
 
-
-    m_forwardPlan = fftw_plan_dft_3d(m_nPointsTemporal, m_nPointsSpatial, m_nPointsSpatial,
-                                     reinterpret_cast<fftw_complex*> (m_real.memptr()),
-                                     reinterpret_cast<fftw_complex*> (m_complex.memptr()),
-                                     FFTW_FORWARD, FFTW_ESTIMATE);
 
     m_backwardPlan = fftw_plan_dft_3d(m_nPointsTemporal, m_nPointsSpatial, m_nPointsSpatial,
-                                      reinterpret_cast<fftw_complex*> (m_complex.memptr()),
-                                      reinterpret_cast<fftw_complex*> (m_real.memptr()),
+                                      reinterpret_cast<fftw_complex*> (m_out.memptr()),
+                                      reinterpret_cast<fftw_complex*> (m_in.memptr()),
                                       FFTW_BACKWARD, FFTW_ESTIMATE);
 
+    m_forwardPlan = fftw_plan_dft_3d(m_nPointsTemporal, m_nPointsSpatial, m_nPointsSpatial,
+                                     reinterpret_cast<fftw_complex*> (m_in.memptr()),
+                                     reinterpret_cast<fftw_complex*> (m_out.memptr()),
+                                     FFTW_FORWARD, FFTW_ESTIMATE);
+
+
+    m_forwardPlan_2d = fftw_plan_dft_2d(m_nPointsSpatial, m_nPointsSpatial,
+                                     reinterpret_cast<fftw_complex*> (m_in_2d.memptr()),
+                                     reinterpret_cast<fftw_complex*> (m_out_2d.memptr()),
+                                     FFTW_FORWARD, FFTW_ESTIMATE);
 }
 
 Integrator::~Integrator()
@@ -52,68 +59,58 @@ Integrator::~Integrator()
 }
 
 
-cube Integrator::backwardFFT(cx_cube in)
+cube Integrator::backwardFFT(const cx_cube& in)
 {
-    fftw_execute_dft(m_backwardPlan, reinterpret_cast<fftw_complex*>(in.memptr()),
-                     reinterpret_cast<fftw_complex*>(m_real.memptr()));
-
+    m_in = in;
+    fftw_execute_dft(m_backwardPlan, reinterpret_cast<fftw_complex*>(m_in.memptr()),
+                     reinterpret_cast<fftw_complex*>(m_out.memptr()));
 
     //fftShift:
     //shift output to be symmetric around center
     //only in space since temporal should be centered around (0,0)
-    for(int i = 0; i < int(m_real.n_slices); i++){
-        m_real.slice(i) = FFTHelper::ifftShift(m_real.slice(i));
+    for(int i = 0; i < int(m_out.n_slices); i++){
+        m_out.slice(i) = FFTHelper::ifftShift(m_out.slice(i));
     }
 
-    m_real *= m_temporalFreqResolution
+    m_out *= m_temporalFreqResolution
             * m_spatialFreqResolution
             * m_spatialFreqResolution
             /8./core::pi/core::pi/core::pi;
 
-    return real(m_real);
+    return real(m_out);
 }
 
 
-cx_cube Integrator::forwardFFT(cube in)
+cx_cube Integrator::forwardFFT(const cube &in)
 {
+
     //fftShift:
     //shift input to be symmetric around (0,0)
     //only in space since temporal is already centered around (0,0)
-    for(int i = 0; i < int(m_real.n_slices); i++){
-        in.slice(i) = FFTHelper::fftShift(in.slice(i));
+    for(int i = 0; i < int(m_in.n_slices); i++){
+        m_in.slice(i).set_real(FFTHelper::fftShift(in.slice(i)));
+        m_in.slice(i).set_imag(zeros(m_in.n_rows, m_in.n_cols));
     }
 
+    fftw_execute_dft(m_forwardPlan, reinterpret_cast<fftw_complex*>(m_in.memptr()),
+                     reinterpret_cast<fftw_complex*> (m_out.memptr()));
 
-    cx_cube tmp = zeros<cx_cube>(in.n_rows, in.n_rows, in.n_slices);
-    tmp.set_real(in);
-
-    fftw_execute_dft(m_forwardPlan, reinterpret_cast<fftw_complex*>(tmp.memptr()),
-                     reinterpret_cast<fftw_complex*> (m_complex.memptr()));
-
-    return m_complex * m_temporalResolution * m_spatialResolution * m_spatialResolution;
+    return m_out * m_temporalResolution * m_spatialResolution * m_spatialResolution;
 }
 
 
-//cx_mat Integrator::forwardFFT(mat data) const
-//{
-//    //fftShift
-//    data = FFTHelper::fftShift(data);
+cx_mat Integrator::forwardFFT(const mat &in)
+{
+    //fftShift:
+    //shift input to be symmetric around (0,0)
+    m_in_2d.set_real(FFTHelper::fftShift(in));
+    m_in_2d.set_imag(zeros(in.n_rows, in.n_cols));
 
+    fftw_execute_dft(m_forwardPlan_2d, reinterpret_cast<fftw_complex*>(m_in_2d.memptr()),
+                     reinterpret_cast<fftw_complex*> (m_out_2d.memptr()));
 
-//    cx_mat ifftData = zeros<cx_mat>(int(data.n_cols), int(data.n_rows));
-//    cx_mat inData = 0*ifftData;
-//    inData.set_real(data);
-//    int size[2] = {int(data.n_cols), int(data.n_rows)};
-
-//    fftw_complex* in = reinterpret_cast<fftw_complex*> (inData.memptr());
-//    fftw_complex* out = reinterpret_cast<fftw_complex*> (ifftData.memptr());
-//    fftw_plan plan = fftw_plan_dft(2, size, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
-
-//    fftw_execute(plan);
-//    fftw_destroy_plan(plan);
-
-//    return ifftData;
-//}
+    return m_out_2d * m_spatialResolution * m_spatialResolution;;
+}
 
 vec Integrator::timeVec() const
 {
