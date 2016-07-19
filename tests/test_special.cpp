@@ -35,12 +35,12 @@ SUITE(special){
 
 
     TEST(secondKindBesselFunction) {
-        CHECK_EQUAL(Special::secondKindBesselFunction(0.0), 0);
-        CHECK_CLOSE(Special::secondKindBesselFunction(0.1), 0.049937526036241998, 1e-12);
-        CHECK_CLOSE(Special::secondKindBesselFunction(5.0), -0.32757913759146522, 1e-12);
-        CHECK_CLOSE(Special::secondKindBesselFunction(7.01558666981562), 0.0, 1e-12);
-        CHECK_CLOSE(Special::secondKindBesselFunction(-7.01558666981562), 0.0, 1e-12);
-        CHECK_CLOSE(Special::secondKindBesselFunction(3.83170597020751), 0.0, 1e-12);
+        CHECK_EQUAL(Special::secondKindBessel(0.0), 0);
+        CHECK_CLOSE(Special::secondKindBessel(0.1), 0.049937526036241998, 1e-12);
+        CHECK_CLOSE(Special::secondKindBessel(5.0), -0.32757913759146522, 1e-12);
+        CHECK_CLOSE(Special::secondKindBessel(7.01558666981562), 0.0, 1e-12);
+        CHECK_CLOSE(Special::secondKindBessel(-7.01558666981562), 0.0, 1e-12);
+        CHECK_CLOSE(Special::secondKindBessel(3.83170597020751), 0.0, 1e-12);
     }
 
 

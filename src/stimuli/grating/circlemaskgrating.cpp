@@ -46,10 +46,10 @@ complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 k, double w)
     double term2 = Special::delta(w, -m_w);
 
     if(arg1!= 0){
-        term1 *= 2*Special::secondKindBesselFunction(arg1)/arg1;
+        term1 *= 2*Special::secondKindBessel(arg1)/arg1;
     }
     if(arg2!= 0){
-        term2 *= 2*Special::secondKindBesselFunction(arg2)/arg2;
+        term2 *= 2*Special::secondKindBessel(arg2)/arg2;
     }
 
     return m_contrast * core::pi * core::pi * m_maskSize * m_maskSize * 0.25

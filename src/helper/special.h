@@ -3,8 +3,10 @@
 
 
 #include <boost/math/special_functions/bessel.hpp>
+#include <boost/tr1/cmath.hpp>
 #include <helper/helperconstants.h>
 #include <armadillo>
+#include <gsl/gsl_sf_hyperg.h>
 
 using namespace arma;
 
@@ -15,7 +17,9 @@ public:
     Special();
     ~Special();
     static double heaviside(double x);
-    static double secondKindBesselFunction(double x);
+    static unsigned int factorial(unsigned int n);
+    static double secondKindBessel(double x);
+    static double confluentHypergeometric(double a, double b, double x);
     static int isOdd(int num);
     static double delta(double x, double y);
     static double delta(vec2 x, vec2 y);

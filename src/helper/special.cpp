@@ -22,9 +22,26 @@ double Special::heaviside(double x)
     }
 }
 
-double Special::secondKindBesselFunction(double x)
+unsigned int Special::factorial(unsigned int n)
 {
-    double j =  boost::math::cyl_bessel_j(1, x);
+    if (n == 0){
+       return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+
+double Special::confluentHypergeometric(double a, double b, double x)
+{
+    double F = gsl_sf_hyperg_1F1(a, b, x);
+    return F;
+}
+
+
+
+double Special::secondKindBessel(double x)
+{
+    double j = boost::math::cyl_bessel_j(1, x);
     return j;
 }
 
@@ -65,4 +82,5 @@ double Special::nearestValue(const vec x, const double value) {
     }
        return nearestValue;
 }
+
 

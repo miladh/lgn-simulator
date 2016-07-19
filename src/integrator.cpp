@@ -31,6 +31,7 @@ Integrator::Integrator(const int nt,
             * m_spatialResolution;
 
 
+    //fft plans
     m_out = zeros<cx_cube>(m_nPointsSpatial, m_nPointsSpatial, m_nPointsTemporal);
     m_in  = zeros<cx_cube>(m_nPointsSpatial, m_nPointsSpatial, m_nPointsTemporal);
     m_in_2d = zeros<cx_mat>(m_nPointsSpatial, m_nPointsSpatial);
