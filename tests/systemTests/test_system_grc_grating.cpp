@@ -10,10 +10,12 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
 #include <lgnSimulator.h>
+#include <catch.hpp>
+
 
 using namespace lgnSimulator;
+
 
 void runSystemTest_GRC(int nt, double dt, int ns, double ds,
                        double C, int wdId, int kxId, int thetaId,
@@ -66,8 +68,8 @@ void runSystemTest_GRC(int nt, double dt, int ns, double ds,
     double ky = spatialFreq*sin(orientation*core::pi/180.);
     complex<double> Wijl = W.fourierTransform({kx, ky}, wd);
     complex<double> Wr = Wijl* Krg.fourierTransform({kx, ky}, wd)
-                        /(1. - Krc.fourierTransform({kx, ky}, wd)
-                        *Kcr.fourierTransform({kx, ky}, wd));
+            /(1. - Krc.fourierTransform({kx, ky}, wd)
+              *Kcr.fourierTransform({kx, ky}, wd));
     complex<double> Wc = Wr * Kcr.fourierTransform({kx, ky}, wd);
 
     for(int l=0; l < int(t.n_elem); l++){
@@ -87,76 +89,76 @@ void runSystemTest_GRC(int nt, double dt, int ns, double ds,
     cube diff_r = abs(Rr_e - relay.response());
     cube diff_c = abs(Rc_e - cortical.response());
 
-    CHECK_CLOSE(diff_g.max(), 0.0, 1e-10);
-    CHECK_CLOSE(diff_r.max(), 0.0, 1e-10);
-    CHECK_CLOSE(diff_c.max(), 0.0, 1e-10);
+
+    REQUIRE(diff_g.max()== Approx(0.0).epsilon(1e-10));
+    REQUIRE(diff_r.max()== Approx(0.0).epsilon(1e-10));
+    REQUIRE(diff_c.max()== Approx(0.0).epsilon(1e-10));
+
 
 
 }
 
 
 
-SUITE(system){
 
-    TEST(runSystemTest_GRC_0){
-        double dt = 0.1;
-        double ds = 0.1;
-        double w_w = 1.0;
-        double w_rg = 0.5;
-        double w_rc = 0.5;
-        double w_cr = -1.5;
-
-
-        SpatialGaussian Ws( 0.25);
-        TemporalDelta Wt(0, dt);
-        SeparableKernel W(w_w, &Ws, &Wt);
-
-        SpatialDelta Krg_s(ds, {0,0,});
-        TemporalDelta Krg_t(2*dt, dt);
-        SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
-
-        SpatialDelta Krc_s( ds, {0,0,});
-        TemporalDelta Krc_t(0, dt);
-        SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
-
-        SpatialGaussian Kcr_s( 0.23);
-        TemporalDelta Kcr_t(0, dt);
-        SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
-
-        runSystemTest_GRC(2, dt, 2, ds,
-                          -1, 0, 1, 0,
-                          W, Krg, Krc, Kcr);
-    }
+TEST_CASE("runSystemTest_GRC_0"){
+    double dt = 0.1;
+    double ds = 0.1;
+    double w_w = 1.0;
+    double w_rg = 0.5;
+    double w_rc = 0.5;
+    double w_cr = -1.5;
 
 
-    TEST(runSystemTest_GRC_1){
-        double dt = 0.1;
-        double ds = 0.1;
-        double w_w = 1.0;
-        double w_rg = 0.5;
-        double w_rc = 0.5;
-        double w_cr = -1.0;
+    SpatialGaussian Ws( 0.25);
+    TemporalDelta Wt(0, dt);
+    SeparableKernel W(w_w, &Ws, &Wt);
 
-        SpatialGaussian Ws(0.25);
-        TemporalDelta Wt(0, dt);
-        SeparableKernel W(w_w,&Ws, &Wt);
+    SpatialDelta Krg_s(ds, {0,0,});
+    TemporalDelta Krg_t(2*dt, dt);
+    SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
 
-        SpatialDelta Krg_s( ds, {0,0,});
-        TemporalDelta Krg_t(2*dt, dt);
-        SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
+    SpatialDelta Krc_s( ds, {0,0,});
+    TemporalDelta Krc_t(0, dt);
+    SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
 
-        SpatialDelta Krc_s(ds, {0,0,});
-        TemporalDelta Krc_t(0, dt);
-        SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
+    SpatialGaussian Kcr_s( 0.23);
+    TemporalDelta Kcr_t(0, dt);
+    SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
 
-        SpatialGaussian Kcr_s( 0.55);
-        TemporalDelta Kcr_t(3*dt, dt);
-        SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
+    runSystemTest_GRC(2, dt, 2, ds,
+                      -1, 0, 1, 0,
+                      W, Krg, Krc, Kcr);
+}
 
-        runSystemTest_GRC(3, dt, 4, 0.1,
-                          -1, 3, 1, 4,
-                         W, Krg, Krc, Kcr);
-    }
+
+TEST_CASE("runSystemTest_GRC_1"){
+    double dt = 0.1;
+    double ds = 0.1;
+    double w_w = 1.0;
+    double w_rg = 0.5;
+    double w_rc = 0.5;
+    double w_cr = -1.0;
+
+    SpatialGaussian Ws(0.25);
+    TemporalDelta Wt(0, dt);
+    SeparableKernel W(w_w,&Ws, &Wt);
+
+    SpatialDelta Krg_s( ds, {0,0,});
+    TemporalDelta Krg_t(2*dt, dt);
+    SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
+
+    SpatialDelta Krc_s(ds, {0,0,});
+    TemporalDelta Krc_t(0, dt);
+    SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
+
+    SpatialGaussian Kcr_s( 0.55);
+    TemporalDelta Kcr_t(3*dt, dt);
+    SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
+
+    runSystemTest_GRC(3, dt, 4, 0.1,
+                      -1, 3, 1, 4,
+                      W, Krg, Krc, Kcr);
 }
 
 

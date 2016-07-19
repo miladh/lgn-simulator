@@ -6,16 +6,16 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
 #include <lgnSimulator.h>
+#include <catch.hpp>
 
 
 using namespace lgnSimulator;
 
 
 void runSystemTest_G(int nt, double dt, int ns, double ds,
-                    double C, int wdId, int kxId, int thetaId,
-                    const Kernel &W)
+                     double C, int wdId, int kxId, int thetaId,
+                     const Kernel &W)
 {
 
     //integrator
@@ -55,38 +55,36 @@ void runSystemTest_G(int nt, double dt, int ns, double ds,
     }
 
     cube diff = abs(Rg_e - ganglion.response());
-    CHECK_CLOSE(diff.max(), 0.0, 1e-10);
+    REQUIRE(diff.max()== Approx(0.0).epsilon(1e-10));
 
 }
 
 
-SUITE(system){
 
-    TEST(runSystemTest_G_0){
-        double dt = 0.1;
-        double weight = 1.0;
-        SpatialGaussian Ws(0.25);
-        TemporalDelta Wt(0, dt);
-        SeparableKernel W(weight, &Ws, &Wt);
+TEST_CASE("runSystemTest_G_0"){
+    double dt = 0.1;
+    double weight = 1.0;
+    SpatialGaussian Ws(0.25);
+    TemporalDelta Wt(0, dt);
+    SeparableKernel W(weight, &Ws, &Wt);
 
-         runSystemTest_G(2, dt, 2, 0.1,
-                         -1, 0, 1, 0, W);
-    }
-
-
-    TEST(runSystemTest_G_1){
-        double dt = 0.1;
-        double weight = 1.0;
-        SpatialGaussian Ws( 0.25);
-        TemporalDelta Wt(1*dt, dt);
-        SeparableKernel W(weight, &Ws, &Wt);
-
-         runSystemTest_G(3, dt, 2, 0.1,
-                         -1, 3, 1, 4, W);
-    }
-
-
+    runSystemTest_G(2, dt, 2, 0.1,
+                    -1, 0, 1, 0, W);
 }
+
+
+TEST_CASE("runSystemTest_G_1"){
+    double dt = 0.1;
+    double weight = 1.0;
+    SpatialGaussian Ws( 0.25);
+    TemporalDelta Wt(1*dt, dt);
+    SeparableKernel W(weight, &Ws, &Wt);
+
+    runSystemTest_G(3, dt, 2, 0.1,
+                    -1, 3, 1, 4, W);
+}
+
+
 
 
 

@@ -8,14 +8,14 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
 #include <lgnSimulator.h>
+#include <catch.hpp>
+
 
 using namespace lgnSimulator;
-
 void runSystemTest_GR(int nt, double dt, int ns, double ds,
-                    double C, int wdId, int kxId, int thetaId,
-                    const Kernel &W, const Kernel &K)
+                      double C, int wdId, int kxId, int thetaId,
+                      const Kernel &W, const Kernel &K)
 {
 
     //integrator
@@ -67,43 +67,42 @@ void runSystemTest_GR(int nt, double dt, int ns, double ds,
 
     cube diff_g = abs(Rg_e - ganglion.response());
     cube diff_r = abs(Rr_e - relayCell.response());
-    CHECK_CLOSE(diff_g.max(), 0.0, 1e-10);
-    CHECK_CLOSE(diff_r.max(), 0.0, 1e-10);
+    REQUIRE(diff_g.max()== Approx(0.0).epsilon(1e-10));
+    REQUIRE(diff_r.max()== Approx(0.0).epsilon(1e-10));
 
 
 }
 
 
-SUITE(system){
 
-    TEST(runSystemTest_GR_0){
-        double dt = 0.1;
-        double weight = 1;
-        SpatialGaussian Ws(0.25);
-        TemporalDelta Wt(0, dt);
-        SeparableKernel W(weight, &Ws, &Wt);
+TEST_CASE("runSystemTest_GR_0"){
+    double dt = 0.1;
+    double weight = 1;
+    SpatialGaussian Ws(0.25);
+    TemporalDelta Wt(0, dt);
+    SeparableKernel W(weight, &Ws, &Wt);
 
-        runSystemTest_GR(2, dt, 2, 0.1,
-                         -1, 0, 1, 0, W, W);
-    }
-
-
-    TEST(runSystemTest_GR_1){
-        double dt = 0.1;
-        double weight_w = 1;
-        SpatialGaussian Ws(0.25);
-        TemporalDelta Wt(1*dt, dt);
-        SeparableKernel W(weight_w, &Ws, &Wt);
-
-        double weight_k = -1;
-        SpatialGaussian Ks(0.55);
-        TemporalDelta Kt(2*dt, dt);
-        SeparableKernel K(weight_k, &Ws, &Wt);
-
-         runSystemTest_GR(3, dt, 2, 0.1,
-                         -1, 3, 1, 4, W, K);
-    }
-
+    runSystemTest_GR(2, dt, 2, 0.1,
+                     -1, 0, 1, 0, W, W);
 }
+
+
+TEST_CASE("runSystemTest_GR_1"){
+    double dt = 0.1;
+    double weight_w = 1;
+    SpatialGaussian Ws(0.25);
+    TemporalDelta Wt(1*dt, dt);
+    SeparableKernel W(weight_w, &Ws, &Wt);
+
+    double weight_k = -1;
+    SpatialGaussian Ks(0.55);
+    TemporalDelta Kt(2*dt, dt);
+    SeparableKernel K(weight_k, &Ws, &Wt);
+
+    runSystemTest_GR(3, dt, 2, 0.1,
+                     -1, 3, 1, 4, W, K);
+}
+
+
 
 
