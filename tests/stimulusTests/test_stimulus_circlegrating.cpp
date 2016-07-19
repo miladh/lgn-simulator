@@ -5,10 +5,12 @@
  *
  * ********************************************************************/
 
-#include <unittest++/UnitTest++.h>
+
 #include <lgnSimulator.h>
+#include <catch.hpp>
 
 using namespace lgnSimulator;
+
 
 
 void runStimulusCircleMaskGratingTest(int ns, int nt, double dt, double ds,
@@ -46,18 +48,15 @@ void runStimulusCircleMaskGratingTest(int ns, int nt, double dt, double ds,
 //    cout << diff_fourierTransform_imag.max()<< endl;
 
     // Test
-    CHECK_CLOSE(diff_fourierTransform_real.max(), 0.0, 1);
-    CHECK_CLOSE(diff_fourierTransform_imag.max(), 0.0, 1e-10);
+    REQUIRE(diff_fourierTransform_real.max() == Approx(0.0).epsilon(1));
+    REQUIRE(diff_fourierTransform_imag.max() == Approx(0.0).epsilon(1e-10));
 
 }
 
 
-SUITE(stimulus){
 
-
-    TEST(CircleMaskGrating_test_0){
-         runStimulusCircleMaskGratingTest(9, 1, 1, 0.1,
-                                          1.0, 0, 0, 0, 5.0);
-    }
-
+TEST_CASE("CircleMaskGrating_test_0"){
+     runStimulusCircleMaskGratingTest(9, 1, 1, 0.1,
+                                      1.0, 0, 0, 0, 5.0);
 }
+
