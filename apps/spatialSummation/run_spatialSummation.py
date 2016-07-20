@@ -42,7 +42,7 @@ weights = np.linspace(0, 1.0, 6)
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
-for kc in [0.0, 0.8]:
+for Kc in [0.0, 0.8]:
     modify_Krc(Kc)
     modify_Kic(Kc)
     with open(config_file, 'w') as stream:
