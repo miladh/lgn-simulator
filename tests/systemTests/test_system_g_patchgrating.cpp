@@ -10,10 +10,7 @@
 #include <lgnSimulator.h>
 #include <catch.hpp>
 
-
 using namespace lgnSimulator;
-
-
 
 
 double X(double y, double z, unsigned int n)
@@ -22,7 +19,7 @@ double X(double y, double z, unsigned int n)
     double expTerm = exp(-z*z*0.25)/ (4*y*y);
 
     for(int i=0; i < int(n); i++){
-        unsigned int n_fac = Special::factorial(i);
+        double n_fac = 1./Special::factorial(i);
         double term = pow(z * 0.5, 2*i);
         double hypGeom = Special::confluentHypergeometric(i+1, 2, -1./(4*y*y));
         res += n_fac * term * hypGeom;
@@ -38,7 +35,6 @@ double dogResponse(double C, double maskSize, double kd,
     double term2 = c * X(b/maskSize, b*kd, n);
 
     return C*(term1 - term2);
-
 }
 
 
@@ -54,7 +50,8 @@ void runSystemTest_G_pg(int nt, double dt, int ns, double ds,
 
     //stimulus
     double kd = integrator.spatialFreqVec()[kId];
-    CircleMaskGrating stim(&integrator, kd, 0, 0, C, maskSize);
+    double wd = integrator.temporalFreqVec()[0];
+    CircleMaskGrating stim(&integrator, kd, 0, wd, C, maskSize);
     stim.computeFourierTransform();
 
     //ganglion cell
@@ -63,6 +60,7 @@ void runSystemTest_G_pg(int nt, double dt, int ns, double ds,
     SeparableKernel W(weight, &Ws, &Wt);
 
     GanglionCell ganglion(&integrator, W);
+
 
     //Compute analytic:
     double Rg_ex = dogResponse(stim.contrast(), stim.maskSize(), stim.spatialFreq(),
@@ -75,46 +73,49 @@ void runSystemTest_G_pg(int nt, double dt, int ns, double ds,
                                      0);
 
 
+
     //Test
-    //    cout << kd << endl;
-    //    cout << Rg_ex - Rgc << endl;
-    INFO( "kd=" << kd << "  d=" << maskSize);
+    INFO( "kd=" <<  stim.spatialFreq()
+          << "  d=" << stim.maskSize()
+          << "   Ns=" << integrator.nPointsSpatial());
     REQUIRE(Rg_ex== Approx(Rgc).epsilon(eps));
 }
 
 
 
-
-
 //Grating---------------------------------------------
-TEST_CASE("runTest_G_pg_grating"){
-    double eps = 1e-3;
-    vec diameters = linspace(0.0, 10, 11);
-    vec kId =linspace(0, 90, 10);
-    for(double d : diameters){
-        for(double k : kId){
-            runSystemTest_G_pg(1, 1.0, 9, 0.1,
-                               1.0, d, k,
-                               0.62, 1.26, 0.85,
-                               1, 4, eps);
-        }
-    }
+//TEST_CASE("runTest_G_pg_grating"){
+//    double eps = 1e-5;
+//    int ns = 9;
+//    vec diameters = linspace(0.0, 10, 11);
+//    vec kId =linspace(0, pow(2, ns-2), 10);
 
-}
+//    for(double d : diameters){
+//        for(double k : kId){
+//            SECTION(to_string(k) + "-" +  to_string(d)) {
+//                runSystemTest_G_pg(1, 1.0, ns, 0.1,
+//                                   1.0, d, k,
+//                                   0.62, 1.26, 0.85,
+//                                   1, 12, eps);
+//            }
+//        }
+//    }
+
+//}
 
 
 //Spot--------------------------------------------
 TEST_CASE("runTest_G_pg_spot"){
-    double eps = 1e-6;
+    double eps = 1e-14;
     vec diameters = linspace(0.0, 10, 11);
     for(double d : diameters){
-            runSystemTest_G_pg(1, 1.0, 9, 0.1,
+        SECTION(to_string(d)) {
+            runSystemTest_G_pg(1, 1.0, 8, 0.1,
                                1.0, d, 0,
                                0.62, 1.26, 0.85,
                                1, 4, eps);
+        }
     }
-
-
 
 }
 

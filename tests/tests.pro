@@ -36,7 +36,8 @@ SOURCES += main.cpp \
     systemTests/test_system_gric_grating.cpp \
     stimulusTests/test_stimulus_circlegrating.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
-    systemTests/test_system_g_patchgrating.cpp
+    systemTests/test_system_g_patchgrating.cpp \
+    systemTests/test_system_g_patchgrating_numeric.cpp
 
 
 
