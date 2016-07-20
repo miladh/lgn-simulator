@@ -23,7 +23,6 @@ double computeIntegral(mat s, mat irf){
 }
 
 
-
 //Grating---------------------------------------------
 TEST_CASE("runTest_G_pg_grating_numeric"){
     double eps = 1e-3;
