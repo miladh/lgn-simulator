@@ -26,8 +26,8 @@ void CorticalCell::computeImpulseResponseFourierTransform()
                 vec2 kVec= {m_spatialFreqs[i], m_spatialFreqs[j]};
 
                 m_impulseResponseFT(i,j,k)
-                        = m_relayInput->kernel.fourierTransform(kVec,w)
-                        * m_relayInput->
+                        = m_relayInput.at(0).kernel.fourierTransform(kVec,w)
+                        * m_relayInput.at(0).
                         neuron->impulseResponseFourierTransform()(i,j,k);
             }
         }
@@ -36,8 +36,8 @@ void CorticalCell::computeImpulseResponseFourierTransform()
 
 void CorticalCell::computeNeededcubes() const
 {
-    if(!m_relayInput->neuron->isImpulseResponseFourierTransformComputed()){
-        m_relayInput->neuron->computeImpulseResponseFourierTransform();
+    if(!m_relayInput.at(0).neuron->isImpulseResponseFourierTransformComputed()){
+        m_relayInput.at(0).neuron->computeImpulseResponseFourierTransform();
     }
 }
 
@@ -45,8 +45,12 @@ void CorticalCell::computeNeededcubes() const
 
 void CorticalCell::addRelayCell(Neuron* const neuron, const Kernel &kernel)
 {
-    if (neuron->type() == "relay") {
-        m_relayInput = new Input{neuron, kernel};
+    if(m_relayInput.size()>1){
+        throw length_error("cortical cell already has relay cell input");
+
+    }else if (neuron->type() == "relay") {
+        m_relayInput.emplace_back(Input{neuron, kernel});
+
     }else{
         throw overflow_error("wrong cell type in addRelayCell(): "
                              + neuron->type());
@@ -55,5 +59,5 @@ void CorticalCell::addRelayCell(Neuron* const neuron, const Kernel &kernel)
 
 const Kernel* CorticalCell::relayInputKernel() const
 {
-    return &m_relayInput->kernel;
+    return &m_relayInput.at(0).kernel;
 }

@@ -17,7 +17,6 @@ double SpatialGaussian::spatial(vec2 r) const
 
 complex<double> SpatialGaussian::fourierTransform(vec2 k) const
 {
-
     return exp(-dot(k,k) * m_a*m_a / 4.);
 }
 

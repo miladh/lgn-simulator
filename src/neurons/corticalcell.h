@@ -20,7 +20,7 @@ public:
     virtual void computeImpulseResponseFourierTransform();
 
 private:
-    Input* m_relayInput = nullptr;
+    vector<Input> m_relayInput;
     void computeNeededcubes() const;
 
 };

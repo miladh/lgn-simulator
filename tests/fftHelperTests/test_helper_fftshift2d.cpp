@@ -17,6 +17,17 @@ using namespace lgnSimulator;
 TEST_CASE("fftshift_2D"){
     cx_mat sig, centered, shifted;
 
+//    /*------------------------------------------------------*/
+
+//    sig << complex<double>(1,1) << -3 << endr
+//        << 3 << -1 << endr;
+
+//    centered << complex<double>(1,2) << 3 << endr
+//             << -3 << 3 << endr;
+
+
+//    cout << sig % centered << endl;
+
 
     sig << 0 << -2 << -5 << endr
         << -1 << -4 << -5 << endr
