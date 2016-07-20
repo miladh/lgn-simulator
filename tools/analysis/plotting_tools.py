@@ -378,7 +378,7 @@ if __name__ == "__main__":
     import Simulation as sim
     plt.close("all")
 
-    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
+    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(None, f)
 

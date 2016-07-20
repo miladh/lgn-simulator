@@ -18,6 +18,7 @@ private:
 };
 
 }
-unique_ptr<lgnSimulator::StaticImage> createStaticImageStimulus(const lgnSimulator::Integrator &integrator, const YAML::Node &cfg);
+unique_ptr<lgnSimulator::StaticImage> createStaticImageStimulus(lgnSimulator::Integrator* const integrator,
+                                                                const YAML::Node &cfg);
 
 #endif // STATICIMAGE_H

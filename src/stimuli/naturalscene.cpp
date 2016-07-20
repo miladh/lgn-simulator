@@ -32,7 +32,7 @@ void NaturalScene::computeSpatiotemporal()
 
 void NaturalScene::computeFourierTransform()
 {
-//    m_sceneFourierTransform = m_integrator->forwardFFT(m_scene);
+    m_sceneFourierTransform = m_integrator->forwardFFT(m_scene);
 
     for(int k = 0; k < int(m_spatiotemporal.n_slices); k++){
         m_fourierTransform.slice(k) = m_sceneFourierTransform
@@ -62,7 +62,7 @@ void NaturalScene::readScene()
     //Convert to arma mat
     cvMat.convertTo(cvMat, CV_64F);
     mat scene(reinterpret_cast<double*>(cvMat.data), cvMat.rows, cvMat.cols);
-    m_scene.set_real(scene);
-    m_scene = normalise(fliplr(m_scene));
+    m_scene = scene;
+    m_scene = fliplr(m_scene)/m_scene.max();
 }
 

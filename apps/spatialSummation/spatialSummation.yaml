@@ -10,7 +10,7 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: false
+    storeSpatiotemporal: true
     storeFT: false
 
     # Grating:
@@ -21,6 +21,8 @@ stimulus:
     kId:  0           #[-Ns/2, Ns/2 - 1]
     wId:  0           #[-Nt/2, Nt/2 - 1]
 
+
+    sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/smily.png"
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
@@ -70,7 +72,7 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 0.5
+        w: 0.0
         spatial:
         #Gauss
             a: 0.1
@@ -102,7 +104,7 @@ interneuron:
 
 
     Kic:
-        w: 0.5
+        w: 0.0
         spatial:
         #Gauss
             a: 1.0
