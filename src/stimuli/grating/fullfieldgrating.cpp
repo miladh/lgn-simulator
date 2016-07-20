@@ -5,8 +5,8 @@ using namespace lgnSimulator;
 
 FullFieldGrating::FullFieldGrating(Integrator* const integrator,
                                     double spatialFreq, double orientation,
-                                   double  temporalFreq,double contrast)
-    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, 0)
+                                   double  temporalFreq, double contrast, double phase)
+    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, 0, phase)
 {
     m_mask = "none";
     m_peak = 1.0

@@ -5,13 +5,14 @@ using namespace lgnSimulator;
 CSCircleMaskGrating::CSCircleMaskGrating(Integrator* const integrator,
                                          double spatialFreq, double orientation,
                                          double temporalFreq,double contrast,
-                                         double surroundSize)
-    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, surroundSize)
+                                         double surroundSize,
+                                         double phase)
+    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, surroundSize, phase)
 {
    m_mask= "cscircle";
-   m_centerSize = 5;
+   m_centerSize = 1.746988;
 //   m_centerK = vec2{m_k*cos(core::pi/2), m_k*sin(core::pi/2)};
-   m_centerK = m_kVec*2;
+   m_centerK = m_kVec;
 
 }
 
@@ -35,7 +36,7 @@ double CSCircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
     if(r  > m_maskSize * 0.5){
         return 0;
     }else if( r > m_centerSize * 0.5){
-        return  m_contrast *  cos(dot(m_kVec, rVec) - m_w * t);
+        return  m_contrast *  cos(dot(m_kVec, rVec) - m_w * t + m_phase);
     }else{
         return m_contrast * cos(dot(m_centerK, rVec) - m_w * t);
 

@@ -15,7 +15,7 @@ class Grating : public Stimulus
 public:
     Grating(Integrator * const integrator,
             double spatialFreq, double orientation, double temporalFreq,
-            double contrast, double maskSize = 0.0);
+            double contrast, double maskSize = 0.0, double phase=0.0);
     ~Grating();
 
     // Stimulus interface
@@ -42,6 +42,7 @@ protected:
     double m_w = 0;
     double m_contrast = 0.0;
     double m_maskSize = 0.0;
+    double m_phase = 0.0;
     string m_mask;
 
     virtual double valueAtPoint(vec2 r, double t) const  = 0;

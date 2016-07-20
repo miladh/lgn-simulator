@@ -9,7 +9,7 @@ class CSCircleMaskGrating : public Grating
 public:
     CSCircleMaskGrating(Integrator* const integrator,
                         double spatialFreq, double orientation, double temporalFreq,
-                        double contrast, double surroundSize);
+                        double contrast, double surroundSize, double phase=0.);
     ~CSCircleMaskGrating();
 
 

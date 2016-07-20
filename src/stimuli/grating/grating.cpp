@@ -11,13 +11,14 @@ using namespace lgnSimulator;
 
 Grating::Grating(Integrator* const integrator,
                  double spatialFreq, double orientation, double temporalFreq,
-                 double contrast, double maskSize)
+                 double contrast, double maskSize, double phase)
     : Stimulus(integrator)
     , m_k(spatialFreq)
     , m_orientation(orientation*core::pi/180.)
     , m_w(temporalFreq)
     , m_contrast(contrast)
     , m_maskSize(maskSize)
+    , m_phase(phase*core::pi/180.)
 {
     m_type = "grating";
     m_kVec = {Special::nearestValue(m_spatialFreqs, m_k*cos(m_orientation)),
@@ -126,6 +127,7 @@ unique_ptr<Grating> createGratingStimulus(Integrator* const integrator, const YA
     string mask = cfg["mask"].as<string>();
     double maskSize = cfg["maskSize"].as<double>();
     double orientation = cfg["orientation"].as<double>();
+    double phase = cfg["phase"].as<double>();
     double contrast = cfg["C"].as<double>();
     int kId = cfg["kId"].as<int>();
     int wId = cfg["wId"].as<int>();
@@ -163,21 +165,21 @@ unique_ptr<Grating> createGratingStimulus(Integrator* const integrator, const YA
     if(mask == "none"){
         return unique_ptr<FullFieldGrating>(
                     new FullFieldGrating(integrator, spatialFreq, orientation,
-                                         temporalFreq, contrast));
+                                         temporalFreq, contrast, phase));
 
     }else if(mask == "circle"){
         return unique_ptr<CircleMaskGrating>(
                     new CircleMaskGrating(integrator, spatialFreq, orientation,
-                                          temporalFreq, contrast, maskSize));
+                                          temporalFreq, contrast, maskSize, phase));
 
     }else if(mask == "gaussian"){
         return unique_ptr<GaussianMaskGrating>(
                     new GaussianMaskGrating(integrator, spatialFreq, orientation,
-                                          temporalFreq, contrast, maskSize));
+                                          temporalFreq, contrast, maskSize, phase));
     }else if(mask == "cscircle"){
         return unique_ptr<CSCircleMaskGrating>(
                     new CSCircleMaskGrating(integrator, spatialFreq, orientation,
-                                          temporalFreq, contrast, maskSize));
+                                          temporalFreq, contrast, maskSize, phase));
     }else{
         cout << "mask: " << mask << endl;
         throw overflow_error("Unknown grating mask");

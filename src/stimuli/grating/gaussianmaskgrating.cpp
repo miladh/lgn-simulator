@@ -3,9 +3,9 @@
 using namespace lgnSimulator;
 GaussianMaskGrating::GaussianMaskGrating(Integrator* const integrator,
                                          double spatialFreq, double orientation,
-                                         double temporalFreq,double contrast,
-                                         double maskSize)
-    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, maskSize)
+                                         double temporalFreq, double contrast,
+                                         double maskSize, double phase)
+    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, maskSize, phase)
 {
     m_mask= "gaussian";
     m_gaussianMask = new SpatialGaussian(maskSize);

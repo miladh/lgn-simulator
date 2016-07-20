@@ -9,7 +9,7 @@ class CircleMaskGrating : public Grating
 public:
     CircleMaskGrating(Integrator* const integrator,
                       double spatialFreq, double orientation, double temporalFreq,
-                      double contrast, double maskSize);
+                      double contrast, double maskSize, double phase=0.0);
     ~CircleMaskGrating();
 
 //    virtual void computeFourierTransform();

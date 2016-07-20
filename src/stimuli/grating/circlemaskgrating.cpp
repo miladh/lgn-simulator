@@ -5,9 +5,9 @@ using namespace lgnSimulator;
 
 CircleMaskGrating::CircleMaskGrating(Integrator* const integrator,
                                      double spatialFreq, double orientation,
-                                     double temporalFreq,double contrast,
-                                     double maskSize)
-    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, maskSize)
+                                     double temporalFreq, double contrast,
+                                     double maskSize, double phase)
+    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, maskSize, phase)
 {
     m_mask= "circle";
 }

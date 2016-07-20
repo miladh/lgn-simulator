@@ -15,14 +15,15 @@ stimulus:
 
     # Grating:
     C: 1.0
-    mask: "circle" #none/circle/gaussian
-    maskSize: 2.0
+    mask: "cscircle" #none/circle/gaussian
+    maskSize: 5.542169
     orientation: 0.   #degrees
-    kId:  0           #[-Ns/2, Ns/2 - 1]
+    phase: 90.        #degrees
+    kId:  4           #[-Ns/2, Ns/2 - 1]
     wId:  0           #[-Nt/2, Nt/2 - 1]
 
 
-    sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/lena.png"
+    #sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/lena.png"
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0

@@ -9,6 +9,8 @@ current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../tools")))
 import sumatra_tracking.run_simulator as st
 
+def modify_phase(phase):
+    config_data["stimulus"]["phase"] = float(phase)
 
 def modify_spatial_freq(d):
     config_data["stimulus"]["kId"] = int(d)
@@ -25,6 +27,8 @@ def modify_Krc(w):
 def modify_Kri(w):
     config_data["relay"]["Kri"]["w"]= float(-w)
 
+
+
 #read config file-----------------------------------------------------------------------------
 options = sys.argv[1:]
 record_label = options[-1]
@@ -37,35 +41,23 @@ with open(config_file, 'r') as stream:
 #parameters-------------------------------------------------------------------------------------
 # spot_diameters = np.linspace(0., 15, 250)
 spot_diameters = [5.542169]
-spatial_freqs = range(0, 90)
+spatial_freqs = 4
 weights = np.linspace(0, 1.0, 6)
+phase = [-pi/2, -pi/4, 0, pi/2, pi/4]
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
-for Kc in [0.0, 0.8]:
+for Kc in weights:
     modify_Krc(Kc)
     modify_Kic(Kc)
-    with open(config_file, 'w') as stream:
-        yaml.dump(config_data, stream)
+    for p in phase:
+        modify_phase(p)
+        for d in spot_diameters:
+            modify_diameter(d)
+            with open(config_file, 'w') as stream:
+                yaml.dump(config_data, stream)
 
-    run_id = '{0:04}'.format(counter)
-    st.run_simulator(config_file, record_label, run_id)
-    counter+=1
-
-
-
-# counter= 0
-# for Kc in weights:
-#     modify_Krc(Kc)
-#     modify_Kic(Kc)
-#     for Kd in spatial_freqs:
-#         modify_spatial_freq(Kd)
-#         for d in spot_diameters:
-#             modify_diameter(d)
-#             with open(config_file, 'w') as stream:
-#                 yaml.dump(config_data, stream)
-#
-#             run_id = '{0:04}'.format(counter)
-#             st.run_simulator(config_file, record_label, run_id)
-#             counter+=1
+            run_id = '{0:04}'.format(counter)
+            st.run_simulator(config_file, record_label, run_id)
+            counter+=1
 os.remove(config_file)
