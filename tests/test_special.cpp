@@ -22,6 +22,15 @@ TEST_CASE("second kind Bessel function", "[bessel]" ) {
 }
 
 
+TEST_CASE("factorial function", "[factorial]" ) {
+    REQUIRE(Special::factorial(0)==1);
+    REQUIRE(Special::factorial(1)==1);
+    REQUIRE(Special::factorial(4)==24);
+    REQUIRE(Special::factorial(10)== 3628800);
+    REQUIRE(Special::factorial(12)== 479001600);
+}
+
+
 TEST_CASE("heaviside function", "[heaviside]" ) {
     REQUIRE(Special::heaviside(-1.2)==0);
     REQUIRE(Special::heaviside(0.0)==1.);

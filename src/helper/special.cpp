@@ -22,12 +22,12 @@ double Special::heaviside(double x)
     }
 }
 
-unsigned int Special::factorial(unsigned int n)
+int Special::factorial(int n)
 {
-    if (n == 0){
-       return 1;
+    if(n > 12){
+        cerr << "too large (n_max=12) n in factorial(n): " << n << endl;
     }
-    return n * factorial(n - 1);
+    return boost::math::factorial<double>(n);
 }
 
 

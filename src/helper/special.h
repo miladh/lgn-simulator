@@ -17,7 +17,7 @@ public:
     Special();
     ~Special();
     static double heaviside(double x);
-    static unsigned int factorial(unsigned int n);
+    static int factorial(int n);
     static double secondKindBessel(double x);
     static double confluentHypergeometric(double a, double b, double x);
     static int isOdd(int num);

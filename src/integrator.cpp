@@ -41,18 +41,18 @@ Integrator::Integrator(const int nt,
     m_backwardPlan = fftw_plan_dft_3d(m_nPointsTemporal, m_nPointsSpatial, m_nPointsSpatial,
                                       reinterpret_cast<fftw_complex*> (m_out.memptr()),
                                       reinterpret_cast<fftw_complex*> (m_in.memptr()),
-                                      FFTW_BACKWARD, FFTW_ESTIMATE);
+                                      FFTW_BACKWARD, FFTW_MEASURE);
 
     m_forwardPlan = fftw_plan_dft_3d(m_nPointsTemporal, m_nPointsSpatial, m_nPointsSpatial,
                                      reinterpret_cast<fftw_complex*> (m_in.memptr()),
                                      reinterpret_cast<fftw_complex*> (m_out.memptr()),
-                                     FFTW_FORWARD, FFTW_ESTIMATE);
+                                     FFTW_FORWARD, FFTW_MEASURE);
 
 
     m_forwardPlan_2d = fftw_plan_dft_2d(m_nPointsSpatial, m_nPointsSpatial,
                                      reinterpret_cast<fftw_complex*> (m_in_2d.memptr()),
                                      reinterpret_cast<fftw_complex*> (m_out_2d.memptr()),
-                                     FFTW_FORWARD, FFTW_ESTIMATE);
+                                     FFTW_FORWARD, FFTW_MEASURE);
 }
 
 Integrator::~Integrator()
