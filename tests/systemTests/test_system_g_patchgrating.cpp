@@ -78,9 +78,22 @@ void runSystemTest_G_pg(int nt, double dt, int ns, double ds,
     INFO( "kd=" <<  stim.spatialFreq()
           << "  d=" << stim.maskSize()
           << "   Ns=" << integrator.nPointsSpatial());
-    REQUIRE(Rg_ex== Approx(Rgc).epsilon(eps));
+    CHECK(Rg_ex== Approx(Rgc).epsilon(eps));
 }
 
+
+
+//Spot--------------------------------------------
+TEST_CASE("runTest_G_pg_spot"){
+    double eps = 1e-14;
+    vec diameters = linspace(0.0, 10, 11);
+    for(double d : diameters){
+            runSystemTest_G_pg(1, 1.0, 8, 0.1,
+                               1.0, d, 0,
+                               0.62, 1.26, 0.85,
+                               1, 4, eps);
+        }
+}
 
 
 //Grating---------------------------------------------
@@ -104,20 +117,6 @@ void runSystemTest_G_pg(int nt, double dt, int ns, double ds,
 //}
 
 
-//Spot--------------------------------------------
-TEST_CASE("runTest_G_pg_spot"){
-    double eps = 1e-14;
-    vec diameters = linspace(0.0, 10, 11);
-    for(double d : diameters){
-        SECTION(to_string(d)) {
-            runSystemTest_G_pg(1, 1.0, 8, 0.1,
-                               1.0, d, 0,
-                               0.62, 1.26, 0.85,
-                               1, 4, eps);
-        }
-    }
-
-}
 
 
 

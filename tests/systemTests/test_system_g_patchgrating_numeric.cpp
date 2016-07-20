@@ -2,7 +2,7 @@
  *  Test: ganglion cell response for patch grating, in the case where
  *        the stimulation spot and receptive-field are concentric.
  *
- *  Analytic source: Einevoll et. al (2005)
+ *  Analytic source: numerical integration
  *
  * ********************************************************************/
 
@@ -19,66 +19,69 @@ double computeIntegral(mat s, mat irf){
             res+= (s(i+1,j+1) * irf(i+1,j+1) + s(i,j) * irf(i,j));
         }
     }
-
     return res;
 }
 
 
 
-////Grating---------------------------------------------
-//TEST_CASE("runTest_G_pg_grating_numeric"){
-//    double eps = 1e-5;
-//    int ns = 9;
-//    double ds = 0.1;
+//Grating---------------------------------------------
+TEST_CASE("runTest_G_pg_grating_numeric"){
+    double eps = 1e-3;
+    int ns = 10;
+    double ds = 0.01;
 
-//    vec diameters = linspace(0.0, 10, 11);
-//    vec kId =linspace(0, pow(2, ns-2), 10);
-
-
-//    //integrator
-//    Integrator integrator(1, 0.1, ns, ds);
-
-//    //ganglion cell
-//    DOG Ws(0.62, 1.26, 0.85);
-//    TemporalDelta Wt(0, 1);
-//    SeparableKernel W(1, &Ws, &Wt);
-//    GanglionCell ganglion(&integrator, W);
-
-//    ganglion.computeImpulseResponse();
-//    mat irf = ganglion.impulseResponse().slice(0);
+    vec diameters = linspace(1.0, 10, 10);
+    vec kId =linspace(0, pow(2, ns-2), 10);
 
 
+    //integrator
+    Integrator integrator(1, 0.1, ns, ds);
 
-//    for(double d : diameters){
-//        for(double k : kId){
+    //kernel
+    DOG Ws(0.62, 1.26, 0.85);
+    TemporalDelta Wt(0, 1);
+    SeparableKernel W(1, &Ws, &Wt);
 
-//            double kd = integrator.spatialFreqVec()[k];
-//            CircleMaskGrating stim(&integrator, kd, 0, 0, 1, d);
+    int counter=-1;
+    for(double d : diameters){
+        for(double k : kId){
+            counter+=1;
 
-//            stim.computeFourierTransform();
-//            stim.computeSpatiotemporal();
+            //ganglion
+            GanglionCell ganglion(&integrator, W);
+            ganglion.computeImpulseResponse();
+            mat irf = ganglion.impulseResponse().slice(0);
 
-//            //fft
-//            ganglion.computeResponse(&stim);
-//            double Rgc = ganglion.response()(integrator.nPointsSpatial()/2,
-//                                             integrator.nPointsSpatial()/2,0);
+            //stim
+            double kd = integrator.spatialFreqVec()[k];
+            CircleMaskGrating stim(&integrator, kd, 0, 0, 1, d);
+            stim.computeFourierTransform();
+            stim.computeSpatiotemporal();
 
-//            //numeric
-//            mat s = stim.spatioTemporal().slice(0);
-//            double R_num = computeIntegral(s, irf)
-//                    * integrator.spatialResolution()
-//                    * integrator.spatialResolution()/2.;
+            //fft
+            ganglion.computeResponse(&stim);
+            double Rgc = ganglion.response()(integrator.nPointsSpatial()/2,
+                                             integrator.nPointsSpatial()/2,0);
 
+            //numeric
+            mat s = stim.spatioTemporal().slice(0);
+            double R_num = computeIntegral(s, irf)
+                    * integrator.spatialResolution()
+                    * integrator.spatialResolution()/2.;
 
-//            SECTION(to_string(k) + "-" +  to_string(d)) {
-//                cout << "fft: " << Rgc
-//                     << "- bf: "  << R_num << endl;
-//                REQUIRE(R_num == Approx(Rgc).epsilon(eps));
-//            }
-//        }
-//    }
+//            cout << setprecision(10)
+//                 <<"Test: " + to_string(counter)
+//                 << " bf: "  << R_num
+//                 << " - fft: " << Rgc
+//                 << endl;
 
-//}
+                INFO( "kd=" <<  stim.spatialFreq() << "  d=" << stim.maskSize());
+                CHECK(R_num == Approx(Rgc).epsilon(eps));
+
+        }
+    }
+
+}
 
 
 
