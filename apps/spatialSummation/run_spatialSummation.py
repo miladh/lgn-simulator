@@ -42,17 +42,24 @@ weights = np.linspace(0, 1.0, 6)
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
-for Kc in weights:
-    modify_Krc(Kc)
-    modify_Kic(Kc)
-    for Kd in spatial_freqs:
-        modify_spatial_freq(Kd)
-        for d in spot_diameters:
-            modify_diameter(d)
-            with open(config_file, 'w') as stream:
-                yaml.dump(config_data, stream)
+run_id = '{0:04}'.format(counter)
+st.run_simulator(config_file, record_label, run_id)
+counter+=1
 
-            run_id = '{0:04}'.format(counter)
-            st.run_simulator(config_file, record_label, run_id)
-            counter+=1
+
+
+# counter= 0
+# for Kc in weights:
+#     modify_Krc(Kc)
+#     modify_Kic(Kc)
+#     for Kd in spatial_freqs:
+#         modify_spatial_freq(Kd)
+#         for d in spot_diameters:
+#             modify_diameter(d)
+#             with open(config_file, 'w') as stream:
+#                 yaml.dump(config_data, stream)
+#
+#             run_id = '{0:04}'.format(counter)
+#             st.run_simulator(config_file, record_label, run_id)
+#             counter+=1
 os.remove(config_file)
