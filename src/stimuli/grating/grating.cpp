@@ -110,6 +110,15 @@ double Grating::orientation(bool inDegrees) const
     return m_orientation;
 }
 
+
+double Grating::phase(bool inDegrees) const
+{
+    if(inDegrees){
+        return m_phase * 180. / core::pi;
+    }
+    return m_phase;
+}
+
 double Grating::contrast() const
 {
     return m_contrast;

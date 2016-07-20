@@ -131,6 +131,7 @@ void OutputManager::writeStimulusProperties(const Stimulus* stimulus)
         string mask = gratingStimulus->mask();
         vec2 k = gratingStimulus->kVec();
         double orientation = gratingStimulus->orientation(true);
+        double phase = gratingStimulus->phase(true);
         double spatialFreq = gratingStimulus->spatialFreq();
         double w = gratingStimulus->temporalFreq();
 
@@ -139,6 +140,7 @@ void OutputManager::writeStimulusProperties(const Stimulus* stimulus)
         Attribute maskSize_a(stim.createAttribute("mask_size",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute k_a(stim.createAttribute("spatial_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute orientation_a(stim.createAttribute("orientation",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute phase_a(stim.createAttribute("phase",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute kx_a(stim.createAttribute("kx",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute ky_a(stim.createAttribute("ky",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute w_a(stim.createAttribute("temporal_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
@@ -150,6 +152,7 @@ void OutputManager::writeStimulusProperties(const Stimulus* stimulus)
         maskSize_a.write(PredType::NATIVE_DOUBLE, &maskSize);
         k_a.write(PredType::NATIVE_DOUBLE, &spatialFreq);
         orientation_a.write(PredType::NATIVE_DOUBLE, &orientation);
+        phase_a.write(PredType::NATIVE_DOUBLE, &phase);
         kx_a.write(PredType::NATIVE_DOUBLE, &k(0));
         ky_a.write(PredType::NATIVE_DOUBLE, &k(1));
         w_a.write(PredType::NATIVE_DOUBLE, &w);
