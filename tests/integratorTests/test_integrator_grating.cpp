@@ -27,7 +27,7 @@ void runIntegratorGratingTest(int ns, int nt, double dt, double ds,
     double wd = w(wdId);
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
-    double phase = 0;
+    double phase = orientation-37;
 
     FullFieldGrating grating(&integrator, spatialFreq, wd, C, phase, orientation);
     grating.computeFourierTransform();

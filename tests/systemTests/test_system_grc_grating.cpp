@@ -36,7 +36,7 @@ void runSystemTest_GRC(int nt, double dt, int ns, double ds,
     double wd = w(wdId);
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
-    double phase = 0.0;
+    double phase = orientation+23.4;
 
     FullFieldGrating grating(&integrator, spatialFreq, wd, C, phase, orientation);
     grating.computeFourierTransform();
@@ -77,11 +77,14 @@ void runSystemTest_GRC(int nt, double dt, int ns, double ds,
         for(int i = 0; i < int(r.n_elem); i++){
             for(int j = 0; j < int(r.n_elem); j++){
                 Rg_e(i,j,l) = C * abs(Wijl)
-                        * cos(kx*r[i] + ky*r[j] - wd * t[l] + arg(Wijl));
+                        * cos(kx*r[i] + ky*r[j] - wd * t[l] + arg(Wijl)
+                              + phase*core::pi/180.);
                 Rr_e(i,j,l) = R0 + C * abs(Wr)
-                        * cos(kx*r[i] + ky*r[j] - wd * t[l] + arg(Wr));
+                        * cos(kx*r[i] + ky*r[j] - wd * t[l] + arg(Wr)
+                              + phase*core::pi/180.);
                 Rc_e(i,j,l) = C * abs(Wc)
-                        * cos(kx*r[i] + ky*r[j] - wd * t[l] + arg(Wc));
+                        * cos(kx*r[i] + ky*r[j] - wd * t[l] + arg(Wc)
+                              + phase*core::pi/180.);
             }
         }
     }
