@@ -31,8 +31,9 @@ void runSystemTest_GR(int nt, double dt, int ns, double ds,
     double wd = w(wdId);
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
+    double phase = 0.0;
 
-    FullFieldGrating grating(&integrator, spatialFreq, orientation, wd, C);
+    FullFieldGrating grating(&integrator, spatialFreq, wd, C, phase, orientation);
     grating.computeFourierTransform();
 
     //ganglion cell

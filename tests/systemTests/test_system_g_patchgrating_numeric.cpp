@@ -41,6 +41,11 @@ TEST_CASE("runTest_G_pg_grating_numeric"){
     TemporalDelta Wt(0, 1);
     SeparableKernel W(1, &Ws, &Wt);
 
+    double wd = 0;
+    double C = 1;
+    double phase =0.0;
+    double orientation = 0.0;
+
     int counter=-1;
     for(double d : diameters){
         for(double k : kId){
@@ -53,7 +58,8 @@ TEST_CASE("runTest_G_pg_grating_numeric"){
 
             //stim
             double kd = integrator.spatialFreqVec()[k];
-            CircleMaskGrating stim(&integrator, kd, 0, 0, 1, d);
+            CircleMaskGrating stim(&integrator, kd, wd, C, phase, orientation, d);
+
             stim.computeFourierTransform();
             stim.computeSpatiotemporal();
 

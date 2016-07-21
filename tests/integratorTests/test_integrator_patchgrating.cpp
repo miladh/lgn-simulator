@@ -28,8 +28,9 @@ void runIntegratorPatchGratingTest(int ns, int nt, double dt, double ds,
     double wd = w(wdId);
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
+    double phase = 0.0;
 
-    CircleMaskGrating grating(&integrator, spatialFreq, orientation, wd, C, maskSize);
+    CircleMaskGrating grating(&integrator, spatialFreq, wd, C, phase, orientation, maskSize);
     grating.computeFourierTransform();
     grating.computeSpatiotemporal();
 

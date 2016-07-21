@@ -10,15 +10,15 @@ using namespace lgnSimulator;
 
 
 Grating::Grating(Integrator* const integrator,
-                 double spatialFreq, double orientation, double temporalFreq,
-                 double contrast, double maskSize, double phase)
+                 double spatialFreq, double temporalFreq,
+                 double contrast, double phase,
+                 double orientation)
     : Stimulus(integrator)
     , m_k(spatialFreq)
-    , m_orientation(orientation*core::pi/180.)
     , m_w(temporalFreq)
     , m_contrast(contrast)
-    , m_maskSize(maskSize)
     , m_phase(phase*core::pi/180.)
+    , m_orientation(orientation*core::pi/180.)
 {
     m_type = "grating";
     m_kVec = {Special::nearestValue(m_spatialFreqs, m_k*cos(m_orientation)),
@@ -27,11 +27,6 @@ Grating::Grating(Integrator* const integrator,
     setSpatialFreq(sqrt(dot(m_kVec, m_kVec)));
     setOrientation(atan2(m_kVec(1), m_kVec(0)));
 
-    if(maskSize > m_spatialVec.max()-m_spatialVec.min()){
-        cerr << "Warning: mask size (" << maskSize
-             << ") larger than grid length: " << m_spatialVec.max()-m_spatialVec.min()
-             << endl;
-    }
 }
 
 Grating::~Grating()
@@ -124,17 +119,12 @@ double Grating::contrast() const
     return m_contrast;
 }
 
-double Grating::maskSize() const
-{
-    return m_maskSize;
-}
 
 
 
 unique_ptr<Grating> createGratingStimulus(Integrator* const integrator, const YAML::Node &cfg)
 {
     string mask = cfg["mask"].as<string>();
-    double maskSize = cfg["maskSize"].as<double>();
     double orientation = cfg["orientation"].as<double>();
     double phase = cfg["phase"].as<double>();
     double contrast = cfg["C"].as<double>();
@@ -173,22 +163,60 @@ unique_ptr<Grating> createGratingStimulus(Integrator* const integrator, const YA
 
     if(mask == "none"){
         return unique_ptr<FullFieldGrating>(
-                    new FullFieldGrating(integrator, spatialFreq, orientation,
-                                         temporalFreq, contrast, phase));
+                    new FullFieldGrating(integrator, spatialFreq, temporalFreq,
+                                         contrast, phase, orientation));
 
     }else if(mask == "circle"){
+        double maskSize = cfg["maskSize"].as<double>();
         return unique_ptr<CircleMaskGrating>(
-                    new CircleMaskGrating(integrator, spatialFreq, orientation,
-                                          temporalFreq, contrast, maskSize, phase));
+                    new CircleMaskGrating(integrator, spatialFreq, temporalFreq,
+                                          contrast, phase, orientation, maskSize));
 
     }else if(mask == "gaussian"){
+        double maskSize = cfg["maskSize"].as<double>();
         return unique_ptr<GaussianMaskGrating>(
-                    new GaussianMaskGrating(integrator, spatialFreq, orientation,
-                                          temporalFreq, contrast, maskSize, phase));
+                    new GaussianMaskGrating(integrator, spatialFreq, temporalFreq,
+                                            contrast, phase, orientation, maskSize));
     }else if(mask == "cscircle"){
+        double maskSize = cfg["maskSize"].as<double>();
+        int surroundkId = cfg["surroundkId"].as<int>();
+        int surroundwId = cfg["surroundwId"].as<int>();
+        double surroundContrast = cfg["surroundC"].as<double>();
+        double surroundPhase = cfg["surroundPhase"].as<double>();
+        double surroundOrientation = cfg["surroundOrientation"].as<double>();
+        double surroundMaskSize = cfg["surroundMaskSize"].as<double>();
+
+
+        if((surroundkId  < -int(k.n_elem)/2) || (surroundkId  > int(k.n_elem)/2-1)){
+            cerr << "Too high or low index, kxId: " << surroundkId << endl
+                 << "kId range: [" << -int(k.n_elem)/2 << "," << k.n_elem/2-1 <<"]" <<endl;
+            return 0;
+
+        }if(surroundkId  < 0){
+            surroundkId+= k.n_elem;
+        }
+
+        if((surroundwId  < -int(w.n_elem)/2) || (surroundwId  > int(w.n_elem)/2-1)){
+            cerr << "Too high or low index, wId: " << surroundwId << endl
+                 << "wId range: [" << -int(w.n_elem)/2 << "," << w.n_elem/2-1 <<"]" <<endl;
+            return 0;
+
+        }if(surroundwId  < 0){
+            surroundwId+= w.n_elem;
+        }
+
+        double surroundTemporalFreq = -w(surroundwId); // -1 factor due to form of w vector
+        double surroundSpatialFreq = k(surroundkId);
+
+
+
+
         return unique_ptr<CSCircleMaskGrating>(
-                    new CSCircleMaskGrating(integrator, spatialFreq, orientation,
-                                          temporalFreq, contrast, maskSize, phase));
+                    new CSCircleMaskGrating(integrator, spatialFreq, temporalFreq,
+                                            contrast, phase, orientation, maskSize,
+                                            surroundSpatialFreq,  surroundTemporalFreq,
+                                            surroundContrast,surroundPhase,
+                                            surroundOrientation,  surroundMaskSize));
     }else{
         cout << "mask: " << mask << endl;
         throw overflow_error("Unknown grating mask");

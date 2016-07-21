@@ -2,13 +2,13 @@
 
 using namespace lgnSimulator;
 GaussianMaskGrating::GaussianMaskGrating(Integrator* const integrator,
-                                         double spatialFreq, double orientation,
-                                         double temporalFreq, double contrast,
-                                         double maskSize, double phase)
-    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, maskSize, phase)
+                                         double spatialFreq, double temporalFreq,
+                                         double contrast, double phase,
+                                         double orientation, double maskSize)
+    : Grating(integrator, spatialFreq, temporalFreq, contrast, phase, orientation)
 {
     m_mask= "gaussian";
-    m_gaussianMask = new SpatialGaussian(maskSize);
+    m_gaussianMask = new SpatialGaussian(maskSize); //WARNING! pointer is deleted.
 }
 
 GaussianMaskGrating::~GaussianMaskGrating()

@@ -4,26 +4,24 @@ using namespace lgnSimulator;
 
 
 CircleMaskGrating::CircleMaskGrating(Integrator* const integrator,
-                                     double spatialFreq, double orientation,
-                                     double temporalFreq, double contrast,
-                                     double maskSize, double phase)
-    : Grating(integrator, spatialFreq, orientation, temporalFreq, contrast, maskSize, phase)
+                                     double spatialFreq, double temporalFreq,
+                                     double contrast, double phase,
+                                     double orientation, double maskSize)
+    : Grating(integrator, spatialFreq, temporalFreq, contrast, phase, orientation)
+    , m_maskSize(maskSize)
 {
     m_mask= "circle";
+
+    if(m_maskSize > m_spatialVec.max()-m_spatialVec.min()){
+        cerr << "Warning: mask size (" << maskSize
+             << ") larger than grid length: " << m_spatialVec.max()-m_spatialVec.min()
+             << endl;
+    }
 }
 
 CircleMaskGrating::~CircleMaskGrating()
 {
-
 }
-
-//void CircleMaskGrating::computeFourierTransform()
-//{
-//    computeSpatiotemporal();
-//    m_fourierTransform = m_integrator->forwardFFT(m_spatiotemporal);
-
-//}
-
 
 
 double CircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
@@ -55,4 +53,9 @@ complex<double> CircleMaskGrating::fourierTransformAtFrequency(vec2 k, double w)
     return m_contrast * core::pi * core::pi * m_maskSize * m_maskSize * 0.25
             * (term1 + term2) / m_integrator->temporalFreqResolution();
 
+}
+
+double CircleMaskGrating::maskSize() const
+{
+    return m_maskSize;
 }

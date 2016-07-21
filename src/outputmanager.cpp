@@ -2,6 +2,8 @@
 #include <unistd.h>
 
 #include "stimuli/grating/grating.h"
+#include "stimuli/grating/circlemaskgrating.h"
+#include "stimuli/grating/cscirclemaskgrating.h"
 #include "stimuli/naturalscene.h"
 #include "stimuli/naturalscenevideo.h"
 
@@ -125,38 +127,80 @@ void OutputManager::writeStimulusProperties(const Stimulus* stimulus)
     type_a.write( StrType(PredType::C_S1, 64), (&type)->c_str());
 
 
+    //Grating attributes:-------------------------------------------------------------------------
     if (const  Grating * gratingStimulus = dynamic_cast<const Grating*>(stimulus) ) {
-        double C = gratingStimulus->contrast();
-        double maskSize = gratingStimulus->maskSize();
-        string mask = gratingStimulus->mask();
-        vec2 k = gratingStimulus->kVec();
-        double orientation = gratingStimulus->orientation(true);
-        double phase = gratingStimulus->phase(true);
-        double spatialFreq = gratingStimulus->spatialFreq();
+        double k = gratingStimulus->spatialFreq();
         double w = gratingStimulus->temporalFreq();
+        double C = gratingStimulus->contrast();
+        double phase = gratingStimulus->phase(true);
+        double orientation = gratingStimulus->orientation(true);
+        vec2 kVec = gratingStimulus->kVec();
+        string mask = gratingStimulus->mask();
 
-        Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute mask_a(stim.createAttribute("mask", StrType(PredType::C_S1, 64), H5S_SCALAR));
-        Attribute maskSize_a(stim.createAttribute("mask_size",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+
         Attribute k_a(stim.createAttribute("spatial_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute orientation_a(stim.createAttribute("orientation",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute w_a(stim.createAttribute("temporal_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute C_a(stim.createAttribute("C",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute phase_a(stim.createAttribute("phase",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute orientation_a(stim.createAttribute("orientation",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute kx_a(stim.createAttribute("kx",PredType::NATIVE_DOUBLE, H5S_SCALAR));
         Attribute ky_a(stim.createAttribute("ky",PredType::NATIVE_DOUBLE, H5S_SCALAR));
-        Attribute w_a(stim.createAttribute("temporal_freq",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+        Attribute mask_a(stim.createAttribute("mask", StrType(PredType::C_S1, 64), H5S_SCALAR));
 
-
-
-        C_a.write(PredType::NATIVE_DOUBLE, &C);
-        mask_a.write( StrType(PredType::C_S1, 64), (&mask)->c_str());
-        maskSize_a.write(PredType::NATIVE_DOUBLE, &maskSize);
-        k_a.write(PredType::NATIVE_DOUBLE, &spatialFreq);
-        orientation_a.write(PredType::NATIVE_DOUBLE, &orientation);
-        phase_a.write(PredType::NATIVE_DOUBLE, &phase);
-        kx_a.write(PredType::NATIVE_DOUBLE, &k(0));
-        ky_a.write(PredType::NATIVE_DOUBLE, &k(1));
+        k_a.write(PredType::NATIVE_DOUBLE, &k);
         w_a.write(PredType::NATIVE_DOUBLE, &w);
+        C_a.write(PredType::NATIVE_DOUBLE, &C);
+        phase_a.write(PredType::NATIVE_DOUBLE, &phase);
+        orientation_a.write(PredType::NATIVE_DOUBLE, &orientation);
+        kx_a.write(PredType::NATIVE_DOUBLE, &kVec(0));
+        ky_a.write(PredType::NATIVE_DOUBLE, &kVec(1));
+        mask_a.write( StrType(PredType::C_S1, 64), (&mask)->c_str());
+
+
+        //Circle mask///////////////////////////////////////////////////////////////////////////////////////
+        if (const  CircleMaskGrating *circleMask = dynamic_cast<const CircleMaskGrating*>(gratingStimulus)){
+            double maskSize = circleMask->maskSize();
+            Attribute maskSize_a(stim.createAttribute("mask_size",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+            maskSize_a.write(PredType::NATIVE_DOUBLE, &maskSize);
+        }
+
+
+        //CSCircle mask------------------------------------------------------------------------------------
+        if (const  CSCircleMaskGrating *csMask = dynamic_cast<const CSCircleMaskGrating*>(gratingStimulus)){
+            double k_s = csMask->surroundSpatialFreq();
+            double w_s = csMask->surroundTemporalFreq();
+            double C_s = csMask->surroundContrast();
+            double phase_s = csMask->surroundPhase(true);
+            double orientation_s = csMask->surroundOrientation(true);
+            double maskSize_s = csMask->surroundMaskSize();
+            double maskSize = csMask->maskSize();
+            vec2 kVec_s = gratingStimulus->kVec();
+
+
+            Attribute k_s_a(stim.createAttribute("spatial_freq_sur",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+            Attribute w_s_a(stim.createAttribute("temporal_freq_sur",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+            Attribute C_s_a(stim.createAttribute("C_sur",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+            Attribute phase_s_a(stim.createAttribute("phase_sur",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+            Attribute orientation_s_a(stim.createAttribute("orientation_sur",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+            Attribute kx_s_a(stim.createAttribute("kx_sur",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+            Attribute ky_s_a(stim.createAttribute("ky_sur",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+            Attribute maskSize_s_a(stim.createAttribute("mask_size_sur",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+            Attribute maskSize_a(stim.createAttribute("mask_size",PredType::NATIVE_DOUBLE, H5S_SCALAR));
+
+
+            k_s_a.write(PredType::NATIVE_DOUBLE, &k_s);
+            w_s_a.write(PredType::NATIVE_DOUBLE, &w_s);
+            C_s_a.write(PredType::NATIVE_DOUBLE, &C_s);
+            phase_s_a.write(PredType::NATIVE_DOUBLE, &phase_s);
+            orientation_s_a.write(PredType::NATIVE_DOUBLE, &orientation_s);
+            kx_s_a.write(PredType::NATIVE_DOUBLE, &kVec_s(0));
+            ky_s_a.write(PredType::NATIVE_DOUBLE, &kVec_s(1));
+            maskSize_s_a.write(PredType::NATIVE_DOUBLE, &maskSize_s);
+            maskSize_a.write(PredType::NATIVE_DOUBLE, &maskSize);
+
+        }
     }
+
 }
 
 void OutputManager::writeStimulus(const Stimulus* stimulus)

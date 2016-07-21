@@ -8,15 +8,18 @@ class CircleMaskGrating : public Grating
 {
 public:
     CircleMaskGrating(Integrator* const integrator,
-                      double spatialFreq, double orientation, double temporalFreq,
-                      double contrast, double maskSize, double phase=0.0);
+                      double spatialFreq, double temporalFreq,
+                      double contrast, double phase,
+                      double orientation, double maskSize);
     ~CircleMaskGrating();
 
-//    virtual void computeFourierTransform();
-        // Grating interface
+    double maskSize() const;
+
 private:
     virtual double valueAtPoint(vec2 rVec, double t) const override;
     virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) const override;
+
+    double m_maskSize = 0.0;
 };
 
 }

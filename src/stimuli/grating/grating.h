@@ -13,9 +13,10 @@ namespace lgnSimulator {
 class Grating : public Stimulus
 {
 public:
-    Grating(Integrator * const integrator,
-            double spatialFreq, double orientation, double temporalFreq,
-            double contrast, double maskSize = 0.0, double phase=0.0);
+    Grating(Integrator* const integrator,
+            double spatialFreq, double temporalFreq,
+            double contrast, double phase,
+            double orientation);
     ~Grating();
 
     // Stimulus interface
@@ -29,21 +30,18 @@ public:
     double orientation(bool inDegrees=false) const;
     double phase(bool inDegrees=false) const;
     double contrast() const;
-    double maskSize() const;
     double temporalFreq() const;
+
     vec2 kVec() const;
     string mask() const;
 
-
-
 protected:
-    vec2 m_kVec = {0,0};
     double m_k = 0.0;
-    double m_orientation = 0.0;
     double m_w = 0;
     double m_contrast = 0.0;
-    double m_maskSize = 0.0;
     double m_phase = 0.0;
+    double m_orientation = 0.0;
+    vec2 m_kVec = {0,0};
     string m_mask;
 
     virtual double valueAtPoint(vec2 r, double t) const  = 0;

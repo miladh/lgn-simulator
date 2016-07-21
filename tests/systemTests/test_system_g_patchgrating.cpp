@@ -47,11 +47,13 @@ void runSystemTest_G_pg(int nt, double dt, int ns, double ds,
 
     //integrator
     Integrator integrator(nt, dt, ns, ds);
+    double phase =0.0;
+    double orientation = 0.0;
 
     //stimulus
     double kd = integrator.spatialFreqVec()[kId];
     double wd = integrator.temporalFreqVec()[0];
-    CircleMaskGrating stim(&integrator, kd, 0, wd, C, maskSize);
+    CircleMaskGrating stim(&integrator, kd, wd, C, phase, orientation, maskSize);
     stim.computeFourierTransform();
 
     //ganglion cell

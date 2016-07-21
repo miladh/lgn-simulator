@@ -8,8 +8,10 @@ namespace lgnSimulator {
 class FullFieldGrating : public Grating
 {
 public:
-    FullFieldGrating(Integrator* const integrator, double spatialFreq,
-                     double orientation, double temporalFreq, double contrast, double phase=0.0);
+    FullFieldGrating(Integrator* const integrator,
+                     double spatialFreq, double temporalFreq,
+                     double contrast, double phase,
+                     double orientation);
     ~FullFieldGrating();
 
     // Grating interface

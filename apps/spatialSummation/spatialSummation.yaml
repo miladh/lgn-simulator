@@ -10,17 +10,31 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: false
+    storeSpatiotemporal: true
     storeFT: false
 
     # Grating:
-    C: 1.0
     mask: "cscircle" #none/circle/gaussian
-    maskSize: 5.542169
-    orientation: 0.   #degrees
-    phase: 90.        #degrees
-    kId:  4           #[-Ns/2, Ns/2 - 1]
-    wId:  0           #[-Nt/2, Nt/2 - 1]
+
+    C: 1.0
+    surroundC: 1.0
+
+    maskSize: 1.542169              #degrees
+    surroundMaskSize : 5.542169     #degrees
+
+    orientation: 0.                 #degrees
+    surroundOrientation : 0.0       #degrees
+
+    phase: 90.                      #degrees
+    surroundPhase: 0.0              #degrees
+
+
+    kId:  40                         #[-Ns/2, Ns/2 - 1]
+    surroundkId:  4                 #[-Ns/2, Ns/2 - 1]
+
+
+    wId:  0                         #[-Nt/2, Nt/2 - 1]
+    surroundwId:  0                 #[-Nt/2, Nt/2 - 1]
 
 
     #sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/lena.png"

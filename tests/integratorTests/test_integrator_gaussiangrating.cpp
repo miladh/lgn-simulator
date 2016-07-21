@@ -27,9 +27,10 @@ void runIntegratorGaussianGratingTest(int ns, int nt, double dt, double ds,
     double wd = w(wdId);
     double spatialFreq = k(kxId);
     double orientation = orientations(thetaId);
+    double phase = 0.0;
 
-    GaussianMaskGrating grating(&integrator, spatialFreq, orientation,
-                                wd, C, maskSize);
+    GaussianMaskGrating grating(&integrator, spatialFreq, wd, C, phase,
+                                orientation, maskSize);
     grating.computeFourierTransform();
     grating.computeSpatiotemporal();
 
