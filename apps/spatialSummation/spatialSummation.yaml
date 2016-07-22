@@ -19,18 +19,18 @@ stimulus:
     C: 1.0
     surroundC: 1.0
 
-    maskSize: 1.542169              #degrees
-    surroundMaskSize : 5.542169     #degrees
+    maskSize: 5             #degrees
+    surroundMaskSize : 10     #degrees
 
     orientation: 0.                 #degrees
     surroundOrientation : 0.0       #degrees
 
-    phase: 90.                      #degrees
+    phase: 0.                      #degrees
     surroundPhase: 0.0              #degrees
 
 
-    kId:  4                         #[-Ns/2, Ns/2 - 1]
-    surroundkId:  40                 #[-Ns/2, Ns/2 - 1]
+    kId:  10                         #[-Ns/2, Ns/2 - 1]
+    surroundkId:  20                 #[-Ns/2, Ns/2 - 1]
 
 
     wId:  0                         #[-Nt/2, Nt/2 - 1]
@@ -60,7 +60,7 @@ relay:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: false
 
     #Kernels

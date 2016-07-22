@@ -17,7 +17,7 @@ public:
     ~CSCircleMaskGrating();
 
     // Stimulus interface
-    virtual void computeFourierTransform();
+//    virtual void computeFourierTransform();
 
     void setSurroundSpatialFreq(double surroundSpatialFreq);
     void setSurroundOrientation(double surroundOrientation);
