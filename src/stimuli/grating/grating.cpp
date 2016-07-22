@@ -19,6 +19,8 @@ Grating::Grating(Integrator* const integrator,
     , m_contrast(contrast)
     , m_phase(phase*core::pi/180.)
     , m_orientation(orientation*core::pi/180.)
+    , m_phase_p_ft(exp(core::i * m_phase))
+    , m_phase_m_ft(exp(-core::i * m_phase))
 {
     m_type = "grating";
     m_kVec = {Special::nearestValue(m_spatialFreqs, m_k*cos(m_orientation)),

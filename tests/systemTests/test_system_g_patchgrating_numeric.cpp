@@ -24,7 +24,7 @@ double computeIntegral(mat s, mat irf){
 
 
 //Grating---------------------------------------------
-TEST_CASE("runTest_G_pg_grating_numeric"){
+TEST_CASE("runTest_G_pg_grating_numeric", "[slow]"){
     double eps = 1e-3;
     int ns = 10;
     double ds = 0.01;

@@ -14,13 +14,13 @@ stimulus:
     storeFT: false
 
     # Grating:
-    mask: "cscircle" #none/circle/gaussian
+    mask: "cscircle" #none/circle/cscircle/gaussian
 
     C: 1.0
     surroundC: 1.0
 
-    maskSize: 5             #degrees
-    surroundMaskSize : 10     #degrees
+    maskSize: 10             #degrees
+    surroundMaskSize : 20     #degrees
 
     orientation: 0.                 #degrees
     surroundOrientation : 0.0       #degrees
@@ -29,7 +29,7 @@ stimulus:
     surroundPhase: 0.0              #degrees
 
 
-    kId:  10                         #[-Ns/2, Ns/2 - 1]
+    kId:  40                         #[-Ns/2, Ns/2 - 1]
     surroundkId:  20                 #[-Ns/2, Ns/2 - 1]
 
 

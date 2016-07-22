@@ -44,6 +44,11 @@ protected:
     vec2 m_kVec = {0,0};
     string m_mask;
 
+    complex<double> m_phase_p_ft = 0;
+    complex<double> m_phase_m_ft = 0;
+
+
+
     virtual double valueAtPoint(vec2 r, double t) const  = 0;
     virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) const= 0;
 

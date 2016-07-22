@@ -17,6 +17,8 @@ CSCircleMaskGrating::CSCircleMaskGrating(Integrator* const integrator,
     , m_surroundOrientation(surroundOrientation*core::pi/180.)
     , m_surroundMaskSize(surroundMaskSize)
     , m_maskSize(maskSize)
+    , m_phase_ps_ft(exp(core::i * m_surroundPhase))
+    , m_phase_ms_ft(exp(-core::i * m_surroundPhase))
 {
     m_mask= "cscircle";
     m_surroundkVec = {Special::nearestValue(m_spatialFreqs, m_surroundk*cos(m_surroundOrientation)),
@@ -46,13 +48,6 @@ CSCircleMaskGrating::CSCircleMaskGrating(Integrator* const integrator,
 
 }
 
-//void CSCircleMaskGrating::computeFourierTransform()
-//{
-//    computeSpatiotemporal();
-//    m_fourierTransform = m_integrator->forwardFFT(m_spatiotemporal);
-
-//}
-
 CSCircleMaskGrating::~CSCircleMaskGrating()
 {
 
@@ -77,51 +72,44 @@ double CSCircleMaskGrating::valueAtPoint(vec2 rVec, double t) const
 complex<double> CSCircleMaskGrating::fourierTransformAtFrequency(vec2 k, double w) const
 {
 
-    return centerFourierTransformAtFrequency(k,w)
-            +surroundFourierTransformAtFrequency(k,w);
+    return (centerFourierTransformAtFrequency(k,w) +surroundFourierTransformAtFrequency(k,w))
+            * core::pi * core::pi * 0.25 / m_integrator->temporalFreqResolution();
 
 }
 
 complex<double> CSCircleMaskGrating::surroundFourierTransformAtFrequency(vec2 k, double w) const
 {
+    complex<double> wm = Special::delta(w, m_surroundw) * m_phase_ps_ft;
+    complex<double> wp = Special::delta(w, -m_surroundw)* m_phase_ms_ft;
 
-    double arg1 = sqrt(dot(k - m_surroundkVec, k - m_surroundkVec))* m_surroundMaskSize * 0.5;
-    double arg2 = sqrt(dot(k + m_surroundkVec, k + m_surroundkVec))* m_surroundMaskSize * 0.5;
+    double km = sqrt(dot(k - m_surroundkVec, k - m_surroundkVec));
+    double kp = sqrt(dot(k + m_surroundkVec, k + m_surroundkVec));
 
-    double arg3 = sqrt(dot(k - m_surroundkVec, k - m_surroundkVec))* m_maskSize * 0.5;
-    double arg4 = sqrt(dot(k + m_surroundkVec, k + m_surroundkVec))* m_maskSize * 0.5;
+    double arg_km_ds = km * m_surroundMaskSize * 0.5;
+    double arg_km_dc = km * m_maskSize * 0.5;
+    double arg_kp_ds = kp * m_surroundMaskSize * 0.5;
+    double arg_kp_dc = kp * m_maskSize * 0.5;
 
 
-    complex<double> term1 = Special::delta(w, m_surroundw)
-            * exp(core::i * m_surroundPhase);
-    complex<double> term2 = Special::delta(w, -m_surroundw)
-            * exp(-core::i * m_surroundPhase);
+    double S_km_ds = m_surroundMaskSize * m_surroundMaskSize;
+    double S_kp_ds = S_km_ds;
+    double S_km_dc = m_maskSize * m_maskSize;
+    double S_kp_dc = S_km_dc;
 
-    double S1_1 =1;
-    double S1_2 = 1;
-    double S0_1 = 1;
-    double S0_2 = 1;
-    if(arg1!= 0){
-         S1_1 = 2*Special::secondKindBessel(arg1)/arg1;
+    if(arg_km_ds!= 0){
+        S_km_ds *= 2 * Special::secondKindBessel(arg_km_ds)/arg_km_ds;
     }
-    if(arg2!= 0){
-          S1_2= 2*Special::secondKindBessel(arg2)/arg2;
+    if(arg_kp_ds!= 0){
+        S_kp_ds *= 2 * Special::secondKindBessel(arg_kp_ds)/arg_kp_ds;
     }
-    if(arg3!= 0){
-          S0_1= 2*Special::secondKindBessel(arg3)/arg3;
+    if(arg_km_dc!= 0){
+        S_km_dc *= 2 * Special::secondKindBessel(arg_km_dc)/arg_km_dc;
     }
-    if(arg4!= 0){
-          S0_2 = 2*Special::secondKindBessel(arg4)/arg4;
+    if(arg_kp_dc!= 0){
+        S_kp_dc *= 2 * Special::secondKindBessel(arg_kp_dc)/arg_kp_dc;
     }
 
-    S1_1*= m_surroundMaskSize * m_surroundMaskSize;
-    S1_2*= m_surroundMaskSize * m_surroundMaskSize;
-    S0_1*= m_maskSize * m_maskSize;
-    S0_2*= m_maskSize * m_maskSize;
-
-
-    return m_surroundContrast * core::pi * core::pi * 0.25 / m_integrator->temporalFreqResolution()
-            * (term1 * (S1_1) + term2* (S1_2)) ;
+    return m_surroundContrast * (wm * (S_km_ds - S_km_dc) + wp* (S_kp_ds - S_kp_dc));
 
 }
 
@@ -132,11 +120,8 @@ complex<double> CSCircleMaskGrating::centerFourierTransformAtFrequency(vec2 k, d
     double arg1 = sqrt(dot(k - m_kVec, k - m_kVec))* m_maskSize * 0.5;
     double arg2 = sqrt(dot(k + m_kVec, k + m_kVec))* m_maskSize * 0.5;
 
-
-    complex<double> term1 = Special::delta(w, m_w)
-            * exp(core::i * m_phase);// CHECK SIGN!!!
-    complex<double> term2 = Special::delta(w, -m_w)
-            * exp(-core::i * m_phase);
+    complex<double> term1 = Special::delta(w, m_w) * m_phase_p_ft;// CHECK SIGN!!!
+    complex<double> term2 = Special::delta(w, -m_w) * m_phase_m_ft;
 
     if(arg1!= 0){
         term1 *= 2*Special::secondKindBessel(arg1)/arg1;
@@ -145,9 +130,16 @@ complex<double> CSCircleMaskGrating::centerFourierTransformAtFrequency(vec2 k, d
         term2 *= 2*Special::secondKindBessel(arg2)/arg2;
     }
 
-    return m_contrast * core::pi * core::pi * m_maskSize * m_maskSize * 0.25
-            * (term1 + term2) / m_integrator->temporalFreqResolution();
+    return m_contrast * m_maskSize * m_maskSize * (term1 + term2);
 }
+
+
+//void CSCircleMaskGrating::computeFourierTransform()
+//{
+//    computeSpatiotemporal();
+//    m_fourierTransform = m_integrator->forwardFFT(m_spatiotemporal);
+
+//}
 
 
 

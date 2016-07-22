@@ -86,7 +86,7 @@ void runSystemTest_G_pg(int nt, double dt, int ns, double ds,
 
 
 //Spot--------------------------------------------
-TEST_CASE("runTest_G_pg_spot"){
+TEST_CASE("runTest_G_pg_spot", "[slow]"){
     double eps = 1e-14;
     vec diameters = linspace(0.0, 10, 11);
     for(double d : diameters){

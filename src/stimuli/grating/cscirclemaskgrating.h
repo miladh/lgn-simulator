@@ -23,6 +23,7 @@ public:
     void setSurroundOrientation(double surroundOrientation);
 
     double surroundSpatialFreq() const;
+    double surroundTemporalFreq() const;
     double surroundContrast() const;
     double surroundPhase(bool inDegrees=false) const;
     double surroundOrientation(bool inDegrees=false) const;
@@ -31,10 +32,10 @@ public:
 
     vec2 surroundkVec() const;
 
-    double surroundTemporalFreq() const;
 
 
 private:
+    // Grating interface
     virtual double valueAtPoint(vec2 rVec, double t) const override;
     virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) const override;
     complex<double> centerFourierTransformAtFrequency(vec2 k, double w) const;
@@ -48,6 +49,9 @@ private:
     double m_surroundOrientation = 0;
     double m_surroundMaskSize = 0.0;
     double m_maskSize = 0.0;
+
+    complex<double> m_phase_ps_ft = 0;
+    complex<double> m_phase_ms_ft = 0;
 
     vec2 m_surroundkVec={0,0};
 

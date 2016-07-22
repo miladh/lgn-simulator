@@ -29,8 +29,8 @@ double FullFieldGrating::valueAtPoint(vec2 r, double t) const
 
 complex<double> FullFieldGrating::fourierTransformAtFrequency(vec2 k, double w) const
 {
-    complex<double> s = Special::delta(k, m_kVec) * Special::delta(w, m_w) * exp(core::i * m_phase)
-                + Special::delta(k, -m_kVec) * Special::delta(w, -m_w)* exp(-core::i * m_phase);
+    complex<double> s = Special::delta(k, m_kVec) * Special::delta(w, m_w) * m_phase_p_ft
+                + Special::delta(k, -m_kVec) * Special::delta(w, -m_w) * m_phase_m_ft;
 
     return 4.*core::pi*core::pi*core::pi * m_contrast * m_peak * s;
 }
