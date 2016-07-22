@@ -10,7 +10,7 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: true
+    storeSpatiotemporal: false
     storeFT: false
 
     # Grating:
@@ -19,8 +19,8 @@ stimulus:
     C: 1.0
     surroundC: 1.0
 
-    maskSize: 10             #degrees
-    surroundMaskSize : 20     #degrees
+    maskSize: 3.072289            #degrees
+    surroundMaskSize : 13.734940     #degrees
 
     orientation: 0.                 #degrees
     surroundOrientation : 0.0       #degrees
@@ -29,8 +29,8 @@ stimulus:
     surroundPhase: 0.0              #degrees
 
 
-    kId:  40                         #[-Ns/2, Ns/2 - 1]
-    surroundkId:  20                 #[-Ns/2, Ns/2 - 1]
+    kId:  4                         #[-Ns/2, Ns/2 - 1]
+    surroundkId:  4                 #[-Ns/2, Ns/2 - 1]
 
 
     wId:  0                         #[-Nt/2, Nt/2 - 1]
@@ -58,9 +58,9 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: true
+    storeImpulseResponse: false
     storeImpulseResponseFT: false
 
     #Kernels
