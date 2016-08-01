@@ -59,4 +59,4 @@ for Kc in weights:
         st.run_simulator(config_file, record_label, run_id)
         counter+=1
 
-os.remove(config_file))
+os.remove(config_file)
