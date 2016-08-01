@@ -41,6 +41,10 @@ int main(int argc, char* argv[])
     SeparableKernel Wg(cfg["ganglion"]["w"].as<double>(), &Wg_s, &Wg_t);
     GanglionCell ganglion(&integrator, Wg, cfg["ganglion"]["R0"].as<double>());
     
+
+    //Ganglion cell2:-----------------------------------------------------------
+    SeparableKernel Wg_off(cfg["ganglion"]["w"].as<double>()*-1, &Wg_s, &Wg_t);
+    GanglionCell ganglion_off(&integrator, Wg_off, cfg["ganglion"]["R0"].as<double>());
     
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(&integrator, cfg["relay"]["R0"].as<double>());
@@ -88,7 +92,7 @@ int main(int argc, char* argv[])
     relay.addCorticalCell(&cortical, Krc);
     relay.addInterNeuron(&interneuron, Kri);
     
-    interneuron.addGanglionCell(&ganglion, Kig);
+    interneuron.addGanglionCell(&ganglion_off, Kig);
     interneuron.addCorticalCell(&cortical, Kic);
     
     cortical.addRelayCell(&relay, Kcr);
