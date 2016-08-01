@@ -14,7 +14,7 @@ stimulus:
     storeFT: false
 
     # Grating:
-    mask: "cscircle" #none/circle/cscircle/gaussian
+    mask: "circle" #none/circle/cscircle/gaussian
 
     C: 1.0
     surroundC: 1.0
@@ -29,8 +29,8 @@ stimulus:
     surroundPhase: 0.0              #degrees
 
 
-    kId:  4                         #[-Ns/2, Ns/2 - 1]
-    surroundkId:  4                 #[-Ns/2, Ns/2 - 1]
+    kId:  0                         #[-Ns/2, Ns/2 - 1]
+    surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
 
 
     wId:  0                         #[-Nt/2, Nt/2 - 1]
@@ -41,7 +41,7 @@ stimulus:
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
@@ -58,10 +58,10 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #Kernels
     Krg:
@@ -101,8 +101,8 @@ interneuron:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #Kernels
     Kig:
@@ -131,7 +131,7 @@ interneuron:
 
 cortical:
     R0 : 0.
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false

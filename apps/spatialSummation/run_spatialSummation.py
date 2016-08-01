@@ -39,8 +39,8 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 #parameters-------------------------------------------------------------------------------------
-# spot_diameters = np.linspace(0., 15, 250)
-spot_diameters = [13.734940]
+spot_diameters = np.linspace(0., 15, 100)
+# spot_diameters = [13.734940]
 spatial_freqs = 4
 weights = np.linspace(0, 1.0, 6)
 phase = np.linspace(-180, 180, 10)
@@ -59,4 +59,4 @@ for Kc in weights:
         st.run_simulator(config_file, record_label, run_id)
         counter+=1
 
-os.remove(config_file)
+os.remove(config_file))
