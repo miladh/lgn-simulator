@@ -251,7 +251,7 @@ TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
     int kId = 0.;
     int wId = 0;
     double phase = 0.0;
-    vec maskSize = linspace(0.01, 13, 1);
+    vec maskSize = linspace(0.01, 13, 3);
 
 
     //integrator
@@ -323,7 +323,7 @@ TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
         newDataFile << fileHash << "\n";
 
         for(double r : results){
-            newDataFile << std::fixed <<  std::setprecision(15) << r;
+            newDataFile << std::fixed <<  std::setprecision(15) << r << endl;
         }
         newDataFile.close();
     }
