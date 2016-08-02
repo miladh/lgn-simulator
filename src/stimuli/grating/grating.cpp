@@ -29,6 +29,8 @@ Grating::Grating(Integrator* const integrator,
     setSpatialFreq(sqrt(dot(m_kVec, m_kVec)));
     setOrientation(atan2(m_kVec(1), m_kVec(0)));
 
+//    cout << "K=" << m_k << endl;
+
 }
 
 Grating::~Grating()

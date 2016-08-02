@@ -1,0 +1,155 @@
+description: "Spatial config file"
+
+
+#------------Integrator settings-----------------#
+grid:
+    ns: 9
+    nt: 1
+    dt: &dt_id 1.0
+    ds: &ds_id 0.1
+
+#------------Stimulus settings-------------------#
+stimulus:
+    storeSpatiotemporal: false
+    storeFT: false
+
+    # Grating:
+    mask: "circle" #none/circle/cscircle/gaussian
+
+    C: 1.0
+    surroundC: 1.0
+
+    maskSize: 1.75          #degrees
+    surroundMaskSize : 13.734940     #degrees
+
+    orientation: 0.                 #degrees
+    surroundOrientation : 0.0       #degrees
+
+    phase: 0.                      #degrees
+    surroundPhase: 0.0              #degrees
+
+
+    kId:  3                       #[-Ns/2, Ns/2 - 1]
+    surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
+
+
+    wId:  0                         #[-Nt/2, Nt/2 - 1]
+    surroundwId:  0                 #[-Nt/2, Nt/2 - 1]
+
+
+    #sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/lena.png"
+#-----------------Neuron settings------------------#
+ganglion:
+    R0 : 0
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
+    w: 1.0
+    Wg:
+    # DOG
+        a: 0.62
+        b: 1.26
+        c: 0.85
+    Wt:
+    # TemporalDelta
+        delay: 0
+        dt: *dt_id
+
+relay:
+    R0 : 0
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
+
+    #Kernels
+    Krg:
+        w: 1.0
+        spatial:
+        # Gaussian
+            a: 0.1
+
+
+        temporal:
+        # TemporalDelta
+            delay: 0
+            dt: *dt_id
+    Kri:
+        w: -0.3
+        spatial:
+        #Gauss
+            a: 0.5
+
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
+
+    Krc:
+        w: 0.8
+        spatial:
+        #Gauss
+            a: 0.1
+
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
+
+interneuron:
+    R0 : 0
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
+
+    #Kernels
+    Kig:
+        w: 1.0
+        spatial:
+        # Gaussian
+            a: 1.0
+
+
+        temporal:
+        # TemporalDelta
+            delay: 0
+            dt: *dt_id
+
+
+    Kic:
+        w: 0.8
+        spatial:
+        #Gauss
+            a: 1.0
+
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
+
+cortical:
+    R0 : 0.
+    storeResponse: true
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
+
+    #kernels
+    Kcr:
+        w: 1.0
+        spatial:
+        # SpatialDelta
+            ds : *ds_id
+            shift: [0.0, 0.]
+
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
+
+
+#------------File manager settings-----------------#
+OutputManager:
+    outputFilename: "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"

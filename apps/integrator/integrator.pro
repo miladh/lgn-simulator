@@ -1,6 +1,12 @@
-TEMPLATE = app
-CONFIG += console c++11
-CONFIG -= app_bundle
-CONFIG -= qt
+include(../../defaults.pri)
+include(../apps_defaults.pri)
 
-SOURCES += main.cpp
+TARGET = lgnSimulator_integrator
+
+SOURCES += \
+    integrator.cpp
+
+OTHER_FILES += ./integrator.yaml
+
+DISTFILES += \
+    integrator.yaml

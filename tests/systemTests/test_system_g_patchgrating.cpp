@@ -98,25 +98,6 @@ TEST_CASE("runTest_G_pg_spot", "[slow]"){
 }
 
 
-//Grating---------------------------------------------
-//TEST_CASE("runTest_G_pg_grating"){
-//    double eps = 1e-5;
-//    int ns = 9;
-//    vec diameters = linspace(0.0, 10, 11);
-//    vec kId =linspace(0, pow(2, ns-2), 10);
-
-//    for(double d : diameters){
-//        for(double k : kId){
-//            SECTION(to_string(k) + "-" +  to_string(d)) {
-//                runSystemTest_G_pg(1, 1.0, ns, 0.1,
-//                                   1.0, d, k,
-//                                   0.62, 1.26, 0.85,
-//                                   1, 12, eps);
-//            }
-//        }
-//    }
-
-//}
 
 
 

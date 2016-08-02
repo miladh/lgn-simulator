@@ -14,10 +14,10 @@ public:
     ~CircleMaskGrating();
 
     double maskSize() const;
+    virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) const override;
 
 private:
     virtual double valueAtPoint(vec2 rVec, double t) const override;
-    virtual complex<double> fourierTransformAtFrequency(vec2 k, double w) const override;
 
     double m_maskSize = 0.0;
 };
