@@ -28,7 +28,7 @@ using namespace lgnSimulator;
 double exact, peak;
 
 struct Param{
-    CircleMaskGrating* S;
+    const CircleMaskGrating& S;
     const Kernel & Wg;
     const Kernel & Kig;
     const Kernel & Kic;
@@ -68,69 +68,21 @@ double Wr (double *k, size_t dim, void *params)
                - r.Krc.fourierTransform({kx, ky}, wd)
                * r.Kcr.fourierTransform({kx, ky}, wd));
 
-    CircleMaskGrating* S = r.S;
-    cx_double res =  Wr * S->fourierTransformAtFrequency({kx, ky}, wd)
+    cx_double res =  Wr *  r.S.fourierTransformAtFrequency({kx, ky}, wd)
             /(8*core::pi*core::pi*core::pi)*peak;
-
     return real(res);
 }
 
-
-
-double runSystemTest_GRIC_pg(int nt, double dt, int ns, double ds,
-                             double C, int wdId, int kxId, int thetaId,
-                             double maskSize, double phase,
+double monteCarloIntegration(Integrator integrator,
+                             const CircleMaskGrating &stim,
                              const Kernel &Wg, const Kernel &Kcr,
                              const Kernel &Krg, const Kernel &Kri,const Kernel &Krc,
                              const Kernel &Kig, const Kernel &Kic,
                              size_t preCalls, size_t calls)
 {
+    cout << "running MC integration...." << endl;
 
-    //integrator
-    Integrator integrator(nt, dt, ns, ds);
-    vec k = integrator.spatialFreqVec();
-    vec w = integrator.temporalFreqVec();
-    vec orientations = vec{0., 90., 180., 270, -360.};
-    peak = integrator.temporalFreqResolution();
-
-    //stimulus
-    double wd = w(wdId);
-    double spatialFreq = k(kxId);
-    double orientation = orientations(thetaId);
-
-    CircleMaskGrating stim(&integrator, spatialFreq, wd, C, phase, orientation, maskSize);
-    stim.computeFourierTransform();
-
-    //ganglion cell
-    GanglionCell ganglion(&integrator, Wg);
-
-    //relayCell cell
-    RelayCell relay(&integrator);
-
-    //cortical cell
-    Interneuron interneuron(&integrator);
-
-    //cortical cell
-    CorticalCell cortical(&integrator);
-
-    //Connect
-    relay.addGanglionCell(&ganglion, Krg);
-    relay.addCorticalCell(&cortical, Krc);
-    relay.addInterNeuron(&interneuron, Kri);
-    interneuron.addGanglionCell(&ganglion, Kig);
-    interneuron.addCorticalCell(&cortical, Kic);
-    cortical.addRelayCell(&relay, Kcr);
-
-    //Compute
-    ganglion.computeResponse(&stim);
-    relay.computeResponse(&stim);
-    interneuron.computeResponse(&stim);
-    cortical.computeResponse(&stim);
-
-    exact = relay.response()(integrator.nPointsSpatial()/2,integrator.nPointsSpatial()/2,0);
-    //------------------------------------------------------------------------------------
-
-    struct Param param = {&stim, Wg, Kig, Kic, Krg, Kri, Krc, Kcr};
+    struct Param param = {stim, Wg, Kig, Kic, Krg, Kri, Krc, Kcr};
 
     double res, err;
     double xl[2] = {integrator.spatialFreqVec().min(),
@@ -164,16 +116,54 @@ double runSystemTest_GRIC_pg(int nt, double dt, int ns, double ds,
     gsl_monte_vegas_free (s);
     gsl_rng_free (r);
 
+    return res;
+
+}
+
+
+
+double runSystemTest_GRIC_pg(Integrator integrator,
+                             const CircleMaskGrating &stim,
+                             const Kernel &Wg, const Kernel &Kcr,
+                             const Kernel &Krg, const Kernel &Kri,const Kernel &Krc,
+                             const Kernel &Kig, const Kernel &Kic)
+{
+    //ganglion cell
+    GanglionCell ganglion(&integrator, Wg);
+
+    //relayCell cell
+    RelayCell relay(&integrator);
+
+    //cortical cell
+    Interneuron interneuron(&integrator);
+
+    //cortical cell
+    CorticalCell cortical(&integrator);
+
+    //Connect
+    relay.addGanglionCell(&ganglion, Krg);
+    relay.addCorticalCell(&cortical, Krc);
+    relay.addInterNeuron(&interneuron, Kri);
+    interneuron.addGanglionCell(&ganglion, Kig);
+    interneuron.addCorticalCell(&cortical, Kic);
+    cortical.addRelayCell(&relay, Kcr);
+
+    //Compute
+    ganglion.computeResponse(&stim);
+    relay.computeResponse(&stim);
+    interneuron.computeResponse(&stim);
+    cortical.computeResponse(&stim);
+
+    exact = relay.response()(integrator.nPointsSpatial()/2,integrator.nPointsSpatial()/2,0);
 
     INFO( "kd=" <<  stim.spatialFreq()
           << "  d=" << stim.maskSize()
           << "   Ns=" << integrator.nPointsSpatial());
-    CHECK(exact== Approx(res).epsilon(1e-4));
 
-
-    return res;
+    return exact;
 
 }
+
 
 
 TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
@@ -181,7 +171,8 @@ TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
     string sourceFilename = "systemTests/slowSystemTests/test_system_gric_patchgrating.cpp";
     string dataFilename = "test_data_GRIC_pg_1";
     string fileHash;
-    vec results;
+    vector<double> results;
+    bool runTest = true;
 
 
     // Check if file with test file ids exists------------------------------------
@@ -219,6 +210,7 @@ TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
                 found = true;
                 cout << "file hasn't changed" << endl;
                 data_file.close();
+                runTest = false;
             }
         }
 
@@ -229,12 +221,8 @@ TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
             data_file.open(dataFilename);
             while(getline( data_file, line )){
                 if(line != fileHash){
-                    tmp.push_back(stod(line));
+                    results.push_back(stod(line));
                 }
-            }
-            results = zeros(tmp.size());
-            for(int i=0; i < tmp.size(); i++){
-                results[i] = tmp.at(i);
             }
         }else{
             cout << "file has changed, running test..." << endl;
@@ -242,13 +230,9 @@ TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
         }
     }
 
-
-
-    cout << results << endl;
-
     //-------------------------------------------------------------
-    size_t preCalls = 1e3;
-    size_t calls = 5e4;
+    size_t preCalls = 1e4;
+    size_t calls = 5e6;
     int ns = 9;
     int nt = 1;
     double dt = 1;
@@ -264,12 +248,17 @@ TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
 
     double C = 1.0;
     double orientation = 0.;
-    double kId = 0.;
-    double wId = 0;
+    int kId = 0.;
+    int wId = 0;
     double phase = 0.0;
-    vec maskSize = linspace(0.01, 13, 2);
-    results = 0 * maskSize;
+    vec maskSize = linspace(0.01, 13, 1);
 
+
+    //integrator
+    Integrator integrator(nt, dt, ns, ds);
+    vec k = integrator.spatialFreqVec();
+    vec w = integrator.temporalFreqVec();
+    peak = integrator.temporalFreqResolution();
 
     DOG Ws(0.62, 1.26, 0.85);
     TemporalDelta Wt(0, dt);
@@ -301,15 +290,27 @@ TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
     TemporalDelta Kcr_t(0, dt);
     SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
 
+    //stimulus
+    double wd = w(wId);
+    double spatialFreq = k(kId);
 
     for(int i=0; i < maskSize.n_elem; i++){
-        results[i] = runSystemTest_GRIC_pg(nt, dt, ns, ds,
-                                           C, wId, kId, orientation,
-                                           maskSize[i], phase,
-                                           W, Kcr,
-                                           Krg, Kri, Krc,
-                                           Kig, Kic,
-                                           preCalls, calls);
+        CircleMaskGrating stim(&integrator, spatialFreq, wd, C, phase, orientation, maskSize[i]);
+        stim.computeFourierTransform();
+
+        if(runTest){
+            results.push_back(monteCarloIntegration(integrator, stim,
+                                               W, Kcr,
+                                               Krg, Kri, Krc,
+                                               Kig, Kic,
+                                               preCalls, calls));
+        }
+        double ftIntegrator = runSystemTest_GRIC_pg(integrator, stim,
+                                                    W, Kcr,
+                                                    Krg, Kri, Krc,
+                                                    Kig, Kic);
+
+        CHECK(ftIntegrator == Approx(results[i]).epsilon(1e-4));
     }
 
     //----------------------------------------------------------------------
@@ -320,7 +321,10 @@ TEST_CASE("runSystemTest_GRIC_pg_1 [slow]"){
     if (newDataFile.is_open())
     {
         newDataFile << fileHash << "\n";
-        newDataFile << results;
+
+        for(double r : results){
+            newDataFile << std::fixed <<  std::setprecision(15) << r;
+        }
         newDataFile.close();
     }
 
