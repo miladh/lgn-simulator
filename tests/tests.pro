@@ -44,5 +44,5 @@ SOURCES += main.cpp \
 QMAKE_POST_LINK = cd $$PWD && sha512sum systemTests/slowSystemTests/*.cpp > $$OUT_PWD/test_file_ids
 
 HEADERS += \
-    systemTests/slowSystemTests/test_system_girc_patchgrating.h \
-    systemTests/slowSystemTests/mcintegrationtest.h
+    systemTests/slowSystemTests/mcintegrationtest.h \
+    systemTests/slowSystemTests/test_system_gric_patchgrating.h

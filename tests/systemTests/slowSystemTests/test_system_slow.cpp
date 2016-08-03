@@ -14,11 +14,11 @@
 
 #include <lgnSimulator.h>
 #include <catch.hpp>
-#include "test_system_girc_patchgrating.h"
+#include "test_system_gric_patchgrating.h"
 
 using namespace lgnSimulator;
 
-TEST_CASE("system_gric_pg [slow]"){
+TEST_CASE("system_gric_pg_1 [slow]"){
     /***
     * system: gric
     * stimulus: patch grating

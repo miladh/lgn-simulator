@@ -1,7 +1,9 @@
-#include "test_system_girc_patchgrating.h"
+#include "test_system_gric_patchgrating.h"
 
-test_system_girc_patchGrating::test_system_girc_patchGrating(string testLabel, string filename,
-                                                             double preCalls, double calls)
+test_system_girc_patchGrating::test_system_girc_patchGrating(string testLabel,
+                                                             string filename,
+                                                             double preCalls,
+                                                             double calls)
     : MCintegrationTest(testLabel, filename, preCalls, calls)
 {
 }
