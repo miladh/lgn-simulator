@@ -17,7 +17,7 @@ using namespace lgnSimulator;
 class MCintegrationTest
 {
 public:
-    MCintegrationTest(string testLabel, string filename, double preCalls, double calls);
+    MCintegrationTest(string testLabel, string sourceFilename, double preCalls, double calls);
 
     virtual void runTest() = 0;
     virtual double integrand(double *k, size_t dim, void *params) = 0;
@@ -41,8 +41,7 @@ public:
     };
 
 protected:
-    string m_label;
-    string m_filename;
+    string m_outputFilename;
     string m_hashValue;
 
     double m_computed = 0.0;

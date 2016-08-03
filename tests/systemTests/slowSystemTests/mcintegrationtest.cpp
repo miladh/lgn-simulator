@@ -1,20 +1,19 @@
 #include "mcintegrationtest.h"
 
 MCintegrationTest::MCintegrationTest(string testLabel,
-                                                     string filename,
-                                                     double preCalls,
-                                                     double calls)
-    : m_label(testLabel)
-    , m_filename(filename)
+                                     string sourceFilename,
+                                     double preCalls,
+                                     double calls)
+    : m_outputFilename("test_outputs/"+testLabel)
     , m_preCalls(preCalls)
     , m_calls(calls)
 {
 
     cout << "==================" << testLabel <<  "==================" << endl;
-    cout << "Source filename: " << filename << endl;
+    cout << "Source filename: " << sourceFilename << endl;
 
-    string sourceFilename = "systemTests/slowSystemTests/"+filename + ".cpp";
-    string hashValueFilename = "test_file_ids";
+    string sourceFile = "systemTests/slowSystemTests/test_outputs"+sourceFilename + ".cpp";
+    string hashValueFilename = "test_outputs/test_file_hash";
 
     // Check if file with test file ids exists------------------------------------
     if(!ifstream(hashValueFilename)){
@@ -27,22 +26,22 @@ MCintegrationTest::MCintegrationTest(string testLabel,
     bool hashValueIsFound = false;
     string line;
     while(getline( file_ids, line ) && !hashValueIsFound){
-        if(line.find(sourceFilename) != string::npos){
-            m_hashValue = line.substr(0, line.find(sourceFilename)) ;
+        if(line.find(sourceFile) != string::npos){
+            m_hashValue = line.substr(0, line.find(sourceFile)) ;
             hashValueIsFound = true;
         }
     }
 
     // Check if file with test results exists--------------------------------
-    if(!ifstream(testLabel)){
+    if(!ifstream(m_outputFilename)){
         m_computeMC = true;
-        cout << "output file doesn't exists: " << testLabel <<", running test..." << endl;
+        cout << "output file doesn't exists: " << m_outputFilename <<", running test..." << endl;
     }
 
     // Check if output file has changed---------------------------------------
     else{
-        cout << "output file exists: " << testLabel << endl;
-        ifstream  outputFile(testLabel);
+        cout << "output file exists: " << m_outputFilename << endl;
+        ifstream  outputFile(m_outputFilename);
         bool found = false;
         string line;
         while(getline( outputFile, line ) && !found){
@@ -56,7 +55,7 @@ MCintegrationTest::MCintegrationTest(string testLabel,
         if(!m_computeMC){
             string line;
             cout << "reading data..." << endl;
-            outputFile.open(testLabel);
+            outputFile.open(m_outputFilename);
             while(getline( outputFile, line )){
                 if(line != m_hashValue){
                     m_results.push_back(stod(line));
@@ -96,16 +95,16 @@ double MCintegrationTest::computeIntegral(double *xl, double *xu, void *params)
 
     gsl_monte_vegas_state *s = gsl_monte_vegas_alloc (2);
     gsl_monte_vegas_integrate (&G, xl, xu, 2, m_preCalls, r, s, &res, &err);
-    display_results ("vegas warm-up", res, err);
+    //    display_results ("vegas warm-up", res, err);
     do
     {
         gsl_monte_vegas_integrate (&G, xl, xu, 2, m_calls/5, r, s, &res, &err);
-        printf ("result = % .6f sigma = % .6f "
-                "chisq/dof = %.1f\n", res, err,
-                gsl_monte_vegas_chisq (s));
+        //        printf ("result = % .6f sigma = % .6f "
+        //                "chisq/dof = %.1f\n", res, err,
+        //                gsl_monte_vegas_chisq (s));
     }while (fabs (gsl_monte_vegas_chisq (s)) < 0.5);
 
-    //    display_results ("vegas final", res, err);
+    display_results ("vegas final", res, err);
     gsl_monte_vegas_free (s);
     gsl_rng_free (r);
 
@@ -116,7 +115,7 @@ double MCintegrationTest::computeIntegral(double *xl, double *xu, void *params)
 void MCintegrationTest::writeOutputFile()
 {
     if(m_computeMC){
-        ofstream newDataFile(m_label);
+        ofstream newDataFile(m_outputFilename);
         cout << "writing new test results..." << endl;
 
         if (newDataFile.is_open())

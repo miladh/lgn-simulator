@@ -38,11 +38,14 @@ SOURCES += main.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
     systemTests/test_system_g_patchgrating.cpp \
     systemTests/slowSystemTests/test_system_slow.cpp \
-    systemTests/slowSystemTests/test_system_gric_patchgrating.cpp \
-    systemTests/slowSystemTests/mcintegrationtest.cpp
+    systemTests/slowSystemTests/mcintegrationtest.cpp \
+    systemTests/slowSystemTests/test_system_gric_pg_1.cpp
 
-QMAKE_POST_LINK = cd $$PWD && sha512sum systemTests/slowSystemTests/*.cpp > $$OUT_PWD/test_file_ids
 
 HEADERS += \
     systemTests/slowSystemTests/mcintegrationtest.h \
-    systemTests/slowSystemTests/test_system_gric_patchgrating.h
+    systemTests/slowSystemTests/test_system_gric_pg_1.h
+
+
+QMAKE_POST_LINK = cd $$PWD && mkdir -p $$OUT_PWD/test_outputs $$escape_expand(\n\t) cd $$PWD && sha512sum systemTests/slowSystemTests/*.cpp > $$OUT_PWD/test_outputs/test_file_hash
+

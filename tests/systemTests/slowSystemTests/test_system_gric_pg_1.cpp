@@ -1,4 +1,4 @@
-#include "test_system_gric_patchgrating.h"
+#include "test_system_gric_pg_1.h"
 
 test_system_girc_patchGrating::test_system_girc_patchGrating(string testLabel,
                                                              string filename,
@@ -44,12 +44,12 @@ void test_system_girc_patchGrating::runTest()
     double xu[2] ={integrator.spatialFreqVec().max(),
                    integrator.spatialFreqVec().max()};
 
+
     //ganglion cell
     DOG Ws(0.62, 1.26, 0.85);
     TemporalDelta Wt(0, dt);
     SeparableKernel W(w_w, &Ws, &Wt);
     GanglionCell ganglion(&integrator, W);
-
 
     //relayCell cell
     RelayCell relay(&integrator);
@@ -77,12 +77,14 @@ void test_system_girc_patchGrating::runTest()
     TemporalDelta Kic_t(0, dt);
     SeparableKernel Kic(w_ic, &Kic_s, &Kic_t);
 
+
     //cortical cell
     CorticalCell cortical(&integrator);
 
     SpatialDelta Kcr_s(ds,{0,0});
     TemporalDelta Kcr_t(0, dt);
     SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
+
 
 
     //Connect
@@ -92,6 +94,7 @@ void test_system_girc_patchGrating::runTest()
     interneuron.addGanglionCell(&ganglion, Kig);
     interneuron.addCorticalCell(&cortical, Kic);
     cortical.addRelayCell(&relay, Kcr);
+
 
 
     int q = 0;

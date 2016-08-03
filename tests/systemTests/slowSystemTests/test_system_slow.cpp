@@ -14,7 +14,7 @@
 
 #include <lgnSimulator.h>
 #include <catch.hpp>
-#include "test_system_gric_patchgrating.h"
+#include "test_system_gric_pg_1.h"
 
 using namespace lgnSimulator;
 
@@ -26,8 +26,10 @@ TEST_CASE("system_gric_pg_1 [slow]"){
     *       varying mask and spatial frequency
     ***/
 
-    test_system_girc_patchGrating test("system_gric_pg",
-                                       "test_system_gric_patchgrating",
+    string testLabel = "system_gric_pg_1";
+    string filename = "test_system_gric_pg";
+    test_system_girc_patchGrating test(testLabel,
+                                       filename,
                                        1e3, 5e6);
 
     test.runTest();
