@@ -26,7 +26,8 @@ public:
     };
 
     // Compute functions
-    void computeResponse(const Stimulus *const stimulus);
+    void computeResponse(const Stimulus *const stimulus,
+                         bool recomputeFourierTransfrom=false);
     void computeResponseFourierTransform(const Stimulus *const stimulus);
 
     //Virtual function:

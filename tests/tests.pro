@@ -37,9 +37,12 @@ SOURCES += main.cpp \
     stimulusTests/test_stimulus_circlegrating.cpp \
     stimulusTests/test_stimulus_fullfieldgrating.cpp \
     systemTests/test_system_g_patchgrating.cpp \
-    systemTests/test_system_g_patchgrating_numeric.cpp \
-    systemTests/slowSystemTests/test_system_gric_patchgrating.cpp
+    systemTests/slowSystemTests/test_system_slow.cpp \
+    systemTests/slowSystemTests/test_system_gric_patchgrating.cpp \
+    systemTests/slowSystemTests/mcintegrationtest.cpp
 
 QMAKE_POST_LINK = cd $$PWD && sha512sum systemTests/slowSystemTests/*.cpp > $$OUT_PWD/test_file_ids
 
-HEADERS +=
+HEADERS += \
+    systemTests/slowSystemTests/test_system_girc_patchgrating.h \
+    systemTests/slowSystemTests/mcintegrationtest.h
