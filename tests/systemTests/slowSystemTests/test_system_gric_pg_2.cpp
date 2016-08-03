@@ -1,16 +1,16 @@
-#include "test_system_gric_pg_1.h"
+#include "test_system_gric_pg_2.h"
 
-test_system_gric_pg_1::test_system_gric_pg_1(string testLabel,
-                                                             string filename,
-                                                             double preCalls,
-                                                             double calls,
-                                                             double epsilon)
+test_system_gric_pg_2::test_system_gric_pg_2(string testLabel,
+                                             string filename,
+                                             double preCalls,
+                                             double calls,
+                                             double epsilon)
     : MCintegrationTest(testLabel, filename, preCalls, calls, epsilon)
 {
 }
 
 
-void test_system_gric_pg_1::runTest()
+void test_system_gric_pg_2::runTest()
 {
     int ns = 9;
     int nt = 1;
@@ -110,8 +110,8 @@ void test_system_gric_pg_1::runTest()
                     m_results.push_back(computeIntegral(xl, xu, &params));
                 }
 
-                relay.computeResponse(&stim, true);
-                double ftIntegrator = relay.response()
+                interneuron.computeResponse(&stim, true);
+                double ftIntegrator = interneuron.response()
                         (integrator.nPointsSpatial()/2,
                          integrator.nPointsSpatial()/2,
                          0);
@@ -131,7 +131,7 @@ void test_system_gric_pg_1::runTest()
     writeOutputFile();
 }
 
-double test_system_gric_pg_1::integrand(double *k, size_t dim, void *params)
+double test_system_gric_pg_2::integrand(double *k, size_t dim, void *params)
 {
 
     (void)(dim);
@@ -150,7 +150,12 @@ double test_system_gric_pg_1::integrand(double *k, size_t dim, void *params)
                - r.Krc.fourierTransform({kx, ky}, wd)
                * r.Kcr.fourierTransform({kx, ky}, wd));
 
-    cx_double res =  Wr *  r.S.fourierTransformAtFrequency({kx, ky}, wd)
+    cx_double Wi = r.Kig.fourierTransform({kx, ky}, wd)
+            * r.Wg.fourierTransform({kx, ky}, wd)
+            + r.Kic.fourierTransform({kx, ky}, wd)
+            * r.Kcr.fourierTransform({kx, ky}, wd) * Wr;
+
+    cx_double res =  Wi *  r.S.fourierTransformAtFrequency({kx, ky}, wd)
             /(8*core::pi*core::pi*core::pi)*r.peak;
     return real(res);
 }
