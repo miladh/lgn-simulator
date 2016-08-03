@@ -17,7 +17,7 @@ using namespace lgnSimulator;
 class MCintegrationTest
 {
 public:
-    MCintegrationTest(string testLabel, string sourceFilename, double preCalls, double calls);
+    MCintegrationTest(string testLabel, string sourceFilename, double preCalls, double calls, double epsilon);
 
     virtual void runTest() = 0;
     virtual double integrand(double *k, size_t dim, void *params) = 0;
@@ -48,10 +48,12 @@ protected:
     double m_peak = 0.0;
     double m_preCalls = 1;
     double m_calls = 1;
+    double m_epsilon = 0;
     bool m_computeMC=true;
 
     vector<double> m_results;
     double m_error = 0.0;
+
 
 };
 

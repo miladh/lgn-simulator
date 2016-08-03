@@ -23,14 +23,15 @@ TEST_CASE("system_gric_pg_1 [slow]"){
     * system: gric
     * stimulus: patch grating
     * test: center relay cell response with
-    *       varying mask and spatial frequency
+    *       varying mask, spatial frequency,
+    *       and feedback weight
     ***/
 
     string testLabel = "system_gric_pg_1";
-    string filename = "test_system_gric_pg";
+    string sourceFilename = "test_system_gric_pg_1";
     test_system_girc_patchGrating test(testLabel,
-                                       filename,
-                                       1e3, 5e6);
+                                       sourceFilename,
+                                       1e4, 5e6, 1e-4);
 
     test.runTest();
 }

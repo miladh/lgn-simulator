@@ -3,21 +3,23 @@
 MCintegrationTest::MCintegrationTest(string testLabel,
                                      string sourceFilename,
                                      double preCalls,
-                                     double calls)
+                                     double calls,
+                                     double epsilon)
     : m_outputFilename("test_outputs/"+testLabel)
     , m_preCalls(preCalls)
     , m_calls(calls)
+    , m_epsilon(epsilon)
 {
 
     cout << "==================" << testLabel <<  "==================" << endl;
     cout << "Source filename: " << sourceFilename << endl;
 
-    string sourceFile = "systemTests/slowSystemTests/test_outputs"+sourceFilename + ".cpp";
+    string sourceFile = "systemTests/slowSystemTests/"+sourceFilename + ".cpp";
     string hashValueFilename = "test_outputs/test_file_hash";
 
     // Check if file with test file ids exists------------------------------------
     if(!ifstream(hashValueFilename)){
-        throw std::runtime_error("Could not open file: " + hashValueFilename);
+        throw std::runtime_error("could not open file: " + hashValueFilename);
     }
 
 
@@ -29,7 +31,10 @@ MCintegrationTest::MCintegrationTest(string testLabel,
         if(line.find(sourceFile) != string::npos){
             m_hashValue = line.substr(0, line.find(sourceFile)) ;
             hashValueIsFound = true;
+            cout << "found hash value of source file: " << sourceFile << endl;
         }
+    }if(!hashValueIsFound){
+        throw std::runtime_error("could not find hash value of source file: " + sourceFile);
     }
 
     // Check if file with test results exists--------------------------------

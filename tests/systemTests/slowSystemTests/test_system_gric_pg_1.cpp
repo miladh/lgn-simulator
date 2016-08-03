@@ -3,8 +3,9 @@
 test_system_girc_patchGrating::test_system_girc_patchGrating(string testLabel,
                                                              string filename,
                                                              double preCalls,
-                                                             double calls)
-    : MCintegrationTest(testLabel, filename, preCalls, calls)
+                                                             double calls,
+                                                             double epsilon)
+    : MCintegrationTest(testLabel, filename, preCalls, calls, epsilon)
 {
 }
 
@@ -18,18 +19,17 @@ void test_system_girc_patchGrating::runTest()
 
     double w_w = 1.0;
     double w_ig = 1.0;
-    double w_ic = 0.8;
     double w_rg = 1.0;
     double w_ri = -0.3;
-    double w_rc = 0.8;
     double w_cr = 1.0;
+    vec weights = {0.0, 0.8};
 
     double C = 1.0;
     double orientation = 0.;
     int wId = 0;
     double phase = 0.0;
-    vec kId = linspace(0, 0, 1);
-    vec maskSize = linspace(0.01, 13, 2);
+    vec kId = linspace(0, 80 , 5);
+    vec maskSize = linspace(0.01, 13, 5);
 
 
     //integrator
@@ -45,87 +45,89 @@ void test_system_girc_patchGrating::runTest()
                    integrator.spatialFreqVec().max()};
 
 
+
     //ganglion cell
     DOG Ws(0.62, 1.26, 0.85);
     TemporalDelta Wt(0, dt);
     SeparableKernel W(w_w, &Ws, &Wt);
     GanglionCell ganglion(&integrator, W);
 
-    //relayCell cell
-    RelayCell relay(&integrator);
-
-    SpatialGaussian Krg_s(0.1);
-    TemporalDelta Krg_t(0, dt);
-    SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
-
-    SpatialGaussian Kri_s(0.5);
-    TemporalDelta Kri_t(0, dt);
-    SeparableKernel Kri(w_ri, &Kri_s, &Kri_t);
-
-    SpatialGaussian Krc_s(0.1);
-    TemporalDelta Krc_t(0, dt);
-    SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
-
-    //cortical cell
-    Interneuron interneuron(&integrator);
-
-    SpatialGaussian Kig_s(1.0);
-    TemporalDelta Kig_t(0, dt);
-    SeparableKernel Kig(w_ig, &Kig_s, &Kig_t);
-
-    SpatialGaussian Kic_s(1.0);
-    TemporalDelta Kic_t(0, dt);
-    SeparableKernel Kic(w_ic, &Kic_s, &Kic_t);
-
-
-    //cortical cell
-    CorticalCell cortical(&integrator);
-
-    SpatialDelta Kcr_s(ds,{0,0});
-    TemporalDelta Kcr_t(0, dt);
-    SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
-
-
-
-    //Connect
-    relay.addGanglionCell(&ganglion, Krg);
-    relay.addCorticalCell(&cortical, Krc);
-    relay.addInterNeuron(&interneuron, Kri);
-    interneuron.addGanglionCell(&ganglion, Kig);
-    interneuron.addCorticalCell(&cortical, Kic);
-    cortical.addRelayCell(&relay, Kcr);
-
-
 
     int q = 0;
-    for(double d : maskSize){
-        for(int i : kId){
-            CircleMaskGrating stim(&integrator, k(i), wd,
-                                   C, phase, orientation, d);
-            stim.computeFourierTransform();
+    for(double wc : weights){
+        //relayCell cell
+        RelayCell relay(&integrator);
 
-            if(m_computeMC){
-                struct Param params = {this, stim, W, Kig, Kic, Krg, Kri, Krc, Kcr, m_peak};
-                m_results.push_back(computeIntegral(xl, xu, &params));
+        SpatialGaussian Krg_s(0.1);
+        TemporalDelta Krg_t(0, dt);
+        SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
+
+        SpatialGaussian Kri_s(0.5);
+        TemporalDelta Kri_t(0, dt);
+        SeparableKernel Kri(w_ri, &Kri_s, &Kri_t);
+
+        SpatialGaussian Krc_s(0.1);
+        TemporalDelta Krc_t(0, dt);
+        SeparableKernel Krc(wc, &Krc_s, &Krc_t);
+
+
+        //interneuron cell
+        Interneuron interneuron(&integrator);
+
+        SpatialGaussian Kig_s(1.0);
+        TemporalDelta Kig_t(0, dt);
+        SeparableKernel Kig(w_ig, &Kig_s, &Kig_t);
+
+        SpatialGaussian Kic_s(1.0);
+        TemporalDelta Kic_t(0, dt);
+        SeparableKernel Kic(wc, &Kic_s, &Kic_t);
+
+        //cortical cell
+        CorticalCell cortical(&integrator);
+
+        SpatialDelta Kcr_s(ds,{0,0});
+        TemporalDelta Kcr_t(0, dt);
+        SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
+
+
+        //Connect
+        relay.addGanglionCell(&ganglion, Krg);
+        relay.addInterNeuron(&interneuron, Kri);
+        relay.addCorticalCell(&cortical, Krc);
+        interneuron.addGanglionCell(&ganglion, Kig);
+        interneuron.addCorticalCell(&cortical, Kic);
+        cortical.addRelayCell(&relay, Kcr);
+
+
+        for(double d : maskSize){
+            for(int i : kId){
+                CircleMaskGrating stim(&integrator, k(i), wd,
+                                       C, phase, orientation, d);
+                stim.computeFourierTransform();
+
+                if(m_computeMC){
+                    struct Param params = {this, stim, W, Kig, Kic, Krg, Kri, Krc, Kcr, m_peak};
+                    m_results.push_back(computeIntegral(xl, xu, &params));
+                }
+
+                relay.computeResponse(&stim, true);
+                double ftIntegrator = relay.response()
+                        (integrator.nPointsSpatial()/2,
+                         integrator.nPointsSpatial()/2,
+                         0);
+
+
+
+                INFO( "kd=" <<  stim.spatialFreq()
+                      << "  d=" << stim.maskSize()
+                      << "   Ns=" << integrator.nPointsSpatial());
+                CHECK(ftIntegrator == Approx(m_results[q]).epsilon(m_epsilon));
+                q+=1;
             }
 
-            relay.computeResponse(&stim, true);
-            double ftIntegrator = relay.response()
-                    (integrator.nPointsSpatial()/2,
-                     integrator.nPointsSpatial()/2,
-                     0);
-
-
-
-            INFO( "kd=" <<  stim.spatialFreq()
-                  << "  d=" << stim.maskSize()
-                  << "   Ns=" << integrator.nPointsSpatial());
-            CHECK(ftIntegrator == Approx(m_results[q]).epsilon(1e-4));
-            q+=1;
         }
 
     }
-
     writeOutputFile();
 }
 

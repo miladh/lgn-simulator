@@ -8,7 +8,7 @@ class test_system_girc_patchGrating : public MCintegrationTest
 {
 public:
     test_system_girc_patchGrating(string testLabel, string filename,
-                                  double preCalls, double calls);
+                                  double preCalls, double calls, double epsilon);
 
     // test_system_MCintegration interface
 public:
