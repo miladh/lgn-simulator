@@ -108,7 +108,7 @@ interneuron:
         w: 1.0
         spatial:
         # Gaussian
-            a: 0.6
+            a: 1.0
 
 
         temporal:
@@ -121,7 +121,7 @@ interneuron:
         w: 0.8
         spatial:
         #Gauss
-            a: 0.6
+            a: 1.0
 
         temporal:
         # TemporalDelta
