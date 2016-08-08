@@ -44,7 +44,7 @@ ganglion:
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
-    w: 0.5
+    w: 1.0
     Wg:
     # DOG
         a: 0.62
@@ -89,7 +89,7 @@ relay:
         w: 0.8
         spatial:
         #Gauss
-            a: 0.4
+            a: 0.6
 
         temporal:
         # TemporalDelta
@@ -121,7 +121,7 @@ interneuron:
         w: 0.8
         spatial:
         #Gauss
-            a: 0.4
+            a: 1.2
 
         temporal:
         # TemporalDelta
