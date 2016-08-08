@@ -89,7 +89,7 @@ relay:
         w: 0.8
         spatial:
         #Gauss
-            a: 1.5
+            a: 0.5
 
         temporal:
         # TemporalDelta
@@ -108,7 +108,7 @@ interneuron:
         w: 1.0
         spatial:
         # Gaussian
-            a: 0.6
+            a: 0.5
 
 
         temporal:
@@ -121,7 +121,7 @@ interneuron:
         w: 0.8
         spatial:
         #Gauss
-            a: 1.6
+            a: 0.7
 
         temporal:
         # TemporalDelta
