@@ -86,7 +86,7 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 0.8
+        w: 0.4
         spatial:
         #Gauss
             a: 0.6
@@ -121,7 +121,7 @@ interneuron:
         w: 0.8
         spatial:
         #Gauss
-            a: 1.2
+            a: 0.7
 
         temporal:
         # TemporalDelta
