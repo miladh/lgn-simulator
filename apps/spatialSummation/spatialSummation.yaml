@@ -137,10 +137,10 @@ cortical:
 
     #kernels
     Kcr:
-        w: 0.5
+        w: 1.0
         spatial:
         #Gauss
-            a: 1.55
+            a: 1.0
 
         temporal:
         # TemporalDelta
