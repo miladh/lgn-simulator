@@ -89,7 +89,7 @@ relay:
         w: 0.8
         spatial:
         #Gauss
-            a: 0.6
+            a: 0.1
 
         temporal:
         # TemporalDelta
