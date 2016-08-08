@@ -44,7 +44,7 @@ ganglion:
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
-    w: 1.0
+    w: 0.5
     Wg:
     # DOG
         a: 0.62
