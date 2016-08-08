@@ -105,10 +105,10 @@ interneuron:
 
     #Kernels
     Kig:
-        w: 0.2
+        w: 1.0
         spatial:
         # Gaussian
-            a: 0.4
+            a: 0.5
 
 
         temporal:
