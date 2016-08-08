@@ -41,10 +41,6 @@ int main(int argc, char* argv[])
     SeparableKernel Wg(cfg["ganglion"]["w"].as<double>(), &Wg_s, &Wg_t);
     GanglionCell ganglion(&integrator, Wg, cfg["ganglion"]["R0"].as<double>());
     
-
-    //Ganglion cell2:-----------------------------------------------------------
-    SeparableKernel Wg_off(cfg["ganglion"]["w"].as<double>()*-1, &Wg_s, &Wg_t);
-    GanglionCell ganglion_off(&integrator, Wg_off, cfg["ganglion"]["R0"].as<double>());
     
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(&integrator, cfg["relay"]["R0"].as<double>());
@@ -82,7 +78,7 @@ int main(int argc, char* argv[])
     CorticalCell cortical(&integrator, cfg["cortical"]["R0"].as<double>(), &heavisideNonlinearity);
     
     // R -> G
-    SpatialDelta Ks_cr = createSpatialDeltaKernel(cfg["cortical"]["Kcr"]["spatial"]);
+    SpatialGaussian Ks_cr = createSpatialGaussianKernel(cfg["cortical"]["Kcr"]["spatial"]);
     TemporalDelta Kt_cr = createTemporalDeltaKernel(cfg["cortical"]["Kcr"]["temporal"]);
     SeparableKernel Kcr(cfg["cortical"]["Kcr"]["w"].as<double>(), &Ks_cr, &Kt_cr);
     
@@ -92,7 +88,7 @@ int main(int argc, char* argv[])
     relay.addCorticalCell(&cortical, Krc);
     relay.addInterNeuron(&interneuron, Kri);
     
-    interneuron.addGanglionCell(&ganglion_off, Kig);
+    interneuron.addGanglionCell(&ganglion, Kig);
     interneuron.addCorticalCell(&cortical, Kic);
     
     cortical.addRelayCell(&relay, Kcr);

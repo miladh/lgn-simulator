@@ -28,8 +28,7 @@ stimulus:
     phase: 0.                      #degrees
     surroundPhase: 0.0              #degrees
 
-
-    kId:  4                        #[-Ns/2, Ns/2 - 1]
+    kId:  0                        #[-Ns/2, Ns/2 - 1]
     surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
 
 
@@ -43,8 +42,8 @@ ganglion:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
     w: 1.0
     Wg:
     # DOG
@@ -60,15 +59,15 @@ relay:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
 
     #Kernels
     Krg:
         w: 1.0
         spatial:
         # Gaussian
-            a: 0.1
+            a: 0.3
 
 
         temporal:
@@ -79,7 +78,7 @@ relay:
         w: -0.3
         spatial:
         #Gauss
-            a: 0.5
+            a: 0.2
 
         temporal:
         # TemporalDelta
@@ -90,7 +89,7 @@ relay:
         w: 0.8
         spatial:
         #Gauss
-            a: 0.1
+            a: 1.6
 
         temporal:
         # TemporalDelta
@@ -101,15 +100,15 @@ interneuron:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
 
     #Kernels
     Kig:
         w: 1.0
         spatial:
         # Gaussian
-            a: 1.0
+            a: 0.6
 
 
         temporal:
@@ -122,7 +121,7 @@ interneuron:
         w: 0.8
         spatial:
         #Gauss
-            a: 1.0
+            a: 1.8
 
         temporal:
         # TemporalDelta
@@ -133,16 +132,15 @@ cortical:
     R0 : 0.
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
 
     #kernels
     Kcr:
         w: 1.0
         spatial:
-        # SpatialDelta
-            ds : *ds_id
-            shift: [0.0, 0.]
+        #Gauss
+            a: 1.55
 
         temporal:
         # TemporalDelta

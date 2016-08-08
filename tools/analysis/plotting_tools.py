@@ -384,12 +384,12 @@ if __name__ == "__main__":
 
     Ns = exp.integrator.Ns
     Nt = exp.integrator.Nt
-
-    S = {"type" : "Stimulus",
-            "value" : exp.stimulus.spatio_temporal(),
-            "t_points" : exp.integrator.t_points,
-            "spatial_vec" : exp.integrator.s_points
-            }
+    #
+    # S = {"type" : "Stimulus",
+    #         "value" : exp.stimulus.spatio_temporal(),
+    #         "t_points" : exp.integrator.t_points,
+    #         "spatial_vec" : exp.integrator.s_points
+    #         }
 
 #     Wg = {"type" : "Ganglion",
 #                 "value" : exp.ganglion.irf(),
@@ -438,30 +438,31 @@ if __name__ == "__main__":
 #                 "spatial_vec" : exp.integrator.k_points
 #                 }
 # # Response --------------------------------------------------------------------------
-    # Rg = {"type" : "Ganglion",
-    #             "value" : exp.ganglion.resp(),
-    #             "t_points" : exp.integrator.t_points,
-    #             "spatial_vec" : exp.integrator.s_points
-    #             }
-    # Rr = {"type" : "Relay",
-    #          "value" : exp.relay.resp(),
-    #          "t_points" : exp.integrator.t_points,
-    #          "spatial_vec" : exp.integrator.s_points
-    #         }
+    Rg = {"type" : "Ganglion",
+                "value" : exp.ganglion.resp(),
+                "t_points" : exp.integrator.t_points,
+                "spatial_vec" : exp.integrator.s_points
+                }
+    Rr = {"type" : "Relay",
+             "value" : exp.relay.resp(),
+             "t_points" : exp.integrator.t_points,
+             "spatial_vec" : exp.integrator.s_points
+            }
 
     Ri = {"type" : "Interneuron",
              "value" : exp.interneuron.resp(),
              "t_points" : exp.integrator.t_points,
              "spatial_vec" : exp.integrator.s_points
     }
-    # Rc = {"type" : "Cortical",
-    # "value" : exp.cortical.resp(),
-    #              "t_points" : exp.integrator.t_points,
-    #              "spatial_vec" : exp.integrator.s_points
-    #             }
+    Rc = {"type" : "Cortical",
+    "value" : exp.cortical.resp(),
+                 "t_points" : exp.integrator.t_points,
+                 "spatial_vec" : exp.integrator.s_points
+                }
 
     # data = [S, Rg, Wg, Rr, Wr, Ri, Wi, Rc, Wc]
-    data = [S, Ri]
+    data = [ Rg, Rr,  Ri, Rc]
+    # data = [S, Ri]
 
     # plt.plot(exp.relay.t_resp(rc=[Ns/2, Ns/2]))
 
