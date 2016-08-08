@@ -39,29 +39,8 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 
-#parameters-------------------------------------------------------------------------------------
-spot_diameters = np.linspace(0., 15, 50)
-# spot_diameters = [13.734940]
-spatial_freqs = 4
-weights = np.linspace(0, 1.0, 6)
-phase = np.linspace(-180, 180, 10)
-
-#run simulator----------------------------------------------------------------------------------
-counter= 0
-for Kc in weights:
-    modify_Krc(Kc)
-    modify_Kic(Kc)
-    for d in spot_diameters:
-        modify_diameter(d)
-        with open(config_file, 'w') as stream:
-            yaml.dump(config_data, stream)
-
-        run_id = '{0:04}'.format(counter)
-        st.run_simulator(config_file, record_label, run_id)
-        counter+=1
-
 # #parameters-------------------------------------------------------------------------------------
-# spot_diameters = np.linspace(0., 15, 1)
+# spot_diameters = np.linspace(0., 15, 50)
 # # spot_diameters = [13.734940]
 # spatial_freqs = 4
 # weights = np.linspace(0, 1.0, 6)
@@ -80,5 +59,26 @@ for Kc in weights:
 #         run_id = '{0:04}'.format(counter)
 #         st.run_simulator(config_file, record_label, run_id)
 #         counter+=1
+
+# #parameters-------------------------------------------------------------------------------------
+spot_diameters = np.linspace(0., 15, 1)
+# spot_diameters = [13.734940]
+spatial_freqs = 4
+weights = np.linspace(0, 1.0, 6)
+phase = np.linspace(-180, 180, 10)
+
+#run simulator----------------------------------------------------------------------------------
+counter= 0
+for Kc in weights:
+    modify_Krc(Kc*0)
+    modify_Kic(Kc)
+    for d in spot_diameters:
+        modify_diameter(d)
+        with open(config_file, 'w') as stream:
+            yaml.dump(config_data, stream)
+
+        run_id = '{0:04}'.format(counter)
+        st.run_simulator(config_file, record_label, run_id)
+        counter+=1
 
 os.remove(config_file)
