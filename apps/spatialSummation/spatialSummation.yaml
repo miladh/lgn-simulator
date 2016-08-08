@@ -137,7 +137,7 @@ cortical:
 
     #kernels
     Kcr:
-        w: 1.0
+        w: 2.0
         spatial:
         #Gauss
             a: 1.55
