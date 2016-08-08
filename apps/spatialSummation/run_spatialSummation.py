@@ -70,7 +70,7 @@ phase = np.linspace(-180, 180, 10)
 #run simulator----------------------------------------------------------------------------------
 counter= 0
 for Kc in weights:
-    modify_Krc(Kc*0)
+    modify_Krc(Kc)
     modify_Kic(Kc)
     for d in spot_diameters:
         modify_diameter(d)
