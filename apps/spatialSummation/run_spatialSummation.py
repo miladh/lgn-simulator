@@ -39,7 +39,7 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 #parameters-------------------------------------------------------------------------------------
-spot_diameters = np.linspace(0., 15, 50)
+spot_diameters = np.linspace(0., 15, 1)
 # spot_diameters = [13.734940]
 spatial_freqs = 4
 weights = np.linspace(0, 1.0, 6)
