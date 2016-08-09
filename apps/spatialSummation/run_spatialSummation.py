@@ -43,14 +43,14 @@ with open(config_file, 'r') as stream:
 spot_diameters = np.linspace(0., 15, 50)
 # spot_diameters = [13.734940]
 spatial_freqs = 4
-weights = np.linspace(0, 0.8, 5)
+weights = [0.0, 0.2, 0.4, 0.6, 0.7, 0.8]
 phase = np.linspace(-180, 180, 10)
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
 for Kc in weights:
     modify_Krc(Kc)
-    modify_Kic(Kc*0)
+    modify_Kic(Kc)
     for d in spot_diameters:
         modify_diameter(d)
         with open(config_file, 'w') as stream:
