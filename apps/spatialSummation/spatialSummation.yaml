@@ -96,6 +96,8 @@ relay:
             delay: 0.
             dt: *dt_id
 
+
+
 interneuron:
     R0 : 0
     storeResponse: true
