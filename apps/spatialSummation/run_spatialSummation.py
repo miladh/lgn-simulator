@@ -50,7 +50,7 @@ phase = np.linspace(-180, 180, 10)
 counter= 0
 for Kc in weights:
     modify_Krc(Kc)
-    modify_Kic(Kc)
+    modify_Kic(Kc*0)
     for d in spot_diameters:
         modify_diameter(d)
         with open(config_file, 'w') as stream:
