@@ -43,7 +43,7 @@ with open(config_file, 'r') as stream:
 spot_diameters = np.linspace(0., 15, 50)
 # spot_diameters = [13.734940]
 spatial_freqs = 4
-weights = [0.0, 0.2, 0.4, 0.6, 0.7, 0.8]
+weights = [0.0, 0.2, 0.4, 0.6, 0.8]
 phase = np.linspace(-180, 180, 10)
 
 #run simulator----------------------------------------------------------------------------------
