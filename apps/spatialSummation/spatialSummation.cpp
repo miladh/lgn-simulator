@@ -37,10 +37,10 @@ int main(int argc, char* argv[])
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
     TemporalDelta Wg_t = createTemporalDeltaKernel(cfg["ganglion"]["Wt"]);
-    
     SeparableKernel Wg(cfg["ganglion"]["w"].as<double>(), &Wg_s, &Wg_t);
+
     GanglionCell ganglion(&integrator, Wg, cfg["ganglion"]["R0"].as<double>());
-    
+
     
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(&integrator, cfg["relay"]["R0"].as<double>());
@@ -55,16 +55,10 @@ int main(int argc, char* argv[])
     TemporalDelta Kt_ri = createTemporalDeltaKernel(cfg["relay"]["Kri"]["temporal"]);
     SeparableKernel Kri(cfg["relay"]["Kri"]["w"].as<double>(), &Ks_ri, &Kt_ri);
     
-    // C -> R1
+    // C -> R
     SpatialGaussian Ks_rc = createSpatialGaussianKernel(cfg["relay"]["Krc"]["spatial"]);
-//    EllipticGaussian Ks_rc=  createSpatialEllipticGaussianKernel(cfg["relay"]["Krc"]["spatial"]);
     TemporalDelta Kt_rc = createTemporalDeltaKernel(cfg["relay"]["Krc"]["temporal"]);
     SeparableKernel Krc(cfg["relay"]["Krc"]["w"].as<double>(), &Ks_rc, &Kt_rc);
-
-
-    // C -> R2
-//    EllipticGaussian Ks_rc2=  createSpatialEllipticGaussianKernel(cfg["relay"]["Krc2"]["spatial"]);
-//    SeparableKernel Krc2(cfg["relay"]["Krc"]["w"].as<double>(), &Ks_rc2, &Kt_rc);
     
     //Interneuron: -------------------------------------------------------------
     Interneuron interneuron(&integrator, cfg["interneuron"]["R0"].as<double>());
@@ -74,54 +68,37 @@ int main(int argc, char* argv[])
     TemporalDelta Kt_ig = createTemporalDeltaKernel(cfg["interneuron"]["Kig"]["temporal"]);
     SeparableKernel Kig(cfg["interneuron"]["Kig"]["w"].as<double>(), &Ks_ig, &Kt_ig);
     
-    // C1 -> I
+    // C -> I
     SpatialGaussian Ks_ic = createSpatialGaussianKernel(cfg["interneuron"]["Kic"]["spatial"]);
-//    EllipticGaussian Ks_ic = createSpatialEllipticGaussianKernel(cfg["interneuron"]["Kic"]["spatial"]);
     TemporalDelta Kt_ic = createTemporalDeltaKernel(cfg["interneuron"]["Kic"]["temporal"]);
     SeparableKernel Kic(cfg["interneuron"]["Kic"]["w"].as<double>(), &Ks_ic, &Kt_ic);
-
-
-    // C2-> I
-//    EllipticGaussian Ks_ic2 = createSpatialEllipticGaussianKernel(cfg["interneuron"]["Kic2"]["spatial"]);
-//    SeparableKernel Kic2(cfg["interneuron"]["Kic"]["w"].as<double>(), &Ks_ic2, &Kt_ic);
     
     //Cortical cell: -------------------------------------------------------------
     HeavisideNonlinearity heavisideNonlinearity;
     CorticalCell cortical(&integrator, cfg["cortical"]["R0"].as<double>(), &heavisideNonlinearity);
-
-    CorticalCell cortical2(&integrator, cfg["cortical"]["R0"].as<double>(), &heavisideNonlinearity);
     
-    // R -> C1
-//    SpatialGaussian Ks_cr = createSpatialGaussianKernel(cfg["cortical"]["Kcr"]["spatial"]);
-    EllipticGaussian Ks_cr = createSpatialEllipticGaussianKernel(cfg["cortical"]["Kcr"]["spatial"]);
+    // R -> C
+    SpatialDelta Ks_cr = createSpatialDeltaKernel(cfg["cortical"]["Kcr"]["spatial"]);
     TemporalDelta Kt_cr = createTemporalDeltaKernel(cfg["cortical"]["Kcr"]["temporal"]);
     SeparableKernel Kcr(cfg["cortical"]["Kcr"]["w"].as<double>(), &Ks_cr, &Kt_cr);
-
-
-    // R -> C2
-    EllipticGaussian Ks_cr2 = createSpatialEllipticGaussianKernel(cfg["cortical"]["Kcr2"]["spatial"]);
-    SeparableKernel Kcr2(cfg["cortical"]["Kcr"]["w"].as<double>(), &Ks_cr2, &Kt_cr);
     
     
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, Krg);
-    relay.addCorticalCell(&cortical, Krc);
-    relay.addCorticalCell(&cortical2, Krc);
     relay.addInterNeuron(&interneuron, Kri);
+    relay.addCorticalCell(&cortical, Krc);
     
     interneuron.addGanglionCell(&ganglion, Kig);
     interneuron.addCorticalCell(&cortical, Kic);
-    interneuron.addCorticalCell(&cortical2, Kic);
     
     cortical.addRelayCell(&relay, Kcr);
-    cortical2.addRelayCell(&relay, Kcr2);
     
     //Compute:-----------------------------------------------------------------
     S->computeFourierTransform();
     ganglion.computeImpulseResponseFourierTransform();
     interneuron.computeImpulseResponseFourierTransform();
     relay.computeImpulseResponseFourierTransform();
-//    cortical.computeImpulseResponseFourierTransform();
+    cortical.computeImpulseResponseFourierTransform();
     
     
     //Write:-----------------------------------------------------------------

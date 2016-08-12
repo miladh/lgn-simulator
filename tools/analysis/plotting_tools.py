@@ -433,8 +433,8 @@ if __name__ == "__main__":
 #                 }
 #
 #     Rc_ft = {"type" : "Cortical",
-#                  "value" : np.real(exp.cortical.resp_ft()),
 #                 "t_points" : exp.integrator.w_points,
+#                  "value" : np.real(exp.cortical.resp_ft()),
 #                 "spatial_vec" : exp.integrator.k_points
 #                 }
 # # Response --------------------------------------------------------------------------

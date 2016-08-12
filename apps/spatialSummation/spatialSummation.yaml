@@ -3,7 +3,7 @@ description: "Spatial config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 8
+    ns: 9
     nt: 1
     dt: &dt_id 10.0
     ds: &ds_id 0.1
@@ -19,8 +19,8 @@ stimulus:
     C: 1.0
     surroundC: 1.0
 
-    maskSize: 3.072289            #degrees
-    surroundMaskSize : 13.734940     #degrees
+    maskSize: 1            #degrees
+    surroundMaskSize : 0     #degrees
 
     orientation: 0.                 #degrees
     surroundOrientation : 0.0       #degrees
@@ -40,7 +40,7 @@ stimulus:
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
@@ -57,7 +57,7 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
@@ -75,7 +75,7 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -0.6
+        w: -0.4
         spatial:
         #Gauss
             a: 0.2
@@ -86,34 +86,21 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 0.8
+        w: 0.0
         spatial:
         #Gauss
             a: 0.2
-
-        ##Elliptic
-            #angle: 0
-            #widthLong: 0.7
-            #widthNarrow: 0.1
 
         temporal:
         # TemporalDelta
             delay: 0.
             dt: *dt_id
 
-    #Krc2:
-        #spatial:
-        ##Elliptic
-            #angle: 90
-            #widthLong: 0.7
-            #widthNarrow: 0.1
-
-
 
 
 interneuron:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
@@ -132,59 +119,35 @@ interneuron:
 
 
     Kic:
-        w: 0.8
+        w: 0.0
         spatial:
         #Gauss
             a: 1.2
 
-        ##Elliptic
-            #angle: 0
-            #widthLong: 1.0
-            #widthNarrow: 0.1
-
         temporal:
         # TemporalDelta
             delay: 0.
             dt: *dt_id
-
-    #Kic2:
-        #spatial:
-        ##Elliptic
-            #angle: 90
-            #widthLong: 1.0
-            #widthNarrow: 0.1
-
 
 cortical:
     R0 : 0.
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #kernels
     Kcr:
-        w: 1.0
+        w: 0.0
         spatial:
-        ##Gauss
-            #a: .1'
-
-        #Elliptic
-            angle: 0
-            widthLong: 0.8
-            widthNarrow: 0.1
+        #delta
+            ds: *ds_id
+            shift: [0, 0]
 
         temporal:
         # TemporalDelta
             delay: 0.
             dt: *dt_id
-
-    Kcr2:
-        spatial:
-        #Elliptic
-            angle: 90
-            widthLong: 0.8
-            widthNarrow: 0.1
 
 
 #------------File manager settings-----------------#
