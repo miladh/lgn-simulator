@@ -14,7 +14,7 @@ stimulus:
     storeFT: false
 
     # Grating:
-    mask: "circle" #none/circle/cscircle/gaussian
+    mask: "circle"  #none/circle/cscircle/gaussian
 
     C: 1.0
     surroundC: 1.0
