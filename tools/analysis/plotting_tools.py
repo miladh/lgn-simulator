@@ -396,11 +396,11 @@ if __name__ == "__main__":
                 "t_points" : exp.integrator.t_points,
                 "spatial_vec" : exp.integrator.s_points
                 }
-    # Wr = {"type" : "Relay",
-    #          "value" : exp.relay.irf(),
-    #          "t_points" : exp.integrator.t_points,
-    #          "spatial_vec" : exp.integrator.s_points
-    #         }
+    Wr = {"type" : "Relay",
+             "value" : exp.relay.irf(),
+             "t_points" : exp.integrator.t_points,
+             "spatial_vec" : exp.integrator.s_points
+            }
     #
     # Wi = {"type" : "Interneuron",
     #              "value" : exp.interneuron.irf(),
@@ -438,17 +438,17 @@ if __name__ == "__main__":
 #                 "spatial_vec" : exp.integrator.k_points
 #                 }
 # # Response --------------------------------------------------------------------------
-    # Rg = {"type" : "Ganglion",
-    #             "value" : exp.ganglion.resp(),
-    #             "t_points" : exp.integrator.t_points,
-    #             "spatial_vec" : exp.integrator.s_points
-    #             }
-    # Rr = {"type" : "Relay",
-    #          "value" : exp.relay.resp(),
-    #          "t_points" : exp.integrator.t_points,
-    #          "spatial_vec" : exp.integrator.s_points
-    #         }
-    #
+    Rg = {"type" : "Ganglion",
+                "value" : exp.ganglion.resp(),
+                "t_points" : exp.integrator.t_points,
+                "spatial_vec" : exp.integrator.s_points
+                }
+    Rr = {"type" : "Relay",
+             "value" : exp.relay.resp(),
+             "t_points" : exp.integrator.t_points,
+             "spatial_vec" : exp.integrator.s_points
+            }
+
     # Ri = {"type" : "Interneuron",
     #          "value" : exp.interneuron.resp(),
     #          "t_points" : exp.integrator.t_points,
@@ -462,7 +462,7 @@ if __name__ == "__main__":
 
     # data = [S, Rg, Wg, Rr, Wr, Ri, Wi, Rc, Wc]
     # data = [ Rg, Rg, Wr,  Rr, Wr, Ri, Wi, Rc, Wc]
-    data = [Wg]
+    data = [Rg, Rg, Wg, Rr, Wr]
     print exp.ganglion.irf().max()
 
     # plt.plot(exp.relay.t_resp(rc=[Ns/2, Ns/2]))
