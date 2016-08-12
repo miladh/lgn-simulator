@@ -88,13 +88,26 @@ relay:
     Krc:
         w: 0.8
         spatial:
-        #Gauss
-            a: 0.2
+        ##Gauss
+            #a: 0.2
+
+        #Elliptic
+            angle: 0
+            widthLong: 1.4
+            widthNarrow: 0.1
 
         temporal:
         # TemporalDelta
             delay: 0.
             dt: *dt_id
+
+    Krc2:
+        spatial:
+        #Elliptic
+            angle: 90
+            widthLong: 1.4
+            widthNarrow: 0.1
+
 
 
 
@@ -121,13 +134,26 @@ interneuron:
     Kic:
         w: 0.8
         spatial:
-        #Gauss
-            a: 1.2
+        ##Gauss
+            #a: 1.2
+
+        #Elliptic
+            angle: 0
+            widthLong: 1.4
+            widthNarrow: 0.1
 
         temporal:
         # TemporalDelta
             delay: 0.
             dt: *dt_id
+
+    Kic2:
+        spatial:
+        #Elliptic
+            angle: 90
+            widthLong: 1.4
+            widthNarrow: 0.1
+
 
 cortical:
     R0 : 0.
@@ -140,13 +166,25 @@ cortical:
     Kcr:
         w: 1.0
         spatial:
-        #Gauss
-            a: .1
+        ##Gauss
+            #a: .1'
+
+        #Elliptic
+            angle: 0
+            widthLong: 1.4
+            widthNarrow: 0.1
 
         temporal:
         # TemporalDelta
             delay: 0.
             dt: *dt_id
+
+    Kcr2:
+        spatial:
+        #Elliptic
+            angle: 90
+            widthLong: 1.4
+            widthNarrow: 0.1
 
 
 #------------File manager settings-----------------#
