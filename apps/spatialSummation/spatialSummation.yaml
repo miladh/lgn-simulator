@@ -64,7 +64,7 @@ relay:
 
     #Kernels
     Krg:
-        w: 1.0
+        w: 2.0
         spatial:
         # Gaussian
             a: 0.1
