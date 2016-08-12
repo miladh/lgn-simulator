@@ -85,7 +85,7 @@ int main(int argc, char* argv[])
     
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, Krg);
-    relay.addInterNeuron(&interneuron, Kri);
+//    relay.addInterNeuron(&interneuron, Kri);
     relay.addCorticalCell(&cortical, Krc);
     
     interneuron.addGanglionCell(&ganglion, Kig);
