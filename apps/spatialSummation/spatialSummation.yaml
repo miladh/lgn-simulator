@@ -171,7 +171,7 @@ cortical:
 
         #Elliptic
             angle: 0
-            widthLong: 1.4
+            widthLong: 0.7
             widthNarrow: 0.1
 
         temporal:
@@ -183,7 +183,7 @@ cortical:
         spatial:
         #Elliptic
             angle: 90
-            widthLong: 1.4
+            widthLong: 0.7
             widthNarrow: 0.1
 
 
