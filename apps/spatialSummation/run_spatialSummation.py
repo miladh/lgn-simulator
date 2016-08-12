@@ -68,7 +68,7 @@ spatial_freqs = 4
 weights = np.linspace(0, 1.0, 6)
 phase = np.linspace(-180, 180, 10)
 
-widths = [0.25, 0.5, 1.0, 2.0]*0.1
+widths = np.array([0.25, 0.5, 1.0, 2.0])*0.1
 #run simulator----------------------------------------------------------------------------------
 counter= 0
 for a in widths:
