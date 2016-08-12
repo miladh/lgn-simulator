@@ -5,7 +5,7 @@ description: "Spatial config file"
 grid:
     ns: 9
     nt: 1
-    dt: &dt_id 10.0
+    dt: &dt_id 1.0
     ds: &ds_id 0.1
 
 #------------Stimulus settings-------------------#

@@ -396,23 +396,23 @@ if __name__ == "__main__":
                 "t_points" : exp.integrator.t_points,
                 "spatial_vec" : exp.integrator.s_points
                 }
-    Wr = {"type" : "Relay",
-             "value" : exp.relay.irf(),
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-            }
-
-    Wi = {"type" : "Interneuron",
-                 "value" : exp.interneuron.irf(),
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
-
-    Wc = {"type" : "Cortical",
-                 "value" : exp.cortical.irf(),
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
+    # Wr = {"type" : "Relay",
+    #          "value" : exp.relay.irf(),
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #         }
+    #
+    # Wi = {"type" : "Interneuron",
+    #              "value" : exp.interneuron.irf(),
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
+    #
+    # Wc = {"type" : "Cortical",
+    #              "value" : exp.cortical.irf(),
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
 # #
 # # # Response FT--------------------------------------------------------------------------
 #     Rg_ft = {"type" : "Ganglion",
@@ -438,31 +438,32 @@ if __name__ == "__main__":
 #                 "spatial_vec" : exp.integrator.k_points
 #                 }
 # # Response --------------------------------------------------------------------------
-    Rg = {"type" : "Ganglion",
-                "value" : exp.ganglion.resp(),
-                "t_points" : exp.integrator.t_points,
-                "spatial_vec" : exp.integrator.s_points
-                }
-    Rr = {"type" : "Relay",
-             "value" : exp.relay.resp(),
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-            }
-
-    Ri = {"type" : "Interneuron",
-             "value" : exp.interneuron.resp(),
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-    }
-    Rc = {"type" : "Cortical",
-    "value" : exp.cortical.resp(),
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
+    # Rg = {"type" : "Ganglion",
+    #             "value" : exp.ganglion.resp(),
+    #             "t_points" : exp.integrator.t_points,
+    #             "spatial_vec" : exp.integrator.s_points
+    #             }
+    # Rr = {"type" : "Relay",
+    #          "value" : exp.relay.resp(),
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #         }
+    #
+    # Ri = {"type" : "Interneuron",
+    #          "value" : exp.interneuron.resp(),
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    # }
+    # Rc = {"type" : "Cortical",
+    # "value" : exp.cortical.resp(),
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
 
     # data = [S, Rg, Wg, Rr, Wr, Ri, Wi, Rc, Wc]
-    data = [ Rg, Rg, Wr,  Rr, Wr, Ri, Wi, Rc, Wc]
-    # data = [S, Ri]
+    # data = [ Rg, Rg, Wr,  Rr, Wr, Ri, Wi, Rc, Wc]
+    data = [Wg]
+    print exp.ganglion.irf().max()
 
     # plt.plot(exp.relay.t_resp(rc=[Ns/2, Ns/2]))
 
