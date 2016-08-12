@@ -461,7 +461,7 @@ if __name__ == "__main__":
                 }
 
     # data = [S, Rg, Wg, Rr, Wr, Ri, Wi, Rc, Wc]
-    data = [ Rg, Rg, Wr,  Rr, Wi, Ri,Wc, Rc]
+    data = [ Rg, Rg, Wr,  Rr, Wr, Ri, Wi, Rc, Wc]
     # data = [S, Ri]
 
     # plt.plot(exp.relay.t_resp(rc=[Ns/2, Ns/2]))
