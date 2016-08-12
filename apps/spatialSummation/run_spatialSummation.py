@@ -27,6 +27,8 @@ def modify_Krc(w):
 def modify_Kri(w):
     config_data["relay"]["Kri"]["w"]= float(-w)
 
+def modify_arc(a):
+    config_data["relay"]["Krc"]["spatial"]["a"] = float(a)
 
 
 #read config file-----------------------------------------------------------------------------
@@ -66,10 +68,11 @@ spatial_freqs = 4
 weights = np.linspace(0, 1.0, 6)
 phase = np.linspace(-180, 180, 10)
 
+widths = [0.25, 0.5, 1.0, 2.0]*0.1
 #run simulator----------------------------------------------------------------------------------
 counter= 0
-for wri in weights:
-    modify_Kri(wri)
+for a in widths:
+    modify_arc(a)
     with open(config_file, 'w') as stream:
         yaml.dump(config_data, stream)
 
