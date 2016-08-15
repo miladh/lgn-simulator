@@ -12,15 +12,25 @@ import sumatra_tracking.run_simulator as st
 
 def run_simulation(attrs):
     counter= 0
-    for key, attr in attrs.iteritems():
-        for value in attr["values"]:
-            attr["func"](value)
-            with open(config_file, 'w') as stream:
-                yaml.dump(config_data, stream)
 
-            run_id = '{0:04}'.format(counter)
-            st.run_simulator(config_file, record_label, run_id)
-            counter+=1
+    j=0
+    for key, attr in attrs.items()[j:]:
+        if(j<len(attrs)):
+            j=2
+            i=1
+            for value in attr["values"]:
+                attr["func"](value)
+                print "---", value
+                for key, attr in attrs.items()[i:]:
+                    for value in attr["values"]:
+                        print value
+                        attr["func"](value)
+                        with open(config_file, 'w') as stream:
+                            yaml.dump(config_data, stream)
+
+                        run_id = '{0:04}'.format(counter)
+                        st.run_simulator(config_file, record_label, run_id)
+                        counter+=1
 
     os.remove(config_file)
 
@@ -61,13 +71,13 @@ with open(config_file, 'r') as stream:
 
 
 # #parameters-------------------------------------------------------------------------------------
-spot_diameters = np.linspace(0., 15, 1)
+spot_diameters = np.linspace(0., 15, 2)
 weights = np.linspace(-1, 0, 6)
 widths = np.array([0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 10.])*0.1
 
 attrs = {
     "w_ri" : {"func": modify_wri, "values": weights},
-    "a_ri" : {"func": modify_ari, "values": widths}
+    "a_ri" : {"func": modify_ari, "values": widths},
 }
 #run simulator----------------------------------------------------------------------------------
 run_simulation(attrs)
