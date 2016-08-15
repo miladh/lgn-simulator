@@ -63,11 +63,10 @@ with open(config_file, 'r') as stream:
 # #parameters-------------------------------------------------------------------------------------
 spot_diameters = np.linspace(0., 15, 1)
 weights = np.linspace(0, 1.0, 6)
-widths = np.array([0.25, 0.5, 1.0, 2.0])*0.1
+widths = np.array([0.25, 0.5, 1.0, 2.0, 4.0])*0.1
 
 attrs = {
-    "w_ri" : {"func": modify_wri, "values": weights},
-    "a_ri" : {"func": modify_ari, "values": widths},
+    "a_ri" : {"func": modify_ari, "values": widths}
 }
 #run simulator----------------------------------------------------------------------------------
 run_simulation(attrs)
