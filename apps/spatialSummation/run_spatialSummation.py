@@ -47,16 +47,18 @@ with open(config_file, 'r') as stream:
 
 # #parameters-------------------------------------------------------------------------------------
 spot_diameters = np.linspace(0., 15, 2)
-weights = np.linspace(-1, 0, 6)
+weights = np.array([-1.5, -1.0, 0.5, 0.25])
 widths = np.array([0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 10.])*0.1
 
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
+
 for w in weights:
     modify_wri(w)
     for a in widths:
         modify_ari(a)
+##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
 
@@ -64,3 +66,4 @@ for w in weights:
         st.run_simulator(config_file, record_label, run_id)
         counter+=1
 os.remove(config_file)
+##########################################################
