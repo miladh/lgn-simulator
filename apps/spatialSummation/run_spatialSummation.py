@@ -49,6 +49,7 @@ def modify_arc(a):
     config_data["relay"]["Krc"]["spatial"]["a"] = float(a)
 
 
+
 #read config file-----------------------------------------------------------------------------
 options = sys.argv[1:]
 record_label = options[-1]
