@@ -12,6 +12,7 @@ import sumatra_tracking.run_simulator as st
 
 def run_simulation(attrs):
     counter= 0
+    print attrs
     for key, attr in attrs.iteritems():
         print attr, key
         for value in attr["values"]:
