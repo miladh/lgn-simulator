@@ -15,6 +15,7 @@ def run_simulation(attrs):
     for attr in attrs:
         for value in attr[values]:
             attr["func"](value)
+            print value
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
