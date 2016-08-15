@@ -66,7 +66,7 @@ weights = np.linspace(0, 1.0, 6)
 widths = np.array([0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 10.])*0.1
 
 attrs = {
-    "w_ri" : {"func": modify_wri, "values": weights}
+    "w_ri" : {"func": modify_wri, "values": weights},
     "a_ri" : {"func": modify_ari, "values": widths}
 }
 #run simulator----------------------------------------------------------------------------------
