@@ -70,4 +70,4 @@ attrs = {
 }
 
 #run simulator----------------------------------------------------------------------------------
-run_simulation()
+run_simulation(attrs)
