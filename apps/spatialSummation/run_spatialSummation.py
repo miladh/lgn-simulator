@@ -12,12 +12,9 @@ import sumatra_tracking.run_simulator as st
 
 def run_simulation(attrs):
     counter= 0
-    print attrs
     for key, attr in attrs.iteritems():
-        print attr, key
         for value in attr["values"]:
             attr["func"](value)
-            print value
             with open(config_file, 'w') as stream:
                 yaml.dump(config_data, stream)
 
@@ -49,6 +46,8 @@ def modify_Kri(w):
 def modify_arc(a):
     config_data["relay"]["Krc"]["spatial"]["a"] = float(a)
 
+def modify_ari(a):
+    config_data["relay"]["Kri"]["spatial"]["a"] = float(a)
 
 
 #read config file-----------------------------------------------------------------------------
@@ -63,14 +62,11 @@ with open(config_file, 'r') as stream:
 
 # #parameters-------------------------------------------------------------------------------------
 spot_diameters = np.linspace(0., 15, 1)
-spatial_freqs = 4
 weights = np.linspace(0, 1.0, 6)
-phase = np.linspace(-180, 180, 10)
 widths = np.array([0.25, 0.5, 1.0, 2.0])*0.1
 
 attrs = {
-    "a_rc" : {"func": modify_arc, "values": widths}
+    "a_ri" : {"func": modify_aig, "values": widths},
 }
-
 #run simulator----------------------------------------------------------------------------------
 run_simulation(attrs)
