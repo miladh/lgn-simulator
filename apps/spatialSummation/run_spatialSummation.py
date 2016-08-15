@@ -40,14 +40,14 @@ def modify_Kic(w):
 def modify_Krc(w):
     config_data["relay"]["Krc"]["w"]= float(w)
 
-def modify_Kri(w):
-    config_data["relay"]["Kri"]["w"]= float(-w)
-
 def modify_arc(a):
     config_data["relay"]["Krc"]["spatial"]["a"] = float(a)
 
 def modify_ari(a):
     config_data["relay"]["Kri"]["spatial"]["a"] = float(a)
+
+def modify_wri(w):
+    config_data["relay"]["Kri"]["w"] = float(w)
 
 
 #read config file-----------------------------------------------------------------------------
@@ -66,6 +66,7 @@ weights = np.linspace(0, 1.0, 6)
 widths = np.array([0.25, 0.5, 1.0, 2.0])*0.1
 
 attrs = {
+    "w_ri" : {"func": modify_wri, "values": weights},
     "a_ri" : {"func": modify_ari, "values": widths},
 }
 #run simulator----------------------------------------------------------------------------------
