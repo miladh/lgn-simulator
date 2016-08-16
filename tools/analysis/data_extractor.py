@@ -4,7 +4,7 @@ import os, os.path
 
 from analysis.Simulation import Simulation
 
-def simulation_extractor(sims, attr, value):
+def simulation_extractor(sims, attr, value, return_as_list=True):
     """
     extracts simulations where attribute
     attr=value
@@ -29,10 +29,13 @@ def simulation_extractor(sims, attr, value):
         if(p==value):
             extracted_sims.append(sim)
 
-    return extracted_sims
+    if(not return_as_list and len(extracted_sims)==1):
+        return extracted_sims[0]
+    else:
+        return extracted_sims
 
 
-def extract_unique_simulation_attrs(sims, attr):
+def extract_unique_simulation_attrs(sims, attr,  return_as_array=True):
     """
     extracts unique values for attribute attr
     from a list of simulations
@@ -55,7 +58,10 @@ def extract_unique_simulation_attrs(sims, attr):
     for sim in sims:
         attr_values.add(sim.get_attribute(attr))
 
-    return np.array(sorted(list(attr_values)))
+    if( not return_as_array and len(attr_values)==1):
+        return list(attr_values)[0]
+    else:
+        return np.array(sorted(list(attr_values)))
 
 
 def get_simulations(data_path):
@@ -82,42 +88,4 @@ def get_simulations(data_path):
             data_file = os.path.join(dir_name, dir+".h5")
             f = h5py.File(data_file, "r")
             sims.append(Simulation(setting_file, f))
-    return sims
-
-#TODO: Remove if not needed
-def get_simulations_from_file(config_file):
-    """
-    returns list of simulations
-
-    Parameters
-    ----------
-    config_file : str
-        path to config file with simulation ids
-
-    Returns
-    -------
-    list
-        list of Simulation objects.
-
-    """
-    import h5py
-
-    with open(config_file, 'r') as stream:
-        config_data = yaml.load(stream)
-        data_path = config_data["data_path"]
-        data_ids  = config_data["simulation_ids"]
-
-    print "Data path: ", data_path
-    print "Reading simulation_ids:\n", data_ids
-
-    sims=[]
-    for data_id in data_ids:
-        rootpath = os.path.join(data_path, data_id)
-        for root, dirs, files in os.walk(rootpath):
-            for dir in dirs:
-                dir_name = os.path.join(root, dir)
-                setting_file = os.path.join(dir_name, "_"+dir+".yaml")
-                data_file = os.path.join(dir_name, dir+".h5")
-                f = h5py.File(data_file, "r")
-                sims.append(Simulation(setting_file, f))
     return sims
