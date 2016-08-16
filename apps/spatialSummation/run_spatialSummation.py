@@ -54,17 +54,16 @@ with open(config_file, 'r') as stream:
 
 #parameters-------------------------------------------------------------------------------------
 spot_diameters = np.linspace(0., 15, 2)
-weights = np.array([0.0, 0.3, 0.6, 0.9, 4.2])
-widths = np.array([0.5, 1.0, 2.0, 4.0, 10.])*0.2
+weights = np.array([0.0, 0.3, 0.6, 0.9, 1.2])
+widths = np.array([0.5, 1.0, 2.0, 4.0, 10.])
 
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
 
 for w in weights:
-    modify_wic(w)
-    for a in widths:
-        modify_aic(a)
+        modify_wic(w)
+        modify_wrc(w)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
