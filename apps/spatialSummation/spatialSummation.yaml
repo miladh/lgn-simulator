@@ -3,8 +3,8 @@ description: "Spatial config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 10
-    nt: 1
+    ns: 9
+    nt: 0.1
     dt: &dt_id 1.0
     ds: &ds_id 0.05
 
