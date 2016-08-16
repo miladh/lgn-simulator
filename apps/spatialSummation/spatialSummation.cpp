@@ -98,7 +98,7 @@ int main(int argc, char* argv[])
     ganglion.computeImpulseResponseFourierTransform();
     relay.computeImpulseResponseFourierTransform();
     interneuron.computeImpulseResponseFourierTransform();
-//    cortical.computeImpulseResponseFourierTransform();
+    cortical.computeImpulseResponseFourierTransform();
     
     
     //Write:-----------------------------------------------------------------
