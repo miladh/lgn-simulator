@@ -54,7 +54,7 @@ with open(config_file, 'r') as stream:
 
 #parameters-------------------------------------------------------------------------------------
 spot_diameters = np.linspace(0., 15, 20)
-weights = np.array([0.0, 0.3, 0.6, 0.9, 1.2])
+weights = np.array([0.0, 0.9])
 widths = np.array([0.5, 1.0, 2.0, 4.0, 10.])
 
 
@@ -62,7 +62,7 @@ widths = np.array([0.5, 1.0, 2.0, 4.0, 10.])
 counter= 0
 
 for w in weights:
-    modify_wic(w)
+    modify_wic(w*0)
     modify_wrc(w)
     for d in spot_diameters:
         modify_diameter(d)
