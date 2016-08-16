@@ -85,7 +85,7 @@ def make_plot(cell_type):
     axarr[0,0].set_ylabel("$W_\mathrm{R}(x, y=0)$",  fontsize=14)
     axarr[1,0].set_ylabel("$W_\mathrm{R}(x, y=0)$ (Normalized)",  fontsize=14)
     plt.tight_layout()
-    #plt.savefig("/home/milad/Dropbox/projects/lgn/paper/images/results/irf_noFB_"+cell_type+"_"+run_id+".pdf")
+    plt.savefig("/home/milad/Dropbox/projects/lgn/paper/images/results/irf_noFB_"+cell_type+"_"+run_id+".pdf")
     plt.show()
 
 
