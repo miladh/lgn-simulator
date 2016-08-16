@@ -27,6 +27,13 @@ def modify_wrc(w):
     config_data["relay"]["Krc"]["w"] = float(w)
 
 
+def modify_aic(a):
+    config_data["interneuron"]["Kic"]["spatial"]["a"] = float(a)
+
+def modify_wic(w):
+    config_data["interneuron"]["Kic"]["w"] = float(w)
+
+
 def modify_ari(a):
     config_data["relay"]["Kri"]["spatial"]["a"] = float(a)
 
@@ -55,9 +62,9 @@ widths = np.array([0.5, 1.0, 2.0, 4.0, 10.])*0.1
 counter= 0
 
 for w in weights:
-    modify_wrc(w)
+    modify_wic(w)
     for a in widths:
-        modify_arc(a)
+        modify_aic(a)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
