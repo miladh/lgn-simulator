@@ -83,7 +83,7 @@ def set_font():
     plt.rcParams.update(params)
 
 
-def set_legend():
+def set_legend(fontsize=14):
     """
     legend options
     """
