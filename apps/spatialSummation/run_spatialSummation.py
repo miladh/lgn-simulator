@@ -62,7 +62,7 @@ widths = np.array([0.5, 1.0, 2.0, 4.0, 10.])
 counter= 0
 
 for w in weights:
-    modify_wic(w*0)
+    modify_wic(w)
     modify_wrc(w)
     for d in spot_diameters:
         modify_diameter(d)
