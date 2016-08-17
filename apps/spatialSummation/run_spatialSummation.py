@@ -34,6 +34,13 @@ def modify_wic(w):
     config_data["interneuron"]["Kic"]["w"] = float(w)
 
 
+def modify_aig(a):
+    config_data["interneuron"]["Kig"]["spatial"]["a"] = float(a)
+
+def modify_wig(w):
+    config_data["interneuron"]["Kig"]["w"] = float(w)
+
+
 def modify_ari(a):
     config_data["relay"]["Kri"]["spatial"]["a"] = float(a)
 
@@ -55,17 +62,17 @@ with open(config_file, 'r') as stream:
 #parameters-------------------------------------------------------------------------------------
 spot_diameters = np.linspace(0., 15, 250)
 weights = np.array([0.0, 0.2, 0.4, 0.8, 0.9, 1.0])
-widths = np.array([0.5, 1.0, 2.0, 4.0, 10.])
+widths = np.array([0.5, 1.0, 2.0, 5.0, 10.])
 
 
 #run simulator----------------------------------------------------------------------------------
 counter= 0
 
 for w in weights:
-    modify_wic(w)
-    modify_wrc(w)
-    for d in spot_diameters:
-        modify_diameter(d)
+    modify_wig(w)
+    modify_wrc(w*0)
+    for a in widths:
+        modify_ari(a*0.1)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
