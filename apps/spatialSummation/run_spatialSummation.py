@@ -63,7 +63,7 @@ counter= 0
 
 for w in weights:
     modify_wic(w)
-    modify_wrc(w)
+    modify_wrc(w*0)
     for d in spot_diameters:
         modify_diameter(d)
 ##########################################################
