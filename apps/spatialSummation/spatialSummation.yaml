@@ -43,7 +43,7 @@ ganglion:
     storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: true
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
     w: 1.0
     Wg:
     # DOG
@@ -60,7 +60,7 @@ relay:
     storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: true
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
 
     #Kernels
     Krg:
@@ -103,7 +103,7 @@ interneuron:
     storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: true
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
 
     #Kernels
     Kig:
@@ -134,7 +134,7 @@ cortical:
     storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: true
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
 
     #kernels
     Kcr:
