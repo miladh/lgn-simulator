@@ -65,7 +65,7 @@ for w in weights:
     modify_wic(w)
     modify_wrc(w*0)
     for a in widths:
-        modify_aic(a)
+        modify_aic(a*0.1)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
