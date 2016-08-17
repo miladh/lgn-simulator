@@ -6,7 +6,7 @@ grid:
     ns: 9
     nt: 1
     dt: &dt_id 1.0
-    ds: &ds_id 0.1
+    ds: &ds_id 0.05
 
 #------------Stimulus settings-------------------#
 stimulus:
@@ -75,10 +75,10 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -1.0
+        w: -.3
         spatial:
         #Gauss
-            a: 0.2
+            a: 0.5
 
         temporal:
         # TemporalDelta
@@ -89,7 +89,7 @@ relay:
         w: 0.0
         spatial:
         #Gauss
-            a: 0.2
+            a: 0.1
 
         temporal:
         # TemporalDelta
@@ -107,10 +107,10 @@ interneuron:
 
     #Kernels
     Kig:
-        w: .5
+        w: 1.0
         spatial:
         # Gaussian
-            a: 0.2
+            a: 1.0
 
         temporal:
         # TemporalDelta
@@ -122,7 +122,7 @@ interneuron:
         w: 0.0
         spatial:
         #Gauss
-            a: 0.8
+            a: 1.0
 
         temporal:
         # TemporalDelta
