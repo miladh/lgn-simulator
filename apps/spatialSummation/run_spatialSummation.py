@@ -73,8 +73,8 @@ for w in weights:
         modify_wic(w)
         modify_wrc(w)
     # for a in widths:
-        modify_aig(1.0)
-        modify_aic(1.0)
+        modify_aig(0.2)
+        modify_aic(1.4)
         modify_arc(0.1)
 ##########################################################
         with open(config_file, 'w') as stream:
