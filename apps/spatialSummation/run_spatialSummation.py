@@ -69,7 +69,7 @@ widths = np.array([0.5, 1.0, 2.0, 5.0, 10., 20.])
 counter= 0
 
 for w in weights:
-        modify_wig(1)
+        modify_wig(0.5)
         modify_wic(w)
         modify_wrc(w)
     # for a in widths:
