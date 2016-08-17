@@ -69,10 +69,10 @@ widths = np.array([0.5, 1.0, 2.0, 5.0, 10.])
 counter= 0
 
 for w in weights:
-    modify_wig(w)
+    modify_wic(w)
     # modify_wrc(w*0)
     for a in widths:
-        modify_aig(a*0.1)
+        modify_aic(a*0.1)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
