@@ -75,7 +75,7 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -0.2
+        w: -0.4
         spatial:
         #Gauss
             a: 0.2
@@ -126,7 +126,7 @@ interneuron:
         w: 0.0
         spatial:
         #Gauss
-            a: 0.6
+            a: 0.7
 
         temporal:
         # TemporalDelta
