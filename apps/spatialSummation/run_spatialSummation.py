@@ -72,7 +72,7 @@ for w in weights:
     modify_wig(1.0)
     modify_wic(w*0)
     modify_wrc(w*0)
-    modify_wiri(w)
+    modify_wri(w)
     for a in widths:
         # modify_aig(1.0)
         modify_ari(a*0.1)
