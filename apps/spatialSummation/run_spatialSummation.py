@@ -71,7 +71,7 @@ counter= 0
 for w in weights:
         modify_wig(1.0)
         modify_wic(w)
-        modify_wrc(w)
+        modify_wrc(w*1.2)
     # for a in widths:
         # modify_aig(0.5)
         # modify_aic(1.3)
