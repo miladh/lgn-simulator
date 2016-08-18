@@ -78,7 +78,7 @@ relay:
         w: -0.4
         spatial:
         #Gauss
-            a: 0.1
+            a: 0.6
 
         #delta
             ds: *ds_id
