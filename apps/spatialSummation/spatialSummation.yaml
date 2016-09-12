@@ -6,7 +6,7 @@ grid:
     ns: 9
     nt: 1
     dt: &dt_id 1.0
-    ds: &ds_id 0.1
+    ds: &ds_id 0.2
 
 #------------Stimulus settings-------------------#
 stimulus:
