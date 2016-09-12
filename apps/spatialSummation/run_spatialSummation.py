@@ -61,7 +61,7 @@ with open(config_file, 'r') as stream:
 
 #parameters-------------------------------------------------------------------------------------
 spot_diameters = np.linspace(0., 15, 1)
-weights = np.array([0.0, 0.25, 0.5, 0.7, 0.8, 0.9, 1.0, 1.5, 2.0, 4.0])
+weights = np.array([0.0, 0.25, 0.5, 0.7, 0.8, 0.9, 1.01, 1.5, 2.0, 4.0])
 widths = np.linspace(0.1, 2.5, 10.)
 
 
