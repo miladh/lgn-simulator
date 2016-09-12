@@ -75,7 +75,7 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: 0.0
+        w: -1.0
         spatial:
         #Gauss
             a: 0.1
@@ -111,7 +111,7 @@ interneuron:
 
     #Kernels
     Kig:
-        w: 1.0
+        w: 0.0
         spatial:
         # Gaussian
             a: 0.3
