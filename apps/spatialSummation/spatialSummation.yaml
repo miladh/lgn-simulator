@@ -40,7 +40,7 @@ stimulus:
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
@@ -57,7 +57,7 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
@@ -75,7 +75,7 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: -0.25
+        w: 0.0
         spatial:
         #Gauss
             a: 0.1
@@ -104,7 +104,7 @@ relay:
 
 interneuron:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
@@ -114,7 +114,7 @@ interneuron:
         w: 1.0
         spatial:
         # Gaussian
-            a: 0.6
+            a: 0.3
 
         temporal:
         # TemporalDelta
@@ -135,7 +135,7 @@ interneuron:
 
 cortical:
     R0 : 0.
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: true
