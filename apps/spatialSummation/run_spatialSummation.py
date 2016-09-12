@@ -70,14 +70,14 @@ counter= 0
 
 for w in weights:
     modify_wig(0.0)
-    modify_wri(-1.0)
-    modify_wic(w)
-    modify_wrc(0)
+    modify_wri(0.0)
+    modify_wic(0)
+    modify_wrc(w)
     for a in widths:
         # modify_aig(0.3)
-        modify_ari(0.1)
-        # modify_arc(a)
-        modify_aic(a)
+        # modify_ari(0.1)
+        modify_arc(a)
+        # modify_aic(a)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
