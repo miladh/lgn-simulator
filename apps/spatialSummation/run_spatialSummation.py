@@ -69,7 +69,7 @@ widths = np.array([0.5, 1.0, 2.0, 5.0, 10., 20.])
 counter= 0
 
 for w in weights:
-        modify_wic(w)
+    modify_wic(w)
     for a in widths:
         modify_aic(a)
 ##########################################################
