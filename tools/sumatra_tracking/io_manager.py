@@ -2,13 +2,10 @@
 import yaml
 import os, os.path
 
-def get_output_dir(config_file, run_id):
+def get_output_dir(record_label):
     from sumatra.projects import load_project
-    with open(config_file, 'r') as stream:
-        config_data = yaml.load(stream)
-
     data_path = os.path.abspath(load_project().data_store.root)
-    output_dir = os.path.join(data_path, run_id)
+    output_dir = os.path.join(data_path, record_label)
 
     print "Results saved to this directory:\n", output_dir + "/*"
 
