@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from playb import*
+from pylab import*
 import os, sys
 current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
@@ -9,7 +9,6 @@ options = sys.argv[1:]
 record_label = options[-1]
 sims_path = options[-2]
 output_dir = smt.get_output_dir(record_label)
-
 
 
 # Analysis: --------------------------------------------------------------------
