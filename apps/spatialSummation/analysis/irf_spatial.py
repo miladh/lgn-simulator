@@ -17,14 +17,14 @@ from analysis.data_extractor import*
 from analysis.pretty_plotting import*
 
 cell_type = "relay"
-attr_a_name = "relay.Krc.spatial.a"
-attr_b_name = "relay.Krc.w"
-attr_norm_name = "relay.Krc.w"
+attr_a_name = "relay.Kri.spatial.a"
+attr_b_name = "relay.Kri.w"
+attr_norm_name = "relay.Kri.w"
 attr_norm = 0.0
 
 xlabel ="$|w_{\mathrm{RI}}|$"
 ylabel = "$a_{\mathrm{RI}}$"
-fig_name= "irf_exFB_"
+fig_name= "irf_noFB_"
 
 #--------------------------------------------------------------------------------------
 sims = get_simulations(sims_path)
