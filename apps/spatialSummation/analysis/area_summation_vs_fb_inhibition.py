@@ -1,13 +1,13 @@
 #!/usr/bin/python
 import os, sys
-import sumatra_tracking.io_manager as smt
+options = sys.argv[1:]
+record_label = options[-1]
+sims_path = options[-2]
 
 current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
 
-options = sys.argv[1:]
-record_label = options[-1]
-sims_path = options[-2]
+import sumatra_tracking.io_manager as smt
 output_dir = smt.get_output_dir(record_label)
 
 
