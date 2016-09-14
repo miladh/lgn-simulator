@@ -1,5 +1,4 @@
 #!/usr/bin/python
-from pylab import*
 import os, sys
 current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
@@ -9,22 +8,20 @@ record_label = sys.argv[1:][-1]
 sims_path = sys.argv[1:][-2]
 output_dir = smt.get_output_dir(record_label)
 
-
 #Analysis: ###########################################################################
+from pylab import*
 import seaborn.apionly as sns
 sns.set_color_codes()
 from analysis.data_extractor import*
 from analysis.pretty_plotting import*
 
-cell_type = "relay"
-attr_a_name = "relay.Krc.spatial.a"
+cell_type = ["relay", "interneuron"]
+attr_a_name = "interneuron.Kic.w"
 attr_b_name = "relay.Krc.w"
-attr_norm_name = "relay.Krc.w"
-attr_norm = 0.0
 
-xlabel ="$|w_{\mathrm{RI}}|$"
-ylabel = "$a_{\mathrm{RI}}$"
-fig_name= "irf_exFB_"
+xlabel ="$|w_{\mathrm{RC}}|$" #attr_b
+ylabel = "$|w_{\mathrm{IC}}|$" #attr_a
+fig_name= "irf_FB_"
 
 sims = get_simulations(sims_path)
 Ns=sims[0].integrator.Ns
@@ -38,19 +35,23 @@ attr_a = attr_a[:]
 
 attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
 attr_b = attr_b[argsort(abs(attr_b))]
-attr_b = attr_b[:-4]
+attr_b = attr_b[:]
+
+norm_sim = simulation_extractor(simulation_extractor(sims, attr_a_name, 0), attr_b_name, 0)[0]
+
 
 print "attr_a=", attr_a
 print "attr_b=", attr_b
 
 #--------------------------------------------------------------------------------------
-def extract_irfs():
+
+#--------------------------------------------------------------------------------------
+def extract_irfs(cell_type):
     irf_max = zeros([len(attr_a), len(attr_b)])
     irf_min = zeros([len(attr_a), len(attr_b)])
     irf_size = zeros([len(attr_a), len(attr_b)])
 
-    irf_norm = simulation_extractor(sims, attr_norm_name, attr_norm)[0].get_attribute(cell_type).irf()[0, Ns/2,Ns/2:]
-
+    irf_norm = norm_sim.get_attribute(cell_type).irf()[0, Ns/2,Ns/2:]
     for i, a in enumerate(attr_a):
         sims_a = simulation_extractor(sims, attr_a_name, a)
         for j, b in enumerate(attr_b):
@@ -65,7 +66,7 @@ def extract_irfs():
     return irf_max, irf_min, irf_size
 
 
-def make_plot(irf_max, irf_min, irf_size):
+def make_plot(irf_max, irf_min, irf_size, cell_type):
 
     fig, axarr = plt.subplots(1,3, figsize=(15,5), sharey='row')
     set_legend()
@@ -110,4 +111,6 @@ def make_plot(irf_max, irf_min, irf_size):
     fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
     plt.show()
 
-make_plot(*extract_irfs())
+
+for cell in cell_type:
+    make_plot(*extract_irfs(cell), cell_type=cell)
