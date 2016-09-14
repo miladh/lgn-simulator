@@ -5,9 +5,8 @@ current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
 import sumatra_tracking.io_manager as smt
 
-options = sys.argv[1:]
-record_label = options[-1]
-sims_path = options[-2]
+record_label = sys.argv[1:][-1]
+sims_path = sys.argv[1:][-2]
 output_dir = smt.get_output_dir(record_label)
 
 
