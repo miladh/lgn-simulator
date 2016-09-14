@@ -3,9 +3,7 @@ import os, sys
 import sumatra_tracking.io_manager as smt
 
 current_path = os.path.dirname(os.path.realpath(__file__))
-lib_path = [os.path.abspath(os.path.join(current_path,"../../../tools/sumatraTracking")),
-           os.path.abspath(os.path.join(current_path,"../../../tools/analysis"))]
-[sys.path.append(path) for path in lib_path]
+sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
 
 options = sys.argv[1:]
 record_label = options[-1]
