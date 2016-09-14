@@ -112,7 +112,7 @@ def make_plot(cell_type):
 
 
     plt.tight_layout()
-    fig.savefig(os.path.join(output_dir, "irf_noFB_"+cell_type+"_"+run_id+".pdf"))
+    fig.savefig(os.path.join(output_dir, "irf_noFB_"+cell_type+"_"+record_label+".pdf"))
 
     plt.show()
 
