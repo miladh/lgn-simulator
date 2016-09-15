@@ -60,8 +60,8 @@ with open(config_file, 'r') as stream:
 
 
 #parameters---------------------------------------------------------------------
-w_ri = np.linspace([0, 2, 20])
-a_ri = np.linspace([0, 2, 20])
+w_ri = np.linspace(0, 2, 20)
+a_ri = np.linspace(0, 2, 20)
 
 
 #run simulator--------------------------------------------------------------------
