@@ -27,7 +27,7 @@ def extract_irfs(cell_type):
     return irf_max, irf_min, irf_size
 
 
-def make_plot(irf_max, irf_min, irf_size, cell_type):
+def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
     import seaborn.apionly as sns
     sns.set_color_codes()
     from analysis.pretty_plotting import*
@@ -72,7 +72,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type):
 
 
     plt.tight_layout()
-    fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
+    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
     plt.show()
 
 
@@ -81,8 +81,8 @@ if __name__ == "__main__":
     record_label = sys.argv[1:][-1]
     sims_path = sys.argv[1:][-2]
     output_dir = smt.get_output_dir(record_label)
-    #-----------------------------------------------------------------------------------
 
+    #-----------------------------------------------------------------------------------
     cell_type = ["relay", "interneuron"]
     attr_a_name = "interneuron.Kic.w"
     attr_b_name = "relay.Krc.w"
@@ -107,10 +107,9 @@ if __name__ == "__main__":
 
     norm_sim = simulation_extractor(simulation_extractor(sims, attr_a_name, 0), attr_b_name, 0)[0]
 
-
     print "attr_a=", attr_a
     print "attr_b=", attr_b
-
+    #-----------------------------------------------------------------------------------
 
     for cell in cell_type:
         make_plot(*extract_irfs(cell), cell_type=cell)
