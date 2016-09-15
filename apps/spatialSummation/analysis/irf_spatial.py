@@ -73,6 +73,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     plt.tight_layout()
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
+    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
     plt.show()
 
 
