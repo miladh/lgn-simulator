@@ -84,12 +84,12 @@ if __name__ == "__main__":
     output_dir = smt.get_output_dir(record_label)
 
     #-----------------------------------------------------------------------------------
-    cell_type = ["relay", "interneuron"]
-    attr_a_name = "interneuron.Kic.spatial.a"
-    attr_b_name = "interneuron.Kic.w"
+    cell_type = ["relay"]
+    attr_a_name = "interneuron.Kic.w"
+    attr_b_name = "relay.Krc.w"
 
-    xlabel ="$|w_{\mathrm{IC}}|$" #attr_b
-    ylabel = "$|a_{\mathrm{IC}}|$" #attr_a
+    xlabel ="$|w_{\mathrm{RC}}|$" #attr_b
+    ylabel = "$|w_{\mathrm{IC}}|$" #attr_a
     fig_name= "irf_inFB_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
@@ -105,12 +105,14 @@ if __name__ == "__main__":
     attr_b = attr_b[argsort(abs(attr_b))]
     attr_b = attr_b[:-1]
 
-    norm_sim = simulation_extractor(sims, attr_b_name, 0)[1]
+    norm_sim = simulation_extractor(simulation_extractor(sims, attr_a_name, 0), attr_b_name, 0)[0]
 
     print "attr_a=", attr_a
     print "attr_b=", attr_b
     print "w_ri=", extract_unique_simulation_attrs(sims, "relay.Kri.w")
     print "a_ri=", extract_unique_simulation_attrs(sims, "relay.Kri.spatial.a")
+    print "a_rc=", extract_unique_simulation_attrs(sims, "relay.Krc.spatial.a")
+    print "a_ic=", extract_unique_simulation_attrs(sims, "interneuron.Kic.spatial.a")
     #-----------------------------------------------------------------------------------
 
     for cell in cell_type:
