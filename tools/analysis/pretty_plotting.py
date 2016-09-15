@@ -73,14 +73,14 @@ def set_font():
         [u'sans-serif',
         u'Liberation Sans',
         u'Bitstream Vera Sans'],
-        'font.size': 18,
+        'font.size': 16,
         'axes.titlesize': 18,
         'axes.labelsize': 18,
         'lines.linewidth':2,
         'xtick.labelsize': 14,
         'ytick.labelsize': 14,
     }
-    plt.rcParams.update(**params)
+    plt.rcParams.update(params)
 
 
 def set_legend(fontsize=14):
@@ -93,7 +93,7 @@ def set_legend(fontsize=14):
         'legend.frameon': False,
         'legend.numpoints': 1,
         'legend.scatterpoints': 1,
-        'legend.fontsize' : 14,
+        'legend.fontsize' : 16,
         'legend.handlelength' : 2.2,
         'legend.borderpad' : 0.0,
         'legend.framealpha' : 2,
