@@ -61,15 +61,15 @@ with open(config_file, 'r') as stream:
 
 #parameters---------------------------------------------------------------------
 w_ic = np.linspace(0, 2, 20)
-a_ic = np.linspace(0, 2, 20)
+w_rc = np.linspace(0, 0.9, 20)
 
 #run simulator--------------------------------------------------------------------
 counter= 0
 
-for w in w_ic:
-    modify_wic(w)
-    for a in a_ic:
-        modify_aic(a)
+for wi in w_ic:
+    modify_wic(wi)
+    for wr in w_rc:
+        modify_wrc(wr)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
