@@ -39,8 +39,8 @@ ganglion:
     R0 : 0
     storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
     w: 1.0
     Wg:
     # DOG
@@ -134,8 +134,8 @@ cortical:
     R0 : 0.
     storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #kernels
     Kcr:
