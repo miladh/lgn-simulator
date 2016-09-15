@@ -27,8 +27,8 @@ def extract_irfs(cell_type):
 
 
 def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
-    import seaborn.apionly as sns
-    sns.set_color_codes()
+    # import seaborn.apionly as sns
+    # sns.set_color_codes()
     from analysis.pretty_plotting import*
 
     fig, axarr = plt.subplots(1,3, figsize=(15,5), sharey='row')
@@ -38,8 +38,9 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
         spines_edge_color(ax)
         remove_ticks(ax)
         set_grid(ax, linewidth=0., linecolor='0.95')
+        spines_edge_color(ax, edges = {"top": "none", "bottom": "none",
+                                       "right": "none", "left": "none"})
 
-    levels = levels = np.arange(-0.02, 1.0, 0.2)
     cmap="RdBu_r"
     extent = [abs(attr_b[0]), abs(attr_b[-1]),  abs(attr_a[0]), abs(attr_a[-1])]
 

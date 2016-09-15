@@ -70,7 +70,7 @@ counter= 0
 for w in w_ri:
     modify_wri(w)
     for a in a_ri:
-        modify_wrc(a)
+        modify_ari(a)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
