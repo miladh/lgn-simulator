@@ -85,12 +85,12 @@ if __name__ == "__main__":
 
     #-----------------------------------------------------------------------------------
     cell_type = ["relay"]
-    attr_a_name = "relay.Kri.spatial.a"
-    attr_b_name = "relay.Kri.w"
+    attr_a_name = "relay.Krc.spatial.a"
+    attr_b_name = "relay.Krc.w"
 
-    xlabel ="$|w_{\mathrm{RI}}|$" #attr_b
-    ylabel = "$|a_{\mathrm{RI}}|$" #attr_a
-    fig_name= "irf_noFB_"
+    xlabel ="$|w_{\mathrm{RC}}|$" #attr_b
+    ylabel = "$|a_{\mathrm{RC}}|$" #attr_a
+    fig_name= "irf_exFB_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
@@ -103,9 +103,9 @@ if __name__ == "__main__":
 
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_b = attr_b[argsort(abs(attr_b))]
-    attr_b = attr_b[:11]
+    attr_b = attr_b[:-1]
 
-    norm_sim = simulation_extractor(sims, attr_b_name, 0)[0]
+    norm_sim = simulation_extractor(sims, attr_b_name, 0)[1]
 
     print "attr_a=", attr_a
     print "attr_b=", attr_b
