@@ -60,16 +60,16 @@ with open(config_file, 'r') as stream:
 
 
 #parameters---------------------------------------------------------------------
-w_rc = np.linspace(0, 0.99, 10)
-a_rc = np.linspace(0, 2, 20)
+w_ic = np.linspace(0, 2, 20)
+a_ic = np.linspace(0, 2, 20)
 
 
 #run simulator--------------------------------------------------------------------
 counter= 0
 
-for w in w_rc:
+for w in w_ic:
     modify_wrc(w)
-    for a in a_rc:
+    for a in a_ic:
         modify_arc(a)
 ##########################################################
         with open(config_file, 'w') as stream:
