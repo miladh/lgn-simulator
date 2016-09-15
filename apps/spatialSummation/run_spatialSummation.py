@@ -67,9 +67,9 @@ a_ic = np.linspace(0, 2, 20)
 counter= 0
 
 for w in w_ic:
-    modify_wrc(w)
+    modify_wic(w)
     for a in a_ic:
-        modify_arc(a)
+        modify_aic(a)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
