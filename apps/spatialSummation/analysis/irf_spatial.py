@@ -19,8 +19,8 @@ def extract_irfs(cell_type):
             irf = sim.get_attribute(cell_type).irf()[0, Ns/2, Ns/2:]
 
             irf_max[i,j]  = irf[0] / abs(irf_norm[0])
-            irf_min[i,j]  = irf.min() / abs(irf_norm.min())
-            irf_size[i,j] = s_points[argmin(irf)] / s_points[argmin(irf_norm)]
+            irf_min[i,j]  = irf[1:].min() / abs(irf_norm[1:].min())
+            irf_size[i,j] = s_points[argmin(irf[1:])] / s_points[argmin(irf_norm[1:])]
 
 
     return irf_max, irf_min, irf_size
@@ -83,14 +83,13 @@ if __name__ == "__main__":
     output_dir = smt.get_output_dir(record_label)
 
     #-----------------------------------------------------------------------------------
-    cell_type = ["relay", "interneuron"]
-    attr_a_name = "interneuron.Kic.w"
-    attr_b_name = "relay.Krc.w"
+    cell_type = ["relay"]
+    attr_a_name = "relay.Kri.spatial.a"
+    attr_b_name = "relay.Kri.w"
 
-    xlabel ="$|w_{\mathrm{RC}}|$" #attr_b
-    ylabel = "$|w_{\mathrm{IC}}|$" #attr_a
-    fig_name= "irf_FB_"
-
+    xlabel ="$|w_{\mathrm{RI}}|$" #attr_b
+    ylabel = "$|a_{\mathrm{RI}}|$" #attr_a
+    fig_name= "irf_noFB_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
@@ -103,9 +102,9 @@ if __name__ == "__main__":
 
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_b = attr_b[argsort(abs(attr_b))]
-    attr_b = attr_b[:]
+    attr_b = attr_b[:11]
 
-    norm_sim = simulation_extractor(simulation_extractor(sims, attr_a_name, 0), attr_b_name, 0)[0]
+    norm_sim = simulation_extractor(sims, attr_b_name, 0)[0]
 
     print "attr_a=", attr_a
     print "attr_b=", attr_b
