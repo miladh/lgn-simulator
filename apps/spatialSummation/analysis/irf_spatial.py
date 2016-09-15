@@ -65,10 +65,10 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
                origin="lower")
     plt.colorbar(im, ax = axarr[2])
 
-    axarr[0].set_ylabel(ylabel)
-    axarr[0].set_xlabel(xlabel)
-    axarr[1].set_xlabel(xlabel)
-    axarr[2].set_xlabel(xlabel)
+    axarr[0].set_ylabel(ylabel, fontsize=18)
+    axarr[0].set_xlabel(xlabel, fontsize=18)
+    axarr[1].set_xlabel(xlabel, fontsize=18)
+    axarr[2].set_xlabel(xlabel, fontsize=18)
 
 
     plt.tight_layout()
