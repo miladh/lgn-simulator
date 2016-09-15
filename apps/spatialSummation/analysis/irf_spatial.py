@@ -84,13 +84,13 @@ if __name__ == "__main__":
     output_dir = smt.get_output_dir(record_label)
 
     #-----------------------------------------------------------------------------------
-    cell_type = ["relay"]
-    attr_a_name = "relay.Krc.spatial.a"
-    attr_b_name = "relay.Krc.w"
+    cell_type = ["relay", "interneuron"]
+    attr_a_name = "interneuron.Kic.spatial.a"
+    attr_b_name = "interneuron.Kic.w"
 
-    xlabel ="$|w_{\mathrm{RC}}|$" #attr_b
-    ylabel = "$|a_{\mathrm{RC}}|$" #attr_a
-    fig_name= "irf_exFB_"
+    xlabel ="$|w_{\mathrm{IC}}|$" #attr_b
+    ylabel = "$|a_{\mathrm{IC}}|$" #attr_a
+    fig_name= "irf_inFB_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
@@ -109,6 +109,8 @@ if __name__ == "__main__":
 
     print "attr_a=", attr_a
     print "attr_b=", attr_b
+    print "w_ri=", extract_unique_simulation_attrs(sims, "relay.Kri.w")
+    print "a_ri=", extract_unique_simulation_attrs(sims, "relay.Kri.spatial.a")
     #-----------------------------------------------------------------------------------
 
     for cell in cell_type:
