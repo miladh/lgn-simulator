@@ -40,7 +40,9 @@ MCintegrationTest::MCintegrationTest(string testLabel,
     // Check if file with test results exists--------------------------------
     if(!ifstream(m_outputFilename)){
         m_computeMC = true;
-        cout << "output file doesn't exists: " << m_outputFilename <<", running test..." << endl;
+        cout << "output file doesn't exists: " << m_outputFilename << endl
+             << "running test with MC integration..." << endl;
+
     }
 
     // Check if output file has changed---------------------------------------

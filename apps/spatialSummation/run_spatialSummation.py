@@ -49,7 +49,7 @@ def modify_wri(w):
 
 
 
-#read config file-----------------------------------------------------------------------------
+#read config file--------------------------------------------------------------
 options = sys.argv[1:]
 record_label = options[-1]
 config_file = os.path.abspath(os.path.join(current_path, record_label+".yaml"))
@@ -59,14 +59,14 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 
-#parameters-------------------------------------------------------------------------------------
+#parameters---------------------------------------------------------------------
 spot_diameters = np.linspace(0., 15, 1)
 weights = np.array([0.0, 0.25, 0.5, 0.7, 0.8, 0.9, 1.0, 1.5, 2.0, 4.0])
 weights_r = np.array([0.0, 0.25, 0.5, 0.7, 0.8, 0.9])
 widths = np.linspace(0.1, 2.5, 10.)
 
 
-#run simulator----------------------------------------------------------------------------------
+#run simulator--------------------------------------------------------------------
 counter= 0
 
 for w in weights:

@@ -32,7 +32,6 @@ int main(int argc, char* argv[])
 
     //Stim---------------------------------------------------------------------
     unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg["stimulus"]);
-//    unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator, cfg["stimulus"]);
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
@@ -52,7 +51,6 @@ int main(int argc, char* argv[])
     
     // I -> R
     SpatialGaussian Ks_ri = createSpatialGaussianKernel(cfg["relay"]["Kri"]["spatial"]);
-//    SpatialDelta Ks_ri = createSpatialDeltaKernel(cfg["relay"]["Kri"]["spatial"]);
     TemporalDelta Kt_ri = createTemporalDeltaKernel(cfg["relay"]["Kri"]["temporal"]);
     SeparableKernel Kri(cfg["relay"]["Kri"]["w"].as<double>(), &Ks_ri, &Kt_ri);
     

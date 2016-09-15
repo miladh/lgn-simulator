@@ -19,14 +19,14 @@ stimulus:
     C: 1.0
     surroundC: 1.0
 
-    maskSize: 1            #degrees
-    surroundMaskSize : 0     #degrees
+    maskSize: 1            #deg
+    surroundMaskSize : 0     #deg
 
-    orientation: 0.                 #degrees
-    surroundOrientation : 0.0       #degrees
+    orientation: 0.                 #deg
+    surroundOrientation : 0.0       #deg
 
-    phase: 0.                      #degrees
-    surroundPhase: 0.0              #degrees
+    phase: 0.                      #deg
+    surroundPhase: 0.0              #deg
 
     kId:  0                        #[-Ns/2, Ns/2 - 1]
     surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
@@ -34,9 +34,6 @@ stimulus:
 
     wId:  0                         #[-Nt/2, Nt/2 - 1]
     surroundwId:  0                 #[-Nt/2, Nt/2 - 1]
-
-
-    #sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/lena.png"
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0

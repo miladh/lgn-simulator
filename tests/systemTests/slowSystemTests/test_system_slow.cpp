@@ -15,6 +15,9 @@
 #include <lgnSimulator.h>
 #include <catch.hpp>
 #include "test_system_gric_pg_1.h"
+#include "test_system_gric_pg_2.h"
+#include "test_system_gric_irf_1.h"
+
 
 using namespace lgnSimulator;
 
@@ -50,7 +53,26 @@ TEST_CASE("system_gric_pg_2 [slow]"){
 
     string testLabel = "system_gric_pg_2";
     string sourceFilename = "test_system_gric_pg_2";
-    test_system_gric_pg_1 test(testLabel,
+    test_system_gric_pg_2 test(testLabel,
+                                       sourceFilename,
+                                       1e4, 5e6, 1e-4);
+
+    test.runTest();
+}
+
+
+
+TEST_CASE("system_gric_irf_1 [slow]"){
+    /***
+    * system: gric
+    * stimulus: unused
+    * test: center relay irf with
+    *       varying connectivity weights and size
+    ***/
+
+    string testLabel = "system_gric_irf_1";
+    string sourceFilename = "test_system_gric_irf_1";
+    test_system_gric_irf_1 test(testLabel,
                                        sourceFilename,
                                        1e4, 5e6, 1e-4);
 
