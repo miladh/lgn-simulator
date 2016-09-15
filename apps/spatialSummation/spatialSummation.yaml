@@ -72,10 +72,10 @@ relay:
             delay: 0
             dt: *dt_id
     Kri:
-        w: 0.0
+        w: -1.0
         spatial:
         #Gauss
-            a: 0.1
+            a: *ds_id
 
         #delta
             ds: *ds_id
