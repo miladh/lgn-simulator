@@ -7,7 +7,6 @@ from analysis.data_extractor import*
 
 #Analysis: ###########################################################################
 def extract_irfs(cell_type):
-    global attr_a, attr_b
     irf_max = zeros([len(attr_a), len(attr_b)])
     irf_min = zeros([len(attr_a), len(attr_b)])
     irf_size = zeros([len(attr_a), len(attr_b)])
