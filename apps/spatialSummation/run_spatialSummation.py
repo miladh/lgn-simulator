@@ -61,7 +61,7 @@ with open(config_file, 'r') as stream:
 
 #parameters---------------------------------------------------------------------
 w_ic = np.linspace(0, 4., 2)
-w_rc = np.linspace(0, 0.9., 2)
+w_rc = np.linspace(0, 0.9, 2)
 diameters = np.linspace(0., 15, 250)
 
 #run simulator--------------------------------------------------------------------
