@@ -61,7 +61,7 @@ with open(config_file, 'r') as stream:
 
 #parameters---------------------------------------------------------------------
 a_ic = np.linspace(0, 2., 20)
-w_ic = np.linspace(0, 2., 20)
+w_ic = np.linspace(0, 4., 20)
 
 #run simulator--------------------------------------------------------------------
 counter= 0
