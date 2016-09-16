@@ -44,27 +44,27 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[0].set_title("IRF center",y=1.02)
     im =axarr[0].imshow(irf_max, extent = extent,
-                   vmin=8, vmax=1,
+                   vmin=4, vmax=1,
                    cmap=cmap, aspect="auto",
                    interpolation="none",
                    origin="lower")
-    plt.colorbar(im, ax = axarr[0])
+    plt.colorbar(im, ax = axarr[0], extend='max')
 
     axarr[1].set_title("IRF surround",y=1.02)
     im = axarr[1].imshow(irf_min, extent = extent,
-               vmin=-8, vmax=0,
+               vmin=-4, vmax=0,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
-    plt.colorbar(im, ax = axarr[1])
+    plt.colorbar(im, ax = axarr[1], extend='min')
 
     axarr[2].set_title("IRF size",y=1.02)
     im =axarr[2].imshow(irf_size, extent = extent,
-               vmin=1, vmax=10,
+               vmin=1.0, vmax=2.0,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
-    plt.colorbar(im, ax = axarr[2])
+    plt.colorbar(im, ax = axarr[2], extend='max')
 
     axarr[0].set_ylabel(ylabel, fontsize=18)
     axarr[0].set_xlabel(xlabel, fontsize=18)
