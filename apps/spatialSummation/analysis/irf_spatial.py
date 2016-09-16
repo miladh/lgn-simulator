@@ -87,12 +87,12 @@ if __name__ == "__main__":
 
     #-----------------------------------------------------------------------------------
     cell_type = ["relay"]
-    attr_a_name = "relay.Kri.spatial.a"
-    attr_b_name = "relay.Kri.w"
+    attr_a_name = "interneuron.Kic.spatial.a"
+    attr_b_name = "interneuron.Kic.w"
 
-    xlabel ="$|w_{\mathrm{RI}}|$" #attr_b
-    ylabel = "$a_{\mathrm{RI}}$" #attr_a
-    fig_name= "irf_nofb_"
+    xlabel ="$|w_{\mathrm{IC}}|$" #attr_b
+    ylabel = "$a_{\mathrm{IC}}$" #attr_a
+    fig_name= "irf_infb_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_b = attr_b[argsort(abs(attr_b))]
-    attr_b = attr_b[:-9]
+    attr_b = attr_b[:]
 
     norm_sim = simulation_extractor(sims, attr_b_name, 0)[0]
 
