@@ -90,7 +90,7 @@ if __name__ == "__main__":
     attr_a_name = "interneuron.Kic.spatial.a"
     attr_b_name = "interneuron.Kic.w"
 
-    xlabel ="$|w_{\mathrm{IC}}|$" #attr_b
+    xlabel ="$w_{\mathrm{IC}}$" #attr_b
     ylabel = "$a_{\mathrm{IC}}$" #attr_a
     fig_name= "irf_infb_"
     sims = get_simulations(sims_path)
