@@ -80,6 +80,12 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
 
 if __name__ == "__main__":
+    import sumatra_tracking.io_manager as smt
+    record_label = sys.argv[1:][-1]
+    sims_path = sys.argv[1:][-2]
+    output_dir = smt.get_output_dir(record_label)
+
+    #-----------------------------------------------------------------------------------
     cell_type = ["relay"]
     attr_a_name = "relay.Krc.spatial.a"
     attr_b_name = "relay.Krc.w"
@@ -105,7 +111,7 @@ if __name__ == "__main__":
 
     print "attr_a=", attr_a
     print "attr_b=", attr_b
-        #-----------------------------------------------------------------------------------
+    #-----------------------------------------------------------------------------------
 
     for cell in cell_type:
         make_plot(*extract_irfs(cell), cell_type=cell)
