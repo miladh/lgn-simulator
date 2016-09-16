@@ -44,27 +44,27 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[0].set_title("IRF center",y=1.02)
     im =axarr[0].imshow(irf_max, extent = extent,
-                   vmin=4, vmax=1,
+                   vmin=0.2, vmax=1,
                    cmap=cmap, aspect="auto",
                    interpolation="none",
                    origin="lower")
-    plt.colorbar(im, ax = axarr[0], extend='max')
+    plt.colorbar(im, ax = axarr[0])
 
     axarr[1].set_title("IRF surround",y=1.02)
     im = axarr[1].imshow(irf_min, extent = extent,
-               vmin=-4, vmax=0,
+               vmin=-1.5, vmax=0,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
-    plt.colorbar(im, ax = axarr[1], extend='min')
+    plt.colorbar(im, ax = axarr[1])
 
     axarr[2].set_title("IRF size",y=1.02)
     im =axarr[2].imshow(irf_size, extent = extent,
-               vmin=1.0, vmax=2.0,
+               vmin=0.65, vmax=1,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
-    plt.colorbar(im, ax = axarr[2], extend='max')
+    plt.colorbar(im, ax = axarr[2])
 
     axarr[0].set_ylabel(ylabel, fontsize=18)
     axarr[0].set_xlabel(xlabel, fontsize=18)
@@ -87,11 +87,11 @@ if __name__ == "__main__":
 
     #-----------------------------------------------------------------------------------
     cell_type = ["relay"]
-    attr_a_name = "relay.Krc.spatial.a"
-    attr_b_name = "relay.Krc.w"
+    attr_a_name = "relay.Kri.spatial.a"
+    attr_b_name = "relay.Kri.w"
 
-    xlabel ="$w_{\mathrm{RC}}$" #attr_b
-    ylabel = "$a_{\mathrm{RC}}$" #attr_a
+    xlabel ="$|w_{\mathrm{RI}}|$" #attr_b
+    ylabel = "$a_{\mathrm{RI}}$" #attr_a
     fig_name= "irf_nofb_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_b = attr_b[argsort(abs(attr_b))]
-    attr_b = attr_b[:-1]
+    attr_b = attr_b[:-9]
 
     norm_sim = simulation_extractor(sims, attr_b_name, 0)[0]
 
