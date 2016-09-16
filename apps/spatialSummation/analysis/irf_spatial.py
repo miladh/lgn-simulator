@@ -85,7 +85,7 @@ if __name__ == "__main__":
     output_dir = smt.get_output_dir(record_label)
 
     #-----------------------------------------------------------------------------------
-    cell_type = "relay"
+    cell_type = ["relay"]
     attr_a_name = "relay.Kri.spatial.a"
     attr_b_name = "relay.Kri.w"
 
