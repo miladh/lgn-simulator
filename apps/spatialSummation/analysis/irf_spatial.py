@@ -44,7 +44,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[0].set_title("IRF center",y=1.02)
     im =axarr[0].imshow(irf_max, extent = extent,
-                   vmin=0.2, vmax=1,
+                   vmin=8, vmax=1,
                    cmap=cmap, aspect="auto",
                    interpolation="none",
                    origin="lower")
@@ -52,7 +52,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[1].set_title("IRF surround",y=1.02)
     im = axarr[1].imshow(irf_min, extent = extent,
-               vmin=-1.5, vmax=0,
+               vmin=-8, vmax=0,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
@@ -60,6 +60,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[2].set_title("IRF size",y=1.02)
     im =axarr[2].imshow(irf_size, extent = extent,
+               vmin=1, vmax=10,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
@@ -79,18 +80,12 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
 
 if __name__ == "__main__":
-    import sumatra_tracking.io_manager as smt
-    record_label = sys.argv[1:][-1]
-    sims_path = sys.argv[1:][-2]
-    output_dir = smt.get_output_dir(record_label)
-
-    #-----------------------------------------------------------------------------------
     cell_type = ["relay"]
-    attr_a_name = "relay.Kri.spatial.a"
-    attr_b_name = "relay.Kri.w"
+    attr_a_name = "relay.Krc.spatial.a"
+    attr_b_name = "relay.Krc.w"
 
-    xlabel ="$|w_{\mathrm{RI}}|$" #attr_b
-    ylabel = "$a_{\mathrm{RI}}$" #attr_a
+    xlabel ="$w_{\mathrm{RC}}$" #attr_b
+    ylabel = "$a_{\mathrm{RC}}$" #attr_a
     fig_name= "irf_nofb_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
@@ -104,13 +99,13 @@ if __name__ == "__main__":
 
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_b = attr_b[argsort(abs(attr_b))]
-    attr_b = attr_b[:-9]
+    attr_b = attr_b[:-1]
 
     norm_sim = simulation_extractor(sims, attr_b_name, 0)[0]
 
     print "attr_a=", attr_a
     print "attr_b=", attr_b
-    #-----------------------------------------------------------------------------------
+        #-----------------------------------------------------------------------------------
 
     for cell in cell_type:
         make_plot(*extract_irfs(cell), cell_type=cell)
