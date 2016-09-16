@@ -27,8 +27,6 @@ def extract_irfs(cell_type):
 
 
 def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
-    # import seaborn.apionly as sns
-    # sns.set_color_codes()
     from analysis.pretty_plotting import*
 
     fig, axarr = plt.subplots(1,3, figsize=(15,5), sharey='row')
@@ -41,27 +39,29 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
         spines_edge_color(ax, edges = {"top": "none", "bottom": "none",
                                        "right": "none", "left": "none"})
 
-    cmap="RdBu_r"
+    cmap="Blues_r"
     extent = [abs(attr_b[0]), abs(attr_b[-1]),  abs(attr_a[0]), abs(attr_a[-1])]
 
     axarr[0].set_title("IRF center",y=1.02)
     im =axarr[0].imshow(irf_max, extent = extent,
+                   vmin=0.2, vmax=1,
                    cmap=cmap, aspect="auto",
-                   interpolation="gaussian",
+                   interpolation="none",
                    origin="lower")
     plt.colorbar(im, ax = axarr[0])
 
     axarr[1].set_title("IRF surround",y=1.02)
     im = axarr[1].imshow(irf_min, extent = extent,
+               vmin=-1.5, vmax=0,
                cmap=cmap, aspect="auto",
-               interpolation="gaussian",
+               interpolation="none",
                origin="lower")
     plt.colorbar(im, ax = axarr[1])
 
     axarr[2].set_title("IRF size",y=1.02)
     im =axarr[2].imshow(irf_size, extent = extent,
                cmap=cmap, aspect="auto",
-               interpolation="gaussian",
+               interpolation="none",
                origin="lower")
     plt.colorbar(im, ax = axarr[2])
 
@@ -77,6 +77,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
     plt.show()
 
 
+
 if __name__ == "__main__":
     import sumatra_tracking.io_manager as smt
     record_label = sys.argv[1:][-1]
@@ -84,13 +85,13 @@ if __name__ == "__main__":
     output_dir = smt.get_output_dir(record_label)
 
     #-----------------------------------------------------------------------------------
-    cell_type = ["relay", "interneuron"]
-    attr_a_name = "interneuron.Kic.spatial.a"
-    attr_b_name = "interneuron.Kic.w"
+    cell_type = "relay"
+    attr_a_name = "relay.Kri.spatial.a"
+    attr_b_name = "relay.Kri.w"
 
-    xlabel ="$|w_{\mathrm{IC}}|$" #attr_b
-    ylabel = "$|a_{\mathrm{IC}}|$" #attr_a
-    fig_name= "irf_inFB_"
+    xlabel ="$|w_{\mathrm{RI}}|$" #attr_b
+    ylabel = "$a_{\mathrm{RI}}$" #attr_a
+    fig_name= "irf_nofb_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
@@ -103,14 +104,12 @@ if __name__ == "__main__":
 
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_b = attr_b[argsort(abs(attr_b))]
-    attr_b = attr_b[:-1]
+    attr_b = attr_b[:-9]
 
-    norm_sim = simulation_extractor(sims, attr_b_name, 0)[1]
+    norm_sim = simulation_extractor(sims, attr_b_name, 0)[0]
 
     print "attr_a=", attr_a
     print "attr_b=", attr_b
-    print "w_ri=", extract_unique_simulation_attrs(sims, "relay.Kri.w")
-    print "a_ri=", extract_unique_simulation_attrs(sims, "relay.Kri.spatial.a")
     #-----------------------------------------------------------------------------------
 
     for cell in cell_type:
