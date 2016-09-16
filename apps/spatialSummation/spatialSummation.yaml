@@ -6,7 +6,7 @@ grid:
     ns: 9
     nt: 1
     dt: &dt_id 1.0
-    ds: &ds_id 0.05
+    ds: &ds_id 0.1
 
 #------------Stimulus settings-------------------#
 stimulus:
@@ -54,10 +54,10 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #Kernels
     Krg:
@@ -101,14 +101,14 @@ relay:
 
 interneuron:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #Kernels
     Kig:
-        w: 0.0
+        w: 1.0
         spatial:
         # Gaussian
             a: 0.3
