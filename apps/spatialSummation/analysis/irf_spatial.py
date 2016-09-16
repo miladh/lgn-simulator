@@ -18,9 +18,9 @@ def extract_irfs(cell_type):
             sim = simulation_extractor(sims_a, attr_b_name, b, return_as_list=False)
             irf = sim.get_attribute(cell_type).irf()[0, Ns/2, Ns/2:]
 
-            irf_max[i,j]  = irf[0] / abs(irf_norm[0])
-            irf_min[i,j]  = irf[1:].min() / abs(irf_norm[1:].min())
-            irf_size[i,j] = s_points[argmin(irf[1:])] / s_points[argmin(irf_norm[1:])]
+            irf_max[i,j]  = irf[0] /0.637718 #abs(irf_norm[0])
+            irf_min[i,j]  = irf[1:].min() /0.0483276 #abs(irf_norm[1:].min())
+            irf_size[i,j] = s_points[argmin(irf[1:])] /1.2# s_points[argmin(irf_norm[1:])]
 
 
     return irf_max, irf_min, irf_size
@@ -44,7 +44,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[0].set_title("IRF center",y=1.02)
     im =axarr[0].imshow(irf_max, extent = extent,
-                   vmin=0.2, vmax=1,
+                #    vmin=0.2, vmax=1,
                    cmap=cmap, aspect="auto",
                    interpolation="none",
                    origin="lower")
@@ -52,7 +52,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[1].set_title("IRF surround",y=1.02)
     im = axarr[1].imshow(irf_min, extent = extent,
-               vmin=-1.5, vmax=0,
+            #    vmin=-1.5, vmax=0,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
@@ -60,7 +60,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[2].set_title("IRF size",y=1.02)
     im =axarr[2].imshow(irf_size, extent = extent,
-               vmin=0.65, vmax=1,
+            #    vmin=0.65, vmax=1,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
@@ -88,11 +88,11 @@ if __name__ == "__main__":
     #-----------------------------------------------------------------------------------
     cell_type = ["relay"]
     attr_a_name = "interneuron.Kic.spatial.a"
-    attr_b_name = "interneuron.Kic.w"
+    attr_b_name = "relay.Krc.spatial.a"
 
-    xlabel ="$w_{\mathrm{IC}}$" #attr_b
+    xlabel ="$a_{\mathrm{RC}}$" #attr_b
     ylabel = "$a_{\mathrm{IC}}$" #attr_a
-    fig_name= "irf_infb_"
+    fig_name= "irf_in_ex_fb_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
