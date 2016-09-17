@@ -113,10 +113,7 @@ if __name__ == "__main__":
     attr_a = extract_unique_simulation_attrs(sims, attr_a_name)
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_a2, diameters, resp = resp_vs_attrA_vs_attrB(sims, attr_a_name, diameters, rc=rc)
-    if(dot(attr_a - attr_a2,attr_a - attr_a2)!=0 ):
-        raise ValueError('attra and attr2 are different:' + attr_a, attr_a2)
-    else:
-       print "diff=", attr_a - attr_a2
+    print "diff=", attr_a - attr_a2
 
     #-----------------------------------------------------------------------------------
 
