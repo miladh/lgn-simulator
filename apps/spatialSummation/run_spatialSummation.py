@@ -66,7 +66,7 @@ spatial_freqs = range(0, 90)
 #run simulator--------------------------------------------------------------------
 
 counter= 0
-modify_wic(1.69)
+modify_diameter(1.69)
 for wi, wr in zip(w_ic,w_rc):
     modify_wic(wi)
     modify_wrc(wr)
