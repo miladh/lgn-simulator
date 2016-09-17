@@ -6,6 +6,9 @@ sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
 from analysis.data_extractor import*
 from analysis.tuning_analysis import*
 from analysis.pretty_plotting import*
+import seaborn.apionly as sns
+sns.set_color_codes()
+
 
 #Analysis: ###########################################################################
 def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
@@ -16,7 +19,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
     remove_ticks(ax)
     set_grid(ax)
 
-    for wi, wr in zip(attr_a[:-2], attr_b[:-2]):
+    for wi, wr in zip(attr_a[[0, 1, 3]], attr_b[[0, 1, 3]]):
         i = where(attr_a==wi)[0][0]
         label = r"$w_{\mathrm{RC}}=$"+'${0:.2f}$'.format(wr)+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(wi)
         ax.plot(freqs, resp[cell_type][i,:], "-", label=label)

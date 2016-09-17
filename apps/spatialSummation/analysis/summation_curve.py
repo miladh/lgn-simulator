@@ -6,6 +6,8 @@ sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
 from analysis.data_extractor import*
 from analysis.tuning_analysis import*
 from analysis.pretty_plotting import*
+import seaborn.apionly as sns
+sns.set_color_codes()
 
 #Analysis: ###########################################################################
 def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
