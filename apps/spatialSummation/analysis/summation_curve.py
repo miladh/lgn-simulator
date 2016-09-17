@@ -118,5 +118,5 @@ if __name__ == "__main__":
 
     #-----------------------------------------------------------------------------------
 
-    for cell in cell_types:
-        make_plot(cell, resp, attr_a, attr_b, diameters)
+    # for cell in cell_types:
+    #     make_plot(cell, resp, attr_a, attr_b, diameters)
