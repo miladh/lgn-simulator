@@ -27,7 +27,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     ax.set_xlabel("Diameter($^\circ$)")
     ax.set_ylabel("Response(spikes/s)")
     ax.set_title("Area-response curve",y=1.02)
-    ax.set_xlim([0., 14])
+    ax.set_xlim([0., 10])
     ax.legend()
 
     #########################################################################################
@@ -39,19 +39,16 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
         a.yaxis.set_tick_params(size=0)
         a.xaxis.set_tick_params(size=0)
 
-
     d_max = zeros(len(attr_a))
     d_min = zeros(len(attr_a))
     for i, w in enumerate(attr_a[:]):
-        index_max = where(resp[cell_type][i,:] == resp[cell_type][i,:].max())[0]
-        index_min = where(resp[cell_type][i,:] == resp[cell_type][i,index_max:].min())[0]
-        if len(index_min)>1 : index_min=index_min[1]
-
+        index_max = argmax(resp[cell_type][i,0:])
+        index_min = argmin(resp[cell_type][i,index_max:])
         d_max[i] = diameter[index_max]
         d_min[i] = diameter[index_min]
 
-    ax.plot(attr_b[:], d_max[:], "-", label="Center")
-    ax.plot(attr_b[:], d_min[:], "-g", label="Surround")
+    ax.plot(attr_b, d_max, "-", label="Center")
+    ax.plot(attr_b, d_min, "-", label="Surround")
     ax.set_ylabel("Diameter($^\circ$)")
     ax.set_xlabel("$w_{\mathrm{RC}}$", fontsize=20)
     ax.tick_params(direction='out', pad=7)
@@ -71,12 +68,14 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
         a.xaxis.set_tick_params(size=0)
 
     supp = zeros(len(attr_a))
-    for i, w in enumerate(attr_a[:]):
+    for i, w in enumerate(attr_a):
         supp[i] = 1 - resp[cell_type][i,-1]/resp[cell_type][i,:].max()
 
     ax.plot(attr_b[:], supp[:], "-", label="Suppression")
     ax.set_xlabel("$w_{\mathrm{RC}}$", fontsize=20)
     ax.set_ylabel("Suppresion index(%)")
+    ax.set_ylim([0.75, 0.95])
+    ax.tick_params(direction='out', pad=7)
 
     axy.plot(attr_a[:],supp[:], "-")
     axy.set_xlabel("$w_{\mathrm{IC}}$", labelpad=10, fontsize=20)
@@ -110,10 +109,10 @@ if __name__ == "__main__":
     k_points = sims[0].integrator.k_points[Ns/2:]
     rc = [Ns/2, Ns/2]
 
-    attr_a = extract_unique_simulation_attrs(sims, attr_a_name)
+    #attr_a = extract_unique_simulation_attrs(sims, attr_a_name)
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
-    attr_a2, diameters, resp = resp_vs_attrA_vs_attrB(sims, attr_a_name, diameters, rc=rc)
-    print "diff=", attr_a - attr_a2
+    attr_a, diameters, resp = resp_vs_attrA_vs_attrB(sims, attr_a_name, diameters, rc=rc)
+    # print "diff=", attr_a - attr_a2
 
     #-----------------------------------------------------------------------------------
 
