@@ -5,11 +5,11 @@ current_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
 from analysis.data_extractor import*
 from analysis.tuning_analysis import*
+from analysis.pretty_plotting import*
 
 #Analysis: ###########################################################################
 def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
-    from analysis.pretty_plotting import*
-    fig, axarr = plt.subplots(1, 3, figsize=(15,5))
+    fig, axarr = plt.subplots(1, 3, figsize=(15,6))
     set_font()
     set_legend()
     for ax in axarr:
