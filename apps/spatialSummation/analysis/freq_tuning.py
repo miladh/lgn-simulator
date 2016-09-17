@@ -9,29 +9,23 @@ from analysis.pretty_plotting import*
 
 #Analysis: ###########################################################################
 def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
-    fig, axarr = plt.subplots(2, 1, figsize=(5,10),  sharex='col')
+    fig, ax = plt.subplots(1, 1, figsize=(6,6),  sharex='col')
     set_font()
     set_legend()
-    for ax in axarr:
-        spines_edge_color(ax)
-        remove_ticks(ax)
-        set_grid(ax)
+    spines_edge_color(ax)
+    remove_ticks(ax)
+    set_grid(ax)
 
-    for wi, wr in zip(attr_a[[0, 1, 3]], attr_b[[0, 1, 3]]):
+    for wi, wr in zip(attr_a[:-2], attr_b[:-2]):
         i = where(attr_a==wi)[0][0]
         label = r"$w_{\mathrm{RC}}=$"+'${0:.2f}$'.format(wr)+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(wi)
-        axarr[0].plot(freqs, resp[cell_type][i,:], "-", label=label)
-        axarr[1].plot(freqs, resp[cell_type][i,:]/resp[cell_type][i,:].max() , "-", label=label)
+        ax.plot(freqs, resp[cell_type][i,:], "-", label=label)
 
-    axarr[0].set_ylabel("Response(spikes/s)")
-    axarr[0].set_title("$d=$"+'${0:.2f}$'.format(diameter))
-    axarr[0].legend()
-    axarr[1].set_ylabel("Normalized response(%)")
-    #axarr[1].set_xscale('log')
-    #axarr[1].set_xticks([0.5, 1, 2, 4, 8])
-    #axarr[1].get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
-    axarr[1].set_xlim([0, 10])
-    #axarr[1].legend()
+    ax.set_ylabel("Response(spikes/s)")
+    ax.set_xlabel("Patch-grating wave vector $k_\mathrm{pg} (1/^\circ)$")
+    ax.set_title("$\mathrm{Patch\;size}=$"+'${0:.2f}^\circ$'.format(diameter))
+    ax.legend()
+    ax.set_xlim([0, 10])
 
 
     #########################################################################################
@@ -49,7 +43,30 @@ if __name__ == "__main__":
     output_dir = smt.get_output_dir(record_label)
 
     #-----------------------------------------------------------------------------------
+    cell_types = ["relay"]
+    attr_a_name = "interneuron.Kic.w"
+    attr_b_name = "relay.Krc.w"
+    fig_name= "freq_tuning_fb_weights_small_d"
 
+    sims = get_simulations(sims_path)
+    Ns=sims[0].integrator.Ns
+    Nt=sims[0].integrator.Nt
+    s_points = sims[0].integrator.s_points[Ns/2:]
+    k_points = sims[0].integrator.k_points[Ns/2:]
+    rc = [Ns/2, Ns/2]
+
+    attr_a = extract_unique_simulation_attrs(sims, attr_a_name)
+    attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
+    attr_a2, freqs, resp = resp_vs_attrA_vs_attrB(sims, attr_a_name, "stimulus.spatial_freq", rc=rc)
+    if(dot(attr_a - attr_a2,attr_a - attr_a2)!=0 ):
+        raise ValueError('attra and attra2 are different:' + attr_a, attr_a2)
+    else:
+       print "diff=", attr_a - attr_a2
+
+    d = extract_unique_simulation_attrs(sims, "stimulus.mask_size")
+    if len(d)>1:raise IndexError(d)
+    d=d[0]
+    print d
 
     #-----------------------------------------------------------------------------------
 
