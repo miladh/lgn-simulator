@@ -11,6 +11,7 @@ sns.set_color_codes()
 
 #Analysis: ###########################################################################
 def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
+    print "in function..."
     fig, axarr = plt.subplots(1, 3, figsize=(15,6))
     set_font()
     set_legend()
@@ -19,8 +20,8 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
         remove_ticks(ax)
         set_grid(ax)
 
-
     ax = axarr[0]
+    print "axes ready..."
     for wi, wr in zip(attr_a[[0, 1, 3]], attr_b[[0, 1, 3]]):
         i = where(attr_a==wi)[0][0]
         label = r"$w_{\mathrm{RC}}=$"+'${0:.2f}$'.format(wr)+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(wi)
@@ -32,6 +33,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     ax.set_xlim([0., 10])
     ax.legend()
 
+    print "first plot done..."
     #########################################################################################
     ax = axarr[1]
     axy = ax.twiny()
@@ -41,6 +43,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
         a.yaxis.set_tick_params(size=0)
         a.xaxis.set_tick_params(size=0)
 
+    print "axy ready..."
     d_max = zeros(len(attr_a))
     d_min = zeros(len(attr_a))
     for i, w in enumerate(attr_a[:]):
@@ -60,6 +63,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     axy.set_xlabel("$w_{\mathrm{IC}}$", labelpad=10, fontsize=20)
     axy.tick_params(direction='out', pad=7)
     #########################################################################################
+    print "second plot done..."
     ax = axarr[2]
     axy = ax.twiny()
 
@@ -118,5 +122,5 @@ if __name__ == "__main__":
 
     #-----------------------------------------------------------------------------------
 
-    # for cell in cell_types:
-    #     make_plot(cell, resp, attr_a, attr_b, diameters)
+    for cell in cell_types:
+        make_plot(cell, resp, attr_a, attr_b, diameters)
