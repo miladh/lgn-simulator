@@ -97,7 +97,7 @@ if __name__ == "__main__":
     output_dir = smt.get_output_dir(record_label)
 
     #-----------------------------------------------------------------------------------
-    cell_type = ["relay"]
+    cell_types = ["relay"]
     attr_a_name = "interneuron.Kic.w"
     attr_b_name = "relay.Krc.w"
     diameters =  "stimulus.mask_size"
