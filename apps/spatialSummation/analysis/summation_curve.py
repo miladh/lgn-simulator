@@ -85,8 +85,9 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
 
     #########################################################################################
     plt.tight_layout()
-    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
-    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
+    fig.savefig("area_summation_fb_weights.pdf")
+    # if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
+    # if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
     plt.show()
 
 
@@ -119,5 +120,4 @@ if __name__ == "__main__":
     #-----------------------------------------------------------------------------------
 
     for cell in cell_types:
-        print cell
         make_plot(cell, resp, attr_a, attr_b, diameters)
