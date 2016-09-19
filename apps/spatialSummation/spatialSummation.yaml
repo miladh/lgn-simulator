@@ -35,7 +35,7 @@ stimulus:
     wId:  0                         #[-Nt/2, Nt/2 - 1]
     surroundwId:  0                 #[-Nt/2, Nt/2 - 1]
 
-    sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/lena.png"
+    sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/camera.jpg"
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
