@@ -28,6 +28,9 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
     ax.set_xlabel("Patch-grating wave vector $k_\mathrm{pg} (1/^\circ)$", fontsize=20)
     ax.set_title("$\mathrm{Patch\;size}=$"+'${0:.2f}^\circ$'.format(diameter), fontsize=20)
     ax.legend()
+    # ax.set_xscale('log')
+    # ax.set_xticks([0.5, 1, 2, 4, 8])
+    # ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
     ax.set_xlim([0, 10])
 
 
