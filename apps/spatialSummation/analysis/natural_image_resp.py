@@ -8,7 +8,7 @@ from analysis.pretty_plotting import*
 
 #Analysis: ###########################################################################
 def make_plot(cell_type, sims, cmap, save_fig=True):
-    fig, axarr = plt.subplots(1, 3, figsize=(20,6))
+    fig, axarr = plt.subplots(1, 3, figsize=(14,5))
     set_font()
     set_legend()
     for ax in axarr:
@@ -39,10 +39,10 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
     vmax = max(abs(data2.min()), abs(data2.max()))
     vmin = -vmax
 
-    axarr[0].imshow(stim,cmap="gray", aspect="auto", interpolation="none", origin="lower")
+    im1=axarr[0].imshow(stim,cmap="gray", aspect="auto", interpolation="none", origin="lower")
     axarr[0].set_title("Input",y=1.02, fontsize=20)
 
-    axarr[1].imshow(data1, vmin=vmin, vmax=vmax,
+    im2=axarr[1].imshow(data1, vmin=vmin, vmax=vmax,
                    cmap=cmap, aspect="auto", interpolation="none", origin="lower")
 
 
@@ -51,18 +51,31 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
 
 
     label = r"With feedback"+"\n"+" $w_{\mathrm{RC}}=$"+'${0:.1f}$'.format(sim_with_fb.get_attribute("relay.Krc.w"))+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(sim_with_fb.get_attribute("interneuron.Kic.w"))
-    im = axarr[2].imshow(data2, vmin=vmin, vmax=vmax,
+    im3 = axarr[2].imshow(data2, vmin=vmin, vmax=vmax,
                    cmap=cmap, aspect="auto", interpolation="none", origin="lower")
 
-
-    cbar = fig.colorbar(im, ax=axarr.ravel().tolist(), ticks=[vmin,0,  vmax],
-    orientation='vertical')
-    cbar.set_ticklabels(['Low', '0', 'High'])
-    cbar.ax.tick_params(labelsize=18)
     axarr[2].set_title(label,y=1, fontsize=20)
+    ################################################################################
+    from mpl_toolkits.axes_grid1 import make_axes_locatable
+    divider1 = make_axes_locatable(axarr[0])
+    cax1 = divider1.append_axes("right", size="5%", pad=0.05)
+
+    divider2 = make_axes_locatable(axarr[1])
+    cax2 = divider2.append_axes("right", size="5%", pad=0.05)
+
+    divider3 = make_axes_locatable(axarr[2])
+    cax3 = divider3.append_axes("right", size="5%", pad=0.05)
+
+    fig.delaxes(fig.axes[4])
+    fig.delaxes(fig.axes[3])
+    ###############################################################################
+
+    cbar3 = fig.colorbar(im3, cax = cax3, ticks=[vmin,0,  vmax])
+    cbar3.set_ticklabels(['Low', '0', 'High'])
+    cbar3.ax.tick_params(labelsize=18)
 
     ########################################################################################
-    # plt.tight_layout()
+    plt.tight_layout()
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
     plt.show()
