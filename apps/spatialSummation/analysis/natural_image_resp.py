@@ -40,14 +40,14 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
     vmin = -vmax
 
     axarr[0].imshow(stim,cmap="gray", aspect="auto", interpolation="none", origin="lower")
-    axarr[0].set_title("Input",y=1.02)
+    axarr[0].set_title("Input",y=1.02, fontsize=20)
 
     axarr[1].imshow(data1, vmin=vmin, vmax=vmax,
                    cmap=cmap, aspect="auto", interpolation="none", origin="lower")
 
 
     label = r"Without feedback"+"\n"+" $w_{\mathrm{RC}}=$"+'${0:.1f}$'.format(sim_no_fb.get_attribute("relay.Krc.w"))+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(sim_no_fb.get_attribute("interneuron.Kic.w"))
-    axarr[1].set_title(label,y=0.99)
+    axarr[1].set_title(label,y=1, fontsize=20)
 
 
     label = r"With feedback"+"\n"+" $w_{\mathrm{RC}}=$"+'${0:.1f}$'.format(sim_with_fb.get_attribute("relay.Krc.w"))+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(sim_with_fb.get_attribute("interneuron.Kic.w"))
@@ -59,7 +59,7 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
     orientation='vertical')
     cbar.set_ticklabels(['Low', '0', 'High'])
     cbar.ax.tick_params(labelsize=18)
-    axarr[2].set_title(label,y=0.99)
+    axarr[2].set_title(label,y=1, fontsize=20)
 
     ########################################################################################
     # plt.tight_layout()
