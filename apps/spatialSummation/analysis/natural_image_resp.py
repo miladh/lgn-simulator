@@ -32,9 +32,9 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
 
 
 
-    data1 =  np.copy(sim_no_fb.relay.resp()[0,:,:])
-    data2 =  np.copy(sim_with_fb.relay.resp()[0,:,:])
-    stim = sim_no_fb.stimulus.spatio_temporal()[0,:,:]
+    data1 =  np.copy(sim_no_fb.relay.resp()[0,:-50,:])
+    data2 =  np.copy(sim_with_fb.relay.resp()[0,:-50,:])
+    stim = sim_no_fb.stimulus.spatio_temporal()[0,:-50,:]
 
     vmax = max(abs(data2.min()), abs(data2.max()))
     vmin = -vmax
@@ -55,7 +55,10 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
                    cmap=cmap, aspect="auto", interpolation="none", origin="lower")
 
 
-    plt.colorbar(im, ax=axarr.ravel().tolist(), orientation='vertical')
+    cbar = fig.colorbar(im, ax=axarr.ravel().tolist(), ticks=[vmin,0,  vmax],
+    orientation='vertical')
+    cbar.set_ticklabels(['Low', '0', 'High'])
+    cbar.ax.tick_params(labelsize=18)
     axarr[2].set_title(label,y=0.99)
 
     ########################################################################################
