@@ -17,6 +17,8 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
         set_grid(ax, linewidth=0., linecolor='0.95')
         ax.get_xaxis().set_visible(False)
         ax.get_yaxis().set_visible(False)
+        spines_edge_color(ax, edges = {"top": "none", "bottom": "none",
+                                       "right": "none", "left": "none"})
 
 
 
