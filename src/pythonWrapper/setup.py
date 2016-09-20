@@ -6,7 +6,7 @@ setup(
     version='0.0.1',
     author='Cannot believe I wrote this',
     author_email='dont_send_me_email@gmail.com',
-    packages=['aSimpleExample'],
+    packages=['lgn_simulator'],
     license='Use as you wish. No guarantees whatsoever.',
     install_requires=[''],
     classifiers=['Development Status :: 3 - Alpha'],
