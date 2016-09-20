@@ -1,7 +1,7 @@
 include(../defaults.pri)
 
 TEMPLATE = lib
-TARGET = ../lib/lgn-simulator
+TARGET = lgn_simulator
 
 
 SOURCES += \
