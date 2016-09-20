@@ -90,6 +90,6 @@ HEADERS += \
 
 OTHER_FILES +=
 
-!equals(PWD, $${OUT_PWD}) {
-    QMAKE_POST_LINK += $(COPY_DIR) $$OUT_PWD/../lib $$PWD/../
-}
+#!equals(PWD, $${OUT_PWD}) {
+#    QMAKE_POST_LINK += $(COPY_DIR) $$OUT_PWD/../lib $$PWD/../
+#}
