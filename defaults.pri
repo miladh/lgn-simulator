@@ -6,6 +6,7 @@ LIBS += -lyaml-cpp -lboost_system -lboost_filesystem
 LIBS += -L/usr/local/lib -lopencv_core -lopencv_highgui
 LIBS += -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lhdf5 -lhdf5_cpp
 LIBS += -L/usr/include/gsl -lgsl -lgslcblas -lm
+LIBS += -lpython2.7 -lboost_python
 
 CONFIG += c++14
 QMAKE_CXXFLAGS += -std=c++14  -fext-numeric-literals
@@ -19,6 +20,7 @@ QMAKE_CXX = ccache $$CURRENT_COMPILER
 
 INCLUDEPATH += /usr/local/include/opencv
 INCLUDEPATH +=/usr/include/hdf5/serial/
+INCLUDEPATH += /usr/include/python2.7
 
 INCLUDEPATH += $$TOP_PWD/src
 SRC_DIR = $$TOP_PWD
