@@ -3,7 +3,7 @@
     \title About
     \tableofcontents
 
-LGN simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex.
+LGN simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early part of the visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex.
 The model behind is a linear mechanistic, firing rate model that incorporates the influence of thalamocortical loops, in addition to the feedforward responses.
 This simulator can be used to study the characteristics of cortical feedback to LGN.
 These characteristics includes strength, spatial spread and temporal properties.

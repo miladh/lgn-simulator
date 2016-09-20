@@ -18,7 +18,7 @@ The response, i.e. the firing rate, of linear cells evoked by a stimulus \\(S\\)
 To do this we make the reasonable assumption that the retinal area can be subdivided into small pixels.
 At each pixel location
 \\((x_i, y_j)\\)
-the value of a (stationary) stimuli is given by \\( \stim(x_i, y_j)\\), which is
+the value of a (stationary) stimulus is given by \\( \stim(x_i, y_j)\\), which is
 weighted by a weighting factor \\(\recep (x_i, y_j)\\).
 Then, by the linear superposition principle, we can construct the response of a cell with
 its center at
@@ -44,7 +44,6 @@ The weighting function \\(\recep \\) is the receptive field function of the neur
 This becomes obvious by noticing that the integral in the equation above measures the mismatches between the stimulus and the receptive field function.
 When these two functions overlap fully, the value of the integral increases and thereby also
 the response of the cell.
-This suggest a close relationship between the weighting factor and the optimal stimulus, and in fact it can be shown that the receptive field function is proportional to the stimulus that evoke maximal response.
 
 
 \div {class="float-right" style="margin: 0 auto"}
