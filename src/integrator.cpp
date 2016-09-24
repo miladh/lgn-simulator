@@ -1,5 +1,5 @@
 #include "integrator.h"
-
+#include "boost/python.hpp"
 using namespace lgnSimulator;
 
 
@@ -187,4 +187,16 @@ Integrator createIntegrator(const YAML::Node &cfg)
 
     return Integrator(nt, dt, ns, ds);
 
+}
+
+char const* greet()
+{
+   return "hello, world";
+}
+
+
+BOOST_PYTHON_MODULE(lgn_simulator)
+{
+    using namespace boost::python;
+    def("greet", greet);
 }
