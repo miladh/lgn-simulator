@@ -73,11 +73,11 @@ for ai in a_ic:
         print ar
         modify_arc(ar)
 ##########################################################
-    with open(config_file, 'w') as stream:
-        yaml.dump(config_data, stream)
-
-    run_id = '{0:04}'.format(counter)
-    st.run_simulator(config_file, record_label, run_id)
-    counter+=1
+    # with open(config_file, 'w') as stream:
+    #     yaml.dump(config_data, stream)
+    #
+    # run_id = '{0:04}'.format(counter)
+    # st.run_simulator(config_file, record_label, run_id)
+    # counter+=1
 os.remove(config_file)
 ##########################################################
