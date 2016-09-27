@@ -6,11 +6,11 @@ grid:
     ns: 9
     nt: 1
     dt: &dt_id 1.0
-    ds: &ds_id 0.1
+    ds: &ds_id 0.05
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: true
+    storeSpatiotemporal: false
     storeFT: false
 
     # Grating:
@@ -34,8 +34,6 @@ stimulus:
 
     wId:  0                         #[-Nt/2, Nt/2 - 1]
     surroundwId:  0                 #[-Nt/2, Nt/2 - 1]
-
-    sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/camera.jpg"
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
@@ -56,10 +54,10 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
 
     #Kernels
     Krg:
@@ -92,7 +90,7 @@ relay:
         w: 0.5
         spatial:
         #Gauss
-            a: 0.1
+            a: 0.2
 
         temporal:
         # TemporalDelta
@@ -103,14 +101,14 @@ relay:
 
 interneuron:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
 
     #Kernels
     Kig:
-        w: 1.0
+        w: 0.0
         spatial:
         # Gaussian
             a: 0.3
@@ -125,7 +123,7 @@ interneuron:
         w: 0.5
         spatial:
         #Gauss
-            a: 0.9
+            a: 0.6
 
         temporal:
         # TemporalDelta

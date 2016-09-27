@@ -10,20 +10,20 @@ using namespace lgnSimulator;
 
 int main(int argc, char* argv[])
 {
-    
+
     cout << "=====LGN Simulator Model: Spatial summation =====" << endl;
     clock_t t;
     t = clock();
-    
+
     if(argc < 2) {
         cerr << "Too few arguments." << endl;
         return 1;
     }
-    
-    
+
+
     //read config file-------------------------------------------------------
     YAML::Node cfg = YAML::LoadFile(argv[1]);
-    
+
     //Output manager:---------------------------------------------------------
     OutputManager io(cfg["OutputManager"]["outputFilename"].as<std::string>());
 
@@ -32,8 +32,6 @@ int main(int argc, char* argv[])
 
     //Stim---------------------------------------------------------------------
     unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg["stimulus"]);
-//    unique_ptr<StaticImage> S = createStaticImageStimuluZs(&integrator, cfg["stimulus"]);
-
 
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
@@ -42,66 +40,66 @@ int main(int argc, char* argv[])
 
     GanglionCell ganglion(&integrator, Wg, cfg["ganglion"]["R0"].as<double>());
 
-    
+
     //Relay cell: -------------------------------------------------------------
     RelayCell relay(&integrator, cfg["relay"]["R0"].as<double>());
-    
+
     // G -> R
     SpatialGaussian Ks_rg = createSpatialGaussianKernel(cfg["relay"]["Krg"]["spatial"]);
     TemporalDelta Kt_rg = createTemporalDeltaKernel(cfg["relay"]["Krg"]["temporal"]);
     SeparableKernel Krg(cfg["relay"]["Krg"]["w"].as<double>(), &Ks_rg, &Kt_rg);
-    
+
     // I -> R
     SpatialGaussian Ks_ri = createSpatialGaussianKernel(cfg["relay"]["Kri"]["spatial"]);
     TemporalDelta Kt_ri = createTemporalDeltaKernel(cfg["relay"]["Kri"]["temporal"]);
     SeparableKernel Kri(cfg["relay"]["Kri"]["w"].as<double>(), &Ks_ri, &Kt_ri);
-    
+
     // C -> R
     SpatialGaussian Ks_rc = createSpatialGaussianKernel(cfg["relay"]["Krc"]["spatial"]);
     TemporalDelta Kt_rc = createTemporalDeltaKernel(cfg["relay"]["Krc"]["temporal"]);
     SeparableKernel Krc(cfg["relay"]["Krc"]["w"].as<double>(), &Ks_rc, &Kt_rc);
-    
+
     //Interneuron: -------------------------------------------------------------
     Interneuron interneuron(&integrator, cfg["interneuron"]["R0"].as<double>());
-    
+
     // G -> I
     SpatialGaussian Ks_ig = createSpatialGaussianKernel(cfg["interneuron"]["Kig"]["spatial"]);
     TemporalDelta Kt_ig = createTemporalDeltaKernel(cfg["interneuron"]["Kig"]["temporal"]);
     SeparableKernel Kig(cfg["interneuron"]["Kig"]["w"].as<double>(), &Ks_ig, &Kt_ig);
-    
+
     // C -> I
     SpatialGaussian Ks_ic = createSpatialGaussianKernel(cfg["interneuron"]["Kic"]["spatial"]);
     TemporalDelta Kt_ic = createTemporalDeltaKernel(cfg["interneuron"]["Kic"]["temporal"]);
     SeparableKernel Kic(cfg["interneuron"]["Kic"]["w"].as<double>(), &Ks_ic, &Kt_ic);
-    
+
     //Cortical cell: -------------------------------------------------------------
     HeavisideNonlinearity heavisideNonlinearity;
     CorticalCell cortical(&integrator, cfg["cortical"]["R0"].as<double>(), &heavisideNonlinearity);
-    
+
     // R -> C
     SpatialDelta Ks_cr = createSpatialDeltaKernel(cfg["cortical"]["Kcr"]["spatial"]);
     TemporalDelta Kt_cr = createTemporalDeltaKernel(cfg["cortical"]["Kcr"]["temporal"]);
     SeparableKernel Kcr(cfg["cortical"]["Kcr"]["w"].as<double>(), &Ks_cr, &Kt_cr);
-    
-    
+
+
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, Krg);
     relay.addInterNeuron(&interneuron, Kri);
     relay.addCorticalCell(&cortical, Krc);
-    
+
     interneuron.addGanglionCell(&ganglion, Kig);
     interneuron.addCorticalCell(&cortical, Kic);
-    
+
     cortical.addRelayCell(&relay, Kcr);
-    
+
     //Compute:-----------------------------------------------------------------
     S->computeFourierTransform();
     ganglion.computeImpulseResponseFourierTransform();
     relay.computeImpulseResponseFourierTransform();
     interneuron.computeImpulseResponseFourierTransform();
     cortical.computeImpulseResponseFourierTransform();
-    
-    
+
+
     //Write:-----------------------------------------------------------------
     io.copyConfigFile(argv[1]);
     io.writeIntegratorProperties(integrator);
@@ -116,7 +114,7 @@ int main(int argc, char* argv[])
         io.writeStimulus(S.get());
         S->clearSpatioTemporal();
     }
-    
+
     /////////////////////////////////////////////////////////////////////////////////////
     if(cfg["ganglion"]["storeResponseFT"].as<bool>()){
         ganglion.computeResponseFourierTransform(S.get());
@@ -136,7 +134,7 @@ int main(int argc, char* argv[])
         io.writeImpulseResponse(ganglion);
         ganglion.clearImpulseResponse();
     }
-    
+
     /////////////////////////////////////////////////////////////////////////////////////
     if(cfg["relay"]["storeResponseFT"].as<bool>()){
         relay.computeResponseFourierTransform(S.get());
@@ -157,8 +155,8 @@ int main(int argc, char* argv[])
         io.writeImpulseResponse(relay);
         relay.clearImpulseResponse();
     }
-    
-    
+
+
     /////////////////////////////////////////////////////////////////////////////////////
     if(cfg["interneuron"]["storeResponseFT"].as<bool>()){
         interneuron.computeResponseFourierTransform(S.get());
@@ -179,7 +177,7 @@ int main(int argc, char* argv[])
         io.writeImpulseResponse(interneuron);
         interneuron.clearImpulseResponse();
     }
-    
+
     /////////////////////////////////////////////////////////////////////////////////////
     if(cfg["cortical"]["storeResponseFT"].as<bool>()){
         cortical.computeResponseFourierTransform(S.get());
@@ -200,8 +198,8 @@ int main(int argc, char* argv[])
         io.writeImpulseResponse(cortical);
         cortical.clearImpulseResponse();
     }
-    
-    
+
+
     //Finalize:----------------------------------------------------------
     t = clock() - t;
     double elapsedTime = ((float)t)/CLOCKS_PER_SEC;
@@ -210,8 +208,7 @@ int main(int argc, char* argv[])
     }else{
         printf ("%f minutes.\n", elapsedTime/60);
     }
-    
-    
+
+
     return 0;
 }
-
