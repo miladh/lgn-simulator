@@ -70,7 +70,7 @@ for ai in a_ic:
     print ai
     modify_aic(ai)
     for ar in a_rc:
-        print ar
+        print "ar", ar
         modify_arc(ar)
 ##########################################################
     # with open(config_file, 'w') as stream:
