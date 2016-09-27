@@ -67,8 +67,10 @@ a_rc = np.linspace(0, 4., 20)
 counter= 0
 
 for ai in a_ic:
+    print ai
     modify_aic(ai)
     for ar in a_rc:
+        print ar
         modify_arc(ar)
 ##########################################################
     with open(config_file, 'w') as stream:
