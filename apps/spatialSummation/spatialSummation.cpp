@@ -31,8 +31,8 @@ int main(int argc, char* argv[])
     Integrator integrator = createIntegrator(cfg["grid"]);
 
     //Stim---------------------------------------------------------------------
-//    unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg["stimulus"]);
-    unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator, cfg["stimulus"]);
+    unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg["stimulus"]);
+//    unique_ptr<StaticImage> S = createStaticImageStimuluZs(&integrator, cfg["stimulus"]);
 
 
     //Ganglion cell:-----------------------------------------------------------
