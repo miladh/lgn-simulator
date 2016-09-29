@@ -1,79 +1,144 @@
-description: "Default config file"
+description: "config file"
 
 #------------Integrator settings-----------------#
-ns: 8
-nt: 7
-dt: &dt_id 3.0
-ds: &ds_id 0.01
+grid:
+    ns: 9
+    nt: 1
+    dt: &dt_id 1.0
+    ds: &ds_id 0.05
 
-#------------Stimulus settings-----------------#
-# Grating:
-C: 1.0
-mask: "none" # none/circle
-maskSize: 0.5
-orientation: 0.  #degrees
-kId:  4           #[-Ns/2, Ns/2 - 1]
-wId:  0           #[-Nt/2, Nt/2 - 1]
+#------------Stimulus settings-------------------#
+stimulus:
+    storeSpatiotemporal: false
+    storeFT: false
 
+    # Grating:
+    mask: "circle"  #none/circle/gaussian
 
-#----------Ganglion Impulse response--------------#
-ganglionImpRes:
-# DOG
-    A: 1.0
-    a: 0.25
-    B: 0.85
-    b: 0.83
+    C: 1.0
+    maskSize: 1         #deg
+    orientation: 0.     #deg
+    phase: 0.           #deg
+    kId:  0             #[-Ns/2, Ns/2 - 1]
+    wId:  0             #[-Nt/2, Nt/2 - 1]
 
-# Biphasic
-    phaseDuration: 42.5
-    weight: 0.38
-    delay: 0
+#-----------------Neuron settings------------------#
+ganglion:
+    R0 : 0
+    storeResponse: false
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
+    w: 1.0
+    Wg:
+    # DOG
+        a: 0.62
+        b: 1.26
+        c: 0.85
+    Wt:
+    # TemporalDelta
+        delay: 0
+        dt: *dt_id
 
-#------------kernelSettings-----------------#
-kernels:
+relay:
+    R0 : 0
+    storeResponse: false
+    storeResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
+
+    #Kernels
     Krg:
+        w: 1.0
         spatial:
-        # SpatialDelta
-            weight: 1.0
-            ds : *ds_id
-            shift: [0.0, 0.]
+        # Gaussian
+            a: 0.1
+
+
+        temporal:
+        # TemporalDelta
+            delay: 0
+            dt: *dt_id
+    Kri:
+        w: -0.5
+        spatial:
+        #Gauss
+            a: 0.2
+
+        #delta
+            ds: *ds_id
+            shift: [0, 0]
+
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
+
+    Krc:
+        w: 0.5
+        spatial:
+        #Gauss
+            a: 0.2
+
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
+
+
+
+interneuron:
+    R0 : 0
+    storeResponse: false
+    storeResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
+
+    #Kernels
+    Kig:
+        w: 0.0
+        spatial:
+        # Gaussian
+            a: 0.3
+
         temporal:
         # TemporalDelta
             delay: 0
             dt: *dt_id
 
 
-    Krc:
+    Kic:
+        w: 0.5
         spatial:
-        # Gauss
-            A: -1.5
-            a: 0.83
+        #Gauss
+            a: 0.6
 
         temporal:
-         #DoE
-             cenLatency: 16
-             surLatency: 64
-             delay: 20.
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
 
+cortical:
+    R0 : 0.
+    storeResponse: false
+    storeResponseFT: false
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
+    #kernels
     Kcr:
-        #nonseparableDOG
-            A: 1.0
-            a: 0.25
-            B: 0.85
-            b: 0.83
+        w: 1.0
+        spatial:
+        #delta
+            ds: *ds_id
+            shift: [0, 0]
 
-            cenLatencyAlpha: 16.
-            cenLatencyBeta: 64.
-            surLatencyAlpha: 32.
-            surLatencyBeta: 64.
-            delay: 20.
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
 
-#------------backgroundResponse-----------------#
-backgroundResponse:
-    Rg_0: 0
-    Rr_0: 0
-    Rc_0: 0
 
 #------------File manager settings-----------------#
-outputFile: "/media/milad/scratch/lgn-simulator/simulations/tmp/default.h5"
+OutputManager:
+    outputFilename: "out.h5"

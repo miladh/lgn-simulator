@@ -18,9 +18,9 @@ def extract_irfs(cell_type):
             sim = simulation_extractor(sims_a, attr_b_name, b, return_as_list=False)
             irf = sim.get_attribute(cell_type).irf()[0, Ns/2, Ns/2:]
 
-            irf_max[i,j]  = irf[0] #/abs(irf_norm[0])
-            irf_min[i,j]  = irf[1:].min() #/abs(irf_norm[1:].min())
-            irf_size[i,j] = s_points[argmin(irf[1:])]#/s_points[argmin(irf_norm[1:])]
+            irf_max[i,j]  = irf[0] /0.637718 #abs(irf_norm[0])
+            irf_min[i,j]  = irf[1:].min() /0.0483276 #abs(irf_norm[1:].min())
+            irf_size[i,j] = s_points[argmin(irf[1:])] /1.2# s_points[argmin(irf_norm[1:])]
 
 
     return irf_max, irf_min, irf_size
@@ -44,7 +44,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[0].set_title("IRF center",y=1.02)
     im =axarr[0].imshow(irf_max, extent = extent,
-                #    vmin=0.8, vmax=4,
+                #    vmin=0.8, vmax=2,
                    cmap=cmap, aspect="auto",
                    interpolation="none",
                    origin="lower")
@@ -52,7 +52,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[1].set_title("IRF surround",y=1.02)
     im = axarr[1].imshow(irf_min, extent = extent,
-            #    vmin=-6, vmax=-0.8,
+            #    vmin=-2.4, vmax=-0.7,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
@@ -60,7 +60,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[2].set_title("IRF size",y=1.02)
     im =axarr[2].imshow(irf_size, extent = extent,
-            #    vmin=0.65, vmax=1,
+            #    vmin=0.9, vmax=1.2,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
