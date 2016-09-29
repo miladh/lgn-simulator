@@ -2,30 +2,30 @@ description: "config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 9
-    nt: 1
+    ns: 6
+    nt: 5
     dt: &dt_id 1.0
     ds: &ds_id 0.05
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: false
+    storeSpatiotemporal: true
     storeFT: false
 
     # Grating:
-    mask: "circle"  #none/circle/gaussian
+    mask: "none"  #none/circle/gaussian
 
     C: 1.0
     maskSize: 1         #deg
     orientation: 0.     #deg
     phase: 0.           #deg
-    kId:  0             #[-Ns/2, Ns/2 - 1]
-    wId:  0             #[-Nt/2, Nt/2 - 1]
+    kId:  7             #[-Ns/2, Ns/2 - 1]
+    wId:  2             #[-Nt/2, Nt/2 - 1]
 
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
@@ -42,10 +42,10 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #Kernels
     Krg:
@@ -89,10 +89,10 @@ relay:
 
 interneuron:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
 
     #Kernels
     Kig:
@@ -120,7 +120,7 @@ interneuron:
 
 cortical:
     R0 : 0.
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
