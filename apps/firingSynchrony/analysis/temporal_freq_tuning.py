@@ -25,13 +25,13 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
         ax.plot(freqs, resp[cell_type][i,:], "-", label=label)
 
     ax.set_ylabel("Response(spikes/s)", fontsize=20)
-    ax.set_xlabel("Patch-grating temporal frequency $\omega_\mathrm{pg} (\mathrm{Hz})$", fontsize=20)
+    ax.set_xlabel("Temporal frequency $\omega_\mathrm{pg} (\mathrm{Hz})$", fontsize=20)
     ax.set_title("$\mathrm{Patch\;size}=$"+'${0:.2f}^\circ$'.format(diameter), fontsize=20)
     ax.legend()
     # ax.set_xscale('log')
     # ax.set_xticks([0.5, 1, 2, 4, 8])
     # ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
-    # ax.set_xlim([0, 10])
+    ax.set_xlim([0, 60])
 
 
     #########################################################################################

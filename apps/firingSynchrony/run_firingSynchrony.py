@@ -65,7 +65,7 @@ with open(config_file, 'r') as stream:
 #parameters---------------------------------------------------------------------
 w_ic = [0, 0.8, 2.4, 4.0]
 w_rc = [0, 0.18, 0.54, 0.9]
-spatial_freqs = range(0, 25)
+spatial_freqs = range(0, 15)
 #run simulator--------------------------------------------------------------------
 
 counter= 0
