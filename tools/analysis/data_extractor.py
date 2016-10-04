@@ -86,6 +86,9 @@ def get_simulations(data_path):
             dir_name = os.path.join(root, dir)
             setting_file = os.path.join(dir_name, "_"+dir+".yaml")
             data_file = os.path.join(dir_name, dir+".h5")
-            f = h5py.File(data_file, "r")
+            try:
+                f = h5py.File(data_file, "r")
+            except IOError:
+                print data_file
             sims.append(Simulation(setting_file, f))
     return sims

@@ -1,61 +1,80 @@
 #!/usr/bin/python
-import os, sys
-from argparse import ArgumentParser
 from pylab import*
-import matplotlib.pyplot as mplt
-
-import h5py
-from glob import glob
-
-
+import os, sys
 current_path = os.path.dirname(os.path.realpath(__file__))
-lib_path = [os.path.abspath(os.path.join(current_path,"../../../tools/sumatraTracking")),
-           os.path.abspath(os.path.join(current_path,"../../../tools/analysis"))]
-[sys.path.append(path) for path in lib_path]
-import Simulation as sim
-import get_simulations
-import plotting_tools as plt
+sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
+from analysis.data_extractor import*
+from analysis.tuning_analysis import*
+from analysis.pretty_plotting import*
+import seaborn.apionly as sns
+sns.set_color_codes()
 
 
-parser = ArgumentParser()
-parser.add_argument("sim_ids", help = "simulation ids")
-parser.add_argument("record", help = "record results", type = int)
-args = parser.parse_args()
-sim_ids = args.sim_ids
-record = args.record
+#Analysis: ###########################################################################
+def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
+    fig, ax = plt.subplots(1, 1, figsize=(6,6),  sharex='col')
+    set_font()
+    set_legend()
+    spines_edge_color(ax)
+    remove_ticks(ax)
+    set_grid(ax)
 
-sims, output_dir=get_simulations.get_simulation_environment(sim_ids, record=record)
+    for wi, wr in zip(attr_a[[0, 1, 3]], attr_b[[0, 1, 3]]):
+        i = where(attr_a==wi)[0][0]
+        label = r"$w_{\mathrm{RC}}=$"+'${0:.2f}$'.format(wr)+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(wi)
+        ax.plot(freqs, resp[cell_type][i,:], "-", label=label)
 
-# Analysis: --------------------------------------------------------------------
-cell_pos_x = 0.5
-cell_pos_y = cell_pos_x
-
-data = {"ganglion": {"w": np.zeros(len(sims)),
-                    "responses": np.zeros(len(sims)) }
-        ,"relay":   {"w": np.zeros(len(sims)),
-                            "responses": np.zeros(len(sims))}
-        ,"cortical":   {"w": np.zeros(len(sims)),
-                                    "responses": np.zeros(len(sims)) }}
-fig = mplt.figure(figsize=(8,6))
-for cell in data:
-    for j, exp in enumerate(sims):
-        idx = exp.integrator.nPointsSpatial * cell_pos_x
-        idy = exp.integrator.nPointsSpatial * cell_pos_y
-        data[cell]["w"][j] = exp.stimulus.temporalFreq
-        # data[cell]["responses"][j] = np.mean(
-        # exp.singleCellTemporalResponse(cell, idx, idy))
-        data[cell]["responses"][j] = exp.singleCellTemporalResponse(cell, idx, idy)[0]
+    ax.set_ylabel("Response(spikes/s)", fontsize=20)
+    ax.set_xlabel("Patch-grating temporal frequency $\omega_\mathrm{pg} (\mathrm{Hz})$", fontsize=20)
+    ax.set_title("$\mathrm{Patch\;size}=$"+'${0:.2f}^\circ$'.format(diameter), fontsize=20)
+    ax.legend()
+    # ax.set_xscale('log')
+    # ax.set_xticks([0.5, 1, 2, 4, 8])
+    # ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
+    # ax.set_xlim([0, 10])
 
 
-# Plot:
-mplt.plot(data["ganglion"]["w"], data["ganglion"]["responses"], "o--r", label = "ganglion")
-mplt.plot(data["relay"]["w"], data["relay"]["responses"], ",-b", label = "relay")
-# mplt.plot(data["cortical"]["K"], data["cortical"]["responses"], "g--", label = "cortical")
+    #########################################################################################
+    plt.tight_layout()
+    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
+    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
+    plt.show()
 
-# mplt.xlim(0., 1.)
-mplt.xlabel("Temporal freq", fontsize= 16)
-mplt.ylabel("Response",fontsize= 16)
-mplt.tight_layout()
-mplt.legend(loc=1)
-mplt.show()
-fig.savefig(os.path.join(output_dir, "temporal_freq_tuning.png"))
+
+
+if __name__ == "__main__":
+    import sumatra_tracking.io_manager as smt
+    record_label = sys.argv[1:][-1]
+    sims_path = sys.argv[1:][-2]
+    output_dir = smt.get_output_dir(record_label)
+
+    #-----------------------------------------------------------------------------------
+    cell_types = ["relay"]
+    attr_a_name = "interneuron.Kic.w"
+    attr_b_name = "relay.Krc.w"
+    fig_name= "temporal_freq_tuning_fb_weights_small_d"
+
+    sims = get_simulations(sims_path)
+    Ns=sims[0].integrator.Ns
+    Nt=sims[0].integrator.Nt
+    s_points = sims[0].integrator.s_points[Ns/2:]
+    k_points = sims[0].integrator.k_points[Ns/2:]
+    rc = [Ns/2, Ns/2]
+
+    attr_a = extract_unique_simulation_attrs(sims, attr_a_name)
+    attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
+    attr_a2, freqs, resp = resp_vs_attrA_vs_attrB(sims, attr_a_name, "stimulus.temporal_freq", rc=rc)
+    if(dot(attr_a - attr_a2,attr_a - attr_a2)!=0 ):
+        raise ValueError('attra and attra2 are different:' + attr_a, attr_a2)
+    else:
+       print "diff=", attr_a - attr_a2
+
+    d = extract_unique_simulation_attrs(sims, "stimulus.mask_size")
+    if len(d)>1:raise IndexError(d)
+    d=d[0]
+    print d
+
+    #-----------------------------------------------------------------------------------
+
+    for cell in cell_types:
+        make_plot(cell, resp, attr_a, attr_b, freqs, d)
