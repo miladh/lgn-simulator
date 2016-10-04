@@ -11,7 +11,7 @@ sns.set_color_codes()
 
 
 #Analysis: ###########################################################################
-def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
+def make_plot(cell_type, resp, attr_a, attr_b, freqs, save_fig=True):
     fig, ax = plt.subplots(1, 1, figsize=(6,6),  sharex='col')
     set_font()
     set_legend()
@@ -19,14 +19,13 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
     remove_ticks(ax)
     set_grid(ax)
 
-    for wi, wr in zip(attr_a[[0, 1, 3]], attr_b[[0, 1, 3]]):
+    for wi, wr in zip(attr_a, attr_b):
         i = where(attr_a==wi)[0][0]
         label = r"$w_{\mathrm{RC}}=$"+'${0:.2f}$'.format(wr)+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(wi)
-        ax.plot(freqs, resp[cell_type][i,:], "-", label=label)
+        ax.plot(freqs, abs(resp[cell_type][i,:]), "-", label=label)
 
     ax.set_ylabel("Response(spikes/s)", fontsize=20)
     ax.set_xlabel("Temporal frequency $\omega_\mathrm{pg} (\mathrm{Hz})$", fontsize=20)
-    ax.set_title("$\mathrm{Patch\;size}=$"+'${0:.2f}^\circ$'.format(diameter), fontsize=20)
     ax.legend()
     # ax.set_xscale('log')
     # ax.set_xticks([0.5, 1, 2, 4, 8])
