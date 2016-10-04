@@ -9,10 +9,10 @@ from analysis.plotting_tools import*
 
 
 
-data_file_path ="out.h5"
+data_file_path ="/home/milad/Dropbox/projects/lgn/code/build-lgnSimulator-Desktop_Qt_5_7_0_GCC_64bit-Debug/apps/default/out.h5"
 config_file_path ="defaultConfig.yaml"
-
 data_file = h5py.File(data_file_path, "r")
+
 sim = Simulation(config_file_path, data_file)
 
 Ns = sim.integrator.Ns

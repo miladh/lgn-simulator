@@ -12,7 +12,7 @@ TemporalGaussian::TemporalGaussian(double A, double a, double delay)
 
 double TemporalGaussian::temporal(double t) const
 {
-     return m_A / (m_a*m_a) / core::pi * exp(-(t-m_delay) / (m_a*m_a));
+     return m_A / (m_a*sqrt(core::pi)) * exp(-(t-m_delay)*(t-m_delay) / (m_a*m_a));
 }
 
 complex<double> TemporalGaussian::fourierTransform(double w) const

@@ -378,7 +378,7 @@ if __name__ == "__main__":
     import Simulation as sim
     plt.close("all")
 
-    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
+    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(None, f)
 
@@ -391,41 +391,48 @@ if __name__ == "__main__":
             "spatial_vec" : exp.integrator.s_points
             }
 
-    Wg = {"type" : "Ganglion",
-                "value" : exp.ganglion.irf(),
-                "t_points" : exp.integrator.t_points,
-                "spatial_vec" : exp.integrator.s_points
-                }
-    Wr = {"type" : "Relay",
-             "value" : exp.relay.irf(),
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-            }
+    # Wg = {"type" : "Ganglion",
+    #             "value" : exp.ganglion.irf(),
+    #             "t_points" : exp.integrator.t_points,
+    #             "spatial_vec" : exp.integrator.s_points
+    #             }
+    # Wr = {"type" : "Relay",
+    #          "value" : exp.relay.irf(),
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #         }
 
-    Wi = {"type" : "Interneuron",
-                 "value" : exp.interneuron.irf(),
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
-
-    Wc = {"type" : "Cortical",
-                 "value" : exp.cortical.irf(),
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
+    # Wi = {"type" : "Interneuron",
+    #              "value" : exp.interneuron.irf(),
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
+    #
+    # Wc = {"type" : "Cortical",
+    #              "value" : exp.cortical.irf(),
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
 # #
 # # # Response FT--------------------------------------------------------------------------
+
+
+    S_ft = {"type" : "Stimulus",
+            "value" : exp.stimulus.fourier_transform().real,
+            "t_points" : exp.integrator.w_points,
+            "spatial_vec" : exp.integrator.k_points
+            }
 #     Rg_ft = {"type" : "Ganglion",
 #                 "value" : np.real(exp.ganglion.resp_ft()),
 #                 "t_points" : exp.integrator.w_points,
 #                 "spatial_vec" : exp.integrator.k_points
 #                 }
-#     Rr_ft = {"type" : "Relay",
-#              "value" : np.real(exp.relay.resp_ft()),
-#                 "t_points" : exp.integrator.w_points,
-#                 "spatial_vec" : exp.integrator.k_points
-#             }
-#
+    Rr_ft = {"type" : "Relay",
+             "value" : np.real(exp.relay.resp_ft()),
+                "t_points" : exp.integrator.w_points,
+                "spatial_vec" : exp.integrator.k_points
+            }
+
 #     Ri_ft = {"type" : "Interneuron",
 #                  "value" : np.real(exp.interneuron.resp_ft()),
 #                 "t_points" : exp.integrator.w_points,
@@ -448,29 +455,28 @@ if __name__ == "__main__":
              "t_points" : exp.integrator.t_points,
              "spatial_vec" : exp.integrator.s_points
             }
+    #
+    # Ri = {"type" : "Interneuron",
+    #          "value" : exp.interneuron.resp(),
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    # }
+    # Rc = {"type" : "Cortical",
+    # "value" : exp.cortical.resp(),
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
 
-    Ri = {"type" : "Interneuron",
-             "value" : exp.interneuron.resp(),
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-    }
-    Rc = {"type" : "Cortical",
-    "value" : exp.cortical.resp(),
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
-
-    data = [S, Rg, Wg, Rr, Wr, Ri, Wi, Rc, Wc]
+    # data = [Wg, Wr, Wi, Wc]
     # data = [ Rg, Rg, Wr,  Rr, Wr, Ri, Wi, Rc, Wc]
     # data = [Rg, Rr, Ri, Rc]
 
 
-    # plt.plot(exp.relay.t_resp(rc=[Ns/2, Ns/2]))
-
     # data = [S, Rg_ft, Rr_ft, Ri_ft, Rc_ft]
-    # line3dPlotsOfImpulseResponses([Wr], num_skip = 1, idx=Ns/2, idy=Ns/2,)
+    # line3dPlotsOfImpulseResponses([Wg, Wr, Wi, Wc], num_skip = 30, idx=Ns/2, idy=Ns/2,y_line3d=False,)
+    # imshowPlotsOfImpulseResponses([Wg, Wr, Wi, Wc],  idx=Ns/2, idy=Ns/2,y_imshow=False,)
 
-    animate_imshow_plots(data, exp.integrator.dt,
+    animate_imshow_plots([S, Rg, Rr, Rr_ft], exp.integrator.dt,
     colorbar = True, remove_axes = False,
     save_animation = False, animation_name = "newTest")
 

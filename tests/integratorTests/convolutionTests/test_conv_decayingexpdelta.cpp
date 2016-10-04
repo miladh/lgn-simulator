@@ -68,8 +68,8 @@ void runDogdecayingExpConvolutionTest(int nt, double dt, int ns, double ds,
 
 TEST_CASE("runDogdecayingExpConvolutionTest_test_0") {
 //    runDogdecayingExpConvolutionTest(10, 1.0, 6, 0.05,
-//                                     0, 1.0, 0.25,
-//                                     0, 0.04, 1.0,
+//                                     0,  0.25,
+//                                     0,  1.0,
 //                                     vec2{0.0, 0.0});
 }
 

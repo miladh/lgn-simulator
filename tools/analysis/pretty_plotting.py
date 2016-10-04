@@ -47,6 +47,52 @@ def spines_edge_color(ax, edges = {"top": "none", "bottom": "w",
     for edge, color in edges.iteritems():
         ax.spines[edge].set_edgecolor(color)
 
+def move_spines(ax, edges = {"bottom": 0, "left": 0}):
+    """
+    Move spines
+
+    Parameters
+    ----------
+    Required arguments
+
+    ax : matplotlib.axis
+        axis object
+
+    edges : dictionary
+        edges as keys with value as key values
+    """
+
+    for edge, value in edges.iteritems():
+        ax.spines[edge].set_position(('data',value))
+
+
+def remove_ticklabels(ax, x_axis=True, y_axis=True):
+    """
+    Remove ticklabels
+
+    Parameters
+    ----------
+    Required arguments
+
+    ax : matplotlib.axis
+        axis object
+
+    x_axis : bool
+        remove xticklabels
+
+    y_axis : bool
+        remove yticklabels
+    """
+
+    if x_axis:
+        labels = [item.get_text() for item in ax.get_xticklabels()]
+        empty_string_labels = ['']*len(labels)
+        ax.set_xticklabels(empty_string_labels)
+    if y_axis:
+        labels = [item.get_text() for item in ax.get_yticklabels()]
+        empty_string_labels = ['']*len(labels)
+        ax.set_yticklabels(empty_string_labels)
+
 
 def remove_ticks(ax):
     """

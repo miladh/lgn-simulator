@@ -2,24 +2,37 @@ description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 8
-    nt: 2
-    dt: &dt_id 0.05
-    ds: &ds_id 0.1
+    ns: 6
+    nt: 8
+    dt: &dt_id 1.
+    ds: &ds_id 0.05
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: true
+    storeSpatiotemporal: false
     storeFT: false
 
     # Grating:
-    C: 1.0
-    mask: "cscircle" #none/circle/gaussian
-    maskSize: 10
-    orientation: 0.   #degrees
-    kId:  5         #[-Ns/2, Ns/2 - 1]
-    wId:  0           #[-Nt/2, Nt/2 - 1]
+    mask: "circle"  #none/circle/cscircle/gaussian
 
+    C: 1.0
+    surroundC: 1.0
+
+    maskSize: 1            #deg
+    surroundMaskSize : 0     #deg
+
+    orientation: 0.                 #deg
+    surroundOrientation : 0.0       #deg
+
+    phase: 0.                      #deg
+    surroundPhase: 0.0              #deg
+
+    kId:  0                        #[-Ns/2, Ns/2 - 1]
+    surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
+
+
+    wId:  0                         #[-Nt/2, Nt/2 - 1]
+    surroundwId:  0                 #[-Nt/2, Nt/2 - 1]
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
@@ -34,21 +47,21 @@ ganglion:
         b: 1.26
         c: 0.85
     Wt:
-    # Biphasic
-        #phaseDuration: 0.425 #ms
-        #weight: 0.38
-        #delay: 0.
-
-    # TemporalDelta
+    # Biphasice
         delay: 0
-        dt: *dt_id
+        phaseDuration: 42.5     #ms
+        weight: 0.38
 
+    # DoE
+        delay: 0
+        cenLatency: 10     #ms
+        surLatency: 22     #ms
 
 relay:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
+    storeImpulseResponse: false
     storeImpulseResponseFT: false
 
     #Kernels
@@ -60,19 +73,19 @@ relay:
 
 
         temporal:
-        # TemporalDelta
-            delay: 0
-            dt: *dt_id
+        # DecayingExponential
+            delay: 4
+            tau: 10         #ms
     Kri:
-        w: -0.3
+        w: -0.5
         spatial:
         #Gauss
-            a: 0.5
-
+            a: 0.2
         temporal:
-        # TemporalDelta
-            delay: 0.
-            dt: *dt_id
+
+        # DecayingExponential
+            delay: 2.
+            tau: 15         #ms
 
     Krc:
         w: 0.8
@@ -81,9 +94,11 @@ relay:
             a: 0.1
 
         temporal:
-        # TemporalDelta
-            delay: 0.005
-            dt: *dt_id
+        # DecayingExponential
+            delay: 10.
+            tau: 39     #ms
+
+
 
 interneuron:
     R0 : 0
@@ -97,25 +112,24 @@ interneuron:
         w: 1.0
         spatial:
         # Gaussian
-            a: 1.0
-
+            a: 0.3
 
         temporal:
-        # TemporalDelta
-            delay: 0
-            dt: *dt_id
+        # DecayingExponential
+            delay: 4
+            tau: 15     #ms
 
 
     Kic:
-        w: 0.8
+        w: 4.0
         spatial:
         #Gauss
-            a: 1.0
+            a: 0.9
 
         temporal:
-        # TemporalDelta
-            delay: 0.005
-            dt: *dt_id
+        # DecayingExponential
+            delay: 10.
+            tau: 39     #ms
 
 cortical:
     R0 : 0.
@@ -128,14 +142,15 @@ cortical:
     Kcr:
         w: 1.0
         spatial:
-        # SpatialDelta
-            ds : *ds_id
-            shift: [0.0, 0.]
+        #delta
+            ds: *ds_id
+            shift: [0, 0]
 
         temporal:
         # TemporalDelta
-            delay: 0.005
+            delay: 10.
             dt: *dt_id
+
 
 #------------File manager settings-----------------#
 OutputManager:

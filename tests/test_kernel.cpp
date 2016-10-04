@@ -10,6 +10,9 @@
 
 using namespace lgnSimulator;
 
+//Decaying exponential-----------------------------------------
+
+
 
 //DifferenceOfExponential--------------------------------------
 TEST_CASE("[doe_test_0]") {

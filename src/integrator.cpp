@@ -50,9 +50,9 @@ Integrator::Integrator(const int nt,
 
 
     m_forwardPlan_2d = fftw_plan_dft_2d(m_nPointsSpatial, m_nPointsSpatial,
-                                     reinterpret_cast<fftw_complex*> (m_in_2d.memptr()),
-                                     reinterpret_cast<fftw_complex*> (m_out_2d.memptr()),
-                                     FFTW_FORWARD, FFTW_MEASURE);
+                                        reinterpret_cast<fftw_complex*> (m_in_2d.memptr()),
+                                        reinterpret_cast<fftw_complex*> (m_out_2d.memptr()),
+                                        FFTW_FORWARD, FFTW_MEASURE);
 }
 
 Integrator::~Integrator()
@@ -67,8 +67,8 @@ cube Integrator::backwardFFT(const cx_cube& in)
                      reinterpret_cast<fftw_complex*>(m_out.memptr()));
 
     //fftShift:
-    //shift output to be symmetric around center
-    //only in space since temporal should be centered around (0,0)
+    //shift output to be symmetric around center and not around index(0,0)
+    //only in space since temporal should be centered around index(0,0)
     for(int i = 0; i < int(m_out.n_slices); i++){
         m_out.slice(i) = FFTHelper::ifftShift(m_out.slice(i));
     }
@@ -86,8 +86,8 @@ cx_cube Integrator::forwardFFT(const cube &in)
 {
 
     //fftShift:
-    //shift input to be symmetric around (0,0)
-    //only in space since temporal is already centered around (0,0)
+    //shift input to be symmetric around index(0,0)
+    //only in space since temporal is already centered around index(0,0)
     for(int i = 0; i < int(m_in.n_slices); i++){
         m_in.slice(i).set_real(FFTHelper::fftShift(in.slice(i)));
         m_in.slice(i).set_imag(zeros(m_in.n_rows, m_in.n_cols));
@@ -96,6 +96,7 @@ cx_cube Integrator::forwardFFT(const cube &in)
     fftw_execute_dft(m_forwardPlan, reinterpret_cast<fftw_complex*>(m_in.memptr()),
                      reinterpret_cast<fftw_complex*> (m_out.memptr()));
 
+
     return m_out * m_temporalResolution * m_spatialResolution * m_spatialResolution;
 }
 
@@ -103,7 +104,7 @@ cx_cube Integrator::forwardFFT(const cube &in)
 cx_mat Integrator::forwardFFT(const mat &in)
 {
     //fftShift:
-    //shift input to be symmetric around (0,0)
+    //shift input to be symmetric around index(0,0)
     m_in_2d.set_real(FFTHelper::fftShift(in));
     m_in_2d.set_imag(zeros(in.n_rows, in.n_cols));
 
