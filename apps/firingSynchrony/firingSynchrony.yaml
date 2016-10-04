@@ -2,9 +2,9 @@ description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 6
+    ns: 5
     nt: 8
-    dt: &dt_id 1.
+    dt: &dt_id 4.
     ds: &ds_id 0.05
 
 #------------Stimulus settings-------------------#
@@ -95,7 +95,7 @@ relay:
 
         temporal:
         # DecayingExponential
-            delay: 10.
+            delay: 20.
             tau: 39     #ms
 
 
@@ -128,7 +128,7 @@ interneuron:
 
         temporal:
         # DecayingExponential
-            delay: 10.
+            delay: 20.
             tau: 39     #ms
 
 cortical:
@@ -148,7 +148,7 @@ cortical:
 
         temporal:
         # TemporalDelta
-            delay: 10.
+            delay: 0.
             dt: *dt_id
 
 
