@@ -74,7 +74,7 @@ for wi, wr in zip(w_ic,w_rc):
     modify_wic(wi)
     modify_wrc(wr)
     for Kd in spatial_freqs:
-        modify_spatial_freq(Kd)
+        modify_temp_freq(Kd)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
