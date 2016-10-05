@@ -55,7 +55,7 @@ void OutputManager::writeIntegratorProperties(const Integrator &integrator)
 
     fvec timeVec = conv_to<fvec>::from(integrator.timeVec());
     fvec spatialVec = conv_to<fvec>::from(integrator.spatialVec());
-    fvec temporalFreqVec = conv_to<fvec>::from(FFTHelper::fftShift(integrator.temporalFreqVec()));
+    fvec temporalFreqVec = conv_to<fvec>::from(integrator.temporalFreqVec());
     fvec spatialFreqVec = conv_to<fvec>::from(FFTHelper::fftShift(integrator.spatialFreqVec()));
 
 
