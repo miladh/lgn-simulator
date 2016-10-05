@@ -11,8 +11,69 @@
 using namespace lgnSimulator;
 
 //Decaying exponential-----------------------------------------
+TEST_CASE("[exp_test_0]") {
+    double tau = 0.25;
+    double delay = 0.0;
+    DecayingExponential decay(tau,delay);
+
+    REQUIRE(decay.temporal(-10.24) == Approx( 0.000000000000000).epsilon(1e-14));
+    REQUIRE(decay.temporal(0.0) == Approx(4.00000000000000).epsilon(1e-14));
+    REQUIRE(decay.temporal(1.1) == Approx( 0.049109359612273744).epsilon(1e-14));
+    REQUIRE(decay.temporal(1.8) == Approx( 0.0029863432335067168).epsilon(1e-14));
+    REQUIRE(decay.temporal(2.3) == Approx( 0.00040415760734837367).epsilon(1e-14));
+    REQUIRE(decay.temporal(100.4) == Approx( 0.000000000000000).epsilon(1e-14));
+
+    REQUIRE(real(decay.fourierTransform(-0.0)) == Approx( 1.000000000000000).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(-0.0)) == Approx( 0.000000000000000).epsilon(1e-14));
+
+    REQUIRE(real(decay.fourierTransform(-157.079632679)) == Approx(0.00064803535317723543).epsilon(1e-12));
+    REQUIRE(imag(decay.fourierTransform(-157.079632679)) == Approx(-0.025448288810021549).epsilon(1e-12));
+
+    REQUIRE(real(decay.fourierTransform(314.159265359)) == Approx(0.00016208761717295794).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(314.159265359)) == Approx(0.012730331683711824).epsilon(1e-14));
+
+    REQUIRE(real(decay.fourierTransform(0.0383495196971)) == Approx(0.99990809059430297).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(0.0383495196971)) == Approx(0.009586498753883968).epsilon(1e-14));
+
+    REQUIRE(real(decay.fourierTransform(1005.18693069)) == Approx(1.5835049995458247e-05).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(1005.18693069)) == Approx(0.0039792963255643439).epsilon(1e-14));
+
+}
 
 
+TEST_CASE("[exp_test_1]") {
+    double tau = 2.3;
+    double delay = 1.0056;
+    DecayingExponential decay(tau,delay);
+
+    REQUIRE(decay.temporal(-10.24) == Approx(0.00000000000000).epsilon(1e-14));
+    REQUIRE(decay.temporal(0.0) == Approx(0.00000000000000).epsilon(1e-14));
+    REQUIRE(decay.temporal(1.1) == Approx(0.41729886919726).epsilon(1e-14));
+    REQUIRE(decay.temporal(1.8) == Approx(0.30780142520792).epsilon(1e-14));
+    REQUIRE(decay.temporal(2.3) == Approx(0.24766166169630).epsilon(1e-14));
+    REQUIRE(decay.temporal(100.4) == Approx(0.00000000000000).epsilon(1e-14));
+
+
+    REQUIRE(real(decay.fourierTransform(0.0)) == Approx(1.00000000000000).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(0.0)) == Approx(0.00000000000000).epsilon(1e-14));
+
+    REQUIRE(real(decay.fourierTransform(-157.079632679)) == Approx(-0.00212781306943).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(-157.079632679)) == Approx(-0.00177022314509).epsilon(1e-14));
+
+    REQUIRE(real(decay.fourierTransform(314.159265359)) == Approx(-0.00135979865416).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(314.159265359)) == Approx(-0.00025744559813).epsilon(1e-14));
+
+    REQUIRE(real(decay.fourierTransform(0.0383495196971)) == Approx(0.98816793945543).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(0.0383495196971)) == Approx(0.12571498037097).epsilon(1e-14));
+
+    REQUIRE(real(decay.fourierTransform(1005.18693069)) == Approx(0.00030336119799).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(1005.18693069)) == Approx(0.00030832123791).epsilon(1e-14));
+
+    REQUIRE(real(decay.fourierTransform(2.45)) == Approx(-0.13167644011040).epsilon(1e-14));
+    REQUIRE(imag(decay.fourierTransform(2.45)) == Approx(-0.11485930412104).epsilon(1e-14));
+
+
+}
 
 //DifferenceOfExponential--------------------------------------
 TEST_CASE("[doe_test_0]") {
