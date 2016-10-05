@@ -100,12 +100,12 @@ double MCintegrationTest::computeIntegral(double *xl, double *xu, void *params)
     T = gsl_rng_default;
     r = gsl_rng_alloc (T);
 
-    gsl_monte_vegas_state *s = gsl_monte_vegas_alloc (2);
-    gsl_monte_vegas_integrate (&G, xl, xu, 2, m_preCalls, r, s, &res, &err);
+    gsl_monte_vegas_state *s = gsl_monte_vegas_alloc (m_ndim);
+    gsl_monte_vegas_integrate (&G, xl, xu, m_ndim, m_preCalls, r, s, &res, &err);
     //    display_results ("vegas warm-up", res, err);
     do
     {
-        gsl_monte_vegas_integrate (&G, xl, xu, 2, m_calls/5, r, s, &res, &err);
+        gsl_monte_vegas_integrate (&G, xl, xu, m_ndim, m_calls/5, r, s, &res, &err);
         //        printf ("result = % .6f sigma = % .6f "
         //                "chisq/dof = %.1f\n", res, err,
         //                gsl_monte_vegas_chisq (s));

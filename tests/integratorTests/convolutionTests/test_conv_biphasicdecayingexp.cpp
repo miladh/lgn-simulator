@@ -124,10 +124,10 @@ TEST_CASE("runDogdecayingExpConvolutionTest_test_1") {
     double phaseDuration = 42.5;
     double dampingFactor = 0.38;
     double a = 0.25;
-    double tau_d = 22;
+    double tau_d = 10;
     int delay=10;
 
-    runDogdecayingExpConvolutionTest(8, 1.0, 5, 0.05,
+    runDogdecayingExpConvolutionTest(7, 2.0, 5, 0.05,
                                      phaseDuration,dampingFactor,
                                      a, tau_d,  delay,
                                      vec2{0.0, 0.0});

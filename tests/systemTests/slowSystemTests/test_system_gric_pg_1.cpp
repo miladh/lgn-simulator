@@ -1,12 +1,13 @@
 #include "test_system_gric_pg_1.h"
 
 test_system_gric_pg_1::test_system_gric_pg_1(string testLabel,
-                                                             string filename,
-                                                             double preCalls,
-                                                             double calls,
-                                                             double epsilon)
+                                             string filename,
+                                             double preCalls,
+                                             double calls,
+                                             double epsilon)
     : MCintegrationTest(testLabel, filename, preCalls, calls, epsilon)
 {
+    m_ndim=2;
 }
 
 

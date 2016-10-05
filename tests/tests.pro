@@ -41,14 +41,16 @@ SOURCES += main.cpp \
     systemTests/slowSystemTests/test_system_gric_pg_1.cpp \
     systemTests/slowSystemTests/test_system_gric_pg_2.cpp \
     systemTests/slowSystemTests/test_system_gric_irf_1.cpp \
-    integratorTests/convolutionTests/test_conv_biphasicdecayingexp.cpp
+    integratorTests/convolutionTests/test_conv_biphasicdecayingexp.cpp \
+    systemTests/slowSystemTests/test_system_gric_irf_2.cpp
 
 
 HEADERS += \
     systemTests/slowSystemTests/mcintegrationtest.h \
     systemTests/slowSystemTests/test_system_gric_pg_1.h \
     systemTests/slowSystemTests/test_system_gric_pg_2.h \
-    systemTests/slowSystemTests/test_system_gric_irf_1.h
+    systemTests/slowSystemTests/test_system_gric_irf_1.h \
+    systemTests/slowSystemTests/test_system_gric_irf_2.h
 
 
 QMAKE_POST_LINK = cd $$PWD && mkdir -p $$OUT_PWD/test_outputs $$escape_expand(\n\t) cd $$PWD && sha512sum systemTests/slowSystemTests/*.cpp > $$OUT_PWD/test_outputs/test_file_hash

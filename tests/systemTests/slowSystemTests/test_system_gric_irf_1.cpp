@@ -7,7 +7,7 @@ test_system_gric_irf_1::test_system_gric_irf_1(string testLabel,
                                                double epsilon)
     : MCintegrationTest(testLabel, filename, preCalls, calls, epsilon)
 {
-
+    m_ndim=2;
 }
 
 
@@ -130,7 +130,7 @@ void test_system_gric_irf_1::runTest()
                                           << "  w_ri=" << w_ri
                                           << "  w_rc=" << w_rc
                                           << "  w_ic=" << w_ic);
-                                        CHECK(ftIntegrator == Approx(m_results[q]).epsilon(m_epsilon));
+                                CHECK(ftIntegrator == Approx(m_results[q]).epsilon(m_epsilon));
                                 q+=1;
                             }
 

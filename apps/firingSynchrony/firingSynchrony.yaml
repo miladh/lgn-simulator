@@ -2,9 +2,9 @@ description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 5
+    ns: 9
     nt: 8
-    dt: &dt_id 4.
+    dt: &dt_id 2.
     ds: &ds_id 0.05
 
 #------------Stimulus settings-------------------#
@@ -38,8 +38,8 @@ ganglion:
     R0 : 0
     storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
     w: 1.0
     Wg:
     # DOG
@@ -47,22 +47,18 @@ ganglion:
         b: 1.26
         c: 0.85
     Wt:
-    # Biphasice
+    # Biphasic
         delay: 0
         phaseDuration: 42.5     #ms
         weight: 0.38
 
-    # DoE
-        delay: 0
-        cenLatency: 10     #ms
-        surLatency: 22     #ms
 
 relay:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
 
     #Kernels
     Krg:

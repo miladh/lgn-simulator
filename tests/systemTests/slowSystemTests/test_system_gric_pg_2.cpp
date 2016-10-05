@@ -7,6 +7,7 @@ test_system_gric_pg_2::test_system_gric_pg_2(string testLabel,
                                              double epsilon)
     : MCintegrationTest(testLabel, filename, preCalls, calls, epsilon)
 {
+    m_ndim=2;
 }
 
 

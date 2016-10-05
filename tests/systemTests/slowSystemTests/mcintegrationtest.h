@@ -43,6 +43,7 @@ public:
 protected:
     string m_outputFilename;
     string m_hashValue;
+    int m_ndim=0;
 
     double m_computed = 0.0;
     double m_peak = 0.0;
@@ -53,6 +54,8 @@ protected:
 
     vector<double> m_results;
     double m_error = 0.0;
+
+
 
 
 };
