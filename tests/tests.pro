@@ -23,7 +23,6 @@ SOURCES += main.cpp \
     fftHelperTests/test_helper_ifftshift3d.cpp \
     integratorTests/convolutionTests/test_conv_gaussdelta.cpp \
     integratorTests/convolutionTests/test_conv_gaussconstant.cpp \
-    integratorTests/convolutionTests/test_conv_decayingexpdelta.cpp \
     integratorTests/convolutionTests/test_conv_deltadelta.cpp \
     integratorTests/convolutionTests/test_conv_biphasicdelta.cpp \
     integratorTests/convolutionTests/test_conv_biphasicdoe.cpp \
@@ -41,7 +40,8 @@ SOURCES += main.cpp \
     systemTests/slowSystemTests/mcintegrationtest.cpp \
     systemTests/slowSystemTests/test_system_gric_pg_1.cpp \
     systemTests/slowSystemTests/test_system_gric_pg_2.cpp \
-    systemTests/slowSystemTests/test_system_gric_irf_1.cpp
+    systemTests/slowSystemTests/test_system_gric_irf_1.cpp \
+    integratorTests/convolutionTests/test_conv_biphasicdecayingexp.cpp
 
 
 HEADERS += \

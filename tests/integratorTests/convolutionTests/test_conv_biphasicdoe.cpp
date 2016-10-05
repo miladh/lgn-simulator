@@ -1,7 +1,7 @@
 /**********************************************************************
  *  Test: convolution theorem applied on F = W * K = ifft(fft(W)fft(K)),
  *        where W = delta(r) * doe(t) and
- *        K = delta(r) * dampedOscillator(t)
+ *        K = delta(r) * biphasic(t)
  *
  *  Analytic source: closed-form experssion (Sympy)
  *
