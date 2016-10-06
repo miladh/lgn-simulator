@@ -38,8 +38,8 @@ ganglion:
     R0 : 0
     storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponse: false
+    storeImpulseResponseFT: false
     w: 1.0
     Wg:
     # DOG
@@ -58,7 +58,7 @@ relay:
     storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: true
-    storeImpulseResponseFT: true
+    storeImpulseResponseFT: false
 
     #Kernels
     Krg:
@@ -67,32 +67,32 @@ relay:
         # Gaussian
             a: 0.1
 
-
         temporal:
         # DecayingExponential
-            delay: 4
-            tau: 10         #ms
+            delay: 4     #ms
+            tau: 10
+
     Kri:
         w: -0.5
         spatial:
         #Gauss
             a: 0.2
-        temporal:
 
+        temporal:
         # DecayingExponential
-            delay: 2.
-            tau: 15         #ms
+            delay: 2.     #ms
+            tau: 10
 
     Krc:
-        w: 0.8
+        w: 0.5
         spatial:
         #Gauss
             a: 0.1
 
         temporal:
         # DecayingExponential
-            delay: 20.
-            tau: 39     #ms
+            delay: 20.    #ms
+            tau: 20
 
 
 
@@ -113,11 +113,11 @@ interneuron:
         temporal:
         # DecayingExponential
             delay: 4
-            tau: 15     #ms
+            tau: 10     #ms
 
 
     Kic:
-        w: 4.0
+        w: 2.0
         spatial:
         #Gauss
             a: 0.9
@@ -125,7 +125,7 @@ interneuron:
         temporal:
         # DecayingExponential
             delay: 20.
-            tau: 39     #ms
+            tau: 20     #ms
 
 cortical:
     R0 : 0.

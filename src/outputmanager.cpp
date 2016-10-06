@@ -246,10 +246,11 @@ void OutputManager::writeResponse(const Neuron& neuron)
 
 }
 
-void OutputManager::writeImpulseResponse(const Neuron& neuron)
+void OutputManager::writeImpulseResponse(const Neuron& neuron,
+                                         span rowSpan, span colSpan, span sliceSpan)
 {
-
     fcube impulseResponse = conv_to<fcube>::from(neuron.impulseResponse());
+    impulseResponse = impulseResponse.subcube(rowSpan, colSpan, sliceSpan);
 
     //write impulse response:
     Group group = createGroupIfNotExist(neuron.type());

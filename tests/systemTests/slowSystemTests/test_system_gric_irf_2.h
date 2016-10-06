@@ -14,6 +14,9 @@ public:
 public:
     virtual void runTest() override;
     virtual double integrand(double *k, size_t dim, void *params) override;
+
+private:
+    double m_t=0;
 };
 
 #endif // TEST_SYSTEM_GRIC_IRF_2_H

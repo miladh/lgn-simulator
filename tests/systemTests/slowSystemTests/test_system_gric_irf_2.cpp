@@ -29,16 +29,16 @@ void test_system_gric_irf_2::runTest()
     double dampingFactor = 0.38;
 
     double tau_rg=10;
-    double tau_ri=10;
-    double tau_rc=10;
-    double tau_ig=10;
-    double tau_ic=10;
+    double tau_ri=15;
+    double tau_rc=39;
+    double tau_ig=15;
+    double tau_ic=39;
 
-    double delay_rg=0;
-    double delay_ri=0;
-    double delay_rc=0;
-    double delay_ig=0;
-    double delay_ic=0;
+    double delay_rg=4;
+    double delay_ri=2;
+    double delay_rc=20;
+    double delay_ig=4;
+    double delay_ic=20;
 
 
 
@@ -73,75 +73,76 @@ void test_system_gric_irf_2::runTest()
     //stimulus
     CircleMaskGrating stim(&integrator,0, 0, 0, 0, 0, 0);
 
-    int q = 0;
+    for(int i=0; i < nt-1; i++){
+        m_t = integrator.timeVec()[int(pow(2,i))];
+
+        //relayCell cell
+        RelayCell relay(&integrator);
+
+        SpatialGaussian Krg_s(a_rg);
+        DecayingExponential Krg_t(tau_rg, delay_rg);
+        SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
+
+        SpatialGaussian Kri_s(a_ri);
+        DecayingExponential Kri_t(tau_ri, delay_ri);
+        SeparableKernel Kri(w_ri, &Kri_s, &Kri_t);
+
+        SpatialGaussian Krc_s(a_rc);
+        DecayingExponential Krc_t(tau_rc, delay_rc);
+        SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
 
 
-    //relayCell cell
-    RelayCell relay(&integrator);
+        //interneuron cell
+        Interneuron interneuron(&integrator);
 
-    SpatialGaussian Krg_s(a_rg);
-    DecayingExponential Krg_t(tau_rg, delay_rg);
-    SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
+        SpatialGaussian Kig_s(a_ig);
+        DecayingExponential Kig_t(tau_ig, delay_ig);
+        SeparableKernel Kig(w_ig, &Kig_s, &Kig_t);
 
-    SpatialGaussian Kri_s(a_ri);
-    DecayingExponential Kri_t(tau_ri, delay_ri);
-    SeparableKernel Kri(w_ri, &Kri_s, &Kri_t);
+        SpatialGaussian Kic_s(a_ic);
+        DecayingExponential Kic_t(tau_ic, delay_ic);
+        SeparableKernel Kic(w_ic, &Kic_s, &Kic_t);
 
-    SpatialGaussian Krc_s(a_rc);
-    DecayingExponential Krc_t(tau_rc, delay_rc);
-    SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
+        //cortical cell
+        CorticalCell cortical(&integrator);
 
-
-    //interneuron cell
-    Interneuron interneuron(&integrator);
-
-    SpatialGaussian Kig_s(a_ig);
-    DecayingExponential Kig_t(tau_ig, delay_ig);
-    SeparableKernel Kig(w_ig, &Kig_s, &Kig_t);
-
-    SpatialGaussian Kic_s(a_ic);
-    DecayingExponential Kic_t(tau_ic, delay_ic);
-    SeparableKernel Kic(w_ic, &Kic_s, &Kic_t);
-
-    //cortical cell
-    CorticalCell cortical(&integrator);
-
-    SpatialDelta Kcr_s(ds,{0,0});
-    TemporalDelta Kcr_t(0, dt);
-    SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
+        SpatialDelta Kcr_s(ds,{0,0});
+        TemporalDelta Kcr_t(0, dt);
+        SeparableKernel Kcr(w_cr, &Kcr_s, &Kcr_t);
 
 
-    //Connect
-    relay.addGanglionCell(&ganglion, Krg);
-    relay.addInterNeuron(&interneuron, Kri);
-    relay.addCorticalCell(&cortical, Krc);
-    interneuron.addGanglionCell(&ganglion, Kig);
-    interneuron.addCorticalCell(&cortical, Kic);
-    cortical.addRelayCell(&relay, Kcr);
+        //Connect
+        relay.addGanglionCell(&ganglion, Krg);
+        relay.addInterNeuron(&interneuron, Kri);
+        relay.addCorticalCell(&cortical, Krc);
+        interneuron.addGanglionCell(&ganglion, Kig);
+        interneuron.addCorticalCell(&cortical, Kic);
+        cortical.addRelayCell(&relay, Kcr);
 
 
-    if(m_computeMC){
-        struct Param params = {this, stim, W, Kig, Kic, Krg, Kri, Krc, Kcr, m_peak};
-        m_results.push_back(computeIntegral(xl, xu, &params));
+        if(m_computeMC){
+            struct Param params = {this, stim, W, Kig, Kic, Krg, Kri, Krc, Kcr, m_peak};
+            m_results.push_back(computeIntegral(xl, xu, &params));
+        }
+
+        relay.computeImpulseResponse();
+        double ftIntegrator = relay.impulseResponse()
+                (integrator.nPointsSpatial()/2,
+                 integrator.nPointsSpatial()/2,
+                 int(pow(2,i)));
+
+
+
+        INFO(     "a_ri=" <<  a_ri
+                  << "  a_rc=" << a_rc
+                  << "  a_ic=" << a_ic
+                  << "  w_ig=" << w_ig
+                  << "  w_ri=" << w_ri
+                  << "  w_rc=" << w_rc
+                  << "  w_ic=" << w_ic
+                  << "  t=" << m_t);
+        CHECK(ftIntegrator == Approx(m_results[i]).epsilon(m_epsilon));
     }
-
-    relay.computeImpulseResponse();
-    double ftIntegrator = relay.impulseResponse()
-            (integrator.nPointsSpatial()/2,
-             integrator.nPointsSpatial()/2,
-             0);
-
-
-
-    INFO(     "a_ri=" <<  a_ri
-              << "  a_rc=" << a_rc
-              << "  a_ic=" << a_ic
-              << "  w_ig=" << w_ig
-              << "  w_ri=" << w_ri
-              << "  w_rc=" << w_rc
-              << "  w_ic=" << w_ic);
-    CHECK(ftIntegrator == Approx(m_results[q]).epsilon(m_epsilon));
-    q+=1;
     writeOutputFile();
 }
 
@@ -161,7 +162,8 @@ double test_system_gric_irf_2::integrand(double *k, size_t dim, void *params)
                * r.Kcr.fourierTransform({kx, ky}, w)
                * r.Kri.fourierTransform({kx, ky}, w)
                - r.Krc.fourierTransform({kx, ky}, w)
-               * r.Kcr.fourierTransform({kx, ky}, w));
+               * r.Kcr.fourierTransform({kx, ky}, w))
+            * exp(-core::i*m_t*w);
 
     cx_double res =  Wr /(8*core::pi*core::pi*core::pi);
     return real(res);

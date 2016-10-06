@@ -32,7 +32,10 @@ public:
     void writeResponse(const Neuron &neuron);
     void writeResponseFourierTransform(const Neuron &neuron);
 
-    void writeImpulseResponse(const Neuron &neuron);
+    void writeImpulseResponse(const Neuron &neuron,
+                              span rowSpan=span::all,
+                              span colSpan=span::all,
+                              span sliceSpan=span::all);
     void writeImpulseResponseFourierTransform(const Neuron &neuron);
 
 

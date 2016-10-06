@@ -91,7 +91,7 @@ TEST_CASE("system_gric_irf_2 [slow]"){
     string sourceFilename = "test_system_gric_irf_2";
     test_system_gric_irf_2 test(testLabel,
                                        sourceFilename,
-                                       1e4, 5e6, 1e-4);
+                                       1e4, 5e6, 1e-3);
 
     test.runTest();
 }

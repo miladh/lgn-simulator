@@ -66,21 +66,18 @@ with open(config_file, 'r') as stream:
 w_ic = [0, 0.8, 2.4, 4.0]
 w_rc = [0, 0.18, 0.54, 0.9]
 spatial_freqs = range(0, 60)
-#run simulator--------------------------------------------------------------------
 
+#run simulator--------------------------------------------------------------------
 counter= 0
-modify_diameter(1.69)
 for wi, wr in zip(w_ic,w_rc):
     modify_wic(wi)
     modify_wrc(wr)
-    for Kd in spatial_freqs:
-        modify_temp_freq(Kd)
 ##########################################################
-        with open(config_file, 'w') as stream:
-            yaml.dump(config_data, stream)
+    with open(config_file, 'w') as stream:
+        yaml.dump(config_data, stream)
 
-        run_id = '{0:04}'.format(counter)
-        st.run_simulator(config_file, record_label, run_id)
-        counter+=1
+    run_id = '{0:04}'.format(counter)
+    st.run_simulator(config_file, record_label, run_id)
+    counter+=1
 os.remove(config_file)
 ##########################################################
