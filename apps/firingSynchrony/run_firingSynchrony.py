@@ -30,6 +30,13 @@ def modify_wrc(w):
     config_data["relay"]["Krc"]["w"] = float(w)
 
 
+
+
+def modify_wcr(w):
+    config_data["cortical"]["Kcr"]["w"] = float(w)
+
+
+
 def modify_aic(a):
     config_data["interneuron"]["Kic"]["spatial"]["a"] = float(a)
 
