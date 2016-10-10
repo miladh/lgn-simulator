@@ -50,7 +50,11 @@ def modify_ari(a):
 def modify_wri(w):
     config_data["relay"]["Kri"]["w"] = float(w)
 
+def modify_tau_ri(t):
+    config_data["relay"]["Kri"]["temporal"]["tau"] = float(t)
 
+def modify_delay_ri(t):
+    config_data["relay"]["Kri"]["temporal"]["delay"] = float(t)
 
 #read config file--------------------------------------------------------------
 options = sys.argv[1:]
@@ -67,17 +71,25 @@ w_ic = [0, 0.8, 2.4, 4.0]
 w_rc = [0, 0.18, 0.54, 0.9]
 spatial_freqs = range(0, 60)
 
+tau_ri = [1, 5, 10, 20, 50]
+delay_ri = [2, 4, 8, 16, 32]
+
+modify_wic(0)
+modify_wrc(0)
+modify_wcr(0)
+
 #run simulator--------------------------------------------------------------------
 counter= 0
-for wi, wr in zip(w_ic,w_rc):
-    modify_wic(wi)
-    modify_wrc(wr)
+for tau in tau_ri:
+    modify_tau_ri(tau)
+    for delay in modify_delay_ri:
+        modify_delay_ri(modify_delay_ri)
 ##########################################################
-    with open(config_file, 'w') as stream:
-        yaml.dump(config_data, stream)
+        with open(config_file, 'w') as stream:
+            yaml.dump(config_data, stream)
 
-    run_id = '{0:04}'.format(counter)
-    st.run_simulator(config_file, record_label, run_id)
-    counter+=1
+        run_id = '{0:04}'.format(counter)
+        st.run_simulator(config_file, record_label, run_id)
+        counter+=1
 os.remove(config_file)
 ##########################################################

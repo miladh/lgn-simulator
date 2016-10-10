@@ -11,7 +11,7 @@ using namespace lgnSimulator;
 int main(int argc, char* argv[])
 {
 
-    cout << "=====LGN Simulator Model: Firing Synchrony =====" << endl;
+    cout << "===== LGN Simulator Model: Firing Synchrony =====" << endl;
     clock_t t;
     t = clock();
 
@@ -152,7 +152,10 @@ int main(int argc, char* argv[])
     }
     if( cfg["relay"]["storeImpulseResponse"].as<bool>()){
         relay.computeImpulseResponse();
-        io.writeImpulseResponse(relay);
+        io.writeImpulseResponse(relay,
+                          span(integrator.nPointsSpatial()/2-1, integrator.nPointsSpatial()/2+1),
+                          span(integrator.nPointsSpatial()/2-1, integrator.nPointsSpatial()/2+1),
+                          span::all);
         relay.clearImpulseResponse();
     }
 

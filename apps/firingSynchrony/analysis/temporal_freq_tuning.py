@@ -27,9 +27,9 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, save_fig=True):
     ax.set_ylabel("Response(spikes/s)", fontsize=20)
     ax.set_xlabel("Temporal frequency $\omega_\mathrm{pg} (\mathrm{Hz})$", fontsize=20)
     ax.legend()
-    ax.set_xscale('log')
-    ax.set_xticks([1, 2, 5, 10, 15, 30])
-    ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
+    #ax.set_xscale('log')
+    #ax.set_xticks([1, 2, 5, 10, 15, 30])
+    #ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
     ax.set_xlim([0, 60])
 
 

@@ -391,11 +391,11 @@ if __name__ == "__main__":
     #         "spatial_vec" : exp.integrator.s_points
     #         }
 
-    Wg = {"type" : "Ganglion",
-                "value" : exp.ganglion.irf(),
-                "t_points" : exp.integrator.t_points,
-                "spatial_vec" : exp.integrator.s_points
-                }
+    # Wg = {"type" : "Ganglion",
+    #             "value" : exp.ganglion.irf(),
+    #             "t_points" : exp.integrator.t_points,
+    #             "spatial_vec" : exp.integrator.s_points
+    #             }
     Wr = {"type" : "Relay",
              "value" : exp.relay.irf(),
              "t_points" : exp.integrator.t_points,
@@ -479,11 +479,13 @@ if __name__ == "__main__":
 
 
     # data = [S, Rg_ft, Rr_ft, Ri_ft, Rc_ft]
-    line3dPlotsOfImpulseResponses([Wg, Wr], num_skip = 30, idx=Ns/2, idy=Ns/2,y_line3d=False,)
+    #line3dPlotsOfImpulseResponses([Wg, Wr], num_skip = 30, idx=Ns/2, idy=Ns/2,y_line3d=False,)
     # imshowPlotsOfImpulseResponses([Wg, Wr, Wi, Wc],  idx=Ns/2, idy=Ns/2,y_imshow=False,)
 
     # animate_imshow_plots([Wr_ft], exp.integrator.dt,
     # colorbar = True, remove_axes = False,
     # save_animation = False, animation_name = "newTest")
-
+    plt.plot( exp.relay.irf()[:,0,0])
+    plt.plot( exp.relay.irf()[:,1,1])
+    plt.plot( exp.relay.irf()[:,2,2])
     plt.show()

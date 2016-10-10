@@ -79,22 +79,20 @@ def xy_plot(sim, cell, x_lim,  times, num_levels=[5,5], norm_id=0, save_fig=True
     plt.show()
 
 #------------------------------------------------------------------------------------------------------------
-def xt_plot(sim, cell_types, x_lim, t_lim,  levels, save_fig=True):
-    Ns=sim.integrator.Ns
-    Nt=sim.integrator.Nt
-    s_points = sim.integrator.s_points
-    t_points = sim.integrator.t_points
+def xt_plot(sims, cell_type, x_lim, t_lim,  levels, save_fig=True):
+    Ns=sims[0].integrator.Ns
+    Nt=sims[0].integrator.Nt
+    s_points = sims[0].integrator.s_points
+    t_points = sims[0].integrator.t_points
     extent = [s_points.min(), s_points.max(), t_points.min(), t_points.max()]
 
-    fig, axarr = plt.subplots(1, len(cell_types), figsize=(4*len(cell_types), 4), sharey="row")
+    fig, axarr = plt.subplots(1, len(sims), figsize=(4*len(sims), 5), sharey="row")
 
-    if len(cell_types)==1:
-        axarr= [axarr]
     set_legend()
     set_font()
     cmap="RdBu_r"
-    cell_names = ["Retinal ganglion cell", "Relay cell", "Interneuron", "Cortical cell"]
 
+    if len(sims)==1: axarr=[axarr]
     for ax in axarr:
         spines_edge_color(ax)
         remove_ticks(ax)
@@ -103,22 +101,40 @@ def xt_plot(sim, cell_types, x_lim, t_lim,  levels, save_fig=True):
         "right": "none", "left": "none"})
 
 
-    for i, cell in enumerate(cell_types):
+    ################################################################################
+    from mpl_toolkits.axes_grid1 import make_axes_locatable
+
+    for ax in axarr:
+        divider = make_axes_locatable(ax)
+        cax = divider.append_axes("right", size="5%", pad=0.05)
+
+    for i in range(len(fig.axes), len(axarr),-1):
+        fig.delaxes(fig.axes[i-1])
+
+    divider = make_axes_locatable(axarr[-1])
+    cax = divider.append_axes("right", size="5%", pad=0.05)
+    ###############################################################################
+
+
+    for i, sim in enumerate(sims):
         ax = axarr[i]
-        irf = sim.get_attribute(cell).irf()[:,Ns/2,:]
+        irf = sim.get_attribute(cell_type).irf()[:,Ns/2,:]
         X, Y = np.mgrid[ t_points.min():t_points.max():complex(0, Nt), s_points.min():s_points.max():complex(0, Ns)]
-        im =ax.pcolormesh(Y, X, irf, norm=MidpointNormalize(midpoint=0.), cmap=cmap)
+        im =ax.pcolormesh(Y, X, irf, norm=MidpointNormalize(midpoint=0.), cmap=cmap,                        vmin=-0.2, vmax=0.4)
         ax.contour( irf, extent= extent,
                     colors='k',linewidths=0.4,
                     aspect="auto",
                     levels = levels)
-        plt.colorbar(im, ax = ax, extend='both')
+
         ax.set_xlim([-x_lim, x_lim])
         ax.set_ylim([0, t_lim])
         ax.set_xlabel("$x(^\circ)$", fontsize=18)
-        ax.set_title(cell_names[i],y=1, fontsize=18)
+
+        label = r"$w_{\mathrm{RC}}=$"+'${0:.2f}$'.format(sim.get_attribute("relay.Krc.w"))+"\n"+r"$ w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(sim.get_attribute("interneuron.Kic.w"))
+        ax.set_title(label,y=1, fontsize=20)
 
 
+    plt.colorbar(im, cax = cax, ax = axarr[-1])
     axarr[0].set_ylabel(r"$\tau\;(\mathrm{ms})$", fontsize=18)
     plt.tight_layout()
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
