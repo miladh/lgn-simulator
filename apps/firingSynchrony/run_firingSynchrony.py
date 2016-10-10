@@ -78,8 +78,8 @@ w_ic = [0, 0.8, 2.4, 4.0]
 w_rc = [0, 0.18, 0.54, 0.9]
 spatial_freqs = range(0, 60)
 
-tau_ri = [1, 5, 10, 20, 50]
-delay_ri = [2, 4, 8, 16, 32]
+tau_ri = linspace(1,50,15)
+delay_ri = linspace(1,32,16)
 
 modify_wic(0)
 modify_wrc(0)

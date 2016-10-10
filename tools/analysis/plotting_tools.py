@@ -485,7 +485,9 @@ if __name__ == "__main__":
     # animate_imshow_plots([Wr_ft], exp.integrator.dt,
     # colorbar = True, remove_axes = False,
     # save_animation = False, animation_name = "newTest")
-    plt.plot( exp.relay.irf()[:,0,0])
+    #plt.plot( exp.relay.irf()[:,0,0])
     plt.plot( exp.relay.irf()[:,1,1])
-    plt.plot( exp.relay.irf()[:,2,2])
+    print np.argmax(exp.relay.irf()[:,1,1])
+    print np.argmin(exp.relay.irf()[:,1,1])
+    #plt.plot( exp.relay.irf()[:,2,2])
     plt.show()
