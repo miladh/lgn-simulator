@@ -29,6 +29,12 @@ def modify_arc(a):
 def modify_wrc(w):
     config_data["relay"]["Krc"]["w"] = float(w)
 
+def modify_tau_rc(t):
+    config_data["relay"]["Krc"]["temporal"]["tau"] = float(t)
+
+def modify_delay_rc(t):
+    config_data["relay"]["Krc"]["temporal"]["delay"] = float(t)
+
 
 
 
@@ -82,15 +88,17 @@ tau_ri = np.linspace(1,50,15)
 delay_ri = np.linspace(2,32,16)
 
 modify_wic(0)
-modify_wrc(0)
-modify_wcr(0)
+modify_wrc(0.5)
+modify_wcr(1)
+modify_wri(0)
+modify_wig(0)
 
 #run simulator--------------------------------------------------------------------
 counter= 0
 for tau in tau_ri:
-    modify_tau_ri(tau)
+    modify_tau_rc(tau)
     for delay in delay_ri:
-        modify_delay_ri(delay)
+        modify_delay_rc(delay)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
