@@ -89,7 +89,7 @@ modify_wcr(0)
 counter= 0
 for tau in tau_ri:
     modify_tau_ri(tau)
-    for delay in modify_delay_ri:
+    for delay in delay_ri:
         modify_delay_ri(delay)
 ##########################################################
         with open(config_file, 'w') as stream:
