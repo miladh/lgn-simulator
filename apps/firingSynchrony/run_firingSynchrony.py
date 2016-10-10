@@ -90,7 +90,7 @@ counter= 0
 for tau in tau_ri:
     modify_tau_ri(tau)
     for delay in modify_delay_ri:
-        modify_delay_ri(modify_delay_ri)
+        modify_delay_ri(delay)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
