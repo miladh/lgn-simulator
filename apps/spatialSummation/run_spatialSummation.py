@@ -61,15 +61,15 @@ with open(config_file, 'r') as stream:
 
 #parameters---------------------------------------------------------------------
 w_rc = np.linspace(0, 4, 6)
-diameters = np.linspace(0., 15, 250)
-
+spatial_freqs = range(0, 90)
 #run simulator--------------------------------------------------------------------
-counter= 0
 
+counter= 0
+modify_diameter(6.69)
 for wr in w_rc:
     modify_wrc(-wr)
-    for d in diameters:
-        modify_diameter(d)
+    for Kd in spatial_freqs:
+        modify_spatial_freq(Kd)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)

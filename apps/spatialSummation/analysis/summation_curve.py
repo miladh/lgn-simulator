@@ -21,25 +21,24 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
 
 
     ax = axarr[0]
-    for wi, wr in zip(attr_a[[0, 1, 3]], attr_b[[0, 1, 3]]):
-        i = where(attr_a==wi)[0][0]
-        label = r"$w_{\mathrm{RC}}=$"+'${0:.2f}$'.format(wr)+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(wi)
+    for wr in attr_a[[5,4,3]]:
+        i = where(attr_a==wr)[0][0]
+        label = r"$|w_{\mathrm{RC}}|=$"+'${0:.2f}$'.format(wr)
         ax.plot(diameter, resp[cell_type][i,:], "-", label=label)
 
     ax.set_xlabel("Diameter($^\circ$)")
     ax.set_ylabel("Response(spikes/s)")
     ax.set_title("Area-response curve",y=1.02)
     ax.set_xlim([0., 10])
+    ax.set_ylim([0, 0.3])
     ax.legend()
 
     #########################################################################################
     ax = axarr[1]
-    axy = ax.twiny()
-    for a in [axy, ax]:
-        spines_edge_color(a)
-        remove_ticks(a)
-        a.yaxis.set_tick_params(size=0)
-        a.xaxis.set_tick_params(size=0)
+    spines_edge_color(ax)
+    remove_ticks(ax)
+    ax.yaxis.set_tick_params(size=0)
+    ax.xaxis.set_tick_params(size=0)
 
     d_max = zeros(len(attr_a))
     d_min = zeros(len(attr_a))
@@ -52,37 +51,27 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     ax.plot(attr_b, d_max, "-", label="Center")
     ax.plot(attr_b, d_min, "-", label="Surround")
     ax.set_ylabel("Diameter($^\circ$)")
-    ax.set_xlabel("$w_{\mathrm{RC}}$", fontsize=20)
+    ax.set_xlabel("$|w_{\mathrm{RC}}|$", fontsize=20)
     ax.tick_params(direction='out', pad=7)
     ax.legend()
 
-    axy.plot(attr_a[:], d_max[:], "-")
-    axy.set_xlabel("$w_{\mathrm{IC}}$", labelpad=10, fontsize=20)
-    axy.tick_params(direction='out', pad=7)
     #########################################################################################
     ax = axarr[2]
-    axy = ax.twiny()
 
-    for a in [ axy, ax]:
-        spines_edge_color(a)
-        remove_ticks(a)
-        a.yaxis.set_tick_params(size=0)
-        a.xaxis.set_tick_params(size=0)
+    spines_edge_color(ax)
+    remove_ticks(ax)
+    ax.yaxis.set_tick_params(size=0)
+    ax.xaxis.set_tick_params(size=0)
 
     supp = zeros(len(attr_a))
     for i, w in enumerate(attr_a):
         supp[i] = 1 - resp[cell_type][i,-1]/resp[cell_type][i,:].max()
 
     ax.plot(attr_b[:], supp[:], "-", label="Suppression")
-    ax.set_xlabel("$w_{\mathrm{RC}}$", fontsize=20)
+    ax.set_xlabel("$|w_{\mathrm{RC}}|$", fontsize=20)
     ax.set_ylabel("Suppresion index(%)")
     ax.set_ylim([0.75, 0.95])
     ax.tick_params(direction='out', pad=7)
-
-    axy.plot(attr_a[:],supp[:], "-")
-    axy.set_xlabel("$w_{\mathrm{IC}}$", labelpad=10, fontsize=20)
-    axy.tick_params(direction='out', pad=7)
-
     #########################################################################################
     plt.tight_layout()
     fig.savefig("area_summation_fb_weights.pdf")
