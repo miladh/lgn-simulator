@@ -27,8 +27,8 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
     print "w_rc=", w_rc
     print "w_ic=", w_ic
 
-    sim_no_fb = simulation_extractor(sims, "relay.Krc.w", w_rc[-1])[0]
-    sim_with_fb = simulation_extractor(sims, "relay.Krc.w", w_rc[0])[0]
+    sim_no_fb = simulation_extractor(sims, "relay.Krc.w", w_rc[0])[0]
+    sim_with_fb = simulation_extractor(sims, "relay.Krc.w", w_rc[-1])[0]
 
 
 
@@ -36,7 +36,7 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
     data2 =  np.copy(sim_with_fb.relay.resp()[0,:-50,:])
     stim = sim_no_fb.stimulus.spatio_temporal()[0,:-50,:]
 
-    vmax = max(abs(data1.min()), abs(data1.max()))
+    vmax = max(abs(data2.min()), abs(data2.max()))
     vmin = -vmax
 
     im1=axarr[0].imshow(stim,cmap="gray", aspect="auto", interpolation="none", origin="lower")
