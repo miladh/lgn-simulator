@@ -378,29 +378,29 @@ if __name__ == "__main__":
     import Simulation as sim
     plt.close("all")
 
-    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
+    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(None, f)
 
     Ns = exp.integrator.Ns
     Nt = exp.integrator.Nt
 
-    # S = {"type" : "Stimulus",
-    #         "value" : exp.stimulus.spatio_temporal(),
-    #         "t_points" : exp.integrator.t_points,
-    #         "spatial_vec" : exp.integrator.s_points
-    #         }
+    S = {"type" : "Stimulus",
+            "value" : exp.stimulus.spatio_temporal(),
+            "t_points" : exp.integrator.t_points,
+            "spatial_vec" : exp.integrator.s_points
+            }
 
     # Wg = {"type" : "Ganglion",
     #             "value" : exp.ganglion.irf(),
     #             "t_points" : exp.integrator.t_points,
     #             "spatial_vec" : exp.integrator.s_points
     #             }
-    Wr = {"type" : "Relay",
-             "value" : exp.relay.irf(),
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-            }
+    # Wr = {"type" : "Relay",
+    #          "value" : exp.relay.irf(),
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #         }
 
     # Wi = {"type" : "Interneuron",
     #              "value" : exp.interneuron.irf(),
@@ -451,11 +451,11 @@ if __name__ == "__main__":
 #                 "spatial_vec" : exp.integrator.k_points
 #                 }
 # # Response --------------------------------------------------------------------------
-    # Rg = {"type" : "Ganglion",
-    #             "value" : exp.ganglion.resp(),
-    #             "t_points" : exp.integrator.t_points,
-    #             "spatial_vec" : exp.integrator.s_points
-    #             }
+    Rg = {"type" : "Ganglion",
+                "value" : exp.ganglion.resp(),
+                "t_points" : exp.integrator.t_points,
+                "spatial_vec" : exp.integrator.s_points
+                }
     # Rr = {"type" : "Relay",
     #          "value" : exp.relay.resp(),
     #          "t_points" : exp.integrator.t_points,
@@ -482,12 +482,14 @@ if __name__ == "__main__":
     #line3dPlotsOfImpulseResponses([Wg, Wr], num_skip = 30, idx=Ns/2, idy=Ns/2,y_line3d=False,)
     # imshowPlotsOfImpulseResponses([Wg, Wr, Wi, Wc],  idx=Ns/2, idy=Ns/2,y_imshow=False,)
 
-    # animate_imshow_plots([Wr_ft], exp.integrator.dt,
+    # animate_imshow_plots([S, Rg], exp.integrator.dt,
     # colorbar = True, remove_axes = False,
     # save_animation = False, animation_name = "newTest")
-    #plt.plot( exp.relay.irf()[:,0,0])
-    plt.plot( exp.relay.irf()[:,1,1])
-    print np.argmax(exp.relay.irf()[:,1,1])
-    print np.argmin(exp.relay.irf()[:,1,1])
+    plt.plot( exp.ganglion.resp()[:,Ns/2,Ns/2], '-ro')
+    plt.plot( exp.stimulus.spatio_temporal()[:,Ns/2,Ns/2], '-go')
+    # plt.legend()
+    # plt.plot( exp.relay.irf()[:,1,1])
+    # print np.argmax(exp.relay.irf()[:,1,1])
+    # print np.argmin(exp.relay.irf()[:,1,1])
     #plt.plot( exp.relay.irf()[:,2,2])
     plt.show()
