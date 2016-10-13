@@ -60,7 +60,7 @@ with open(config_file, 'r') as stream:
 
 
 #parameters---------------------------------------------------------------------
-w_rc = np.linspace(0, 4, 6)
+w_rc = np.linspace(0, 0.9, 6)
 spatial_freqs = range(0, 90)
 #run simulator--------------------------------------------------------------------
 
