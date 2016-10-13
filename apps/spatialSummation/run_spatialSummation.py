@@ -60,17 +60,16 @@ with open(config_file, 'r') as stream:
 
 
 #parameters---------------------------------------------------------------------
-w_rc = np.linspace(0, 4.0, 30)
-a_rc = np.linspace(0, 2, 20)
-
+w_rc = np.linspace(0, 4, 6)
+diameters = np.linspace(0., 15, 250)
 
 #run simulator--------------------------------------------------------------------
 counter= 0
 
-for w in w_rc:
-    modify_wrc(-w)
-    for a in a_rc:
-        modify_arc(a)
+for wr in w_rc:
+    modify_wrc(-wr)
+    for d in diameters:
+        modify_diameter(d)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
