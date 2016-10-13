@@ -67,7 +67,7 @@ spatial_freqs = range(0, 90)
 counter= 0
 modify_diameter(6.69)
 for wr in w_rc:
-    modify_wrc(-wr)
+    modify_wrc(wr)
 ##########################################################
     with open(config_file, 'w') as stream:
         yaml.dump(config_data, stream)
