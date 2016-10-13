@@ -68,14 +68,12 @@ counter= 0
 modify_diameter(6.69)
 for wr in w_rc:
     modify_wrc(-wr)
-    for Kd in spatial_freqs:
-        modify_spatial_freq(Kd)
 ##########################################################
-        with open(config_file, 'w') as stream:
-            yaml.dump(config_data, stream)
+    with open(config_file, 'w') as stream:
+        yaml.dump(config_data, stream)
 
-        run_id = '{0:04}'.format(counter)
-        st.run_simulator(config_file, record_label, run_id)
-        counter+=1
+    run_id = '{0:04}'.format(counter)
+    st.run_simulator(config_file, record_label, run_id)
+    counter+=1
 os.remove(config_file)
 ##########################################################

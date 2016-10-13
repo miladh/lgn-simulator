@@ -70,8 +70,11 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     ax.plot(attr_b[:], supp[:], "-", label="Suppression")
     ax.set_xlabel("$|w_{\mathrm{RC}}|$", fontsize=20)
     ax.set_ylabel("Suppresion index(%)")
-    ax.set_ylim([0.75, 0.95])
+    ax.set_ylim([0.75, 0.925])
     ax.tick_params(direction='out', pad=7)
+    ax.set_yticks(arange(0.75, 0.925, 0.025))
+    # ax.set_yticks(arange(0.75, 0.975, 0.025), minor=True)
+    # ax.grid(which='minor',color="w", linestyle="-", linewidth=1.3, zorder = 0)
     #########################################################################################
     plt.tight_layout()
     fig.savefig("area_summation_fb_weights.pdf")

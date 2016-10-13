@@ -19,9 +19,9 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
     remove_ticks(ax)
     set_grid(ax)
 
-    for wi, wr in zip(attr_a[[0, 1, 3]], attr_b[[0, 1, 3]]):
-        i = where(attr_a==wi)[0][0]
-        label = r"$w_{\mathrm{RC}}=$"+'${0:.2f}$'.format(wr)+r"$, w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(wi)
+    for wr in attr_a[[5,4,3]]:
+        i = where(attr_a==wr)[0][0]
+        label = r"$|w_{\mathrm{RC}}=$"+'${0:.2f}|$'.format(wr)
         ax.plot(freqs, resp[cell_type][i,:], "-", label=label)
 
     ax.set_ylabel("Response(spikes/s)", fontsize=20)
