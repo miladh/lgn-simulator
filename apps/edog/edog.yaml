@@ -106,7 +106,7 @@ interneuron:
     storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
-    storeImpulseResponseFT:
+    storeImpulseResponseFT: false
     #Kernels
     Kig:
         w: 1.0
