@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
     xlabel ="$a_{\mathrm{RCR}}$" #attr_b
     ylabel = "$a_{\mathrm{ICR}}$" #attr_a
-    fig_name= "spatial_irf_fb_ex_inhib"
+    fig_name=  "spatial_irf_fb_ex_inhib"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
