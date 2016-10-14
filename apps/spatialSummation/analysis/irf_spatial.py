@@ -44,27 +44,27 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[0].set_title("Center excitation",y=1.02)
     im =axarr[0].imshow(irf_max, extent = extent,
-                   vmin=0.2, vmax=1,
+                   vmin=4, vmax=1,
                    cmap=cmap, aspect="auto",
                    interpolation="none",
                    origin="lower")
-    plt.colorbar(im, ax = axarr[0])
+    plt.colorbar(im, ax = axarr[0], extend='max')
 
     axarr[1].set_title("Surround inhibition",y=1.02)
     im = axarr[1].imshow(irf_min, extent = extent,
-               vmin=-1.5, vmax=-0.0,
+               vmin=-4, vmax=0,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
-    plt.colorbar(im, ax = axarr[1])
+    plt.colorbar(im, ax = axarr[1], extend='min')
 
     axarr[2].set_title("Size",y=1.02)
     im =axarr[2].imshow(irf_size, extent = extent,
-               vmin=1.0, vmax=0.68,
+               vmin=1.0, vmax=2.0,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
-    plt.colorbar(im, ax = axarr[2])
+    plt.colorbar(im, ax = axarr[2], extend='max')
 
     axarr[0].set_ylabel(ylabel, fontsize=18)
     axarr[0].set_xlabel(xlabel, fontsize=18)
@@ -87,12 +87,12 @@ if __name__ == "__main__":
 
     #-----------------------------------------------------------------------------------
     cell_type = ["relay"]
-    attr_a_name = "interneuron.Kic.spatial.a"
-    attr_b_name = "interneuron.Kic.w"
+    attr_a_name = "relay.Krc.spatial.a"
+    attr_b_name = "relay.Krc.w"
 
-    xlabel ="$w_{\mathrm{ICR}}$" #attr_b
-    ylabel = "$a_{\mathrm{ICR}}$" #attr_a
-    fig_name= "spatial_irf_fb_inhib"
+    xlabel ="$w_{\mathrm{RCR}}$" #attr_b
+    ylabel = "$a_{\mathrm{RCR}}$" #attr_a
+    fig_name= "spatial_irf_fb_ex"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_b = attr_b[argsort(abs(attr_b))]
-    attr_b = attr_b[:]
+    attr_b = attr_b[:-1]
 
     norm_sim = simulation_extractor(sims, attr_b_name, 0)[0]
 
