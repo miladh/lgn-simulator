@@ -24,7 +24,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
         label = r"$w_{\mathrm{RCR}}=$"+'${0:.2f}$'.format(wr)+r"$, w_{\mathrm{ICR}}=$"+'${0:.1f}$'.format(wi)
         ax.plot(freqs, resp[cell_type][i,:], "-", label=label)
 
-    ax.set_ylabel("Response(spikes/s)", fontsize=20)
+    ax.set_ylabel("Response", fontsize=20)
     ax.set_xlabel("Patch-grating wave vector $k_\mathrm{pg} (1/^\circ)$", fontsize=20)
     ax.set_title("$\mathrm{Patch\;size}=$"+'${0:.2f}^\circ$'.format(diameter), fontsize=20)
     ax.legend()
