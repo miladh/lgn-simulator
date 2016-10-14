@@ -27,7 +27,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
         ax.plot(diameter, resp[cell_type][i,:], "-", label=label)
 
     ax.set_xlabel("Diameter($^\circ$)")
-    ax.set_ylabel("Response(spikes/s)")
+    ax.set_ylabel("Response")
     ax.set_title("Area-response curve",y=1.02)
     ax.set_xlim([0., 10])
     ax.legend()
