@@ -58,6 +58,7 @@ if __name__ == "__main__":
     k_points = sims[0].integrator.k_points[Ns/2:]
     rc = [Ns/2, Ns/2]
 
+
     attr_a = extract_unique_simulation_attrs(sims, attr_a_name)
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_a2, freqs, resp = resp_vs_attrA_vs_attrB(sims, attr_a_name, "stimulus.spatial_freq", rc=rc)
