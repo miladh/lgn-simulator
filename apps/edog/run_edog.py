@@ -74,11 +74,11 @@ modify_ari(0.2)
 modify_wig(1.0)
 modify_arc(0.1)
 modify_brc(0.9)
+modify_crc(2.0)
 
 
-for w, c in zip(w_rc, w_rc_c):
+for w in w_rc:
     modify_wrc(w)
-    modify_crc(c)
     for d in diameters:
         modify_diameter(d)
 ##########################################################
