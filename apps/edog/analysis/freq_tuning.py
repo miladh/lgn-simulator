@@ -52,7 +52,7 @@ if __name__ == "__main__":
     cell_types = ["relay"]
     attr_a_name = "relay.Krc.w"
     attr_b_name = "relay.Krc.w"
-    fig_name= "freq_tuning_fb_large_d"
+    fig_name= "freq_tuning_fb_small_d"
 
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
