@@ -56,9 +56,9 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: false
 
     #Kernels
@@ -106,8 +106,7 @@ interneuron:
     storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
-    storeImpulseResponseFT: false
-
+    storeImpulseResponseFT:
     #Kernels
     Kig:
         w: 1.0
