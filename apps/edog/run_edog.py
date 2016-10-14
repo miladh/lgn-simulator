@@ -75,7 +75,7 @@ modify_wig(1.0)
 modify_arc(0.1)
 modify_brc(0.9)
 modify_crc(2.0)
-modify_diameter(6.69)
+modify_diameter(1.69)
 
 for w in w_rc:
     modify_wrc(w)
