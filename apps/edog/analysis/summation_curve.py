@@ -77,9 +77,9 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     # ax.grid(which='minor',color="w", linestyle="-", linewidth=1.3, zorder = 0)
     #########################################################################################
     plt.tight_layout()
-    fig.savefig("area_summation_fb_weights.pdf")
-    # if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
-    # if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
+    # fig.savefig("area_summation_fb_weights.pdf")
+    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
+    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
     plt.show()
 
 
