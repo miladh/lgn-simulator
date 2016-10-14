@@ -19,18 +19,15 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
     remove_ticks(ax)
     set_grid(ax)
 
-    for wr in attr_a[[5,4,3]]:
-        i = where(attr_a==wr)[0][0]
-        label = r"$|w_{\mathrm{RC}}=$"+'${0:.2f}|$'.format(wr)
+    for wi, wr in zip(attr_a[[0, 1, 3]], attr_b[[0, 1, 3]]):
+        i = where(attr_a==wi)[0][0]
+        label = r"$w_{\mathrm{RCR}}=$"+'${0:.2f}$'.format(wr)+r"$, w_{\mathrm{ICR}}=$"+'${0:.1f}$'.format(wi)
         ax.plot(freqs, resp[cell_type][i,:], "-", label=label)
 
     ax.set_ylabel("Response(spikes/s)", fontsize=20)
     ax.set_xlabel("Patch-grating wave vector $k_\mathrm{pg} (1/^\circ)$", fontsize=20)
     ax.set_title("$\mathrm{Patch\;size}=$"+'${0:.2f}^\circ$'.format(diameter), fontsize=20)
     ax.legend()
-    # ax.set_xscale('log')
-    # ax.set_xticks([0.5, 1, 2, 4, 8])
-    # ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
     ax.set_xlim([0, 10])
 
 
