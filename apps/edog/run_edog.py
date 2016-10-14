@@ -62,7 +62,8 @@ with open(config_file, 'r') as stream:
 
 
 #parameters---------------------------------------------------------------------
-widths = np.linspace(0, 3, 30)
+w_rc = np.linspace(0, 0.9, 30)
+w_rc_c = np.linspace(0, 3, 30)
 
 
 #run simulator--------------------------------------------------------------------
@@ -70,13 +71,13 @@ counter= 0
 
 modify_wri(0)
 modify_wig(0)
-modify_wrc(0.5)
-modify_crc(0.5)
+modify_arc(0.1)
+modify_brc(0.9)
 
-for a in widths:
-    modify_arc(a)
-    for b in widths:
-        modify_brc(b)
+for w in w_rc:
+    modify_wrc(w)
+    for c in w_rc_c:
+        modify_crc(c)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
