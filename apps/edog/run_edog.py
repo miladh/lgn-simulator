@@ -62,13 +62,14 @@ with open(config_file, 'r') as stream:
 
 
 #parameters---------------------------------------------------------------------
-widths = np.linspace(0, 3, 5)
+widths = np.linspace(0, 3, 30)
 
 
 #run simulator--------------------------------------------------------------------
 counter= 0
 
 modify_wri(0)
+modify_wig(0)
 modify_wrc(0.5)
 modify_crc(0.5)
 
