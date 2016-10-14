@@ -6,16 +6,6 @@ sys.path.append(os.path.abspath(os.path.join(current_path,"../../../tools")))
 from analysis.data_extractor import*
 from analysis.pretty_plotting import*
 
-import matplotlib.colors as colors
-class MidpointNormalize(colors.Normalize):
-    def __init__(self, vmin=None, vmax=None, midpoint=None, clip=False):
-        self.midpoint = midpoint
-        colors.Normalize.__init__(self, vmin, vmax, clip)
-
-    def __call__(self, value, clip=None):
-        x, y = [self.vmin, self.midpoint, self.vmax], [0, 0.5, 1]
-        return np.ma.masked_array(np.interp(value, x, y))
-
 #Analysis: ###########################################################################
 def make_plot(cell_type, sims, cmap, save_fig=True):
     fig, axarr = plt.subplots(1, 3, figsize=(14,5))
@@ -37,26 +27,14 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
     print "w_rc=", w_rc
     print "w_ic=", w_ic
 
-    sim_no_fb = simulation_extractor(sims, "relay.Krc.w", w_rc[-1])[0]
-    sim_with_fb = simulation_extractor(sims, "relay.Krc.w", w_rc[0])[0]
+    sim_no_fb = simulation_extractor(sims, "relay.Krc.w", w_rc[0])[0]
+    sim_with_fb = simulation_extractor(sims, "relay.Krc.w", w_rc[-1])[0]
 
 
 
-    data1 =  np.copy(sim_no_fb.relay.resp()[0,:,:])
-    data2 =  np.copy(sim_with_fb.relay.resp()[0,:,:])
-    stim = sim_no_fb.stimulus.spatio_temporal()[0,:,:]
-
-
-    # data1 -=data1*-1
-    # data2 -=data2*-1
-    #
-    # data1[where(data1<0)]/=abs(data1.min())
-    # data1[where(data1>0)]/=abs(data1.max())
-    # data2[where(data2<0)]/=abs(data2.min())
-    # data2[where(data2>0)]/=abs(data2.max())
-
-    # data1[where(data1<0.005)]=0
-    # data2[where(data2<0.005)]=0
+    data1 =  np.copy(sim_no_fb.relay.resp()[0,:-50,:])
+    data2 =  np.copy(sim_with_fb.relay.resp()[0,:-50,:])
+    stim = sim_no_fb.stimulus.spatio_temporal()[0,:-50,:]
 
     vmax = max(abs(data2.min()), abs(data2.max()))
     vmin = -vmax
@@ -68,11 +46,11 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
                    cmap=cmap, aspect="auto", interpolation="none", origin="lower")
 
 
-    label = r"Without feedback"+"\n"+" $|w_{\mathrm{RC}}|=$"+'${0:.1f}$'.format(sim_no_fb.get_attribute("relay.Krc.w"))
+    label = r"Without feedback"+"\n"+" $w_{\mathrm{RCR}}=$"+'${0:.1f}$'.format(sim_no_fb.get_attribute("relay.Krc.w"))+r"$, w_{\mathrm{ICR}}=$"+'${0:.1f}$'.format(sim_no_fb.get_attribute("interneuron.Kic.w"))
     axarr[1].set_title(label,y=1, fontsize=20)
 
 
-    label = r"With feedback"+"\n"+" $|w_{\mathrm{RC}}|=$"+'${0:.1f}$'.format(sim_with_fb.get_attribute("relay.Krc.w"))
+    label = r"With feedback"+"\n"+" $w_{\mathrm{RCR}}=$"+'${0:.1f}$'.format(sim_with_fb.get_attribute("relay.Krc.w"))+r"$, w_{\mathrm{ICR}}=$"+'${0:.1f}$'.format(sim_with_fb.get_attribute("interneuron.Kic.w"))
     im3 = axarr[2].imshow(data2, vmin=vmin, vmax=vmax,
                    cmap=cmap, aspect="auto", interpolation="none", origin="lower")
 
@@ -101,15 +79,6 @@ def make_plot(cell_type, sims, cmap, save_fig=True):
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
     plt.show()
-
-    figure()
-    pcolormesh(data1/data1.max(), cmap=cmap, norm=MidpointNormalize(midpoint=0.))
-    colorbar()
-
-
-    figure()
-    pcolormesh(data2/data2.max(), cmap=cmap, norm=MidpointNormalize(midpoint=-0.))
-    colorbar()
 
 
 
