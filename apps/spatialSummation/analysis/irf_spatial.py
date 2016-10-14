@@ -44,19 +44,19 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
 
     axarr[0].set_title("Center excitation",y=1.02)
     im =axarr[0].imshow(irf_max, extent = extent,
-                #    vmin=0.2, vmax=1,
+                   vmin=0.8, vmax=4,
                    cmap=cmap, aspect="auto",
                    interpolation="none",
                    origin="lower")
-    plt.colorbar(im, ax = axarr[0])
+    plt.colorbar(im, ax = axarr[0], extend='max')
 
     axarr[1].set_title("Surround inhibition",y=1.02)
     im = axarr[1].imshow(irf_min, extent = extent,
-            #    vmin=-1.5, vmax=0,
+               vmin=-6, vmax=-0.8,
                cmap=cmap, aspect="auto",
                interpolation="none",
                origin="lower")
-    plt.colorbar(im, ax = axarr[1])
+    plt.colorbar(im, ax = axarr[1], extend='min')
 
     axarr[2].set_title("Size",y=1.02)
     im =axarr[2].imshow(irf_size, extent = extent,
@@ -87,12 +87,12 @@ if __name__ == "__main__":
 
     #-----------------------------------------------------------------------------------
     cell_type = ["relay"]
-    attr_a_name = "interneuron.Kic.spatial.a"
-    attr_b_name = "relay.Krc.spatial.a"
+    attr_a_name = "interneuron.Kic.w"
+    attr_b_name = "relay.Krc.w"
 
-    xlabel ="$a_{\mathrm{RCR}}$" #attr_b
-    ylabel = "$a_{\mathrm{ICR}}$" #attr_a
-    fig_name=  "spatial_irf_fb_ex_inhib"
+    xlabel ="$w_{\mathrm{RCR}}$" #attr_b
+    ylabel = "$w_{\mathrm{ICR}}$" #attr_a
+    fig_name= "spatial_irf_fb_ex_inhib_weights"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
@@ -105,9 +105,9 @@ if __name__ == "__main__":
 
     attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
     attr_b = attr_b[argsort(abs(attr_b))]
-    attr_b = attr_b[:]
+    attr_b = attr_b[:-11]
 
-    norm_sim = simulation_extractor(sims, attr_b_name, 0)[0]
+    norm_sim = simulation_extractor(simulation_extractor(sims, attr_a_name, 0), attr_b_name, 0)[0]
 
     print "attr_a=", attr_a
     print "attr_b=", attr_b
