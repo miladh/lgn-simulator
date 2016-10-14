@@ -3,4 +3,5 @@ TEMPLATE = subdirs
 SUBDIRS += default \
     spatialSummation \
     firingSynchrony \
-    stimuliAnalysis
+    stimuliAnalysis \
+    edog

@@ -27,13 +27,6 @@ def modify_wrc(w):
     config_data["relay"]["Krc"]["w"] = float(w)
 
 
-def modify_aic(a):
-    config_data["interneuron"]["Kic"]["spatial"]["a"] = float(a)
-
-def modify_wic(w):
-    config_data["interneuron"]["Kic"]["w"] = float(w)
-
-
 def modify_aig(a):
     config_data["interneuron"]["Kig"]["spatial"]["a"] = float(a)
 
@@ -53,7 +46,7 @@ def modify_wri(w):
 options = sys.argv[1:]
 record_label = options[-1]
 config_file = os.path.abspath(os.path.join(current_path, record_label+".yaml"))
-copyfile(os.path.abspath(os.path.join(current_path,"spatialSummation.yaml")), config_file)
+copyfile(os.path.abspath(os.path.join(current_path,"edog.yaml")), config_file)
 
 with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
