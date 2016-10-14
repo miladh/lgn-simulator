@@ -42,7 +42,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
     cmap="Blues_r"
     extent = [abs(attr_b[0]), abs(attr_b[-1]),  abs(attr_a[0]), abs(attr_a[-1])]
 
-    axarr[0].set_title("IRF center",y=1.02)
+    axarr[0].set_title("Center excitation",y=1.02)
     im =axarr[0].imshow(irf_max, extent = extent,
                    vmin=0.2, vmax=1,
                    cmap=cmap, aspect="auto",
@@ -50,7 +50,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
                    origin="lower")
     plt.colorbar(im, ax = axarr[0])
 
-    axarr[1].set_title("IRF surround",y=1.02)
+    axarr[1].set_title("Surround inhibition",y=1.02)
     im = axarr[1].imshow(irf_min, extent = extent,
                vmin=-1.5, vmax=-0.0,
                cmap=cmap, aspect="auto",
@@ -58,7 +58,7 @@ def make_plot(irf_max, irf_min, irf_size, cell_type, save_fig=True):
                origin="lower")
     plt.colorbar(im, ax = axarr[1])
 
-    axarr[2].set_title("IRF size",y=1.02)
+    axarr[2].set_title("Size",y=1.02)
     im =axarr[2].imshow(irf_size, extent = extent,
                vmin=1.0, vmax=0.68,
                cmap=cmap, aspect="auto",
@@ -87,12 +87,12 @@ if __name__ == "__main__":
 
     #-----------------------------------------------------------------------------------
     cell_type = ["relay"]
-    attr_a_name = "interneuron.Kic.w"
-    attr_b_name = "relay.Krc.w"
+    attr_a_name = "relay.Kri.spatial.a"
+    attr_b_name = "relay.Kri.w"
 
-    xlabel ="$w_{\mathrm{RC}}$" #attr_b
-    ylabel = "$w_{\mathrm{IC}}$" #attr_a
-    fig_name= "irf_in_ex_fb_w_"
+    xlabel ="$|w_{\mathrm{RI}}|$" #attr_b
+    ylabel = "$a_{\mathrm{RI}}$" #attr_a
+    fig_name= "spatial_irf_ff_inhib"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
@@ -103,11 +103,12 @@ if __name__ == "__main__":
     attr_a = attr_a[argsort(abs(attr_a))]
     attr_a = attr_a[:]
 
-    attr_b = extract_unique_simulation_attrs(sims, attr_b_name)
+    attr_b = extract_unique_simulation_attrs(sims,
+    attr_b_name)
     attr_b = attr_b[argsort(abs(attr_b))]
-    attr_b = attr_b[:-11]
+    attr_b = attr_b[:-9]
 
-    norm_sim = simulation_extractor(simulation_extractor(sims, attr_a_name, 0), attr_b_name, 0)[0]
+    norm_sim = simulation_extractor(sims, attr_b_name, 0)[0]
 
     print "attr_a=", attr_a
     print "attr_b=", attr_b
