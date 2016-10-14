@@ -20,11 +20,19 @@ def modify_diameter(d):
     config_data["stimulus"]["maskSize"] = float(d)
 
 
-def modify_arc(a):
-    config_data["relay"]["Krc"]["spatial"]["a"] = float(a)
 
 def modify_wrc(w):
     config_data["relay"]["Krc"]["w"] = float(w)
+
+def modify_arc(a):
+    config_data["relay"]["Krc"]["spatial"]["a"] = float(a)
+
+def modify_brc(b):
+    config_data["relay"]["Krc"]["spatial"]["b"] = float(b)
+
+def modify_crc(c):
+    config_data["relay"]["Krc"]["spatial"]["c"] = float(c)
+
 
 
 def modify_aig(a):
@@ -32,6 +40,7 @@ def modify_aig(a):
 
 def modify_wig(w):
     config_data["interneuron"]["Kig"]["w"] = float(w)
+
 
 
 def modify_ari(a):
@@ -53,17 +62,20 @@ with open(config_file, 'r') as stream:
 
 
 #parameters---------------------------------------------------------------------
-w_rc = np.linspace(-4, 0.9, 50)
-a_rc = np.linspace(0, 3, 20)
+widths = np.linspace(0, 3, 5)
 
 
 #run simulator--------------------------------------------------------------------
 counter= 0
 
-for w in w_rc:
-    modify_wrc(w)
-    for a in a_rc:
-        modify_arc(a)
+modify_wri(0)
+modify_wrc(0.5)
+modify_crc(0.5)
+
+for a in widths:
+    modify_arc(a)
+    for b in widths:
+        modify_brc(b)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)

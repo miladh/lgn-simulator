@@ -90,9 +90,12 @@ relay:
 
     Krc:
         w: 0.0
+
         spatial:
-        #Gauss
-            a: 0.9
+        # DOG
+            a: 0.1
+            b: 0.9
+            c: 0.5
 
         temporal:
         # TemporalDelta
