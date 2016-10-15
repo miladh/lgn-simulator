@@ -54,6 +54,7 @@ if __name__ == "__main__":
     attr_b_name = "relay.Krc.w"
     fig_name= "freq_tuning_fb_small_d"
 
+
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
