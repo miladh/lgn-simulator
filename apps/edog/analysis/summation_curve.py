@@ -54,7 +54,10 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     ax.set_xlabel("$w_{\mathrm{RCR}}$", fontsize=20)
     ax.tick_params(direction='out', pad=7)
     ax.legend()
+    ax.set_ylim([1,8])
 
+    print "d_max no fb =", d_max[0]
+    print "d_max no fb =", d_min[0]
     #########################################################################################
     ax = axarr[2]
 
@@ -70,10 +73,10 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     ax.plot(attr_b[:], supp[:], "-", label="Suppression")
     ax.set_xlabel("$w_{\mathrm{RCR}}$", fontsize=20)
     ax.set_ylabel("Suppresion index(%)")
-    ax.set_ylim([0.75, 0.95])
+    ax.set_ylim([0.725, 0.95])
     ax.tick_params(direction='out', pad=7)
-    ax.set_yticks(arange(0.75, 0.95, 0.025))
-    ax.set_yticks(arange(0.75, 0.975, 0.025), minor=True)
+    ax.set_yticks(arange(0.725, 0.975, 0.025))
+    ax.set_yticks(arange(0.725, 0.975, 0.025), minor=True)
     # ax.grid(which='minor',color="w", linestyle="-", linewidth=1.3, zorder = 0)
     #########################################################################################
     plt.tight_layout()
