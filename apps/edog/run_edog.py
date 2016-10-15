@@ -53,27 +53,27 @@ with open(config_file, 'r') as stream:
 
 
 #parameters---------------------------------------------------------------------
-# diameters = np.linspace(0., 15, 250)
+diameters = np.linspace(0., 15, 250)
+weights = np.linspace(0, 0.9, 4)
 # w_rc = np.linspace(0, 0.9, 4)
 # w_rc_c = np.linspace(0, 3, 4)
 # spatial_freqs = range(0, 90)
+# widths = np.linspace(0, 3, 30)
 
-widths = np.linspace(0, 3, 30)
-weights = np.linspace(0, 1.0, 30)
 
 #run simulator--------------------------------------------------------------------
 counter= 0
 
-modify_wrc(0)
 modify_arc(0.1)
 modify_brc(0.9)
-modify_crc(0.0)
-
+modify_crc(2.0)
+modify_wrig(-0.5)
+modify_arig(0.3)
 
 for w in weights:
-    modify_wrig(-w)
-    for a in widths:
-        modify_arig(a)
+    modify_wrc(w)
+    for d in diameters:
+        modify_diameter(d)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
