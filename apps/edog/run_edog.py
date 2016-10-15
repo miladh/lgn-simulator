@@ -34,20 +34,11 @@ def modify_crc(c):
     config_data["relay"]["Krc"]["spatial"]["c"] = float(c)
 
 
+def modify_arig(a):
+    config_data["relay"]["Krig"]["spatial"]["a"] = float(a)
 
-def modify_aig(a):
-    config_data["interneuron"]["Kig"]["spatial"]["a"] = float(a)
-
-def modify_wig(w):
-    config_data["interneuron"]["Kig"]["w"] = float(w)
-
-
-
-def modify_ari(a):
-    config_data["relay"]["Kri"]["spatial"]["a"] = float(a)
-
-def modify_wri(w):
-    config_data["relay"]["Kri"]["w"] = float(w)
+def modify_wrig(w):
+    config_data["relay"]["Krig"]["w"] = float(w)
 
 
 
@@ -62,25 +53,27 @@ with open(config_file, 'r') as stream:
 
 
 #parameters---------------------------------------------------------------------
-#diameters = np.linspace(0., 15, 250)
-w_rc = np.linspace(0, 0.9, 4)
-w_rc_c = np.linspace(0, 3, 4)
-spatial_freqs = range(0, 90)
+# diameters = np.linspace(0., 15, 250)
+# w_rc = np.linspace(0, 0.9, 4)
+# w_rc_c = np.linspace(0, 3, 4)
+# spatial_freqs = range(0, 90)
+
+widths = np.linspace(0, 3, 30)
+weights = np.linspace(0, 1.0, 30)
 
 #run simulator--------------------------------------------------------------------
 counter= 0
-modify_wri(-0.5)
-modify_ari(0.2)
-modify_wig(1.0)
+
+modify_wrc(0)
 modify_arc(0.1)
 modify_brc(0.9)
-modify_crc(2.0)
-modify_diameter(1.69)
+modify_crc(0.0)
 
-for w in w_rc:
-    modify_wrc(w)
-    for Kd in spatial_freqs:
-        modify_spatial_freq(Kd)
+
+for w in weights:
+    modify_wrig(-w)
+    for a in widths:
+        modify_arig(a)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)

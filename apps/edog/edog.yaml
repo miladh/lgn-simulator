@@ -56,9 +56,9 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: false
 
     #Kernels
@@ -73,15 +73,11 @@ relay:
         # TemporalDelta
             delay: 0
             dt: *dt_id
-    Kri:
+    Krig:
         w: -0.5
         spatial:
         #Gauss
             a: 0.2
-
-        #delta
-            ds: *ds_id
-            shift: [0, 0]
 
         temporal:
         # TemporalDelta
@@ -100,26 +96,6 @@ relay:
         temporal:
         # TemporalDelta
             delay: 0.
-            dt: *dt_id
-
-
-
-interneuron:
-    R0 : 0
-    storeResponse: false
-    storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
-    #Kernels
-    Kig:
-        w: 1.0
-        spatial:
-        # Gaussian
-            a: 0.3
-
-        temporal:
-        # TemporalDelta
-            delay: 0
             dt: *dt_id
 
 cortical:

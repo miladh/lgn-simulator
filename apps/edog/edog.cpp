@@ -50,23 +50,16 @@ int main(int argc, char* argv[])
     TemporalDelta Kt_rg = createTemporalDeltaKernel(cfg["relay"]["Krg"]["temporal"]);
     SeparableKernel Krg(cfg["relay"]["Krg"]["w"].as<double>(), &Ks_rg, &Kt_rg);
 
-    // I -> R
-    SpatialGaussian Ks_ri = createSpatialGaussianKernel(cfg["relay"]["Kri"]["spatial"]);
-    TemporalDelta Kt_ri = createTemporalDeltaKernel(cfg["relay"]["Kri"]["temporal"]);
-    SeparableKernel Kri(cfg["relay"]["Kri"]["w"].as<double>(), &Ks_ri, &Kt_ri);
+    // G -> I -> R
+    SpatialGaussian Ks_rig = createSpatialGaussianKernel(cfg["relay"]["Krig"]["spatial"]);
+    TemporalDelta Kt_rig = createTemporalDeltaKernel(cfg["relay"]["Krig"]["temporal"]);
+    SeparableKernel Krig(cfg["relay"]["Krig"]["w"].as<double>(), &Ks_rig, &Kt_rig);
 
     // C -> R
     DOG Ks_rc = createSpatialDOGKernel(cfg["relay"]["Krc"]["spatial"]);
     TemporalDelta Kt_rc = createTemporalDeltaKernel(cfg["relay"]["Krc"]["temporal"]);
     SeparableKernel Krc(cfg["relay"]["Krc"]["w"].as<double>(), &Ks_rc, &Kt_rc);
 
-    //Interneuron: -------------------------------------------------------------
-    Interneuron interneuron(&integrator, cfg["interneuron"]["R0"].as<double>());
-
-    // G -> I
-    SpatialGaussian Ks_ig = createSpatialGaussianKernel(cfg["interneuron"]["Kig"]["spatial"]);
-    TemporalDelta Kt_ig = createTemporalDeltaKernel(cfg["interneuron"]["Kig"]["temporal"]);
-    SeparableKernel Kig(cfg["interneuron"]["Kig"]["w"].as<double>(), &Ks_ig, &Kt_ig);
 
     //Cortical cell: -------------------------------------------------------------
     HeavisideNonlinearity heavisideNonlinearity;
@@ -80,11 +73,8 @@ int main(int argc, char* argv[])
 
     //Connect neurons:---------------------------------------------------------
     relay.addGanglionCell(&ganglion, Krg);
-    relay.addInterNeuron(&interneuron, Kri);
+    relay.addGanglionCell(&ganglion, Krig);
     relay.addCorticalCell(&cortical, Krc);
-
-    interneuron.addGanglionCell(&ganglion, Kig);
-
     cortical.addRelayCell(&relay, Kcr);
 
     //Compute:-----------------------------------------------------------------
@@ -148,27 +138,6 @@ int main(int argc, char* argv[])
         relay.clearImpulseResponse();
     }
 
-
-    /////////////////////////////////////////////////////////////////////////////////////
-    if(cfg["interneuron"]["storeResponseFT"].as<bool>()){
-        interneuron.computeResponseFourierTransform(S.get());
-        io.writeResponseFourierTransform(interneuron);
-    }
-    if(cfg["interneuron"]["storeResponse"].as<bool>()){
-        interneuron.computeResponse(S.get());
-        io.writeResponse(interneuron);
-        interneuron.clearResponse();
-    }
-    interneuron.clearResponseFourierTransform();
-
-    if( cfg["interneuron"]["storeImpulseResponseFT"].as<bool>()){
-        io.writeImpulseResponseFourierTransform(interneuron);
-    }
-    if( cfg["interneuron"]["storeImpulseResponse"].as<bool>()){
-        interneuron.computeImpulseResponse();
-        io.writeImpulseResponse(interneuron);
-        interneuron.clearImpulseResponse();
-    }
 
     /////////////////////////////////////////////////////////////////////////////////////
     if(cfg["cortical"]["storeResponseFT"].as<bool>()){
