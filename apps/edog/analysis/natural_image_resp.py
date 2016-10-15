@@ -107,6 +107,7 @@ if __name__ == "__main__":
     #cmap="Blues"
     #cmap="gray_r"
 
+
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
     Nt=sims[0].integrator.Nt
