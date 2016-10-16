@@ -153,5 +153,14 @@ if __name__ == "__main__":
     output_dir = smt.get_output_dir(record_label)
 
     #-----------------------------------------------------------------------------------
-
+    cell_types = ["relay"]
+    fig_name= "irf_spatiotemp"
+    levels = linspace(-0.1, 0.24, 20)
+    sims = get_simulations(sims_path)
+    sims = [sims[3], sims[0], sims[1], sims[2]]
+    Ns=sims[0].integrator.Ns
+    Nt=sims[0].integrator.Nt
+    t_points = sims[0].integrator.t_points
+    for cell in cell_types:
+        xt_plot(sims[:-1], cell, x_lim=-2.5, t_lim=150, levels=levels, save_fig=True)
     #-----------------------------------------------------------------------------------
