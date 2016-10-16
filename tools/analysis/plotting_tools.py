@@ -378,18 +378,18 @@ if __name__ == "__main__":
     import Simulation as sim
     plt.close("all")
 
-    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/spatialSummation/spatialSummation.h5"
+    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
     f = h5py.File(outputFile, "r")
     exp = sim.Simulation(None, f)
 
     Ns = exp.integrator.Ns
     Nt = exp.integrator.Nt
-
-    S = {"type" : "Stimulus",
-            "value" : exp.stimulus.spatio_temporal(),
-            "t_points" : exp.integrator.t_points,
-            "spatial_vec" : exp.integrator.s_points
-            }
+    #
+    # S = {"type" : "Stimulus",
+    #         "value" : exp.stimulus.spatio_temporal(),
+    #         "t_points" : exp.integrator.t_points,
+    #         "spatial_vec" : exp.integrator.s_points
+    #         }
 
     # Wg = {"type" : "Ganglion",
     #             "value" : exp.ganglion.irf(),
@@ -451,11 +451,11 @@ if __name__ == "__main__":
 #                 "spatial_vec" : exp.integrator.k_points
 #                 }
 # # Response --------------------------------------------------------------------------
-    Rg = {"type" : "Ganglion",
-                "value" : exp.ganglion.resp(),
-                "t_points" : exp.integrator.t_points,
-                "spatial_vec" : exp.integrator.s_points
-                }
+    # Rg = {"type" : "Ganglion",
+    #             "value" : exp.ganglion.resp(),
+    #             "t_points" : exp.integrator.t_points,
+    #             "spatial_vec" : exp.integrator.s_points
+    #             }
     # Rr = {"type" : "Relay",
     #          "value" : exp.relay.resp(),
     #          "t_points" : exp.integrator.t_points,
@@ -485,7 +485,7 @@ if __name__ == "__main__":
     # animate_imshow_plots([S, Rg], exp.integrator.dt,
     # colorbar = True, remove_axes = False,
     # save_animation = False, animation_name = "newTest")
-    plt.plot( exp.ganglion.resp()[:,Ns/2,Ns/2], '-ro')
+    plt.plot( exp.relay.resp()[:,Ns/2,Ns/2], '-ro')
     plt.plot( exp.stimulus.spatio_temporal()[:,Ns/2,Ns/2], '-go')
     # plt.legend()
     # plt.plot( exp.relay.irf()[:,1,1])

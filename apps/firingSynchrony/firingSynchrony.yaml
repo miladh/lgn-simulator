@@ -72,60 +72,31 @@ relay:
             delay: 4     #ms
             tau: 10
 
-    Kri:
+    Krig:
         w: -0.5
         spatial:
         #Gauss
-            a: 0.2
+            a: 0.3
 
         temporal:
         # DecayingExponential
-            delay: 2.     #ms
+            delay: 6.     #ms
             tau: 10
 
     Krc:
         w: 0.5
+
         spatial:
-        #Gauss
+        # DOG
             a: 0.1
+            b: 0.9
+            c: 2.0
 
         temporal:
         # DecayingExponential
             delay: 20.    #ms
             tau: 20
 
-
-
-interneuron:
-    R0 : 0
-    storeResponse: false
-    storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
-
-    #Kernels
-    Kig:
-        w: 1.0
-        spatial:
-        # Gaussian
-            a: 0.3
-
-        temporal:
-        # DecayingExponential
-            delay: 4
-            tau: 10     #ms
-
-
-    Kic:
-        w: 2.0
-        spatial:
-        #Gauss
-            a: 0.9
-
-        temporal:
-        # DecayingExponential
-            delay: 20.
-            tau: 20     #ms
 
 cortical:
     R0 : 0.
