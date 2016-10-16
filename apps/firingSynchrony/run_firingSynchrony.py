@@ -74,14 +74,18 @@ delay_vec = np.linspace(4,32,16)
 
 modify_arc(0.1)
 modify_brc(0.9)
-modify_crc(2.0)
+modify_crc(0.0)
+modify_wrc(0.0)
+
 modify_wrig(-0.5)
 modify_arig(0.3)
 
-modify_tau_rig(10)
-modify_delay_rig(6)
-modify_tau_rc(20)
-modify_delay_rc(20)
+modify_tau_rc(1)
+modify_delay_rc(0)
+
+# modify_tau_rig(10)
+# modify_delay_rig(6)
+
 
 #run simulator--------------------------------------------------------------------
 counter= 0
