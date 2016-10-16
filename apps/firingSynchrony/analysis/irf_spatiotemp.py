@@ -85,6 +85,8 @@ def xt_plot(sims, cell_type, x_lim, t_lim,  levels, save_fig=True):
     s_points = sims[0].integrator.s_points
     t_points = sims[0].integrator.t_points
     extent = [s_points.min(), s_points.max(), t_points.min(), t_points.max()]
+    weights = extract_unique_simulation_attrs(sims, "relay.Krc.w")
+    weights = weights[argsort(weights)]
 
     fig, axarr = plt.subplots(1, len(sims), figsize=(4*len(sims), 5), sharey="row")
 
@@ -116,11 +118,12 @@ def xt_plot(sims, cell_type, x_lim, t_lim,  levels, save_fig=True):
     ###############################################################################
 
 
-    for i, sim in enumerate(sims):
+    for i, w in enumerate(weights):
+        sim = simulation_extractor(sims, "relay.Krc.w", w, return_as_list=False)
         ax = axarr[i]
         irf = sim.get_attribute(cell_type).irf()[:,Ns/2,:]
         X, Y = np.mgrid[ t_points.min():t_points.max():complex(0, Nt), s_points.min():s_points.max():complex(0, Ns)]
-        im =ax.pcolormesh(Y, X, irf, norm=MidpointNormalize(midpoint=0.), cmap=cmap,                        vmin=-0.2, vmax=0.4)
+        im =ax.pcolormesh(Y, X, irf, norm=MidpointNormalize(midpoint=0.), cmap=cmap,                        vmin=-0.1, vmax=0.25)
         ax.contour( irf, extent= extent,
                     colors='k',linewidths=0.4,
                     aspect="auto",
@@ -130,7 +133,7 @@ def xt_plot(sims, cell_type, x_lim, t_lim,  levels, save_fig=True):
         ax.set_ylim([0, t_lim])
         ax.set_xlabel("$x(^\circ)$", fontsize=18)
 
-        label = r"$w_{\mathrm{RC}}=$"+'${0:.2f}$'.format(sim.get_attribute("relay.Krc.w"))+"\n"+r"$ w_{\mathrm{IC}}=$"+'${0:.1f}$'.format(sim.get_attribute("interneuron.Kic.w"))
+        label = r"$w_{\mathrm{RCR}}=$"+'${0:.2f}$'.format(sim.get_attribute("relay.Krc.w"))
         ax.set_title(label,y=1, fontsize=20)
 
 

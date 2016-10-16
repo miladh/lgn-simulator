@@ -69,8 +69,8 @@ with open(config_file, 'r') as stream:
 #parameters---------------------------------------------------------------------
 weights = np.linspace(0, 0.9, 4)
 
-# tau_ri = np.linspace(1,50,15)
-# delay_ri = np.linspace(2,32,16)
+tau_vec = np.linspace(1,50,15)
+delay_vec = np.linspace(4,32,16)
 
 modify_arc(0.1)
 modify_brc(0.9)
@@ -85,14 +85,16 @@ modify_delay_rc(20)
 
 #run simulator--------------------------------------------------------------------
 counter= 0
-for w in weights:
-    modify_wrc(w)
+for tau in tau_vec:
+    modify_tau_rig(tau)
+    for delay in delay_vec:
+        modify_delay_rig(delay)
 ##########################################################
-    with open(config_file, 'w') as stream:
-        yaml.dump(config_data, stream)
+        with open(config_file, 'w') as stream:
+            yaml.dump(config_data, stream)
 
-    run_id = '{0:04}'.format(counter)
-    st.run_simulator(config_file, record_label, run_id)
-    counter+=1
+        run_id = '{0:04}'.format(counter)
+        st.run_simulator(config_file, record_label, run_id)
+        counter+=1
 os.remove(config_file)
 ##########################################################
