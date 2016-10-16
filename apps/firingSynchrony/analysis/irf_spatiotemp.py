@@ -137,6 +137,7 @@ def xt_plot(sims, cell_type, x_lim, t_lim,  levels, save_fig=True):
         ax.set_title(label,y=1, fontsize=20)
 
 
+
     plt.colorbar(im, cax = cax, ax = axarr[-1])
     axarr[0].set_ylabel(r"$\tau\;(\mathrm{ms})$", fontsize=18)
     plt.tight_layout()
