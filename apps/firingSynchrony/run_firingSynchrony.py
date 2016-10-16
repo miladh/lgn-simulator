@@ -74,25 +74,25 @@ delay_vec = np.linspace(4,32,16)
 
 modify_arc(0.1)
 modify_brc(0.9)
-modify_crc(0.0)
-modify_wrc(0.0)
+modify_crc(2.0)
+modify_wrc(0.5)
 
-modify_wrig(-0.5)
+modify_wrig(-0.0)
 modify_arig(0.3)
 
-modify_tau_rc(1)
-modify_delay_rc(0)
+# modify_tau_rc(1)
+# modify_delay_rc(0)
 
-# modify_tau_rig(10)
-# modify_delay_rig(6)
+modify_tau_rig(1)
+modify_delay_rig(0)
 
 
 #run simulator--------------------------------------------------------------------
 counter= 0
 for tau in tau_vec:
-    modify_tau_rig(tau)
+    modify_tau_rc(tau)
     for delay in delay_vec:
-        modify_delay_rig(delay)
+        modify_delay_rc(delay)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
