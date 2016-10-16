@@ -123,11 +123,11 @@ def xt_plot(sims, cell_type, x_lim, t_lim,  levels, save_fig=True):
         ax = axarr[i]
         irf = sim.get_attribute(cell_type).irf()[:,Ns/2,:]
         X, Y = np.mgrid[ t_points.min():t_points.max():complex(0, Nt), s_points.min():s_points.max():complex(0, Ns)]
-        im =ax.pcolormesh(Y, X, irf, norm=MidpointNormalize(midpoint=0.), cmap=cmap,                        vmin=-0.1, vmax=0.25)
+        im =ax.pcolormesh(Y, X, irf, norm=MidpointNormalize(midpoint=0.), cmap=cmap,                        vmin=-0.1, vmax=0.25, rasterized=True)
         ax.contour( irf, extent= extent,
                     colors='k',linewidths=0.4,
                     aspect="auto",
-                    levels = levels)
+                    levels = levels, rasterized=True)
 
         ax.set_xlim([-x_lim, x_lim])
         ax.set_ylim([0, t_lim])
