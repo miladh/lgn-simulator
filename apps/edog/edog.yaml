@@ -85,13 +85,13 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 0.0
+        w: 0.5
 
         spatial:
         # DOG
             a: 0.1
             b: 0.9
-            c: 0.5
+            c: 2.0
 
         temporal:
         # TemporalDelta
