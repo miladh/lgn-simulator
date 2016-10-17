@@ -89,7 +89,6 @@ def make_joint_plot(sim, save_fig=True):
 
     ax_marg_x.legend(loc=(0.7,0.7), fontsize=14)
 
-    plt.tight_layout()
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
     plt.show()
