@@ -101,7 +101,7 @@ if __name__ == "__main__":
     output_dir = smt.get_output_dir(record_label)
 
     #-----------------------------------------------------------------------------------
-    cell_type = ["relay"]
+    cell_type = "relay"
     fig_name= "edog_spatial_irf_"
     sims = get_simulations(sims_path)
     Ns=sims[0].integrator.Ns
