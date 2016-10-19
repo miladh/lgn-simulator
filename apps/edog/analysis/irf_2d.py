@@ -8,6 +8,78 @@ from analysis.pretty_plotting import*
 import seaborn.apionly as sns
 sns.set_color_codes()
 #Analysis: ###########################################################################
+def make_plot(sim, save_fig=True):
+    irf = sim.relay.irf()
+    s_points = sim.integrator.s_points
+    Ns=sim.integrator.Ns
+    Nt=sim.integrator.Nt
+
+    fig, axarr = plt.subplots(1, 2, figsize=(12,5),  sharex='col')
+    set_legend()
+    set_font()
+
+    for ax in axarr[1:]:
+        ax.spines['right'].set_color('none')
+        ax.spines['top'].set_color('none')
+        ax.xaxis.set_ticks_position('bottom')
+        ax.spines['bottom'].set_position(('data',0))
+        ax.yaxis.set_ticks_position('left')
+        ax.spines['left'].set_position(('data',0))
+        remove_ticks(ax)
+
+
+    extent = [s_points.min(), s_points.max(), s_points.min(), s_points.max()]
+    axarr[0].imshow(irf[0,:,:], extent = extent, cmap="RdBu_r", aspect="auto",
+    interpolation="gaussian", origin="lower")
+    axarr[0].set_xlim([-2, 2])
+    axarr[0].set_ylim([-2, 2])
+    spines_edge_color(axarr[0])
+    remove_ticks(axarr[0])
+    set_grid(axarr[0], linewidth=0., linecolor='0.95')
+    spines_edge_color(axarr[0], edges = {"top": "none", "bottom": "none",
+                                   "right": "none", "left": "none"})
+
+
+    axarr[1].plot(s_points, irf[0,Ns/2,:])
+    axarr[1].set_xlim([-2, 2])
+
+    plt.setp(axarr[1].get_xticklabels(), visible=False)
+    plt.setp(axarr[1].get_yticklabels(), visible=False)
+
+
+    axarr[0].set_xlabel('$x (^\circ)$')
+    axarr[0].set_ylabel('$y (^\circ)$')
+    axarr[0].set_title('$W_\mathrm{R}(x, y)$', y=1.02)
+    axarr[1].set_title('$W_\mathrm{R}(x, y=0)$', y=1.02)
+
+
+    irf_max = max(irf[0,Ns/2,:])
+    irf_min = min(irf[0,Ns/2,:])
+    irf_size = argmin(irf[0,Ns/2,:])
+
+
+    axarr[1].scatter(0,irf_max, s=80, marker="s",facecolor="r" ,
+    label="Center excitation", zorder=3)
+    axarr[1].scatter(s_points[-irf_size],irf_min, facecolor="r", s=80,
+    label="Surround inhibiton", zorder=3)
+
+    axarr[1].scatter(s_points[-irf_size], 0.03, s=80, marker="v",facecolor="r" ,
+    label="Size", zorder=3)
+
+    axarr[1].plot([s_points[-irf_size],s_points[-irf_size]],[0,irf_min],
+    color ='r', linewidth=1.5, linestyle="--")
+    axarr[1].plot([0, s_points[-irf_size]],[irf_min,irf_min], color ='r',
+     linewidth=1.5, linestyle="--")
+
+    axarr[1].legend(loc=(0.7,0.7), fontsize=14)
+
+    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
+    if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
+    plt.show()
+
+
+
+
 def make_joint_plot(sim, save_fig=True):
     irf = sim.relay.irf()
     s_points = sim.integrator.s_points
