@@ -47,11 +47,11 @@ def make_plot(sim, save_fig=True):
     plt.setp(axarr[1].get_yticklabels(), visible=False)
 
 
-    axarr[0].set_xlabel('$x (^\circ)$')
-    axarr[0].set_ylabel('$y (^\circ)$')
-    axarr[0].set_title('$W_\mathrm{R}(x, y)$', y=1.02)
-    axarr[1].set_title('$W_\mathrm{R}(x, y=0)$', y=1.02)
-    axarr[1].set_xlabel('$x (^\circ)$')
+    axarr[0].set_xlabel('$x (^\circ)$', fontsize=20)
+    axarr[0].set_ylabel('$y (^\circ)$', fontsize=20)
+    axarr[0].set_title('$W_\mathrm{R}(x, y)$', y=1.02, fontsize=20)
+    axarr[1].set_title('$W_\mathrm{R}(x, y=0)$', y=1.02, fontsize=20)
+    axarr[1].set_xlabel('$x (^\circ)$', fontsize=20)
     axarr[1].xaxis.set_label_coords(1.1, 0.25)
 
 
