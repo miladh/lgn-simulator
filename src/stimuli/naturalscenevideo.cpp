@@ -29,8 +29,7 @@ void NaturalSceneVideo::computeSpatiotemporal()
 
 void NaturalSceneVideo::computeFourierTransform()
 {
-//    cx_mat tmp = m_integrator->forwardFFT(m_scene);
-//     m_fourierTransform = m_integrator->forwardFFT(m_scene);
+     m_fourierTransform = m_integrator->forwardFFT(m_scene);
 }
 
 void NaturalSceneVideo::readScene()
@@ -78,7 +77,7 @@ void NaturalSceneVideo::readScene()
 unique_ptr<NaturalSceneVideo> createNaturalSceneVideoStimulus(Integrator* const integrator, const YAML::Node &cfg)
 {
     //Read file
-    string sceneFilename = cfg["videoFilename"].as<string>();
+    string sceneFilename = cfg["sceneFilename"].as<string>();
 
     return unique_ptr<NaturalSceneVideo>(new NaturalSceneVideo(integrator, sceneFilename));
 }

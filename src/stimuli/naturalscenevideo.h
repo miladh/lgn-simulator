@@ -26,6 +26,6 @@ private:
 };
 
 }
-unique_ptr<lgnSimulator::NaturalSceneVideo> createNaturalSceneVideoStimulus(const lgnSimulator::Integrator &integrator,
+unique_ptr<lgnSimulator::NaturalSceneVideo> createNaturalSceneVideoStimulus(lgnSimulator::Integrator* const integrator,
                                                   const YAML::Node &cfg);
 #endif // NATURALSCENEVIDEO_H

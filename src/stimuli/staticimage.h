@@ -8,13 +8,15 @@ namespace lgnSimulator {
 class StaticImage : public NaturalScene
 {
 public:
-    StaticImage(Integrator* const integrator, string sceneFilename);
+    StaticImage(Integrator* const integrator, string sceneFilename, double delay, double period);
     ~StaticImage();
 
     // NaturalScene interface
 private:
     virtual double temporalValueAtPoint(double t);
-    virtual double fourierTransformAtTemporalFrequency(double w);
+    virtual complex<double> fourierTransformAtTemporalFrequency(double w);
+    double m_delay=0.0;
+    double m_period=0.0;
 };
 
 }

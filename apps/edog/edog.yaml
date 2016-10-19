@@ -10,7 +10,7 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: false
+    storeSpatiotemporal: true
     storeFT: false
 
     # Grating:
@@ -28,7 +28,7 @@ stimulus:
     phase: 0.                      #deg
     surroundPhase: 0.0              #deg
 
-    kId:  0                        #[-Ns/2, Ns/2 - 1]
+    kId:  17                        #[-Ns/2, Ns/2 - 1]
     surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
 
 
@@ -56,9 +56,9 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: true
+    storeImpulseResponse: false
     storeImpulseResponseFT: false
 
     #Kernels
@@ -77,7 +77,7 @@ relay:
         w: -0.5
         spatial:
         #Gauss
-            a: 0.3
+            a: 0.2
 
         temporal:
         # TemporalDelta
@@ -85,13 +85,13 @@ relay:
             dt: *dt_id
 
     Krc:
-        w: 0.5
+        w: 0.0
 
         spatial:
         # DOG
             a: 0.1
             b: 0.9
-            c: 2.0
+            c: 0.5
 
         temporal:
         # TemporalDelta

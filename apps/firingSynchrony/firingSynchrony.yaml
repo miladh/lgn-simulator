@@ -3,13 +3,13 @@ description: "Firing synchrony config file"
 #------------Integrator settings-----------------#
 grid:
     ns: 9
-    nt: 8
+    nt: 7
     dt: &dt_id 2.
     ds: &ds_id 0.05
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: false
+    storeSpatiotemporal: true
     storeFT: false
 
     # Grating:
@@ -33,10 +33,13 @@ stimulus:
 
     wId:  0                         #[-Nt/2, Nt/2 - 1]
     surroundwId:  0                 #[-Nt/2, Nt/2 - 1]
+
+    sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/new.avi"
+
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
@@ -55,7 +58,7 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: false
+    storeResponse: true
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: false

@@ -27,7 +27,7 @@ private:
     void readScene();
 
     virtual double temporalValueAtPoint(double t) = 0;
-    virtual double fourierTransformAtTemporalFrequency(double w) = 0;
+    virtual complex<double> fourierTransformAtTemporalFrequency(double w) = 0;
 };
 }
 #endif // NATURALSCENE_H

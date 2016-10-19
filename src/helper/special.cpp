@@ -37,12 +37,27 @@ double Special::confluentHypergeometric(double a, double b, double x)
     return F;
 }
 
+double Special::rect(double t, double T)
+{
+    if(t <= T){
+        return 1;
+    }else{
+        return 0;
+    }
+
+}
+
 
 
 double Special::secondKindBessel(double x)
 {
     double j = boost::math::cyl_bessel_j(1, x);
     return j;
+}
+
+double Special::sinc(double x)
+{
+    return  boost::math::sinc_pi(x);
 }
 
 
