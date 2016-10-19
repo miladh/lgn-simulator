@@ -14,7 +14,7 @@ def make_plot(sim, save_fig=True):
     Ns=sim.integrator.Ns
     Nt=sim.integrator.Nt
 
-    fig, axarr = plt.subplots(1, 2, figsize=(12,5),  sharex='col')
+    fig, axarr = plt.subplots(1, 2, figsize=(12,6),  sharex='col')
     set_legend()
     set_font()
 
@@ -51,6 +51,8 @@ def make_plot(sim, save_fig=True):
     axarr[0].set_ylabel('$y (^\circ)$')
     axarr[0].set_title('$W_\mathrm{R}(x, y)$', y=1.02)
     axarr[1].set_title('$W_\mathrm{R}(x, y=0)$', y=1.02)
+    axarr[1].set_xlabel('$x (^\circ)$')
+    axarr[1].xaxis.set_label_coords(1.1, 0.25)
 
 
     irf_max = max(irf[0,Ns/2,:])
@@ -63,7 +65,7 @@ def make_plot(sim, save_fig=True):
     axarr[1].scatter(s_points[-irf_size],irf_min, facecolor="r", s=80,
     label="Surround inhibiton", zorder=3)
 
-    axarr[1].scatter(s_points[-irf_size], 0.03, s=80, marker="v",facecolor="r" ,
+    axarr[1].scatter(s_points[-irf_size], 0.0, s=80, marker="v",facecolor="r" ,
     label="Size", zorder=3)
 
     axarr[1].plot([s_points[-irf_size],s_points[-irf_size]],[0,irf_min],
@@ -181,4 +183,4 @@ if __name__ == "__main__":
     s_points = sims[0].integrator.s_points[Ns/2:]
     sim = sims[0]
     #-----------------------------------------------------------------------------------
-    make_joint_plot(sim)
+    make_plot(sim)
