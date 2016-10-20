@@ -28,7 +28,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
 
     ax.set_xlabel("Diameter($^\circ$)")
     ax.set_ylabel("Response")
-    ax.set_title("Area-response curve",y=1.02)
+    # ax.set_title("Area-response curve",y=1.02)
     ax.set_xlim([0., 10])
     # ax.set_ylim([0, 0.3])
     ax.legend()
@@ -44,7 +44,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     d_min = zeros(len(attr_a))
     for i, w in enumerate(attr_a[:]):
         index_max = argmax(resp[cell_type][i,0:])
-        index_min = argmin(resp[cell_type][i,index_max:])
+        index_min = argmin(resp[cell_type][i,index_max:])+index_max
         d_max[i] = diameter[index_max]
         d_min[i] = diameter[index_min]
 
@@ -54,7 +54,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     ax.set_xlabel("$w_{\mathrm{RCR}}$", fontsize=20)
     ax.tick_params(direction='out', pad=7)
     ax.legend()
-    ax.set_ylim([1,8])
+    # ax.set_ylim([1,8])
 
     print "d_max no fb =", d_max[0]
     print "d_max no fb =", d_min[0]
@@ -72,8 +72,8 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
 
     ax.plot(attr_b[:], supp[:], "-", label="Suppression")
     ax.set_xlabel("$w_{\mathrm{RCR}}$", fontsize=20)
-    ax.set_ylabel("Suppresion index(%)")
     ax.set_ylim([0.725, 0.95])
+    ax.set_ylabel("Suppresion index(%)")
     ax.tick_params(direction='out', pad=7)
     ax.set_yticks(arange(0.725, 0.975, 0.025))
     ax.set_yticks(arange(0.725, 0.975, 0.025), minor=True)
