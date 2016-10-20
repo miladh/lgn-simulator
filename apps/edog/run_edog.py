@@ -52,18 +52,10 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 
-#parameters---------------------------------------------------------------------
-diameters = np.linspace(0., 15, 250)
-weights = np.linspace(0, 0.9, 4)
-# w_rc = np.linspace(0, 0.9, 4)
-# w_rc_c = np.linspace(0, 3, 4)
-# spatial_freqs = range(0, 90)
-# widths = np.linspace(0, 3, 30)
-
 
 #parameters---------------------------------------------------------------------
 # diameters = np.linspace(0., 15, 250)
-weights = np.linspace(0, 0.9, 3)
+weights = np.linspace(0, 0.6, 3)
 # w_rc = np.linspace(0, 0.9, 4)
 # w_rc_c = np.linspace(0, 3, 4)
 spatial_freqs = range(0, 90)
