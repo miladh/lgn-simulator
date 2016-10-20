@@ -28,7 +28,7 @@ stimulus:
     phase: 0.                      #deg
     surroundPhase: 0.0              #deg
 
-    kId:  4                        #[-Ns/2, Ns/2 - 1]
+    kId:  3                        #[-Ns/2, Ns/2 - 1]
     surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
 
 
