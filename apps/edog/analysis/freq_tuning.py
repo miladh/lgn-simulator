@@ -19,7 +19,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
     remove_ticks(ax)
     set_grid(ax)
 
-    for wr in attr_a[:-1]:
+    for wr in attr_a[:]:
         i = where(attr_a==wr)[0][0]
         label = r"$w_{\mathrm{RCR}}=$"+'${0:.2f}$'.format(wr)
         ax.plot(freqs, resp[cell_type][i,:], "-", label=label)
@@ -39,6 +39,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, freqs, diameter, save_fig=True):
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
     plt.show()
+
 
 
 
