@@ -28,7 +28,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
 
     ax.set_xlabel("Diameter($^\circ$)")
     ax.set_ylabel("Response")
-    ax.set_title("(a)",y=1.02)
+    ax.set_title("(a)",y=1.)
     ax.set_xlim([0., 10])
     # ax.set_ylim([0, 0.3])
     ax.legend()
@@ -53,7 +53,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     ax.set_ylabel("Diameter($^\circ$)")
     ax.set_xlabel("$w_{\mathrm{RCR}}$", fontsize=20)
     ax.tick_params(direction='out', pad=7)
-    ax.set_title("(b)",y=1.02)
+    ax.set_title("(b)",y=1.)
     ax.legend()
     # ax.set_ylim([1,8])
 
@@ -78,10 +78,11 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     ax.tick_params(direction='out', pad=7)
     ax.set_yticks(arange(0.725, 0.975, 0.025))
     ax.set_yticks(arange(0.725, 0.975, 0.025), minor=True)
-    ax.set_title("(c)",y=1.02)
+    ax.set_title("(c)",y=1.0)
     # ax.grid(which='minor',color="w", linestyle="-", linewidth=1.3, zorder = 0)
     #########################################################################################
-    plt.tight_layout()
+    plt.suptitle('Static spot',y=1.0, fontsize=20)
+    plt.tight_layout(rect=[0, 0.03, 1, 0.97])
     # fig.savefig("area_summation_fb_weights.pdf")
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".pdf"))
     if save_fig: fig.savefig(os.path.join(output_dir, fig_name+cell_type+"_"+record_label+".png"))
