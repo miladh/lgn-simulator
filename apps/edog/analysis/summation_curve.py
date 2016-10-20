@@ -33,6 +33,7 @@ def make_plot(cell_type, resp, attr_a, attr_b, diameter, save_fig=True):
     # ax.set_ylim([0, 0.3])
     ax.legend()
 
+
     #########################################################################################
     ax = axarr[1]
     spines_edge_color(ax)
