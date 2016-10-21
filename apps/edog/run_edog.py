@@ -68,7 +68,7 @@ with open(config_file, 'r') as stream:
 # spatial_freqs = range(0, 90)
 # widths = np.linspace(0, 3, 30)
 
-ds_vec = np.linspace(0.01, 0.2, 20)
+ds_vec = np.linspace(0.01, 0.3, 30)
 
 
 #run simulator--------------------------------------------------------------------
