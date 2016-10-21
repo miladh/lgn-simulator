@@ -74,7 +74,7 @@ ds_vec = np.linspace(0.01, 0.2, 20)
 #run simulator--------------------------------------------------------------------
 counter= 0
 
-modify_wrc(0.5)
+modify_wrc(0.6)
 modify_arc(0.1)
 modify_brc(0.9)
 modify_crc(2.0)
