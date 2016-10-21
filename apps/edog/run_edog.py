@@ -68,7 +68,7 @@ with open(config_file, 'r') as stream:
 # spatial_freqs = range(0, 90)
 # widths = np.linspace(0, 3, 30)
 
-ds_vec = np.linspace(0.01, 0.4, 20)
+ds_vec = np.linspace(0.01, 0.2, 20)
 
 
 #run simulator--------------------------------------------------------------------
@@ -80,8 +80,8 @@ modify_brc(0.9)
 modify_crc(2.0)
 modify_wrig(-0.5)
 modify_arig(0.3)
-# modify_diameter(1.68674698795)
-modify_diameter(10.)
+modify_diameter(1.68674698795)
+# modify_diameter(10.)
 modify_spatial_freq(4)
 
 
