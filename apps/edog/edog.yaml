@@ -3,7 +3,7 @@ description: "edog config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 10
+    ns: 9
     nt: 1
     dt: &dt_id 1.0
     ds: &ds_id 0.05
@@ -58,7 +58,7 @@ relay:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
+    storeImpulseResponse: true
     storeImpulseResponseFT: false
 
     #Kernels
