@@ -3,7 +3,7 @@ description: "edog config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 10
+    ns: 12
     nt: 1
     dt: &dt_id 1.0
     ds: &ds_id 0.05
