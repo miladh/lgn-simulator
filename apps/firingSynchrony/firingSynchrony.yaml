@@ -3,7 +3,7 @@ description: "Firing synchrony config file"
 #------------Integrator settings-----------------#
 grid:
     ns: 9
-    nt: 7
+    nt: 8
     dt: &dt_id 2.
     ds: &ds_id 0.05
 
@@ -34,7 +34,9 @@ stimulus:
     wId:  0                         #[-Nt/2, Nt/2 - 1]
     surroundwId:  0                 #[-Nt/2, Nt/2 - 1]
 
-    sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/new.avi"
+    sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/camera.jpg"
+    delay: 10
+    period: 100
 
 #-----------------Neuron settings------------------#
 ganglion:
@@ -50,8 +52,9 @@ ganglion:
         b: 1.26
         c: 0.85
     Wt:
+        dt: *dt_id
     # Biphasic
-        delay: 0
+        delay: 0.
         phaseDuration: 42.5     #ms
         weight: 0.38
 
@@ -71,8 +74,9 @@ relay:
             a: 0.1
 
         temporal:
+            dt: *dt_id
         # DecayingExponential
-            delay: 4     #ms
+            delay: 4.     #ms
             tau: 10
 
     Krig:
@@ -82,6 +86,7 @@ relay:
             a: 0.3
 
         temporal:
+            dt: *dt_id
         # DecayingExponential
             delay: 6.     #ms
             tau: 10
@@ -96,9 +101,11 @@ relay:
             c: 2.0
 
         temporal:
+            dt: *dt_id
         # DecayingExponential
             delay: 20.    #ms
             tau: 20
+
 
 
 cortical:

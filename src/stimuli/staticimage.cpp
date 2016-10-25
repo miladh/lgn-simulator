@@ -17,22 +17,25 @@ StaticImage::~StaticImage()
 
 double StaticImage::temporalValueAtPoint(double t)
 {
-    return Special::heaviside(t-m_delay) /*Special::rect(t-m_delay, m_period)*/;
+    return Special::rect(t-m_delay, m_period)*Special::heaviside(t-m_delay);
+//    (void) t;
+//    return 1.;
 }
 
 complex<double> StaticImage::fourierTransformAtTemporalFrequency(double w)
 {
 
-    double rePart=core::pi*Special::delta(0., w)/m_integrator->temporalFreqResolution();
-    complex<double> imPart=1.0/(-core::i);
-    if(w==0){
-        imPart/=m_integrator->temporalFreqResolution();
-    }else{
-        imPart/=w;
-    }
-    return exp(core::i*w*m_delay)*(imPart + rePart);
+//    double rePart=core::pi*Special::delta(0., w)/m_integrator->temporalFreqResolution();
+//    complex<double> imPart=1.0/(-core::i);
+//    if(w==0){
+//        imPart/=m_integrator->temporalFreqResolution();
+//    }else{
+//        imPart/=w;
+//    }
+//    return exp(core::i*w*m_delay)*(imPart + rePart);
+//    return Special::delta(0, w)/m_integrator->temporalFreqResolution();
 
-//    return m_period * Special::sinc(w*m_period/2.)*exp(core::i*w*(m_delay+m_period/2));
+    return m_period * Special::sinc(w*m_period/2.)*exp(core::i*w*(m_delay+m_period/2));
 }
 
 

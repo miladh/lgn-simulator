@@ -68,7 +68,7 @@ w_rc = np.linspace(0, 0.9, 4)
 # spatial_freqs = range(0, 90)
 # widths = np.linspace(0, 3, 30)
 
-ds_vec = np.linspace(0.01, 0.3, 30)
+ds_vec = np.linspace(0.01, 1, 30)
 
 
 #run simulator--------------------------------------------------------------------
