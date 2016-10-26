@@ -82,7 +82,7 @@ modify_wrig(-0.5)
 modify_arig(0.3)
 # modify_diameter(1.68674698795)
 
-modify_diameter(1.5)
+modify_diameter(3.5)
 modify_spatial_freq(0)
 
 
