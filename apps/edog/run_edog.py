@@ -74,15 +74,15 @@ ns_vec = [7, 8, 9, 10, 11, 12]
 #run simulator--------------------------------------------------------------------
 counter= 0
 
-modify_wrc(0.6)
+# modify_wrc(0.6)
 modify_arc(0.1)
 modify_brc(0.9)
 modify_crc(2.0)
 modify_wrig(-0.5)
 modify_arig(0.3)
 # modify_diameter(1.68674698795)
-modify_diameter(10.)
-modify_spatial_freq(4)
+modify_diameter(1.)
+modify_spatial_freq(0)
 
 
 
