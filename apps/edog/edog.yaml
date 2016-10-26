@@ -3,7 +3,7 @@ description: "edog config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 11
+    ns: 9
     nt: 1
     dt: &dt_id 1.0
     ds: &ds_id 0.05
@@ -19,7 +19,7 @@ stimulus:
     C: 1.0
     surroundC: 1.0
 
-    maskSize: 10.          #deg
+    maskSize: 1.          #deg
     surroundMaskSize : 0     #deg
 
     orientation: 0.                 #deg
@@ -28,7 +28,7 @@ stimulus:
     phase: 0.                      #deg
     surroundPhase: 0.0              #deg
 
-    kId:  250                        #[-Ns/2, Ns/2 - 1]
+    kId:  0                        #[-Ns/2, Ns/2 - 1]
     surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
 
 
@@ -48,7 +48,7 @@ ganglion:
     # DOG
         a: 0.62
         b: 1.26
-        c: 3.85
+        c: 0.85
     Wt:
     # TemporalDelta
         delay: 0
@@ -77,7 +77,7 @@ relay:
         w: -0.5
         spatial:
         #Gauss
-            a: 0.2
+            a: 0.3
 
         temporal:
         # TemporalDelta
@@ -91,7 +91,7 @@ relay:
         # DOG
             a: 0.1
             b: 0.9
-            c: 0.5
+            c: 2.0
 
         temporal:
         # TemporalDelta

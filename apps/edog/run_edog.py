@@ -69,7 +69,7 @@ w_rc = np.linspace(0, 0.9, 2)
 # widths = np.linspace(0, 3, 30)
 
 ds_vec = np.linspace(0.1, 0.1, 1)
-ns_vec = [7, 8, 9, 10, 11, 12]
+ns_vec = [7, 8, 9, 10, 11]
 
 #run simulator--------------------------------------------------------------------
 counter= 0
