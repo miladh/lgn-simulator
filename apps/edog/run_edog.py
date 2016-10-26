@@ -69,7 +69,7 @@ w_rc = np.linspace(0, 0.9, 2)
 # widths = np.linspace(0, 3, 30)
 
 ds_vec = np.linspace(0.1, 0.1, 1)
-ns_vec = [7, 8, 9, 10, 11]
+ns_vec = [7, 8, 9, 10]
 
 #run simulator--------------------------------------------------------------------
 counter= 0
@@ -82,7 +82,7 @@ modify_wrig(-0.5)
 modify_arig(0.3)
 # modify_diameter(1.68674698795)
 modify_diameter(10.)
-modify_spatial_freq(0)
+modify_spatial_freq(20)
 
 
 
