@@ -68,8 +68,8 @@ w_rc = np.linspace(0, 0.9, 2)
 # spatial_freqs = range(0, 90)
 # widths = np.linspace(0, 3, 30)
 
-ds_vec = np.linspace(0.1, 0.1, 1)
-ns_vec = [7, 8, 9, 10]
+ds_vec = [0.0125, 0.025, 0.05, 0.1]
+ns_vec = [11, 10, 9, 8]
 
 #run simulator--------------------------------------------------------------------
 counter= 0
@@ -81,13 +81,14 @@ modify_crc(2.0)
 modify_wrig(-0.5)
 modify_arig(0.3)
 # modify_diameter(1.68674698795)
-modify_diameter(10.)
-modify_spatial_freq(20)
+
+modify_diameter(1.5)
+modify_spatial_freq(0)
 
 
-
-for ns in ns_vec:
+for ns, ds in zip(ns_vec, ds_vec):
     modify_num_spatial_points(ns)
+    modify_spatial_resolution(ds)
     for w in w_rc:
         modify_wrc(w)
 ##########################################################
