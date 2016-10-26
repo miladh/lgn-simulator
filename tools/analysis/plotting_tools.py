@@ -488,6 +488,8 @@ if __name__ == "__main__":
 
 
     plt.figure()
+    # plt.plot( exp.integrator.k_points,exp.stimulus.fourier_transform()[0,Ns/2,:], '-g', label="S_ft")
+
     plt.plot( exp.integrator.k_points,exp.ganglion.irf_ft()[0,Ns/2,:], '-r', label="irf_ft")
     plt.plot( exp.integrator.k_points,exp.ganglion.resp_ft()[0,Ns/2,:], '-b', label="resp_ft")
     plt.legend()

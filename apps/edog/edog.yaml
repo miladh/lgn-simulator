@@ -3,15 +3,15 @@ description: "edog config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 9
+    ns: 11
     nt: 1
     dt: &dt_id 1.0
-    ds: &ds_id 0.2
+    ds: &ds_id 0.05
 
 #------------Stimulus settings-------------------#
 stimulus:
     storeSpatiotemporal: true
-    storeFT: false
+    storeFT: true
 
     # Grating:
     mask: "circle"  #none/circle/cscircle/gaussian
@@ -19,7 +19,7 @@ stimulus:
     C: 1.0
     surroundC: 1.0
 
-    maskSize: 0.1           #deg
+    maskSize: 10.          #deg
     surroundMaskSize : 0     #deg
 
     orientation: 0.                 #deg
@@ -28,7 +28,7 @@ stimulus:
     phase: 0.                      #deg
     surroundPhase: 0.0              #deg
 
-    kId:  3                        #[-Ns/2, Ns/2 - 1]
+    kId:  250                        #[-Ns/2, Ns/2 - 1]
     surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
 
 
@@ -48,7 +48,7 @@ ganglion:
     # DOG
         a: 0.62
         b: 1.26
-        c: 0.85
+        c: 3.85
     Wt:
     # TemporalDelta
         delay: 0
