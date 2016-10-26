@@ -3,10 +3,10 @@ description: "edog config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 12
+    ns: 9
     nt: 1
     dt: &dt_id 1.0
-    ds: &ds_id 0.05
+    ds: &ds_id 0.2
 
 #------------Stimulus settings-------------------#
 stimulus:
@@ -19,7 +19,7 @@ stimulus:
     C: 1.0
     surroundC: 1.0
 
-    maskSize: 1            #deg
+    maskSize: 0.1           #deg
     surroundMaskSize : 0     #deg
 
     orientation: 0.                 #deg
@@ -39,10 +39,10 @@ stimulus:
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: false
-    storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
+    storeResponse: true
+    storeResponseFT: true
+    storeImpulseResponse: true
+    storeImpulseResponseFT: true
     w: 1.0
     Wg:
     # DOG
@@ -57,9 +57,9 @@ ganglion:
 relay:
     R0 : 0
     storeResponse: true
-    storeResponseFT: false
+    storeResponseFT: true
     storeImpulseResponse: true
-    storeImpulseResponseFT: false
+    storeImpulseResponseFT: true
 
     #Kernels
     Krg:

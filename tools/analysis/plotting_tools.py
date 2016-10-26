@@ -378,18 +378,18 @@ if __name__ == "__main__":
     import Simulation as sim
     plt.close("all")
 
-    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/firingSynchrony/firingSynchrony.h5"
+    outputFile =  "/home/milad/Dropbox/projects/lgn/code/lgn-simulator/apps/edog/edog.h5"
     f = h5py.File(outputFile, "r")
 
     exp = sim.Simulation(None, f)
     Ns = exp.integrator.Ns
     Nt = exp.integrator.Nt
     #
-    S = {"type" : "Stimulus",
-             "value" : exp.stimulus.spatio_temporal(),
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-             }
+    # S = {"type" : "Stimulus",
+    #          "value" : exp.stimulus.spatio_temporal(),
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #          }
 
     # Wg = {"type" : "Ganglion",
     #             "value" : exp.ganglion.irf(),
@@ -451,16 +451,16 @@ if __name__ == "__main__":
 #                 "spatial_vec" : exp.integrator.k_points
 #                 }
 # # Response --------------------------------------------------------------------------
-    Rg = {"type" : "Ganglion",
-                 "value" : exp.ganglion.resp(),
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
-    Rr = {"type" : "Relay",
-              "value" : exp.relay.resp(),
-              "t_points" : exp.integrator.t_points,
-              "spatial_vec" : exp.integrator.s_points
-             }
+    # Rg = {"type" : "Ganglion",
+    #              "value" : exp.ganglion.resp(),
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
+    # Rr = {"type" : "Relay",
+    #           "value" : exp.relay.resp(),
+    #           "t_points" : exp.integrator.t_points,
+    #           "spatial_vec" : exp.integrator.s_points
+    #          }
     #
     # Ri = {"type" : "Interneuron",
     #          "value" : exp.interneuron.resp(),
@@ -472,25 +472,31 @@ if __name__ == "__main__":
     #              "t_points" : exp.integrator.t_points,
     #              "spatial_vec" : exp.integrator.s_points
     #             }
-
-    # data = [Wg, Wr, Wi, Wc]
-    # data = [ Rg, Rg, Wr,  Rr, Wr, Ri, Wi, Rc, Wc]
-    # data = [Rg, Rr, Ri, Rc]
-
-
+#############################################################################################
     # data = [S, Rg_ft, Rr_ft, Ri_ft, Rc_ft]
     #line3dPlotsOfImpulseResponses([Wg, Wr], num_skip = 30, idx=Ns/2, idy=Ns/2,y_line3d=False,)
     # imshowPlotsOfImpulseResponses([Wg, Wr, Wi, Wc],  idx=Ns/2, idy=Ns/2,y_imshow=False,)
+    # plt.figure()
+    # plt.plot(exp.integrator.t_points, exp.stimulus.spatio_temporal()[:, Ns/2,Ns/2], '-r', label="S")
+    # plt.plot(exp.integrator.t_points, exp.ganglion.resp()[:,Ns/4,Ns/2], '-g', label="G")
+    # plt.plot(exp.integrator.t_points, exp.relay.resp()[:,Ns/4,Ns/2], '-b', label="R")
+    # plt.legend()
+
+    # animate_imshow_plots([S,S, Rg, Rr], exp.integrator.dt,
+    #  colorbar = True, remove_axes = False,
+    #  save_animation = False, animation_name = "newTest")
+
+
     plt.figure()
-    plt.plot(exp.integrator.t_points, exp.stimulus.spatio_temporal()[:, Ns/2,Ns/2], '-r', label="S")
-    plt.plot(exp.integrator.t_points, exp.ganglion.resp()[:,Ns/4,Ns/2], '-g', label="G")
-    plt.plot(exp.integrator.t_points, exp.relay.resp()[:,Ns/4,Ns/2], '-b', label="R")
+    plt.plot( exp.integrator.k_points,exp.ganglion.irf_ft()[0,Ns/2,:], '-r', label="irf_ft")
+    plt.plot( exp.integrator.k_points,exp.ganglion.resp_ft()[0,Ns/2,:], '-b', label="resp_ft")
     plt.legend()
 
-    animate_imshow_plots([S,S, Rg, Rr], exp.integrator.dt,
-     colorbar = True, remove_axes = False,
-     save_animation = False, animation_name = "newTest")
+    plt.figure()
+    plt.plot( exp.integrator.s_points,exp.ganglion.irf()[0,Ns/2,:], '-r', label="irf")
+    plt.plot( exp.integrator.s_points,exp.ganglion.resp()[0,Ns/2,:], '-b', label="resp")
 
+    plt.legend()
 
 
     # plt.legend()
