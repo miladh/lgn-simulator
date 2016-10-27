@@ -78,10 +78,10 @@ ns_vec = [11, 10, 9, 8, 7]
 #run simulator--------------------------------------------------------------------
 counter= 0
 
-modify_wrc(0.0)
+modify_wrc(0.5)
+modify_crc(0.5)
 modify_arc(0.1)
 modify_brc(0.9)
-modify_crc(2.0)
 modify_wrig(0.0)
 modify_arig(0.3)
 
