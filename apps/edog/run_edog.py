@@ -73,12 +73,13 @@ with open(config_file, 'r') as stream:
 # widths = [0.1, 0.5, 2.5]
 # widths_b = [0.9, 2.5, 0.5]
 
-diameters = [0.5, 1.5, 3.5, 10]
+diameters = [1.7, 10]
 
 
 # ds_vec = [0.0125, 0.025, 0.05, 0.1, 0.2]
 ns_vec = [7, 8, 9, 10, 11]
-spatial_freqs = [1, 2, 3, 6, 12]
+kId = 16
+spatial_freqs = [int(kId/4), int(kId/2), kId, kId*2, kId*4]
 #run simulator--------------------------------------------------------------------
 counter= 0
 
@@ -92,9 +93,9 @@ modify_arig(0.3)
 modify_spatial_resolution(0.05)
 
 
-for ns, kId in zip(ns_vec, spatial_freqs):
+for ns, k in zip(ns_vec, spatial_freqs):
     modify_num_spatial_points(ns)
-    modify_spatial_freq(kId)
+    modify_spatial_freq(k)
     for d in diameters:
         modify_diameter(d)
 ##########################################################
