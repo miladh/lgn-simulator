@@ -78,7 +78,7 @@ diameters = [0.5, 1.5, 3.5, 10]
 
 # ds_vec = [0.0125, 0.025, 0.05, 0.1, 0.2]
 ns_vec = [7, 8, 9, 10, 11]
-
+spatial_freqs = [1, 2, 3, 6, 12]
 #run simulator--------------------------------------------------------------------
 counter= 0
 
@@ -90,11 +90,11 @@ modify_wrig(-0.5)
 modify_arig(0.3)
 
 modify_spatial_resolution(0.05)
-modify_spatial_freq(3)
 
 
-for ns in ns_vec:
+for ns, kId in zip(ns_vec, spatial_freqs):
     modify_num_spatial_points(ns)
+    modify_spatial_freq(kId)
     for d in diameters:
         modify_diameter(d)
 ##########################################################
