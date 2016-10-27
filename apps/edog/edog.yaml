@@ -58,8 +58,8 @@ relay:
     R0 : 0
     storeResponse: true
     storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: true
+    storeImpulseResponse: true
+    storeImpulseResponseFT: false
 
     #Kernels
     Krg:
