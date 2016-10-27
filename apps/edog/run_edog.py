@@ -78,7 +78,7 @@ diameters = [1.7, 10]
 
 # ds_vec = [0.0125, 0.025, 0.05, 0.1, 0.2]
 ns_vec = [7, 8, 9, 10, 11]
-kId = 16
+kId = 64
 spatial_freqs = [int(kId/4), int(kId/2), kId, kId*2, kId*4]
 #run simulator--------------------------------------------------------------------
 counter= 0
