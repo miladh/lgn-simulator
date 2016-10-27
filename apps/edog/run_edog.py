@@ -73,8 +73,8 @@ weights_c = [0.5, 1.5, 2.0]
 # widths = [0.1, 0.5, 2.5]
 # widths_b = [0.9, 2.5, 0.5]
 
-ds_vec = [0.0125, 0.025, 0.05, 0.1, 0.2]
-ns_vec = [11, 10, 9, 8, 7]
+# ds_vec = [0.0125, 0.025, 0.05, 0.1, 0.2]
+ns_vec = [7, 8, 9, 10, 11]
 
 #run simulator--------------------------------------------------------------------
 counter= 0
@@ -86,14 +86,13 @@ modify_brc(0.9)
 modify_wrig(0.0)
 modify_arig(0.3)
 
-
+modify_spatial_resolution(0.05)
 # modify_diameter(3.5)
 # modify_spatial_freq(0)
 
 
-for ns, ds in zip(ns_vec, ds_vec):
+for ns in ns_vec:
     modify_num_spatial_points(ns)
-    modify_spatial_resolution(ds)
     for w, c in zip(weights, weights_c):
         modify_wrc(w)
         modify_crc(c)
