@@ -90,7 +90,7 @@ modify_wrig(-0.5)
 modify_arig(0.3)
 
 modify_spatial_resolution(0.05)
-# modify_spatial_freq(0)
+modify_spatial_freq(3)
 
 
 for ns in ns_vec:
