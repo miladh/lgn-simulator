@@ -69,7 +69,7 @@ with open(config_file, 'r') as stream:
 # spatial_freqs = range(0, 90)
 
 # weights = [0.8, 0.8, 0.5]
-widths = [0.1 0.5, 2.5]
+widths = [0.1, 0.5, 2.5]
 widths_b = [0.9, 2.5, 0.5]
 
 ds_vec = [0.0125, 0.025, 0.05, 0.1, 0.2]
