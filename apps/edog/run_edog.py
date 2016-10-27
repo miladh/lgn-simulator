@@ -68,9 +68,10 @@ with open(config_file, 'r') as stream:
 # w_rc_c = np.linspace(0, 3, 4)
 # spatial_freqs = range(0, 90)
 
-# weights = [0.8, 0.8, 0.5]
-widths = [0.1, 0.5, 2.5]
-widths_b = [0.9, 2.5, 0.5]
+weights = [0.1, 0.5, 0.9]
+weights_c = [0.5, 1.5, 2.0]
+# widths = [0.1, 0.5, 2.5]
+# widths_b = [0.9, 2.5, 0.5]
 
 ds_vec = [0.0125, 0.025, 0.05, 0.1, 0.2]
 ns_vec = [11, 10, 9, 8, 7]
@@ -93,9 +94,9 @@ modify_arig(0.3)
 for ns, ds in zip(ns_vec, ds_vec):
     modify_num_spatial_points(ns)
     modify_spatial_resolution(ds)
-    for a, b in zip(widths, widths_b):
-        modify_arc(a)
-        modify_brc(b)
+    for w, c in zip(weights, weights_c):
+        modify_wrc(w)
+        modify_crc(c)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
