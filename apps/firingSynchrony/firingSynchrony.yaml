@@ -36,7 +36,7 @@ stimulus:
 
     sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/camera.jpg"
     delay: 10
-    period: 100
+    period: 400
 
 #-----------------Neuron settings------------------#
 ganglion:
@@ -92,7 +92,7 @@ relay:
             tau: 10
 
     Krc:
-        w: 0.5
+        w: 0.6
 
         spatial:
         # DOG

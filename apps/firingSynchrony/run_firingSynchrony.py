@@ -13,6 +13,16 @@ import sumatra_tracking.run_simulator as st
 def modify_phase(phase):
     config_data["stimulus"]["phase"] = float(phase)
 
+def modify_num_spatial_points(ns):
+    config_data["grid"]["ns"] = int(ns)
+
+def modify_spatial_resolution(ds):
+    config_data["grid"]["ds"] = float(ds)
+
+
+def modify_phase(phase):
+    config_data["stimulus"]["phase"] = float(phase)
+
 def modify_spatial_freq(d):
     config_data["stimulus"]["kId"] = int(d)
 
@@ -52,34 +62,38 @@ with open(config_file, 'r') as stream:
     config_data = yaml.load(stream)
 
 
+
 #parameters---------------------------------------------------------------------
-diameters = np.linspace(0., 15, 250)
-weights = np.linspace(0, 0.6, 4)
-# w_rc = np.linspace(0, 0.9, 4)
+# widths = np.linspace(0, 3, 30)
+weights = np.linspace(0, 0.9, 4)
+# diameters = np.linspace(0., 15, 250)
+# w_rc = np.linspace(0, 0.9, 2)
 # w_rc_c = np.linspace(0, 3, 4)
 # spatial_freqs = range(0, 90)
-# widths = np.linspace(0, 3, 30)
 
+# weights = [0.0, 0.6, 0.9]
+# weights_c = [0.5, 1.5, 2.0]
+# widths = [0.1, 0.5, 2.5]
+# widths_b = [0.9, 2.5, 0.5]
 
 #run simulator--------------------------------------------------------------------
 counter= 0
-
+modify_wrc(0.6)
+modify_crc(2.0)
 modify_arc(0.1)
 modify_brc(0.9)
-modify_crc(2.0)
 modify_wrig(-0.5)
 modify_arig(0.3)
 
-for w in weights:
-    modify_wrc(w)
-    for d in diameters:
-        modify_diameter(d)
-##########################################################
-        with open(config_file, 'w') as stream:
-            yaml.dump(config_data, stream)
 
-        run_id = '{0:04}'.format(counter)
-        st.run_simulator(config_file, record_label, run_id)
-        counter+=1
+for w in w_rc:
+    modify_wrc(w)
+##########################################################
+    with open(config_file, 'w') as stream:
+        yaml.dump(config_data, stream)
+
+    run_id = '{0:04}'.format(counter)
+    st.run_simulator(config_file, record_label, run_id)
+    counter+=1
 os.remove(config_file)
 ##########################################################
