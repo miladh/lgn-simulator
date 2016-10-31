@@ -86,7 +86,7 @@ modify_wrig(-0.5)
 modify_arig(0.3)
 
 
-for w in w_rc:
+for w in weights:
     modify_wrc(w)
 ##########################################################
     with open(config_file, 'w') as stream:
