@@ -479,8 +479,8 @@ if __name__ == "__main__":
     # imshowPlotsOfImpulseResponses([Wg, Wr, Wi, Wc],  idx=Ns/2, idy=Ns/2,y_imshow=False,)
     plt.figure()
     plt.plot(exp.integrator.t_points, exp.stimulus.spatio_temporal()[:, Ns/2,Ns/2], '-r', label="S")
-    plt.plot(exp.integrator.t_points, exp.ganglion.resp()[:,Ns/4,Ns/2], '-g', label="G")
-    plt.plot(exp.integrator.t_points, exp.relay.resp()[:,Ns/4,Ns/2], '-b', label="R")
+    plt.plot(exp.integrator.t_points, exp.ganglion.resp()[:,Ns/2,Ns/2], '-g', label="G")
+    plt.plot(exp.integrator.t_points, exp.relay.resp()[:,Ns/2,Ns/2], '-b', label="R")
     plt.legend()
 
     animate_imshow_plots([S, S, Rg, Rr], exp.integrator.dt,

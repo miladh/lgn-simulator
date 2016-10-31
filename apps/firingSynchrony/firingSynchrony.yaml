@@ -88,7 +88,7 @@ relay:
         temporal:
             dt: *dt_id
         # DecayingExponential
-            delay: 6.     #ms
+            delay: 4.     #ms
             tau: 10
 
     Krc:
@@ -103,8 +103,8 @@ relay:
         temporal:
             dt: *dt_id
         # DecayingExponential
-            delay: 20.    #ms
-            tau: 20
+            delay: 10.    #ms
+            tau: 10
 
 
 
