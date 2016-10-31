@@ -2,7 +2,7 @@ description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 9
+    ns: 8
     nt: 8
     dt: &dt_id 2.
     ds: &ds_id 0.05
@@ -13,13 +13,13 @@ stimulus:
     storeFT: false
 
     # Grating:
-    mask: "none"  #none/circle/cscircle/gaussian
+    mask: "cscircle"  #none/circle/cscircle/gaussian
 
     C: 1.0
     surroundC: 1.0
 
-    maskSize: 1            #deg
-    surroundMaskSize : 0     #deg
+    maskSize: 1.6            #deg
+    surroundMaskSize : 10.     #deg
 
     orientation: 0.                 #deg
     surroundOrientation : 0.0       #deg
@@ -27,11 +27,11 @@ stimulus:
     phase: 0.                      #deg
     surroundPhase: 0.0              #deg
 
-    kId:  0                        #[-Ns/2, Ns/2 - 1]
-    surroundkId:  0                 #[-Ns/2, Ns/2 - 1]
+    kId:  10                        #[-Ns/2, Ns/2 - 1]
+    surroundkId: 10                 #[-Ns/2, Ns/2 - 1]
 
 
-    wId:  0                         #[-Nt/2, Nt/2 - 1]
+    wId:  1                         #[-Nt/2, Nt/2 - 1]
     surroundwId:  0                 #[-Nt/2, Nt/2 - 1]
 
     sceneFilename : "/home/milad/Dropbox/projects/lgn/code/stimuli/camera.jpg"
