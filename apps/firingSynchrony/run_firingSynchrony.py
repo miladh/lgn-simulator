@@ -31,7 +31,7 @@ def modify_diameter(d):
 
 
 def modify_surround_temp_freq(wId):
-    config_data["stimulus"]["surroundwId"] = float(wId)
+    config_data["stimulus"]["surroundwId"] = int(wId)
 
 
 def modify_wrc(w):
