@@ -107,7 +107,7 @@ modify_arig(0.3)
 for w_rig in w_rig_vec:
     modify_wrig(w_rig)
     for w_rc in w_rc_vec:
-        modify_wrc(w)
+        modify_wrc(w_rc)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)
