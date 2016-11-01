@@ -100,7 +100,7 @@ relay:
 
         temporal:
         # DecayingExponential
-            delay: 10.    #ms
+            delay: 30.    #ms
             tau: 20
 
 
