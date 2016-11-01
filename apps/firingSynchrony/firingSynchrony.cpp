@@ -31,8 +31,8 @@ int main(int argc, char* argv[])
     Integrator integrator = createIntegrator(cfg["grid"]);
 
     //Stim---------------------------------------------------------------------
-//    unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg["stimulus"]);
-        unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator, cfg["stimulus"]);
+    unique_ptr<Grating> S = createGratingStimulus(&integrator, cfg["stimulus"]);
+//    unique_ptr<StaticImage> S = createStaticImageStimulus(&integrator, cfg["stimulus"]);
 //    unique_ptr<NaturalSceneVideo> S = createNaturalSceneVideoStimulus(&integrator, cfg["stimulus"]);
 
 
@@ -40,7 +40,6 @@ int main(int argc, char* argv[])
     //Ganglion cell:-----------------------------------------------------------
     DOG Wg_s = createSpatialDOGKernel(cfg["ganglion"]["Wg"]);
     Biphasic Wg_t = createTemporalBiphasicKernel(cfg["ganglion"]["Wt"]);
-//    TemporalDelta Wg_t = createTemporalDeltaKernel(cfg["ganglion"]["Wt"]);
     SeparableKernel Wg(cfg["ganglion"]["w"].as<double>(), &Wg_s, &Wg_t);
 
     GanglionCell ganglion(&integrator, Wg, cfg["ganglion"]["R0"].as<double>());
@@ -51,23 +50,17 @@ int main(int argc, char* argv[])
 
     // G -> R
     SpatialGaussian Ks_rg = createSpatialGaussianKernel(cfg["relay"]["Krg"]["spatial"]);
-//    DecayingExponential Kt_rg = createTemporalDecayingExponentialKernel(cfg["relay"]["Krg"]["temporal"]);
-    TemporalDelta Kt_rg = createTemporalDeltaKernel(cfg["relay"]["Krg"]["temporal"]);
-
+    DecayingExponential Kt_rg = createTemporalDecayingExponentialKernel(cfg["relay"]["Krg"]["temporal"]);
     SeparableKernel Krg(cfg["relay"]["Krg"]["w"].as<double>(), &Ks_rg, &Kt_rg);
 
     // G -> I -> R
     SpatialGaussian Ks_rig = createSpatialGaussianKernel(cfg["relay"]["Krig"]["spatial"]);
-//    DecayingExponential Kt_rig = createTemporalDecayingExponentialKernel(cfg["relay"]["Krig"]["temporal"]);
-    TemporalDelta Kt_rig = createTemporalDeltaKernel(cfg["relay"]["Krig"]["temporal"]);
-
+    DecayingExponential Kt_rig = createTemporalDecayingExponentialKernel(cfg["relay"]["Krig"]["temporal"]);
     SeparableKernel Krig(cfg["relay"]["Krig"]["w"].as<double>(), &Ks_rig, &Kt_rig);
 
     // C -> R
     DOG Ks_rc = createSpatialDOGKernel(cfg["relay"]["Krc"]["spatial"]);
-//    DecayingExponential Kt_rc = createTemporalDecayingExponentialKernel(cfg["relay"]["Krc"]["temporal"]);
-    TemporalDelta Kt_rc = createTemporalDeltaKernel(cfg["relay"]["Krc"]["temporal"]);
-
+    DecayingExponential Kt_rc = createTemporalDecayingExponentialKernel(cfg["relay"]["Krc"]["temporal"]);
     SeparableKernel Krc(cfg["relay"]["Krc"]["w"].as<double>(), &Ks_rc, &Kt_rc);
 
 

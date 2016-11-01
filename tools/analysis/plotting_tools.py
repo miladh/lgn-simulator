@@ -386,11 +386,11 @@ if __name__ == "__main__":
     Ns = exp.integrator.Ns
     Nt = exp.integrator.Nt
 
-    S = {"type" : "Stimulus",
-             "value" : exp.stimulus.spatio_temporal(),
-             "t_points" : exp.integrator.t_points,
-             "spatial_vec" : exp.integrator.s_points
-             }
+    # S = {"type" : "Stimulus",
+    #          "value" : exp.stimulus.spatio_temporal(),
+    #          "t_points" : exp.integrator.t_points,
+    #          "spatial_vec" : exp.integrator.s_points
+    #          }
 
     # Wg = {"type" : "Ganglion",
     #             "value" : exp.ganglion.irf(),
@@ -452,11 +452,11 @@ if __name__ == "__main__":
 #                 "spatial_vec" : exp.integrator.k_points
 #                 }
 # # Response --------------------------------------------------------------------------
-    Rg = {"type" : "Ganglion",
-                 "value" : exp.ganglion.resp(),
-                 "t_points" : exp.integrator.t_points,
-                 "spatial_vec" : exp.integrator.s_points
-                }
+    # Rg = {"type" : "Ganglion",
+    #              "value" : exp.ganglion.resp(),
+    #              "t_points" : exp.integrator.t_points,
+    #              "spatial_vec" : exp.integrator.s_points
+    #             }
     Rr = {"type" : "Relay",
               "value" : exp.relay.resp(),
               "t_points" : exp.integrator.t_points,
@@ -480,10 +480,10 @@ if __name__ == "__main__":
     # plt.figure()
     # plt.plot(exp.integrator.t_points, exp.stimulus.spatio_temporal()[:, Ns/2,Ns/2], '-r', label="S")
     # plt.plot(exp.integrator.t_points, exp.ganglion.resp()[:,Ns/2,Ns/2], '-g', label="G")
-    # plt.plot(exp.integrator.t_points, exp.relay.resp()[:,Ns/2,Ns/2], '-b', label="R")
+    plt.plot(exp.integrator.t_points, exp.relay.resp()[:,Ns/2,Ns/2], '-b', label="R")
     # plt.legend()
 
-    animate_imshow_plots([S, S, Rg, Rr], exp.integrator.dt,
+    animate_imshow_plots([Rr, Rr], exp.integrator.dt,
      colorbar = True, remove_axes = False,
      save_animation = False, animation_name = "newTest")
 

@@ -47,12 +47,25 @@ def modify_crc(c):
     config_data["relay"]["Krc"]["spatial"]["c"] = float(c)
 
 
+def modify_tau_rc(t):
+    config_data["relay"]["Krc"]["temporal"]["tau"] = float(t)
+
+def modify_delay_rc(t):
+    config_data["relay"]["Krc"]["temporal"]["delay"] = float(t)
+
+
 def modify_arig(a):
     config_data["relay"]["Krig"]["spatial"]["a"] = float(a)
 
 def modify_wrig(w):
     config_data["relay"]["Krig"]["w"] = float(w)
 
+
+def modify_tau_rig(t):
+    config_data["relay"]["Krig"]["temporal"]["tau"] = float(t)
+
+def modify_delay_rig(t):
+    config_data["relay"]["Krig"]["temporal"]["delay"] = float(t)
 
 
 #read config file--------------------------------------------------------------
@@ -68,34 +81,33 @@ with open(config_file, 'r') as stream:
 
 #parameters---------------------------------------------------------------------
 # widths = np.linspace(0, 3, 30)
-weights = np.linspace(0, 0.9, 4)
+# weights = np.linspace(0, 0.9, 4)
 # diameters = np.linspace(0., 15, 250)
 # w_rc = np.linspace(0, 0.9, 2)
 # w_rc_c = np.linspace(0, 3, 4)
 # spatial_freqs = range(0, 90)
 
-# weights = [0.0, 0.6, 0.9]
-# weights_c = [0.5, 1.5, 2.0]
+w_rig_vec = np.linspace(0, 0.9, 4)*-1
+w_rc_vec =  np.linspace(0, 0.9, 4)
 # widths = [0.1, 0.5, 2.5]
 # widths_b = [0.9, 2.5, 0.5]
-wId_vec = range(-5, 6)
+# wId_vec = range(-5, 6)
 
 
 #run simulator--------------------------------------------------------------------
 counter= 0
-modify_wrc(0.6)
+# modify_wrc(0.6)
 modify_crc(2.0)
 modify_arc(0.1)
 modify_brc(0.9)
-modify_wrig(-0.5)
+# modify_wrig(-0.5)
 modify_arig(0.3)
 
 
-
-for w in weights:
-    modify_wrc(w)
-    for wId in wId_vec:
-        modify_surround_temp_freq(wId)
+for w_rig in w_rig_vec:
+    modify_wrig(w_rig)
+    for w_rc in w_rc_vec:
+        modify_wrc(w)
 ##########################################################
         with open(config_file, 'w') as stream:
             yaml.dump(config_data, stream)

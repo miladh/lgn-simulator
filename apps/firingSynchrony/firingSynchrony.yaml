@@ -9,7 +9,7 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: true
+    storeSpatiotemporal: false
     storeFT: false
 
     # Grating:
@@ -41,7 +41,7 @@ stimulus:
 #-----------------Neuron settings------------------#
 ganglion:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: false
     storeImpulseResponseFT: false
@@ -61,7 +61,7 @@ ganglion:
 
 relay:
     R0 : 0
-    storeResponse: true
+    storeResponse: false
     storeResponseFT: false
     storeImpulseResponse: true
     storeImpulseResponseFT: false
@@ -74,7 +74,6 @@ relay:
             a: 0.1
 
         temporal:
-            dt: *dt_id
         # DecayingExponential
             delay: 4.     #ms
             tau: 10
@@ -86,7 +85,6 @@ relay:
             a: 0.3
 
         temporal:
-            dt: *dt_id
         # DecayingExponential
             delay: 4.     #ms
             tau: 10
@@ -101,10 +99,9 @@ relay:
             c: 2.0
 
         temporal:
-            dt: *dt_id
         # DecayingExponential
             delay: 10.    #ms
-            tau: 10
+            tau: 20
 
 
 
