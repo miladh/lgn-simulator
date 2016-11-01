@@ -2,7 +2,7 @@ description: "Firing synchrony config file"
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 8
+    ns: 9
     nt: 8
     dt: &dt_id 2.
     ds: &ds_id 0.05

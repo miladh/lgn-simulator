@@ -477,11 +477,11 @@ if __name__ == "__main__":
     # data = [S, Rg_ft, Rr_ft, Ri_ft, Rc_ft]
     #line3dPlotsOfImpulseResponses([Wg, Wr], num_skip = 30, idx=Ns/2, idy=Ns/2,y_line3d=False,)
     # imshowPlotsOfImpulseResponses([Wg, Wr, Wi, Wc],  idx=Ns/2, idy=Ns/2,y_imshow=False,)
-    plt.figure()
-    plt.plot(exp.integrator.t_points, exp.stimulus.spatio_temporal()[:, Ns/2,Ns/2], '-r', label="S")
-    plt.plot(exp.integrator.t_points, exp.ganglion.resp()[:,Ns/2,Ns/2], '-g', label="G")
-    plt.plot(exp.integrator.t_points, exp.relay.resp()[:,Ns/2,Ns/2], '-b', label="R")
-    plt.legend()
+    # plt.figure()
+    # plt.plot(exp.integrator.t_points, exp.stimulus.spatio_temporal()[:, Ns/2,Ns/2], '-r', label="S")
+    # plt.plot(exp.integrator.t_points, exp.ganglion.resp()[:,Ns/2,Ns/2], '-g', label="G")
+    # plt.plot(exp.integrator.t_points, exp.relay.resp()[:,Ns/2,Ns/2], '-b', label="R")
+    # plt.legend()
 
     animate_imshow_plots([S, S, Rg, Rr], exp.integrator.dt,
      colorbar = True, remove_axes = False,
