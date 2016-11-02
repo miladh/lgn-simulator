@@ -75,8 +75,8 @@ relay:
 
         temporal:
         # DecayingExponential
-            delay: 0.     #ms
-            tau: 20
+            delay: 4.     #ms
+            tau: 10
 
     Krig:
         w: -0.5
@@ -86,8 +86,8 @@ relay:
 
         temporal:
         # DecayingExponential
-            delay: 0.     #ms
-            tau: 20
+            delay: 4.     #ms
+            tau: 10
 
     Krc:
         w: 0.6
@@ -100,7 +100,7 @@ relay:
 
         temporal:
         # DecayingExponential
-            delay: 30.    #ms
+            delay: 10.    #ms
             tau: 20
 
 

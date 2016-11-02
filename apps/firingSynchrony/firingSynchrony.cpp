@@ -138,8 +138,10 @@ int main(int argc, char* argv[])
     if( cfg["relay"]["storeImpulseResponse"].as<bool>()){
         relay.computeImpulseResponse();
         io.writeImpulseResponse(relay,
-                                span(integrator.nPointsSpatial()/2-1, integrator.nPointsSpatial()/2+1),
-                                span(integrator.nPointsSpatial()/2-1, integrator.nPointsSpatial()/2+1),
+//                                span(integrator.nPointsSpatial()/2-1, integrator.nPointsSpatial()/2+1),
+//                                span(integrator.nPointsSpatial()/2-1, integrator.nPointsSpatial()/2+1),
+                                span::all,
+                                span::all,
                                 span::all);
         relay.clearImpulseResponse();
     }
