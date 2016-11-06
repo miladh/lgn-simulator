@@ -1,6 +1,13 @@
 [![Build Status](https://travis-ci.org/miladh/lgn-simulator.svg?branch=dev)](https://travis-ci.org/miladh/lgn-simulator)
 
-LGN Simulator
-===========================
+# lgn-simulator
 
-Firing-rate-based model of spatiotemporal LGN relay-cell responses to visual stimuli incorporating cortical feedback.
+A firing-rate based, visual stimulus-driven simulator of spatiotemporal cell responses in lateral geniculate nucleus (LGN). 
+
+## Documentation
+
+See [Documentation](http://miladh.github.io/lgn-simulator/doc/index.html)
+
+## License
+
+This project is licensed under GNU GPL v3.0 - see the [LICENSE.md](https://github.com/miladh/lgn-simulator/blob/dev/LICENSE) file for details
