@@ -6,7 +6,9 @@ RUN apt-get install -qq sudo
 RUN sudo apt-get -qq update
 RUN sudo apt-get -qq install software-properties-common
 RUN sudo apt-get -qq install python-software-properties
-RUN sudo apt-get -qq install qt5-default
+RUN sudo apt-add-repository -y ppa:beineri/opt-qt57-xenial
+RUN sudo apt-get -qq update
+RUN sudo apt-get -qq install qt573d qt57charts-no-lgpl qt57datavis-no-lgpl qt57declarative qt57svg
 
 
 # needed by build
@@ -19,7 +21,6 @@ RUN sudo apt-get -qq install libfftw3-dev\
     libboost-dev\
     libarmadillo-dev\
     python-yaml
-
 
 
 WORKDIR /app
