@@ -15,7 +15,8 @@ RUN sudo apt-get -qq install qt573d qt57charts-no-lgpl qt57datavis-no-lgpl qt57d
 RUN sudo apt-get -qq install patch git build-essential curl
 
 # needed by build
-RUN sudo apt-get -qq install libfftw3-dev\
+RUN sudo apt-get -qq install ccache\
+    libfftw3-dev\
     libhdf5-dev\
     libyaml-dev\
     libyaml-cpp-dev\
