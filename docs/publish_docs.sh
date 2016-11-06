@@ -11,10 +11,10 @@ then
 fi
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 ROOTDIR=$DIR/../..
-DOCSDIR=$DIR/../../edog-docs/
+DOCSDIR=$DIR/../../lgn-simulator-docs/
 
 if [ -d $DOCSDIR/.git ]; then
-  echo "All good, found edog-docs with git repo."
+  echo "All good, found lgn-simulator-docs with git repo."
   cd $DOCSDIR
   git add --all doc
   git commit -am "$MESSAGE"
