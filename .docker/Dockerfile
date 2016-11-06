@@ -10,6 +10,9 @@ RUN sudo apt-add-repository -y ppa:beineri/opt-qt57-xenial
 RUN sudo apt-get -qq update
 RUN sudo apt-get -qq install qt573d qt57charts-no-lgpl qt57datavis-no-lgpl qt57declarative qt57svg
 
+# install packages needed by configure
+RUN sudo apt-get -qq install patch git build-essential curl
+
 
 # needed by build
 RUN sudo apt-get -qq install libfftw3-dev\
