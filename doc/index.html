@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- index.qdoc -->
-  <title>About | lgn-simulator </title>
+  <title>About | lgn-simulator</title>
   <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
   <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
   <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
@@ -63,7 +63,7 @@
 <span class="subtitle"></span>
 <!-- $$$index.html-description -->
 <div class="descr"> <a name="details"></a>
-<p>LGN simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex. The model behind is a linear mechanistic, firing rate model that incorporates the influence of thalamocortical loops, in addition to the feedforward responses. This simulator can be used to study the characteristics of cortical feedback to LGN. These characteristics includes strength, spatial spread and temporal properties.</p>
+<p>lgn-simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early part of the visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex. The model behind is a linear mechanistic, firing rate model that incorporates the influence of thalamocortical loops, in addition to the feedforward responses. This simulator can be used to study the characteristics of cortical feedback to LGN. These characteristics includes strength, spatial spread and temporal properties.</p>
 <ul>
 <li><a href="https://github.com/miladh/lgn-simulator">Source code</a></li>
 </ul>
@@ -80,16 +80,64 @@
 <li><a href="dlgncircuit.html">The dLGN circuit</a></li>
 </ul>
 <a name="implementation"></a>
-<h2 id="implementation">Implementation</h2>
+<h3 >Implementation</h3>
 <ul>
 <li><a href="ft.html">Fourier transform</a></li>
 </ul>
-<a name="systems"></a>
-<h2 id="systems">Systems</h2>
+<a name="getting-started"></a>
+<h2 id="getting-started">Getting started</h2>
+<a name="development-and-technical-details"></a>
+<h2 id="development-and-technical-details">Development and technical details</h2>
+<p>lgn-simulator is written in C++ using <a href="http://qt.io">Qt Creator</a>. The main classes are:</p>
 <ul>
-<li><a href="phasereversedpushpull.html">Phase-reversed push-pull</a></li>
-<li><a href="nonlaggedxcells.html">nonlagged X-cells</a></li>
+<li><a href="lgnsimulator-integrator.html">lgnSimulator::Integrator</a>: computes the forward and backwrad FFT of both 2d and 3d datasets.</li>
+<li><a href="lgnsimulator-stimulus.html">lgnSimulator::Stimulus</a>: virtual class for different stimulus types.</li>
+<li><a href="lgnsimulator-neuron.html">lgnSimulator::Neuron</a>: virtual class for different neurons types.</li>
+<li><a href="lgnsimulator-kernel.html">lgnSimulator::Kernel</a>: virtual class for different Kernels.</li>
 </ul>
+<a name="neurons"></a>
+<h3 >Neurons</h3>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-corticalcell.html">lgnSimulator::CorticalCell</a></p></td><td class="tblDescr"><p>Class</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-ganglioncell.html">lgnSimulator::GanglionCell</a></p></td><td class="tblDescr"><p>Class</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-relaycell.html">lgnSimulator::RelayCell</a></p></td><td class="tblDescr"><p>Class</p></td></tr>
+</table></div>
+<a name="kernels"></a>
+<h3 >Kernels</h3>
+<p>Non-seperable kernels can be added by creating a subclass of <a href="lgnsimulator-kernel.html">lgnSimulator::Kernel</a>. ALternatively a seperable kernel can be added by creating a subclass of <a href="lgnsimulator-separablekernel.html">lgnSimulator::SeparableKernel</a>, which is also a subclass of <a href="lgnsimulator-kernel.html">lgnSimulator::Kernel</a>. Seperable kernels consist of a <a href="lgnsimulator-spatialkernel.html">lgnSimulator::SpatialKernel</a> and a <a href="lgnsimulator-temporalkernel.html">lgnSimulator::TemporalKernel</a>.</p>
+<a name="spatial-kernels"></a>
+<h4 >Spatial kernels:</h4>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-dog.html">lgnSimulator::DOG</a></p></td><td class="tblDescr"><p>Spatial difference of Gaussians kernel</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-ellipticgaussian.html">lgnSimulator::EllipticGaussian</a></p></td><td class="tblDescr"><p>Spatial elliptic Gaussian kernel</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-spatialdelta.html">lgnSimulator::SpatialDelta</a></p></td><td class="tblDescr"><p>Spatial delta kernel</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-spatialgaussian.html">lgnSimulator::SpatialGaussian</a></p></td><td class="tblDescr"><p>Spatial Gaussian kernel</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-spatiallyconstant.html">lgnSimulator::SpatiallyConstant</a></p></td><td class="tblDescr"><p>Constant spatial kernel</p></td></tr>
+</table></div>
+<a name="temporal-kernels"></a>
+<h4 >Temporal kernels:</h4>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-biphasic.html">lgnSimulator::Biphasic</a></p></td><td class="tblDescr"><p>Temporal biphasic kernel</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-doe.html">lgnSimulator::DOE</a></p></td><td class="tblDescr"><p>Temporal difference of exponentials kernel</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-decayingexponential.html">lgnSimulator::DecayingExponential</a></p></td><td class="tblDescr"><p>Temporal decaying exponential kernel</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-temporaldelta.html">lgnSimulator::TemporalDelta</a></p></td><td class="tblDescr"><p>Temporal delta kernel</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-temporalgaussian.html">lgnSimulator::TemporalGaussian</a></p></td><td class="tblDescr"><p>Temporal Gaussian kernel</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-temporallyconstant.html">lgnSimulator::TemporallyConstant</a></p></td><td class="tblDescr"><p>Constant temporal kernel</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-twosidedexponentialdecay.html">lgnSimulator::TwoSidedExponentialDecay</a></p></td><td class="tblDescr"><p>Temporal two sided exponential decay kernel</p></td></tr>
+</table></div>
+<a name="stimulus"></a>
+<h3 >Stimulus</h3>
+<p>The stimlus can be both gratings (<a href="lgnsimulator-grating.html">lgnSimulator::Grating</a>) or natural scenes/movies (<a href="lgnsimulator-naturalscene.html">lgnSimulator::NaturalScene</a> and <a href="lgnsimulator-naturalscenevideo.html">lgnSimulator::NaturalSceneVideo</a>).</p>
+<p>Grating stimuli:</p>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-cscirclemaskgrating.html">lgnSimulator::CSCircleMaskGrating</a></p></td><td class="tblDescr"><p>Grating stimulus with a center mask and a surround mask</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-circlemaskgrating.html">lgnSimulator::CircleMaskGrating</a></p></td><td class="tblDescr"><p>Grating stimulus with circular mask</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-fullfieldgrating.html">lgnSimulator::FullFieldGrating</a></p></td><td class="tblDescr"><p>Grating stimulus without mask</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-gaussianmaskgrating.html">lgnSimulator::GaussianMaskGrating</a></p></td><td class="tblDescr"><p>Grating stimulus with gaussian mask</p></td></tr>
+</table></div>
+<a name="all-classes"></a>
+<h3 >All classes</h3>
+<p>List of all classes in the simulator is found here: <a href="allclasses.html">All classes</a></p>
 </div>
 <!-- @@@index.html -->
 </div>

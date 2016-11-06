@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- grating.cpp -->
+  <title>Grating Class | lgn-simulator</title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>Grating</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#reimplemented-public-functions">Reimplemented Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Grating Class</h1>
+<span class="small-subtitle">(<a href="lgnsimulator-grating.html">lgnSimulator::Grating</a>)<br/></span>
+<!-- $$$Grating-brief -->
+<p>Virtual class for grating stimulus. <a href="#details">More...</a></p>
+<!-- @@@Grating -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;Grating&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="lgnsimulator-stimulus.html">Stimulus</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="lgnsimulator-circlemaskgrating.html">lgnSimulator::CircleMaskGrating</a>, <a href="lgnsimulator-cscirclemaskgrating.html">lgnSimulator::CSCircleMaskGrating</a>, <a href="lgnsimulator-fullfieldgrating.html">lgnSimulator::FullFieldGrating</a>, and <a href="lgnsimulator-gaussianmaskgrating.html">lgnSimulator::GaussianMaskGrating</a></p>
+</td></tr></table></div><ul>
+<li><a href="lgnsimulator-grating-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#Grating">Grating</a></b>(Integrator * const <i>integrator</i>, double <i>spatialFreq</i>, double <i>temporalFreq</i>, double <i>contrast</i>, double <i>phase</i>, double <i>orientation</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#dtor.Grating">~Grating</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#contrast">contrast</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual complex&lt;double&gt; </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#fourierTransformAtFrequency">fourierTransformAtFrequency</a></b>(vec2 <i>k</i>, double <i>w</i>) const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> vec2 </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#kVec">kVec</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> string </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#mask">mask</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#orientation">orientation</a></b>(bool <i>inDegrees</i> = false) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#phase">phase</a></b>(bool <i>inDegrees</i> = false) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#spatialFreq">spatialFreq</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#temporalFreq">temporalFreq</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#valueAtPoint">valueAtPoint</a></b>(vec2 <i>r</i>, double <i>t</i>) const = 0</td></tr>
+</table></div>
+<a name="reimplemented-public-functions"></a>
+<h2 id="reimplemented-public-functions">Reimplemented Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#computeFourierTransform">computeFourierTransform</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-grating.html#computeSpatiotemporal">computeSpatiotemporal</a></b>()</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="lgnsimulator-stimulus.html#public-functions">lgnSimulator::Stimulus</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$Grating-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>Virtual class for grating stimulus.</p>
+</div>
+<!-- @@@Grating -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Grating[overload1]$$$GratingIntegrator*constdoubledoubledoubledoubledouble -->
+<h3 class="fn" id="Grating"><a name="Grating"></a>Grating::<span class="name">Grating</span>(<span class="type"><a href="lgnsimulator-integrator.html">Integrator</a></span> * const <i>integrator</i>, <span class="type">double</span> <i>spatialFreq</i>, <span class="type">double</span> <i>temporalFreq</i>, <span class="type">double</span> <i>contrast</i>, <span class="type">double</span> <i>phase</i>, <span class="type">double</span> <i>orientation</i>)</h3>
+<p>Default constructs an instance of Grating.</p><!-- @@@Grating -->
+<!-- $$$~Grating[overload1]$$$~Grating -->
+<h3 class="fn" id="dtor.Grating"><a name="dtor.Grating"></a>Grating::<span class="name">~Grating</span>()</h3>
+<p>Destroys the instance of Grating.</p><!-- @@@~Grating -->
+<!-- $$$computeFourierTransform[overload1]$$$computeFourierTransform -->
+<h3 class="fn" id="computeFourierTransform"><a name="computeFourierTransform"></a><code>[virtual] </code><span class="type">void</span> Grating::<span class="name">computeFourierTransform</span>()</h3>
+<!-- @@@computeFourierTransform -->
+<!-- $$$computeSpatiotemporal[overload1]$$$computeSpatiotemporal -->
+<h3 class="fn" id="computeSpatiotemporal"><a name="computeSpatiotemporal"></a><code>[virtual] </code><span class="type">void</span> Grating::<span class="name">computeSpatiotemporal</span>()</h3>
+<!-- @@@computeSpatiotemporal -->
+<!-- $$$contrast[overload1]$$$contrast -->
+<h3 class="fn" id="contrast"><a name="contrast"></a><span class="type">double</span> Grating::<span class="name">contrast</span>() const</h3>
+<!-- @@@contrast -->
+<!-- $$$fourierTransformAtFrequency[overload1]$$$fourierTransformAtFrequencyvec2double -->
+<h3 class="fn" id="fourierTransformAtFrequency"><a name="fourierTransformAtFrequency"></a><code>[pure virtual] </code><span class="type">complex</span>&lt;<span class="type">double</span>&gt; Grating::<span class="name">fourierTransformAtFrequency</span>(<span class="type">vec2</span> <i>k</i>, <span class="type">double</span> <i>w</i>) const</h3>
+<!-- @@@fourierTransformAtFrequency -->
+<!-- $$$kVec[overload1]$$$kVec -->
+<h3 class="fn" id="kVec"><a name="kVec"></a><span class="type">vec2</span> Grating::<span class="name">kVec</span>() const</h3>
+<!-- @@@kVec -->
+<!-- $$$mask[overload1]$$$mask -->
+<h3 class="fn" id="mask"><a name="mask"></a><span class="type">string</span> Grating::<span class="name">mask</span>() const</h3>
+<!-- @@@mask -->
+<!-- $$$orientation[overload1]$$$orientationbool -->
+<h3 class="fn" id="orientation"><a name="orientation"></a><span class="type">double</span> Grating::<span class="name">orientation</span>(<span class="type">bool</span> <i>inDegrees</i> = false) const</h3>
+<!-- @@@orientation -->
+<!-- $$$phase[overload1]$$$phasebool -->
+<h3 class="fn" id="phase"><a name="phase"></a><span class="type">double</span> Grating::<span class="name">phase</span>(<span class="type">bool</span> <i>inDegrees</i> = false) const</h3>
+<!-- @@@phase -->
+<!-- $$$spatialFreq[overload1]$$$spatialFreq -->
+<h3 class="fn" id="spatialFreq"><a name="spatialFreq"></a><span class="type">double</span> Grating::<span class="name">spatialFreq</span>() const</h3>
+<!-- @@@spatialFreq -->
+<!-- $$$temporalFreq[overload1]$$$temporalFreq -->
+<h3 class="fn" id="temporalFreq"><a name="temporalFreq"></a><span class="type">double</span> Grating::<span class="name">temporalFreq</span>() const</h3>
+<!-- @@@temporalFreq -->
+<!-- $$$valueAtPoint[overload1]$$$valueAtPointvec2double -->
+<h3 class="fn" id="valueAtPoint"><a name="valueAtPoint"></a><code>[pure virtual] </code><span class="type">double</span> Grating::<span class="name">valueAtPoint</span>(<span class="type">vec2</span> <i>r</i>, <span class="type">double</span> <i>t</i>) const</h3>
+<!-- @@@valueAtPoint -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

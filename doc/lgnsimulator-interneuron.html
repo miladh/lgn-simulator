@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Interneuron Class | lgn-simulator</title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>Interneuron</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#reimplemented-public-functions">Reimplemented Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Interneuron Class</h1>
+<span class="small-subtitle">(<a href="lgnsimulator-interneuron.html">lgnSimulator::Interneuron</a>)<br/></span>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="lgnsimulator-neuron.html">Neuron</a></td></tr></table></div><ul>
+<li><a href="lgnsimulator-interneuron-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-interneuron.html#Interneuron">Interneuron</a></b>(Integrator * const <i>integrator</i>, double <i>backgroundResponse</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-interneuron.html#dtor.Interneuron">~Interneuron</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-interneuron.html#addCorticalCell">addCorticalCell</a></b>(Neuron * const <i>neuron</i>, const Kernel &amp;<i>kernel</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-interneuron.html#addGanglionCell">addGanglionCell</a></b>(Neuron * const <i>neuron</i>, const Kernel &amp;<i>kernel</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> vector&lt;Input&gt; </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-interneuron.html#corticalNeurons">corticalNeurons</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> vector&lt;Input&gt; </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-interneuron.html#ganglionCells">ganglionCells</a></b>() const</td></tr>
+</table></div>
+<a name="reimplemented-public-functions"></a>
+<h2 id="reimplemented-public-functions">Reimplemented Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-interneuron.html#computeImpulseResponseFourierTransform">computeImpulseResponseFourierTransform</a></b>()</td></tr>
+</table></div>
+<ul>
+<li class="fn">13 public functions inherited from <a href="lgnsimulator-neuron.html#public-functions">lgnSimulator::Neuron</a></li>
+</ul>
+<a name="details"></a>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Interneuron[overload1]$$$InterneuronIntegrator*constdouble -->
+<h3 class="fn" id="Interneuron"><a name="Interneuron"></a>Interneuron::<span class="name">Interneuron</span>(<span class="type"><a href="lgnsimulator-integrator.html">Integrator</a></span> * const <i>integrator</i>, <span class="type">double</span> <i>backgroundResponse</i> = 0)</h3>
+<p>Default constructs an instance of Interneuron.</p><!-- @@@Interneuron -->
+<!-- $$$~Interneuron[overload1]$$$~Interneuron -->
+<h3 class="fn" id="dtor.Interneuron"><a name="dtor.Interneuron"></a>Interneuron::<span class="name">~Interneuron</span>()</h3>
+<p>Destroys the instance of Interneuron.</p><!-- @@@~Interneuron -->
+<!-- $$$addCorticalCell[overload1]$$$addCorticalCellNeuron*constconstKernel& -->
+<h3 class="fn" id="addCorticalCell"><a name="addCorticalCell"></a><span class="type">void</span> Interneuron::<span class="name">addCorticalCell</span>(<span class="type"><a href="lgnsimulator-neuron.html#Neuron">Neuron</a></span> * const <i>neuron</i>, const <span class="type"><a href="lgnsimulator-kernel.html">Kernel</a></span> &amp;<i>kernel</i>)</h3>
+<!-- @@@addCorticalCell -->
+<!-- $$$addGanglionCell[overload1]$$$addGanglionCellNeuron*constconstKernel& -->
+<h3 class="fn" id="addGanglionCell"><a name="addGanglionCell"></a><span class="type">void</span> Interneuron::<span class="name">addGanglionCell</span>(<span class="type"><a href="lgnsimulator-neuron.html#Neuron">Neuron</a></span> * const <i>neuron</i>, const <span class="type"><a href="lgnsimulator-kernel.html">Kernel</a></span> &amp;<i>kernel</i>)</h3>
+<!-- @@@addGanglionCell -->
+<!-- $$$computeImpulseResponseFourierTransform[overload1]$$$computeImpulseResponseFourierTransform -->
+<h3 class="fn" id="computeImpulseResponseFourierTransform"><a name="computeImpulseResponseFourierTransform"></a><code>[virtual] </code><span class="type">void</span> Interneuron::<span class="name">computeImpulseResponseFourierTransform</span>()</h3>
+<!-- @@@computeImpulseResponseFourierTransform -->
+<!-- $$$corticalNeurons[overload1]$$$corticalNeurons -->
+<h3 class="fn" id="corticalNeurons"><a name="corticalNeurons"></a><span class="type">vector</span>&lt;<span class="type"><a href="lgnsimulator-neuron-input.html">Input</a></span>&gt; Interneuron::<span class="name">corticalNeurons</span>() const</h3>
+<!-- @@@corticalNeurons -->
+<!-- $$$ganglionCells[overload1]$$$ganglionCells -->
+<h3 class="fn" id="ganglionCells"><a name="ganglionCells"></a><span class="type">vector</span>&lt;<span class="type"><a href="lgnsimulator-neuron-input.html">Input</a></span>&gt; Interneuron::<span class="name">ganglionCells</span>() const</h3>
+<!-- @@@ganglionCells -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

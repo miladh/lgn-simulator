@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- integrator.cpp -->
+  <title>Integrator Class | lgn-simulator</title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>Integrator</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Integrator Class</h1>
+<span class="small-subtitle">(<a href="lgnsimulator-integrator.html">lgnSimulator::Integrator</a>)<br/></span>
+<!-- $$$Integrator-brief -->
+<p>The Integrator class for computing the FFT. <a href="#details">More...</a></p>
+<!-- @@@Integrator -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;Integrator&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="lgnsimulator-integrator-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#Integrator">Integrator</a></b>(const int <i>nt</i>, const double <i>temporalResolution</i>, const int <i>ns</i>, const double <i>spatialResolution</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#dtor.Integrator">~Integrator</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cube </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#backwardFFT">backwardFFT</a></b>(const cx_cube &amp;<i>in</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cx_cube </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#forwardFFT">forwardFFT</a></b>(const cube &amp;<i>in</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cx_mat </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#forwardFFT-1">forwardFFT</a></b>(const mat &amp;<i>in</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#lengthInterval">lengthInterval</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#nPointsSpatial">nPointsSpatial</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#nPointsTemporal">nPointsTemporal</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#spatialFreqResolution">spatialFreqResolution</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> vec </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#spatialFreqVec">spatialFreqVec</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#spatialResolution">spatialResolution</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#spatialSamplingFreq">spatialSamplingFreq</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> vec </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#spatialVec">spatialVec</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#temporalFreqResolution">temporalFreqResolution</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> vec </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#temporalFreqVec">temporalFreqVec</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#temporalResolution">temporalResolution</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#temporalSamplingFreq">temporalSamplingFreq</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#timeInterval">timeInterval</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> vec </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-integrator.html#timeVec">timeVec</a></b>() const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$Integrator-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The Integrator class for computing the FFT.</p>
+</div>
+<!-- @@@Integrator -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Integrator[overload1]$$$Integratorconstintconstdoubleconstintconstdouble -->
+<h3 class="fn" id="Integrator"><a name="Integrator"></a>Integrator::<span class="name">Integrator</span>(const <span class="type">int</span> <i>nt</i>, const <span class="type">double</span> <i>temporalResolution</i>, const <span class="type">int</span> <i>ns</i>, const <span class="type">double</span> <i>spatialResolution</i>)</h3>
+<p>Default constructs an instance of Integrator.</p><!-- @@@Integrator -->
+<!-- $$$~Integrator[overload1]$$$~Integrator -->
+<h3 class="fn" id="dtor.Integrator"><a name="dtor.Integrator"></a>Integrator::<span class="name">~Integrator</span>()</h3>
+<p>Destroys the instance of Integrator.</p><!-- @@@~Integrator -->
+<!-- $$$backwardFFT[overload1]$$$backwardFFTconstcx_cube& -->
+<h3 class="fn" id="backwardFFT"><a name="backwardFFT"></a><span class="type">cube</span> Integrator::<span class="name">backwardFFT</span>(const <span class="type">cx_cube</span> &amp;<i>in</i>)</h3>
+<!-- @@@backwardFFT -->
+<!-- $$$forwardFFT[overload1]$$$forwardFFTconstcube& -->
+<h3 class="fn" id="forwardFFT"><a name="forwardFFT"></a><span class="type">cx_cube</span> Integrator::<span class="name">forwardFFT</span>(const <span class="type">cube</span> &amp;<i>in</i>)</h3>
+<!-- @@@forwardFFT -->
+<!-- $$$forwardFFT$$$forwardFFTconstmat& -->
+<h3 class="fn" id="forwardFFT-1"><a name="forwardFFT-1"></a><span class="type">cx_mat</span> Integrator::<span class="name">forwardFFT</span>(const <span class="type">mat</span> &amp;<i>in</i>)</h3>
+<!-- @@@forwardFFT -->
+<!-- $$$lengthInterval[overload1]$$$lengthInterval -->
+<h3 class="fn" id="lengthInterval"><a name="lengthInterval"></a><span class="type">double</span> Integrator::<span class="name">lengthInterval</span>() const</h3>
+<!-- @@@lengthInterval -->
+<!-- $$$nPointsSpatial[overload1]$$$nPointsSpatial -->
+<h3 class="fn" id="nPointsSpatial"><a name="nPointsSpatial"></a><span class="type">int</span> Integrator::<span class="name">nPointsSpatial</span>() const</h3>
+<!-- @@@nPointsSpatial -->
+<!-- $$$nPointsTemporal[overload1]$$$nPointsTemporal -->
+<h3 class="fn" id="nPointsTemporal"><a name="nPointsTemporal"></a><span class="type">int</span> Integrator::<span class="name">nPointsTemporal</span>() const</h3>
+<!-- @@@nPointsTemporal -->
+<!-- $$$spatialFreqResolution[overload1]$$$spatialFreqResolution -->
+<h3 class="fn" id="spatialFreqResolution"><a name="spatialFreqResolution"></a><span class="type">double</span> Integrator::<span class="name">spatialFreqResolution</span>() const</h3>
+<!-- @@@spatialFreqResolution -->
+<!-- $$$spatialFreqVec[overload1]$$$spatialFreqVec -->
+<h3 class="fn" id="spatialFreqVec"><a name="spatialFreqVec"></a><span class="type">vec</span> Integrator::<span class="name">spatialFreqVec</span>() const</h3>
+<!-- @@@spatialFreqVec -->
+<!-- $$$spatialResolution[overload1]$$$spatialResolution -->
+<h3 class="fn" id="spatialResolution"><a name="spatialResolution"></a><span class="type">double</span> Integrator::<span class="name">spatialResolution</span>() const</h3>
+<!-- @@@spatialResolution -->
+<!-- $$$spatialSamplingFreq[overload1]$$$spatialSamplingFreq -->
+<h3 class="fn" id="spatialSamplingFreq"><a name="spatialSamplingFreq"></a><span class="type">double</span> Integrator::<span class="name">spatialSamplingFreq</span>() const</h3>
+<!-- @@@spatialSamplingFreq -->
+<!-- $$$spatialVec[overload1]$$$spatialVec -->
+<h3 class="fn" id="spatialVec"><a name="spatialVec"></a><span class="type">vec</span> Integrator::<span class="name">spatialVec</span>() const</h3>
+<!-- @@@spatialVec -->
+<!-- $$$temporalFreqResolution[overload1]$$$temporalFreqResolution -->
+<h3 class="fn" id="temporalFreqResolution"><a name="temporalFreqResolution"></a><span class="type">double</span> Integrator::<span class="name">temporalFreqResolution</span>() const</h3>
+<!-- @@@temporalFreqResolution -->
+<!-- $$$temporalFreqVec[overload1]$$$temporalFreqVec -->
+<h3 class="fn" id="temporalFreqVec"><a name="temporalFreqVec"></a><span class="type">vec</span> Integrator::<span class="name">temporalFreqVec</span>() const</h3>
+<!-- @@@temporalFreqVec -->
+<!-- $$$temporalResolution[overload1]$$$temporalResolution -->
+<h3 class="fn" id="temporalResolution"><a name="temporalResolution"></a><span class="type">double</span> Integrator::<span class="name">temporalResolution</span>() const</h3>
+<!-- @@@temporalResolution -->
+<!-- $$$temporalSamplingFreq[overload1]$$$temporalSamplingFreq -->
+<h3 class="fn" id="temporalSamplingFreq"><a name="temporalSamplingFreq"></a><span class="type">double</span> Integrator::<span class="name">temporalSamplingFreq</span>() const</h3>
+<!-- @@@temporalSamplingFreq -->
+<!-- $$$timeInterval[overload1]$$$timeInterval -->
+<h3 class="fn" id="timeInterval"><a name="timeInterval"></a><span class="type">double</span> Integrator::<span class="name">timeInterval</span>() const</h3>
+<!-- @@@timeInterval -->
+<!-- $$$timeVec[overload1]$$$timeVec -->
+<h3 class="fn" id="timeVec"><a name="timeVec"></a><span class="type">vec</span> Integrator::<span class="name">timeVec</span>() const</h3>
+<!-- @@@timeVec -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

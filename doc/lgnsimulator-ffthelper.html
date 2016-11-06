@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>FFTHelper Class | lgn-simulator</title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>FFTHelper</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">FFTHelper Class</h1>
+<span class="small-subtitle">(<a href="lgnsimulator-ffthelper.html">lgnSimulator::FFTHelper</a>)<br/></span>
+<ul>
+<li><a href="lgnsimulator-ffthelper-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#FFTHelper">FFTHelper</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#dtor.FFTHelper">~FFTHelper</a></b>()</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> vec </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#fftFreq">fftFreq</a></b>(int <i>windowLength</i>, double <i>sampleSpacing</i> = 1.)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cx_vec </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#fftShift">fftShift</a></b>(cx_vec <i>x</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> vec </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#fftShift-1">fftShift</a></b>(vec <i>x</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> mat </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#fftShift-2">fftShift</a></b>(mat <i>x</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cube </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#fftShift-3">fftShift</a></b>(cube <i>x</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cx_mat </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#fftShift-4">fftShift</a></b>(cx_mat <i>x</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cx_cube </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#fftShift-5">fftShift</a></b>(cx_cube <i>x</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> mat </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#ifftShift">ifftShift</a></b>(mat <i>x</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cube </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#ifftShift-1">ifftShift</a></b>(cube <i>x</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cx_mat </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#ifftShift-2">ifftShift</a></b>(cx_mat <i>x</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> cx_cube </td><td class="memItemRight bottomAlign"><b><a href="lgnsimulator-ffthelper.html#ifftShift-3">ifftShift</a></b>(cx_cube <i>x</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$FFTHelper[overload1]$$$FFTHelper -->
+<h3 class="fn" id="FFTHelper"><a name="FFTHelper"></a>FFTHelper::<span class="name">FFTHelper</span>()</h3>
+<p>Default constructs an instance of FFTHelper.</p><!-- @@@FFTHelper -->
+<!-- $$$~FFTHelper[overload1]$$$~FFTHelper -->
+<h3 class="fn" id="dtor.FFTHelper"><a name="dtor.FFTHelper"></a>FFTHelper::<span class="name">~FFTHelper</span>()</h3>
+<p>Destroys the instance of FFTHelper.</p><!-- @@@~FFTHelper -->
+<!-- $$$fftFreq[overload1]$$$fftFreqintdouble -->
+<h3 class="fn" id="fftFreq"><a name="fftFreq"></a><code>[static] </code><span class="type">vec</span> FFTHelper::<span class="name">fftFreq</span>(<span class="type">int</span> <i>windowLength</i>, <span class="type">double</span> <i>sampleSpacing</i> = 1.)</h3>
+<!-- @@@fftFreq -->
+<!-- $$$fftShift[overload1]$$$fftShiftcx_vec -->
+<h3 class="fn" id="fftShift"><a name="fftShift"></a><code>[static] </code><span class="type">cx_vec</span> FFTHelper::<span class="name">fftShift</span>(<span class="type">cx_vec</span> <i>x</i>)</h3>
+<!-- @@@fftShift -->
+<!-- $$$fftShift$$$fftShiftvec -->
+<h3 class="fn" id="fftShift-1"><a name="fftShift-1"></a><code>[static] </code><span class="type">vec</span> FFTHelper::<span class="name">fftShift</span>(<span class="type">vec</span> <i>x</i>)</h3>
+<!-- @@@fftShift -->
+<!-- $$$fftShift$$$fftShiftmat -->
+<h3 class="fn" id="fftShift-2"><a name="fftShift-2"></a><code>[static] </code><span class="type">mat</span> FFTHelper::<span class="name">fftShift</span>(<span class="type">mat</span> <i>x</i>)</h3>
+<!-- @@@fftShift -->
+<!-- $$$fftShift$$$fftShiftcube -->
+<h3 class="fn" id="fftShift-3"><a name="fftShift-3"></a><code>[static] </code><span class="type">cube</span> FFTHelper::<span class="name">fftShift</span>(<span class="type">cube</span> <i>x</i>)</h3>
+<!-- @@@fftShift -->
+<!-- $$$fftShift$$$fftShiftcx_mat -->
+<h3 class="fn" id="fftShift-4"><a name="fftShift-4"></a><code>[static] </code><span class="type">cx_mat</span> FFTHelper::<span class="name">fftShift</span>(<span class="type">cx_mat</span> <i>x</i>)</h3>
+<!-- @@@fftShift -->
+<!-- $$$fftShift$$$fftShiftcx_cube -->
+<h3 class="fn" id="fftShift-5"><a name="fftShift-5"></a><code>[static] </code><span class="type">cx_cube</span> FFTHelper::<span class="name">fftShift</span>(<span class="type">cx_cube</span> <i>x</i>)</h3>
+<!-- @@@fftShift -->
+<!-- $$$ifftShift[overload1]$$$ifftShiftmat -->
+<h3 class="fn" id="ifftShift"><a name="ifftShift"></a><code>[static] </code><span class="type">mat</span> FFTHelper::<span class="name">ifftShift</span>(<span class="type">mat</span> <i>x</i>)</h3>
+<!-- @@@ifftShift -->
+<!-- $$$ifftShift$$$ifftShiftcube -->
+<h3 class="fn" id="ifftShift-1"><a name="ifftShift-1"></a><code>[static] </code><span class="type">cube</span> FFTHelper::<span class="name">ifftShift</span>(<span class="type">cube</span> <i>x</i>)</h3>
+<!-- @@@ifftShift -->
+<!-- $$$ifftShift$$$ifftShiftcx_mat -->
+<h3 class="fn" id="ifftShift-2"><a name="ifftShift-2"></a><code>[static] </code><span class="type">cx_mat</span> FFTHelper::<span class="name">ifftShift</span>(<span class="type">cx_mat</span> <i>x</i>)</h3>
+<!-- @@@ifftShift -->
+<!-- $$$ifftShift$$$ifftShiftcx_cube -->
+<h3 class="fn" id="ifftShift-3"><a name="ifftShift-3"></a><code>[static] </code><span class="type">cx_cube</span> FFTHelper::<span class="name">ifftShift</span>(<span class="type">cx_cube</span> <i>x</i>)</h3>
+<!-- @@@ifftShift -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
