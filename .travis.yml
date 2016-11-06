@@ -8,5 +8,5 @@ services: docker
 before_install:
 - docker build -t miladh/lgn-simulator -f .docker/Dockerfile .
 script:
-- docker run miladh/lgn-simulator bash -c "/opt/qt57/bin/qmake lgnSimulator.pro && make
+- docker run miladh/lgn-simulator bash -c "/opt/qt57/bin/qmake lgnSimulator.pro && bin/make
   -j8 "
