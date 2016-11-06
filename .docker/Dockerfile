@@ -23,6 +23,8 @@ RUN sudo apt-get -qq install ccache\
     libgsl-dev\
     catch\
     libboost-dev\
+    lboost_system\
+    lboost_filesystem\
     libarmadillo-dev\
     libopencv-dev\
     python-yaml
