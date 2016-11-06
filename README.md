@@ -6,7 +6,7 @@ A firing-rate based, visual stimulus-driven simulator of spatiotemporal cell res
 
 ## Documentation
 
-See [Documentation](http://miladh.github.io/lgn-simulator/doc/index.html)
+See [Documentation](http://miladh.github.io/lgn-simulator/doc/index.html) (in development)
 
 ## License
 
