@@ -9,4 +9,4 @@ before_install:
 - docker build -t miladh/lgn-simulator -f .docker/Dockerfile .
 script:
 - docker run miladh/lgn-simulator bash -c "/opt/qt57/bin/qmake lgnSimulator.pro && make
-  -j8 "
+  -j8 && cd tests && ./lgnSimulator_tests"

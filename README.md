@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/miladh/lgn-simulator.svg?branch=dev)](https://travis-ci.org/miladh/lgn-simulator)
+
 LGN Simulator
 ===========================
 
