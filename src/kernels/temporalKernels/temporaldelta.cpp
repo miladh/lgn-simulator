@@ -1,5 +1,12 @@
 #include "temporaldelta.h"
 
+/*!
+  \class lgnSimulator::TemporalDelta
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-temporalKernel
+  \brief Temporal delta kernel.
+ */
+
 using namespace lgnSimulator;
 
 

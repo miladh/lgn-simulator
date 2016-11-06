@@ -1,5 +1,12 @@
 #include "fullfieldgrating.h"
 
+/*!
+ \class lgnSimulator::FullFieldGrating
+ \inmodule lgnSimulator
+ \ingroup lgnSimulator-gratingStimulus
+ \brief Grating stimulus without mask.
+ */
+
 using namespace lgnSimulator;
 
 

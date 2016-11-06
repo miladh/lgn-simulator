@@ -1,5 +1,12 @@
 #include "temporalGaussian.h"
 
+/*!
+  \class lgnSimulator::TemporalGaussian
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-temporalKernel
+  \brief Temporal Gaussian kernel.
+ */
+
 using namespace lgnSimulator;
 
 TemporalGaussian::TemporalGaussian(double A, double a, double delay)

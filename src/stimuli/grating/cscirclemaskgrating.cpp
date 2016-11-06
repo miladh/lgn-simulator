@@ -1,5 +1,11 @@
 #include "cscirclemaskgrating.h"
 
+/*!
+ \class lgnSimulator::CSCircleMaskGrating
+ \inmodule lgnSimulator
+ \ingroup lgnSimulator-gratingStimulus
+ \brief Grating stimulus with a center mask and a surround mask.
+ */
 
 using namespace lgnSimulator;
 CSCircleMaskGrating::CSCircleMaskGrating(Integrator* const integrator,

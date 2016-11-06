@@ -1,5 +1,13 @@
 #include "ellipticgaussian.h"
 
+
+/*!
+  \class lgnSimulator::EllipticGaussian
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-spatialKernel
+  \brief Spatial elliptic Gaussian kernel.
+ */
+
 using namespace lgnSimulator;
 
 

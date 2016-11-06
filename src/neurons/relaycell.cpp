@@ -3,11 +3,10 @@
 using namespace lgnSimulator;
 
 /*!
- * \class RelayCell
- * \inmodule lgnSimulator
- * \ingroup lgnSimulator-neurons
- * \brief Relay cell class.
- *
+  \class lgnSimulator::RelayCell
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-neurons
+  \brief The RelayCell class.
  */
 
 RelayCell::RelayCell(Integrator* const integrator, double backgroundResponse)

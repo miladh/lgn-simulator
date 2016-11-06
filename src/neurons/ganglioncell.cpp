@@ -1,5 +1,12 @@
 #include "ganglioncell.h"
 
+/*!
+  \class lgnSimulator::GanglionCell
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-neurons
+  \brief The GanglionCell class.
+ */
+
 using namespace lgnSimulator;
 
 

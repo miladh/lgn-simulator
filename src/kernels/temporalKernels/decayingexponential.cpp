@@ -1,5 +1,12 @@
 #include "decayingexponential.h"
 
+/*!
+  \class lgnSimulator::DecayingExponential
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-temporalKernel
+  \brief Temporal decaying exponential kernel.
+ */
+
 using namespace lgnSimulator;
 
 

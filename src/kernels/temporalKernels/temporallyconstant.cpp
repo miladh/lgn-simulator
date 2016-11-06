@@ -1,5 +1,12 @@
 #include "temporallyconstant.h"
 
+/*!
+  \class lgnSimulator::TemporallyConstant
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-temporalKernel
+  \brief Constant temporal kernel.
+ */
+
 using namespace lgnSimulator;
 
 

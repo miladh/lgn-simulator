@@ -1,5 +1,12 @@
 #include "doe.h"
 
+/*!
+  \class lgnSimulator::DOE
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-temporalKernel
+  \brief Temporal difference of exponentials kernel.
+ */
+
 using namespace lgnSimulator;
 
 DOE::DOE(double cenLatency, double surLatency, double delay)

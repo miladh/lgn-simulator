@@ -1,5 +1,12 @@
 #include "spatiallyconstant.h"
 
+/*!
+  \class lgnSimulator::SpatiallyConstant
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-spatialKernel
+  \brief Constant spatial kernel.
+ */
+
 using namespace lgnSimulator;
 
 

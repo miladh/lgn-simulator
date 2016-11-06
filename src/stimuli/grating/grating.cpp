@@ -5,6 +5,12 @@
 #include "gaussianmaskgrating.h"
 #include "cscirclemaskgrating.h"
 
+/*!
+ \class lgnSimulator::Grating
+ \inmodule lgnSimulator-stimulus
+ \brief Virtual class for grating stimulus.
+ */
+
 
 using namespace lgnSimulator;
 

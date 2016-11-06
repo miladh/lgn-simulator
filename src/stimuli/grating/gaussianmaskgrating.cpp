@@ -1,5 +1,12 @@
 #include "gaussianmaskgrating.h"
 
+/*!
+ \class lgnSimulator::GaussianMaskGrating
+ \inmodule lgnSimulator
+ \ingroup lgnSimulator-gratingStimulus
+ \brief Grating stimulus with gaussian mask.
+ */
+
 using namespace lgnSimulator;
 GaussianMaskGrating::GaussianMaskGrating(Integrator* const integrator,
                                          double spatialFreq, double temporalFreq,

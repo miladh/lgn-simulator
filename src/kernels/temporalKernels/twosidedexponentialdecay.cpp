@@ -1,5 +1,13 @@
 #include "twosidedexponentialdecay.h"
 
+/*!
+  \class lgnSimulator::TwoSidedExponentialDecay
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-temporalKernel
+  \brief Temporal two sided exponential decay kernel.
+ */
+
+
 using namespace lgnSimulator;
 
 TwoSidedExponentialDecay::TwoSidedExponentialDecay(double tau, double delay)

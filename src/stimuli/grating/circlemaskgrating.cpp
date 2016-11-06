@@ -1,5 +1,12 @@
 #include "circlemaskgrating.h"
 
+/*!
+ \class lgnSimulator::CircleMaskGrating
+ \inmodule lgnSimulator
+ \ingroup lgnSimulator-gratingStimulus
+ \brief Grating stimulus with circular mask.
+ */
+
 using namespace lgnSimulator;
 
 

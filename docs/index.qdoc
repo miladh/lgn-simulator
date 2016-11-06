@@ -3,7 +3,7 @@
     \title About
     \tableofcontents
 
-LGN simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early part of the visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex.
+lgn-simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early part of the visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex.
 The model behind is a linear mechanistic, firing rate model that incorporates the influence of thalamocortical loops, in addition to the feedforward responses.
 This simulator can be used to study the characteristics of cortical feedback to LGN.
 These characteristics includes strength, spatial spread and temporal properties.
@@ -25,25 +25,60 @@ These characteristics includes strength, spatial spread and temporal properties.
         \li \l{The dLGN circuit}
         \endlist
 
-    \section1 Implementation
+    \section2 Implementation
 
         \list
         \li \l{Fourier transform}
         \endlist
 
+    \section1 Getting started
 
-    \section1 Systems
-        \list
-        \li \l{Phase-reversed push-pull}
-        \li \l{nonlagged X-cells}
-        \endlist
 
+    \section1 Development and technical details
+lgn-simulator is written in C++ using \l{http://qt.io}{Qt Creator}.
+The main classes are:
+
+    \list
+    \li \l{lgnSimulator::Integrator}: computes the forward and backwrad FFT of both 2d and 3d datasets.
+    \li \l{lgnSimulator::Stimulus}: virtual class for different stimulus types.
+    \li \l{lgnSimulator::Neuron}: virtual class for different neurons types.
+    \li \l{lgnSimulator::Kernel}: virtual class for different Kernels.
+    \endlist
+
+
+    \section2 Neurons
 
     \annotatedlist lgnSimulator-neurons
-    \generatelist{classesbymodule lgnSimulator}
+
+    \section2 Kernels
+    Non-seperable kernels can be added by creating a subclass of \l{lgnSimulator::Kernel}. ALternatively a seperable kernel can be added by creating a subclass of \l{lgnSimulator::SeparableKernel}, which is also a subclass of \l{lgnSimulator::Kernel}. Seperable kernels consist of a \l{lgnSimulator::SpatialKernel} and a \l{lgnSimulator::TemporalKernel}.
+
+
+    \section3 Spatial kernels:
+
+    \annotatedlist lgnSimulator-spatialKernel
+
+
+    \section3 Temporal kernels:
+
+    \annotatedlist lgnSimulator-temporalKernel
+
+
+    \section2 Stimulus
+    The stimlus can be both gratings (\l{lgnSimulator::Grating}) or natural scenes/movies (\l{lgnSimulator::NaturalScene} and  \l{lgnSimulator::NaturalSceneVideo}).
+
+    Grating stimuli:
+
+    \annotatedlist lgnSimulator-gratingStimulus
+
+
+
+    \section2 All classes
+    List of all classes in the simulator is found here: \l{All classes}
+
+
+
 
 */
-
-
 
 

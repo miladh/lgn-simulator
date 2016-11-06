@@ -1,5 +1,12 @@
 #include "naturalscene.h"
 
+/*!
+ \class lgnSimulator::NaturalScene
+ \inmodule lgnSimulator-stimulus
+ \brief Stimulus class for natural scenes.
+ */
+
+
 using namespace lgnSimulator;
 
 

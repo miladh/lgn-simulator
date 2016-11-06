@@ -1,13 +1,13 @@
 #include "neuron.h"
 
+/*!
+ \class lgnSimulator::Neuron
+ \inmodule lgnSimulator
+ \brief Virtual class for neurons.
+ */
+
 using namespace lgnSimulator;
 
-/*!
- * \class Neuron
- * \inmodule lgnSimulator
- * \brief Virtual class for neurons.
- *
- */
 
 
 Neuron::Neuron(Integrator* const integrator,

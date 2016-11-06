@@ -1,5 +1,11 @@
 #include "integrator.h"
 
+/*!
+ \class lgnSimulator::Integrator
+ \inmodule lgnSimulator
+ \brief The Integrator class for computing the FFT.
+ */
+
 using namespace lgnSimulator;
 
 

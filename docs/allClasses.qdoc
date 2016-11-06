@@ -1,0 +1,11 @@
+/*!
+    \page allclasses.html
+
+    \title All classes
+    \inmodule lgn-simulator
+
+List of all classes in lgn-simulator:
+
+ \generatelist classes
+
+*/

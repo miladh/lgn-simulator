@@ -1,5 +1,13 @@
 #include "spatialdelta.h"
 
+/*!
+  \class lgnSimulator::SpatialDelta
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-spatialKernel
+  \brief Spatial delta kernel.
+ */
+
+
 using namespace lgnSimulator;
 SpatialDelta::SpatialDelta(double spatialResolution, vec2 shift)
     : m_peak(1./spatialResolution/spatialResolution)

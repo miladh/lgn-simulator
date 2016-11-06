@@ -1,6 +1,13 @@
 #include "spatialgaussian.h"
 
 
+/*!
+  \class lgnSimulator::SpatialGaussian
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-spatialKernel
+  \brief Spatial Gaussian kernel.
+ */
+
 using namespace lgnSimulator;
 
 SpatialGaussian::SpatialGaussian(double a)

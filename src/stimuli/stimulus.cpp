@@ -1,5 +1,11 @@
 #include "stimulus.h"
 
+/*!
+ \class lgnSimulator::Stimulus
+ \inmodule lgnSimulator
+ \brief The Stimulus class.
+ */
+
 using namespace lgnSimulator;
 
 

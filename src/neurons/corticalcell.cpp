@@ -1,5 +1,12 @@
 #include "corticalcell.h"
 
+/*!
+  \class lgnSimulator::CorticalCell
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-neurons
+  \brief The CorticalCell class.
+ */
+
 using namespace lgnSimulator;
 
 

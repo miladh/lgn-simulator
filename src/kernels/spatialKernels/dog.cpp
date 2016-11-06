@@ -1,5 +1,12 @@
 #include "dog.h"
 
+/*!
+  \class lgnSimulator::DOG
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-spatialKernel
+  \brief Spatial difference of Gaussians kernel.
+ */
+
 
 using namespace lgnSimulator;
 

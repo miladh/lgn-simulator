@@ -1,5 +1,12 @@
 #include "biphasic.h"
 
+/*!
+  \class lgnSimulator::Biphasic
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-temporalKernel
+  \brief Temporal biphasic kernel.
+ */
+
 using namespace lgnSimulator;
 
 

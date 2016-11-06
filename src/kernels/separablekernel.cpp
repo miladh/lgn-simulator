@@ -1,5 +1,12 @@
 #include "separablekernel.h"
 
+/*!
+  \class lgnSimulator::SeparableKernel
+  \inmodule lgnSimulator
+  \ingroup lgnSimulator-kernels
+  \brief A virtual class for (space-time) seperable kernels.
+ */
+
 using namespace lgnSimulator;
 
 SeparableKernel::SeparableKernel(double weight,
