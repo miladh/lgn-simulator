@@ -24,6 +24,7 @@ RUN sudo apt-get -qq install ccache\
     catch\
     libboost-dev\
     libarmadillo-dev\
+    libopencv-dev\
     python-yaml
 
 
