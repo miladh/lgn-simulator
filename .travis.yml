@@ -5,23 +5,23 @@ compiler:
 - gcc
 sudo: required
 before_install:
-- sudo apt-get -qq install ccache\
-    libfftw3-dev\
-    libhdf5-dev\
-    libyaml-dev\
-    libyaml-cpp-dev\
-    libgsl-dev\
-    catch\
-    libboost-dev\
-    libboost-system-dev\
-    libboost-filesystem-dev\
-    libarmadillo-dev\
-    libopencv-dev\
-    python-yaml\
+- sudo apt-get -qq install ccache
+    libfftw3-dev
+    libhdf5-dev
+    libyaml-dev
+    libyaml-cpp-dev
+    libgsl-dev
+    catch
+    libboost-dev
+    libboost-system-dev
+    libboost-filesystem-dev
+    libarmadillo-dev
+    libopencv-dev
+    python-yaml
     qt5-default
 install:
 - /usr/lib/x86_64-linux-gnu/qt5/bin/qmake
 - make
 script:
 - echo "Running tests..."
-- LD_LIBRARY_PATH=lib tests/lgnSimulator_tests 
+- LD_LIBRARY_PATH=lib tests/lgnSimulator_tests exclude:slow
