@@ -17,7 +17,6 @@ RelayCell::RelayCell(Integrator* const integrator, double backgroundResponse)
 
 RelayCell::~RelayCell()
 {
-
 }
 
 void RelayCell::computeImpulseResponseFourierTransform()
@@ -103,7 +102,6 @@ complex<double> RelayCell::corticalInput(int kxi, int kyi, int wi)const
         corticalFB += Krc * Kcr;
 
     }
-
 
     return corticalFB;
 

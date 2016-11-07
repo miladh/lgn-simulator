@@ -1,5 +1,9 @@
 description: "config file"
 
+#------------File manager settings-----------------#
+OutputManager:
+    outputFilename: "out.h5"
+
 #------------Integrator settings-----------------#
 grid:
     ns: 6
@@ -9,11 +13,8 @@ grid:
 
 #------------Stimulus settings-------------------#
 stimulus:
-    storeSpatiotemporal: true
-    storeFT: false
-
     # Grating:
-    mask: "none"  #none/circle/gaussian
+    mask: "none"  #none/circle/cscircle/gaussian
 
     C: 1.0
     maskSize: 1         #deg
@@ -22,13 +23,9 @@ stimulus:
     kId:  7             #[-Ns/2, Ns/2 - 1]
     wId:  2             #[-Nt/2, Nt/2 - 1]
 
-#-----------------Neuron settings------------------#
+#-------------Ganglion cell settings--------------#
 ganglion:
     R0 : 0
-    storeResponse: true
-    storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
     w: 1.0
     Wg:
     # DOG
@@ -40,20 +37,15 @@ ganglion:
         delay: 0
         dt: *dt_id
 
+#---------------Relay cell settings--------------#
 relay:
     R0 : 0
-    storeResponse: true
-    storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
-
     #Kernels
     Krg:
         w: 1.0
         spatial:
         # Gaussian
             a: 0.1
-
 
         temporal:
         # TemporalDelta
@@ -71,18 +63,13 @@ relay:
             delay: 0.
             dt: *dt_id
 
+#-------------Cortical cell settings--------------#
 cortical:
     R0 : 0.
-    storeResponse: true
-    storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
-
-    #kernels
     Kcr:
         w: 1.0
         spatial:
-        #delta
+        #Spatial delta
             ds: *ds_id
             shift: [0, 0]
 
@@ -91,7 +78,3 @@ cortical:
             delay: 0.
             dt: *dt_id
 
-
-#------------File manager settings-----------------#
-OutputManager:
-    outputFilename: "out.h5"

@@ -74,7 +74,7 @@ HTML.postheader = \
     "        <h1>LGN Simulator Documentation</h1>\n" \
     "    </div>\n" \
     "    <ul>\n" \
-    "       <li class=\"first\"><a href=\"index.html\">LGN Simulator</a></li>\n"
+    "       <li class=\"first\"><a href=\"about.html\">lgn-simulator</a></li>\n"
 
 HTML.postpostheader = \
     "    </ul>\n" \

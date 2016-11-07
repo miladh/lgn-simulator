@@ -1,5 +1,5 @@
 /*!
-    \page index.html
+    \page about.html
     \title About
     \tableofcontents
 
@@ -23,15 +23,28 @@ These characteristics includes strength, spatial spread and temporal properties.
         \li \l{Descriptive model}
         \li \l{Mechanistic model}
         \li \l{The dLGN circuit}
-        \endlist
-
-    \section2 Implementation
-
-        \list
         \li \l{Fourier transform}
         \endlist
 
     \section1 Getting started
+The lgn-simulator is written as library. Thus the library can be included in a \c main.cpp file and used in different applications. The namespace is \c lgnSimulator.
+
+    \code
+        #include <lgnSimulator.h>
+        using namespace lgnSimulator;
+
+        int main(int argc, char *argv[])
+        {
+            ...
+        }
+    \endcode
+
+A minimalistic \c main.cpp file can be found \l{Example application}{here}.
+
+
+
+
+
 
 
     \section1 Development and technical details
@@ -54,12 +67,12 @@ The main classes are:
     Non-seperable kernels can be added by creating a subclass of \l{lgnSimulator::Kernel}. ALternatively a seperable kernel can be added by creating a subclass of \l{lgnSimulator::SeparableKernel}, which is also a subclass of \l{lgnSimulator::Kernel}. Seperable kernels consist of a \l{lgnSimulator::SpatialKernel} and a \l{lgnSimulator::TemporalKernel}.
 
 
-    \section3 Spatial kernels:
+    Spatial kernels:
 
     \annotatedlist lgnSimulator-spatialKernel
 
 
-    \section3 Temporal kernels:
+   Temporal kernels:
 
     \annotatedlist lgnSimulator-temporalKernel
 

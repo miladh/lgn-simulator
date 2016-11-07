@@ -1,6 +1,6 @@
 TEMPLATE = subdirs
 
-SUBDIRS += default \
+SUBDIRS += example \
     firingSynchrony \
     stimuliAnalysis \
     edog

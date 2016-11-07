@@ -1,0 +1,22 @@
+/*!
+    \page example.html
+    \title Example application
+    \tableofcontents
+
+A minimalistic \c main.cpp file is shown below.
+The circuit consist of a ganglion cell, a relay cell and one cortical cell. The simulation settings and kernel parameters are given in \l{Config file}. The output is \c .h5 file.
+
+    \section1 \c main.cpp
+
+    \quotefile apps/example/example.cpp
+
+
+    \section1 Config file
+The config file is shown below:
+
+    \quotefile apps/example/config.yaml
+
+
+*/
+
+
