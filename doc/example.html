@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- example.qdoc -->
+  <title>Example application | lgn-simulator</title>
+  <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>LGN Simulator Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">LGN Simulator</a></li>
+<li>Example application</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#main-op-op-cpp"><code>main.cpp</code></a></li>
+<li class="level1"><a href="#config-file">Config file</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Example application</h1>
+<span class="subtitle"></span>
+<!-- $$$example.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>A minimalistic <code>main.cpp</code> file is shown below. The circuit consist of a ganglion cell, a relay cell and one cortical cell. The simulation settings and kernel parameters are given in <a href="example.html#config-file">Config file</a>.</p>
+<a name="main-op-op-cpp"></a>
+<h2 id="main-op-op-cpp"><code>main.cpp</code></h2>
+<pre class="cpp"><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;yaml-cpp/yaml.h&gt;</span>
+<span class="preprocessor">#include &lt;lgnSimulator.h&gt;</span>
+
+<span class="keyword">using</span> <span class="keyword">namespace</span> std;
+<span class="keyword">using</span> <span class="keyword">namespace</span> lgnSimulator;
+
+<span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span><span class="operator">*</span> argv<span class="operator">[</span><span class="operator">]</span>)
+{
+    cout <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;===== lgn-simulator =====&quot;</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> endl;
+
+    <span class="comment">//read config file-----------------------------------------------------------------------</span>
+    YAML<span class="operator">::</span>Node cfg <span class="operator">=</span> YAML<span class="operator">::</span>LoadFile(argv<span class="operator">[</span><span class="number">1</span><span class="operator">]</span>);
+
+    <span class="comment">//Output manager:---------------------------------------------------------</span>
+    OutputManager outputManager(cfg<span class="operator">[</span><span class="string">&quot;OutputManager&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;outputFilename&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span>std<span class="operator">::</span>string<span class="operator">&gt;</span>());
+
+    <span class="comment">//Integrator-----------------------------------------------------------------------------</span>
+    Integrator integrator <span class="operator">=</span> createIntegrator(cfg<span class="operator">[</span><span class="string">&quot;grid&quot;</span><span class="operator">]</span>);
+
+    <span class="comment">//Stim-----------------------------------------------------------------------------------</span>
+    unique_ptr<span class="operator">&lt;</span>Grating<span class="operator">&gt;</span> S <span class="operator">=</span> createGratingStimulus(<span class="operator">&amp;</span>integrator<span class="operator">,</span> cfg<span class="operator">[</span><span class="string">&quot;stimulus&quot;</span><span class="operator">]</span>);
+
+    <span class="comment">//Ganglion cell:--------------------------------------------------------------------------</span>
+    DOG Wg_s <span class="operator">=</span> createSpatialDOGKernel(cfg<span class="operator">[</span><span class="string">&quot;ganglion&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Wg&quot;</span><span class="operator">]</span>);
+    TemporalDelta Wg_t <span class="operator">=</span> createTemporalDeltaKernel(cfg<span class="operator">[</span><span class="string">&quot;ganglion&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Wt&quot;</span><span class="operator">]</span>);
+    SeparableKernel Wg(cfg<span class="operator">[</span><span class="string">&quot;ganglion&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;w&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span><span class="type">double</span><span class="operator">&gt;</span>()<span class="operator">,</span> <span class="operator">&amp;</span>Wg_s<span class="operator">,</span> <span class="operator">&amp;</span>Wg_t);
+
+    GanglionCell ganglion(<span class="operator">&amp;</span>integrator<span class="operator">,</span> Wg<span class="operator">,</span> cfg<span class="operator">[</span><span class="string">&quot;ganglion&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;R0&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span><span class="type">double</span><span class="operator">&gt;</span>());
+
+    <span class="comment">//Relay cell: ------------------------------------------------------------------------------</span>
+    RelayCell relay(<span class="operator">&amp;</span>integrator<span class="operator">,</span> cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;R0&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span><span class="type">double</span><span class="operator">&gt;</span>());
+
+    <span class="comment">// G -&gt; R</span>
+    SpatialGaussian Ks_rg <span class="operator">=</span> createSpatialGaussianKernel(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krg&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;spatial&quot;</span><span class="operator">]</span>);
+    TemporalDelta Kt_rg <span class="operator">=</span> createTemporalDeltaKernel(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krg&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;temporal&quot;</span><span class="operator">]</span>);
+    SeparableKernel Krg(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krg&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;w&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span><span class="type">double</span><span class="operator">&gt;</span>()<span class="operator">,</span> <span class="operator">&amp;</span>Ks_rg<span class="operator">,</span> <span class="operator">&amp;</span>Kt_rg);
+
+    <span class="comment">// C -&gt; R</span>
+    SpatialGaussian Ks_rc <span class="operator">=</span> createSpatialGaussianKernel(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krc&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;spatial&quot;</span><span class="operator">]</span>);
+    TemporalDelta Kt_rc <span class="operator">=</span> createTemporalDeltaKernel(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krc&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;temporal&quot;</span><span class="operator">]</span>);
+    SeparableKernel Krc(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krc&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;w&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span><span class="type">double</span><span class="operator">&gt;</span>()<span class="operator">,</span> <span class="operator">&amp;</span>Ks_rc<span class="operator">,</span> <span class="operator">&amp;</span>Kt_rc);
+
+    <span class="comment">//Cortical cell: -----------------------------------------------------------------------------</span>
+    HeavisideNonlinearity heavisideNonlinearity;
+    CorticalCell cortical(<span class="operator">&amp;</span>integrator<span class="operator">,</span> cfg<span class="operator">[</span><span class="string">&quot;cortical&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;R0&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span><span class="type">double</span><span class="operator">&gt;</span>()<span class="operator">,</span> <span class="operator">&amp;</span>heavisideNonlinearity);
+
+    <span class="comment">// R -&gt; C</span>
+    SpatialDelta Ks_cr <span class="operator">=</span> createSpatialDeltaKernel(cfg<span class="operator">[</span><span class="string">&quot;cortical&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Kcr&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;spatial&quot;</span><span class="operator">]</span>);
+    TemporalDelta Kt_cr <span class="operator">=</span> createTemporalDeltaKernel(cfg<span class="operator">[</span><span class="string">&quot;cortical&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Kcr&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;temporal&quot;</span><span class="operator">]</span>);
+    SeparableKernel Kcr(cfg<span class="operator">[</span><span class="string">&quot;cortical&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Kcr&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;w&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span><span class="type">double</span><span class="operator">&gt;</span>()<span class="operator">,</span> <span class="operator">&amp;</span>Ks_cr<span class="operator">,</span> <span class="operator">&amp;</span>Kt_cr);
+
+    <span class="comment">//Connect neurons:------------------------------------------------------------------------------</span>
+    relay<span class="operator">.</span>addGanglionCell(<span class="operator">&amp;</span>ganglion<span class="operator">,</span> Krg);
+    relay<span class="operator">.</span>addCorticalCell(<span class="operator">&amp;</span>cortical<span class="operator">,</span> Krc);
+    cortical<span class="operator">.</span>addRelayCell(<span class="operator">&amp;</span>relay<span class="operator">,</span> Kcr);
+
+    <span class="comment">//Compute:--------------------------------------------------------------------------------------</span>
+    S<span class="operator">-</span><span class="operator">&gt;</span>computeFourierTransform();
+    relay<span class="operator">.</span>computeImpulseResponse();
+    relay<span class="operator">.</span>computeResponse(S<span class="operator">.</span>get());
+
+    <span class="comment">//Write:-----------------------------------------------------------------------------------------</span>
+    outputManager<span class="operator">.</span>writeIntegratorProperties(integrator);
+    outputManager<span class="operator">.</span>writeStimulusProperties(S<span class="operator">.</span>get());
+    outputManager<span class="operator">.</span>writeStimulus(S<span class="operator">.</span>get());
+    outputManager<span class="operator">.</span>writeResponse(relay);
+    outputManager<span class="operator">.</span>writeImpulseResponse(relay);
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</pre>
+<a name="config-file"></a>
+<h2 id="config-file">Config file</h2>
+<p>The config file is shown below:</p>
+<pre class="cpp">description: &quot;config file&quot;
+
+#------------File manager settings-----------------#
+OutputManager:
+    outputFilename: &quot;out.h5&quot;
+
+#------------Integrator settings-----------------#
+grid:
+    ns: 6
+    nt: 5
+    dt: &amp;dt_id 1.0
+    ds: &amp;ds_id 0.05
+
+#------------Stimulus settings-------------------#
+stimulus:
+    # Grating:
+    mask: &quot;none&quot;  #none/circle/cscircle/gaussian
+
+    C: 1.0
+    maskSize: 1         #deg
+    orientation: 0.     #deg
+    phase: 0.           #deg
+    kId:  7             #[-Ns/2, Ns/2 - 1]
+    wId:  2             #[-Nt/2, Nt/2 - 1]
+
+#-------------Ganglion cell settings--------------#
+ganglion:
+    R0 : 0
+    w: 1.0
+    Wg:
+    # DOG
+        a: 0.62
+        b: 1.26
+        c: 0.85
+    Wt:
+    # TemporalDelta
+        delay: 0
+        dt: *dt_id
+
+#---------------Relay cell settings--------------#
+relay:
+    R0 : 0
+    #Kernels
+    Krg:
+        w: 1.0
+        spatial:
+        # Gaussian
+            a: 0.1
+
+        temporal:
+        # TemporalDelta
+            delay: 0
+            dt: *dt_id
+
+    Krc:
+        w: 0.5
+        spatial:
+        #Gauss
+            a: 0.2
+
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id
+
+#-------------Cortical cell settings--------------#
+cortical:
+    R0 : 0.
+    Kcr:
+        w: 1.0
+        spatial:
+        #Spatial delta
+            ds: *ds_id
+            shift: [0, 0]
+
+        temporal:
+        # TemporalDelta
+            delay: 0.
+            dt: *dt_id</pre>
+</div>
+<!-- @@@example.html -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

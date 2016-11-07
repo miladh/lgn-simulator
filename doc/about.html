@@ -58,10 +58,24 @@
 <div class="content">
     <div class="line">
         <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#theory">Theory</a></li>
+<li class="level1"><a href="#getting-started">Getting started</a></li>
+<li class="level1"><a href="#development-and-technical-details">Development and technical details</a></li>
+<li class="level2"><a href="#neurons">Neurons</a></li>
+<li class="level2"><a href="#kernels">Kernels</a></li>
+<li class="level2"><a href="#stimulus">Stimulus</a></li>
+<li class="level2"><a href="#all-classes">All classes</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
 <div class="context">
 <h1 class="title">About</h1>
 <span class="subtitle"></span>
-<!-- $$$index.html-description -->
+<!-- $$$about.html-description -->
 <div class="descr"> <a name="details"></a>
 <p>lgn-simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early part of the visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex. The model behind is a linear mechanistic, firing rate model that incorporates the influence of thalamocortical loops, in addition to the feedforward responses. This simulator can be used to study the characteristics of cortical feedback to LGN. These characteristics includes strength, spatial spread and temporal properties.</p>
 <ul>
@@ -78,14 +92,19 @@
 <li><a href="descriptivemodel.html">Descriptive model</a></li>
 <li><a href="mechanisticmodel.html">Mechanistic model</a></li>
 <li><a href="dlgncircuit.html">The dLGN circuit</a></li>
-</ul>
-<a name="implementation"></a>
-<h3 >Implementation</h3>
-<ul>
 <li><a href="ft.html">Fourier transform</a></li>
 </ul>
 <a name="getting-started"></a>
 <h2 id="getting-started">Getting started</h2>
+<p>The lgn-simulator is written as library. Thus the library can be included in a <code>main.cpp</code> file and used in different applications. The namespace is <code>lgnSimulator</code>.</p>
+<pre class="cpp"><span class="preprocessor">#include &lt;lgnSimulator.h&gt;</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> lgnSimulator;
+
+<span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span>argv<span class="operator">[</span><span class="operator">]</span>)
+{
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+}</pre>
+<p>A minimalistic <code>main.cpp</code> file can be found <a href="example.html">here</a>.</p>
 <a name="development-and-technical-details"></a>
 <h2 id="development-and-technical-details">Development and technical details</h2>
 <p>lgn-simulator is written in C++ using <a href="http://qt.io">Qt Creator</a>. The main classes are:</p>
@@ -105,8 +124,7 @@
 <a name="kernels"></a>
 <h3 >Kernels</h3>
 <p>Non-seperable kernels can be added by creating a subclass of <a href="lgnsimulator-kernel.html">lgnSimulator::Kernel</a>. ALternatively a seperable kernel can be added by creating a subclass of <a href="lgnsimulator-separablekernel.html">lgnSimulator::SeparableKernel</a>, which is also a subclass of <a href="lgnsimulator-kernel.html">lgnSimulator::Kernel</a>. Seperable kernels consist of a <a href="lgnsimulator-spatialkernel.html">lgnSimulator::SpatialKernel</a> and a <a href="lgnsimulator-temporalkernel.html">lgnSimulator::TemporalKernel</a>.</p>
-<a name="spatial-kernels"></a>
-<h4 >Spatial kernels:</h4>
+<p>Spatial kernels:</p>
 <div class="table"><table class="annotated">
 <tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-dog.html">lgnSimulator::DOG</a></p></td><td class="tblDescr"><p>Spatial difference of Gaussians kernel</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-ellipticgaussian.html">lgnSimulator::EllipticGaussian</a></p></td><td class="tblDescr"><p>Spatial elliptic Gaussian kernel</p></td></tr>
@@ -114,8 +132,7 @@
 <tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-spatialgaussian.html">lgnSimulator::SpatialGaussian</a></p></td><td class="tblDescr"><p>Spatial Gaussian kernel</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-spatiallyconstant.html">lgnSimulator::SpatiallyConstant</a></p></td><td class="tblDescr"><p>Constant spatial kernel</p></td></tr>
 </table></div>
-<a name="temporal-kernels"></a>
-<h4 >Temporal kernels:</h4>
+<p>Temporal kernels:</p>
 <div class="table"><table class="annotated">
 <tr class="odd topAlign"><td class="tblName"><p><a href="lgnsimulator-biphasic.html">lgnSimulator::Biphasic</a></p></td><td class="tblDescr"><p>Temporal biphasic kernel</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="lgnsimulator-doe.html">lgnSimulator::DOE</a></p></td><td class="tblDescr"><p>Temporal difference of exponentials kernel</p></td></tr>
@@ -139,7 +156,7 @@
 <h3 >All classes</h3>
 <p>List of all classes in the simulator is found here: <a href="allclasses.html">All classes</a></p>
 </div>
-<!-- @@@index.html -->
+<!-- @@@about.html -->
 </div>
 </div>
 </div>
