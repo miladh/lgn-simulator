@@ -1,28 +1,11 @@
 language: cpp
-dist: trusty
 os:
 - linux
 compiler:
 - gcc
 sudo: required
+services: docker
 before_install:
-- sudo apt-get -qq install ccache
-    libfftw3-dev
-    libhdf5-dev
-    libyaml-dev
-    libyaml-cpp-dev
-    libgsl0-dev
-    catch
-    libboost-dev
-    libboost-system-dev
-    libboost-filesystem-dev
-    libarmadillo-dev
-    libopencv-dev
-    python-yaml
-    qt5-default
-install:
-- /usr/lib/x86_64-linux-gnu/qt5/bin/qmake
-- make
+- docker build -t miladh/lgn-simulator -f .docker/Dockerfile .
 script:
-- echo "Running tests..."
-- LD_LIBRARY_PATH=lib tests/lgnSimulator_tests exclude:slow
+- docker run -v $(pwd):/app miladh/lgn-simulator bash -c "cd /app && /usr/lib/x86_64-linux-gnu/qt5/bin/qmake lgnSimulator.pro && make && LD_LIBRARY_PATH=lib tests/lgnSimulator_tests exclude:slow"
