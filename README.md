@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/miladh/lgn-simulator.svg?branch=dev)](https://travis-ci.org/miladh/lgn-simulator)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 # lgn-simulator
 
