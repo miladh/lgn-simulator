@@ -11,7 +11,7 @@ before_install:
     libhdf5-dev
     libyaml-dev
     libyaml-cpp-dev
-    libgsl-dev
+    libgsl0-dev
     catch
     libboost-dev
     libboost-system-dev
