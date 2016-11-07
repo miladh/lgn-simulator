@@ -18,7 +18,7 @@
 
 using namespace lgnSimulator;
 
-TEST_CASE("system_grc_pg_1 [slow]"){
+TEST_CASE("system_grc_pg_1", "[slow]"){
     /***
     * system: grc
     * stimulus: patch grating
@@ -39,7 +39,7 @@ TEST_CASE("system_grc_pg_1 [slow]"){
 
 
 
-TEST_CASE("system_grc_irf_1 [slow]"){
+TEST_CASE("system_grc_irf_1", "[slow]"){
     /***
     * system: grc
     * stimulus: unused
@@ -56,7 +56,7 @@ TEST_CASE("system_grc_irf_1 [slow]"){
     test.runTest();
 }
 
-TEST_CASE("system_grc_irf_2 [slow]"){
+TEST_CASE("system_grc_irf_2", "[slow]"){
     /***
     * system: grc
     * stimulus: unused
