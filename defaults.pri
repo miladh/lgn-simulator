@@ -7,8 +7,8 @@ LIBS += -L/usr/local/lib -lopencv_core -lopencv_highgui
 LIBS += -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lhdf5 -lhdf5_cpp
 LIBS += -L/usr/include/gsl -lgsl -lgslcblas -lm
 
-CONFIG += c++14
-QMAKE_CXXFLAGS += -std=c++14  -fext-numeric-literals
+CONFIG += c++11
+QMAKE_CXXFLAGS += -fext-numeric-literals
 QMAKE_CXXFLAGS += $$COMMON_CXXFLAGS
 QMAKE_CXXFLAGS_DEBUG += $$COMMON_CXXFLAGS
 QMAKE_CXXFLAGS_RELEASE += $$COMMON_CXXFLAGS
