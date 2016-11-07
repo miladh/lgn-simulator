@@ -8,4 +8,4 @@ services: docker
 before_install:
 - docker build -t miladh/lgn-simulator -f .docker/Dockerfile .
 script:
-- docker run -v $(pwd):/app miladh/lgn-simulator bash -c "cd /app && /usr/lib/x86_64-linux-gnu/qt5/bin/qmake lgnSimulator.pro && make && LD_LIBRARY_PATH=lib tests/lgnSimulator_tests exclude:slow"
+- docker run -v $(pwd):/app miladh/lgn-simulator bash -c "cd /app && /usr/lib/x86_64-linux-gnu/qt5/bin/qmake lgnSimulator.pro && make && LD_LIBRARY_PATH=lib tests/lgnSimulator_tests exclude:[slow]"
