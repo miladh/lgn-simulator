@@ -4,10 +4,10 @@
 #include "mcintegrationtest.h"
 
 
-class test_system_gric_pg_1 : public MCintegrationTest
+class test_system_grc_pg_1 : public MCintegrationTest
 {
 public:
-    test_system_gric_pg_1(string testLabel, string filename,
+    test_system_grc_pg_1(string testLabel, string filename,
                                   double preCalls, double calls, double epsilon);
 
     // test_system_MCintegration interface

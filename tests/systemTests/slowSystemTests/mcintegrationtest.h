@@ -31,10 +31,7 @@ public:
         MCintegrationTest *a;
         const CircleMaskGrating& S;
         const Kernel & Wg;
-        const Kernel & Kig;
-        const Kernel & Kic;
         const Kernel & Krg;
-        const Kernel & Kri;
         const Kernel & Krc;
         const Kernel & Kcr;
         const double peak;

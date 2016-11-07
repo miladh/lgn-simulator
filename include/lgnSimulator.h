@@ -11,7 +11,6 @@
 #include "../src/stimuli/naturalscenevideo.h"
 
 #include "../src/neurons/ganglioncell.h"
-#include "../src/neurons/interneuron.h"
 #include "../src/neurons/relaycell.h"
 #include "../src/neurons/corticalcell.h"
 

@@ -43,39 +43,24 @@ void RelayCell::computeNeededcubes() const
             ganglionCell->computeImpulseResponseFourierTransform();
         }
     }
-
-    for (const Input i : m_interNeurons){
-        Interneuron* const interneuron  = dynamic_cast<Interneuron* const>(i.neuron);
-        for (const Input g : interneuron->ganglionCells()){
-            Neuron *ganglionCell = g.neuron;
-            if(!ganglionCell->isImpulseResponseFourierTransformComputed()){
-                ganglionCell->computeImpulseResponseFourierTransform();
-            }
-        }
-    }
 }
-
 
 
 complex<double> RelayCell::impulseResponseFourierTransformAtFrequency(int kxi,
                                                                       int kyi,
                                                                       int wi) const
 {
-    cx_vec interneuron =  interneuronInput(kxi, kyi, wi);
     complex<double> ganglionFF = ganglionInput(kxi, kyi, wi);
-    complex<double> interneuronFF = interneuron(0);
-    complex<double> interneuronFB = interneuron(1);
     complex<double> corticalFB = corticalInput(kxi, kyi, wi);
 
-    complex<double> fb = 1. - interneuronFB  - corticalFB;
+    complex<double> fb = 1. -  corticalFB;
     if(fabs(fb.real()) < 1.e-10 && fabs(fb.imag()) < 1.e-10){
-        cerr << "interneuronFB: " << interneuronFB
-             << " corticalFB: "   << corticalFB   << endl;
+        cerr << " corticalFB: "   << corticalFB   << endl;
         throw overflow_error("Divide by zero exception in relay feedback contribution");
     }
 
 
-    complex<double> Wr = (ganglionFF + interneuronFF)/fb;
+    complex<double> Wr = (ganglionFF)/fb;
 
     return Wr;
 }
@@ -98,50 +83,6 @@ complex<double> RelayCell::ganglionInput(int kxi, int kyi, int wi) const
 
     return ganglionFF;
 }
-
-
-
-cx_vec RelayCell::interneuronInput(int kxi, int kyi, int wi) const
-{
-    vec2 kVec= {m_spatialFreqs[kxi], m_spatialFreqs[kyi]};
-    double w = m_temporalFreqs[wi];
-
-    complex<double> interneuronFF = complex<double>(0, 0);;
-    complex<double> interneuronFB = complex<double>(0, 0);;
-
-
-    //Interneuron input
-    for (const Input i : m_interNeurons){
-        Interneuron* const interneuron  = dynamic_cast<Interneuron* const>(i.neuron);
-        complex<double> Kri = i.kernel.fourierTransform(kVec,w);
-
-
-        //Feedforward term
-        for (const Input g : interneuron->ganglionCells()){
-            Neuron* const ganglionCell = g.neuron;
-            interneuronFF += g.kernel.fourierTransform(kVec,w)
-                    * ganglionCell->impulseResponseFourierTransform()(kxi, kyi, wi);
-        }
-        interneuronFF*= Kri;
-
-        //Feedback term
-        for (const Input c : interneuron->corticalNeurons()){
-            CorticalCell* const corticalCell  =
-                    dynamic_cast<CorticalCell* const>(c.neuron);
-            complex<double> Kic = c.kernel.fourierTransform(kVec,w);
-
-            const Kernel* kernel =  corticalCell->relayInputKernel();
-            complex<double> Kcr = kernel->fourierTransform(kVec,w);
-            interneuronFB += Kri*Kic*Kcr;
-
-        }
-
-    }
-
-    return cx_vec{interneuronFF, interneuronFB};
-}
-
-
 
 complex<double> RelayCell::corticalInput(int kxi, int kyi, int wi)const
 {
@@ -181,16 +122,6 @@ void RelayCell::addGanglionCell(Neuron* const neuron, const Kernel &kernel)
 }
 
 
-void RelayCell::addInterNeuron(Neuron* const neuron, const Kernel &kernel)
-{
-    if (neuron->type() == "interneuron") {
-        m_interNeurons.emplace_back(Input{neuron, kernel});
-    }else{
-        throw overflow_error("wrong cell type in addInterNeuron(): " + neuron->type());
-    }
-
-}
-
 void RelayCell::addCorticalCell(Neuron* const neuron, const Kernel &kernel)
 {
     if (neuron->type() == "cortical") {
@@ -204,12 +135,6 @@ void RelayCell::addCorticalCell(Neuron* const neuron, const Kernel &kernel)
 vector<Neuron::Input> RelayCell::ganglionCells() const
 {
     return m_ganglionCells;
-}
-
-
-vector<Neuron::Input> RelayCell::interNeurons() const
-{
-    return m_interNeurons;
 }
 
 vector<Neuron::Input> RelayCell::corticalNeurons() const

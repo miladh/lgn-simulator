@@ -73,59 +73,12 @@ relay:
         # TemporalDelta
             delay: 0
             dt: *dt_id
-    Kri:
-        w: -0.5
-        spatial:
-        #Gauss
-            a: 0.2
-
-        #delta
-            ds: *ds_id
-            shift: [0, 0]
-
-        temporal:
-        # TemporalDelta
-            delay: 0.
-            dt: *dt_id
 
     Krc:
         w: 0.0
         spatial:
         #Gauss
             a: 0.9
-
-        temporal:
-        # TemporalDelta
-            delay: 0.
-            dt: *dt_id
-
-
-
-interneuron:
-    R0 : 0
-    storeResponse: false
-    storeResponseFT: false
-    storeImpulseResponse: false
-    storeImpulseResponseFT: false
-
-    #Kernels
-    Kig:
-        w: 1.0
-        spatial:
-        # Gaussian
-            a: 0.3
-
-        temporal:
-        # TemporalDelta
-            delay: 0
-            dt: *dt_id
-
-
-    Kic:
-        w: 0.0
-        spatial:
-        #Gauss
-            a: 0.7
 
         temporal:
         # TemporalDelta

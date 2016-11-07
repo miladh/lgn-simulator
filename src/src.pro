@@ -11,7 +11,6 @@ SOURCES += \
     neurons/corticalcell.cpp \
     neurons/relaycell.cpp \
     neurons/ganglioncell.cpp \
-    neurons/interneuron.cpp \
     stimuli/naturalscene.cpp \
     stimuli/staticimage.cpp \
     stimuli/naturalscenevideo.cpp \
@@ -52,7 +51,6 @@ HEADERS += \
     neurons/corticalcell.h \
     neurons/relaycell.h \
     neurons/ganglioncell.h \
-    neurons/interneuron.h \
     stimuli/naturalscene.h \
     stimuli/staticimage.h \
     stimuli/naturalscenevideo.h \

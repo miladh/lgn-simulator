@@ -1,6 +1,6 @@
-#include "test_system_gric_irf_2.h"
+#include "test_system_grc_irf_2.h"
 
-test_system_gric_irf_2::test_system_gric_irf_2(string testLabel,
+test_system_grc_irf_2::test_system_grc_irf_2(string testLabel,
                                                string filename,
                                                double preCalls,
                                                double calls,
@@ -11,7 +11,7 @@ test_system_gric_irf_2::test_system_gric_irf_2(string testLabel,
 }
 
 
-void test_system_gric_irf_2::runTest()
+void test_system_grc_irf_2::runTest()
 {
     int ns = 9;
     int nt = 8;
@@ -23,33 +23,22 @@ void test_system_gric_irf_2::runTest()
     double w_cr = 1.0;
 
     double a_rg = 0.1;
-    double a_ig = 0.3;
 
     double phaseDuration = 42.5 ;
     double dampingFactor = 0.38;
 
     double tau_rg=10;
-    double tau_ri=15;
     double tau_rc=39;
-    double tau_ig=15;
-    double tau_ic=39;
 
     double delay_rg=4;
-    double delay_ri=2;
     double delay_rc=20;
-    double delay_ig=4;
-    double delay_ic=20;
-
 
 
     double a_ri = 0.2;
     double a_rc= 0.1;
-    double a_ic= 0.9;
 
-    double w_ig = 1;
-    double w_ri = -0.5;
     double w_rc = 0.5;
-    double w_ic = 2.0;
+
 
 
     //integrator
@@ -83,25 +72,10 @@ void test_system_gric_irf_2::runTest()
         DecayingExponential Krg_t(tau_rg, delay_rg);
         SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
 
-        SpatialGaussian Kri_s(a_ri);
-        DecayingExponential Kri_t(tau_ri, delay_ri);
-        SeparableKernel Kri(w_ri, &Kri_s, &Kri_t);
-
         SpatialGaussian Krc_s(a_rc);
         DecayingExponential Krc_t(tau_rc, delay_rc);
         SeparableKernel Krc(w_rc, &Krc_s, &Krc_t);
 
-
-        //interneuron cell
-        Interneuron interneuron(&integrator);
-
-        SpatialGaussian Kig_s(a_ig);
-        DecayingExponential Kig_t(tau_ig, delay_ig);
-        SeparableKernel Kig(w_ig, &Kig_s, &Kig_t);
-
-        SpatialGaussian Kic_s(a_ic);
-        DecayingExponential Kic_t(tau_ic, delay_ic);
-        SeparableKernel Kic(w_ic, &Kic_s, &Kic_t);
 
         //cortical cell
         CorticalCell cortical(&integrator);
@@ -113,15 +87,12 @@ void test_system_gric_irf_2::runTest()
 
         //Connect
         relay.addGanglionCell(&ganglion, Krg);
-        relay.addInterNeuron(&interneuron, Kri);
         relay.addCorticalCell(&cortical, Krc);
-        interneuron.addGanglionCell(&ganglion, Kig);
-        interneuron.addCorticalCell(&cortical, Kic);
         cortical.addRelayCell(&relay, Kcr);
 
 
         if(m_computeMC){
-            struct Param params = {this, stim, W, Kig, Kic, Krg, Kri, Krc, Kcr, m_peak};
+            struct Param params = {this, stim, W, Krg, Krc, Kcr, m_peak};
             m_results.push_back(computeIntegral(xl, xu, &params));
         }
 
@@ -135,18 +106,14 @@ void test_system_gric_irf_2::runTest()
 
         INFO(     "a_ri=" <<  a_ri
                   << "  a_rc=" << a_rc
-                  << "  a_ic=" << a_ic
-                  << "  w_ig=" << w_ig
-                  << "  w_ri=" << w_ri
                   << "  w_rc=" << w_rc
-                  << "  w_ic=" << w_ic
                   << "  t=" << m_t);
         CHECK(ftIntegrator == Approx(m_results[i]).epsilon(m_epsilon));
     }
     writeOutputFile();
 }
 
-double test_system_gric_irf_2::integrand(double *k, size_t dim, void *params)
+double test_system_grc_irf_2::integrand(double *k, size_t dim, void *params)
 {
     (void)(dim);
     double kx = k[0];
@@ -155,13 +122,8 @@ double test_system_gric_irf_2::integrand(double *k, size_t dim, void *params)
     Param r = *(Param *) params;
 
     cx_double Wr = r.Wg.fourierTransform({kx, ky}, w)
-            *(r.Krg.fourierTransform({kx, ky}, w)
-              + r.Kri.fourierTransform({kx, ky}, w)
-              * r.Kig.fourierTransform({kx, ky}, w))
-            / (1. -r. Kic.fourierTransform({kx, ky}, w)
-               * r.Kcr.fourierTransform({kx, ky}, w)
-               * r.Kri.fourierTransform({kx, ky}, w)
-               - r.Krc.fourierTransform({kx, ky}, w)
+            *(r.Krg.fourierTransform({kx, ky}, w))
+            / (1. - r.Krc.fourierTransform({kx, ky}, w)
                * r.Kcr.fourierTransform({kx, ky}, w))
             * exp(-core::i*m_t*w);
 

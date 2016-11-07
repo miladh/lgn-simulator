@@ -1,6 +1,6 @@
-#include "test_system_gric_pg_1.h"
+#include "test_system_grc_pg_1.h"
 
-test_system_gric_pg_1::test_system_gric_pg_1(string testLabel,
+test_system_grc_pg_1::test_system_grc_pg_1(string testLabel,
                                              string filename,
                                              double preCalls,
                                              double calls,
@@ -11,7 +11,7 @@ test_system_gric_pg_1::test_system_gric_pg_1(string testLabel,
 }
 
 
-void test_system_gric_pg_1::runTest()
+void test_system_grc_pg_1::runTest()
 {
     int ns = 9;
     int nt = 1;
@@ -19,9 +19,7 @@ void test_system_gric_pg_1::runTest()
     double ds = 0.1;
 
     double w_w = 1.0;
-    double w_ig = 1.0;
     double w_rg = 1.0;
-    double w_ri = -0.3;
     double w_cr = 1.0;
     vec weights = {0.0, 0.8};
 
@@ -63,25 +61,10 @@ void test_system_gric_pg_1::runTest()
         TemporalDelta Krg_t(0, dt);
         SeparableKernel Krg(w_rg, &Krg_s, &Krg_t);
 
-        SpatialGaussian Kri_s(0.5);
-        TemporalDelta Kri_t(0, dt);
-        SeparableKernel Kri(w_ri, &Kri_s, &Kri_t);
-
         SpatialGaussian Krc_s(0.1);
         TemporalDelta Krc_t(0, dt);
         SeparableKernel Krc(wc, &Krc_s, &Krc_t);
 
-
-        //interneuron cell
-        Interneuron interneuron(&integrator);
-
-        SpatialGaussian Kig_s(1.0);
-        TemporalDelta Kig_t(0, dt);
-        SeparableKernel Kig(w_ig, &Kig_s, &Kig_t);
-
-        SpatialGaussian Kic_s(1.0);
-        TemporalDelta Kic_t(0, dt);
-        SeparableKernel Kic(wc, &Kic_s, &Kic_t);
 
         //cortical cell
         CorticalCell cortical(&integrator);
@@ -93,10 +76,7 @@ void test_system_gric_pg_1::runTest()
 
         //Connect
         relay.addGanglionCell(&ganglion, Krg);
-        relay.addInterNeuron(&interneuron, Kri);
         relay.addCorticalCell(&cortical, Krc);
-        interneuron.addGanglionCell(&ganglion, Kig);
-        interneuron.addCorticalCell(&cortical, Kic);
         cortical.addRelayCell(&relay, Kcr);
 
 
@@ -107,7 +87,7 @@ void test_system_gric_pg_1::runTest()
                 stim.computeFourierTransform();
 
                 if(m_computeMC){
-                    struct Param params = {this, stim, W, Kig, Kic, Krg, Kri, Krc, Kcr, m_peak};
+                    struct Param params = {this, stim, W, Krg, Krc, Kcr, m_peak};
                     m_results.push_back(computeIntegral(xl, xu, &params));
                 }
 
@@ -132,7 +112,7 @@ void test_system_gric_pg_1::runTest()
     writeOutputFile();
 }
 
-double test_system_gric_pg_1::integrand(double *k, size_t dim, void *params)
+double test_system_grc_pg_1::integrand(double *k, size_t dim, void *params)
 {
 
     (void)(dim);
@@ -142,13 +122,8 @@ double test_system_gric_pg_1::integrand(double *k, size_t dim, void *params)
     Param r = *(Param *) params;
 
     cx_double Wr = r.Wg.fourierTransform({kx, ky}, wd)
-            *(r.Krg.fourierTransform({kx, ky}, wd)
-              + r.Kri.fourierTransform({kx, ky}, wd)
-              * r.Kig.fourierTransform({kx, ky}, wd))
-            / (1. -r. Kic.fourierTransform({kx, ky}, wd)
-               * r.Kcr.fourierTransform({kx, ky}, wd)
-               * r.Kri.fourierTransform({kx, ky}, wd)
-               - r.Krc.fourierTransform({kx, ky}, wd)
+            *(r.Krg.fourierTransform({kx, ky}, wd))
+            / (1. - r.Krc.fourierTransform({kx, ky}, wd)
                * r.Kcr.fourierTransform({kx, ky}, wd));
 
     cx_double res =  Wr *  r.S.fourierTransformAtFrequency({kx, ky}, wd)
