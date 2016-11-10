@@ -31,7 +31,10 @@
         </page>
         <page name="convTheorem.html" href="convtheorem.html" status="active" location="convTheorem.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/convTheorem.qdoc" lineno="1" subtype="page" title="Convolution theorem" fulltitle="Convolution theorem" subtitle="" module="lgn-simulator"/>
         <page name="descriptiveModel.html" href="descriptivemodel.html" status="active" location="decriptiveModel.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/decriptiveModel.qdoc" lineno="1" subtype="page" title="Descriptive Model" fulltitle="Descriptive Model" subtitle="" module="theory"/>
-        <page name="dlgnCircuit.html" href="dlgncircuit.html" status="active" location="dlgnCricuit.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/dlgnCricuit.qdoc" lineno="1" subtype="page" title="The dLGN Circuit" fulltitle="The dLGN Circuit" subtitle="" module="theory"/>
+        <page name="dlgnCircuit.html" href="dlgncircuit.html" status="active" location="dlgnCricuit.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/dlgnCricuit.qdoc" lineno="1" subtype="page" title="The dLGN Circuit" fulltitle="The dLGN Circuit" subtitle="" module="theory">
+            <contents name="phase-reversed-push-pull-cortical-feedback" title="Phase-reversed push-pull cortical feedback" level="1"/>
+            <contents name="references" title="References" level="2"/>
+        </page>
         <page name="impResFunc.html" href="impresfunc.html" status="active" location="impResFunc.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/impResFunc.qdoc" lineno="1" subtype="page" title="Impulse Response Function" fulltitle="Impulse Response Function" subtitle="" module="theory">
             <contents name="relation-to-receptive-field-function" title="Relation to receptive field function" level="1"/>
             <contents name="references" title="References" level="2"/>
@@ -39,10 +42,7 @@
         <page name="linearInfromationTheory.html" href="linearinfromationtheory.html" status="active" location="linearInformationTheory.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/linearInformationTheory.qdoc" lineno="1" subtype="page" title="Linear Information Processing" fulltitle="Linear Information Processing" subtitle="" module="theory">
             <contents name="references" title="References" level="2"/>
         </page>
-        <page name="mechanisticModel.html" href="mechanisticmodel.html" status="active" location="mechanisticModel.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/mechanisticModel.qdoc" lineno="1" subtype="page" title="Mechanistic Model" fulltitle="Mechanistic Model" subtitle="" module="theory">
-            <contents name="feedforward-model" title="Feedforward model" level="1"/>
-            <contents name="feedback-model" title="Feedback model" level="1"/>
-        </page>
+        <page name="mechanisticModel.html" href="mechanisticmodel.html" status="active" location="mechanisticModel.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/mechanisticModel.qdoc" lineno="1" subtype="page" title="Mechanistic Model" fulltitle="Mechanistic Model" subtitle="" module="theory"/>
         <page name="recepField.html" href="recepfield.html" status="active" location="recepField.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/recepField.qdoc" lineno="1" subtype="page" title="Receptive Fields" fulltitle="Receptive Fields" subtitle="" module="theory">
             <contents name="center-surround-receptive-fields" title="Center-surround receptive fields" level="1"/>
             <contents name="direction-orientation-selective-receptive-fields" title="Direction &amp; orientation selective receptive fields" level="1"/>
