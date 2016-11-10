@@ -58,24 +58,33 @@
 <div class="content">
     <div class="line">
         <div class="content mainContent">
-<div class="sidebar"><div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level2"><a href="#references">References</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
 <div class="context">
 <h1 class="title">Spatio-Temporal Summation</h1>
 <span class="subtitle"></span>
 <!-- $$$spatioTemporalSum.html-description -->
 <div class="descr"> <a name="details"></a>
-<p>So far we have ignored the fact that neurons collect activity over time as well as over space. The activity of a neuron at time \(t\) typically depends on the behavior of the stimulus over a period of time, starting a few hundred milliseconds prior to \( t \) and ending perhaps tens of milliseconds before \( t \). In this situation, spatiotemporal summation is characterized by a spatiotemporal impulse response function (weighting function) \( W(\mathbf{r}_{c}, \tau) \), specifying for each position \( \mathbf{r}_{c} \) and each delay \( \tau \) since stimulus onset, the sign and strength with which this particular stimulus event influences the output. As in spatial summation, we assume translation invariance, meaning that a neuron yields a time-shifted output for a time-shifted version of the input. That is, if the response to \(S(\mathbf{r},t)\) is \(R( \mathbf{r},t) \), then the response to \( S ( \mathbf{r},t - \tau) \) is \( R( \mathbf{r}, t- \tau) \).</p>
-<p>Assuming (i) linearity, (ii) time invariance, and (iii) local spatial homogeneity, the response for a cell located at position \( \mathbf{r}_{c} \) in the visual field, can be written as</p>
-<p>\begin{equation} R( \mathbf{r}_{c}, t) = R_{0} +\displaystyle \int^{\tau = t}_{\tau = -\infty} \iint_\mathbf{r} W ( \mathbf{r}_{c} - \mathbf{r} , \tau ) S( \mathbf{r},t- \tau ) \mathrm{d}^2 \mathbf{r} \mathrm{d}\tau, \end{equation}</p>
-<p>where the impulse-response function \( {W}(\mathbf{r}, \tau)\) determines how strongly and with what sign the stimulus at time \(t-\tau\) affects the response at time \(t\). The time integral should in principle be taken over positive values of \(\tau\) only up to \(\tau = t\). This is in contrast to spatial convolution, where \(\mathbf{r}\) is varied between \(+\infty\) and \(-\infty\). The reason for this restriction is of course that only stimuli occuring before the time of measurement can influence the excitation. This constraint is called &quot;causality&quot; and can be accounted for by setting the values of \( {W}(\mathbf{r},\tau)\) to \( 0\) for all values \(\tau &lt; 0\), meaning that an input event cannot have effects in the past. With this convention, the integral may be taken from \(-\infty\) to \(\infty\), when we assume \( t\) is large.</p>
-<p>The integral in above is a convolution between the stimulus and impulse-response function, i.e&#x2e;</p>
+<p>The activity of a neuron at time \(t\) typically depends on the behavior of the stimulus over a period of time, starting a few hundred milliseconds prior to \( t \) and ending perhaps tens of milliseconds before \( t \) [1]. Assuming (i) linearity, (ii) time invariance, and (iii) local spatial homogeneity, the response for a cell located at position \( \mathbf{r}_{c} \) in the visual field, can be written as [2]</p>
+<p>\begin{equation} R( \mathbf{r}_{c}, t) = R_{0} +\displaystyle \int_{\tau} \iint_\mathbf{r} W ( \mathbf{r}_{c} - \mathbf{r} , \tau ) S( \mathbf{r},t- \tau ) \mathrm{d}^2 \mathbf{r} \mathrm{d}\tau, \end{equation}</p>
+<p>where the impulse-response function \( {W}(\mathbf{r}, \tau)\) describes the strength with which a stimulus delivered at position \( \mathbf{r}\) at time \( t- \tau \) affects the response of a neuron located at position \( \mathbf{r}_{c} \) at time \( t \). Since an input event cannot have effects in the past, it follows then that \( {W}(\mathbf{r},\tau &lt; 0) =0\). Thus, the lower integration boundary could also be set to \(\tau=0\).</p>
+<p>The integral above is a convolution between the stimulus and impulse-response function, i.e&#x2e;</p>
 <p>\begin{equation} R(\mathbf{r}_{c}, t) = R_{0}+ {W} \otimes S. \end{equation}</p>
 <p>From the convolution theorem it follows that the integral in equation above can be reformulated as an integral over temporal and spatial frequencies:</p>
 <p>\begin{equation} R(\mathbf{r}_{c}, t) = R_{0}+ \frac{1}{(2\pi)^3} \displaystyle\iint_\mathbf{k}\int_\omega e^{i(\mathbf{k\cdot \mathbf{r}_{c}} - \omega t)} {\widetilde{W}}(\mathbf{k}, \omega) \widetilde{S} (\mathbf{k}, \omega) \mathrm{d}^2\mathbf{k}, \end{equation}</p>
 <p>where \( \widetilde{W} \) and \( \widetilde{S} \) are the complex Fourier transforms of the impulse-response function \( W\) and stimulus \(S\), respectively. The complex Fourier transform we use, and its inverse, are given by</p>
 <p>\begin{equation} \tilde{y}(\mathbf{k},\omega) = \displaystyle\int_{t} \iint_\mathbf{r} e^{-i(\mathbf{k\cdot r} - \omega t)}y(\mathbf{r}, t) \mathrm{d}^2\mathbf{r}\;\mathrm{d}t, \end{equation}</p>
 <p>\begin{equation} y(\mathbf{r}, t) = \frac{1}{(2\pi)^3} \displaystyle\int_{\omega} \iint_\mathbf{k} e^{i(\mathbf{k \cdot r} - \omega t)}\tilde{y}(\mathbf{k}, \omega) \mathrm{d}^2\mathbf{k}\;\mathrm{d}\omega. \end{equation}</p>
-<p>The Fourier-transformed impulse-response \({ \widetilde{W}}\) also has a clear physiological interpretation. The response to the stimulus \(S\) is essentially written as an infinite sum (integral) over contributions from drifting sinusoidal gratings specified by \( k \) and \( \omega \). The weight and phase of each different grating required to represent the stimulus \( S\) are given by \( \tilde{S} \), while \( {\widetilde{W}}(\mathbf{k}, \omega)\) gives the response to a sinusoidal drifting grating specified by \( k \) and \(\omega\).</p>
+<a name="references"></a>
+<h3 >References</h3>
+<p>[1] Dayan, Peter, and Laurence F. Abbott. Theoretical neuroscience. Vol. 10. Cambridge, MA: MIT Press, 2001.</p>
+<p>[2] Plesser, H. E., and G. T. Einevoll. &quot;Linear mechanistic models for the dorsal lateral geniculate nucleus of cat probed using drifting-grating stimuli.&quot; Network: Computation in Neural Systems 13.4 (2002): 503-530.</p>
 </div>
 <!-- @@@spatioTemporalSum.html -->
 </div>

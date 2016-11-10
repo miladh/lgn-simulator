@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- index.qdoc -->
+<!-- about.qdoc -->
   <title>About | lgn-simulator</title>
   <link rel="stylesheet" type="text/css" href="style/online-lgn-simulator.css" />
   <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
@@ -77,7 +77,7 @@
 <span class="subtitle"></span>
 <!-- $$$about.html-description -->
 <div class="descr"> <a name="details"></a>
-<p>lgn-simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early part of the visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex. The model behind is a linear mechanistic, firing rate model that incorporates the influence of thalamocortical loops, in addition to the feedforward responses. This simulator can be used to study the characteristics of cortical feedback to LGN. These characteristics includes strength, spatial spread and temporal properties.</p>
+<p>lgn-simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early part of the visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex. The model behind is a linear mechanistic, firing rate model that incorporates the influence of thalamocortical loops, in addition to the feedforward responses. The advantage of the simulator lies in its computational and conceptual ease, allowing for fast and comprehensive exploration of various scenarios for the organization of the cortical feedback.</p>
 <ul>
 <li><a href="https://github.com/miladh/lgn-simulator">Source code</a></li>
 </ul>
@@ -96,7 +96,7 @@
 </ul>
 <a name="getting-started"></a>
 <h2 id="getting-started">Getting started</h2>
-<p>The lgn-simulator is written as library. Thus the library can be included in a <code>main.cpp</code> file and used in different applications. The namespace is <code>lgnSimulator</code>.</p>
+<p>The lgn-simulator is written as library. Thus the library can be included in <code>main.cpp</code> files and used in different applications. The namespace is <code>lgnSimulator</code>.</p>
 <pre class="cpp"><span class="preprocessor">#include &lt;lgnSimulator.h&gt;</span>
 <span class="keyword">using</span> <span class="keyword">namespace</span> lgnSimulator;
 
@@ -110,9 +110,9 @@
 <p>lgn-simulator is written in C++ using <a href="http://qt.io">Qt Creator</a>. The main classes are:</p>
 <ul>
 <li><a href="lgnsimulator-integrator.html">lgnSimulator::Integrator</a>: computes the forward and backwrad FFT of both 2d and 3d datasets.</li>
-<li><a href="lgnsimulator-stimulus.html">lgnSimulator::Stimulus</a>: virtual class for different stimulus types.</li>
-<li><a href="lgnsimulator-neuron.html">lgnSimulator::Neuron</a>: virtual class for different neurons types.</li>
-<li><a href="lgnsimulator-kernel.html">lgnSimulator::Kernel</a>: virtual class for different Kernels.</li>
+<li><a href="lgnsimulator-stimulus.html">lgnSimulator::Stimulus</a>: virtual class for stimulus types.</li>
+<li><a href="lgnsimulator-neuron.html">lgnSimulator::Neuron</a>: virtual class for neuron types.</li>
+<li><a href="lgnsimulator-kernel.html">lgnSimulator::Kernel</a>: virtual class for kernels.</li>
 </ul>
 <a name="neurons"></a>
 <h3 >Neurons</h3>

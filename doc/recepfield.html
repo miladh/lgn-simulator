@@ -64,6 +64,7 @@
 <ul>
 <li class="level1"><a href="#center-surround-receptive-fields">Center-surround receptive fields</a></li>
 <li class="level1"><a href="#direction-orientation-selective-receptive-fields">Direction &amp; orientation selective receptive fields</a></li>
+<li class="level2"><a href="#references">References</a></li>
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
@@ -75,10 +76,10 @@
 <p>Different neurons in the visual system respond to light falling within different more-or-less well-defined areas of the retina, and have a distinguished point where the response sensitivity is greatest. This area is called the receptive field of the neuron, and the point of peak sensitivity is called the receptive field center. It is often convenient to label a neuron by the location of its receptive field center, say \( \mathbf{r}_{c} = (x_{c} , y_{c}) \), and then define its activity as a function of the receptive field center \( R (x_{c} , y_{c}) \).</p>
 <a name="center-surround-receptive-fields"></a>
 <h2 id="center-surround-receptive-fields">Center-surround receptive fields</h2>
-<p>The response properties of visually responsive neurons are closely related to their receptive fields. The spatial shape of the receptive fields varies a lot among the visual neurons. Retinal cells commonly have center-surround receptive fields, consisting of a central disk, the &quot;center&quot;, and a concentric ring, the &quot;surround&quot;, each region responding oppositely to light. For example, if light in the centre increases the firing of the cell, light in the surround will decrease the firing of that cell. Depending on whether the activity increases or decreases with light in the center, the cell is said to have an on-center or off-center receptive field, respectively.</p>
+<p>The response properties of visually responsive neurons are closely related to their receptive fields. The spatial shape of the receptive fields varies a lot among the visual neurons. Retinal cells commonly have center-surround receptive fields consisting of a central disk (center) and a concentric ring (surround), where each region responds oppositely to light. For example, if light in the center increases the firing rate of the cell, light in the surround will decrease the firing rate. Depending on whether the activity increases or decreases with light in the center, the cell is said to have an on-center or off-center receptive field, respectively.</p>
 <div class="float-right" style="height:50%;width:50%;margin: 0 auto"><p><img src="images/cs_recep.png" alt="" /></p>
 <div style="align: left; text-align:center"><p class="figCaption">On-center and off-center cells respond oppositely to light in the center and surround of their receptive fields.</p>
-</div></div><p>The spatial shape of center-surround receptive fields are usually described by difference of two gaussian functions, usually referred to as DoG functions, given as</p>
+</div></div><p>The spatial shape of center-surround receptive fields are usually described by difference of two Gaussian functions, usually referred to as DoG functions, given as</p>
 <p>\begin{equation} G(x,y) = \frac{A}{\pi a^2}e^{-(x^2+y^2)/a^2} -\frac{B}{\pi b^2}e^{-(x^2+y^2)/b^2}, \end{equation}</p>
 <p>with the accompanying Fourier transform</p>
 <p>\begin{equation} \widetilde{G}(k_x,k_y) = A e^{-a^2(k_x^2+k_y^2)/4} -B e^{-b^2(k_x^2+k_y^2)/4}. \end{equation}</p>
@@ -93,7 +94,10 @@
 <p>\begin{align} x' = x \cos\theta + y \sin\theta , \\ y' = -x \sin\theta + y \cos\theta. \end{align}</p>
 <div class="float-right" style="height:80%;width:80%;margin: 0 auto"><p><img src="images/gabor_im3d.png" alt="" /></p>
 <div style="align: left; text-align:center"><p class="figCaption">Gabor function.</p>
-</div></div></div>
+</div></div><a name="references"></a>
+<h3 >References</h3>
+<p>[1] Hubel, David H., and Torsten N. Wiesel. &quot;Receptive fields, binocular interaction and functional architecture in the cat's visual cortex.&quot; The Journal of physiology 160.1 (1962): 106-154.</p>
+</div>
 <!-- @@@recepField.html -->
 </div>
 </div>

@@ -2,6 +2,15 @@
 <!DOCTYPE QDOCINDEX>
 <INDEX url="" title="documentation" version="" project="lgn-simulator">
     <namespace threadsafety="unspecified" name="" status="active" access="public" module="lgn-simulator">
+        <page name="about.html" href="about.html" status="active" location="about.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/about.qdoc" lineno="1" subtype="page" title="About" fulltitle="About" subtitle="" module="lgn-simulator">
+            <contents name="theory" title="Theory" level="1"/>
+            <contents name="getting-started" title="Getting started" level="1"/>
+            <contents name="development-and-technical-details" title="Development and technical details" level="1"/>
+            <contents name="neurons" title="Neurons" level="2"/>
+            <contents name="kernels" title="Kernels" level="2"/>
+            <contents name="stimulus" title="Stimulus" level="2"/>
+            <contents name="all-classes" title="All classes" level="2"/>
+        </page>
         <page name="allclasses.html" href="allclasses.html" status="active" location="allClasses.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/allClasses.qdoc" lineno="1" subtype="page" title="All classes" fulltitle="All classes" subtitle="" module="lgn-simulator"/>
         <page name="example.html" href="example.html" status="active" location="example.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/example.qdoc" lineno="1" subtype="page" title="Example application" fulltitle="Example application" subtitle="" module="lgn-simulator">
             <contents name="main-op-op-cpp" title="main&lt;@op&gt;.&lt;/@op&gt;cpp" level="1"/>
@@ -16,15 +25,6 @@
             <contents name="backward-fourier-transform" title="Backward Fourier transform" level="2"/>
             <contents name="two-dimensional-frequency-spectrum" title="Two-Dimensional Frequency Spectrum" level="1"/>
         </page>
-        <page name="about.html" href="about.html" status="active" location="index.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/index.qdoc" lineno="1" subtype="page" title="About" fulltitle="About" subtitle="" module="lgn-simulator">
-            <contents name="theory" title="Theory" level="1"/>
-            <contents name="getting-started" title="Getting started" level="1"/>
-            <contents name="development-and-technical-details" title="Development and technical details" level="1"/>
-            <contents name="neurons" title="Neurons" level="2"/>
-            <contents name="kernels" title="Kernels" level="2"/>
-            <contents name="stimulus" title="Stimulus" level="2"/>
-            <contents name="all-classes" title="All classes" level="2"/>
-        </page>
         <page name="nonlaggedXCells.html" href="nonlaggedxcells.html" status="active" location="nonlaggedXCells.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/systems/nonlaggedXCells.qdoc" lineno="1" subtype="page" title="Nonlagged X-cells" fulltitle="Nonlagged X-cells" subtitle="" module="systems"/>
         <page name="phaseReversedPushPull.html" href="phasereversedpushpull.html" status="active" location="phaseReversedPushPull.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/systems/phaseReversedPushPull.qdoc" lineno="1" subtype="page" title="Phase-reversed push-pull" fulltitle="Phase-reversed push-pull" subtitle="" module="systems">
             <contents name="impulse-response-functions" title="Impulse response functions" level="2"/>
@@ -34,8 +34,11 @@
         <page name="dlgnCircuit.html" href="dlgncircuit.html" status="active" location="dlgnCricuit.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/dlgnCricuit.qdoc" lineno="1" subtype="page" title="The dLGN Circuit" fulltitle="The dLGN Circuit" subtitle="" module="theory"/>
         <page name="impResFunc.html" href="impresfunc.html" status="active" location="impResFunc.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/impResFunc.qdoc" lineno="1" subtype="page" title="Impulse Response Function" fulltitle="Impulse Response Function" subtitle="" module="theory">
             <contents name="relation-to-receptive-field-function" title="Relation to receptive field function" level="1"/>
+            <contents name="references" title="References" level="2"/>
         </page>
-        <page name="linearInfromationTheory.html" href="linearinfromationtheory.html" status="active" location="linearInformationTheory.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/linearInformationTheory.qdoc" lineno="1" subtype="page" title="Linear Information Processing" fulltitle="Linear Information Processing" subtitle="" module="theory"/>
+        <page name="linearInfromationTheory.html" href="linearinfromationtheory.html" status="active" location="linearInformationTheory.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/linearInformationTheory.qdoc" lineno="1" subtype="page" title="Linear Information Processing" fulltitle="Linear Information Processing" subtitle="" module="theory">
+            <contents name="references" title="References" level="2"/>
+        </page>
         <page name="mechanisticModel.html" href="mechanisticmodel.html" status="active" location="mechanisticModel.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/mechanisticModel.qdoc" lineno="1" subtype="page" title="Mechanistic Model" fulltitle="Mechanistic Model" subtitle="" module="theory">
             <contents name="feedforward-model" title="Feedforward model" level="1"/>
             <contents name="feedback-model" title="Feedback model" level="1"/>
@@ -43,8 +46,11 @@
         <page name="recepField.html" href="recepfield.html" status="active" location="recepField.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/recepField.qdoc" lineno="1" subtype="page" title="Receptive Fields" fulltitle="Receptive Fields" subtitle="" module="theory">
             <contents name="center-surround-receptive-fields" title="Center-surround receptive fields" level="1"/>
             <contents name="direction-orientation-selective-receptive-fields" title="Direction &amp; orientation selective receptive fields" level="1"/>
+            <contents name="references" title="References" level="2"/>
         </page>
-        <page name="spatioTemporalSum.html" href="spatiotemporalsum.html" status="active" location="spatioTemporalSum.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/spatioTemporalSum.qdoc" lineno="1" subtype="page" title="Spatio-Temporal Summation" fulltitle="Spatio-Temporal Summation" subtitle="" module="theory"/>
+        <page name="spatioTemporalSum.html" href="spatiotemporalsum.html" status="active" location="spatioTemporalSum.qdoc" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/docs/theory/spatioTemporalSum.qdoc" lineno="1" subtype="page" title="Spatio-Temporal Summation" fulltitle="Spatio-Temporal Summation" subtitle="" module="theory">
+            <contents name="references" title="References" level="2"/>
+        </page>
         <namespace threadsafety="unspecified" name="lgnSimulator" href="lgnsimulator.html" status="active" access="public" location="ffthelper.h" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/src/helper/ffthelper.h" lineno="9" module="lgnSimulator">
             <class threadsafety="unspecified" name="FFTHelper" fullname="lgnSimulator::FFTHelper" href="lgnsimulator-ffthelper.html" status="active" access="public" location="ffthelper.h" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/src/helper/ffthelper.h" lineno="11">
                 <function threadsafety="unspecified" name="FFTHelper" fullname="lgnSimulator::FFTHelper::FFTHelper" href="lgnsimulator-ffthelper.html#FFTHelper" status="active" access="public" location="ffthelper.h" filepath="/home/milad/Dropbox/projects/lgn/code/lgn-simulator/src/helper/ffthelper.h" lineno="14" virtual="non" meta="constructor" const="false" static="false" overload="false" delete="false" default="false" final="false" type="" signature="FFTHelper()"/>

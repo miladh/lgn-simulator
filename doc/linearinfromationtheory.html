@@ -58,7 +58,14 @@
 <div class="content">
     <div class="line">
         <div class="content mainContent">
-<div class="sidebar"><div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level2"><a href="#references">References</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
 <div class="context">
 <h1 class="title">Linear Information Processing</h1>
 <span class="subtitle"></span>
@@ -71,10 +78,13 @@
 <p>where the term \( R_0\) accounts for any background firing that may occur when there is no stimulus. Assuming that the number of pixel is large, we may write</p>
 <p>\begin{equation} R = R_{0} +\displaystyle \iint_\mathbf{r} F(\mathbf{r}) S(\mathbf{r}) \; \mathrm{d}^2 \mathbf{r}, \end{equation}</p>
 <p>where the integral is taken over the entire visual field. Note that sometimes for mathematical convenience the integral boundaries are set to \(\pm \infty \), since the receptive fields are effectively localized and different from zero only on a small area of the visual field.</p>
-<p>The weighting function \(F \) is the receptive field function of the neuron, and can be considered as a pattern for a particular &quot;image feature&quot; for which the neuron is a detector. This becomes obvious by noticing that the integral in the equation above measures the mismatches between the stimulus and the receptive field function. When these two functions overlap fully, the value of the integral increases and thereby also the response of the cell.</p>
+<p>The weighting function \(F \) is the receptive field function of the neuron, and can be considered as a template for a specific image pattern for which the neuron is responsive to [1]. This becomes obvious by noticing that the integral in the equation above measures the mismatches between the stimulus and the receptive field function. When these two functions overlap fully, the value of the integral increases and thereby also the response of the cell.</p>
 <div class="float-right" style="margin: 0 auto"><p><img src="images/linearEstimate.png" alt="" /></p>
-<div style="align: left; text-align:center"><p class="figCaption">Illustration of linear information processing. The stimuli values in each small square is weighted with the corresponding square in the weighting factor. The sum of all these weighted stimuli values gives the response. Mathematically this corresponds to the sum of elements of the resulting matrix from the entrywise product ( \(\circ \) ) of the stimuli matrix and weighting factor matrix.</p>
-</div></div></div>
+<div style="align: left; text-align:center"><p class="figCaption">Illustration of linear information processing. The stimulus values in each small square is weighted with the corresponding square in the weighting factor. The sum of all these weighted stimulus values gives the response. Mathematically this corresponds to the sum of elements of the resulting matrix from the entrywise product ( \(\circ \) ) of the stimulus matrix and weighting factor matrix.</p>
+</div></div><a name="references"></a>
+<h3 >References</h3>
+<p>[1] Mallot HA. Computational neuroscience: A First Course. vol. 9; 2013.</p>
+</div>
 <!-- @@@linearInfromationTheory.html -->
 </div>
 </div>

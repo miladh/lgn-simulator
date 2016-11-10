@@ -63,6 +63,7 @@
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#relation-to-receptive-field-function">Relation to receptive field function</a></li>
+<li class="level2"><a href="#references">References</a></li>
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
@@ -71,15 +72,15 @@
 <span class="subtitle"></span>
 <!-- $$$impResFunc.html-description -->
 <div class="descr"> <a name="details"></a>
-<p>So far, we have considered a single neuron together with its receptive field. We now turn to the case where the retina projects to an entire layer of neurons each of which has its own receptive field. Assume that we have a uniform layer of neurons with identical but space-shifted receptive fields.</p>
+<p>So far, we have considered a single neuron together with its receptive field. We now consider the case where the retina projects to an entire layer of neurons with identical but space-shifted receptive fields.</p>
 <div class="float-right" style="height:50%;width:50%;margin: 0 auto"><p><img src="images/cellLayer.png" alt="" /></p>
 <div style="align: left; text-align:center"><p class="figCaption">Layer of neurons with identical receptive fields.</p>
 </div></div><p>If a point stimulus is delivered to this layer and we measure how this affects the activity of the cells in the layer, we will get a distribution of activity denoted as \( R ( \mathbf{r}_{c} ) \), where \( \mathbf{r}_{c} \) is the location of a neuron and \( R(\mathbf{r}_{c}) \) its activity. For general images composed of many point stimuli, we obtain:</p>
 <p>\begin{equation} R(x_{c}, y_{c}) = R_{0} +\displaystyle\sum_i\sum_jW(x_{c} - x_i,y_{c} - y_j) S(x_i, y_j), \end{equation}</p>
 <p>or, in the infinitesimal formulation</p>
 <p>\begin{equation} R(\mathbf{r}_{c}) = R_{0} +\displaystyle \iint_\mathbf{r} W(\mathbf{r}_{c} - \mathbf{r}) S(\mathbf{r}) \; \mathrm{d}^2\mathbf{r}, \end{equation}</p>
-<p>where \( R_{0} \) is the background firing rate and \(W\) is the weighting function describing the strength, or weight, with which a stimulus delivered at retinal position \(r\) influences the output at \( \mathbf{r}_{c} \).</p>
-<p>The weighting function can in principle be obtained by measuring the response to briefly flicking test spots positioned at different positions \(\mathbf{r}_\mathrm{s}\) which are very small (\(\sim \delta(\mathbf{r} - \mathbf{r}_\mathrm{s})\)). Mathematically this corresponds to a stimulus function given by</p>
+<p>where \( R_{0} \) is the background firing rate and \(W\) is the weighting function describing the strength, or weight, with which a stimulus delivered at retinal position \(\mathbf{r}\) influences the output at \( \mathbf{r}_{c} \).</p>
+<p>The weighting function can in principle be obtained by measuring the response to briefly flicking test spots positioned at different positions \(\mathbf{r}_\mathrm{s}\) which are very small (\(\sim \delta(\mathbf{r} - \mathbf{r}_\mathrm{s})\)) [1]. Mathematically this corresponds to a stimulus function given by</p>
 <p>\begin{equation} S(\mathbf{r}, t) = L_s \delta(\mathbf{r} - \mathbf{r}_s), \end{equation}</p>
 <p>where \(L_s\) is the luminance of the test spot. Inserting this into the equation we obtain the response (assuming zero background firing)</p>
 <p>\begin{equation} R(\mathbf{r}_{c}) = L_s W(\mathbf{r}_{c} - \mathbf{r}_s). \end{equation}</p>
@@ -90,7 +91,11 @@
 <p>\begin{equation} R(\mathbf{r}_{c}) = R_{0} +\displaystyle \iint_\mathbf{r} F(\mathbf{r}- \mathbf{r}_{c} ) S(\mathbf{r}) \; \mathrm{d}^2\mathbf{r}. \end{equation}</p>
 <p>By comparing this with the corrosponding equation expressed in terms of the impulse response function for all possible stimulus \(S \), we find that</p>
 <p>\begin{equation} F(\mathbf{r}) = W(-\mathbf{r}), \end{equation}</p>
-<p>i.e&#x2e; the impulse response function and the receptive field function are mirrored versions of each other, for translation-invariant systems.</p>
+<p>i.e&#x2e; the impulse response function and the receptive field function are mirrored versions of each other, for translation-invariant systems [2].</p>
+<a name="references"></a>
+<h3 >References</h3>
+<p>[1] Einevoll, Gaute T., and Hans E. Plesser. &quot;Extended difference-of-Gaussians model incorporating cortical feedback for relay cells in the lateral geniculate nucleus of cat.&quot; Cognitive neurodynamics 6.4 (2012): 307-324.</p>
+<p>[2] Mallot HA. Computational neuroscience: A First Course. vol. 9; 2013.</p>
 </div>
 <!-- @@@impResFunc.html -->
 </div>
