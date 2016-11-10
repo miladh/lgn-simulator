@@ -40,7 +40,7 @@ Assuming that the number of pixel is large, we may write
 
 where the integral is taken over the entire visual field. Note that sometimes for mathematical convenience the integral boundaries are set to \\(\\pm \\infty \\), since the receptive fields are effectively localized and different from zero only on a small area of the visual field.
 
-The weighting function \\(\recep \\) is the receptive field function of the neuron, and can be considered as a pattern for a particular "image feature" for which the neuron is a detector.
+The weighting function \\(\recep \\) is the receptive field function of the neuron, and can be considered as a template for a specific image pattern for which the neuron is responsive to [1].
 This becomes obvious by noticing that the integral in the equation above measures the mismatches between the stimulus and the receptive field function.
 When these two functions overlap fully, the value of the integral increases and thereby also
 the response of the cell.
@@ -49,10 +49,14 @@ the response of the cell.
 \div {class="float-right" style="margin: 0 auto"}
 \inlineimage images/linearEstimate.png
     \div {style="align: left; text-align:center"}
-        \caption Illustration of linear information processing. The stimuli values in each small square is weighted with the corresponding square in the weighting factor. The sum of all these weighted stimuli values gives the  response. Mathematically this corresponds to the sum of elements of the resulting matrix from the entrywise product ( \\(\\circ \\) ) of the stimuli matrix and weighting factor matrix.
+        \caption Illustration of linear information processing. The stimulus values in each small square is weighted with the corresponding square in the weighting factor. The sum of all these weighted stimulus values gives the  response. Mathematically this corresponds to the sum of elements of the resulting matrix from the entrywise product ( \\(\\circ \\) ) of the stimulus matrix and weighting factor matrix.
     \enddiv
 \enddiv
 
 
+
+\section2 References
+[1] Mallot HA. Computational neuroscience: A First Course. vol. 9;
+2013.
 
 */

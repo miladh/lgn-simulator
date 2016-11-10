@@ -5,9 +5,8 @@
     \inmodule theory
 
 
-So far, we have considered a single neuron together with its receptive field. We now
-turn to the case where the retina projects to an entire layer of neurons each of which has its own receptive field.
-Assume that we have a uniform layer of neurons with identical but space-shifted receptive fields.
+So far, we have considered a single neuron together with its receptive field.
+We now consider the case where the retina projects to an entire layer of neurons with identical but space-shifted receptive fields.
 
 \div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
  \inlineimage images/cellLayer.png
@@ -39,11 +38,11 @@ W(\\mathbf{r}_{c} - \\mathbf{r}) \stim(\\mathbf{r}) \\; \\mathrm{d}^2\\mathbf{r}
 \\end{equation}
 
 where \\( \resp_{0} \\) is the background firing rate and \\(W\\) is the weighting function describing the strength, or weight, with which a stimulus delivered at
-retinal position \\(r\\) influences the output at \\( \\mathbf{r}_{c} \\).
+retinal position \\(\\mathbf{r}\\) influences the output at \\( \\mathbf{r}_{c} \\).
 
 The weighting function can in principle be obtained by measuring the response to briefly flicking test spots
 positioned at different positions \\(\\mathbf{r}_\\mathrm{s}\\) which are very small
-(\\(\\sim \\delta(\\mathbf{r} - \\mathbf{r}_\\mathrm{s})\\)).
+(\\(\\sim \\delta(\\mathbf{r} - \\mathbf{r}_\\mathrm{s})\\)) [1].
 Mathematically this corresponds to a stimulus function given by
 
 \\begin{equation}
@@ -80,11 +79,14 @@ By comparing this with the corrosponding equation expressed in terms of the impu
 \\end{equation}
 
 i.e. the impulse response function and the receptive field function are mirrored versions
-of each other, for translation-invariant systems.
+of each other, for translation-invariant systems [2].
 
 
+\section2 References
+[1] Einevoll, Gaute T., and Hans E. Plesser. "Extended difference-of-Gaussians model incorporating cortical feedback for relay cells in the lateral geniculate nucleus of cat." Cognitive neurodynamics 6.4 (2012): 307-324.
 
-
+[2] Mallot HA. Computational neuroscience: A First Course. vol. 9;
+2013.
 
 
 

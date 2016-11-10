@@ -12,8 +12,8 @@ and then define its activity as a function of the receptive field center
 \section1 Center-surround receptive fields
 The response properties of visually responsive neurons are closely related to their receptive fields.
 The spatial shape of the receptive fields varies a lot among the visual neurons.
-Retinal cells commonly have center-surround receptive fields, consisting of a central disk, the "center", and a concentric ring, the "surround", each region responding oppositely to light.
-For example, if light in the centre increases the firing of the cell, light in the surround will decrease the firing of that cell.
+Retinal cells commonly have center-surround receptive fields consisting of a central disk (center) and a concentric ring (surround), where each region responds oppositely to light.
+For example, if light in the center increases the firing rate of the cell, light in the surround will decrease the firing rate.
 Depending on whether the activity increases or decreases with light in the center, the cell is said to have an on-center or off-center receptive field, respectively.
 
 
@@ -24,7 +24,7 @@ Depending on whether the activity increases or decreases with light in the cente
       \enddiv
 \enddiv
 
-The spatial shape of center-surround receptive fields are usually described by difference of two gaussian functions, usually referred to as DoG functions, given as
+The spatial shape of center-surround receptive fields are usually described by difference of two Gaussian functions, usually referred to as DoG functions, given as
 
 
 \\begin{equation}
@@ -77,6 +77,8 @@ y' = -x \\sin\\theta + y \\cos\\theta.
 \enddiv
 
 
+\section2 References
+[1] Hubel, David H., and Torsten N. Wiesel. "Receptive fields, binocular interaction and functional architecture in the cat's visual cortex." The Journal of physiology 160.1 (1962): 106-154.
 
 
 */

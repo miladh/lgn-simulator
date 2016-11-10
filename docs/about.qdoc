@@ -5,8 +5,9 @@
 
 lgn-simulator is a visual stimulus-driven simulator of spatiotemporal cell responses in the early part of the visual system consisting of the retina, lateral geniculate nucleus (LGN) and primary visual cortex.
 The model behind is a linear mechanistic, firing rate model that incorporates the influence of thalamocortical loops, in addition to the feedforward responses.
-This simulator can be used to study the characteristics of cortical feedback to LGN.
-These characteristics includes strength, spatial spread and temporal properties.
+The advantage of the simulator lies in its computational and conceptual ease, allowing for fast and
+comprehensive exploration of various scenarios for the organization of the cortical
+feedback.
 
 \list
     \li \l{https://github.com/miladh/lgn-simulator} {Source code}
@@ -27,7 +28,7 @@ These characteristics includes strength, spatial spread and temporal properties.
         \endlist
 
     \section1 Getting started
-The lgn-simulator is written as library. Thus the library can be included in a \c main.cpp file and used in different applications. The namespace is \c lgnSimulator.
+The lgn-simulator is written as library. Thus the library can be included in \c main.cpp files and used in different applications. The namespace is \c lgnSimulator.
 
     \code
         #include <lgnSimulator.h>
@@ -53,9 +54,9 @@ The main classes are:
 
     \list
     \li \l{lgnSimulator::Integrator}: computes the forward and backwrad FFT of both 2d and 3d datasets.
-    \li \l{lgnSimulator::Stimulus}: virtual class for different stimulus types.
-    \li \l{lgnSimulator::Neuron}: virtual class for different neurons types.
-    \li \l{lgnSimulator::Kernel}: virtual class for different Kernels.
+    \li \l{lgnSimulator::Stimulus}: virtual class for stimulus types.
+    \li \l{lgnSimulator::Neuron}: virtual class for neuron types.
+    \li \l{lgnSimulator::Kernel}: virtual class for kernels.
     \endlist
 
 

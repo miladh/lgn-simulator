@@ -4,37 +4,23 @@
     \title Spatio-Temporal Summation
     \inmodule theory
 
-So far we have ignored the fact that neurons collect activity over time as well as over space.
-The activity of a neuron at time \\(t\\) typically depends on the behavior of the stimulus over a period of time, starting a few hundred milliseconds prior to \\( t \\) and ending perhaps tens of milliseconds before \\( t \\).
-In this situation, spatiotemporal summation is characterized by a spatiotemporal impulse response function (weighting function)
-\\( \impres(\\\rc, \\\delay) \\),
-specifying for each position \\( \\\rc \\) and each delay \\( \\\delay \\) since stimulus onset, the sign and strength with which this particular stimulus event influences the output.
-As in spatial summation, we assume translation invariance, meaning that  a neuron yields a time-shifted output for a time-shifted version of the input.
-That is, if the response to \\(\stim(\\mathbf{r},t)\\) is \\(\resp( \\mathbf{r},t) \\), then the response to \\( \stim ( \\mathbf{r},t - \\\delay) \\) is \\( \resp( \\mathbf{r}, t- \\\delay) \\).
-
-Assuming (i) linearity, (ii) time invariance, and (iii) local spatial homogeneity, the response for a cell located at position  \\( \\\rc \\) in the visual field, can be written as
+The activity of a neuron at time \\(t\\) typically depends on the behavior of the stimulus over a period of time, starting a few hundred milliseconds prior to \\( t \\) and ending perhaps tens of milliseconds before \\( t \\) [1].
+Assuming (i) linearity, (ii) time invariance, and (iii) local spatial homogeneity, the response for a cell located at position  \\( \\\rc \\) in the visual field, can be written as [2]
 
 \\begin{equation}
 \resp( \\\rc, t) =
 \resp_{0}
-+\\displaystyle \\int^{\\\delay = t}_{\\\delay = -\\infty} \\iint_\\mathbf{r}
++\\displaystyle \\int_{\\\delay} \\iint_\\mathbf{r}
 \impres ( \\\rc - \\mathbf{r} , \\\delay ) \stim( \\mathbf{r},t- \\\delay )
 \\mathrm{d}^2 \\mathbf{r} \\mathrm{d}\\\delay,
 \\end{equation}
 
-where the impulse-response function \\( {\impres}(\\mathbf{r}, \\\delay)\\) determines how strongly and with what sign the
-stimulus at time
-\\(t-\\\delay\\) affects the response at time \\(t\\).
-The time integral should in principle be taken over positive values of \\(\\\delay\\) only up to \\(\\\delay = t\\).
-This is in contrast to spatial convolution, where \\(\\mathbf{r}\\) is varied between \\(+\\infty\\) and \\(-\\infty\\).
-The reason for this restriction is of course that only stimuli occuring before the time of measurement
-can influence the excitation.
-This constraint is called "causality" and can be accounted for by setting the values of \\( {\impres}(\\mathbf{r},\\\delay)\\) to \\( 0\\) for all values \\(\\\delay < 0\\),
-meaning that an input event cannot have effects in the past.
-With this convention, the integral may be taken from \\(-\\infty\\) to \\(\\infty\\), when we assume \\( t\\) is large.
+where the impulse-response function \\( {\impres}(\\mathbf{r}, \\\delay)\\) describes the strength with
+which a stimulus delivered at position \\( \\mathbf{r}\\) at time  \\( t- \\\delay \\) affects the response of a neuron located at position  \\( \\\rc \\)  at time \\( t \\).
+Since an input event cannot have effects in the past, it follows then that \\( {\impres}(\\mathbf{r},\\\delay < 0) =0\\).
+Thus, the lower integration boundary could also be set to \\(\\tau=0\\).
 
-
-The integral in above is a convolution between the stimulus and impulse-response function, i.e.
+The integral above is a convolution between the stimulus and impulse-response function, i.e.
 
 \\begin{equation}
     \resp(\\\rc, t) =
@@ -71,16 +57,8 @@ The complex Fourier transform we use, and its inverse, are given by
  \\mathrm{d}^2\\mathbf{k}\\;\\mathrm{d}\\omega.
 \\end{equation}
 
-The Fourier-transformed impulse-response \\({ \\\impresft}\\) also
-has a clear physiological interpretation.
-The response to the stimulus \\(\stim\\) is essentially written as an infinite sum (integral) over
-contributions from drifting sinusoidal gratings specified by \\( k \\) and \\( \\omega \\).
-The weight and phase of each different grating required to represent the stimulus \\( \stim\\) are given by \\( \\tilde{\stim} \\), while
-\\( {\\\impresft}(\\mathbf{k}, \\omega)\\) gives the response to a sinusoidal drifting grating specified by \\( k \\) and \\(\\omega\\).
+\section2 References
+[1] Dayan, Peter, and Laurence F. Abbott. Theoretical neuroscience. Vol. 10. Cambridge, MA: MIT Press, 2001.
 
-
-
-
-
-
+[2] Plesser, H. E., and G. T. Einevoll. "Linear mechanistic models for the dorsal lateral geniculate nucleus of cat probed using drifting-grating stimuli." Network: Computation in Neural Systems 13.4 (2002): 503-530.
 */
