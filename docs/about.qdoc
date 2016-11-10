@@ -65,7 +65,7 @@ The main classes are:
     \annotatedlist lgnSimulator-neurons
 
     \section2 Kernels
-    Non-seperable kernels can be added by creating a subclass of \l{lgnSimulator::Kernel}. ALternatively a seperable kernel can be added by creating a subclass of \l{lgnSimulator::SeparableKernel}, which is also a subclass of \l{lgnSimulator::Kernel}. Seperable kernels consist of a \l{lgnSimulator::SpatialKernel} and a \l{lgnSimulator::TemporalKernel}.
+    Non-seperable kernels can be added by creating a subclass of \l{lgnSimulator::Kernel}. Alternatively a seperable kernel can be added by creating a subclass of \l{lgnSimulator::SeparableKernel}, which is also a subclass of \l{lgnSimulator::Kernel}. Seperable kernels consist of a \l{lgnSimulator::SpatialKernel} and a \l{lgnSimulator::TemporalKernel}.
 
 
     Spatial kernels:

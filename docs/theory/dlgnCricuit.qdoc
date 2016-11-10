@@ -4,93 +4,161 @@
     \title The dLGN Circuit
     \inmodule theory
 
-In LGN, relay cells receive excitatory input from retinal ganglion cells as well as feedforward inhibition from
-intrageniculate
-interneurons both via dendro-dendritic structures (triads) and (possibly) axonal output.
-The interneurons in turn receive excitation from a few retinal ganglion cells.
-In addition, the relay cells receive inhibitory feedback from the TRN and excitatory feedback from the striate cortex.
-The intrageniculate interneurons and TRN cells also receive excitatory feedback from cortex.
-All these feedforward and feedback connections will eventually be included in our present mathematical treatment.
 
+In this section we derive the impulse-response function for the thalamic relay cells using the
+mechanistic model and based on
+current knowledge about the neuronal connectivity in dLGN.
+The focus of attention is the firing rate of dLGN relay cells with ON symmetry.
+These neurons receive feedforward excitation and indirect feedforward inhibition (via
+intrageniculate interneurons) from
+ON-center ganglion cells in retina.
+The relay cells further receive cortical feedback from both cortical ON cells and cortical OFF
+cells.
+The cortical feedback can be both excitatory (direct) and inhibitory (indirect via
+intrageniculate interneurons).
+The cortical ON and OFF cells are in turn assumed to be driven by
+the ON and OFF relay cells, respectively.
+
+The corticogeniculate feedback comes from orientation-tuned cells in layer 6 in cortex.
+We consider a set of \\(N\\) mutually uncoupled, orientation-selective cortical populations
+\\(\\text{C}_n\\), for \\(n=1,
+2,\\dots, N\\), for both ON and OFF pathways.
+Each population \\(\\text{C}_n\\) responds preferably to stimuli (bars, gratings)
+with orientation
+\\(\\theta_n\\).
+In figure below only one cortical population is shown for each pathway even though
+an arbitrary number of cortical populations is considered.
 
 \div {class="float-right" style="height:50%;width:50%;margin: 0 auto"}
 \image images/edogCircuit.png
-    \div {style="align: left; text-align:center"}
+    \div {style="align: center; text-align:center"}
         \caption dLGN circuit.
     \enddiv
 \enddiv
 
 
-The firing-rate responses of the various cells in the early visual pathway are assumed to be governed by the following set of equations:
+The firing-rate responses (ON-pathway) of the various cells in the early visual pathway are assumed to be governed by the following set of equations:
 
 \\begin{align}
-    \resp_\\\gang(\\mathbf{r},t) &= \impres_{\\\gang}(\\mathbf{r},t) \\otimes \stim(\\mathbf{r},t),
+    \resp_\\\gang^{\\mathrm{ON}}(\\mathbf{r},t) &= \impres^{\\mathrm{ON}}_{\\\gang}(\\mathbf{r},t) \\otimes \stim(\\mathbf{r},t),
 \\\\
-    \resp_\\\cor(\\mathbf{r},t) &=
-    \kernel_{\\\cor \\\rel}(\\mathbf{r},t) \\otimes \resp_{\\\rel}(\\mathbf{r},t),
+    \resp^{\\mathrm{ON}}_\\\cor(\\mathbf{r},t) &=
+    \kernel^{\\mathrm{ON}}_{\\\cor \\\rel}(\\mathbf{r},t) \\otimes \resp^{\\mathrm{ON}}_{\\\rel}(\\mathbf{r},t),
 \\\\
-    \resp_\\\inter(\\mathbf{r},t)\\; &=
-    \\sum_{k} \kernel_{\\\inter\\\gang_k}(\\mathbf{r},t) \\otimes \resp_{\\\gang_k}(\\mathbf{r},t) \\\\
-    &+\\sum_{k} \kernel_{\\\inter\\\cor_k}(\\mathbf{r},t) \\otimes \resp_{\\\cor_k}(\\mathbf{r},t),
-\\\\
-    \resp_\\\rel(\\mathbf{r},t) &=
-    \\sum_{k} \kernel_{\\\rel\\\gang_k}(\\mathbf{r},t) \\otimes \resp_{\\\gang_k}(\\mathbf{r},t) \\\\
-    &+\\sum_{k} \kernel_{\\\rel \\\inter_k}(\\mathbf{r},t) \\otimes \resp_{\\\inter_k}(\\mathbf{r},t) \\\\
-    &+\\sum_{k}\kernel_{\\\rel \\\cor_k}(\\mathbf{r},t) \\otimes \resp_{\\\cor_k}(\\mathbf{r},t),
+    \resp^{\\mathrm{ON}}_\\\rel(\\mathbf{r},t) &=
+    \kernel^{\\mathrm{ON}}_{\\\rel\\\gang}(\\mathbf{r},t) \\otimes \resp^{\\mathrm{ON}}_{\\\gang}(\\mathbf{r},t) \\\\
+    &+\kernel^{\\mathrm{ON}}_{\\\rel\\\inter \\\gang}(\\mathbf{r},t) \\otimes \resp^{\\mathrm{ON}}_{\\\gang}(\\mathbf{r},t) \\\\
+    &+\\sum_{n}\kernel^{\\mathrm{ON}}_{\\\rel \\\cor_n}(\\mathbf{r},t) \\otimes \resp^{\\mathrm{ON}}_{\\\cor_n}(\\mathbf{r},t)
+    \\\\
+    &+\\sum_{n}\kernel^{\\mathrm{OFF-X}}_{\\\rel \\\cor_n}(\\mathbf{r},t) \\otimes \resp^{\\mathrm{OFF}}_{\\\cor_n}(\\mathbf{r},t).
 \\end{align}
 
 
-where the sums run over different populations (e.g. on-centre and off-centre ganglion cell populations) of specific cell types (ganglion cells, interneurons, etc.). Using the results from previous section we can write the impulse response function for various cells:
 
+\section1 Phase-reversed push-pull cortical feedback
+The dLGN circuit exhibits various nonlinear effects.
+In order to include some of these effects the response of the cortical cells are expressed as a
+nonlinear function of the linearly filtered input.
+More specifically we express the response of the (ON or OFF) cortical
+population \\( \\text{C}_n\\) by
+
+
+\\begin{equation}
+    \resp^{\\text{ON/OFF}}_{\\\cor_n} \\;\\;\\;
+    = \\left[\kernel^{\\text{ON/OFF}}_{\\\cor_n \\\rel} \\otimes
+    \resp^{\\text{ON/OFF}}_{\\\rel}\\right]_{+},
+\\end{equation}
+
+where \\([x]_+\\) is the half-wave rectification function (\\([x<0]_+ = 0,
+[x\\ge0]_+=x\\), and \\(\kernel^{\\text{ON/OFF}}_{\\\cor_n \\\rel}\\) is the feedforward
+kernel between the relay cells
+and the cortical cells in population \\(\\text{C}_n\\).
+We further assume the input to cortical OFF cells to be the negative of the
+one for the ON cells.
+That is
+
+\\begin{equation}
+     \resp^{\\text{OFF}}_{\\\cor_n}  =
+     \\left[-\kernel^{\\text{ON}}_{\\\cor_n \\\rel} \\otimes
+     \resp^{\\text{ON}}_{\\\rel}\\right]_{+}.
+\\end{equation}
+
+Finally, the feedback kernels are assumed to be related by (phase-reversal)
+
+\\begin{equation}
+     \kernel^{\\text{OFF-X}}_{\\\rel\\\cor_n}\\; = -\kernel^{\\text{ON}}_{\\\rel\\\cor_n},
+\\end{equation}
+
+where \\(\kernel^{\\text{OFF-X}}_{\\\rel\\\cor_n}\\) is the cross-coupling feedback from
+cortical OFF cells onto relay ON cells.
+These assumptions are discussed carefully in Einevoll et
+al. 2012 [1].
+
+Using the three assumptions above,
+the total input to the ON dLGN relay cell is
+given by
 
 \\begin{align}
-\\\impresft_{\\\cor_i}(\\mathbf{k}, \\omega) &=
-\\\kernelft_{{\\\cor_i} \\\rel}\\\impresft_{\\\rel}
- \\\\
-\\\impresft_{\\\inter_i}(\\mathbf{k}, \\omega)\\; &=
-\\sum_j \\\kernelft_{{\\\inter_i} \\\gang_j}\\\impresft_{\\\gang_j}
-+ \\sum_j \\\kernelft_{{\\\inter_i} \\\cor_j} \\\impresft_{\\\cor_j}
- \\\\
-&=\\sum_j \\\kernelft_{{\\\inter_i} \\\gang_j}\\\impresft_{\\\gang_j}
-+ \\sum_j \\\kernelft_{{\\\inter_i} \\\cor_j}
-\\\kernelft_{\\\cor_j \\\rel} \\\impresft_{\\\rel}
-\\\\
-\\\impresft_{\\\rel}(\\mathbf{k}, \\omega) &=
-\\sum_j \\\kernelft_{{\\\rel} \\\gang_j}\\\impresft_{\\\gang_j}
-+\\sum_j \\\kernelft_{{\\\rel} \\\inter_j}\\\impresft_{\\\inter_j}
-+\\sum_j \\\kernelft_{{\\\rel} \\\cor_j} \\\impresft_{\\\cor_j}
- \\\\
-&=
-\\sum_j \\\kernelft_{{\\\rel} \\\gang_j}\\\impresft_{\\\gang_j}
-+\\sum_j \\\kernelft_{{\\\rel} \\\inter_j}
-\\bigg(
-\\sum_k \\\kernelft_{{\\\inter_j} \\\gang_k}\\\impresft_{\\\gang_k}
-+ \\sum_k \\\kernelft_{{\\\inter_j} \\\cor_k}
-\\\kernelft_{\\\cor_k \\\rel} \\\impresft_{\\\rel}
-\\bigg)
-+\\sum_j \\\kernelft_{{\\\rel} \\\cor_j}
-\\bigg(
-\\\kernelft_{{\\\cor_j} \\\rel}\\\impresft_{\\\rel}
-\\bigg)
- \\\\
+    \resp^{\\text{ON}}_\\\rel &=
+    \kernel^{\\text{ON}}_{\\\rel\\\gang} \\otimes \resp^{\\text{ON}}_{\\\gang}
+    +\kernel^{\\text{ON}}_{\\\rel \\\inter\\\gang} \\otimes \resp^{\\text{ON}}_{\\\gang}
+    +\\sum_n\kernel^{\\text{ON}}_{\\\rel \\\cor_n} \\otimes \resp^{\\text{ON}}_{\\\cor_n}
+    +\\sum_n\kernel^{\\text{OFF-X}}_{\\\rel \\\cor_n} \\otimes
+    \resp^{\\text{OFF}}_{\\\cor_n}
+     \\\\
+    &=
+    \kernel^{\\text{ON}}_{\\\rel\\\gang} \\otimes \resp^{\\text{ON}}_{\\\gang}
+    +\kernel^{\\text{ON}}_{\\\rel \\\inter\\\gang} \\otimes \resp^{\\text{ON}}_{\\\gang}
+    +\\sum_n\kernel^{\\text{ON}}_{\\\rel \\\cor_n}
+    \\otimes  \kernel^{\\text{ON}}_{\\\cor_n \\\rel}
+    \\otimes \resp^{\\text{ON}}_{\\\rel},
+\\end{align}
+
+
+where we have used the mathematical identity: \\([x]_+ -[-x]_+ = x\\).
+By inserting the expression for the descriptive model
+for \\(\resp^{\\text{ON}}_\\\rel\\) and
+\\( \resp^{\\text{ON}}_\\\gang\\), and applying the convolution theorem we obtain
+
+\\begin{align}
+    \\\impresft^{\\text{ON}}_\\\rel \\\stimft &=
+    \\left(
+    \\\kernelft^{\\text{ON}}_{\\\rel\\\gang}\\\impresft^{\\text{ON}}_{\\\gang}
+    +\\\kernelft^{\\text{ON}}_{\\\rel \\\inter\\\gang}\\\impresft^{\\text{ON}}_{\\\gang}
+    +\\sum_n
+    \\\kernelft^{\\text{ON}}_{\\\rel \\\cor_n}
+    \\\kernelft^{\\text{ON}}_{\\\cor_n \\\rel}
+    \\\impresft^{\\text{ON}}_{\\\rel}
+    \\right) \\\stimft,
+\\end{align}
+
+Comparing both sides of the equal sign we see that
+
+\\begin{align}
+\\\impresft^{\\text{ON}}_{\\\rel}
 &=\\frac{
-\\displaystyle\\sum_j \\\kernelft_{{\\\rel} \\\gang_j}\\\impresft_{\\\gang_j}
-+\\sum_j \\\kernelft_{{\\\rel} \\\inter_j}
-\\sum_k \\\kernelft_{{\\\inter_j} \\\gang_k}\\\impresft_{\\\gang_k}
+\\\kernelft^{\\text{ON}}_{{\\\rel} \\\gang}
++\\\kernelft^{\\text{ON}}_{\\\rel \\\inter\\\gang}
 }
 {
-1 -
-\\displaystyle\\sum_j \\\kernelft_{{\\\rel} \\\inter_j}
-\\sum_k \\\kernelft_{{\\\inter_j} \\\cor_k}
-\\\kernelft_{\\\cor_k \\\rel}
--
-\\sum_j \\\kernelft_{{\\\rel} \\\cor_j}
-\\\kernelft_{{\\\cor_j} \\\rel}
-}
+1
+-\\sum_n\\\kernelft^{\\text{ON}}_{\\\rel \\\cor_n}\\\kernelft^{\\text{ON}}_{\\\cor_n \\\rel}
+}\\;
+\\\impresft^{\\text{ON}}_{\\\gang}.
 \\end{align}
 
 
+In this expression the direct feedforward excitation and the indirect feedforward inhibition via
+interneurons are represented by the first and second terms in the numerator, respectively.
+The feedback effects are accounted for in the denominator.
 
 
+
+\section2 References
+[1] Einevoll, Gaute T., and Hans E. Plesser. "Extended difference-of-Gaussians model incorporating cortical feedback for relay cells in the lateral geniculate nucleus of cat." Cognitive neurodynamics 6.4 (2012): 307-324.
+
+[2] Wang, Wei, et al. "Functional alignment of feedback effects from visual cortex to thalamus." Nature neuroscience 9.10 (2006): 1330-1336.
+
+[3] Norheim, Eivind S., et al. "A minimal mechanistic model for temporal signal processing in the lateral geniculate nucleus." Cognitive Neurodynamics 6.3 (2012): 259-281.
 
 */

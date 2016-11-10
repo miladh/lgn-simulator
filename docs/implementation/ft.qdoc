@@ -11,12 +11,12 @@ The (continuous) Fourier transform (CFT) of a signal and its inverse Fourier tra
 
 \\begin{equation}
  \\tilde{y}(k,\\omega) =
- \\displaystyle\\int_{t} \\int_\\mathbf{x}
+ \\displaystyle\\int_{t} \\int_x
  e^{-i(kx - \\omega t)}y(x, t) \\mathrm{d}x\\;\\mathrm{d}t,
 \\end{equation}
 
 \\begin{equation}
- y(k,\\omega) = \\frac{1}{(2\\pi)^3}
+ y(x,t) = \\frac{1}{(2\\pi)^3}
  \\displaystyle\\int_{\\omega} \\int_k
  e^{i(kx - \\omega t)}\\tilde{y}(k, \\omega)
  \\mathrm{d}k\\;\\mathrm{d}\\omega.

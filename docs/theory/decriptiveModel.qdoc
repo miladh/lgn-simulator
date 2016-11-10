@@ -26,8 +26,10 @@ G(x,y) =
 
 with its parameters being fitted with respect to experimental data.
 This procedure provides estimates for receptive field centre (\\(A\\)) and surround (\\(B\\)) weights as well as the corresponding width parameters (\\(a\\)) and (\\(b\\)).
-Although the DoG model is able to fit the experimental data well, no insight is gained regarding what aspects of the retino-geniculate circuitry are responsible for the differences in neuronal responses between the retinal and geniculate level.
-For such insight mechanistic, not descriptive, modelling is needed.
+With this approach, however, limited insight is gained on how the geniculate circuit
+modifies the receptive field structure of cells in the early part of the visual system.
+To address this question a mechanistic model is needed.
+
 
 
 */
