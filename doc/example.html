@@ -109,7 +109,7 @@
     RelayCell relay(<span class="operator">&amp;</span>integrator<span class="operator">,</span> cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;R0&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span><span class="type">double</span><span class="operator">&gt;</span>());
 
     <span class="comment">// G -&gt; R</span>
-    SpatialGaussian Ks_rg <span class="operator">=</span> createSpatialGaussianKernel(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krg&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;spatial&quot;</span><span class="operator">]</span>);
+    SpatialDelta Ks_rg <span class="operator">=</span> createSpatialDeltaKernel(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krg&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;spatial&quot;</span><span class="operator">]</span>);
     TemporalDelta Kt_rg <span class="operator">=</span> createTemporalDeltaKernel(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krg&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;temporal&quot;</span><span class="operator">]</span>);
     SeparableKernel Krg(cfg<span class="operator">[</span><span class="string">&quot;relay&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;Krg&quot;</span><span class="operator">]</span><span class="operator">[</span><span class="string">&quot;w&quot;</span><span class="operator">]</span><span class="operator">.</span>as<span class="operator">&lt;</span><span class="type">double</span><span class="operator">&gt;</span>()<span class="operator">,</span> <span class="operator">&amp;</span>Ks_rg<span class="operator">,</span> <span class="operator">&amp;</span>Kt_rg);
 
@@ -134,6 +134,7 @@
 
     <span class="comment">//Compute:--------------------------------------------------------------------------------------</span>
     S<span class="operator">-</span><span class="operator">&gt;</span>computeFourierTransform();
+    S<span class="operator">-</span><span class="operator">&gt;</span>computeSpatiotemporal();
     relay<span class="operator">.</span>computeImpulseResponse();
     relay<span class="operator">.</span>computeResponse(S<span class="operator">.</span>get());
 
@@ -148,7 +149,8 @@
 }</pre>
 <a name="config-file"></a>
 <h2 id="config-file">Config file</h2>
-<p>The config file is shown below:</p>
+<p>The config file is shown below. The number of spatial and temporal points is given by \( N_s = 2^{\texttt{ns}} \) and \( N_t = 2^{\texttt{nt}} \), respectively. The spatial and temporal grid spacing is set by \( \texttt{ds}\) and \( \texttt{dt}\), respectively. The stimulus settings consist of the contrast value \( \texttt{C}\), the mask size, orientation, phase, and grating frequency (spatial and temporal). \( \texttt{kId}\) and \( \texttt{wId}\) correspond to indices in the spatial and temporal frequency vectors. \( \texttt{kId=0}\) corresponds to spot stimulus and \( \texttt{wId=0}\) corresponds to a static stimulus.</p>
+<p>The background activities are set by \( \texttt{R0}\), while the kernel weights are set by \( \texttt{w}\)</p>
 <pre class="cpp">description: &quot;config file&quot;
 
 #------------File manager settings-----------------#
@@ -157,22 +159,22 @@ OutputManager:
 
 #------------Integrator settings-----------------#
 grid:
-    ns: 6
-    nt: 5
+    ns: 7
+    nt: 2
     dt: &amp;dt_id 1.0
     ds: &amp;ds_id 0.05
 
 #------------Stimulus settings-------------------#
 stimulus:
     # Grating:
-    mask: &quot;none&quot;  #none/circle/cscircle/gaussian
+    mask: &quot;circle&quot;  #none/circle/cscircle/gaussian
 
     C: 1.0
     maskSize: 1         #deg
     orientation: 0.     #deg
     phase: 0.           #deg
     kId:  7             #[-Ns/2, Ns/2 - 1]
-    wId:  2             #[-Nt/2, Nt/2 - 1]
+    wId:  0             #[-Nt/2, Nt/2 - 1]
 
 #-------------Ganglion cell settings--------------#
 ganglion:
@@ -195,8 +197,9 @@ relay:
     Krg:
         w: 1.0
         spatial:
-        # Gaussian
-            a: 0.1
+        #Spatial delta
+            ds: *ds_id
+            shift: [0, 0]
 
         temporal:
         # TemporalDelta
